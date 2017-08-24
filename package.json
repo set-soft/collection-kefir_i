@@ -1,0 +1,26 @@
+{
+  "name": "Kefir I",
+  "version": "0.1.0",
+  "description": "Kefir I collection",
+  "keywords": "kefir, collection",
+  "license": "GPL-2.0",
+  "authors" : [
+    {
+      "name": "Salvador E. Tropea",
+      "url": "https://github.com/set-soft"
+    },
+    {
+      "name": "Jesús Arroyo Torrens",
+      "url": "https://github.com/Jesus89"
+    },
+    {
+      "name": "Juan González",
+      "url": "https://github.com/Obijuan"
+    }
+  ],
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/set-soft/collection-kefir_i"
+  }
+}
