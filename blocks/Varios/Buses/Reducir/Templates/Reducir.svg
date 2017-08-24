@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="56.371" width="56.982" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 53.42068 52.847556">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<defs></defs>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="12.85816479px" font-style="normal" y="10.706686" x="-0.2428354" font-family="sans-serif" line-height="125%" fill="#000000"><tspan font-weight="bold" font-style="normal" font-stretch="normal" font-variant="normal" y="10.706686" x="-0.2428354" font-family="sans-serif">Reduce</tspan></text>
+<g transform="translate(-15.839618,-2.1439009)">
+<path stroke-linejoin="miter" d="m19.145,17.158,27.82-0.13325,0,23.369,17.737,0,0,13.192-45.478,0z" stroke="#000" stroke-linecap="butt" stroke-width="0.93750393px" fill="#0000f7"/>
+<text style="letter-spacing:0px;word-spacing:0px;" line-height="125%" font-weight="normal" font-size="9.59430599px" font-style="normal" y="50.40052" x="54.122513" font-family="sans-serif" xml:space="preserve" fill="#ff0000"><tspan y="50.40052" x="54.122513">L</tspan></text>
+</g>
+</svg>
