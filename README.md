@@ -92,6 +92,8 @@ Collection for the Kefir I board in Icestudio.
     * *Shift Left Complete* (3/4/8/16/32)
     * *Shift Left ENA+RST* (3/4/8/16/32)
     * *Shift Left Simple* (3/4/8/16/32)
+  * *Registros*
+    * *Power on Reset*
 
 ## Examples
 * *1\. Basic*
