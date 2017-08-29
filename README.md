@@ -21,6 +21,15 @@ Collection for the Kefir I board in Icestudio.
 * *Input*
   * *CapSense* 2/3/4 capacitive buttons
 
+* *Logic*
+  * *AND* 2 to 8 inputs
+  * *NAND* 2 to 8 inputs
+  * *OR* 2 to 8 inputs
+  * *NOR* 2 to 8 inputs
+  * *XOR* 2 to 8 inputs
+  * *XNOR* 2 to 8 inputs
+  * *NOT*
+
 * *Varios*
   * *Biestables* D/RS/T flip-flops
   * *Bombeo* 1 Hz square wave
@@ -91,6 +100,7 @@ Collection for the Kefir I board in Icestudio.
 * [Salvador E. Tropea](https://github.com/set-soft)
 * [Jesús Arroyo Torrens](https://github.com/Jesus89)
 * [Juan González](https://github.com/Obijuan)
+* Carlos Diaz
 
 ## License
 
