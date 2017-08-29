@@ -110,6 +110,15 @@ Collection for the Kefir I board in Icestudio.
   * 03\. BCD Down Counter
   * 04\. BCD Down Counter 2
   * 05\. BCD Counter fast
+* *3\. Desplazamiento*
+  * 01\. Desplazamiento Universal Completo
+  * 02\. Desplazamiento Universal Simple
+  * 03\. Desplazamiento Derecha Completo
+  * 04\. Desplazamiento Derecha ENA-RST
+  * 05\. Desplazamiento Derecha Simple
+  * 06\. Desplazamiento Izquierda Completo
+  * 07\. Desplazamiento Izquierda ENA-RST
+  * 08\. Desplazamiento Izquierda Simple
 
 ## Authors
 * [Salvador E. Tropea](https://github.com/set-soft)
