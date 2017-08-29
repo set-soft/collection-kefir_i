@@ -9,7 +9,9 @@ print "Outputs: $outs\n";
 $a=cat($tpl);
 
 @inputs=split(/,/,$ins);
-$c=scalar(@inputs)-1;
+$c=scalar(@inputs);
+$a=~s/\@num_ins/$c/g;
+$c--;
 $inputs_rep='';
 $in_code_rep='';
 $wires_in_rep='';
@@ -17,6 +19,9 @@ $code_join_wire_rep='assign o={';
 $yc=232;
 if ($c>0)
   {
+   $code_and_i='';
+   $code_or_i='';
+   $code_xor_i='';
    print "Inputs:\n";
    foreach $i (@inputs)
       {
@@ -62,6 +67,14 @@ if ($c>0)
        $wires_in_rep.='  "size": '.$i."\n" if $i>1;
        $wires_in_rep.="}\n";
        $code_join_wire_rep.="i$c";
+
+       $code_and_i.=' & ' if $code_and_i;
+       $code_or_i .=' | ' if $code_or_i;
+       $code_xor_i.=' ^ ' if $code_xor_i;
+       $code_and_i.="i$c";
+       $code_or_i .="i$c";
+       $code_xor_i.="i$c";
+
        $c--;
        $inputs_rep.=",\n" if $c>=0;
        $in_code_rep.=",\n" if $c>=0;
@@ -85,6 +98,18 @@ else
       $a=~s/\@range_i/,\"range\": \"$range\"/g;
       $a=~s/\@range_s_i/$range/g;
       $a=~s/\@range_s2_i/$range/g;
+      $code_and_bi='';
+      $code_or_bi='';
+      $code_xor_bi='';
+      for ($j=$i-1; $j>=0; $j--)
+         {
+          $code_and_bi.="i[$j]";
+          $code_or_bi .="i[$j]";
+          $code_xor_bi.="i[$j]";
+          $code_and_bi.=' & ' if $j;
+          $code_or_bi .=' | ' if $j;
+          $code_xor_bi.=' ^ ' if $j;
+         }
      }
    else
      {
@@ -203,9 +228,24 @@ $a=~s/\@wires_in/$wires_in_rep/g;
 $a=~s/\@code_join_wire/$code_join_wire_rep/g;
 $a=~s/\@in_height/$in_height/g;
 
+$a=~s/\@code_and_bi/$code_and_bi/g;
+$a=~s/\@code_or_bi/$code_or_bi/g;
+$a=~s/\@code_xor_bi/$code_xor_bi/g;
+
+$a=~s/\@code_and_i/$code_and_i/g;
+$a=~s/\@code_or_i/$code_or_i/g;
+$a=~s/\@code_xor_i/$code_xor_i/g;
+
 $dif_sz=$outs-$ins;
 $a=~s/\@0o_i/$dif_sz\'b0/g;
 
+# Fix dependencies
+while ($a=~/\@sha1\<([^\>]+)\>/g)
+  {
+   #print "perl json_sha1.pl \"$1\"\n";
+   $r=`perl json_sha1.pl \"$1\"`;
+   $a=~s/\@sha1\<$1\>/$r/g;
+  }
 replace($sal,$a);
 0;
 

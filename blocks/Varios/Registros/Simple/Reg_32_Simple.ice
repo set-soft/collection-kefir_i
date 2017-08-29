@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Registro Completo de 32 bits",
+    "name": "Registro Simple de 32 bits",
     "version": "0.0.1",
     "description": "Registro de 32 bits simplificado",
     "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
@@ -463,7 +463,7 @@
         },
         {
           "id": "bd724e49-f003-49a3-98de-34ea6bc493af",
-          "type": "e763bda2afd98e38c623b86cf643208851cca3f2",
+          "type": "cc2535e1a01b095a253213a65c14c8f7900d00c9",
           "position": {
             "x": 408,
             "y": 176
@@ -584,7 +584,7 @@
     }
   },
   "dependencies": {
-    "e763bda2afd98e38c623b86cf643208851cca3f2": {
+    "cc2535e1a01b095a253213a65c14c8f7900d00c9": {
       "package": {
         "name": "Registro Completo de 32 bits",
         "version": "0.0.1",
@@ -611,9 +611,9 @@
               "id": "ecca0347-8d4a-420f-b9fd-3436388cfcb4",
               "type": "basic.input",
               "data": {
-                "name": "d",
-                "clock": false
+                "name": "d"
                 ,"range": "[31:0]"
+                ,"clock": false
                 ,"size": 32
               },
               "position": {

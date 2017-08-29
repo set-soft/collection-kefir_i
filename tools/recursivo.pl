@@ -18,9 +18,10 @@ sub Recursivo
           if (-e "$f/casos.pl")
             {
              print "Regenerando $some_dir\n";
-             `cp tools/reemplaza.pl "$some_dir"`;
+             `cp tools/reemplaza.pl tools/json_sha1.pl "$some_dir"`;
              system("cd \"$some_dir\" ; perl Templates/casos.pl > salida.log");
              unlink("$some_dir/reemplaza.pl");
+             unlink("$some_dir/json_sha1.pl");
              unlink("$some_dir/salida.log") unless $keep_log;
             }
          }

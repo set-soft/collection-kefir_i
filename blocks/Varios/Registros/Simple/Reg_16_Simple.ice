@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Registro Completo de 16 bits",
+    "name": "Registro Simple de 16 bits",
     "version": "0.0.1",
     "description": "Registro de 16 bits simplificado",
     "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
@@ -271,7 +271,7 @@
         },
         {
           "id": "bd724e49-f003-49a3-98de-34ea6bc493af",
-          "type": "e763bda2afd98e38c623b86cf643208851cca3f2",
+          "type": "513c8f8a54c2927a78870b44d9ce7fd3225967e6",
           "position": {
             "x": 408,
             "y": 176
@@ -392,7 +392,7 @@
     }
   },
   "dependencies": {
-    "e763bda2afd98e38c623b86cf643208851cca3f2": {
+    "513c8f8a54c2927a78870b44d9ce7fd3225967e6": {
       "package": {
         "name": "Registro Completo de 16 bits",
         "version": "0.0.1",
@@ -419,9 +419,9 @@
               "id": "ecca0347-8d4a-420f-b9fd-3436388cfcb4",
               "type": "basic.input",
               "data": {
-                "name": "d",
-                "clock": false
+                "name": "d"
                 ,"range": "[15:0]"
+                ,"clock": false
                 ,"size": 16
               },
               "position": {

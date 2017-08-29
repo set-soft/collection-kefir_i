@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Registro Completo de 2 bits",
+    "name": "Registro Simple de 2 bits",
     "version": "0.0.1",
     "description": "Registro de 2 bits simplificado",
     "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
@@ -251,9 +251,9 @@
               "id": "ecca0347-8d4a-420f-b9fd-3436388cfcb4",
               "type": "basic.input",
               "data": {
-                "name": "d",
-                "clock": false
+                "name": "d"
                 ,"range": "[1:0]"
+                ,"clock": false
                 ,"size": 2
               },
               "position": {
