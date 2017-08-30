@@ -65,7 +65,7 @@
           "id": "c4334cde-6d7f-4932-bd44-7978a59c0b75",
           "type": "basic.info",
           "data": {
-            "info": "Leds 0 and 7 are blinking alternatively",
+            "info": "LEDs 1 and 2 are blinking alternatively",
             "readonly": true
           },
           "position": {
@@ -125,7 +125,7 @@
     },
     "state": {
       "pan": {
-        "x": 242,
+        "x": 246,
         "y": 223.5
       },
       "zoom": 1
