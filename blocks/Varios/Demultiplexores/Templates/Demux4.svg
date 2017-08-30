@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="184.12" width="91.388" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 85.676238 172.61068">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<defs></defs>
+<path stroke-linejoin="round" d="m19.025,38.033c0-13.12,3.8932-25.238,10.206-31.768,6.313-6.5299,14.081-6.4743,20.365,0.14584s10.124,18.793,10.066,31.913v76.933c0.05782,13.12-3.7818,25.293-10.066,31.913-6.284,6.6202-14.052,6.6758-20.365,0.1459-6.313-6.53-10.206-18.648-10.206-31.768z" stroke-dashoffset="0" stroke="#00F" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.81251168" fill="none"/>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18.7500782px" font-style="normal" y="30.221773" x="28.930473" font-family="sans-serif" line-height="125%" fill="#000000"><tspan x="28.930473" y="30.221773">11</tspan></text>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18.7500782px" font-style="normal" y="66.814156" x="27.872646" font-family="sans-serif" line-height="125%" fill="#000000"><tspan x="27.872646" y="66.814156">10</tspan></text>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18.7500782px" font-style="normal" y="170.4702" x="6.8478746" font-family="sans-serif" line-height="125%" fill="#000000"><tspan font-weight="bold" font-style="normal" font-stretch="normal" font-variant="normal" y="170.4702" x="6.8478746" font-family="sans-serif">Demux</tspan></text>
+<path stroke-linejoin="round" d="m59.574,23.953,24.696,0" stroke-dashoffset="0" stroke="#00F" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.81251168" fill="none"/>
+<path stroke-linejoin="round" d="m59.574,59.737,24.696,0" stroke-dashoffset="0" stroke="#00F" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.81251168" fill="none"/>
+<path stroke-linejoin="round" d="m18.038,73.224-16.632,0" stroke-dashoffset="0" stroke="#00F" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.81251168" fill="none"/>
+<path stroke-linejoin="round" d="m59.45,89.502,24.696,0" stroke-dashoffset="0" stroke="#00F" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.81251168" fill="none"/>
+<path stroke-linejoin="round" d="m59.45,125.29,24.696,0" stroke-dashoffset="0" stroke="#00F" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.81251168" fill="none"/>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18.7500782px" font-style="normal" y="96.400078" x="28.284492" font-family="sans-serif" line-height="125%" fill="#000000"><tspan x="28.284492" y="96.400078">01</tspan></text>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="18.7500782px" font-style="normal" y="132.03783" x="27.92812" font-family="sans-serif" line-height="125%" fill="#000000"><tspan x="27.92812" y="132.03783">00</tspan></text>
+</svg>

@@ -76,6 +76,11 @@ Collection for the Kefir I board in Icestudio.
       * *Natural BCD* (3 versions)
     * *Prescaler* Frequency dividers (square wave)
       * 2 versions upto 32 bits
+  * *Decodificadores*
+    * With enable (2/4/8 outputs)
+    * Without enable (2/4/8 outputs)
+  * *Demultiplexers*
+    * With enable (2/4/8 outputs)
   * *Multiplexores* Multiplexers
     * *2 channels* (1/2/4/8/16/32)
     * *4 channels* (1/2/4/8/16/32)
@@ -119,6 +124,13 @@ Collection for the Kefir I board in Icestudio.
   * 06\. Desplazamiento Izquierda Completo
   * 07\. Desplazamiento Izquierda ENA-RST
   * 08\. Desplazamiento Izquierda Simple
+* *4\. Combinacional Misc*
+  * 01\. Two LEDs alternate blink deco
+  * 02\. Four LEDs sequence demux
+  * 03\. Two LEDs alternate blink deco
+  * 04\. Four LEDs sequence deco
+  * 05\. Two LEDs alternate blink deco no ena
+  * 06\. Four LEDs sequence deco no ena
 
 ## Authors
 * [Salvador E. Tropea](https://github.com/set-soft)
