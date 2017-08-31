@@ -34,6 +34,7 @@ Collection for the Kefir I board in Icestudio.
 * *Varios*
   * *Aritmetica*
     * *Comparadores* >/=/< (2/4/8/16/32)
+    * *Incrementador* (2/4/8/16/32)
     * *Sumadores*
       * Completo (Carry in/out and oVerflow) (2/4/8/16/32)
       * Simple (Carry out) (2/4/8/16/32)
