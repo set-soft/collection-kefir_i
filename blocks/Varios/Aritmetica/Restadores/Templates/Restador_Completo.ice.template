@@ -1,0 +1,292 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Restador de @sz_i bits completo",
+    "version": "1.0.0",
+    "description": "Restador de @sz_i bits (bin, bout y oVerflow)",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%223.372%22%20width=%224.695%22%3E%3Ctext%20style=%22text-align:start%22%20font-family=%22Arial%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-253.847%20-199.51)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3E-%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "7befa7e5-673c-412d-abbe-55b3e5f5944b",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 120,
+            "y": 104
+          }
+        },
+        {
+          "id": "43a45144-cd71-4140-81db-a9050a266dab",
+          "type": "basic.output",
+          "data": {
+            "name": "S",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 768,
+            "y": 104
+          }
+        },
+        {
+          "id": "9bad2edd-12cd-4acb-98bd-be10ee0792b2",
+          "type": "basic.input",
+          "data": {
+            "name": "B",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 120,
+            "y": 208
+          }
+        },
+        {
+          "id": "437089db-2092-49a2-b193-1321369efc3c",
+          "type": "basic.output",
+          "data": {
+            "name": "bout",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 768,
+            "y": 208
+          }
+        },
+        {
+          "id": "fc243df5-d3ec-4453-9a86-c232c0654964",
+          "type": "basic.input",
+          "data": {
+            "name": "bin",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 120,
+            "y": 312
+          }
+        },
+        {
+          "id": "2e6a24d0-b363-4553-a8d1-4de8c44f421e",
+          "type": "basic.output",
+          "data": {
+            "name": "v",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 768,
+            "y": 312
+          }
+        },
+        {
+          "id": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+          "type": "@sha1<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>",
+          "position": {
+            "x": 456,
+            "y": 120
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "8ada4dda-a40d-4cef-a112-bc76cbbc9863",
+          "type": "@sha1<../Complemento_a_2/Complemento_a_2_@sz_i.ice>",
+          "position": {
+            "x": 264,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "33d13a77-3848-425b-becf-dbbe65dd2e54",
+          "type": "@sha1<../../../Logic/NOT.ice>",
+          "position": {
+            "x": 624,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "50d50fca-8099-4a51-9d82-cc013b8e86d5",
+          "type": "basic.info",
+          "data": {
+            "info": "La resta puede implementarse como suma de A y el Ca2 de B.\nEsto es porque usamos aritmética modular, donde:\nA+Ca2(B)=A+2^N-B=A-B\n2^N es precisamente el módulo del binario de N bits. \nPor lo que al aplicar módulo 2^N a A+2^N-B obtenemos A-B.",
+            "readonly": true
+          },
+          "position": {
+            "x": 232,
+            "y": 384
+          },
+          "size": {
+            "width": 592,
+            "height": 112
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "9bad2edd-12cd-4acb-98bd-be10ee0792b2",
+            "port": "out"
+          },
+          "target": {
+            "block": "8ada4dda-a40d-4cef-a112-bc76cbbc9863",
+            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "7befa7e5-673c-412d-abbe-55b3e5f5944b",
+            "port": "out"
+          },
+          "target": {
+            "block": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "8ada4dda-a40d-4cef-a112-bc76cbbc9863",
+            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+          },
+          "target": {
+            "block": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+            "port": "3a9390a5-e7e3-4d26-bd07-5ba157c20c4a"
+          },
+          "vertices": [
+            {
+              "x": 416,
+              "y": 216
+            }
+          ],
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "fc243df5-d3ec-4453-9a86-c232c0654964",
+            "port": "out"
+          },
+          "target": {
+            "block": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+            "port": "c65ef185-2593-4431-950e-a42533f2222a"
+          }
+        },
+        {
+          "source": {
+            "block": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+          },
+          "target": {
+            "block": "43a45144-cd71-4140-81db-a9050a266dab",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+            "port": "709e3e16-98a6-4edf-a9da-812db4965b19"
+          },
+          "target": {
+            "block": "33d13a77-3848-425b-becf-dbbe65dd2e54",
+            "port": "18c2ebc7-5152-439c-9b3f-851c59bac834"
+          }
+        },
+        {
+          "source": {
+            "block": "514abafe-16a1-47b1-8538-f5360e6c17cc",
+            "port": "358df377-dce3-4a00-956e-6feda1f93a90"
+          },
+          "target": {
+            "block": "2e6a24d0-b363-4553-a8d1-4de8c44f421e",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 584,
+              "y": 312
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "33d13a77-3848-425b-becf-dbbe65dd2e54",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "437089db-2092-49a2-b193-1321369efc3c",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+    @dependency<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>,
+    @dependency<../Complemento_a_2/Complemento_a_2_@sz_i.ice>,
+    @dependency<../Incrementador/Incrementador_@sz_i.ice>,
+    @dependency<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>,
+    @dependency<../../../Const/Bit/1.ice>,
+    @dependency<../Complemento_a_1/Complemento_a_1_@sz_i.ice>,
+    @dependency<../../Buses/NOT/NOT_@sz_i.ice>,
+    @dependency<../../../Logic/NOT.ice>
+  }
+}

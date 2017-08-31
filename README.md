@@ -37,6 +37,9 @@ Collection for the Kefir I board in Icestudio.
     * *Complemento a 1* (2/4/8/16/32)
     * *Complemento a 2* (2/4/8/16/32)
     * *Incrementador* (2/4/8/16/32)
+    * *Restadores*
+      * Completo (Borrow in/out and oVerflow) (2/4/8/16/32)
+      * Simple (Borrow out) (2/4/8/16/32)
     * *Sumadores*
       * Completo (Carry in/out and oVerflow) (2/4/8/16/32)
       * Simple (Carry out) (2/4/8/16/32)
@@ -148,6 +151,8 @@ Collection for the Kefir I board in Icestudio.
   * 05\. Complemento a 1
   * 06\. Incrementador
   * 07\. Complemento a 2
+  * 08\. Restador
+  * 09\. Restador simple
 
 ## Authors
 * [Salvador E. Tropea](https://github.com/set-soft)
