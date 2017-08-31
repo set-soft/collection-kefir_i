@@ -1,10 +1,4 @@
 #!/usr/bin/perl
-# use JSON;
-# 
-# $a=cat('pp.json');
-# $j=decode_json $a;
-# print $j->{package};
-# print encode_json $j->{package};
 $estado=1;
 while (<>)
   {
@@ -15,6 +9,7 @@ while (<>)
          #print "Inicio package\n";
          $estado=2;
          $res='{';
+         $json=$_;
         }
      }
    elsif ($estado==2)
@@ -24,9 +19,11 @@ while (<>)
          #print "Fin package\n";
          $estado=3;
          $res.='}';
+         $json.=$_;
         }
       else
         {
+         $json.=$_;
          $a=$_;
          $a=~s/^\s+//;
          $a=~s/\s+$//;
@@ -38,6 +35,7 @@ while (<>)
      {
       if ($_ eq '  "design": {'."\n")
         {
+         $json.=$_;
          #print "Inicio design\n";
          $estado=4;
          $res.='{';
@@ -47,6 +45,7 @@ while (<>)
      {
       if ($_ eq '  },'."\n")
         {
+         $json.="  }\n";
          #print "Fin design\n";
          $estado=5;
          $res.='}';
@@ -61,6 +60,7 @@ while (<>)
         }
       else
         {
+         $b=$_;
          $a=$_;
          $a=~s/^\s+//;
          $a=~s/\s+$//;
@@ -70,10 +70,17 @@ while (<>)
             #$b=substr($res,-18);
             #print "$a-$b\n";
             chop $res if substr($res,-1) eq ',';
-            $res.=",\"size\":$size" if $size_pending;
-            $size_pending=0;
+            $res.=",\"size\":$size" if $size_pending_res;
+            $size_pending_res=0;
            }
          $res.=$a;
+         if ($b=~/^\s*\}/)
+           {
+            $json=~s/\,(\s*)$/$1/;
+            $json.=",\"size\": $size\n" if $size_pending_json;
+            $size_pending_json=0;
+           }
+         $json.=$b;
         }
      }
    elsif ($estado==6)
@@ -85,11 +92,13 @@ while (<>)
       elsif ($_=~/\s+\]\,/)
         {
          $estado=4;
-         $size_pending=1 if $size>1;
+         $size_pending_res=1  if $size>1;
+         $size_pending_json=1 if $size>1;
         }
      }
   }
 replace('pp.txt',$res);
+replace('pp.json',$json);
 $r=`sha1sum "pp.txt"`;
 unlink('pp.txt');
 print $1 if $r=~/(\S+)/;

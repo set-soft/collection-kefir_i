@@ -245,6 +245,15 @@ while ($a=~/\@sha1\<([^\>]+)\>/g)
    #print "perl json_sha1.pl \"$1\"\n";
    $r=`perl json_sha1.pl \"$1\"`;
    $a=~s/\@sha1\<$1\>/$r/g;
+   unlink('pp.json');
+  }
+while ($a=~/\@include\<([^\>]+)\>/g)
+  {
+   #print "perl json_sha1.pl \"$1\"\n";
+   `perl json_sha1.pl \"$1\"`;
+   $r=cat('pp.json');
+   $a=~s/\@include\<$1\>/$r/g;
+   unlink('pp.json');
   }
 replace($sal,$a);
 0;
