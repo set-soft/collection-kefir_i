@@ -17,6 +17,7 @@ Collection for the Kefir I board in Icestudio.
     * 0
     * 1s
     * Val
+  * *Bit* standard 0/1
 
 * *Input*
   * *CapSense* 2/3/4 capacitive buttons
