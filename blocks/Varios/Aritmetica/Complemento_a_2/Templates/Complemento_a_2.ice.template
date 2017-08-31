@@ -1,0 +1,152 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Complemento a 2 de @sz_i bits",
+    "version": "1.0.0",
+    "description": "Calcula el complemento a 2 de la entrada",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%229.402%22%20width=%2219.378%22%3E%3Ctext%20style=%22text-align:start%22%20font-family=%22Arial%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-253.76%20-195.51)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3ECa2%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1",
+          "type": "basic.output",
+          "data": {
+            "name": "S",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 616,
+            "y": 40
+          }
+        },
+        {
+          "id": "74e32618-c154-42a4-af51-d7975afb90a3",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 112,
+            "y": 72
+          }
+        },
+        {
+          "id": "247b77cd-a75c-4a5d-a5ea-068e8586fd08",
+          "type": "basic.info",
+          "data": {
+            "info": "Es el complemento a la \"base\"\nMatemáticamente se calcula como 2^N-V\nDonde N es el número de bits.\nEl complemento a 2 es el complemento a 1 más 1.\n\n",
+            "readonly": true
+          },
+          "position": {
+            "x": 168,
+            "y": 160
+          },
+          "size": {
+            "width": 480,
+            "height": 112
+          }
+        },
+        {
+          "id": "fdc58501-afe3-49aa-a704-3c996443b2f5",
+          "type": "@sha1<../Incrementador/Incrementador_@sz_i.ice>",
+          "position": {
+            "x": 448,
+            "y": 56
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "1b65cba8-1073-4c5c-a625-639ddc3aa4c9",
+          "type": "@sha1<../Complemento_a_1/Complemento_a_1_@sz_i.ice>",
+          "position": {
+            "x": 264,
+            "y": 72
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "fdc58501-afe3-49aa-a704-3c996443b2f5",
+            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+          },
+          "target": {
+            "block": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "74e32618-c154-42a4-af51-d7975afb90a3",
+            "port": "out"
+          },
+          "target": {
+            "block": "1b65cba8-1073-4c5c-a625-639ddc3aa4c9",
+            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "1b65cba8-1073-4c5c-a625-639ddc3aa4c9",
+            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+          },
+          "target": {
+            "block": "fdc58501-afe3-49aa-a704-3c996443b2f5",
+            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+          },
+          "size": @sz_i
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 90,
+        "y": 19.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+    "@sha1<../Incrementador/Incrementador_@sz_i.ice>": {
+     @include<../Incrementador/Incrementador_@sz_i.ice>
+    },
+    "@sha1<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>": {
+     @include<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>
+    },
+    "@sha1<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>": {
+    @include<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>
+    },
+    "@sha1<../../../Const/Bit/1.ice>": {
+    @include<../../../Const/Bit/1.ice>
+    },
+    "@sha1<../Complemento_a_1/Complemento_a_1_@sz_i.ice>": {
+     @include<../Complemento_a_1/Complemento_a_1_@sz_i.ice>
+    },
+    "@sha1<../../Buses/NOT/NOT_@sz_i.ice>": {
+     @include<../../Buses/NOT/NOT_@sz_i.ice>
+    }
+  }
+}

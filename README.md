@@ -34,6 +34,8 @@ Collection for the Kefir I board in Icestudio.
 * *Varios*
   * *Aritmetica*
     * *Comparadores* >/=/< (2/4/8/16/32)
+    * *Complemento a 1* (2/4/8/16/32)
+    * *Complemento a 2* (2/4/8/16/32)
     * *Incrementador* (2/4/8/16/32)
     * *Sumadores*
       * Completo (Carry in/out and oVerflow) (2/4/8/16/32)
@@ -143,6 +145,9 @@ Collection for the Kefir I board in Icestudio.
   * 02\. Comparar >=,!=,<=
   * 03\. Sumador
   * 04\. Sumador Simple
+  * 05\. Complemento a 1
+  * 06\. Incrementador
+  * 07\. Complemento a 2
 
 ## Authors
 * [Salvador E. Tropea](https://github.com/set-soft)
