@@ -255,6 +255,16 @@ while ($a=~/\@include\<([^\>]+)\>/g)
    $a=~s/\@include\<$1\>/$r/g;
    unlink('pp.json');
   }
+while ($a=~/\@dependency\<([^\>]+)\>/g)
+  {
+   $sha1=`perl json_sha1.pl \"$1\"`;
+   $r=cat('pp.json');
+   $r2="\"$sha1\": {\n".
+       "    $r\n".
+       "    }";
+   $a=~s/\@dependency\<$1\>/$r2/g;
+   unlink('pp.json');
+  }
 replace($sal,$a);
 0;
 

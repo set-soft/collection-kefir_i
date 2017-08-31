@@ -323,7 +323,7 @@
   },
   "dependencies": {
     "64384ad57bb619acf2ba5607b30d65e61ddd337b": {
-       "package": {
+      "package": {
     "name": "Incrementador de 16 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -503,7 +503,7 @@
 
     },
     "75b5a4189c1654211853edd241678db9e5860b70": {
-       "package": {
+      "package": {
     "name": "Sumador de 16 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 16 bits (cin, cout y oVerflow)",
@@ -880,7 +880,7 @@
 
     },
     "8723c14d6879938bdcbbdad7a306745a783e184d": {
-       "package": {
+      "package": {
     "name": "Complemento a 1 de 16 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -982,7 +982,7 @@
 
     },
     "14ee4884b903bb75aa428a5bfe04223e9c62ca6c": {
-       "package": {
+      "package": {
     "name": "NOT 16 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 16 bits bus",

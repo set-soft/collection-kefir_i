@@ -179,7 +179,7 @@
   },
   "dependencies": {
     "08aaa87f5ad91c8ae422994b4800fd2c45b2539c": {
-       "package": {
+      "package": {
     "name": "Incrementador de 4 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -359,7 +359,7 @@
 
     },
     "036fc15ed295afdd68eb5f8624fe36be4d1c9d5a": {
-       "package": {
+      "package": {
     "name": "Sumador de 4 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 4 bits (cin, cout y oVerflow)",
@@ -736,7 +736,7 @@
 
     },
     "e66af1f5c02b6658c2a46e93ae062f810adb7ac2": {
-       "package": {
+      "package": {
     "name": "Complemento a 1 de 4 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -838,7 +838,7 @@
 
     },
     "8800f7924aeb7b784b5ceab02ed57134a3c5c77a": {
-       "package": {
+      "package": {
     "name": "NOT 4 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 4 bits bus",

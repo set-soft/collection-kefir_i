@@ -227,7 +227,7 @@
   },
   "dependencies": {
     "eba56f9f9376bb4ac01931c03848d6e78edd9993": {
-       "package": {
+      "package": {
     "name": "Incrementador de 8 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -407,7 +407,7 @@
 
     },
     "4084ab206cbc57bb728b156497bd6f82de0d11ff": {
-       "package": {
+      "package": {
     "name": "Sumador de 8 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 8 bits (cin, cout y oVerflow)",
@@ -784,7 +784,7 @@
 
     },
     "fb59684727910e9a01a9e037fe18d009dfa103bd": {
-       "package": {
+      "package": {
     "name": "Complemento a 1 de 8 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -886,7 +886,7 @@
 
     },
     "c76755e45aa8c46e1d0c00b6ed28f1b443cdaa78": {
-       "package": {
+      "package": {
     "name": "NOT 8 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 8 bits bus",

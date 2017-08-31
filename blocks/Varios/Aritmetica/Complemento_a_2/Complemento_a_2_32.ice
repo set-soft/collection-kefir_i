@@ -515,7 +515,7 @@
   },
   "dependencies": {
     "9094ce02a4d510ca0638b4e851ef1d78389ece2e": {
-       "package": {
+      "package": {
     "name": "Incrementador de 32 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -695,7 +695,7 @@
 
     },
     "5d07ffc67a6a2e25ab913071c58a7d99e6c57823": {
-       "package": {
+      "package": {
     "name": "Sumador de 32 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 32 bits (cin, cout y oVerflow)",
@@ -1072,7 +1072,7 @@
 
     },
     "8a9f249a35beabb09ad9ee4023ef6fd2ffc7f852": {
-       "package": {
+      "package": {
     "name": "Complemento a 1 de 32 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -1174,7 +1174,7 @@
 
     },
     "d8df941e4f39ab5f7bd9937c7b3873e63b398019": {
-       "package": {
+      "package": {
     "name": "NOT 32 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 32 bits bus",

@@ -155,7 +155,7 @@
   },
   "dependencies": {
     "8a329643c371c7ba727c98ab058171902e0a783e": {
-       "package": {
+      "package": {
     "name": "Incrementador de 2 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -335,7 +335,7 @@
 
     },
     "86c33c706c65e02d2244f42657c9e690e38757fa": {
-       "package": {
+      "package": {
     "name": "Sumador de 2 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 2 bits (cin, cout y oVerflow)",
@@ -712,7 +712,7 @@
 
     },
     "c92937fb6dd25cefe0a51987b080784a03e3ff8f": {
-       "package": {
+      "package": {
     "name": "Complemento a 1 de 2 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -814,7 +814,7 @@
 
     },
     "cf71d4c8af95880fb31b784ab8de7c9369020d9c": {
-       "package": {
+      "package": {
     "name": "NOT 2 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 2 bits bus",

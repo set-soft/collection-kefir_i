@@ -130,23 +130,11 @@
     }
   },
   "dependencies": {
-    "@sha1<../Incrementador/Incrementador_@sz_i.ice>": {
-     @include<../Incrementador/Incrementador_@sz_i.ice>
-    },
-    "@sha1<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>": {
-     @include<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>
-    },
-    "@sha1<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>": {
-    @include<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>
-    },
-    "@sha1<../../../Const/Bit/1.ice>": {
-    @include<../../../Const/Bit/1.ice>
-    },
-    "@sha1<../Complemento_a_1/Complemento_a_1_@sz_i.ice>": {
-     @include<../Complemento_a_1/Complemento_a_1_@sz_i.ice>
-    },
-    "@sha1<../../Buses/NOT/NOT_@sz_i.ice>": {
-     @include<../../Buses/NOT/NOT_@sz_i.ice>
-    }
+    @dependency<../Incrementador/Incrementador_@sz_i.ice>,
+    @dependency<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>,
+    @dependency<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>,
+    @dependency<../../../Const/Bit/1.ice>,
+    @dependency<../Complemento_a_1/Complemento_a_1_@sz_i.ice>,
+    @dependency<../../Buses/NOT/NOT_@sz_i.ice>
   }
 }
