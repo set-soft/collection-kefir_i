@@ -77,6 +77,8 @@ Collection for the Kefir I board in Icestudio.
     * *AND*, *NAND*, *OR*, *NOR*, *XOR*, *XNOR*
       * 1 bus of 2/4/8/16/32 elements, 1 bit output
       * 2 buses of 2/4/8/16/32 elements, 1 bus output
+    * *AND*, *OR*, *XOR*
+      * 1 bit applied to the whole bus of 2/4/8/16/32 elements, 1 bus output
     * *NOT*
       * 1 bus of 2/4/8/16/32 elements, 1 bus output
   * *Contadores*
@@ -121,6 +123,9 @@ Collection for the Kefir I board in Icestudio.
   * 05\. Two LEDs alternate blink
   * 06\. CapSense and LEDs
   * 07\. CapSense toggle and LEDs
+  * 08\. AND 1 to all
+  * 09\. OR 1 to all
+  * 10\. XOR 1 to all
 * *2\. Counter*
   * 01\. BCD Counter
   * 02\. BCD Counter 2
