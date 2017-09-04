@@ -43,6 +43,12 @@ Collection for the Kefir I board in Icestudio.
     * *Sumadores*
       * Completo (Carry in/out and oVerflow) (2/4/8/16/32)
       * Simple (Carry out) (2/4/8/16/32)
+      * Didactico
+        * Medio sumador (Half adder)
+        * Sumador completo (Full adder)
+        * Sumador de 2 bits (using full adders)
+        * Sumador de 4 bits (using 2 bits adders)
+        * Sumador de 8 bits (using 4 bits adders)
   * *Biestables* D/RS/T flip-flops
   * *Bombeo* 1 Hz square wave
   * *Buses*
@@ -158,6 +164,7 @@ Collection for the Kefir I board in Icestudio.
   * 07\. Complemento a 2
   * 08\. Restador
   * 09\. Restador simple
+  * 10\. Sumador didactico
 
 ## Authors
 * [Salvador E. Tropea](https://github.com/set-soft)
