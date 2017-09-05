@@ -11,62 +11,66 @@
     "board": "kefir",
     "graph": {
       "blocks": [
-{ "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-2",
-"type": "basic.output",
-"data": {
-"name": "o2",
-"pins": [
+            {
+              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-2",
+              "type": "basic.output",
+              "data": {
+                "name": "o2",
+                "pins": [
 
 {
  "index": "0",
  "name": "",
  "value": "0"
 }
-],
-"virtual": true
-},
-"position": {
- "x": 808,
- "y": 232
-}}
-,
-{ "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1",
-"type": "basic.output",
-"data": {
-"name": "o1",
-"pins": [
+                ],
+                "virtual": true
+              },
+              "position": {
+                "x": 808,
+                "y": 232
+              }
+            },
+            {
+              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1",
+              "type": "basic.output",
+              "data": {
+                "name": "o1",
+                "pins": [
 
 {
  "index": "0",
  "name": "",
  "value": "0"
 }
-],
-"virtual": true
-},
-"position": {
- "x": 808,
- "y": 296
-}}
-,
-{ "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0",
-"type": "basic.output",
-"data": {
-"name": "o0",
-"pins": [
+                ],
+                "virtual": true
+              },
+              "position": {
+                "x": 808,
+                "y": 296
+              }
+            },
+            {
+              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0",
+              "type": "basic.output",
+              "data": {
+                "name": "o0",
+                "pins": [
 
 {
  "index": "0",
  "name": "",
  "value": "0"
 }
-],
-"virtual": true
-},
-"position": {
- "x": 808,
- "y": 360
-}}
+                ],
+                "virtual": true
+              },
+              "position": {
+                "x": 808,
+                "y": 360
+              }
+            }
 ,
         {
           "id": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
@@ -118,14 +122,15 @@
                 }
               ],
               "out": [
-               { "name": "o2"
- }
-,
-{ "name": "o1"
- }
-,
-{ "name": "o0"
- }
+                               {
+                  "name": "o2"
+                },
+                {
+                  "name": "o1"
+                },
+                {
+                  "name": "o0"
+                }
 
               ]
             }
@@ -152,17 +157,36 @@
           }
           ,"size": 3
         },
-{ "source": { "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e", "port": "o2" },
-  "target": { "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-2", "port": "in" }
-}
-,
-{ "source": { "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e", "port": "o1" },
-  "target": { "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1", "port": "in" }
-}
-,
-{ "source": { "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e", "port": "o0" },
-  "target": { "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0", "port": "in" }
-}
+        {
+          "source": {
+            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "port": "o2"
+          },
+          "target": {
+            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-2",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "port": "o1"
+          },
+          "target": {
+            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "port": "o0"
+          },
+          "target": {
+            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0",
+            "port": "in"
+          }
+        }
 
       ]
     },

@@ -1,6 +1,10 @@
 #!/usr/bin/perl
 $keep_log=0;
-Recursivo('.');
+$start=$ARGV[0];
+$start='.' unless $start;
+$start=~s/\/$//;
+print "Generating from '$start'\n";
+Recursivo($start);
 0;
 
 sub Recursivo
@@ -15,14 +19,21 @@ sub Recursivo
       {
        if ($_ eq 'Templates')
          {
-          if (-e "$f/casos.pl")
+          if (-e "$f/casos.txt")
             {
              print "Regenerando $some_dir\n";
-             `cp tools/reemplaza.pl tools/json_sha1.pl "$some_dir"`;
-             system("cd \"$some_dir\" ; perl Templates/casos.pl > salida.log");
-             unlink("$some_dir/reemplaza.pl");
-             unlink("$some_dir/json_sha1.pl");
-             unlink("$some_dir/salida.log") unless $keep_log;
+             open(FI,"$f/casos.txt") || die "Can't open '$f/casos.txt'";
+             my $l;
+             while ($l=<FI>)
+               {
+                $l=~/\"([^\"]+)\" (\S+) (\S+) \"([^\"]+)\"/ or die "Malformed rule <$l> at $f/casos.txt";
+                my ($tpl,$ins,$outs,$file)=($1,$2,$3,$4);
+                $cmd="perl tools/reemplaza.pl ".Escape("$f/$tpl")." $ins $outs ".Escape("$some_dir/$file");
+                #print "$cmd\n";
+                system("$cmd >> salida.log");
+                unlink("salida.log") unless $keep_log;
+               }
+             close(FI);
             }
          }
        else
@@ -36,3 +47,12 @@ sub Recursivo
  closedir $dh;
 }
 
+sub Escape
+{
+ my $n=shift(@_);
+ $n=~s/ /\\ /g;
+ $n=~s/\>/\\\>/g;
+ $n=~s/\!/\\\!/g;
+ $n=~s/\</\\\</g;
+ $n;
+}

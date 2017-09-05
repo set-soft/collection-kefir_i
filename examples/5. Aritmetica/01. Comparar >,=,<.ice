@@ -309,283 +309,283 @@
   },
   "dependencies": {
     "63af0af7dccbfe598b94669163f0ab122e65b58f": {
-      "package": {
-        "name": "Const 8 bits",
-        "version": "0.0.1",
-        "description": "Valor constante para bus de 8 bits",
-        "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2230.109%22%20width=%2251.367%22%20viewBox=%220%200%2048.156811%2028.227233%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2218.58%22%20y=%2213.545%22%20x=%22.226%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2213.545%22%20x=%22.226%22%20font-weight=%22bold%22%20fill=%22green%22%3ENum%3C/tspan%3E%3C/text%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2212.972%22%20y=%2228.044%22%20x=%22-1.463%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2228.044%22%20x=%22-1.463%22%20font-weight=%22bold%22%20fill=%22green%22%3E8%20bits%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "32038fb9-c309-483d-a68c-de6fd7ab6a0f",
-              "type": "basic.output",
-              "data": {
-                "name": "K",
-                "range": "[7:0]",
-                "size": 8
-              },
-              "position": {
-                "x": 960,
-                "y": 248
-              }
-            },
-            {
-              "id": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4",
-              "type": "basic.constant",
-              "data": {
-                "name": "V",
-                "value": "8'b0",
-                "local": false
-              },
-              "position": {
-                "x": 728,
-                "y": 128
-              }
-            },
-            {
-              "id": "7dbe7521-0f9f-43ee-ab0c-0439e2c20bc2",
-              "type": "basic.code",
-              "data": {
-                "code": "assign k=V;",
-                "params": [
-                  {
-                    "name": "V"
-                  }
-                ],
-                "ports": {
-                  "in": [],
-                  "out": [
-                    {
-                      "name": "k",
-                      "range": "[7:0]",
-                      "size": 8
-                    }
-                  ]
-                }
-              },
-              "position": {
-                "x": 672,
-                "y": 248
-              },
-              "size": {
-                "width": 208,
-                "height": 64
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "7dbe7521-0f9f-43ee-ab0c-0439e2c20bc2",
-                "port": "k"
-              },
-              "target": {
-                "block": "32038fb9-c309-483d-a68c-de6fd7ab6a0f",
-                "port": "in"
-              },
-              "size": 8
-            },
-            {
-              "source": {
-                "block": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4",
-                "port": "constant-out"
-              },
-              "target": {
-                "block": "7dbe7521-0f9f-43ee-ab0c-0439e2c20bc2",
-                "port": "V"
-              }
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": -414,
-            "y": 43.5
+  "package": {
+    "name": "Const 8 bits",
+    "version": "0.0.1",
+    "description": "Valor constante para bus de 8 bits",
+    "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2230.109%22%20width=%2251.367%22%20viewBox=%220%200%2048.156811%2028.227233%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2218.58%22%20y=%2213.545%22%20x=%22.226%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2213.545%22%20x=%22.226%22%20font-weight=%22bold%22%20fill=%22green%22%3ENum%3C/tspan%3E%3C/text%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2212.972%22%20y=%2228.044%22%20x=%22-1.463%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2228.044%22%20x=%22-1.463%22%20font-weight=%22bold%22%20fill=%22green%22%3E8%20bits%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "graph": {
+      "blocks": [
+        {
+          "id": "32038fb9-c309-483d-a68c-de6fd7ab6a0f",
+          "type": "basic.output",
+          "data": {
+            "name": "K"
+            ,"range": "[7:0]"
+,"size": 8
           },
-          "zoom": 1
+          "position": {
+            "x": 960,
+            "y": 248
+          }
+        },
+        {
+          "id": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4",
+          "type": "basic.constant",
+          "data": {
+            "name": "V",
+            "value": "8'b0",
+            "local": false
+          },
+          "position": {
+            "x": 728,
+            "y": 128
+          }
+        },
+        {
+          "id": "7dbe7521-0f9f-43ee-ab0c-0439e2c20bc2",
+          "type": "basic.code",
+          "data": {
+            "code": "assign k=V;",
+            "params": [
+              {
+                "name": "V"
+              }
+            ],
+            "ports": {
+              "in": [],
+              "out": [
+                {
+                  "name": "k"
+                  ,"range": "[7:0]"
+                  ,"size": 8
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 672,
+            "y": 248
+          },
+          "size": {
+            "width": 208,
+            "height": 64
+          }
         }
-      }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "7dbe7521-0f9f-43ee-ab0c-0439e2c20bc2",
+            "port": "k"
+          },
+          "target": {
+            "block": "32038fb9-c309-483d-a68c-de6fd7ab6a0f",
+            "port": "in"
+          }
+          ,"size": 8
+        },
+        {
+          "source": {
+            "block": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "7dbe7521-0f9f-43ee-ab0c-0439e2c20bc2",
+            "port": "V"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -414,
+        "y": 43.5
+      },
+      "zoom": 1
+    }
+  }
     },
     "b8eb912e2cd91479fec24e1f6467caa811b2e944": {
-      "package": {
-        "name": "Comparador de magnitudes de 8 bits",
-        "version": "1.0.0",
-        "description": "Comparador de magnitudes de 8 bits. ",
-        "author": "Salvador E. Tropea",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.158%22%20width=%2219.814%22%3E%3Ctext%20style=%22text-align:start%22%20font-weight=%22bold%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-254.286%20-196.633)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%3E%3Ctspan%20fill=%22#00c400%22%3EA%3C/tspan%3E%3Ctspan%20fill=%22#0056f3%22%3E&gt;%3C/tspan%3E%3Ctspan%20fill=%22#00c400%22%3EB%3C/tspan%3E%3C/tspan%3E%3Ctspan%20y=%22216.291%22%20x=%22254.286%22%3E%3Ctspan%20fill=%22#00c400%22%3EA%3C/tspan%3E%3Ctspan%20fill=%22#0056f3%22%3E=%3C/tspan%3E%3Ctspan%20fill=%22#00c400%22%3EB%3C/tspan%3E%3C/tspan%3E%3Ctspan%20y=%22228.791%22%20x=%22254.286%22%3E%3Ctspan%20fill=%22#00c400%22%3EA%3C/tspan%3E%3Ctspan%20fill=%22#0056f3%22%3E&lt;%3C/tspan%3E%3Ctspan%20fill=%22#00c400%22%3EB%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "42dbe921-94e7-4a87-9570-44ee02ecb95a",
-              "type": "basic.output",
-              "data": {
-                "name": "Mayor"
-              },
-              "position": {
-                "x": 688,
-                "y": 160
-              }
-            },
-            {
-              "id": "54682757-36e5-4faa-870e-97c5381d1370",
-              "type": "basic.input",
-              "data": {
-                "name": "A",
-                "range": "[7:0]",
-                "clock": false,
-                "size": 8
-              },
-              "position": {
-                "x": 152,
-                "y": 176
-              }
-            },
-            {
-              "id": "5fefb46b-e0e3-45e3-9b2e-e2e0cfeb07af",
-              "type": "basic.output",
-              "data": {
-                "name": "Igual"
-              },
-              "position": {
-                "x": 688,
-                "y": 224
-              }
-            },
-            {
-              "id": "0eda4438-c672-4ddd-bd21-0cdd6da385d7",
-              "type": "basic.input",
-              "data": {
-                "name": "B",
-                "range": "[7:0]",
-                "clock": false,
-                "size": 8
-              },
-              "position": {
-                "x": 152,
-                "y": 272
-              }
-            },
-            {
-              "id": "1006bafd-edca-47a7-9daf-5d3bd0d145fe",
-              "type": "basic.output",
-              "data": {
-                "name": "Menor"
-              },
-              "position": {
-                "x": 688,
-                "y": 288
-              }
-            },
-            {
-              "id": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
-              "type": "basic.code",
-              "data": {
-                "code": "assign Mayor=A>B;\nassign Igual=A==B;\nassign Menor=A<B;",
-                "params": [],
-                "ports": {
-                  "in": [
-                    {
-                      "name": "A",
-                      "range": "[7:0]",
-                      "size": 8
-                    },
-                    {
-                      "name": "B",
-                      "range": "[7:0]",
-                      "size": 8
-                    }
-                  ],
-                  "out": [
-                    {
-                      "name": "Mayor"
-                    },
-                    {
-                      "name": "Igual"
-                    },
-                    {
-                      "name": "Menor"
-                    }
-                  ]
-                }
-              },
-              "position": {
-                "x": 328,
-                "y": 160
-              },
-              "size": {
-                "width": 288,
-                "height": 192
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "54682757-36e5-4faa-870e-97c5381d1370",
-                "port": "out"
-              },
-              "target": {
-                "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
-                "port": "A"
-              },
-              "size": 8
-            },
-            {
-              "source": {
-                "block": "0eda4438-c672-4ddd-bd21-0cdd6da385d7",
-                "port": "out"
-              },
-              "target": {
-                "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
-                "port": "B"
-              },
-              "size": 8
-            },
-            {
-              "source": {
-                "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
-                "port": "Menor"
-              },
-              "target": {
-                "block": "1006bafd-edca-47a7-9daf-5d3bd0d145fe",
-                "port": "in"
-              }
-            },
-            {
-              "source": {
-                "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
-                "port": "Igual"
-              },
-              "target": {
-                "block": "5fefb46b-e0e3-45e3-9b2e-e2e0cfeb07af",
-                "port": "in"
-              }
-            },
-            {
-              "source": {
-                "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
-                "port": "Mayor"
-              },
-              "target": {
-                "block": "42dbe921-94e7-4a87-9570-44ee02ecb95a",
-                "port": "in"
-              }
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": 0,
-            "y": 0
+  "package": {
+    "name": "Comparador de magnitudes de 8 bits",
+    "version": "1.0.0",
+    "description": "Comparador de magnitudes de 8 bits. ",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.158%22%20width=%2219.814%22%3E%3Ctext%20style=%22text-align:start%22%20font-weight=%22bold%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-254.286%20-196.633)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%3E%3Ctspan%20fill=%22#00c400%22%3EA%3C/tspan%3E%3Ctspan%20fill=%22#0056f3%22%3E&gt;%3C/tspan%3E%3Ctspan%20fill=%22#00c400%22%3EB%3C/tspan%3E%3C/tspan%3E%3Ctspan%20y=%22216.291%22%20x=%22254.286%22%3E%3Ctspan%20fill=%22#00c400%22%3EA%3C/tspan%3E%3Ctspan%20fill=%22#0056f3%22%3E=%3C/tspan%3E%3Ctspan%20fill=%22#00c400%22%3EB%3C/tspan%3E%3C/tspan%3E%3Ctspan%20y=%22228.791%22%20x=%22254.286%22%3E%3Ctspan%20fill=%22#00c400%22%3EA%3C/tspan%3E%3Ctspan%20fill=%22#0056f3%22%3E&lt;%3C/tspan%3E%3Ctspan%20fill=%22#00c400%22%3EB%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "graph": {
+      "blocks": [
+        {
+          "id": "42dbe921-94e7-4a87-9570-44ee02ecb95a",
+          "type": "basic.output",
+          "data": {
+            "name": "Mayor"
           },
-          "zoom": 1
+          "position": {
+            "x": 688,
+            "y": 160
+          }
+        },
+        {
+          "id": "54682757-36e5-4faa-870e-97c5381d1370",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "range": "[7:0]",
+            "clock": false
+,"size": 8
+          },
+          "position": {
+            "x": 152,
+            "y": 176
+          }
+        },
+        {
+          "id": "5fefb46b-e0e3-45e3-9b2e-e2e0cfeb07af",
+          "type": "basic.output",
+          "data": {
+            "name": "Igual"
+          },
+          "position": {
+            "x": 688,
+            "y": 224
+          }
+        },
+        {
+          "id": "0eda4438-c672-4ddd-bd21-0cdd6da385d7",
+          "type": "basic.input",
+          "data": {
+            "name": "B",
+            "range": "[7:0]",
+            "clock": false
+,"size": 8
+          },
+          "position": {
+            "x": 152,
+            "y": 272
+          }
+        },
+        {
+          "id": "1006bafd-edca-47a7-9daf-5d3bd0d145fe",
+          "type": "basic.output",
+          "data": {
+            "name": "Menor"
+          },
+          "position": {
+            "x": 688,
+            "y": 288
+          }
+        },
+        {
+          "id": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+          "type": "basic.code",
+          "data": {
+            "code": "assign Mayor=A>B;\nassign Igual=A==B;\nassign Menor=A<B;",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "A",
+                  "range": "[7:0]",
+                  "size": 8
+                },
+                {
+                  "name": "B",
+                  "range": "[7:0]",
+                  "size": 8
+                }
+              ],
+              "out": [
+                {
+                  "name": "Mayor"
+                },
+                {
+                  "name": "Igual"
+                },
+                {
+                  "name": "Menor"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 328,
+            "y": 160
+          },
+          "size": {
+            "width": 288,
+            "height": 192
+          }
         }
-      }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "54682757-36e5-4faa-870e-97c5381d1370",
+            "port": "out"
+          },
+          "target": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "A"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "0eda4438-c672-4ddd-bd21-0cdd6da385d7",
+            "port": "out"
+          },
+          "target": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "B"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "Menor"
+          },
+          "target": {
+            "block": "1006bafd-edca-47a7-9daf-5d3bd0d145fe",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "Igual"
+          },
+          "target": {
+            "block": "5fefb46b-e0e3-45e3-9b2e-e2e0cfeb07af",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "Mayor"
+          },
+          "target": {
+            "block": "42dbe921-94e7-4a87-9570-44ee02ecb95a",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  }
     }
   }
 }

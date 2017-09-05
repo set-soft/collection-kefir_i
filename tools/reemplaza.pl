@@ -1,4 +1,18 @@
 #!/usr/bin/perl
+
+open(FI,"tools/sha1_db.txt") || die "Run 'make db' first";
+while (<FI>)
+  {
+   $_=~/([0-9a-f]{40}) (.*)/;
+   my $sha1=$1;
+   my $rest=$2;
+   $h{$sha1}=$rest;
+   my @v=split(/\|/,$rest);
+   my $file=$v[0];
+   $hf{$file}=$sha1;
+  }
+close(FI);
+
 $tpl=$ARGV[0];
 $ins=$ARGV[1];
 $outs=$ARGV[2];
@@ -41,31 +55,45 @@ if ($c>0)
           $a=~s/\@size_i$c//g;
           $a=~s/\@range_i$c//g;
          }
-       $inputs_rep.='{ "id": "63c7309a-4460-4727-99ac-8c08c900502a-'.$c.'",'."\n";
-       $inputs_rep.='"type": "basic.input",'."\n";
-       $inputs_rep.='"data": {'."\n";
-       $inputs_rep.='"name": "i'.$c.'",'."\n";
-       $inputs_rep.='"pins": ['."\n".$pins.'],'."\n";
-       $inputs_rep.='"size": '.$i.','."\n" if $i>1;
-       $inputs_rep.='"virtual": true'."\n";
-       $inputs_rep.='},'."\n";
-       $inputs_rep.='"position": {'."\n";
-       $inputs_rep.=' "x": 136,'."\n";
-       $inputs_rep.=' "y": '."$yc\n";
+       $inputs_rep.='            {'."\n";
+       $inputs_rep.='              "id": "63c7309a-4460-4727-99ac-8c08c900502a-'.$c.'",'."\n";
+       $inputs_rep.='              "type": "basic.input",'."\n";
+       $inputs_rep.='              "data": {'."\n";
+       $inputs_rep.='                "name": "i'.$c.'",'."\n";
+       $inputs_rep.='                "pins": ['."\n";
+       $inputs_rep.=$pins;
+       $inputs_rep.='                ],'."\n";
+       $inputs_rep.='                "size": '.$i.','."\n" if $i>1;
+       $inputs_rep.='                "virtual": true'."\n";
+       $inputs_rep.='              },'."\n";
+       $inputs_rep.='              "position": {'."\n";
+       $inputs_rep.='                "x": 136,'."\n";
+       $inputs_rep.='                "y": '."$yc\n";
+       $inputs_rep.='              }'."\n";
        $yc+=64; $in_height+=64;
-       $inputs_rep.='}}'."\n";
-       $in_code_rep.='{ "name": "i'.$c.'"'."\n";
+       $inputs_rep.='            }';
+       $in_code_rep.='                {'."\n";
+       $in_code_rep.='                  "name": "i'.$c.'"'."\n";
        if ($i>1)
          {
-          $in_code_rep.=' , "size": '."$i\n";
+          $in_code_rep.='                  ,"size": '."$i\n";
           $range='['.($i-1).':0]';
-          $in_code_rep.=' , "range": "'."$range\"\n";
+          $in_code_rep.='                  ,"range": "'."$range\"\n";
          }
-       $in_code_rep.=' }'."\n";
-       $wires_in_rep.='{ "source": { "block": "63c7309a-4460-4727-99ac-8c08c900502a-'.$c.'", "port": "out" },'."\n";
-       $wires_in_rep.='  "target": { "block": "3545528c-05e2-4e95-8223-5b7b77587423", "port": "i'.$c.'" }'."\n";
-       $wires_in_rep.='  "size": '.$i."\n" if $i>1;
-       $wires_in_rep.="}\n";
+       $in_code_rep.='                }';
+
+       $wires_in_rep.='        {'."\n";
+       $wires_in_rep.='          "source": {'."\n";
+       $wires_in_rep.='            "block": "63c7309a-4460-4727-99ac-8c08c900502a-'.$c.'",'."\n";
+       $wires_in_rep.='            "port": "out"'."\n";
+       $wires_in_rep.='          },'."\n";
+       $wires_in_rep.='          "target": {'."\n";
+       $wires_in_rep.='            "block": "3545528c-05e2-4e95-8223-5b7b77587423",'."\n";
+       $wires_in_rep.='            "port": "i'.$c.'"'."\n";
+       $wires_in_rep.='          }'."\n";
+       $wires_in_rep.='          ,"size": '.$i."\n" if $i>1;
+       $wires_in_rep.='        }';
+
        $code_join_wire_rep.="i$c";
 
        $code_and_i.=' & ' if $code_and_i;
@@ -76,9 +104,12 @@ if ($c>0)
        $code_xor_i.="i$c";
 
        $c--;
-       $inputs_rep.=",\n" if $c>=0;
-       $in_code_rep.=",\n" if $c>=0;
-       $wires_in_rep.=",\n" if $c>=0;
+       $inputs_rep.="," if $c>=0;
+       $in_code_rep.="," if $c>=0;
+       $wires_in_rep.="," if $c>=0;
+       $inputs_rep.="\n";
+       $in_code_rep.="\n";
+       $wires_in_rep.="\n";
        $code_join_wire_rep.=',' if $c>=0;
       }
   }
@@ -158,36 +189,51 @@ if ($c>0)
           $split_max-=$o;
           $a=~s/\@rg_i_o$c/$range/g;
          }
-       $outputs_rep.='{ "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-'.$c.'",'."\n";
-       $outputs_rep.='"type": "basic.output",'."\n";
-       $outputs_rep.='"data": {'."\n";
-       $outputs_rep.='"name": "o'.$c.'",'."\n";
-       $outputs_rep.='"pins": ['."\n".$pins.'],'."\n";
-       $outputs_rep.='"size": '.$o.','."\n" if $o>1;
-       $outputs_rep.='"virtual": true'."\n";
-       $outputs_rep.='},'."\n";
-       $outputs_rep.='"position": {'."\n";
-       $outputs_rep.=' "x": 808,'."\n";
-       $outputs_rep.=' "y": '."$yc\n";
+       $outputs_rep.='            {'."\n";
+       $outputs_rep.='              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-'.$c.'",'."\n";
+       $outputs_rep.='              "type": "basic.output",'."\n";
+       $outputs_rep.='              "data": {'."\n";
+       $outputs_rep.='                "name": "o'.$c.'",'."\n";
+       $outputs_rep.='                "pins": ['."\n";
+       $outputs_rep.=$pins;
+       $outputs_rep.='                ],'."\n";
+       $outputs_rep.='                "size": '.$o.','."\n" if $o>1;
+       $outputs_rep.='                "virtual": true'."\n";
+       $outputs_rep.='              },'."\n";
+       $outputs_rep.='              "position": {'."\n";
+       $outputs_rep.='                "x": 808,'."\n";
+       $outputs_rep.='                "y": '."$yc\n";
+       $outputs_rep.='              }'."\n";
        $yc+=64; $out_height+=64;
-       $outputs_rep.='}}'."\n";
-       $out_code_rep.='{ "name": "o'.$c.'"'."\n";
+       $outputs_rep.='            }';
+       $out_code_rep.='                {'."\n";
+       $out_code_rep.='                  "name": "o'.$c.'"'."\n";
        if ($o>1)
          {
-          $out_code_rep.=' , "size": '."$o\n";
+          $out_code_rep.='                  ,"size": '."$o\n";
           $range='['.($o-1).':0]';
-          $out_code_rep.=' , "range": "'."$range\"\n";
+          $out_code_rep.='                  ,"range": "'."$range\"\n";
          }
-       $out_code_rep.=' }'."\n";
-       $wires_out_rep.='{ "source": { "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e", "port": "o'.$c.'" },'."\n";
-       $wires_out_rep.='  "target": { "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-'.$c.'", "port": "in" }'."\n";
-       $wires_out_rep.='  "size": '.$o."\n" if $o>1;
-       $wires_out_rep.="}\n";
+       $out_code_rep.='                }';
+       $wires_out_rep.='        {'."\n";
+       $wires_out_rep.='          "source": {'."\n";
+       $wires_out_rep.='            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",'."\n";
+       $wires_out_rep.='            "port": "o'.$c.'"'."\n";
+       $wires_out_rep.='          },'."\n";
+       $wires_out_rep.='          "target": {'."\n";
+       $wires_out_rep.='            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-'.$c.'",'."\n";
+       $wires_out_rep.='            "port": "in"'."\n";
+       $wires_out_rep.='          }'."\n";
+       $wires_out_rep.='          ,"size": '.$o."\n" if $o>1;
+       $wires_out_rep.='        }';
        $code_split_wire_rep.="assign o$c=i[$c];\\n";
        $c--;
-       $outputs_rep.=",\n" if $c>=0;
-       $out_code_rep.=",\n" if $c>=0;
-       $wires_out_rep.=",\n" if $c>=0;
+       $outputs_rep.="," if $c>=0;
+       $out_code_rep.="," if $c>=0;
+       $wires_out_rep.="," if $c>=0;
+       $outputs_rep.="\n";
+       $out_code_rep.="\n";
+       $wires_out_rep.="\n";
       }
   }
 else
@@ -242,11 +288,32 @@ $a=~s/\@0o_i/$dif_sz\'b0/g;
 # Fix dependencies
 while ($a=~/\@sha1\<([^\>]+)\>/g)
   {
-   #print "perl json_sha1.pl \"$1\"\n";
-   $r=`perl json_sha1.pl \"$1\"`;
-   $a=~s/\@sha1\<$1\>/$r/g;
-   unlink('pp.json');
+   my $f=$1;
+   $r=$hf{$f};
+   die "Unknown block '$f' <$tpl>" unless $r;
+   $a=~s/\@sha1\<$f\>/$r/g;
+   #print "SHA1 for $f\n";
+   push(@deps,$r);
   }
+if ($a=~/\@dependencies/)
+  {# Collect all dependencies
+   my ($d,$res);
+   @fulldeps=();
+   foreach $d (@deps)
+      {
+       SolveDeps($d);
+      }
+   print "Total deps: ".scalar(@fulldeps)."\n";
+   # Generate the code for them
+   foreach $d (@fulldeps)
+      {
+       $res.=",\n" if $res;
+       $res.=AddDep($d);
+      }
+   $a=~s/\@dependencies/$res/;
+  }
+
+# Deprecated replacements
 while ($a=~/\@include\<([^\>]+)\>/g)
   {
    #print "perl json_sha1.pl \"$1\"\n";
@@ -267,6 +334,61 @@ while ($a=~/\@dependency\<([^\>]+)\>/g)
   }
 replace($sal,$a);
 0;
+
+sub Indent
+{
+ my $i;
+ for ($i=0; $i<$depth; $i++)
+    {
+     print ' ';
+    }
+}
+
+sub SolveDeps
+{
+ my $d=@_[0];
+ #print Indent()."Solving deps for $d ($h{$d})\n";
+ $depth++;
+ # Avoid adding it twice
+ unless (grep(/^$d$/,@fulldeps))
+   {
+    #print Indent()."Adding $d ($h{$d})\n";
+    push(@fulldeps,$d);
+    # Add subdependencies
+    my $subd=$h{$d};
+    die "Internal error: unknown data for $d hash" unless $subd;
+    my @v=split(/\|/,$subd);
+    shift(@v); # File name
+    shift(@v); # Rule
+    my $sd;
+    foreach $sd (@v)
+       {
+        #print Indent()."Checking sub $sd ($h{$sd})\n";
+        next if grep(/^$sd$/,@fulldeps);
+        SolveDeps($sd);
+       }
+   }
+ else
+   {
+    #print Indent()."Skipping $d already there\n";
+   }
+ $depth--;
+}
+
+sub AddDep
+{
+ my $sha1=$_[0];
+ my $res;
+ $res="    \"$sha1\": {\n";
+ my $inc=$h{$sha1};
+ die "Unknown SHA1 $sha1" unless $inc;
+ $inc=~/([^\|]+)\|/;
+ `perl tools/json_sha1.pl \"$1\"`;
+ $res.=cat('pp.json');
+ unlink('pp.json');
+ $res.="    }";
+ $res;
+}
 
 sub GenPins
 {

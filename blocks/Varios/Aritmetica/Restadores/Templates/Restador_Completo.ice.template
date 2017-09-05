@@ -121,7 +121,7 @@
         },
         {
           "id": "514abafe-16a1-47b1-8538-f5360e6c17cc",
-          "type": "@sha1<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_@sz_i.ice>",
           "position": {
             "x": 456,
             "y": 120
@@ -133,7 +133,7 @@
         },
         {
           "id": "8ada4dda-a40d-4cef-a112-bc76cbbc9863",
-          "type": "@sha1<../Complemento_a_2/Complemento_a_2_@sz_i.ice>",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_@sz_i.ice>",
           "position": {
             "x": 264,
             "y": 208
@@ -145,7 +145,7 @@
         },
         {
           "id": "33d13a77-3848-425b-becf-dbbe65dd2e54",
-          "type": "@sha1<../../../Logic/NOT.ice>",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
           "position": {
             "x": 624,
             "y": 208
@@ -280,13 +280,6 @@
     }
   },
   "dependencies": {
-    @dependency<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>,
-    @dependency<../Complemento_a_2/Complemento_a_2_@sz_i.ice>,
-    @dependency<../Incrementador/Incrementador_@sz_i.ice>,
-    @dependency<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>,
-    @dependency<../../../Const/Bit/1.ice>,
-    @dependency<../Complemento_a_1/Complemento_a_1_@sz_i.ice>,
-    @dependency<../../Buses/NOT/NOT_@sz_i.ice>,
-    @dependency<../../../Logic/NOT.ice>
+@dependencies
   }
 }

@@ -515,7 +515,7 @@
   },
   "dependencies": {
     "9094ce02a4d510ca0638b4e851ef1d78389ece2e": {
-      "package": {
+  "package": {
     "name": "Incrementador de 32 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -692,10 +692,9 @@
       "zoom": 1
     }
   }
-
     },
     "5d07ffc67a6a2e25ab913071c58a7d99e6c57823": {
-      "package": {
+  "package": {
     "name": "Sumador de 32 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 32 bits (cin, cout y oVerflow)",
@@ -901,10 +900,9 @@
       "zoom": 1
     }
   }
-
     },
     "a932871b085d7c5929ee04b6be688311bf12c8af": {
-      "package": {
+  "package": {
     "name": "Valor 0 32 bits",
     "version": "0.0.1",
     "description": "Valor constante 0 para bus de 32 bits",
@@ -1003,10 +1001,9 @@
       "zoom": 1
     }
   }
-
     },
     "3e6c249e205080168c1bf4ee8dbc33b50653d5f4": {
-      "package": {
+  "package": {
     "name": "Bit 1",
     "version": "1.0.0",
     "description": "Assign 1 to the output wire",
@@ -1069,10 +1066,9 @@
       "zoom": 1
     }
   }
-
     },
     "8a9f249a35beabb09ad9ee4023ef6fd2ffc7f852": {
-      "package": {
+  "package": {
     "name": "Complemento a 1 de 32 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -1171,10 +1167,9 @@
       "zoom": 1
     }
   }
-
     },
     "d8df941e4f39ab5f7bd9937c7b3873e63b398019": {
-      "package": {
+  "package": {
     "name": "NOT 32 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 32 bits bus",
@@ -1277,7 +1272,6 @@
       "zoom": 1
     }
   }
-
     }
   }
 }

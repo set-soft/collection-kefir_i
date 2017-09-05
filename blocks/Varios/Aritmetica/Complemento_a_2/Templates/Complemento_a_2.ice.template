@@ -62,7 +62,7 @@
         },
         {
           "id": "fdc58501-afe3-49aa-a704-3c996443b2f5",
-          "type": "@sha1<../Incrementador/Incrementador_@sz_i.ice>",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Incrementador/Incrementador_@sz_i.ice>",
           "position": {
             "x": 448,
             "y": 56
@@ -74,7 +74,7 @@
         },
         {
           "id": "1b65cba8-1073-4c5c-a625-639ddc3aa4c9",
-          "type": "@sha1<../Complemento_a_1/Complemento_a_1_@sz_i.ice>",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_@sz_i.ice>",
           "position": {
             "x": 264,
             "y": 72
@@ -130,11 +130,6 @@
     }
   },
   "dependencies": {
-    @dependency<../Incrementador/Incrementador_@sz_i.ice>,
-    @dependency<../Sumadores/Completo/Sumador_Completo_@sz_i.ice>,
-    @dependency<../../../Const/Bus/0/Valor_0_@sz_i_bits.ice>,
-    @dependency<../../../Const/Bit/1.ice>,
-    @dependency<../Complemento_a_1/Complemento_a_1_@sz_i.ice>,
-    @dependency<../../Buses/NOT/NOT_@sz_i.ice>
+@dependencies
   }
 }

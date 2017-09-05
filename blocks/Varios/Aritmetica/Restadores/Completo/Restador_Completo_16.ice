@@ -569,7 +569,7 @@
   },
   "dependencies": {
     "75b5a4189c1654211853edd241678db9e5860b70": {
-      "package": {
+  "package": {
     "name": "Sumador de 16 bits completo",
     "version": "1.1.0",
     "description": "Sumador de 16 bits (cin, cout y oVerflow)",
@@ -775,10 +775,9 @@
       "zoom": 1
     }
   }
-
     },
     "81022d9c4a72a4e7b344a9290781bf7bb587f1fc": {
-      "package": {
+  "package": {
     "name": "Complemento a 2 de 16 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 2 de la entrada",
@@ -900,10 +899,9 @@
       "zoom": 1
     }
   }
-
     },
     "64384ad57bb619acf2ba5607b30d65e61ddd337b": {
-      "package": {
+  "package": {
     "name": "Incrementador de 16 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
@@ -1080,10 +1078,9 @@
       "zoom": 1
     }
   }
-
     },
     "125f0ae86eb749b7e0d41ef2fbfa5a1fe802886f": {
-      "package": {
+  "package": {
     "name": "Valor 0 16 bits",
     "version": "0.0.1",
     "description": "Valor constante 0 para bus de 16 bits",
@@ -1182,10 +1179,9 @@
       "zoom": 1
     }
   }
-
     },
     "3e6c249e205080168c1bf4ee8dbc33b50653d5f4": {
-      "package": {
+  "package": {
     "name": "Bit 1",
     "version": "1.0.0",
     "description": "Assign 1 to the output wire",
@@ -1248,10 +1244,9 @@
       "zoom": 1
     }
   }
-
     },
     "8723c14d6879938bdcbbdad7a306745a783e184d": {
-      "package": {
+  "package": {
     "name": "Complemento a 1 de 16 bits",
     "version": "1.0.0",
     "description": "Calcula el complemento a 1 de la entrada",
@@ -1350,10 +1345,9 @@
       "zoom": 1
     }
   }
-
     },
     "14ee4884b903bb75aa428a5bfe04223e9c62ca6c": {
-      "package": {
+  "package": {
     "name": "NOT 16 bits bus",
     "version": "1.0.0",
     "description": "NOT logic gate for a 16 bits bus",
@@ -1456,10 +1450,9 @@
       "zoom": 1
     }
   }
-
     },
     "32200dc0915d45d6ec035bcec61c8472f0cc7b88": {
-      "package": {
+  "package": {
     "name": "NOT",
     "version": "1.0.0",
     "description": "NOT logic gate",
@@ -1547,7 +1540,6 @@
       "zoom": 1
     }
   }
-
     }
   }
 }
