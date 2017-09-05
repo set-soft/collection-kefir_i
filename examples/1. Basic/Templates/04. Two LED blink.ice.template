@@ -1,0 +1,166 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "d5975d7e-4231-4538-bf89-f762a63cb10a",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 432,
+            "y": 96
+          }
+        },
+        {
+          "id": "c0122f10-173c-4faa-b938-a5957b9e4bac",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 432,
+            "y": 256
+          }
+        },
+        {
+          "id": "5bc3bd0f-86b5-4da1-8057-44e053d96e04",
+          "type": "basic.constant",
+          "data": {
+            "name": "N",
+            "value": "21",
+            "local": true
+          },
+          "position": {
+            "x": 160,
+            "y": -16
+          }
+        },
+        {
+          "id": "2464d2a6-3648-4fbc-bbcc-b0c3e8d1e935",
+          "type": "basic.info",
+          "data": {
+            "info": "Blinking LED",
+            "readonly": true
+          },
+          "position": {
+            "x": 136,
+            "y": 176
+          },
+          "size": {
+            "width": 128,
+            "height": 32
+          }
+        },
+        {
+          "id": "dcc5e2ae-8987-4024-ac4e-b3a295253abd",
+          "type": "basic.info",
+          "data": {
+            "info": "Otra forma de hacerlo",
+            "readonly": true
+          },
+          "position": {
+            "x": 128,
+            "y": 336
+          },
+          "size": {
+            "width": 240,
+            "height": 48
+          }
+        },
+        {
+          "id": "cc95bf98-afa9-47dc-aa76-79f2fa67854c",
+          "type": "@sha1<./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice>",
+          "position": {
+            "x": 160,
+            "y": 96
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "2857148d-685b-4f6c-80d0-4202cae80593",
+          "type": "@sha1<./blocks/Varios/Bombeo/Corazon_x1.ice>",
+          "position": {
+            "x": 160,
+            "y": 256
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "cc95bf98-afa9-47dc-aa76-79f2fa67854c",
+            "port": "9300c558-2ae5-41b9-8945-36a052dcd2c4"
+          },
+          "target": {
+            "block": "d5975d7e-4231-4538-bf89-f762a63cb10a",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "5bc3bd0f-86b5-4da1-8057-44e053d96e04",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "cc95bf98-afa9-47dc-aa76-79f2fa67854c",
+            "port": "5e9ba116-18fe-427b-b6d7-778090ac88cf"
+          }
+        },
+        {
+          "source": {
+            "block": "2857148d-685b-4f6c-80d0-4202cae80593",
+            "port": "f6615511-2d97-4f63-a7c2-106a7c91f33b"
+          },
+          "target": {
+            "block": "c0122f10-173c-4faa-b938-a5957b9e4bac",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -46.291,
+        "y": -281.2798
+      },
+      "zoom": 1.9303
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

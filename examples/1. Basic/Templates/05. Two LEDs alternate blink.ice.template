@@ -1,0 +1,143 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 360,
+            "y": -64
+          }
+        },
+        {
+          "id": "5701b50c-904b-4776-ab4c-addc641b71ff",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 360,
+            "y": 16
+          }
+        },
+        {
+          "id": "279c2e74-69b0-489f-af8a-1a3b26a8d20e",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 208,
+            "y": 16
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "c4334cde-6d7f-4932-bd44-7978a59c0b75",
+          "type": "basic.info",
+          "data": {
+            "info": "LEDs 1 and 2 are blinking alternatively",
+            "readonly": true
+          },
+          "position": {
+            "x": -32,
+            "y": 112
+          },
+          "size": {
+            "width": 320,
+            "height": 32
+          }
+        },
+        {
+          "id": "7ebf20c2-1d00-4e4f-9ad3-70289b5a04a8",
+          "type": "@sha1<./blocks/Varios/Bombeo/Corazon_x1.ice>",
+          "position": {
+            "x": -8,
+            "y": -64
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "279c2e74-69b0-489f-af8a-1a3b26a8d20e",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "5701b50c-904b-4776-ab4c-addc641b71ff",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "7ebf20c2-1d00-4e4f-9ad3-70289b5a04a8",
+            "port": "f6615511-2d97-4f63-a7c2-106a7c91f33b"
+          },
+          "target": {
+            "block": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "7ebf20c2-1d00-4e4f-9ad3-70289b5a04a8",
+            "port": "f6615511-2d97-4f63-a7c2-106a7c91f33b"
+          },
+          "target": {
+            "block": "279c2e74-69b0-489f-af8a-1a3b26a8d20e",
+            "port": "18c2ebc7-5152-439c-9b3f-851c59bac834"
+          },
+          "vertices": [
+            {
+              "x": 160,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 246,
+        "y": 223.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

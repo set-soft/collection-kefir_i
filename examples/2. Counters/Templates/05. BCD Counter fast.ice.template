@@ -1,0 +1,154 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "646a25ac-eda6-4033-8781-3356830f5a5c",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 568,
+            "y": 216
+          }
+        },
+        {
+          "id": "2046cd04-8b19-4d5b-a899-953eaf864104",
+          "type": "basic.constant",
+          "data": {
+            "name": "DIV_1",
+            "value": "11999999",
+            "local": true
+          },
+          "position": {
+            "x": 240,
+            "y": 96
+          }
+        },
+        {
+          "id": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 240,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "05ccdee4-ab6a-4a29-9b3a-3d4fc4d9fa4c",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/BCD Natural/Contador_BCD_Simple_Enable.ice>",
+          "position": {
+            "x": 408,
+            "y": 224
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "04adeadb-2f40-47ab-a3ac-12e1029b8774",
+          "type": "@sha1<./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice>",
+          "position": {
+            "x": 240,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "05ccdee4-ab6a-4a29-9b3a-3d4fc4d9fa4c",
+            "port": "d0879926-8178-4941-8c25-0b7803cec5d5"
+          }
+        },
+        {
+          "source": {
+            "block": "05ccdee4-ab6a-4a29-9b3a-3d4fc4d9fa4c",
+            "port": "3773f69f-b0f2-41e8-97d2-6f7ab2bd53d0"
+          },
+          "target": {
+            "block": "646a25ac-eda6-4033-8781-3356830f5a5c",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "2046cd04-8b19-4d5b-a899-953eaf864104",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "04adeadb-2f40-47ab-a3ac-12e1029b8774",
+            "port": "688c68e7-f864-44b2-bbd3-68316df9a433"
+          }
+        },
+        {
+          "source": {
+            "block": "04adeadb-2f40-47ab-a3ac-12e1029b8774",
+            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+          },
+          "target": {
+            "block": "05ccdee4-ab6a-4a29-9b3a-3d4fc4d9fa4c",
+            "port": "8d1cfe0e-2200-40d1-8753-add921edd4e1"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 22,
+        "y": 27.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

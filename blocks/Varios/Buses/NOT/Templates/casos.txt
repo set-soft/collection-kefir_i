@@ -1,0 +1,5 @@
+"NOT.ice.template" 2 2 "NOT_2.ice"
+"NOT.ice.template" 4 4 "NOT_4.ice"
+"NOT.ice.template" 8 8 "NOT_8.ice"
+"NOT.ice.template" 16 16 "NOT_16.ice"
+"NOT.ice.template" 32 32 "NOT_32.ice"

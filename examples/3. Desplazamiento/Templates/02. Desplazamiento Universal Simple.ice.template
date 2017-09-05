@@ -1,0 +1,242 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Desplazamiento 2 Universal Simple",
+    "version": "1.0.0",
+    "description": "Ejemplo de uso de un registro de desplazamiento a derecha",
+    "author": "Salvador E. Tropea",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 640,
+            "y": 120
+          }
+        },
+        {
+          "id": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 160,
+            "y": 216
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "9c649b50-5afa-44f5-9d62-57b5c6f32cd6",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 160,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "0a2d8578-da2d-404a-9c9b-1eee679d78d7",
+          "type": "@sha1<./blocks/Varios/Buses/NOR/1_out/NOR_4.ice>",
+          "position": {
+            "x": 600,
+            "y": 312
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "ba77816c-b482-4c37-a07a-4b501866c351",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
+          "position": {
+            "x": 160,
+            "y": 144
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d9d6673e-027b-4380-9b73-de1b3eb504fa",
+          "type": "@sha1<./blocks/Logic/OR/OR_2.ice>",
+          "position": {
+            "x": 752,
+            "y": 360
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "74d16a13-806a-4bba-a863-2efc23394d51",
+          "type": "@sha1<./blocks/Varios/Registros/Universal/Simple/Reg_Universal_4_Simple.ice>",
+          "position": {
+            "x": 392,
+            "y": 168
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "0a2d8578-da2d-404a-9c9b-1eee679d78d7",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "d9d6673e-027b-4380-9b73-de1b3eb504fa",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+          }
+        },
+        {
+          "source": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "5142a037-9ca9-4666-bf77-f3282675d474"
+          },
+          "target": {
+            "block": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "5142a037-9ca9-4666-bf77-f3282675d474"
+          },
+          "target": {
+            "block": "0a2d8578-da2d-404a-9c9b-1eee679d78d7",
+            "port": "4976678b-ee3d-47ed-8e8b-64bd81b2766f"
+          },
+          "vertices": [
+            {
+              "x": 544,
+              "y": 296
+            }
+          ],
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "91daed13-a677-4c53-b7b0-b19b777730e0"
+          },
+          "target": {
+            "block": "d9d6673e-027b-4380-9b73-de1b3eb504fa",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+          },
+          "vertices": [
+            {
+              "x": 528,
+              "y": 392
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "d9d6673e-027b-4380-9b73-de1b3eb504fa",
+            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+          },
+          "target": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "4344f546-f4b9-40b5-a0fc-bf646f7f8dbb"
+          },
+          "vertices": [
+            {
+              "x": 480,
+              "y": 456
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "9c649b50-5afa-44f5-9d62-57b5c6f32cd6",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "22dba1b2-7615-4f6e-8f52-54ff16ac0ca1"
+          }
+        },
+        {
+          "source": {
+            "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "f50e03c8-ab81-4202-a773-9db9172b3c1b"
+          }
+        },
+        {
+          "source": {
+            "block": "ba77816c-b482-4c37-a07a-4b501866c351",
+            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+          },
+          "target": {
+            "block": "74d16a13-806a-4bba-a863-2efc23394d51",
+            "port": "97d1f766-958e-4a55-af2e-db7a6454c22e"
+          },
+          "vertices": [
+            {
+              "x": 304,
+              "y": 208
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -45,
+        "y": -24.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

@@ -1,0 +1,5 @@
+"Comparador.ice.template" 2 1 "Comparador_2.ice"
+"Comparador.ice.template" 4 1 "Comparador_4.ice"
+"Comparador.ice.template" 8 1 "Comparador_8.ice"
+"Comparador.ice.template" 16 1 "Comparador_16.ice"
+"Comparador.ice.template" 32 1 "Comparador_32.ice"

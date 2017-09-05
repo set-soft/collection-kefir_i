@@ -1,0 +1,6 @@
+"01. Two LEDs alternate blink deco.ice.template" 0 0 "01. Two LEDs alternate blink deco.ice"
+"02. Four LEDs sequence demux.ice.template" 0 0 "02. Four LEDs sequence demux.ice"
+"03. Two LEDs alternate blink deco.ice.template" 0 0 "03. Two LEDs alternate blink deco.ice"
+"04. Four LEDs sequence deco.ice.template" 0 0 "04. Four LEDs sequence deco.ice"
+"05. Two LEDs alternate blink deco no ena.ice.template" 0 0 "05. Two LEDs alternate blink deco no ena.ice"
+"06. Four LEDs sequence deco no ena.ice.template" 0 0 "06. Four LEDs sequence deco no ena.ice"

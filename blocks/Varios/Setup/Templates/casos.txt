@@ -1,0 +1,2 @@
+"Pull-up.ice.template" 0 0 "Pull-up.ice"
+"Tri-state.ice.template" 0 0 "Tri-state.ice"

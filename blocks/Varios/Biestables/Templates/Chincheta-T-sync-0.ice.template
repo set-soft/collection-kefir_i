@@ -1,0 +1,153 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Biestable-T-sync-0",
+    "version": "0.1",
+    "description": "Biestable T síncrono, inicializado a 0",
+    "author": "Juan González-Gómez (Obijuan)",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2263.799%22%20height=%2257.366%22%20viewBox=%220%200%2059.811602%2053.780232%22%3E%3Cg%20transform=%22translate(-310.54%20-373.968)%22%3E%3Cpath%20d=%22M353.401%20407.803l3.157%2019.445%203.914-19.445%22%20fill=%22#ccc%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22314.415%22%20y=%22396.883%22%20font-weight=%22400%22%20font-size=%2227.335%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22314.415%22%20y=%22396.883%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3ET%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22316.916%22%20y=%22420.476%22%20font-weight=%22400%22%20font-size=%2220%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#00f%22%3E%3Ctspan%20x=%22316.916%22%20y=%22420.476%22%3E0%3C/tspan%3E%3C/text%3E%3Crect%20width=%2223.595%22%20height=%2221.484%22%20x=%22311.539%22%20y=%22402.712%22%20ry=%223.545%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M351.238%20398.03l1.658-19.774h-6.818v-3.788h22.097v3.788h-6.44l1.196%2019.953s5.208.866%206.428%204.494c1.221%203.628-.254%205.053.105%205.104l-25.022-.03s-.566-4.234%201.398-6.377c1.965-2.142%205.398-3.37%205.398-3.37z%22%20fill=%22red%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "498ac25b-40a3-4cee-9708-30d9434b868d",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 208,
+            "y": 128
+          }
+        },
+        {
+          "id": "d8b85f67-c352-499e-b923-dd128d980efa",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 648,
+            "y": 200
+          }
+        },
+        {
+          "id": "9391dc12-2253-4557-adba-60a33e4f7eb2",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 208,
+            "y": 216
+          }
+        },
+        {
+          "id": "4466ac94-8f05-4a7b-a328-543e7efd03c6",
+          "type": "basic.constant",
+          "data": {
+            "name": "INI",
+            "value": "0",
+            "local": true
+          },
+          "position": {
+            "x": 408,
+            "y": 56
+          }
+        },
+        {
+          "id": "051529e6-e009-4605-9300-00ba742e3cf7",
+          "type": "@sha1<./blocks/Varios/Biestables/Chincheta-T-sync-ini.ice>",
+          "position": {
+            "x": 408,
+            "y": 200
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "9391dc12-2253-4557-adba-60a33e4f7eb2",
+            "port": "out"
+          },
+          "target": {
+            "block": "051529e6-e009-4605-9300-00ba742e3cf7",
+            "port": "e318155e-4ba9-4bfd-9c1e-93a2d902b4a3"
+          }
+        },
+        {
+          "source": {
+            "block": "498ac25b-40a3-4cee-9708-30d9434b868d",
+            "port": "out"
+          },
+          "target": {
+            "block": "051529e6-e009-4605-9300-00ba742e3cf7",
+            "port": "9fadb0bc-b949-4c36-b110-f4fea27399a4"
+          }
+        },
+        {
+          "source": {
+            "block": "4466ac94-8f05-4a7b-a328-543e7efd03c6",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "051529e6-e009-4605-9300-00ba742e3cf7",
+            "port": "f447c56a-1988-4bb4-ad1c-9baf4e69d445"
+          }
+        },
+        {
+          "source": {
+            "block": "051529e6-e009-4605-9300-00ba742e3cf7",
+            "port": "f8940b3f-43fe-4db8-ba05-76ad90f4711c"
+          },
+          "target": {
+            "block": "d8b85f67-c352-499e-b923-dd128d980efa",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -26,
+        "y": 95.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Desplazamiento 1 Universal Completo",
+    "version": "1.0.0",
+    "description": "Ejemplo de uso de un registro de desplazamiento a derecha",
+    "author": "Salvador E. Tropea",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 568,
+            "y": 120
+          }
+        },
+        {
+          "id": "8bbcad46-0363-4162-9d99-a38a16fddddc",
+          "type": "basic.constant",
+          "data": {
+            "name": "DINI",
+            "value": "4'b1000",
+            "local": false
+          },
+          "position": {
+            "x": 384,
+            "y": 40
+          }
+        },
+        {
+          "id": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 160,
+            "y": 128
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "51d62fb2-1473-431f-b43c-45d54e73431c",
+          "type": "@sha1<./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice>",
+          "position": {
+            "x": 384,
+            "y": 160
+          },
+          "size": {
+            "width": 96,
+            "height": 256
+          }
+        },
+        {
+          "id": "9c649b50-5afa-44f5-9d62-57b5c6f32cd6",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 160,
+            "y": 304
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "b3792a48-163a-4fea-ae3e-f2d518a45e14",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
+          "position": {
+            "x": 160,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "8bbcad46-0363-4162-9d99-a38a16fddddc",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "651e5c56-c96e-4a31-b539-1813fc5d6061"
+          }
+        },
+        {
+          "source": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "48badb8e-e884-4306-933f-509ef615b10f"
+          },
+          "target": {
+            "block": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "5953eb14-e751-4790-ab74-f079cc9bb239"
+          },
+          "vertices": [
+            {
+              "x": 312,
+              "y": 208
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "dc27bf6c-e1d0-4bbe-8a2a-870da5ceb78c"
+          },
+          "vertices": [
+            {
+              "x": 312,
+              "y": 224
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "1ff1a9d4-7b2e-4798-b60e-59b184591336"
+          },
+          "target": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "ec29ba4b-b440-40de-9f14-8da5136ce1d2"
+          },
+          "vertices": [
+            {
+              "x": 448,
+              "y": 456
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "9c649b50-5afa-44f5-9d62-57b5c6f32cd6",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "2076d676-52bd-47ea-a3ce-fac1ba91a77e"
+          }
+        },
+        {
+          "source": {
+            "block": "b3792a48-163a-4fea-ae3e-f2d518a45e14",
+            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+          },
+          "target": {
+            "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
+            "port": "cbe066b5-d860-4f40-b9cf-15196e90023c"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 62,
+        "y": 11.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

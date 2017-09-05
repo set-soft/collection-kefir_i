@@ -1,0 +1,149 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "810040a3-2f36-4153-b3ac-6e2ca81dd7de",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 520,
+            "y": 184
+          }
+        },
+        {
+          "id": "c9f4bf1b-a589-44c5-ace7-262bd07c4f2c",
+          "type": "basic.constant",
+          "data": {
+            "name": "A",
+            "value": "4'b1001",
+            "local": true
+          },
+          "position": {
+            "x": 136,
+            "y": 152
+          }
+        },
+        {
+          "id": "e5d3be5c-3030-4e93-93de-be2b2b7cb33e",
+          "type": "basic.info",
+          "data": {
+            "info": "Ingresar aquí el valor\na compementar, 4 bits",
+            "readonly": true
+          },
+          "position": {
+            "x": 232,
+            "y": 160
+          },
+          "size": {
+            "width": 272,
+            "height": 80
+          }
+        },
+        {
+          "id": "2d458fbb-27bb-4f35-8397-a7402e1a8b93",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_4_bits.ice>",
+          "position": {
+            "x": 136,
+            "y": 264
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "baf414ea-7523-4d40-8b8d-9d1468665ea3",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Incrementador/Incrementador_4.ice>",
+          "position": {
+            "x": 320,
+            "y": 248
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "c9f4bf1b-a589-44c5-ace7-262bd07c4f2c",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "2d458fbb-27bb-4f35-8397-a7402e1a8b93",
+            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+          }
+        },
+        {
+          "source": {
+            "block": "2d458fbb-27bb-4f35-8397-a7402e1a8b93",
+            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+          },
+          "target": {
+            "block": "baf414ea-7523-4d40-8b8d-9d1468665ea3",
+            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "baf414ea-7523-4d40-8b8d-9d1468665ea3",
+            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+          },
+          "target": {
+            "block": "810040a3-2f36-4153-b3ac-6e2ca81dd7de",
+            "port": "in"
+          },
+          "size": 4
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 74,
+        "y": -0.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

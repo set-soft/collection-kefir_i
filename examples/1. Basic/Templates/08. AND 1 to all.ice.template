@@ -1,0 +1,253 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "95b7089a-1764-4ad6-9e0b-b22112936377",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 736,
+            "y": -64
+          }
+        },
+        {
+          "id": "269c6055-f567-4305-8970-08b656afc4f8",
+          "type": "basic.input",
+          "data": {
+            "name": "BTN",
+            "pins": [
+              {
+                "index": "0",
+                "name": "BTN1",
+                "value": "136"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 104
+          }
+        },
+        {
+          "id": "7c016ae6-c5a1-49f9-b2ec-ff9ae6707466",
+          "type": "basic.input",
+          "data": {
+            "name": "BTN",
+            "pins": [
+              {
+                "index": "0",
+                "name": "BTN2",
+                "value": "134"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 176
+          }
+        },
+        {
+          "id": "7fe37b61-58d5-42d8-959a-e03ab5a33974",
+          "type": "basic.constant",
+          "data": {
+            "name": "C",
+            "value": "4'b1010",
+            "local": false
+          },
+          "position": {
+            "x": 288,
+            "y": -144
+          }
+        },
+        {
+          "id": "09f2652a-58ac-4382-9d78-327cc8056df0",
+          "type": "basic.info",
+          "data": {
+            "info": "En este ejemplo el botón 1 condiciona el valor\nmostrado en los LEDs.\nCuando no está presionado el valor mostrado en\nlos LEDs es la constante C.\nCuando lo presionamos se apagan todos los LEDs.",
+            "readonly": true
+          },
+          "position": {
+            "x": 272,
+            "y": 192
+          },
+          "size": {
+            "width": 480,
+            "height": 112
+          }
+        },
+        {
+          "id": "ff0af575-e6d8-4599-99cf-7bd5fa1659a3",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_4_bits.ice>",
+          "position": {
+            "x": 288,
+            "y": -32
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d1b5a750-63d2-40e3-92d2-ebc6f1cf730a",
+          "type": "@sha1<./blocks/Input/CapSense/CapSense 2.ice>",
+          "position": {
+            "x": 288,
+            "y": 88
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "28494004-5c9f-4111-9cb1-8bbdc401e7b7",
+          "type": "@sha1<./blocks/Varios/Buses/AND/1_to_all/AND_4.ice>",
+          "position": {
+            "x": 584,
+            "y": -16
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "8619c8ab-1e56-4798-88ed-87d75dd4f021",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 432,
+            "y": 80
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "269c6055-f567-4305-8970-08b656afc4f8",
+            "port": "out"
+          },
+          "target": {
+            "block": "d1b5a750-63d2-40e3-92d2-ebc6f1cf730a",
+            "port": "c3026de9-5395-4b99-bc6a-53d0019aa4af"
+          }
+        },
+        {
+          "source": {
+            "block": "7c016ae6-c5a1-49f9-b2ec-ff9ae6707466",
+            "port": "out"
+          },
+          "target": {
+            "block": "d1b5a750-63d2-40e3-92d2-ebc6f1cf730a",
+            "port": "a0e44442-909c-4e74-8de1-23ca8735bfb2"
+          }
+        },
+        {
+          "source": {
+            "block": "ff0af575-e6d8-4599-99cf-7bd5fa1659a3",
+            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+          },
+          "target": {
+            "block": "28494004-5c9f-4111-9cb1-8bbdc401e7b7",
+            "port": "4976678b-ee3d-47ed-8e8b-64bd81b2766f"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "d1b5a750-63d2-40e3-92d2-ebc6f1cf730a",
+            "port": "8c60528d-ccdc-4f86-92cd-4c06dc21ba34"
+          },
+          "target": {
+            "block": "8619c8ab-1e56-4798-88ed-87d75dd4f021",
+            "port": "18c2ebc7-5152-439c-9b3f-851c59bac834"
+          }
+        },
+        {
+          "source": {
+            "block": "8619c8ab-1e56-4798-88ed-87d75dd4f021",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "28494004-5c9f-4111-9cb1-8bbdc401e7b7",
+            "port": "7e916a4b-75b2-4fbe-b39d-892f4a9485da"
+          }
+        },
+        {
+          "source": {
+            "block": "28494004-5c9f-4111-9cb1-8bbdc401e7b7",
+            "port": "5f693fc1-abe7-4da2-9230-3c9b88ef05f0"
+          },
+          "target": {
+            "block": "95b7089a-1764-4ad6-9e0b-b22112936377",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "7fe37b61-58d5-42d8-959a-e03ab5a33974",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "ff0af575-e6d8-4599-99cf-7bd5fa1659a3",
+            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 187.5,
+        "y": 263.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

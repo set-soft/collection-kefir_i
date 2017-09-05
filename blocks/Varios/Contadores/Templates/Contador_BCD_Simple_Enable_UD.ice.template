@@ -1,0 +1,282 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Contador BCD Simple Enable Up/Down",
+    "version": "1.0.0",
+    "description": "Contador BCD des/ascendente con enable y reset",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22207.845%22%20height=%22142.01%22%20viewBox=%220%200%20207.84529%20142.01018%22%3E%3Cdefs%3E%3Cmarker%20orient=%22auto%22%20id=%22b%22%20overflow=%22visible%22%3E%3Cpath%20d=%22M-2.308%200l3.46-2v4l-3.46-2z%22%20fill=%22#00f%22%20fill-rule=%22evenodd%22%20stroke=%22#00f%22%20stroke-width=%22.4pt%22/%3E%3C/marker%3E%3Cmarker%20orient=%22auto%22%20id=%22a%22%20overflow=%22visible%22%3E%3Cpath%20d=%22M2.308%200l-3.46%202v-4l3.46%202z%22%20fill=%22#00f%22%20fill-rule=%22evenodd%22%20stroke=%22#00f%22%20stroke-width=%22.4pt%22/%3E%3C/marker%3E%3C/defs%3E%3Cg%20transform=%22translate(-184.027%20-299.658)%22%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22318.242%22%20y=%22329.214%22%20ry=%223.75%22%20rx=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22340.77%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-size=%2247.638%22%20font-weight=%22400%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%20font-family=%22sans-serif%22%3E%3Ctspan%20x=%22340.77%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:sans-serif%20Bold%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M319.74%20362.607h37.093%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22229.495%22%20y=%22314.854%22%20font-size=%2220%22%20font-weight=%22400%22%20letter-spacing=%220%22%20word-spacing=%220%22%20font-family=%22sans-serif%22%3E%3Ctspan%20x=%22229.495%22%20y=%22314.854%22%20style=%22-inkscape-font-specification:sans-serif%20Bold%22%20font-weight=%22700%22%3EContador%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M378.373%20388.969V343.75%22%20fill=%22#00f%22%20stroke=%22#00f%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20marker-end=%22url(#a)%22%20marker-start=%22url(#b)%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22273.599%22%20y=%22329.214%22%20ry=%223.75%22%20rx=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22293.536%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-size=%2247.638%22%20font-weight=%22400%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%20font-family=%22sans-serif%22%3E%3Ctspan%20x=%22293.536%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:sans-serif%20Bold%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M275.097%20362.607h37.093%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22229.67%22%20y=%22329.214%22%20ry=%223.75%22%20rx=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22247.059%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-size=%2247.638%22%20font-weight=%22400%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%20font-family=%22sans-serif%22%3E%3Ctspan%20x=%22247.059%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:sans-serif%20Bold%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M231.168%20362.607h37.094%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22185.027%22%20y=%22329.214%22%20ry=%223.75%22%20rx=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22199.826%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-size=%2247.638%22%20font-weight=%22400%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%20font-family=%22sans-serif%22%3E%3Ctspan%20x=%22199.826%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:sans-serif%20Bold%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M186.525%20362.607h37.094%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22214.313%22%20y=%22440.908%22%20font-size=%2253.715%22%20font-weight=%22400%22%20letter-spacing=%220%22%20word-spacing=%220%22%20font-family=%22sans-serif%22%3E%3Ctspan%20x=%22214.313%22%20y=%22440.908%22%20style=%22-inkscape-font-specification:sans-serif%20Bold%22%20font-weight=%22700%22%3EBCD%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "8d1cfe0e-2200-40d1-8753-add921edd4e1",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 96,
+            "y": 128
+          }
+        },
+        {
+          "id": "def7cdd6-636a-42e7-ba46-439e00b5a158",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 96,
+            "y": 200
+          }
+        },
+        {
+          "id": "6ffbab23-18de-4ce1-923d-0c5d1a1c9551",
+          "type": "basic.output",
+          "data": {
+            "name": "tc",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 512,
+            "y": 224
+          }
+        },
+        {
+          "id": "3773f69f-b0f2-41e8-97d2-6f7ab2bd53d0",
+          "type": "basic.output",
+          "data": {
+            "name": "cnt",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 512,
+            "y": 320
+          }
+        },
+        {
+          "id": "d0879926-8178-4941-8c25-0b7803cec5d5",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 96,
+            "y": 344
+          }
+        },
+        {
+          "id": "774a91b7-7748-4dca-8944-492303cc9fcb",
+          "type": "basic.input",
+          "data": {
+            "name": "up",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 96,
+            "y": 416
+          }
+        },
+        {
+          "id": "c444f90e-da5b-42ca-9fa6-4307bca5c623",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 96,
+            "y": 272
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+          "type": "@sha1<./blocks/Varios/Contadores/Asc_Desc/BCD Natural/Contador_BCD_Completo_UD.ice>",
+          "position": {
+            "x": 328,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "873f6ddd-71e9-4dd2-a1a3-40ddf4a2865a"
+          },
+          "target": {
+            "block": "3773f69f-b0f2-41e8-97d2-6f7ab2bd53d0",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "6ce6581b-aa93-4c1c-a897-130d882d0cde"
+          },
+          "target": {
+            "block": "6ffbab23-18de-4ce1-923d-0c5d1a1c9551",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "8d1cfe0e-2200-40d1-8753-add921edd4e1",
+            "port": "out"
+          },
+          "target": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "c408ec5a-8c66-4c0b-b483-f4707db2cdc5"
+          },
+          "vertices": [
+            {
+              "x": 288,
+              "y": 184
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "def7cdd6-636a-42e7-ba46-439e00b5a158",
+            "port": "out"
+          },
+          "target": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "e6ee1805-a2ae-4092-860c-67a2fee49297"
+          },
+          "vertices": [
+            {
+              "x": 280,
+              "y": 248
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "c444f90e-da5b-42ca-9fa6-4307bca5c623",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "858ac203-fde6-4642-889b-4355f332c5e6"
+          },
+          "vertices": [
+            {
+              "x": 264,
+              "y": 288
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "d0879926-8178-4941-8c25-0b7803cec5d5",
+            "port": "out"
+          },
+          "target": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "10574f2e-c980-4108-b05b-7b0bbae27198"
+          },
+          "vertices": [
+            {
+              "x": 264,
+              "y": 360
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "774a91b7-7748-4dca-8944-492303cc9fcb",
+            "port": "out"
+          },
+          "target": {
+            "block": "8a87df44-54b7-4aa0-845c-3d4a7fcb2a8d",
+            "port": "aa4ea653-1c66-46f5-97b2-2e56781c986c"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 98,
+        "y": -4.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

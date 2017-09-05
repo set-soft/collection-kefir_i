@@ -1,0 +1,400 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Sumador de 2 bits",
+    "version": "1.0.0",
+    "description": "Sumador de 2 valores de 2 bits con acarreo de entrada y salida.",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%225.005%22%20width=%225.005%22%3E%3Ctext%20style=%22text-align:start%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-254.7%20-197.756)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3E+%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "a9cfe06c-3356-46e8-9485-9400af375c42",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "range": "[1:0]",
+            "pins": [
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 432,
+            "y": 216
+          }
+        },
+        {
+          "id": "4bbf09d5-5ba9-47e9-96e0-87909f2b2616",
+          "type": "basic.output",
+          "data": {
+            "name": "Cout",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 256
+          }
+        },
+        {
+          "id": "3c16af6a-e73d-4380-a573-2507954f15f6",
+          "type": "basic.input",
+          "data": {
+            "name": "B",
+            "range": "[1:0]",
+            "pins": [
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 432,
+            "y": 288
+          }
+        },
+        {
+          "id": "c4217ffb-708b-4ec0-9469-14b780793b58",
+          "type": "basic.output",
+          "data": {
+            "name": "S",
+            "range": "[1:0]",
+            "pins": [
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 328
+          }
+        },
+        {
+          "id": "48c42fbd-55a7-47d3-b982-0aeb1bd8e638",
+          "type": "basic.input",
+          "data": {
+            "name": "Cin",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 432,
+            "y": 400
+          }
+        },
+        {
+          "id": "0aee7e39-0f11-4910-8c4d-83dd838fd37b",
+          "type": "@sha1<./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice>",
+          "position": {
+            "x": 1032,
+            "y": 328
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "fd2f3d62-e168-47db-99e7-8be2ac30ae2b",
+          "type": "basic.info",
+          "data": {
+            "info": "Este sumador se \nencarga del \nbit más pesado",
+            "readonly": true
+          },
+          "position": {
+            "x": 816,
+            "y": 136
+          },
+          "size": {
+            "width": 192,
+            "height": 80
+          }
+        },
+        {
+          "id": "49c0788a-2a4e-4450-bab2-bcf7e6041431",
+          "type": "basic.info",
+          "data": {
+            "info": "Este sumador se \nencarga del \nbit menos pesado",
+            "readonly": true
+          },
+          "position": {
+            "x": 824,
+            "y": 448
+          },
+          "size": {
+            "width": 192,
+            "height": 80
+          }
+        },
+        {
+          "id": "a183ff21-ee17-49ce-9b53-0fbf9dac58a0",
+          "type": "basic.info",
+          "data": {
+            "info": "Sumador de 2 bits:\nSe construye a partir de dos sumadores completos.\nPrimero sumamos los bits menos pesados, al igual que como hacemos manualmente (sumamos las unidades),\nluego sumamos los más pesados, junto con el posible acarreo de la etapa anterior.",
+            "readonly": true
+          },
+          "position": {
+            "x": 424,
+            "y": 48
+          },
+          "size": {
+            "width": 944,
+            "height": 112
+          }
+        },
+        {
+          "id": "63427b01-bc13-4801-8d93-2713ff54e6a8",
+          "type": "@sha1<./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice>",
+          "position": {
+            "x": 592,
+            "y": 216
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "b07f99e0-d26a-41cf-9198-6e9d9f2f91ed",
+          "type": "@sha1<./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice>",
+          "position": {
+            "x": 592,
+            "y": 288
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "43c38836-4507-4e9b-962a-6552478e57a5",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_Completo.ice>",
+          "position": {
+            "x": 832,
+            "y": 216
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "082de83b-466a-4011-a7e3-e24490f95238",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_Completo.ice>",
+          "position": {
+            "x": 832,
+            "y": 352
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "0aee7e39-0f11-4910-8c4d-83dd838fd37b",
+            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+          },
+          "target": {
+            "block": "c4217ffb-708b-4ec0-9469-14b780793b58",
+            "port": "in"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "a9cfe06c-3356-46e8-9485-9400af375c42",
+            "port": "out"
+          },
+          "target": {
+            "block": "63427b01-bc13-4801-8d93-2713ff54e6a8",
+            "port": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "3c16af6a-e73d-4380-a573-2507954f15f6",
+            "port": "out"
+          },
+          "target": {
+            "block": "b07f99e0-d26a-41cf-9198-6e9d9f2f91ed",
+            "port": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "63427b01-bc13-4801-8d93-2713ff54e6a8",
+            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1"
+          },
+          "target": {
+            "block": "43c38836-4507-4e9b-962a-6552478e57a5",
+            "port": "850c6dd7-ef01-42c8-bf2c-b007724a726a"
+          }
+        },
+        {
+          "source": {
+            "block": "b07f99e0-d26a-41cf-9198-6e9d9f2f91ed",
+            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1"
+          },
+          "target": {
+            "block": "43c38836-4507-4e9b-962a-6552478e57a5",
+            "port": "7e34cac7-080b-4abe-97c8-fce1bd8489a5"
+          },
+          "vertices": [
+            {
+              "x": 768,
+              "y": 288
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "48c42fbd-55a7-47d3-b982-0aeb1bd8e638",
+            "port": "out"
+          },
+          "target": {
+            "block": "082de83b-466a-4011-a7e3-e24490f95238",
+            "port": "9af08c5c-37ba-45e0-be6d-78e639cd34b9"
+          }
+        },
+        {
+          "source": {
+            "block": "b07f99e0-d26a-41cf-9198-6e9d9f2f91ed",
+            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0"
+          },
+          "target": {
+            "block": "082de83b-466a-4011-a7e3-e24490f95238",
+            "port": "7e34cac7-080b-4abe-97c8-fce1bd8489a5"
+          },
+          "vertices": [
+            {
+              "x": 728,
+              "y": 368
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "63427b01-bc13-4801-8d93-2713ff54e6a8",
+            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0"
+          },
+          "target": {
+            "block": "082de83b-466a-4011-a7e3-e24490f95238",
+            "port": "850c6dd7-ef01-42c8-bf2c-b007724a726a"
+          },
+          "vertices": [
+            {
+              "x": 752,
+              "y": 328
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "082de83b-466a-4011-a7e3-e24490f95238",
+            "port": "4d0ce3f0-c4ba-44f5-a639-1163f7264f3f"
+          },
+          "target": {
+            "block": "0aee7e39-0f11-4910-8c4d-83dd838fd37b",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+          }
+        },
+        {
+          "source": {
+            "block": "43c38836-4507-4e9b-962a-6552478e57a5",
+            "port": "c89ad475-3ea6-42b1-8b08-912aeaf802a2"
+          },
+          "target": {
+            "block": "4bbf09d5-5ba9-47e9-96e0-87909f2b2616",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "43c38836-4507-4e9b-962a-6552478e57a5",
+            "port": "4d0ce3f0-c4ba-44f5-a639-1163f7264f3f"
+          },
+          "target": {
+            "block": "0aee7e39-0f11-4910-8c4d-83dd838fd37b",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+          }
+        },
+        {
+          "source": {
+            "block": "082de83b-466a-4011-a7e3-e24490f95238",
+            "port": "c89ad475-3ea6-42b1-8b08-912aeaf802a2"
+          },
+          "target": {
+            "block": "43c38836-4507-4e9b-962a-6552478e57a5",
+            "port": "9af08c5c-37ba-45e0-be6d-78e639cd34b9"
+          },
+          "vertices": [
+            {
+              "x": 968,
+              "y": 352
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -328.3051,
+        "y": 13.3305
+      },
+      "zoom": 0.8686
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

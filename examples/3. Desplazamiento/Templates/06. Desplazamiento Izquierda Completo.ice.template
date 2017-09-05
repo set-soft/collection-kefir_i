@@ -1,0 +1,192 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Desplazamiento 6 a Izquierda Completo",
+    "version": "1.0.0",
+    "description": "Ejemplo de uso de un registro de desplazamiento a izquierda",
+    "author": "Salvador E. Tropea",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 568,
+            "y": 120
+          }
+        },
+        {
+          "id": "8bbcad46-0363-4162-9d99-a38a16fddddc",
+          "type": "basic.constant",
+          "data": {
+            "name": "DINI",
+            "value": "4'b0001",
+            "local": false
+          },
+          "position": {
+            "x": 384,
+            "y": 40
+          }
+        },
+        {
+          "id": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 160,
+            "y": 128
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+          "type": "@sha1<./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_4_Completo.ice>",
+          "position": {
+            "x": 384,
+            "y": 152
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        },
+        {
+          "id": "76caca32-5e72-44bf-a953-572a9201fab4",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
+          "position": {
+            "x": 160,
+            "y": 200
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "0c1a3cec-db05-4654-8be5-7562de8b52d9"
+          },
+          "target": {
+            "block": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "8bbcad46-0363-4162-9d99-a38a16fddddc",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "bfcfafe3-6951-48b2-85a1-3d0ea171e5aa"
+          }
+        },
+        {
+          "source": {
+            "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "1e80efcc-dfd9-4f98-848c-0ac6dbe5b49e"
+          },
+          "vertices": [
+            {
+              "x": 312,
+              "y": 192
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "bf0aca24-bdb2-4ac2-b3e7-d19a48c2e30d"
+          },
+          "vertices": [
+            {
+              "x": 312,
+              "y": 216
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "046aa103-8ed5-4236-af1a-6f64b9c06feb"
+          },
+          "target": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "9ab474e2-632d-43ad-9339-f13f31caa59a"
+          },
+          "vertices": [
+            {
+              "x": 416,
+              "y": 368
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "76caca32-5e72-44bf-a953-572a9201fab4",
+            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+          },
+          "target": {
+            "block": "d45a34ce-2370-49f4-aaac-d3cc5660159d",
+            "port": "dd3960a6-2785-495d-9206-7422d6062456"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 62,
+        "y": 55.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

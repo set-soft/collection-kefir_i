@@ -1,0 +1,6 @@
+"Deco_1_2.ice.template" 0 0 "Enable/Deco_1_2.ice"
+"Deco_2_4.ice.template" 0 0 "Enable/Deco_2_4.ice"
+"Deco_3_8.ice.template" 0 0 "Enable/Deco_3_8.ice"
+"Deco_1_2_no_ena.ice.template" 0 0 "Simple/Deco_1_2_no_ena.ice"
+"Deco_2_4_no_ena.ice.template" 0 0 "Simple/Deco_2_4_no_ena.ice"
+"Deco_3_8_no_ena.ice.template" 0 0 "Simple/Deco_3_8_no_ena.ice"

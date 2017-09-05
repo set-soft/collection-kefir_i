@@ -1,0 +1,177 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "646a25ac-eda6-4033-8781-3356830f5a5c",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 800,
+            "y": 216
+          }
+        },
+        {
+          "id": "7b59ee28-e45d-4e31-90c3-4853b916037d",
+          "type": "basic.constant",
+          "data": {
+            "name": "TO",
+            "value": "9",
+            "local": false
+          },
+          "position": {
+            "x": 440,
+            "y": 112
+          }
+        },
+        {
+          "id": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 240,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d5d7f03f-75cb-4c37-b8cf-148c7c2af097",
+          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_4.ice>",
+          "position": {
+            "x": 624,
+            "y": 264
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
+          "position": {
+            "x": 416,
+            "y": 224
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "0af901db-7628-4744-af6b-df4e90a6ceae",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
+          "position": {
+            "x": 240,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "d5d7f03f-75cb-4c37-b8cf-148c7c2af097",
+            "port": "4cf14b5a-a543-40bc-bd30-232dfc12d418"
+          },
+          "target": {
+            "block": "646a25ac-eda6-4033-8781-3356830f5a5c",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+            "port": "b54d171f-c625-441c-85be-986b4ebee8cd"
+          },
+          "target": {
+            "block": "d5d7f03f-75cb-4c37-b8cf-148c7c2af097",
+            "port": "be7f8279-3fc9-4e0b-a048-f210116637ab"
+          },
+          "size": 32
+        },
+        {
+          "source": {
+            "block": "7b59ee28-e45d-4e31-90c3-4853b916037d",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+            "port": "5a789c54-9d3c-4963-8880-69a82e462877"
+          }
+        },
+        {
+          "source": {
+            "block": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+            "port": "4d94ffed-3220-49a1-9c37-06f284bc86a7"
+          }
+        },
+        {
+          "source": {
+            "block": "0af901db-7628-4744-af6b-df4e90a6ceae",
+            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+          },
+          "target": {
+            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+            "port": "34451ee7-68a5-4a42-ac27-cd00b724a527"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -94,
+        "y": 19.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

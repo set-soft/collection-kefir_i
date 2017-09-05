@@ -1,0 +1,3 @@
+"CapSense 2.ice.template" 0 0 "CapSense/CapSense 2.ice"
+"CapSense 3.ice.template" 0 0 "CapSense/CapSense 3.ice"
+"CapSense 4.ice.template" 0 0 "CapSense/CapSense 4.ice"

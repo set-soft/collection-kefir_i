@@ -1,0 +1,7 @@
+"XNOR.ice.template" 1,1 1 "XNOR_2.ice"
+"XNOR.ice.template" 1,1,1 1 "XNOR_3.ice"
+"XNOR.ice.template" 1,1,1,1 1 "XNOR_4.ice"
+"XNOR.ice.template" 1,1,1,1,1 1 "XNOR_5.ice"
+"XNOR.ice.template" 1,1,1,1,1,1 1 "XNOR_6.ice"
+"XNOR.ice.template" 1,1,1,1,1,1,1 1 "XNOR_7.ice"
+"XNOR.ice.template" 1,1,1,1,1,1,1,1 1 "XNOR_8.ice"

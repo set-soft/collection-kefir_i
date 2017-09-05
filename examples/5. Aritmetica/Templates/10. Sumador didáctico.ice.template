@@ -1,0 +1,246 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "ee39624a-8e78-4ed6-8a9d-4d19884e96af",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 568,
+            "y": 184
+          }
+        },
+        {
+          "id": "6b2a7bdd-b4fd-4d2a-b664-a6829abe5be2",
+          "type": "basic.constant",
+          "data": {
+            "name": "A",
+            "value": "4'b1001",
+            "local": false
+          },
+          "position": {
+            "x": 88,
+            "y": 8
+          }
+        },
+        {
+          "id": "1be91469-aae0-488c-a2c1-96491699e493",
+          "type": "basic.constant",
+          "data": {
+            "name": "B",
+            "value": "4'b0011",
+            "local": false
+          },
+          "position": {
+            "x": 88,
+            "y": 232
+          }
+        },
+        {
+          "id": "d56c6314-3c73-4857-a4dc-f5a77b9c8b7e",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_4_bits.ice>",
+          "position": {
+            "x": 88,
+            "y": 120
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "bfa9e56e-052e-4c6b-b807-90e5622b9996",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_4_bits.ice>",
+          "position": {
+            "x": 88,
+            "y": 344
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "a7d9bd68-a173-4601-87fd-9e73dcdf013c",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 248,
+            "y": 256
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "7e9cc91b-7e3a-4287-9dce-fcb45d9c84a8",
+          "type": "basic.info",
+          "data": {
+            "info": "Ingresar aquí el valor\nde A, 4 bits (magnitud o\nentero)",
+            "readonly": true
+          },
+          "position": {
+            "x": 192,
+            "y": 8
+          },
+          "size": {
+            "width": 272,
+            "height": 80
+          }
+        },
+        {
+          "id": "5176fb50-592c-4568-bf1d-9d0101b8e36b",
+          "type": "basic.info",
+          "data": {
+            "info": "Ingresar B, 4 bits\n",
+            "readonly": true
+          },
+          "position": {
+            "x": 88,
+            "y": 416
+          },
+          "size": {
+            "width": 272,
+            "height": 80
+          }
+        },
+        {
+          "id": "4934aa95-2a4d-4b54-bf6e-316d88f5c796",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_4_bits.ice>",
+          "position": {
+            "x": 400,
+            "y": 192
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "6b2a7bdd-b4fd-4d2a-b664-a6829abe5be2",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "d56c6314-3c73-4857-a4dc-f5a77b9c8b7e",
+            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+          }
+        },
+        {
+          "source": {
+            "block": "1be91469-aae0-488c-a2c1-96491699e493",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "bfa9e56e-052e-4c6b-b807-90e5622b9996",
+            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "4934aa95-2a4d-4b54-bf6e-316d88f5c796",
+            "port": "e5874e04-937f-4895-8ac9-d416db34e8b8"
+          },
+          "target": {
+            "block": "ee39624a-8e78-4ed6-8a9d-4d19884e96af",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "a7d9bd68-a173-4601-87fd-9e73dcdf013c",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "4934aa95-2a4d-4b54-bf6e-316d88f5c796",
+            "port": "09eee0b6-1a4f-49bb-b2a9-bf8de8883f0b"
+          }
+        },
+        {
+          "source": {
+            "block": "bfa9e56e-052e-4c6b-b807-90e5622b9996",
+            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+          },
+          "target": {
+            "block": "4934aa95-2a4d-4b54-bf6e-316d88f5c796",
+            "port": "dcab3b7d-7072-4eee-ac92-3b724367eeca"
+          },
+          "vertices": [
+            {
+              "x": 232,
+              "y": 312
+            }
+          ],
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "d56c6314-3c73-4857-a4dc-f5a77b9c8b7e",
+            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+          },
+          "target": {
+            "block": "4934aa95-2a4d-4b54-bf6e-316d88f5c796",
+            "port": "56c2ea8a-0fcf-4827-8720-af69b4318887"
+          },
+          "vertices": [
+            {
+              "x": 232,
+              "y": 184
+            }
+          ],
+          "size": 4
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 105.5902,
+        "y": 32.6721
+      },
+      "zoom": 0.916
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

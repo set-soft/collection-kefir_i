@@ -1,0 +1,86 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Led on",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 352,
+            "y": 136
+          }
+        },
+        {
+          "id": "a538a5b4-d5d5-4ace-a593-efb1fa9b930c",
+          "type": "basic.info",
+          "data": {
+            "info": "Encender LED1",
+            "readonly": true
+          },
+          "position": {
+            "x": 128,
+            "y": 88
+          },
+          "size": {
+            "width": 192,
+            "height": 32
+          }
+        },
+        {
+          "id": "8a5c45a1-cad6-45e9-920a-a1beebbfb31f",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 144,
+            "y": 136
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "8a5c45a1-cad6-45e9-920a-a1beebbfb31f",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 186,
+        "y": 139.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

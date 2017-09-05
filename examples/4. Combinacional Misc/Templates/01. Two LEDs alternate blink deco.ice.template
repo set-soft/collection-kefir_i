@@ -1,0 +1,159 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 360,
+            "y": -64
+          }
+        },
+        {
+          "id": "5701b50c-904b-4776-ab4c-addc641b71ff",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 360,
+            "y": 16
+          }
+        },
+        {
+          "id": "c4334cde-6d7f-4932-bd44-7978a59c0b75",
+          "type": "basic.info",
+          "data": {
+            "info": "LEDs 1 and 2 are blinking alternatively",
+            "readonly": true
+          },
+          "position": {
+            "x": -32,
+            "y": 112
+          },
+          "size": {
+            "width": 320,
+            "height": 32
+          }
+        },
+        {
+          "id": "094e2933-d42c-405f-ab8a-55c4d47d56e6",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 16,
+            "y": -80
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "df6da1ac-bd4c-49a5-a80a-7e5ea4c8ff06",
+          "type": "@sha1<./blocks/Varios/Demultiplexores/Demux_2.ice>",
+          "position": {
+            "x": 176,
+            "y": -24
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "75cd7a43-16e9-4bcf-8403-317b6c559f62",
+          "type": "@sha1<./blocks/Varios/Bombeo/Corazon_x1.ice>",
+          "position": {
+            "x": 16,
+            "y": -8
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "df6da1ac-bd4c-49a5-a80a-7e5ea4c8ff06",
+            "port": "d1e7112d-7581-44f3-84d9-99c6c98ebfe8"
+          },
+          "target": {
+            "block": "5701b50c-904b-4776-ab4c-addc641b71ff",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "df6da1ac-bd4c-49a5-a80a-7e5ea4c8ff06",
+            "port": "2610330d-5e3c-4320-841e-7d62bf10c43d"
+          },
+          "target": {
+            "block": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "094e2933-d42c-405f-ab8a-55c4d47d56e6",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "df6da1ac-bd4c-49a5-a80a-7e5ea4c8ff06",
+            "port": "d389cddd-c795-483d-9387-74bb81c19155"
+          }
+        },
+        {
+          "source": {
+            "block": "75cd7a43-16e9-4bcf-8403-317b6c559f62",
+            "port": "f6615511-2d97-4f63-a7c2-106a7c91f33b"
+          },
+          "target": {
+            "block": "df6da1ac-bd4c-49a5-a80a-7e5ea4c8ff06",
+            "port": "9f07e94f-6e87-4cb6-bef6-d10ea094dc90"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 238,
+        "y": 231.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

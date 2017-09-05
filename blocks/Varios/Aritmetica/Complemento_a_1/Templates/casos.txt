@@ -1,0 +1,5 @@
+"Complemento_a_1.ice.template" 2 2 "Complemento_a_1_2.ice"
+"Complemento_a_1.ice.template" 4 4 "Complemento_a_1_4.ice"
+"Complemento_a_1.ice.template" 8 8 "Complemento_a_1_8.ice"
+"Complemento_a_1.ice.template" 16 16 "Complemento_a_1_16.ice"
+"Complemento_a_1.ice.template" 32 32 "Complemento_a_1_32.ice"

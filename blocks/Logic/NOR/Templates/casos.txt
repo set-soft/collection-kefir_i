@@ -1,0 +1,7 @@
+"NOR.ice.template" 1,1 1 "NOR_2.ice"
+"NOR.ice.template" 1,1,1 1 "NOR_3.ice"
+"NOR.ice.template" 1,1,1,1 1 "NOR_4.ice"
+"NOR.ice.template" 1,1,1,1,1 1 "NOR_5.ice"
+"NOR.ice.template" 1,1,1,1,1,1 1 "NOR_6.ice"
+"NOR.ice.template" 1,1,1,1,1,1,1 1 "NOR_7.ice"
+"NOR.ice.template" 1,1,1,1,1,1,1,1 1 "NOR_8.ice"

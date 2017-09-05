@@ -1,0 +1,212 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Prescaler de N+1 bits",
+    "version": "1.0.0",
+    "description": "Divide la frecuencia del enable por la potencia N+1 de 2",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2230.534%22%20width=%2293.859%22%20viewBox=%220%200%2087.992987%2028.625798%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2225.792%22%20x=%22-.582%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2225.792%22%20x=%22-.582%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%25%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "f1e8f256-7b05-447b-ae26-6c18fe2c23b1",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 176
+          }
+        },
+        {
+          "id": "3d936ed3-b5ba-40a1-89fd-3bd83a1ef7b8",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 152,
+            "y": 248
+          }
+        },
+        {
+          "id": "adb1b1d1-ad70-4924-8d8f-e6719cbd3c52",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 712,
+            "y": 272
+          }
+        },
+        {
+          "id": "fe16a6b5-8106-4add-bb3e-c32188fc5c5d",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 320
+          }
+        },
+        {
+          "id": "2612767d-5313-481b-bf7b-8c9b3434836b",
+          "type": "basic.constant",
+          "data": {
+            "name": "N",
+            "value": "0",
+            "local": false
+          },
+          "position": {
+            "x": 568,
+            "y": 160
+          }
+        },
+        {
+          "id": "a28018f3-72cc-4038-b86b-2bde9a5181e5",
+          "type": "@sha1<./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice>",
+          "position": {
+            "x": 568,
+            "y": 272
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "2e3d6ad9-e1ad-4169-b8b2-baf4429cf1e9",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
+          "position": {
+            "x": 360,
+            "y": 232
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "2612767d-5313-481b-bf7b-8c9b3434836b",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "a28018f3-72cc-4038-b86b-2bde9a5181e5",
+            "port": "18f56535-6252-4108-9d50-a9ae727f38ee"
+          }
+        },
+        {
+          "source": {
+            "block": "2e3d6ad9-e1ad-4169-b8b2-baf4429cf1e9",
+            "port": "b54d171f-c625-441c-85be-986b4ebee8cd"
+          },
+          "target": {
+            "block": "a28018f3-72cc-4038-b86b-2bde9a5181e5",
+            "port": "be7f8279-3fc9-4e0b-a048-f210116637ab"
+          },
+          "size": 32
+        },
+        {
+          "source": {
+            "block": "3d936ed3-b5ba-40a1-89fd-3bd83a1ef7b8",
+            "port": "out"
+          },
+          "target": {
+            "block": "2e3d6ad9-e1ad-4169-b8b2-baf4429cf1e9",
+            "port": "a4a161c9-c9b0-417b-87b9-aea8cd956fc4"
+          }
+        },
+        {
+          "source": {
+            "block": "f1e8f256-7b05-447b-ae26-6c18fe2c23b1",
+            "port": "out"
+          },
+          "target": {
+            "block": "2e3d6ad9-e1ad-4169-b8b2-baf4429cf1e9",
+            "port": "34451ee7-68a5-4a42-ac27-cd00b724a527"
+          },
+          "vertices": [
+            {
+              "x": 320,
+              "y": 216
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe16a6b5-8106-4add-bb3e-c32188fc5c5d",
+            "port": "out"
+          },
+          "target": {
+            "block": "2e3d6ad9-e1ad-4169-b8b2-baf4429cf1e9",
+            "port": "4d94ffed-3220-49a1-9c37-06f284bc86a7"
+          }
+        },
+        {
+          "source": {
+            "block": "a28018f3-72cc-4038-b86b-2bde9a5181e5",
+            "port": "4cf14b5a-a543-40bc-bd30-232dfc12d418"
+          },
+          "target": {
+            "block": "adb1b1d1-ad70-4924-8d8f-e6719cbd3c52",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

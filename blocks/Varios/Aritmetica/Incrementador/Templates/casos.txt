@@ -1,0 +1,5 @@
+"Incrementador.ice.template" 2 2 "Incrementador_2.ice"
+"Incrementador.ice.template" 4 4 "Incrementador_4.ice"
+"Incrementador.ice.template" 8 8 "Incrementador_8.ice"
+"Incrementador.ice.template" 16 16 "Incrementador_16.ice"
+"Incrementador.ice.template" 32 32 "Incrementador_32.ice"

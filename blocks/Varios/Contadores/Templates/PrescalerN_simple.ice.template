@@ -1,0 +1,173 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Prescaler de N+1 bits simple",
+    "version": "1.0.0",
+    "description": "Divisor de frecuencia por la potencia N+1 de 2, versión simple",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2230.534%22%20width=%2293.859%22%20viewBox=%220%200%2087.992987%2028.625798%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2225.792%22%20x=%22-.582%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2225.792%22%20x=%22-.582%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%25%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "824c2144-4b12-427a-8914-0dabdbee161f",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 176,
+            "y": 224
+          }
+        },
+        {
+          "id": "9300c558-2ae5-41b9-8945-36a052dcd2c4",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 560,
+            "y": 224
+          }
+        },
+        {
+          "id": "5e9ba116-18fe-427b-b6d7-778090ac88cf",
+          "type": "basic.constant",
+          "data": {
+            "name": "N",
+            "value": "0",
+            "local": false
+          },
+          "position": {
+            "x": 384,
+            "y": 96
+          }
+        },
+        {
+          "id": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+          "type": "@sha1<./blocks/Varios/Contadores/Prescaler/PrescalerN.ice>",
+          "position": {
+            "x": 384,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "9f79fe01-9449-47f7-9587-3bb2a6248a99",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 176,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "b82197a5-a4b4-4599-a959-4e4fc342e412",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 176,
+            "y": 152
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "5e9ba116-18fe-427b-b6d7-778090ac88cf",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+            "port": "2612767d-5313-481b-bf7b-8c9b3434836b"
+          }
+        },
+        {
+          "source": {
+            "block": "824c2144-4b12-427a-8914-0dabdbee161f",
+            "port": "out"
+          },
+          "target": {
+            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+            "port": "3d936ed3-b5ba-40a1-89fd-3bd83a1ef7b8"
+          }
+        },
+        {
+          "source": {
+            "block": "b82197a5-a4b4-4599-a959-4e4fc342e412",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+            "port": "f1e8f256-7b05-447b-ae26-6c18fe2c23b1"
+          },
+          "vertices": [
+            {
+              "x": 336,
+              "y": 192
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "9f79fe01-9449-47f7-9587-3bb2a6248a99",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+            "port": "fe16a6b5-8106-4add-bb3e-c32188fc5c5d"
+          }
+        },
+        {
+          "source": {
+            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+            "port": "adb1b1d1-ad70-4924-8d8f-e6719cbd3c52"
+          },
+          "target": {
+            "block": "9300c558-2ae5-41b9-8945-36a052dcd2c4",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

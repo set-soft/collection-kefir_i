@@ -1,0 +1,7 @@
+"XOR.ice.template" 1,1 1 "XOR_2.ice"
+"XOR.ice.template" 1,1,1 1 "XOR_3.ice"
+"XOR.ice.template" 1,1,1,1 1 "XOR_4.ice"
+"XOR.ice.template" 1,1,1,1,1 1 "XOR_5.ice"
+"XOR.ice.template" 1,1,1,1,1,1 1 "XOR_6.ice"
+"XOR.ice.template" 1,1,1,1,1,1,1 1 "XOR_7.ice"
+"XOR.ice.template" 1,1,1,1,1,1,1,1 1 "XOR_8.ice"

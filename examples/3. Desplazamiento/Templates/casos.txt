@@ -1,0 +1,8 @@
+"01. Desplazamiento Universal Completo.ice.template" 0 0 "01. Desplazamiento Universal Completo.ice"
+"02. Desplazamiento Universal Simple.ice.template" 0 0 "02. Desplazamiento Universal Simple.ice"
+"03. Desplazamiento Derecha Completo.ice.template" 0 0 "03. Desplazamiento Derecha Completo.ice"
+"04. Desplazamiento Derecha ENA-RST.ice.template" 0 0 "04. Desplazamiento Derecha ENA-RST.ice"
+"05. Desplazamiento Derecha Simple.ice.template" 0 0 "05. Desplazamiento Derecha Simple.ice"
+"06. Desplazamiento Izquierda Completo.ice.template" 0 0 "06. Desplazamiento Izquierda Completo.ice"
+"07. Desplazamiento Izquierda ENA-RST.ice.template" 0 0 "07. Desplazamiento Izquierda ENA-RST.ice"
+"08. Desplazamiento Izquierda Simple.ice.template" 0 0 "08. Desplazamiento Izquierda Simple.ice"

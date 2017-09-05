@@ -1,0 +1,313 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Sumador Completo",
+    "version": "1.0.0",
+    "description": "Sumador de 1 bit con acarreo de entrada y salida",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%225.005%22%20width=%225.005%22%3E%3Ctext%20style=%22text-align:start%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-254.7%20-197.756)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3E+%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "850c6dd7-ef01-42c8-bf2c-b007724a726a",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 136
+          }
+        },
+        {
+          "id": "4d0ce3f0-c4ba-44f5-a639-1163f7264f3f",
+          "type": "basic.output",
+          "data": {
+            "name": "S",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 792,
+            "y": 160
+          }
+        },
+        {
+          "id": "7e34cac7-080b-4abe-97c8-fce1bd8489a5",
+          "type": "basic.input",
+          "data": {
+            "name": "B",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 208
+          }
+        },
+        {
+          "id": "c89ad475-3ea6-42b1-8b08-912aeaf802a2",
+          "type": "basic.output",
+          "data": {
+            "name": "Cout",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 792,
+            "y": 232
+          }
+        },
+        {
+          "id": "9af08c5c-37ba-45e0-be6d-78e639cd34b9",
+          "type": "basic.input",
+          "data": {
+            "name": "Cin",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 280
+          }
+        },
+        {
+          "id": "697a6fcf-7944-4ad9-9625-704a9b801c35",
+          "type": "basic.info",
+          "data": {
+            "info": "Sumador completo:\nSe construye a partir de dos \"medio sumadores\".\nS es la suma de A, B y el acarreo de la etapa anterior.\nCout es 1 cuando cualquiera de las dos sumas parciales generó acarreo.\n",
+            "readonly": true
+          },
+          "position": {
+            "x": 128,
+            "y": 48
+          },
+          "size": {
+            "width": 672,
+            "height": 96
+          }
+        },
+        {
+          "id": "e1429601-9b3d-4776-8c96-dbb48d238006",
+          "type": "basic.info",
+          "data": {
+            "info": "S es la suma módulo 2 de las 3 entradas\nSe computa como la XOR de las 3.",
+            "readonly": true
+          },
+          "position": {
+            "x": 896,
+            "y": 160
+          },
+          "size": {
+            "width": 384,
+            "height": 64
+          }
+        },
+        {
+          "id": "93f7c57f-bd29-4c34-97ea-0831736d5594",
+          "type": "basic.info",
+          "data": {
+            "info": "Hay acarreo cuando el resultado es 2 o más.\nEsto es cuando cualquiera de las sumas \nparciales dió 2 o más y por lo tanto generó\nacarreo.",
+            "readonly": true
+          },
+          "position": {
+            "x": 904,
+            "y": 232
+          },
+          "size": {
+            "width": 464,
+            "height": 96
+          }
+        },
+        {
+          "id": "e93136fd-ef44-474e-9e80-6a34e26e7987",
+          "type": "basic.info",
+          "data": {
+            "info": "Tabla de verdad:\nA B Cin  Suma Acarreo\n0 0 0      0     0\n0 0 1      1     0\n0 1 0      1     0\n0 1 1      0     1\n1 0 0      1     0\n1 0 1      0     1\n1 1 0      0     1\n1 1 1      1     1",
+            "readonly": true
+          },
+          "position": {
+            "x": 136,
+            "y": 360
+          },
+          "size": {
+            "width": 224,
+            "height": 224
+          }
+        },
+        {
+          "id": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Medio_Sumador.ice>",
+          "position": {
+            "x": 312,
+            "y": 176
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Medio_Sumador.ice>",
+          "position": {
+            "x": 496,
+            "y": 176
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
+          "type": "@sha1<./blocks/Logic/OR/OR_2.ice>",
+          "position": {
+            "x": 648,
+            "y": 232
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "850c6dd7-ef01-42c8-bf2c-b007724a726a",
+            "port": "out"
+          },
+          "target": {
+            "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
+            "port": "0c446d2b-6dbe-416e-978b-5132da0a37e9"
+          }
+        },
+        {
+          "source": {
+            "block": "7e34cac7-080b-4abe-97c8-fce1bd8489a5",
+            "port": "out"
+          },
+          "target": {
+            "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
+            "port": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f"
+          }
+        },
+        {
+          "source": {
+            "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
+            "port": "e02811e8-07fb-4d4e-abc7-649016328aa5"
+          },
+          "target": {
+            "block": "4d0ce3f0-c4ba-44f5-a639-1163f7264f3f",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
+            "port": "e02811e8-07fb-4d4e-abc7-649016328aa5"
+          },
+          "target": {
+            "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
+            "port": "0c446d2b-6dbe-416e-978b-5132da0a37e9"
+          }
+        },
+        {
+          "source": {
+            "block": "9af08c5c-37ba-45e0-be6d-78e639cd34b9",
+            "port": "out"
+          },
+          "target": {
+            "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
+            "port": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f"
+          }
+        },
+        {
+          "source": {
+            "block": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
+            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+          },
+          "target": {
+            "block": "c89ad475-3ea6-42b1-8b08-912aeaf802a2",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
+            "port": "e262542f-43db-43f4-91b0-757ef5da7301"
+          },
+          "target": {
+            "block": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+          }
+        },
+        {
+          "source": {
+            "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
+            "port": "e262542f-43db-43f4-91b0-757ef5da7301"
+          },
+          "target": {
+            "block": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+          },
+          "vertices": [
+            {
+              "x": 448,
+              "y": 264
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 208,
+        "y": 183.8125
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

@@ -1,0 +1,7 @@
+"NAND.ice.template" 1,1 1 "NAND_2.ice"
+"NAND.ice.template" 1,1,1 1 "NAND_3.ice"
+"NAND.ice.template" 1,1,1,1 1 "NAND_4.ice"
+"NAND.ice.template" 1,1,1,1,1 1 "NAND_5.ice"
+"NAND.ice.template" 1,1,1,1,1,1 1 "NAND_6.ice"
+"NAND.ice.template" 1,1,1,1,1,1,1 1 "NAND_7.ice"
+"NAND.ice.template" 1,1,1,1,1,1,1,1 1 "NAND_8.ice"

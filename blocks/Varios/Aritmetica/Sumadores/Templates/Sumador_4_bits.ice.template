@@ -1,0 +1,436 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Sumador de 4 bits",
+    "version": "1.0.0",
+    "description": "Sumador de dos valores de 4 bits con acarreo de entrada y salida",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%225.005%22%20width=%225.005%22%3E%3Ctext%20style=%22text-align:start%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-254.7%20-197.756)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3E+%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "ddbef23c-72e4-428d-ac89-ef33b24e2b83",
+          "type": "basic.output",
+          "data": {
+            "name": "Cout",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1240,
+            "y": 272
+          }
+        },
+        {
+          "id": "56c2ea8a-0fcf-4827-8720-af69b4318887",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 424,
+            "y": 280
+          }
+        },
+        {
+          "id": "dcab3b7d-7072-4eee-ac92-3b724367eeca",
+          "type": "basic.input",
+          "data": {
+            "name": "B",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 424,
+            "y": 352
+          }
+        },
+        {
+          "id": "e5874e04-937f-4895-8ac9-d416db34e8b8",
+          "type": "basic.output",
+          "data": {
+            "name": "S",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1240,
+            "y": 416
+          }
+        },
+        {
+          "id": "09eee0b6-1a4f-49bb-b2a9-bf8de8883f0b",
+          "type": "basic.input",
+          "data": {
+            "name": "Cin",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 424,
+            "y": 440
+          }
+        },
+        {
+          "id": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
+          "type": "@sha1<./blocks/Varios/Buses/Separar/Split_2/Split_4_2,2.ice>",
+          "position": {
+            "x": 568,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
+          "type": "@sha1<./blocks/Varios/Buses/Separar/Split_2/Split_4_2,2.ice>",
+          "position": {
+            "x": 568,
+            "y": 352
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
+          "type": "@sha1<./blocks/Varios/Buses/Unir/Join_2/Join_2,2_4.ice>",
+          "position": {
+            "x": 1080,
+            "y": 416
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "8a3d1529-d85d-4070-a694-987334192e0b",
+          "type": "basic.info",
+          "data": {
+            "info": "Sumador de 4 bits:\nSe construye a partir de dos sumadores de 2 bits.\nPrimero sumamos los bits menos pesados, al igual que como hacemos manualmente (sumamos las unidades),\nluego sumamos los más pesados, junto con el posible acarreo de la etapa anterior.",
+            "readonly": true
+          },
+          "position": {
+            "x": 408,
+            "y": 88
+          },
+          "size": {
+            "width": 944,
+            "height": 112
+          }
+        },
+        {
+          "id": "093b5377-bcf1-4e8f-b497-26d859584604",
+          "type": "basic.info",
+          "data": {
+            "info": "Este sumador se \nencarga de los 2\nbits más pesados",
+            "readonly": true
+          },
+          "position": {
+            "x": 832,
+            "y": 200
+          },
+          "size": {
+            "width": 192,
+            "height": 80
+          }
+        },
+        {
+          "id": "a5d761b9-e353-4a1f-a9e2-7cdc48788c88",
+          "type": "basic.info",
+          "data": {
+            "info": "Este sumador se \nencarga de los 2 \nbits menos pesados",
+            "readonly": true
+          },
+          "position": {
+            "x": 832,
+            "y": 496
+          },
+          "size": {
+            "width": 192,
+            "height": 80
+          }
+        },
+        {
+          "id": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_2_bits.ice>",
+          "position": {
+            "x": 840,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "be2489c2-2971-4942-a77a-88f9ec00bd49",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_2_bits.ice>",
+          "position": {
+            "x": 840,
+            "y": 392
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "56c2ea8a-0fcf-4827-8720-af69b4318887",
+            "port": "out"
+          },
+          "target": {
+            "block": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
+            "port": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "dcab3b7d-7072-4eee-ac92-3b724367eeca",
+            "port": "out"
+          },
+          "target": {
+            "block": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
+            "port": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
+            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+          },
+          "target": {
+            "block": "e5874e04-937f-4895-8ac9-d416db34e8b8",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
+            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094"
+          },
+          "target": {
+            "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
+            "port": "a9cfe06c-3356-46e8-9485-9400af375c42"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
+            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094"
+          },
+          "target": {
+            "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
+            "port": "3c16af6a-e73d-4380-a573-2507954f15f6"
+          },
+          "vertices": [
+            {
+              "x": 792,
+              "y": 344
+            }
+          ],
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
+            "port": "4bbf09d5-5ba9-47e9-96e0-87909f2b2616"
+          },
+          "target": {
+            "block": "ddbef23c-72e4-428d-ac89-ef33b24e2b83",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
+            "port": "c4217ffb-708b-4ec0-9469-14b780793b58"
+          },
+          "target": {
+            "block": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
+            "port": "3cac4619-1f44-4d02-8d1e-6ab14779a115"
+          },
+          "vertices": [
+            {
+              "x": 1016,
+              "y": 392
+            }
+          ],
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "09eee0b6-1a4f-49bb-b2a9-bf8de8883f0b",
+            "port": "out"
+          },
+          "target": {
+            "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
+            "port": "48c42fbd-55a7-47d3-b982-0aeb1bd8e638"
+          }
+        },
+        {
+          "source": {
+            "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
+            "port": "c4217ffb-708b-4ec0-9469-14b780793b58"
+          },
+          "target": {
+            "block": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
+            "port": "4bbf09d5-5ba9-47e9-96e0-87909f2b2616"
+          },
+          "target": {
+            "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
+            "port": "48c42fbd-55a7-47d3-b982-0aeb1bd8e638"
+          }
+        },
+        {
+          "source": {
+            "block": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
+            "port": "30a1e000-69e2-4266-a8b2-ae7416120bd5"
+          },
+          "target": {
+            "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
+            "port": "a9cfe06c-3356-46e8-9485-9400af375c42"
+          },
+          "vertices": [
+            {
+              "x": 744,
+              "y": 376
+            }
+          ],
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
+            "port": "30a1e000-69e2-4266-a8b2-ae7416120bd5"
+          },
+          "target": {
+            "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
+            "port": "3c16af6a-e73d-4380-a573-2507954f15f6"
+          },
+          "vertices": [
+            {
+              "x": 720,
+              "y": 432
+            }
+          ],
+          "size": 2
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -314.4068,
+        "y": -24.8898
+      },
+      "zoom": 0.8686
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

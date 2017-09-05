@@ -1,0 +1,341 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "2fd20a2e-45da-46d9-a50a-3a1aa761525a",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[1:0]",
+            "pins": [
+              {
+                "index": "1",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "0",
+                "name": "LED3",
+                "value": "129"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 624,
+            "y": 160
+          }
+        },
+        {
+          "id": "b9d46d80-1fe1-4bac-9153-d46c5f8972ba",
+          "type": "basic.output",
+          "data": {
+            "name": "LED2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 624,
+            "y": 264
+          }
+        },
+        {
+          "id": "8d15c518-26fd-4688-b399-aedb193bb2dd",
+          "type": "basic.output",
+          "data": {
+            "name": "LED1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 624,
+            "y": 336
+          }
+        },
+        {
+          "id": "c9f4bf1b-a589-44c5-ace7-262bd07c4f2c",
+          "type": "basic.constant",
+          "data": {
+            "name": "A",
+            "value": "2'b01",
+            "local": true
+          },
+          "position": {
+            "x": 128,
+            "y": 24
+          }
+        },
+        {
+          "id": "8988bcea-a270-4ffe-91c8-4d5d5090c581",
+          "type": "basic.constant",
+          "data": {
+            "name": "B",
+            "value": "2'b01",
+            "local": true
+          },
+          "position": {
+            "x": 128,
+            "y": 240
+          }
+        },
+        {
+          "id": "e5d3be5c-3030-4e93-93de-be2b2b7cb33e",
+          "type": "basic.info",
+          "data": {
+            "info": "Ingresar aquí el valor\nde A, 2 bits (magnitud o\nentero)",
+            "readonly": true
+          },
+          "position": {
+            "x": 240,
+            "y": 24
+          },
+          "size": {
+            "width": 272,
+            "height": 80
+          }
+        },
+        {
+          "id": "47fe622e-7132-4010-97ff-ff4c7d23b399",
+          "type": "basic.info",
+          "data": {
+            "info": "Ingresar B, 2 bits\n",
+            "readonly": true
+          },
+          "position": {
+            "x": 128,
+            "y": 432
+          },
+          "size": {
+            "width": 272,
+            "height": 80
+          }
+        },
+        {
+          "id": "e8a3b9f1-c598-48a8-bb84-84b8f29eb3c7",
+          "type": "basic.info",
+          "data": {
+            "info": "Resultado de A+B",
+            "readonly": true
+          },
+          "position": {
+            "x": 720,
+            "y": 200
+          },
+          "size": {
+            "width": 240,
+            "height": 32
+          }
+        },
+        {
+          "id": "68551e68-85ac-4e25-9718-299f24feac3b",
+          "type": "basic.info",
+          "data": {
+            "info": "Indicación de desborde\nSolo útil para enteros\nrepresentados en \ncomplemento a 2",
+            "readonly": true
+          },
+          "position": {
+            "x": 736,
+            "y": 328
+          },
+          "size": {
+            "width": 256,
+            "height": 96
+          }
+        },
+        {
+          "id": "2602bb3d-4fb9-4975-bc98-2a0d0f874e16",
+          "type": "basic.info",
+          "data": {
+            "info": "Indicación de acarreo\nSolo útila para \nmagnitudes",
+            "readonly": true
+          },
+          "position": {
+            "x": 736,
+            "y": 256
+          },
+          "size": {
+            "width": 256,
+            "height": 80
+          }
+        },
+        {
+          "id": "97a30eaa-d2af-4478-bc1b-c19abbcb86de",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_2_bits.ice>",
+          "position": {
+            "x": 128,
+            "y": 136
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d5e7fcc6-0e9d-44be-a4f7-b123d918329f",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_2_bits.ice>",
+          "position": {
+            "x": 128,
+            "y": 352
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "3534f4ad-139a-429f-ab13-e41419549352",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_2.ice>",
+          "position": {
+            "x": 440,
+            "y": 232
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "989465da-76b5-4f28-aeca-fca4716668ad",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 296,
+            "y": 304
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "c9f4bf1b-a589-44c5-ace7-262bd07c4f2c",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "97a30eaa-d2af-4478-bc1b-c19abbcb86de",
+            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+          }
+        },
+        {
+          "source": {
+            "block": "8988bcea-a270-4ffe-91c8-4d5d5090c581",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "d5e7fcc6-0e9d-44be-a4f7-b123d918329f",
+            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+          }
+        },
+        {
+          "source": {
+            "block": "97a30eaa-d2af-4478-bc1b-c19abbcb86de",
+            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+          },
+          "target": {
+            "block": "3534f4ad-139a-429f-ab13-e41419549352",
+            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+          },
+          "vertices": [
+            {
+              "x": 280,
+              "y": 208
+            }
+          ],
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "d5e7fcc6-0e9d-44be-a4f7-b123d918329f",
+            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+          },
+          "target": {
+            "block": "3534f4ad-139a-429f-ab13-e41419549352",
+            "port": "3a9390a5-e7e3-4d26-bd07-5ba157c20c4a"
+          },
+          "vertices": [
+            {
+              "x": 280,
+              "y": 344
+            }
+          ],
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "989465da-76b5-4f28-aeca-fca4716668ad",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "3534f4ad-139a-429f-ab13-e41419549352",
+            "port": "c65ef185-2593-4431-950e-a42533f2222a"
+          }
+        },
+        {
+          "source": {
+            "block": "3534f4ad-139a-429f-ab13-e41419549352",
+            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+          },
+          "target": {
+            "block": "2fd20a2e-45da-46d9-a50a-3a1aa761525a",
+            "port": "in"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "3534f4ad-139a-429f-ab13-e41419549352",
+            "port": "709e3e16-98a6-4edf-a9da-812db4965b19"
+          },
+          "target": {
+            "block": "b9d46d80-1fe1-4bac-9153-d46c5f8972ba",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "3534f4ad-139a-429f-ab13-e41419549352",
+            "port": "358df377-dce3-4a00-956e-6feda1f93a90"
+          },
+          "target": {
+            "block": "8d15c518-26fd-4688-b399-aedb193bb2dd",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -73.1034,
+        "y": 26.6897
+      },
+      "zoom": 0.8836
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

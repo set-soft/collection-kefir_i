@@ -1,0 +1,143 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "2 LEDs on",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 352,
+            "y": 64
+          }
+        },
+        {
+          "id": "c1eaa951-a70a-44c1-b3cd-c3bd0f355c0f",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 352,
+            "y": 144
+          }
+        },
+        {
+          "id": "eaf792b5-de98-4e2f-b78a-4023eb9a7f2b",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 80,
+            "y": 64
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "a538a5b4-d5d5-4ace-a593-efb1fa9b930c",
+          "type": "basic.info",
+          "data": {
+            "info": "Turn on two LEDs",
+            "readonly": true
+          },
+          "position": {
+            "x": 80,
+            "y": 232
+          },
+          "size": {
+            "width": 256,
+            "height": 96
+          }
+        },
+        {
+          "id": "23a93ea7-a745-4701-9bf9-d4f75bac4131",
+          "type": "@sha1<./blocks/Const/Bit/1-torch.ice>",
+          "position": {
+            "x": 80,
+            "y": 144
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "f815b4dd-1dd8-460f-b45b-f5f50e3bfa59",
+          "type": "basic.info",
+          "data": {
+            "info": "Esta es una variante\npara el 1 lógico",
+            "readonly": true
+          },
+          "position": {
+            "x": -128,
+            "y": 152
+          },
+          "size": {
+            "width": 208,
+            "height": 112
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "eaf792b5-de98-4e2f-b78a-4023eb9a7f2b",
+            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+          },
+          "target": {
+            "block": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "23a93ea7-a745-4701-9bf9-d4f75bac4131",
+            "port": "3d584b0a-29eb-47af-8c43-c0822282ef05"
+          },
+          "target": {
+            "block": "c1eaa951-a70a-44c1-b3cd-c3bd0f355c0f",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 186,
+        "y": 99.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

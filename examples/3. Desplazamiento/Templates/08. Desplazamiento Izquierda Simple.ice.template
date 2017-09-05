@@ -1,0 +1,208 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Desplazamiento 8 Izquierda Simple",
+    "version": "1.0.0",
+    "description": "Ejemplo de uso de un registro de desplazamiento a izquierda",
+    "author": "Salvador E. Tropea",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 656,
+            "y": 120
+          }
+        },
+        {
+          "id": "1c133db3-df28-425e-8c3d-f035773e4a91",
+          "type": "basic.info",
+          "data": {
+            "info": "USO ASINCRÓNICO\nNO RECOMENDABLE",
+            "readonly": true
+          },
+          "position": {
+            "x": 272,
+            "y": 104
+          },
+          "size": {
+            "width": 192,
+            "height": 64
+          }
+        },
+        {
+          "id": "47ec87a7-3f69-476e-844d-e41164a6dcfd",
+          "type": "@sha1<./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_4_Simple.ice>",
+          "position": {
+            "x": 408,
+            "y": 184
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "e8034189-d51a-4c71-b8d8-1e2738c097f3",
+          "type": "@sha1<./blocks/Varios/Buses/NOR/1_out/NOR_4.ice>",
+          "position": {
+            "x": 608,
+            "y": 320
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "7fcf5f81-236a-4ba3-af78-b06f68cfbe89",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
+          "position": {
+            "x": 208,
+            "y": 168
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "5c4c7d36-fe5f-4d72-ab4c-d533a4a75f74",
+          "type": "@sha1<./blocks/Logic/OR/OR_2.ice>",
+          "position": {
+            "x": 752,
+            "y": 360
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "47ec87a7-3f69-476e-844d-e41164a6dcfd",
+            "port": "0c1a3cec-db05-4654-8be5-7562de8b52d9"
+          },
+          "target": {
+            "block": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "47ec87a7-3f69-476e-844d-e41164a6dcfd",
+            "port": "0c1a3cec-db05-4654-8be5-7562de8b52d9"
+          },
+          "target": {
+            "block": "e8034189-d51a-4c71-b8d8-1e2738c097f3",
+            "port": "4976678b-ee3d-47ed-8e8b-64bd81b2766f"
+          },
+          "vertices": [
+            {
+              "x": 560,
+              "y": 288
+            }
+          ],
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "7fcf5f81-236a-4ba3-af78-b06f68cfbe89",
+            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+          },
+          "target": {
+            "block": "47ec87a7-3f69-476e-844d-e41164a6dcfd",
+            "port": "b14d102e-5cf0-4a80-8fb4-9a0fd121f711"
+          }
+        },
+        {
+          "source": {
+            "block": "47ec87a7-3f69-476e-844d-e41164a6dcfd",
+            "port": "046aa103-8ed5-4236-af1a-6f64b9c06feb"
+          },
+          "target": {
+            "block": "5c4c7d36-fe5f-4d72-ab4c-d533a4a75f74",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+          },
+          "vertices": [
+            {
+              "x": 528,
+              "y": 312
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "e8034189-d51a-4c71-b8d8-1e2738c097f3",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "5c4c7d36-fe5f-4d72-ab4c-d533a4a75f74",
+            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+          }
+        },
+        {
+          "source": {
+            "block": "5c4c7d36-fe5f-4d72-ab4c-d533a4a75f74",
+            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+          },
+          "target": {
+            "block": "47ec87a7-3f69-476e-844d-e41164a6dcfd",
+            "port": "9ab474e2-632d-43ad-9339-f13f31caa59a"
+          },
+          "vertices": [
+            {
+              "x": 632,
+              "y": 456
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -84,
+        "y": -28.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
