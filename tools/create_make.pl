@@ -23,8 +23,14 @@ foreach $sha1 (keys %h)
       {# We have dependencies
        foreach $d (@v)
           {
-           next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
-           $deps.=SolveDep($d,$fname);
+           if ($d=~/[0-9a-f]{40}/)
+             {
+              $deps.=SolveDep($d,$fname);
+             }
+           else
+             {
+              $deps.=' '.EscapeForMake($d);
+             }
           }
       }
     if ($rule eq 'none')
