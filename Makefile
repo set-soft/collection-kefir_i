@@ -1,7 +1,7 @@
 #!/usr/bin/make
 all: actualizar
 
-actualizar: db
+actualizar:
 	make -f blocks.mk
 
 regenerar:

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="32.109" width="54.003" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 50.627689 30.102481">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<text font-size="18.57999992px" letter-spacing="0" word-spacing="0" style="word-spacing:0;letter-spacing:0;" y="14.482376" x="1.758749" font-family="sans-serif">
+<tspan y="14.482376" x="1.758749" font-weight="bold" fill="#008000">Num</tspan>
+</text>
+<text font-size="12.97200012px" letter-spacing="0" word-spacing="0" style="word-spacing:0;letter-spacing:0;" y="28.981377" x="0.06974896" font-family="sans-serif">
+<tspan y="28.981377" x="0.06974896" font-weight="bold" fill="#008000">@sz_o bits</tspan>
+</text>
+</svg>

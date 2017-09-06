@@ -1849,11 +1849,11 @@ all:  \
 ./examples/4.\ Combinacional\ Misc/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice: ./examples/4.\ Combinacional\ Misc/Templates/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice.template tools/reemplaza.pl  ./blocks/Varios/Pulso/Corazon_1Hz_P.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/4.\ Combinacional\ Misc/Templates/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice.template 0 0 ./examples/4.\ Combinacional\ Misc/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice
 
-./examples/5.\ Aritmetica/01.\ Comparar\ >,\=,<.ice: ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ \>,=,\<.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice
-	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ \>,=,\<.ice.template 0 0 ./examples/5.\ Aritmetica/01.\ Comparar\ >,\=,<.ice
+./examples/5.\ Aritmetica/01.\ Comparar\ >,\=,<.ice: ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ >,\=,<.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ \>,\=,\<.ice.template 0 0 ./examples/5.\ Aritmetica/01.\ Comparar\ \>,\=,\<.ice
 
-./examples/5.\ Aritmetica/02.\ Comparar\ >\=,!\=,<\=.ice: ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>=,\!=,\<=.ice.template tools/reemplaza.pl  ./blocks/Logic/NOT/NOT.ice
-	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>=,\!=,\<=.ice.template 0 0 ./examples/5.\ Aritmetica/02.\ Comparar\ >\=,!\=,<\=.ice
+./examples/5.\ Aritmetica/02.\ Comparar\ >\=,!\=,<\=.ice: ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ >\=,!\=,<\=.ice.template tools/reemplaza.pl  ./blocks/Logic/NOT/NOT.ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>\=,\!\=,\<\=.ice.template 0 0 ./examples/5.\ Aritmetica/02.\ Comparar\ \>\=,\!\=,\<\=.ice
 
 ./examples/5.\ Aritmetica/03.\ Sumador.ice: ./examples/5.\ Aritmetica/Templates/03.\ Sumador.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/03.\ Sumador.ice.template 0 0 ./examples/5.\ Aritmetica/03.\ Sumador.ice
