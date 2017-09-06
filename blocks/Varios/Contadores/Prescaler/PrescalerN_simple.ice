@@ -65,7 +65,7 @@
         },
         {
           "id": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
-          "type": "c28846aa851651def94adb3059f6d75b1c8fffb3",
+          "type": "9c7b5d463702a4f96a50ce90e1a9a4bd3bdf2257",
           "position": {
             "x": 384,
             "y": 208
@@ -168,7 +168,7 @@
     }
   },
   "dependencies": {
-    "c28846aa851651def94adb3059f6d75b1c8fffb3": {
+    "9c7b5d463702a4f96a50ce90e1a9a4bd3bdf2257": {
   "package": {
     "name": "Prescaler de N+1 bits",
     "version": "1.0.0",

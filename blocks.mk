@@ -514,19 +514,19 @@ all:  \
 ./blocks/Const/Bus/1s/Valor_1s_8_bits.ice: ./blocks/Const/Bus/Templates/Valor_1s.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Valor_1s.ice.template 0 8 ./blocks/Const/Bus/1s/Valor_1s_8_bits.ice
 
-./blocks/Const/Bus/Val/Const_16_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl 
+./blocks/Const/Bus/Val/Const_16_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Templates/Const.svg
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 16 ./blocks/Const/Bus/Val/Const_16_bits.ice
 
-./blocks/Const/Bus/Val/Const_2_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl 
+./blocks/Const/Bus/Val/Const_2_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Templates/Const.svg
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 2 ./blocks/Const/Bus/Val/Const_2_bits.ice
 
-./blocks/Const/Bus/Val/Const_32_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl 
+./blocks/Const/Bus/Val/Const_32_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Templates/Const.svg
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 32 ./blocks/Const/Bus/Val/Const_32_bits.ice
 
-./blocks/Const/Bus/Val/Const_4_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl 
+./blocks/Const/Bus/Val/Const_4_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Templates/Const.svg
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 4 ./blocks/Const/Bus/Val/Const_4_bits.ice
 
-./blocks/Const/Bus/Val/Const_8_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl 
+./blocks/Const/Bus/Val/Const_8_bits.ice: ./blocks/Const/Bus/Templates/Const.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Templates/Const.svg
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 8 ./blocks/Const/Bus/Val/Const_8_bits.ice
 
 ./blocks/Input/CapSense/CapSense\ 2.ice: ./blocks/Input/Templates/CapSense\ 2.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice
@@ -601,7 +601,7 @@ all:  \
 ./blocks/Logic/NOR/NOR_8.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/NOR/NOR_8.ice
 
-./blocks/Logic/NOT/NOT.ice: ./blocks/Logic/NOT/Templates/NOT.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOT/NOT.ice: ./blocks/Logic/NOT/Templates/NOT.ice.template tools/reemplaza.pl  ./blocks/Logic/NOT/Templates/NOT.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOT/Templates/NOT.ice.template 0 0 ./blocks/Logic/NOT/NOT.ice
 
 ./blocks/Logic/OR/OR_2.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
@@ -1495,10 +1495,10 @@ all:  \
 ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_Enable.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_Enable.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice
 
-./blocks/Varios/Contadores/Prescaler/PrescalerN.ice: ./blocks/Varios/Contadores/Templates/PrescalerN.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Contadores/Prescaler/PrescalerN.ice: ./blocks/Varios/Contadores/Templates/PrescalerN.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Templates/Fdiv2N.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/PrescalerN.ice.template 0 0 ./blocks/Varios/Contadores/Prescaler/PrescalerN.ice
 
-./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice: ./blocks/Varios/Contadores/Templates/PrescalerN_simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Prescaler/PrescalerN.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice: ./blocks/Varios/Contadores/Templates/PrescalerN_simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Prescaler/PrescalerN.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Templates/Fdiv2N.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/PrescalerN_simple.ice.template 0 0 ./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice
 
 ./blocks/Varios/Decodificadores/Enable/Deco_1_2.ice: ./blocks/Varios/Decodificadores/Templates/Deco_1_2.ice.template tools/reemplaza.pl 
