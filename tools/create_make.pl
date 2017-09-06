@@ -18,6 +18,7 @@ foreach $sha1 (keys %h)
     push(@names,$fname);
     # The second is the make rule
     $rule=shift(@v);
+    $deps='';
     if (scalar(@v))
       {# We have dependencies
        foreach $d (@v)
@@ -25,10 +26,6 @@ foreach $sha1 (keys %h)
            next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
            $deps=SolveDep($d,$fname);
           }
-      }
-    else
-      {
-       $deps='';
       }
     if ($rule eq 'none')
       {
