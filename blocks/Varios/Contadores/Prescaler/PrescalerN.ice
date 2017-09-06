@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "Divide la frecuencia del enable por la potencia N+1 de 2",
     "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2230.534%22%20width=%2293.859%22%20viewBox=%220%200%2087.992987%2028.625798%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2225.792%22%20x=%22-.582%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2225.792%22%20x=%22-.582%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%25%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.534%22%20width=%2295.859%22%20viewBox=%220%200%2089.868%2030.501%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2230.55%22%20y=%2226.729%22%20x=%22.356%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2226.729%22%20x=%22.356%22%20font-weight=%22bold%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "board": "kefir",
