@@ -14,7 +14,7 @@ foreach $sha1 (keys %h)
     # Separate them
     @v=split(/\|/,$f);
     # The first is the file name
-    $fname=Escape(shift(@v));
+    $fname=shift(@v);
     push(@names,$fname);
     # The second is the make rule
     $rule=shift(@v);
@@ -22,6 +22,7 @@ foreach $sha1 (keys %h)
       {# We have dependencies
        foreach $d (@v)
           {
+           next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
            $deps=SolveDep($d,$fname);
           }
       }
@@ -31,12 +32,14 @@ foreach $sha1 (keys %h)
       }
     if ($rule eq 'none')
       {
-       push(@rules,"$fname:$deps");
+       push(@rules,EscapeForMake($fname).":$deps");
       }
     else
       {
        $rule=~/(.*).template/ or die "Rule without template: $rule";
-       push(@rules,"$fname: $1.template tools/reemplaza.pl $deps\n\tperl tools/reemplaza.pl $rule $fname");
+       $tpl="$1.template";
+       $tpl=EscapeForMake(UnEscapeForShell($tpl));
+       push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl $deps\n\tperl tools/reemplaza.pl $rule ".EscapeForShell($fname));
       }
    }
 print "#!/usr/bin/make\n\n";
@@ -44,7 +47,7 @@ print "all: ";
 @n=sort(@names);
 foreach $name (@n)
    {
-    print " \\\n\t$name";
+    print " \\\n\t".EscapeForMake($name);
    }
 print "\n\n";
 @r=sort(@rules);
@@ -66,18 +69,19 @@ sub SolveDep
  #print "Solving $sha1 == $f\n";
  my @v=split(/\|/,$f);
  #print "Total fields: ".scalar(@v)."\n";
- $deps.=' '.Escape(shift(@v));
+ $deps.=' '.EscapeForMake(shift(@v));
  $rule=shift(@v);
  my $d;
  foreach $d (@v)
     {
+     next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
      #print "Going to solve $d\n";
      $deps.=SolveDep($d,$f);
     }
  $deps;
 }
 
-sub Escape
+sub EscapeForMake
 {
  my $n=shift(@_);
  $n=~s/ /\\ /g;
@@ -87,3 +91,27 @@ sub Escape
  $n=~s/\=/\\\=/g;
  $n;
 }
+
+sub EscapeForShell
+{
+ my $n=shift(@_);
+ $n=~s/ /\\ /g;
+ $n=~s/\>/\\\>/g;
+ $n=~s/\!/\\\!/g;
+ $n=~s/\</\\\</g;
+ $n=~s/\=/\\\=/g;
+ $n;
+}
+
+sub UnEscapeForShell
+{
+ my $n=shift(@_);
+ $n=~s/\\ / /g;
+ $n=~s/\\\>/\>/g;
+ $n=~s/\\\!/\!/g;
+ $n=~s/\\\</\</g;
+ $n=~s/\\\=/\=/g;
+ $n;
+}
+
+
