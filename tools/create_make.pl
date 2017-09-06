@@ -24,7 +24,7 @@ foreach $sha1 (keys %h)
        foreach $d (@v)
           {
            next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
-           $deps=SolveDep($d,$fname);
+           $deps.=SolveDep($d,$fname);
           }
       }
     if ($rule eq 'none')
@@ -63,16 +63,16 @@ sub SolveDep
 
  my $f=$h{$sha1};
  die "Unable to find $sha1 referenced by $parent" unless $f;
- #print "Solving $sha1 == $f\n";
+ print STDERR "Solving $sha1 == $f\n" if $debug;
  my @v=split(/\|/,$f);
- #print "Total fields: ".scalar(@v)."\n";
+ print STDERR "Total fields: ".scalar(@v)."\n" if $debug;
  $deps.=' '.EscapeForMake(shift(@v));
  $rule=shift(@v);
  my $d;
  foreach $d (@v)
     {
      next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
-     #print "Going to solve $d\n";
+     print STDERR "Going to solve $d\n" if $debug;
      $deps.=SolveDep($d,$f);
     }
  $deps;
