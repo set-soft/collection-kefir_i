@@ -21,6 +21,17 @@ print "Template: $tpl\n";
 print "Inputs: $ins\n";
 print "Outputs: $outs\n";
 $a=cat($tpl);
+$tpl=~/(.*)\/([^\/]+)$/;
+$tpldir=$1;
+
+# Replace the SVG first, it could contain tags
+while ($a=~/\@svg\<([^\>]+)\>/g)
+  {
+   $f=$1;
+   $r=`tools/svgo/bin/svgo -i "$tpldir/$f" -o -`;
+   $r=EscapeSVG($r);
+   $a=~s/\@svg\<$f\>/$r/g;
+  }
 
 @inputs=split(/,/,$ins);
 $c=scalar(@inputs);
@@ -352,6 +363,7 @@ sub SolveDeps
  # Avoid adding it twice
  unless (grep(/^$d$/,@fulldeps))
    {
+    next unless $d=~/[0-9a-f]{40}/; # Skip non-hash deps
     #print Indent()."Adding $d ($h{$d})\n";
     push(@fulldeps,$d);
     # Add subdependencies
@@ -423,9 +435,20 @@ sub cat
  local $/;
  my $b;
 
- open(FIL,$_[0]) || return 0;
+ open(FIL,$_[0]) || die "Failed to open $_[0]";
  $b=<FIL>;
  close(FIL);
 
  $b;
+}
+
+sub EscapeSVG
+{
+ my $d=$_[0];
+ $d=~s/\</\%3C/g;
+ $d=~s/\>/\%3E/g;
+ $d=~s/ /\%20/g;
+ $d=~s/\"/\%22/g;
+ $d=~s/\n//g;
+ $d;
 }

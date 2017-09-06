@@ -32,8 +32,9 @@ sub Recursivo
        $sha1=`perl tools/json_sha1.pl "$f"`;
        $deps=GetSHA1Deps($f);
        $rule=GetRule($f);
+       $svg=GetSVG($f);
        unlink('pp.json');
-       print "$sha1 $f$rule$deps\n";
+       print "$sha1 $f$rule$deps$svg\n";
        die "Hash collision! $f vs $h{$sha1}" if $h{$sha1};
        $h{$sha1}=$f;
       }
@@ -49,11 +50,12 @@ sub ReadRules
  my $l;
  $rules_base=$dir;
  open(FI,$f) || die "Failed to open $f rules file";
+ $tpldir="$dir/Templates";
  while ($l=<FI>)
    {
     $l=~/\"([^\"]+)\" (\S+) (\S+) \"([^\"]+)\"/ or die "Malformed rule <$l> at $f";
     my ($tpl,$ins,$outs,$file)=($1,$2,$3,$4);
-    $rules{"$dir/$file"}=Escape("$dir/Templates/$tpl")." $ins $outs";
+    $rules{"$dir/$file"}=Escape("$tpldir/$tpl")." $ins $outs";
    }
  close(FI);
 }
@@ -70,6 +72,21 @@ sub GetRule
  my $rule=$rules{$f};
  return "|$rule" if $rule;
  "|none";
+}
+
+sub GetSVG
+{
+ my $f=shift @_;
+ my $rule=$rules{$f};
+ return '' unless $rule;
+ $rule=~/(.*)\s\S+\s\S+/ or die "Malformed rule!? <$rule>";
+ my $d=cat(UnEscape($1));
+ my $ret;
+ while ($d=~/\@svg\<([^\>]+)\>/g)
+   {
+    $ret.="|$tpldir/$1";
+   }
+ $ret;
 }
 
 sub GetSHA1Deps
@@ -93,5 +110,31 @@ sub Escape
  $n=~s/\>/\\\>/g;
  $n=~s/\!/\\\!/g;
  $n=~s/\</\\\</g;
+ $n=~s/\=/\\\=/g;
  $n;
 }
+
+sub UnEscape
+{
+ my $n=shift(@_);
+ $n=~s/\\ / /g;
+ $n=~s/\\\>/\>/g;
+ $n=~s/\\\!/\!/g;
+ $n=~s/\\\</\</g;
+ $n=~s/\\\=/\=/g;
+ $n;
+}
+
+sub cat
+{
+ local $/;
+ my $b;
+
+ open(FIL,$_[0]) || die "Failed to open $_[0]";
+ $b=<FIL>;
+ close(FIL);
+
+ $b;
+}
+
+
