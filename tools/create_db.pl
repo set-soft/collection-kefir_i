@@ -93,13 +93,22 @@ sub GetSHA1Deps
 {
  my $f=shift @_;
  my $deps='';
+ my (@d,$i);
 
  open(FI,'pp.json') || die "Can't open pp.json";
  while (<FI>)
    {
-    $deps.="|$1" if $_=~/\"type\":\s+\"([0-9a-f]{40})\",/;
+    if ($_=~/\"type\":\s+\"([0-9a-f]{40})\",/)
+      {
+       $i=$1;
+       push(@d,$i) unless grep(/^$i$/,@d); # Avoid repeating deps
+      }
    }
  close(FI);
+ foreach $i (@d)
+    {
+     $deps.="|$i";
+    }
  $deps;
 }
 
