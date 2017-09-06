@@ -1,0 +1,3 @@
+[submodule "tools/svgo"]
+	path = tools/svgo
+	url = https://github.com/svg/svgo.git
