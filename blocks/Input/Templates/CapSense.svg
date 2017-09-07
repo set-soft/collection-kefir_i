@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" height="297mm" width="210mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-<defs></defs>
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
-<path d="m190,108.79a29.286,29.286,0,1,1,-58.571,0,29.286,29.286,0,1,1,58.571,0z" stroke="#0b0b0b" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.24300003" fill="#000"/>
-<path d="m265.71,118.08a31.429,31.429,0,0,1,0,62.857" transform="matrix(1.0930079,0,0,1.0889028,-129.71354,-53.711617)" stroke="#0b0b0b" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="2.78930306" fill="none"/>
-<path stroke-linejoin="miter" d="m195.97,108.56,13.94,0,0,42.857-4.6712,0.0154,5.2103,6.9448,4.59-6.8185-5.0862-0.12627" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="3" fill="none"/>
-<path stroke-linejoin="miter" d="m116.86,108.47,13.94,0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="3" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" height="89.537" width="104.18" version="1.1">
+<g transform="translate(-114.36064,-72.340675)" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none">
+<path d="m190,108.79c0,16.174-13.112,29.286-29.286,29.286s-29.286-13.112-29.286-29.286,13.112-29.286,29.286-29.286,29.286,13.112,29.286,29.286z" stroke="#0b0b0b" stroke-width="1.24300003" fill="#000"/>
+<path d="m265.71,118.08c17.358,0,31.429,14.071,31.429,31.429s-14.071,31.429-31.429,31.429" transform="matrix(1.0930079,0,0,1.0889028,-129.71354,-53.711617)" stroke="#0b0b0b" stroke-width="2.78930306" fill="none"/>
+<path stroke-linejoin="miter" d="m195.97,108.56,13.94,0,0,42.857-4.6712,0.0154,5.2103,6.9448,4.59-6.8185-5.0862-0.12627" stroke="#000" stroke-width="3" fill="none"/>
+<path stroke-linejoin="miter" d="m116.86,108.47,13.94,0" stroke="#000" stroke-width="3" fill="none"/>
+</g>
 </svg>
