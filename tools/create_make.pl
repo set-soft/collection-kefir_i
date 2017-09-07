@@ -42,7 +42,9 @@ foreach $sha1 (keys %h)
        $rule=~/(.*).template/ or die "Rule without template: $rule";
        $tpl="$1.template";
        $tpl=EscapeForMake(UnEscapeForShell($tpl));
-       push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl $deps\n\tperl tools/reemplaza.pl $rule ".EscapeForShell($fname));
+       push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl $deps\n".
+            "\tperl tools/reemplaza.pl $rule ".EscapeForShell($fname)."\n".
+            "\tperl tools/update_db.pl ".EscapeForShell($fname)." > tools/sha1_db.txt");
       }
    }
 print "#!/usr/bin/make\n\n";
