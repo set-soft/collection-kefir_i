@@ -5,7 +5,7 @@
     "version": "1.0.1",
     "description": "NAND logic gate for a @sz_i bits bus",
     "author": "Jesús Arroyo, Juan González, Salvador E. Tropea",
-    "image": "@svg<AND.svg>"
+    "image": "@svg<NAND.svg>"
   },
   "design": {
     "board": "kefir",

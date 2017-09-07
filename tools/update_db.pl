@@ -28,23 +28,25 @@ $nsha1=`perl tools/json_sha1.pl "$file"`;
 
 print STDERR "New SHA1: $nsha1\n";
 
-exit(0) if $sha1 eq $nsha1;
 
-die "Hash collision! $file vs $h{$nsha1}" if $h{$nsha1};
-
-print STDERR "Replacing all references ...\n";
-$changed=0;
-foreach $v (keys %h)
-   {
-    $data=$h{$v};
-    if ($data=~/$sha1/)
+if ($sha1 ne $nsha1)
+  {
+   die "Hash collision! $file vs $h{$nsha1}" if $h{$nsha1};
+   
+   print STDERR "Replacing all references ...\n";
+   $changed=0;
+   foreach $v (keys %h)
       {
-       $data=~s/$sha1/$nsha1/g;
-       $h{$v}=$data;
-       $changed++;
+       $data=$h{$v};
+       if ($data=~/$sha1/)
+         {
+          $data=~s/$sha1/$nsha1/g;
+          $h{$v}=$data;
+          $changed++;
+         }
       }
-   }
-print STDERR "Replaced $changed references\n";
+   print STDERR "Replaced $changed references\n";
+  }
 
 $deps=GetSHA1Deps($file);
 print STDERR "Deps: $deps\n";
