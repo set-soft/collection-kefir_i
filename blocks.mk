@@ -548,15 +548,15 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 8 ./blocks/Const/Bus/Val/Const_8_bits.ice
 	perl tools/update_db.pl ./blocks/Const/Bus/Val/Const_8_bits.ice
 
-./blocks/Input/CapSense/CapSense\ 2.ice: ./blocks/Input/Templates/CapSense\ 2.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice
+./blocks/Input/CapSense/CapSense\ 2.ice: ./blocks/Input/Templates/CapSense\ 2.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense2.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 2.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 2.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 2.ice
 
-./blocks/Input/CapSense/CapSense\ 3.ice: ./blocks/Input/Templates/CapSense\ 3.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice
+./blocks/Input/CapSense/CapSense\ 3.ice: ./blocks/Input/Templates/CapSense\ 3.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense3.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 3.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 3.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 3.ice
 
-./blocks/Input/CapSense/CapSense\ 4.ice: ./blocks/Input/Templates/CapSense\ 4.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice
+./blocks/Input/CapSense/CapSense\ 4.ice: ./blocks/Input/Templates/CapSense\ 4.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense4.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 4.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 4.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 4.ice
 

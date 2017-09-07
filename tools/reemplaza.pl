@@ -24,6 +24,14 @@ while ($a=~/\@svg\<([^\>]+)\>/g)
    $r=EscapeSVG($r);
    $a=~s/\@svg\<$f\>/$r/g;
   }
+# Also Verilog code
+while ($a=~/\@verilog\<([^\>]+)\>/g)
+  {
+   $f=$1;
+   $r=EscapeCode(cat("$tpldir/$f"));
+   $r=~s/(\\n)+$//;
+   $a=~s/\@verilog\<$f\>/$r/g;
+  }
 
 @inputs=split(/,/,$ins);
 $c=scalar(@inputs);

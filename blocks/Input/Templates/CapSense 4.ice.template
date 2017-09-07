@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "4 capacitive buttons",
     "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2289.537%22%20width%3D%22104.18%22%20version%3D%221.1%22%3E%0D%0A%3Cg%20transform%3D%22translate%28-114.36064%2C-72.340675%29%22%20stroke-linecap%3D%22butt%22%20stroke-miterlimit%3D%224%22%20stroke-dasharray%3D%22none%22%3E%0D%0A%3Cpath%20d%3D%22m190%2C108.79c0%2C16.174-13.112%2C29.286-29.286%2C29.286s-29.286-13.112-29.286-29.286%2C13.112-29.286%2C29.286-29.286%2C29.286%2C13.112%2C29.286%2C29.286z%22%20stroke%3D%22%230b0b0b%22%20stroke-width%3D%221.24300003%22%20fill%3D%22%23000%22%2F%3E%0D%0A%3Cpath%20d%3D%22m265.71%2C118.08c17.358%2C0%2C31.429%2C14.071%2C31.429%2C31.429s-14.071%2C31.429-31.429%2C31.429%22%20transform%3D%22matrix%281.0930079%2C0%2C0%2C1.0889028%2C-129.71354%2C-53.711617%29%22%20stroke%3D%22%230b0b0b%22%20stroke-width%3D%222.78930306%22%20fill%3D%22none%22%2F%3E%0D%0A%3Cpath%20stroke-linejoin%3D%22miter%22%20d%3D%22m195.97%2C108.56%2C13.94%2C0%2C0%2C42.857-4.6712%2C0.0154%2C5.2103%2C6.9448%2C4.59-6.8185-5.0862-0.12627%22%20stroke%3D%22%23000%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%0D%0A%3Cpath%20stroke-linejoin%3D%22miter%22%20d%3D%22m116.86%2C108.47%2C13.94%2C0%22%20stroke%3D%22%23000%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E"
+    "image": "@svg<CapSense.svg>"
   },
   "design": {
     "board": "kefir",
@@ -277,7 +277,7 @@
           "id": "1985da7e-2693-4f99-a37a-a63572a5145d",
           "type": "basic.code",
           "data": {
-            "code": "// @include capsense.v\n// @include capsense_sys.v\n\nCapSense_Sys #(\n  .N(4),\n  .DIRECT(DIRECT),\n  .FREQUENCY(FREQUENCY)) MisBotones (\n   .clk_i(clk_i),.rst_i(1'b0),\n   .capsense_i({p4_i,p3_i,p2_i,p1_i}),\n   .capsense_oe(oe),\n   .buttons_o({d4_o,d3_o,d2_o,d1_o}));",
+            "code": "@verilog<CapSense4.v>",
             "params": [
               {
                 "name": "DIRECT"

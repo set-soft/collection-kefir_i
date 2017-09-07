@@ -53,11 +53,14 @@ $rule=GetRule($file);
 print STDERR "Rule: $rule\n";
 
 $svg=GetSVG($file);
-unlink('pp.json');
 print STDERR "SVG:  $svg\n";
 
+$code=GetCode($file);
+unlink('pp.json');
+print STDERR "Code: $code\n";
+
 $h{$sha1}=undef;
-$h{$nsha1}="$file$rule$deps$svg";
+$h{$nsha1}="$file$rule$deps$svg$code";
 
 open(FI,">tools/sha1_db.txt") || die "Can't create the database";
 foreach $v (sort (keys %h))

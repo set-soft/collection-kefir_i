@@ -65,6 +65,13 @@ sub UnEscapeSVG
  $d;
 }
 
+sub EscapeCode
+{
+ my $d=$_[0];
+ $d=~s/\n/\\n/g;
+ $d;
+}
+
 sub cat
 {
  local $/;
@@ -118,6 +125,21 @@ sub GetSVG
  my $d=cat(UnEscapeForShell($1));
  my $ret;
  while ($d=~/\@svg\<([^\>]+)\>/g)
+   {
+    $ret.="|$tpldir/$1";
+   }
+ $ret;
+}
+
+sub GetCode
+{
+ my $f=shift @_;
+ my $rule=$rules{$f};
+ return '' unless $rule;
+ $rule=~/(.*)\s\S+\s\S+/ or die "Malformed rule!? <$rule>";
+ my $d=cat(UnEscapeForShell($1));
+ my $ret;
+ while ($d=~/\@verilog\<([^\>]+)\>/g)
    {
     $ret.="|$tpldir/$1";
    }
