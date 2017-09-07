@@ -1726,63 +1726,63 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/XNOR/bus_out/XNOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/bus_out/XNOR_8.ice
 
-./blocks/Varios/Buses/XOR/1_out/XOR_16.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_out/XOR_16.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 16 1 ./blocks/Varios/Buses/XOR/1_out/XOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_out/XOR_16.ice
 
-./blocks/Varios/Buses/XOR/1_out/XOR_2.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_out/XOR_2.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 2 1 ./blocks/Varios/Buses/XOR/1_out/XOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_out/XOR_2.ice
 
-./blocks/Varios/Buses/XOR/1_out/XOR_32.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_out/XOR_32.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 32 1 ./blocks/Varios/Buses/XOR/1_out/XOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_out/XOR_32.ice
 
-./blocks/Varios/Buses/XOR/1_out/XOR_4.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_out/XOR_4.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 4 1 ./blocks/Varios/Buses/XOR/1_out/XOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_out/XOR_4.ice
 
-./blocks/Varios/Buses/XOR/1_out/XOR_8.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_out/XOR_8.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 8 1 ./blocks/Varios/Buses/XOR/1_out/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_out/XOR_8.ice
 
-./blocks/Varios/Buses/XOR/1_to_all/XOR_16.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_to_all/XOR_16.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 16 1 ./blocks/Varios/Buses/XOR/1_to_all/XOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_to_all/XOR_16.ice
 
-./blocks/Varios/Buses/XOR/1_to_all/XOR_2.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_to_all/XOR_2.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 2 1 ./blocks/Varios/Buses/XOR/1_to_all/XOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_to_all/XOR_2.ice
 
-./blocks/Varios/Buses/XOR/1_to_all/XOR_32.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_to_all/XOR_32.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 32 1 ./blocks/Varios/Buses/XOR/1_to_all/XOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_to_all/XOR_32.ice
 
-./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 4 1 ./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice
 
-./blocks/Varios/Buses/XOR/1_to_all/XOR_8.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/1_to_all/XOR_8.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 8 1 ./blocks/Varios/Buses/XOR/1_to_all/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/1_to_all/XOR_8.ice
 
-./blocks/Varios/Buses/XOR/bus_out/XOR_16.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/bus_out/XOR_16.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 16,16 16 ./blocks/Varios/Buses/XOR/bus_out/XOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_16.ice
 
-./blocks/Varios/Buses/XOR/bus_out/XOR_2.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/bus_out/XOR_2.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 2,2 2 ./blocks/Varios/Buses/XOR/bus_out/XOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_2.ice
 
-./blocks/Varios/Buses/XOR/bus_out/XOR_32.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/bus_out/XOR_32.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 32,32 32 ./blocks/Varios/Buses/XOR/bus_out/XOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_32.ice
 
-./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 4,4 4 ./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice
 
-./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice: ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 
