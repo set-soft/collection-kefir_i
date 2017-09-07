@@ -588,59 +588,59 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/AND/AND_8.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_8.ice
 
-./blocks/Logic/NAND/NAND_2.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_2.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1 1 ./blocks/Logic/NAND/NAND_2.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_2.ice
 
-./blocks/Logic/NAND/NAND_3.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_3.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1,1 1 ./blocks/Logic/NAND/NAND_3.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_3.ice
 
-./blocks/Logic/NAND/NAND_4.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_4.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1,1,1 1 ./blocks/Logic/NAND/NAND_4.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_4.ice
 
-./blocks/Logic/NAND/NAND_5.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_5.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1,1,1,1 1 ./blocks/Logic/NAND/NAND_5.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_5.ice
 
-./blocks/Logic/NAND/NAND_6.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_6.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1,1,1,1,1 1 ./blocks/Logic/NAND/NAND_6.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_6.ice
 
-./blocks/Logic/NAND/NAND_7.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_7.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1,1,1,1,1,1 1 ./blocks/Logic/NAND/NAND_7.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_7.ice
 
-./blocks/Logic/NAND/NAND_8.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl 
+./blocks/Logic/NAND/NAND_8.ice: ./blocks/Logic/NAND/Templates/NAND.ice.template tools/reemplaza.pl  ./blocks/Logic/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NAND/Templates/NAND.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/NAND/NAND_8.ice
 	perl tools/update_db.pl ./blocks/Logic/NAND/NAND_8.ice
 
-./blocks/Logic/NOR/NOR_2.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_2.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1 1 ./blocks/Logic/NOR/NOR_2.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_2.ice
 
-./blocks/Logic/NOR/NOR_3.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_3.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1 1 ./blocks/Logic/NOR/NOR_3.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_3.ice
 
-./blocks/Logic/NOR/NOR_4.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_4.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1 1 ./blocks/Logic/NOR/NOR_4.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_4.ice
 
-./blocks/Logic/NOR/NOR_5.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_5.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1,1 1 ./blocks/Logic/NOR/NOR_5.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_5.ice
 
-./blocks/Logic/NOR/NOR_6.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_6.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1,1,1 1 ./blocks/Logic/NOR/NOR_6.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_6.ice
 
-./blocks/Logic/NOR/NOR_7.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_7.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1,1,1,1 1 ./blocks/Logic/NOR/NOR_7.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_7.ice
 
-./blocks/Logic/NOR/NOR_8.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/NOR/NOR_8.ice: ./blocks/Logic/NOR/Templates/NOR.ice.template tools/reemplaza.pl  ./blocks/Logic/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/NOR/NOR_8.ice
 	perl tools/update_db.pl ./blocks/Logic/NOR/NOR_8.ice
 
