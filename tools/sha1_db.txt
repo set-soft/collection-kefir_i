@@ -247,7 +247,6 @@
 86dda14114fdfd3a5aaaede49f0fd05c9c705f44 ./blocks/Varios/Buses/Separar/Split_wires/Split_9.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 9 1,1,1,1,1,1,1,1,1
 871162b7096ae430621df5dd2be6abb691e5c0d2 ./blocks/Varios/Buses/Unir/Join_2/Join_4,4_8.ice|./blocks/Varios/Buses/Unir/Templates/Join-2.ice.template 4,4 8
 8723c14d6879938bdcbbdad7a306745a783e184d ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_16.ice|./blocks/Varios/Aritmetica/Complemento_a_1/Templates/Complemento_a_1.ice.template 16 16|14ee4884b903bb75aa428a5bfe04223e9c62ca6c
-875b96b92dcf7a5901297ab5e147fc5a1c70a802 ./examples/5. Aritmetica/02. Comparar >=,!=,<=.ice|./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>\=,\!\=,\<\=.ice.template 0 0|6dd5267795a57e34680aeac01c01f33d6872e10b|b8eb912e2cd91479fec24e1f6467caa811b2e944|98e16c2ab5f048cf1c0b952af9c31cc985a32b0f
 87ca13c13c865682c08ea8f7107b00f423e390a7 ./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice|./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 4,4 4
 87fd113f8e682b1c991f7caca61cbb7cdf673023 ./examples/2. Counters/03. BCD Down Counter.ice|./examples/2.\ Counters/Templates/03.\ BCD\ Down\ Counter.ice.template 0 0|862d2a36c72ddee13ea44bf906fe1b60efa90941|fcbfafcce9601c3d3ba3eaaefd7fca3a514c879b|10e745384ae258fa8148f4889896e78ade7dbf48|2a015ba5b2f0f40bf8d3a9172148876e366f67ba
 8800f7924aeb7b784b5ceab02ed57134a3c5c77a ./blocks/Varios/Buses/NOT/NOT_4.ice|./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 4 4
@@ -451,6 +450,7 @@ f7c016573be9de5b278ac44d5ad5593b4ef49012 ./blocks/Varios/Buses/Reducir/Reducir_8
 f80dc8f4e23bd397d4ccb1cd6ac9e7da5bc65a43 ./blocks/Logic/OR/OR_7.ice|./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1,1 1
 f85e7945810d08b7eb46c25cf81b84cb3e0dc57b ./blocks/Logic/NOR/NOR_6.ice|./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1,1,1 1
 f87b915fe4ad18b1940513c388f2bc5375610c00 ./blocks/Varios/Buses/XOR/1_to_all/XOR_32.ice|./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 32 1
+f967831ee968e897bbc9aab78d4e2ec99e98a3e2 ./examples/5. Aritmetica/02. Comparar >=,!=,<=.ice|./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>\=,\!\=,\<\=.ice.template 0 0|6dd5267795a57e34680aeac01c01f33d6872e10b|b8eb912e2cd91479fec24e1f6467caa811b2e944|98e16c2ab5f048cf1c0b952af9c31cc985a32b0f
 f99b36b9fc98fa3709dcf20b22c52c3ed51411ff ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_32_16.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 32 16
 f9c3f68ad761c53bd65f33d04bca92a4f6fadbe3 ./blocks/Const/Bus/1s/Valor_1s_16_bits.ice|./blocks/Const/Bus/Templates/Valor_1s.ice.template 0 16
 fa81bf1bf85fac5c604e8517691b6b4215940535 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice|./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 32 32

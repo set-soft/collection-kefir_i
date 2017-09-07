@@ -44,7 +44,7 @@ foreach $sha1 (keys %h)
        $tpl=EscapeForMake(UnEscapeForShell($tpl));
        push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl $deps\n".
             "\tperl tools/reemplaza.pl $rule ".EscapeForShell($fname)."\n".
-            "\tperl tools/update_db.pl ".EscapeForShell($fname)." > tools/sha1_db.txt");
+            "\tperl tools/update_db.pl ".EscapeForShell($fname));
       }
    }
 print "#!/usr/bin/make\n\n";

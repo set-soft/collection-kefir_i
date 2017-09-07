@@ -67,10 +67,12 @@ print STDERR "SVG:  $svg\n";
 $h{$sha1}=undef;
 $h{$nsha1}="$file$rule$deps$svg";
 
+open(FI,">tools/sha1_db.txt") || die "Can't create the database";
 foreach $v (sort (keys %h))
    {
-    print "$v $h{$v}\n" if $h{$v};
+    print FI "$v $h{$v}\n" if $h{$v};
    }
+close(FI);
 0;
 
 sub GetSHA1Deps
