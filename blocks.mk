@@ -676,31 +676,31 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/OR/OR_8.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_8.ice
 
-./blocks/Logic/XNOR/XNOR_2.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_2.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1 1 ./blocks/Logic/XNOR/XNOR_2.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_2.ice
 
-./blocks/Logic/XNOR/XNOR_3.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_3.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1 1 ./blocks/Logic/XNOR/XNOR_3.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_3.ice
 
-./blocks/Logic/XNOR/XNOR_4.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_4.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1,1 1 ./blocks/Logic/XNOR/XNOR_4.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_4.ice
 
-./blocks/Logic/XNOR/XNOR_5.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_5.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1,1,1 1 ./blocks/Logic/XNOR/XNOR_5.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_5.ice
 
-./blocks/Logic/XNOR/XNOR_6.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_6.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1,1,1,1 1 ./blocks/Logic/XNOR/XNOR_6.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_6.ice
 
-./blocks/Logic/XNOR/XNOR_7.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_7.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1,1,1,1,1 1 ./blocks/Logic/XNOR/XNOR_7.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_7.ice
 
-./blocks/Logic/XNOR/XNOR_8.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XNOR/XNOR_8.ice: ./blocks/Logic/XNOR/Templates/XNOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/XNOR/XNOR_8.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_8.ice
 
@@ -1686,43 +1686,43 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1 9 ./blocks/Varios/Buses/Unir/Join_wires/Join_9.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/Unir/Join_wires/Join_9.ice
 
-./blocks/Varios/Buses/XNOR/1_out/XNOR_16.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/1_out/XNOR_16.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template 16 1 ./blocks/Varios/Buses/XNOR/1_out/XNOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/1_out/XNOR_16.ice
 
-./blocks/Varios/Buses/XNOR/1_out/XNOR_2.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/1_out/XNOR_2.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template 2 1 ./blocks/Varios/Buses/XNOR/1_out/XNOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/1_out/XNOR_2.ice
 
-./blocks/Varios/Buses/XNOR/1_out/XNOR_32.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/1_out/XNOR_32.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template 32 1 ./blocks/Varios/Buses/XNOR/1_out/XNOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/1_out/XNOR_32.ice
 
-./blocks/Varios/Buses/XNOR/1_out/XNOR_4.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/1_out/XNOR_4.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template 4 1 ./blocks/Varios/Buses/XNOR/1_out/XNOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/1_out/XNOR_4.ice
 
-./blocks/Varios/Buses/XNOR/1_out/XNOR_8.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/1_out/XNOR_8.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_1_out.ice.template 8 1 ./blocks/Varios/Buses/XNOR/1_out/XNOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/1_out/XNOR_8.ice
 
-./blocks/Varios/Buses/XNOR/bus_out/XNOR_16.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/bus_out/XNOR_16.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 16,16 16 ./blocks/Varios/Buses/XNOR/bus_out/XNOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/bus_out/XNOR_16.ice
 
-./blocks/Varios/Buses/XNOR/bus_out/XNOR_2.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/bus_out/XNOR_2.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 2,2 2 ./blocks/Varios/Buses/XNOR/bus_out/XNOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/bus_out/XNOR_2.ice
 
-./blocks/Varios/Buses/XNOR/bus_out/XNOR_32.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/bus_out/XNOR_32.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 32,32 32 ./blocks/Varios/Buses/XNOR/bus_out/XNOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/bus_out/XNOR_32.ice
 
-./blocks/Varios/Buses/XNOR/bus_out/XNOR_4.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/bus_out/XNOR_4.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 4,4 4 ./blocks/Varios/Buses/XNOR/bus_out/XNOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/bus_out/XNOR_4.ice
 
-./blocks/Varios/Buses/XNOR/bus_out/XNOR_8.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/XNOR/bus_out/XNOR_8.ice: ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/XNOR/bus_out/XNOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XNOR/bus_out/XNOR_8.ice
 
