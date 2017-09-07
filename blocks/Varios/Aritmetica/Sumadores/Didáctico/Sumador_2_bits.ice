@@ -213,7 +213,7 @@
         },
         {
           "id": "43c38836-4507-4e9b-962a-6552478e57a5",
-          "type": "8f07fe1358cfee343449d74752f68874f25a5856",
+          "type": "4ddc0c26a4fd9ef76e20873f14ab05e03501cfe2",
           "position": {
             "x": 832,
             "y": 216
@@ -225,7 +225,7 @@
         },
         {
           "id": "082de83b-466a-4011-a7e3-e24490f95238",
-          "type": "8f07fe1358cfee343449d74752f68874f25a5856",
+          "type": "4ddc0c26a4fd9ef76e20873f14ab05e03501cfe2",
           "position": {
             "x": 832,
             "y": 352
@@ -648,7 +648,7 @@
     }
   }
     },
-    "8f07fe1358cfee343449d74752f68874f25a5856": {
+    "4ddc0c26a4fd9ef76e20873f14ab05e03501cfe2": {
   "package": {
     "name": "Sumador Completo",
     "version": "1.0.0",
@@ -783,7 +783,7 @@
         },
         {
           "id": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-          "type": "ce0d235591dbac2631faeecd09f128653d37b5f0",
+          "type": "a2c72959ecd06d4cc2b09788cb7c70f73ea154f8",
           "position": {
             "x": 312,
             "y": 176
@@ -795,7 +795,7 @@
         },
         {
           "id": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-          "type": "ce0d235591dbac2631faeecd09f128653d37b5f0",
+          "type": "a2c72959ecd06d4cc2b09788cb7c70f73ea154f8",
           "position": {
             "x": 496,
             "y": 176
@@ -916,7 +916,7 @@
     }
   }
     },
-    "ce0d235591dbac2631faeecd09f128653d37b5f0": {
+    "a2c72959ecd06d4cc2b09788cb7c70f73ea154f8": {
   "package": {
     "name": "Medio sumador",
     "version": "1.0.0",
@@ -1067,7 +1067,7 @@
         },
         {
           "id": "281c7773-7394-4c98-afbf-4dfbe23206d3",
-          "type": "54883cd23f3c3efc9302a13522f5ab3978ec1180",
+          "type": "71806bc552db7ebe95e70ab48539392d94f16b50",
           "position": {
             "x": 376,
             "y": 224
@@ -1278,13 +1278,13 @@
     }
   }
     },
-    "54883cd23f3c3efc9302a13522f5ab3978ec1180": {
+    "71806bc552db7ebe95e70ab48539392d94f16b50": {
   "package": {
     "name": "AND 2 inputs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "AND logic gate 2 inputs",
-    "author": "Jesús Arroyo/Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%22-252%20400.9%2090%2040%22%3E%3Cpath%20d=%22M-252%20409.9h26v2h-26zM-252%20429.9h27v2h-27z%22/%3E%3Cpath%20d=%22M-227%20400.9v39.9h20.4c11.3%200%2020-9%2020-20s-8.7-20-20-20H-227zm2.9%202.8h17.6c9.8%200%2016.7%207.6%2016.7%2017.1%200%209.5-7.4%2017.1-17.1%2017.1H-224c-.1.1-.1-34.2-.1-34.2z%22/%3E%3Cpath%20d=%22M-187.911%20419.9H-162v2h-25.911z%22/%3E%3C/svg%3E"
+    "author": "Jesús Arroyo, Juan González, Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2259.082%22%20width=%22100.89%22%20viewBox=%22-252%20400.9%20100.894%2059.082%22%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M-199.56%20458.48h-29.045v-56.082h29.045s26.365%202.6%2026.365%2027.715c0%2025.114-26.365%2028.367-26.365%2028.367z%22%20stroke=%22#000%22%20stroke-width=%223%22%20fill=%22none%22/%3E%3Cpath%20d=%22M-250.99%20414.96h20.255m-20.255%2029.887h20.255m58.661-15.083h19.951%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3Ctext%20font-size=%2217.5%22%20y=%22435.736%22%20x=%22-224.207%22%20font-family=%22sans-serif%22%20fill=%22#00f%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%22435.736%22%20x=%22-224.207%22%3EAND%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "graph": {
