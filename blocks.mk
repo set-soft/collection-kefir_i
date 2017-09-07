@@ -560,31 +560,31 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 4.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 4.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 4.ice
 
-./blocks/Logic/AND/AND_2.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_2.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1 1 ./blocks/Logic/AND/AND_2.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_2.ice
 
-./blocks/Logic/AND/AND_3.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_3.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1 1 ./blocks/Logic/AND/AND_3.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_3.ice
 
-./blocks/Logic/AND/AND_4.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_4.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1 1 ./blocks/Logic/AND/AND_4.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_4.ice
 
-./blocks/Logic/AND/AND_5.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_5.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1,1 1 ./blocks/Logic/AND/AND_5.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_5.ice
 
-./blocks/Logic/AND/AND_6.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_6.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1,1,1 1 ./blocks/Logic/AND/AND_6.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_6.ice
 
-./blocks/Logic/AND/AND_7.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_7.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1,1,1,1 1 ./blocks/Logic/AND/AND_7.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_7.ice
 
-./blocks/Logic/AND/AND_8.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl 
+./blocks/Logic/AND/AND_8.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/AND/AND_8.ice
 	perl tools/update_db.pl ./blocks/Logic/AND/AND_8.ice
 
@@ -648,31 +648,31 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Logic/NOT/Templates/NOT.ice.template 0 0 ./blocks/Logic/NOT/NOT.ice
 	perl tools/update_db.pl ./blocks/Logic/NOT/NOT.ice
 
-./blocks/Logic/OR/OR_2.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_2.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1 1 ./blocks/Logic/OR/OR_2.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_2.ice
 
-./blocks/Logic/OR/OR_3.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_3.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1 1 ./blocks/Logic/OR/OR_3.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_3.ice
 
-./blocks/Logic/OR/OR_4.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_4.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1 1 ./blocks/Logic/OR/OR_4.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_4.ice
 
-./blocks/Logic/OR/OR_5.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_5.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1 1 ./blocks/Logic/OR/OR_5.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_5.ice
 
-./blocks/Logic/OR/OR_6.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_6.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1 1 ./blocks/Logic/OR/OR_6.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_6.ice
 
-./blocks/Logic/OR/OR_7.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_7.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1,1 1 ./blocks/Logic/OR/OR_7.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_7.ice
 
-./blocks/Logic/OR/OR_8.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl 
+./blocks/Logic/OR/OR_8.ice: ./blocks/Logic/OR/Templates/OR.ice.template tools/reemplaza.pl  ./blocks/Logic/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/OR/OR_8.ice
 	perl tools/update_db.pl ./blocks/Logic/OR/OR_8.ice
 
@@ -984,43 +984,43 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_1_out.ice.template 8 1 ./blocks/Varios/Buses/AND/1_out/AND_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/1_out/AND_8.ice
 
-./blocks/Varios/Buses/AND/1_to_all/AND_16.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/1_to_all/AND_16.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 16 1 ./blocks/Varios/Buses/AND/1_to_all/AND_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/1_to_all/AND_16.ice
 
-./blocks/Varios/Buses/AND/1_to_all/AND_2.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/1_to_all/AND_2.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 2 1 ./blocks/Varios/Buses/AND/1_to_all/AND_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/1_to_all/AND_2.ice
 
-./blocks/Varios/Buses/AND/1_to_all/AND_32.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/1_to_all/AND_32.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 32 1 ./blocks/Varios/Buses/AND/1_to_all/AND_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/1_to_all/AND_32.ice
 
-./blocks/Varios/Buses/AND/1_to_all/AND_4.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/1_to_all/AND_4.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 4 1 ./blocks/Varios/Buses/AND/1_to_all/AND_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/1_to_all/AND_4.ice
 
-./blocks/Varios/Buses/AND/1_to_all/AND_8.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/1_to_all/AND_8.ice: ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 8 1 ./blocks/Varios/Buses/AND/1_to_all/AND_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/1_to_all/AND_8.ice
 
-./blocks/Varios/Buses/AND/bus_out/AND_16.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/bus_out/AND_16.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template 16,16 16 ./blocks/Varios/Buses/AND/bus_out/AND_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/bus_out/AND_16.ice
 
-./blocks/Varios/Buses/AND/bus_out/AND_2.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/bus_out/AND_2.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template 2,2 2 ./blocks/Varios/Buses/AND/bus_out/AND_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/bus_out/AND_2.ice
 
-./blocks/Varios/Buses/AND/bus_out/AND_32.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/bus_out/AND_32.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template 32,32 32 ./blocks/Varios/Buses/AND/bus_out/AND_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/bus_out/AND_32.ice
 
-./blocks/Varios/Buses/AND/bus_out/AND_4.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/bus_out/AND_4.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template 4,4 4 ./blocks/Varios/Buses/AND/bus_out/AND_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/bus_out/AND_4.ice
 
-./blocks/Varios/Buses/AND/bus_out/AND_8.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/AND/bus_out/AND_8.ice: ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/AND/bus_out/AND_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/AND/bus_out/AND_8.ice
 
@@ -1124,123 +1124,123 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/NAND/bus_out/NAND_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/bus_out/NAND_8.ice
 
-./blocks/Varios/Buses/NOR/1_out/NOR_16.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/1_out/NOR_16.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template 16 1 ./blocks/Varios/Buses/NOR/1_out/NOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/1_out/NOR_16.ice
 
-./blocks/Varios/Buses/NOR/1_out/NOR_2.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/1_out/NOR_2.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template 2 1 ./blocks/Varios/Buses/NOR/1_out/NOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/1_out/NOR_2.ice
 
-./blocks/Varios/Buses/NOR/1_out/NOR_32.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/1_out/NOR_32.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template 32 1 ./blocks/Varios/Buses/NOR/1_out/NOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/1_out/NOR_32.ice
 
-./blocks/Varios/Buses/NOR/1_out/NOR_4.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/1_out/NOR_4.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template 4 1 ./blocks/Varios/Buses/NOR/1_out/NOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/1_out/NOR_4.ice
 
-./blocks/Varios/Buses/NOR/1_out/NOR_8.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/1_out/NOR_8.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template 8 1 ./blocks/Varios/Buses/NOR/1_out/NOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/1_out/NOR_8.ice
 
-./blocks/Varios/Buses/NOR/bus_out/NOR_16.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/bus_out/NOR_16.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 16,16 16 ./blocks/Varios/Buses/NOR/bus_out/NOR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/bus_out/NOR_16.ice
 
-./blocks/Varios/Buses/NOR/bus_out/NOR_2.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/bus_out/NOR_2.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 2,2 2 ./blocks/Varios/Buses/NOR/bus_out/NOR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/bus_out/NOR_2.ice
 
-./blocks/Varios/Buses/NOR/bus_out/NOR_32.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/bus_out/NOR_32.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 32,32 32 ./blocks/Varios/Buses/NOR/bus_out/NOR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/bus_out/NOR_32.ice
 
-./blocks/Varios/Buses/NOR/bus_out/NOR_4.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/bus_out/NOR_4.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 4,4 4 ./blocks/Varios/Buses/NOR/bus_out/NOR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/bus_out/NOR_4.ice
 
-./blocks/Varios/Buses/NOR/bus_out/NOR_8.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOR/bus_out/NOR_8.ice: ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOR/Templates/NOR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/NOR/bus_out/NOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOR/bus_out/NOR_8.ice
 
-./blocks/Varios/Buses/NOT/NOT_16.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOT/NOT_16.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOT/Templates/NOT.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 16 16 ./blocks/Varios/Buses/NOT/NOT_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOT/NOT_16.ice
 
-./blocks/Varios/Buses/NOT/NOT_2.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOT/NOT_2.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOT/Templates/NOT.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 2 2 ./blocks/Varios/Buses/NOT/NOT_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOT/NOT_2.ice
 
-./blocks/Varios/Buses/NOT/NOT_32.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOT/NOT_32.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOT/Templates/NOT.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 32 32 ./blocks/Varios/Buses/NOT/NOT_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOT/NOT_32.ice
 
-./blocks/Varios/Buses/NOT/NOT_4.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOT/NOT_4.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOT/Templates/NOT.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 4 4 ./blocks/Varios/Buses/NOT/NOT_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOT/NOT_4.ice
 
-./blocks/Varios/Buses/NOT/NOT_8.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NOT/NOT_8.ice: ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOT/Templates/NOT.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 8 8 ./blocks/Varios/Buses/NOT/NOT_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NOT/NOT_8.ice
 
-./blocks/Varios/Buses/OR/1_out/OR_16.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_out/OR_16.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template 16 1 ./blocks/Varios/Buses/OR/1_out/OR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_out/OR_16.ice
 
-./blocks/Varios/Buses/OR/1_out/OR_2.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_out/OR_2.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template 2 1 ./blocks/Varios/Buses/OR/1_out/OR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_out/OR_2.ice
 
-./blocks/Varios/Buses/OR/1_out/OR_32.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_out/OR_32.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template 32 1 ./blocks/Varios/Buses/OR/1_out/OR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_out/OR_32.ice
 
-./blocks/Varios/Buses/OR/1_out/OR_4.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_out/OR_4.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template 4 1 ./blocks/Varios/Buses/OR/1_out/OR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_out/OR_4.ice
 
-./blocks/Varios/Buses/OR/1_out/OR_8.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_out/OR_8.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_out.ice.template 8 1 ./blocks/Varios/Buses/OR/1_out/OR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_out/OR_8.ice
 
-./blocks/Varios/Buses/OR/1_to_all/OR_16.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_to_all/OR_16.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 16 1 ./blocks/Varios/Buses/OR/1_to_all/OR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_to_all/OR_16.ice
 
-./blocks/Varios/Buses/OR/1_to_all/OR_2.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_to_all/OR_2.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 2 1 ./blocks/Varios/Buses/OR/1_to_all/OR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_to_all/OR_2.ice
 
-./blocks/Varios/Buses/OR/1_to_all/OR_32.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_to_all/OR_32.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 32 1 ./blocks/Varios/Buses/OR/1_to_all/OR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_to_all/OR_32.ice
 
-./blocks/Varios/Buses/OR/1_to_all/OR_4.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_to_all/OR_4.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 4 1 ./blocks/Varios/Buses/OR/1_to_all/OR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_to_all/OR_4.ice
 
-./blocks/Varios/Buses/OR/1_to_all/OR_8.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/1_to_all/OR_8.ice: ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 8 1 ./blocks/Varios/Buses/OR/1_to_all/OR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/1_to_all/OR_8.ice
 
-./blocks/Varios/Buses/OR/bus_out/OR_16.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/bus_out/OR_16.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template 16,16 16 ./blocks/Varios/Buses/OR/bus_out/OR_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/bus_out/OR_16.ice
 
-./blocks/Varios/Buses/OR/bus_out/OR_2.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/bus_out/OR_2.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template 2,2 2 ./blocks/Varios/Buses/OR/bus_out/OR_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/bus_out/OR_2.ice
 
-./blocks/Varios/Buses/OR/bus_out/OR_32.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/bus_out/OR_32.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template 32,32 32 ./blocks/Varios/Buses/OR/bus_out/OR_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/bus_out/OR_32.ice
 
-./blocks/Varios/Buses/OR/bus_out/OR_4.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/bus_out/OR_4.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template 4,4 4 ./blocks/Varios/Buses/OR/bus_out/OR_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/bus_out/OR_4.ice
 
-./blocks/Varios/Buses/OR/bus_out/OR_8.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/OR/bus_out/OR_8.ice: ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/OR/Templates/OR.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/OR/Templates/OR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/OR/bus_out/OR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/OR/bus_out/OR_8.ice
 
