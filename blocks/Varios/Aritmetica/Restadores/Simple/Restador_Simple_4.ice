@@ -166,7 +166,7 @@
         },
         {
           "id": "8ada4dda-a40d-4cef-a112-bc76cbbc9863",
-          "type": "78c20dd8109f66a788e712883c9449151bbd8a4a",
+          "type": "a05da9a550ed31bdf2517c6336b996bb75de4a36",
           "position": {
             "x": 264,
             "y": 208
@@ -517,7 +517,7 @@
     }
   }
     },
-    "78c20dd8109f66a788e712883c9449151bbd8a4a": {
+    "a05da9a550ed31bdf2517c6336b996bb75de4a36": {
   "package": {
     "name": "Complemento a 2 de 4 bits",
     "version": "1.0.0",
@@ -585,7 +585,7 @@
         },
         {
           "id": "1b65cba8-1073-4c5c-a625-639ddc3aa4c9",
-          "type": "e66af1f5c02b6658c2a46e93ae062f810adb7ac2",
+          "type": "1c4cb116474da5582278878e75355d4a6b1b4c18",
           "position": {
             "x": 264,
             "y": 72
@@ -986,7 +986,7 @@
     }
   }
     },
-    "e66af1f5c02b6658c2a46e93ae062f810adb7ac2": {
+    "1c4cb116474da5582278878e75355d4a6b1b4c18": {
   "package": {
     "name": "Complemento a 1 de 4 bits",
     "version": "1.0.0",
@@ -1026,7 +1026,7 @@
         },
         {
           "id": "32bb9ced-3128-4f73-b178-7da0b145205d",
-          "type": "8800f7924aeb7b784b5ceab02ed57134a3c5c77a",
+          "type": "7096786b51702a11488af288dd6b055e5113acf3",
           "position": {
             "x": 272,
             "y": 144
@@ -1087,13 +1087,13 @@
     }
   }
     },
-    "8800f7924aeb7b784b5ceab02ed57134a3c5c77a": {
+    "7096786b51702a11488af288dd6b055e5113acf3": {
   "package": {
     "name": "NOT 4 bits bus",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "NOT logic gate for a 4 bits bus",
-    "author": "Jesús Arroyo/Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2291.33%22%20height=%2245.752%22%20version=%221%22%3E%3Cpath%20d=%22M0%2020.446h27v2H0zM70.322%2020.447h15.3v2h-15.3z%22/%3E%3Cpath%20d=%22M66.05%2026.746c-2.9%200-5.3-2.4-5.3-5.3s2.4-5.3%205.3-5.3%205.3%202.4%205.3%205.3-2.4%205.3-5.3%205.3zm0-8.6c-1.8%200-3.3%201.5-3.3%203.3%200%201.8%201.5%203.3%203.3%203.3%201.8%200%203.3-1.5%203.3-3.3%200-1.8-1.5-3.3-3.3-3.3z%22/%3E%3Cpath%20d=%22M25.962%202.563l33.624%2018.883L25.962%2040.33V2.563z%22%20fill=%22none%22%20stroke=%22#000%22%20stroke-width=%223%22/%3E%3C/svg%3E"
+    "author": "Jesús Arroyo, Juan González, Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2268.24%22%20width=%22111.59%22%20version=%221%22%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M24.372%201.5l57.29%2032.619-57.29%2032.62V1.5z%22%20stroke=%22#000%22%20stroke-width=%223%22%20fill=%22none%22/%3E%3Cellipse%20stroke-linejoin=%22round%22%20stroke-linecap=%22round%22%20rx=%227.572%22%20ry=%227.677%22%20stroke=%22#000%22%20cy=%2234.017%22%20cx=%2291.101%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3Cpath%20d=%22M1.014%2034.281h23.1m75.26%200h11.2%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3Ctext%20font-size=%2217.5%22%20y=%2239.46%22%20x=%2228.438%22%20font-family=%22sans-serif%22%20fill=%22#00f%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2239.46%22%20x=%2228.438%22%3ENot%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "graph": {
@@ -1129,7 +1129,7 @@
           "id": "5365ed8c-e5db-4445-938f-8d689830ea5c",
           "type": "basic.code",
           "data": {
-            "code": "// NOT logic gate\nassign o= ~i;",
+            "code": "//-- Puerta NOT\n\n//-- module (input wire i, output wire o);\n\n\nassign o = ~i;\n\n\n//-- endmodule\n",
             "params": [],
             "ports": {
               "in": [
