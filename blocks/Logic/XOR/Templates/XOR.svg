@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="51.744" width="101.14" version="1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<path stroke-linejoin="round" d="m46.271,50.244-24.022,0s8.0074-11.225,8.2029-24.813c0.196-13.587-8.397-23.827-8.397-23.827l24.361-0.1039c12.256,0.514,27.417,14.102,32.47,24.72-8.603,17.813-24.319,23.694-32.615,24.024z" stroke="#000" stroke-linecap="round" stroke-width="3" fill="none"/>
+<path d="m1.0142,12.924,26.284,0m-26.066,25.828,24.874,0m52.625-12.212,21.393,0" stroke="#000" stroke-linecap="round" stroke-width="2" fill="none"/>
+<text style="letter-spacing:0px;word-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="15.72051716px" font-style="normal" y="32.39867" x="33.444897" font-family="sans-serif" line-height="125%" fill="#0000ff"><tspan font-weight="bold" font-style="normal" font-stretch="normal" font-variant="normal" y="32.39867" x="33.444897" font-family="sans-serif">XOR</tspan></text>
+<path stroke-linejoin="round" d="m12.829,50.17s8.0074-11.225,8.2029-24.813c0.195-13.587-8.397-23.827-8.397-23.827" stroke="#000" stroke-linecap="round" stroke-width="3" fill="none"/>
+</svg>

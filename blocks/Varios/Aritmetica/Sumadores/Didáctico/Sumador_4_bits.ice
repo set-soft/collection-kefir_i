@@ -243,7 +243,7 @@
         },
         {
           "id": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
-          "type": "8753c57fd3069e0198fb4613907d0967b1d6db39",
+          "type": "485ca7f46e78dcaed2edb8384a2f1d50af73e734",
           "position": {
             "x": 840,
             "y": 280
@@ -255,7 +255,7 @@
         },
         {
           "id": "be2489c2-2971-4942-a77a-88f9ec00bd49",
-          "type": "8753c57fd3069e0198fb4613907d0967b1d6db39",
+          "type": "485ca7f46e78dcaed2edb8384a2f1d50af73e734",
           "position": {
             "x": 840,
             "y": 392
@@ -701,7 +701,7 @@
     }
   }
     },
-    "8753c57fd3069e0198fb4613907d0967b1d6db39": {
+    "485ca7f46e78dcaed2edb8384a2f1d50af73e734": {
   "package": {
     "name": "Sumador de 2 bits",
     "version": "1.0.0",
@@ -862,7 +862,7 @@
         },
         {
           "id": "43c38836-4507-4e9b-962a-6552478e57a5",
-          "type": "71b03f556b5e2c223b360070474fd15ad05f235d",
+          "type": "2a4a2c59f497ec17e45f7674e4918b8d990500bd",
           "position": {
             "x": 832,
             "y": 216
@@ -874,7 +874,7 @@
         },
         {
           "id": "082de83b-466a-4011-a7e3-e24490f95238",
-          "type": "71b03f556b5e2c223b360070474fd15ad05f235d",
+          "type": "2a4a2c59f497ec17e45f7674e4918b8d990500bd",
           "position": {
             "x": 832,
             "y": 352
@@ -1297,7 +1297,7 @@
     }
   }
     },
-    "71b03f556b5e2c223b360070474fd15ad05f235d": {
+    "2a4a2c59f497ec17e45f7674e4918b8d990500bd": {
   "package": {
     "name": "Sumador Completo",
     "version": "1.0.0",
@@ -1432,7 +1432,7 @@
         },
         {
           "id": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-          "type": "a2c72959ecd06d4cc2b09788cb7c70f73ea154f8",
+          "type": "71ecd1f4fbc649bda1ef523db855f18b43354bf3",
           "position": {
             "x": 312,
             "y": 176
@@ -1444,7 +1444,7 @@
         },
         {
           "id": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-          "type": "a2c72959ecd06d4cc2b09788cb7c70f73ea154f8",
+          "type": "71ecd1f4fbc649bda1ef523db855f18b43354bf3",
           "position": {
             "x": 496,
             "y": 176
@@ -1565,7 +1565,7 @@
     }
   }
     },
-    "a2c72959ecd06d4cc2b09788cb7c70f73ea154f8": {
+    "71ecd1f4fbc649bda1ef523db855f18b43354bf3": {
   "package": {
     "name": "Medio sumador",
     "version": "1.0.0",
@@ -1704,7 +1704,7 @@
         },
         {
           "id": "a3af9b57-b159-482b-a470-40cd616978e2",
-          "type": "ccfdcaa1112724daa71bf9f08c8dbde2abe43ac3",
+          "type": "9b9d75d520a062de8d98b95d3dc996d93aa3e164",
           "position": {
             "x": 376,
             "y": 144
@@ -1805,13 +1805,13 @@
     }
   }
     },
-    "ccfdcaa1112724daa71bf9f08c8dbde2abe43ac3": {
+    "9b9d75d520a062de8d98b95d3dc996d93aa3e164": {
   "package": {
     "name": "XOR 2 inputs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "XOR logic gate 2 inputs",
-    "author": "Carlos Diaz/Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%22-252%20400.9%2090%2040%22%3E%3Cpath%20d=%22M-252%20409.9h26v2h-26zM-252%20429.9h27v2h-27zM-186.5%20419.9h24.5v2h-24.5z%22/%3E%3Cpath%20d=%22M-184.6%20420.9c0-1-.6-2-.6-2-10.3-17.8-26-18-30.6-18H-233l2%202.4s5.7%207%205.7%2017.6c0%2010.6-5.7%2017.6-5.7%2017.6l-2%202.4h17.2c2.4%200%207.7%200%2013.6-2.4%205.7-2.3%2012-6.9%2017-15.7.1%200%20.6-1%20.6-1.9zm-18.9%2014.8c-5.4%202.2-9.8%202.2-12.3%202.2H-227c1.9-3.1%204.8-9%204.8-17s-2.9-13.9-4.8-17h11.3c4.7%200%2018.3-.1%2028%2017-4.8%208.4-10.6%2012.7-15.8%2014.8z%22/%3E%3Cpath%20d=%22M-238.3%20440.9h3.6c2.3-3.7%206.5-11.6%206.5-19.8%200-8.5-4.4-16.5-6.8-20.2h-3.6c1.4%202%207.4%2011%207.4%2020.2%200%208.9-5.7%2017.7-7.1%2019.8z%22/%3E%3C/svg%3E"
+    "author": "Carlos Diaz, Juan González, Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2251.744%22%20width=%22101.14%22%20version=%221%22%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M46.271%2050.244H22.249s8.007-11.225%208.203-24.813c.196-13.587-8.397-23.827-8.397-23.827l24.36-.104c12.257.514%2027.418%2014.102%2032.47%2024.72-8.602%2017.813-24.318%2023.694-32.614%2024.024z%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-width=%223%22%20fill=%22none%22/%3E%3Cpath%20d=%22M1.014%2012.924h26.284M1.232%2038.752h24.874M78.731%2026.54h21.393%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3Ctext%20font-size=%2215.721%22%20y=%2232.399%22%20x=%2233.445%22%20font-family=%22sans-serif%22%20fill=%22#00f%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2232.399%22%20x=%2233.445%22%3EXOR%3C/tspan%3E%3C/text%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M12.829%2050.17s8.007-11.225%208.203-24.813C21.227%2011.77%2012.635%201.53%2012.635%201.53%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-width=%223%22%20fill=%22none%22/%3E%3C/svg%3E"
   },
   "design": {
     "graph": {

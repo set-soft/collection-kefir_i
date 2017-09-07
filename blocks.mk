@@ -704,31 +704,31 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Logic/XNOR/Templates/XNOR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/XNOR/XNOR_8.ice
 	perl tools/update_db.pl ./blocks/Logic/XNOR/XNOR_8.ice
 
-./blocks/Logic/XOR/XOR_2.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_2.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1 1 ./blocks/Logic/XOR/XOR_2.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_2.ice
 
-./blocks/Logic/XOR/XOR_3.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_3.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1,1 1 ./blocks/Logic/XOR/XOR_3.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_3.ice
 
-./blocks/Logic/XOR/XOR_4.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_4.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1,1,1 1 ./blocks/Logic/XOR/XOR_4.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_4.ice
 
-./blocks/Logic/XOR/XOR_5.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_5.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1,1,1,1 1 ./blocks/Logic/XOR/XOR_5.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_5.ice
 
-./blocks/Logic/XOR/XOR_6.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_6.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1,1,1,1,1 1 ./blocks/Logic/XOR/XOR_6.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_6.ice
 
-./blocks/Logic/XOR/XOR_7.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_7.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1,1,1,1,1,1 1 ./blocks/Logic/XOR/XOR_7.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_7.ice
 
-./blocks/Logic/XOR/XOR_8.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl 
+./blocks/Logic/XOR/XOR_8.ice: ./blocks/Logic/XOR/Templates/XOR.ice.template tools/reemplaza.pl  ./blocks/Logic/XOR/Templates/XOR.svg
 	perl tools/reemplaza.pl ./blocks/Logic/XOR/Templates/XOR.ice.template 1,1,1,1,1,1,1,1 1 ./blocks/Logic/XOR/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Logic/XOR/XOR_8.ice
 
@@ -1084,43 +1084,43 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 8 32 ./blocks/Varios/Buses/Expandir/Expandir_8_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/Expandir/Expandir_8_32.ice
 
-./blocks/Varios/Buses/NAND/1_out/NAND_16.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/1_out/NAND_16.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template 16 1 ./blocks/Varios/Buses/NAND/1_out/NAND_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/1_out/NAND_16.ice
 
-./blocks/Varios/Buses/NAND/1_out/NAND_2.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/1_out/NAND_2.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template 2 1 ./blocks/Varios/Buses/NAND/1_out/NAND_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/1_out/NAND_2.ice
 
-./blocks/Varios/Buses/NAND/1_out/NAND_32.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/1_out/NAND_32.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template 32 1 ./blocks/Varios/Buses/NAND/1_out/NAND_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/1_out/NAND_32.ice
 
-./blocks/Varios/Buses/NAND/1_out/NAND_4.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/1_out/NAND_4.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template 4 1 ./blocks/Varios/Buses/NAND/1_out/NAND_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/1_out/NAND_4.ice
 
-./blocks/Varios/Buses/NAND/1_out/NAND_8.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/1_out/NAND_8.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template 8 1 ./blocks/Varios/Buses/NAND/1_out/NAND_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/1_out/NAND_8.ice
 
-./blocks/Varios/Buses/NAND/bus_out/NAND_16.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/bus_out/NAND_16.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 16,16 16 ./blocks/Varios/Buses/NAND/bus_out/NAND_16.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/bus_out/NAND_16.ice
 
-./blocks/Varios/Buses/NAND/bus_out/NAND_2.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/bus_out/NAND_2.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 2,2 2 ./blocks/Varios/Buses/NAND/bus_out/NAND_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/bus_out/NAND_2.ice
 
-./blocks/Varios/Buses/NAND/bus_out/NAND_32.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/bus_out/NAND_32.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 32,32 32 ./blocks/Varios/Buses/NAND/bus_out/NAND_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/bus_out/NAND_32.ice
 
-./blocks/Varios/Buses/NAND/bus_out/NAND_4.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/bus_out/NAND_4.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 4,4 4 ./blocks/Varios/Buses/NAND/bus_out/NAND_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/bus_out/NAND_4.ice
 
-./blocks/Varios/Buses/NAND/bus_out/NAND_8.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl 
+./blocks/Varios/Buses/NAND/bus_out/NAND_8.ice: ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NAND/Templates/NAND.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/NAND/bus_out/NAND_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/NAND/bus_out/NAND_8.ice
 
