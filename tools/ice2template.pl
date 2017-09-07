@@ -1,15 +1,12 @@
 #!/usr/bin/perl
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
 
 die "Must specify 1 argument (file or dir)" unless scalar(@ARGV)==1;
 $target=$ARGV[0];
 
-open(FI,"tools/sha1_db.txt") || die "Run 'make db' first";
-while (<FI>)
-  {
-   $_=~/([0-9a-f]{40}) (.*)/;
-   $h{$1}=$2;
-  }
-close(FI);
+ReadDB();
 
 if (-d $target)
   {
@@ -30,7 +27,7 @@ if (-d $target)
      }
    $tpldir="$dir/Templates";
    print "Template directory: '$tpldir' ($dirsrc/*.ice)\n";
-   @files=glob(Escape($dirsrc)."/*.ice");
+   @files=glob(EscapeForShell($dirsrc)."/*.ice");
    foreach $file (@files)
       {
        $file=~/(.*)\/([^\/]+)/;
@@ -130,33 +127,4 @@ sub Solve1Dep
  $ret[0];
 }
 
-sub Escape
-{
- my $n=shift(@_);
- $n=~s/ /\\ /g;
- $n=~s/\>/\\\>/g;
- $n=~s/\!/\\\!/g;
- $n=~s/\</\\\</g;
- $n;
-}
 
-sub replace
-{
- my $b=$_[1];
-
- open(FIL,">$_[0]") || return 0;
- print FIL ($b);
- close(FIL);
-}
-
-sub cat
-{
- local $/;
- my $b;
-
- open(FIL,$_[0]) || return 0;
- $b=<FIL>;
- close(FIL);
-
- $b;
-}

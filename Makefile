@@ -8,7 +8,7 @@ regenerar:
 	perl tools/recursivo.pl
 
 db:
-	perl tools/create_db.pl | sort > tools/sha1_db.txt
+	perl tools/create_db.pl > tools/sha1_db.txt
 
 makefile:
 	perl tools/create_make.pl > blocks.mk

@@ -1,17 +1,9 @@
 #!/usr/bin/perl
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
 
-open(FI,"tools/sha1_db.txt") || die "Run 'make db' first";
-while (<FI>)
-  {
-   $_=~/([0-9a-f]{40}) (.*)/;
-   my $sha1=$1;
-   my $rest=$2;
-   $h{$sha1}=$rest;
-   my @v=split(/\|/,$rest);
-   my $file=$v[0];
-   $hf{$file}=$sha1;
-  }
-close(FI);
+ReadDB();
 
 $tpl=$ARGV[0];
 $ins=$ARGV[1];
@@ -421,34 +413,3 @@ sub GenPins
  $res;
 }
 
-sub replace
-{
- my $b=$_[1];
-
- open(FIL,">$_[0]") || return 0;
- print FIL ($b);
- close(FIL);
-}
-
-sub cat
-{
- local $/;
- my $b;
-
- open(FIL,$_[0]) || die "Failed to open $_[0]";
- $b=<FIL>;
- close(FIL);
-
- $b;
-}
-
-sub EscapeSVG
-{
- my $d=$_[0];
- $d=~s/\</\%3C/g;
- $d=~s/\>/\%3E/g;
- $d=~s/ /\%20/g;
- $d=~s/\"/\%22/g;
- $d=~s/\n//g;
- $d;
-}

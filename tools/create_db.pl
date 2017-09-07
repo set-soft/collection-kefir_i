@@ -1,6 +1,15 @@
 #!/usr/bin/perl
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
+
 $keep_log=0;
 Recursivo('.');
+@d=sort(@data);
+foreach $v (@d)
+   {
+    print "$v\n";
+   }
 0;
 
 sub Recursivo
@@ -34,7 +43,7 @@ sub Recursivo
        $rule=GetRule($f);
        $svg=GetSVG($f);
        unlink('pp.json');
-       print "$sha1 $f$rule$deps$svg\n";
+       push(@data,"$sha1 $f$rule$deps$svg");
        die "Hash collision! $f vs $h{$sha1}" if $h{$sha1};
        $h{$sha1}=$f;
       }
@@ -43,107 +52,7 @@ sub Recursivo
  ClearRules() if $templateLoaded;
 }
 
-sub ReadRules
-{
- my $dir=shift @_;
- my $f="$dir/Templates/casos.txt";
- my $l;
- $rules_base=$dir;
- open(FI,$f) || die "Failed to open $f rules file";
- $tpldir="$dir/Templates";
- while ($l=<FI>)
-   {
-    $l=~/\"([^\"]+)\" (\S+) (\S+) \"([^\"]+)\"/ or die "Malformed rule <$l> at $f";
-    my ($tpl,$ins,$outs,$file)=($1,$2,$3,$4);
-    $rules{"$dir/$file"}=Escape("$tpldir/$tpl")." $ins $outs";
-   }
- close(FI);
-}
 
-sub ClearRules
-{
- %rules=();
- $rules_base='';
-}
 
-sub GetRule
-{
- my $f=shift @_;
- my $rule=$rules{$f};
- return "|$rule" if $rule;
- "|none";
-}
-
-sub GetSVG
-{
- my $f=shift @_;
- my $rule=$rules{$f};
- return '' unless $rule;
- $rule=~/(.*)\s\S+\s\S+/ or die "Malformed rule!? <$rule>";
- my $d=cat(UnEscape($1));
- my $ret;
- while ($d=~/\@svg\<([^\>]+)\>/g)
-   {
-    $ret.="|$tpldir/$1";
-   }
- $ret;
-}
-
-sub GetSHA1Deps
-{
- my $f=shift @_;
- my $deps='';
- my (@d,$i);
-
- open(FI,'pp.json') || die "Can't open pp.json";
- while (<FI>)
-   {
-    if ($_=~/\"type\":\s+\"([0-9a-f]{40})\",/)
-      {
-       $i=$1;
-       push(@d,$i) unless grep(/^$i$/,@d); # Avoid repeating deps
-      }
-   }
- close(FI);
- foreach $i (@d)
-    {
-     $deps.="|$i";
-    }
- $deps;
-}
-
-sub Escape
-{
- my $n=shift(@_);
- $n=~s/ /\\ /g;
- $n=~s/\>/\\\>/g;
- $n=~s/\!/\\\!/g;
- $n=~s/\</\\\</g;
- $n=~s/\=/\\\=/g;
- $n;
-}
-
-sub UnEscape
-{
- my $n=shift(@_);
- $n=~s/\\ / /g;
- $n=~s/\\\>/\>/g;
- $n=~s/\\\!/\!/g;
- $n=~s/\\\</\</g;
- $n=~s/\\\=/\=/g;
- $n;
-}
-
-sub cat
-{
- local $/;
- my $b;
-
- open(FIL,$_[0]) || die "Failed to open $_[0]";
- $b=<FIL>;
- close(FIL);
-
- $b;
-}
 
 

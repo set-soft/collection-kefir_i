@@ -1,4 +1,8 @@
 #!/usr/bin/perl
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
+
 $estado=1;
 while (<>)
   {
@@ -103,25 +107,4 @@ $r=`sha1sum "pp.txt"`;
 unlink('pp.txt');
 print $1 if $r=~/(\S+)/;
 0;
-
-sub replace
-{
- my $b=$_[1];
-
- open(FIL,">$_[0]") || return 0;
- print FIL ($b);
- close(FIL);
-}
-
-sub cat
-{
- local $/;
- my $b;
-
- open(FIL,$_[0]) || return 0;
- $b=<FIL>;
- close(FIL);
-
- $b;
-}
 

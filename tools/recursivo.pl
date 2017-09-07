@@ -1,4 +1,8 @@
 #!/usr/bin/perl
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
+
 $keep_log=0;
 $start=$ARGV[0];
 $start='.' unless $start;
@@ -28,7 +32,7 @@ sub Recursivo
                {
                 $l=~/\"([^\"]+)\" (\S+) (\S+) \"([^\"]+)\"/ or die "Malformed rule <$l> at $f/casos.txt";
                 my ($tpl,$ins,$outs,$file)=($1,$2,$3,$4);
-                $cmd="perl tools/reemplaza.pl ".Escape("$f/$tpl")." $ins $outs ".Escape("$some_dir/$file");
+                $cmd="perl tools/reemplaza.pl ".EscapeForShell("$f/$tpl")." $ins $outs ".EscapeForShell("$some_dir/$file");
                 #print "$cmd\n";
                 system("$cmd >> salida.log");
                 unlink("salida.log") unless $keep_log;
@@ -47,12 +51,4 @@ sub Recursivo
  closedir $dh;
 }
 
-sub Escape
-{
- my $n=shift(@_);
- $n=~s/ /\\ /g;
- $n=~s/\>/\\\>/g;
- $n=~s/\!/\\\!/g;
- $n=~s/\</\\\</g;
- $n;
-}
+

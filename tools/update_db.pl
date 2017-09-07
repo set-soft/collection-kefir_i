@@ -1,19 +1,9 @@
 #!/usr/bin/perl
-
 use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
 
-open(FI,"tools/sha1_db.txt") || die "Run 'make db' first";
-while (<FI>)
-  {
-   $_=~/([0-9a-f]{40}) (.*)/;
-   my $sha1=$1;
-   my $rest=$2;
-   $h{$sha1}=$rest;
-   my @v=split(/\|/,$rest);
-   my $file=$v[0];
-   $hf{$file}=$sha1;
-  }
-close(FI);
+ReadDB();
 
 die "Tell me the file that changed" unless scalar($ARGV)!=1;
 
@@ -76,108 +66,4 @@ foreach $v (sort (keys %h))
    }
 close(FI);
 0;
-
-sub GetSHA1Deps
-{
- my $f=shift @_;
- my $deps='';
- my (@d,$i);
-
- open(FI,'pp.json') || die "Can't open pp.json";
- while (<FI>)
-   {
-    if ($_=~/\"type\":\s+\"([0-9a-f]{40})\",/)
-      {
-       $i=$1;
-       push(@d,$i) unless grep(/^$i$/,@d); # Avoid repeating deps
-      }
-   }
- close(FI);
- foreach $i (@d)
-    {
-     $deps.="|$i";
-    }
- $deps;
-}
-
-sub ReadRules
-{
- my $dir=shift @_;
- my $f="$dir/Templates/casos.txt";
- my $l;
- $rules_base=$dir;
- open(FI,$f) || die "Failed to open $f rules file";
- $tpldir="$dir/Templates";
- while ($l=<FI>)
-   {
-    $l=~/\"([^\"]+)\" (\S+) (\S+) \"([^\"]+)\"/ or die "Malformed rule <$l> at $f";
-    my ($tpl,$ins,$outs,$file)=($1,$2,$3,$4);
-    $rules{"$dir/$file"}=Escape("$tpldir/$tpl")." $ins $outs";
-   }
- close(FI);
-}
-
-sub ClearRules
-{
- %rules=();
- $rules_base='';
-}
-
-sub GetRule
-{
- my $f=shift @_;
- my $rule=$rules{$f};
- return "|$rule" if $rule;
- "|none";
-}
-
-
-sub Escape
-{
- my $n=shift(@_);
- $n=~s/ /\\ /g;
- $n=~s/\>/\\\>/g;
- $n=~s/\!/\\\!/g;
- $n=~s/\</\\\</g;
- $n=~s/\=/\\\=/g;
- $n;
-}
-
-sub UnEscape
-{
- my $n=shift(@_);
- $n=~s/\\ / /g;
- $n=~s/\\\>/\>/g;
- $n=~s/\\\!/\!/g;
- $n=~s/\\\</\</g;
- $n=~s/\\\=/\=/g;
- $n;
-}
-
-sub cat
-{
- local $/;
- my $b;
-
- open(FIL,$_[0]) || die "Failed to open $_[0]";
- $b=<FIL>;
- close(FIL);
-
- $b;
-}
-
-sub GetSVG
-{
- my $f=shift @_;
- my $rule=$rules{$f};
- return '' unless $rule;
- $rule=~/(.*)\s\S+\s\S+/ or die "Malformed rule!? <$rule>";
- my $d=cat(UnEscape($1));
- my $ret;
- while ($d=~/\@svg\<([^\>]+)\>/g)
-   {
-    $ret.="|$tpldir/$1";
-   }
- $ret;
-}
 

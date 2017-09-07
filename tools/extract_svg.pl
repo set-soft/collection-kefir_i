@@ -1,4 +1,8 @@
 #!/usr/bin/perl
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
+
 while (<>)
   {
    if ($_=~/"image": "(.*)"/)
@@ -10,12 +14,3 @@ while (<>)
   }
 0;
 
-sub UnEscapeSVG
-{
- my $d=$_[0];
- $d=~s/\%3C/</g;
- $d=~s/\%3E/>/g;
- $d=~s/\%20/ /g;
- $d=~s/\%22/\"/g;
- $d;
-}

@@ -1,12 +1,9 @@
 #!/usr/bin/perl
-open(FI,"tools/sha1_db.txt") || die "Run 'make db' first";
-while (<FI>)
-  {
-   $_=~/([0-9a-f]{40}) (.*)/;
-   $h{$1}=$2;
-  }
-close(FI);
+use File::Basename;
+$mod=dirname(__FILE__).'/utils.pl';
+require $mod;
 
+ReadDB();
 
 foreach $sha1 (keys %h)
    {# Get the file name and its dependencies
@@ -84,39 +81,6 @@ sub SolveDep
      $deps.=SolveDep($d,$f);
     }
  $deps;
-}
-
-sub EscapeForMake
-{
- my $n=shift(@_);
- $n=~s/ /\\ /g;
-# $n=~s/\>/\\\>/g;
-# $n=~s/\!/\\\!/g;
-# $n=~s/\</\\\</g;
- $n=~s/\=/\\\=/g;
- $n;
-}
-
-sub EscapeForShell
-{
- my $n=shift(@_);
- $n=~s/ /\\ /g;
- $n=~s/\>/\\\>/g;
- $n=~s/\!/\\\!/g;
- $n=~s/\</\\\</g;
- $n=~s/\=/\\\=/g;
- $n;
-}
-
-sub UnEscapeForShell
-{
- my $n=shift(@_);
- $n=~s/\\ / /g;
- $n=~s/\\\>/\>/g;
- $n=~s/\\\!/\!/g;
- $n=~s/\\\</\</g;
- $n=~s/\\\=/\=/g;
- $n;
 }
 
 
