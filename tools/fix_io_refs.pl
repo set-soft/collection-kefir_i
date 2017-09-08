@@ -121,7 +121,7 @@ foreach $v (@tpls)
       {
        $a=~s/$key/$value/g;
       }
-    #replace($v,$a);
+    replace($v,$a);
    }
 
 0;
