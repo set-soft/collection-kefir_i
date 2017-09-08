@@ -15,7 +15,7 @@
           "id": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED4",
             "pins": [
               {
                 "index": "0",
@@ -34,7 +34,7 @@
           "id": "5701b50c-904b-4776-ab4c-addc641b71ff",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED3",
             "pins": [
               {
                 "index": "0",
@@ -53,7 +53,7 @@
           "id": "91843b6b-8476-4932-b882-b90402019475",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED2",
             "pins": [
               {
                 "index": "0",
@@ -72,7 +72,7 @@
           "id": "e06b09a6-0a93-447e-be34-2a3b440a5330",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED1",
             "pins": [
               {
                 "index": "0",

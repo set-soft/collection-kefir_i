@@ -16,7 +16,7 @@
           "id": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
           "type": "basic.input",
           "data": {
-            "name": "i"
+            "name": "b"
             @range_i,
             "pins": [
 @pins_i
