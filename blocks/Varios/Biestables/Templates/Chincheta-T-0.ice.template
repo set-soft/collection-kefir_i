@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "c1c77a74-8f90-4588-97f3-7d914aa0ce1b",
+          "id": "input-clk",
           "type": "basic.input",
           "data": {
             "name": "clk",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "1a3cb680-6ebb-4848-b082-1aa92ec7c5c8",
+          "id": "output-q",
           "type": "basic.output",
           "data": {
             "name": "q",
@@ -78,42 +78,42 @@
       "wires": [
         {
           "source": {
-            "block": "c1c77a74-8f90-4588-97f3-7d914aa0ce1b",
+            "block": "input-clk",
             "port": "out"
           },
           "target": {
             "block": "3b980b84-ffed-407c-b498-7aba36369852",
-            "port": "e85c1424-78de-4f24-a4bc-6a2901b26148"
+            "port": "input-clk"
           }
         },
         {
           "source": {
             "block": "3b980b84-ffed-407c-b498-7aba36369852",
-            "port": "f164a06d-b8e3-480d-b351-5d7d1e7ae3a2"
+            "port": "output-q"
           },
           "target": {
-            "block": "1a3cb680-6ebb-4848-b082-1aa92ec7c5c8",
+            "block": "output-q",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "3b980b84-ffed-407c-b498-7aba36369852",
-            "port": "f164a06d-b8e3-480d-b351-5d7d1e7ae3a2"
+            "port": "output-q"
           },
           "target": {
             "block": "d802b6d9-b53a-4ca1-9443-e6a64004382e",
-            "port": "18c2ebc7-5152-439c-9b3f-851c59bac834"
+            "port": "input-1"
           }
         },
         {
           "source": {
             "block": "d802b6d9-b53a-4ca1-9443-e6a64004382e",
-            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+            "port": "output-1"
           },
           "target": {
             "block": "3b980b84-ffed-407c-b498-7aba36369852",
-            "port": "78ec5b41-e94f-4892-a7c5-42f2b4970c1b"
+            "port": "input-d"
           },
           "vertices": [
             {

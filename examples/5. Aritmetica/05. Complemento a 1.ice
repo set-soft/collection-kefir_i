@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "810040a3-2f36-4153-b3ac-6e2ca81dd7de",
+          "id": "output-LED",
           "type": "basic.output",
           "data": {
             "name": "LED",
@@ -47,7 +47,7 @@
           }
         },
         {
-          "id": "c9f4bf1b-a589-44c5-ace7-262bd07c4f2c",
+          "id": "constant-A",
           "type": "basic.constant",
           "data": {
             "name": "A",
@@ -77,7 +77,7 @@
         },
         {
           "id": "2d458fbb-27bb-4f35-8397-a7402e1a8b93",
-          "type": "30d070133b02438d2dbf3d55898b1b260cfc17e4",
+          "type": "899f7854816f516e1541c4cbc2b6afd64666adac",
           "position": {
             "x": 136,
             "y": 264
@@ -89,7 +89,7 @@
         },
         {
           "id": "09bf2d82-57bc-4e4a-8492-b5129eef4293",
-          "type": "1c4cb116474da5582278878e75355d4a6b1b4c18",
+          "type": "aa9a5765b7a4e8261c5d342fbf1bffa6bdf0583b",
           "position": {
             "x": 320,
             "y": 264
@@ -103,21 +103,21 @@
       "wires": [
         {
           "source": {
-            "block": "c9f4bf1b-a589-44c5-ace7-262bd07c4f2c",
+            "block": "constant-A",
             "port": "constant-out"
           },
           "target": {
             "block": "2d458fbb-27bb-4f35-8397-a7402e1a8b93",
-            "port": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4"
+            "port": "constant-V"
           }
         },
         {
           "source": {
             "block": "09bf2d82-57bc-4e4a-8492-b5129eef4293",
-            "port": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1"
+            "port": "output-S"
           },
           "target": {
-            "block": "810040a3-2f36-4153-b3ac-6e2ca81dd7de",
+            "block": "output-LED",
             "port": "in"
           },
           "size": 4
@@ -125,11 +125,11 @@
         {
           "source": {
             "block": "2d458fbb-27bb-4f35-8397-a7402e1a8b93",
-            "port": "32038fb9-c309-483d-a68c-de6fd7ab6a0f"
+            "port": "output-K"
           },
           "target": {
             "block": "09bf2d82-57bc-4e4a-8492-b5129eef4293",
-            "port": "74e32618-c154-42a4-af51-d7975afb90a3"
+            "port": "input-A"
           },
           "size": 4
         }
@@ -144,7 +144,7 @@
     }
   },
   "dependencies": {
-    "30d070133b02438d2dbf3d55898b1b260cfc17e4": {
+    "899f7854816f516e1541c4cbc2b6afd64666adac": {
   "package": {
     "name": "Const 4 bits",
     "version": "0.0.1",
@@ -156,7 +156,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "32038fb9-c309-483d-a68c-de6fd7ab6a0f",
+          "id": "output-K",
           "type": "basic.output",
           "data": {
             "name": "K"
@@ -169,7 +169,7 @@
           }
         },
         {
-          "id": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4",
+          "id": "constant-V",
           "type": "basic.constant",
           "data": {
             "name": "V",
@@ -219,14 +219,14 @@
             "port": "k"
           },
           "target": {
-            "block": "32038fb9-c309-483d-a68c-de6fd7ab6a0f",
+            "block": "output-K",
             "port": "in"
           }
           ,"size": 4
         },
         {
           "source": {
-            "block": "c0fb4784-5e8c-4f41-9f4b-6daa2e9e03a4",
+            "block": "constant-V",
             "port": "constant-out"
           },
           "target": {
@@ -245,7 +245,7 @@
     }
   }
     },
-    "1c4cb116474da5582278878e75355d4a6b1b4c18": {
+    "aa9a5765b7a4e8261c5d342fbf1bffa6bdf0583b": {
   "package": {
     "name": "Complemento a 1 de 4 bits",
     "version": "1.0.0",
@@ -257,7 +257,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "74e32618-c154-42a4-af51-d7975afb90a3",
+          "id": "input-A",
           "type": "basic.input",
           "data": {
             "name": "A",
@@ -271,7 +271,7 @@
           }
         },
         {
-          "id": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1",
+          "id": "output-S",
           "type": "basic.output",
           "data": {
             "name": "S",
@@ -285,7 +285,7 @@
         },
         {
           "id": "32bb9ced-3128-4f73-b178-7da0b145205d",
-          "type": "7096786b51702a11488af288dd6b055e5113acf3",
+          "type": "346fec7e60ad5e9b68fbf99a73a1805befcf53f1",
           "position": {
             "x": 272,
             "y": 144
@@ -315,22 +315,22 @@
       "wires": [
         {
           "source": {
-            "block": "74e32618-c154-42a4-af51-d7975afb90a3",
+            "block": "input-A",
             "port": "out"
           },
           "target": {
             "block": "32bb9ced-3128-4f73-b178-7da0b145205d",
-            "port": "3270feb5-82ef-4092-91eb-7f1ccedbef45"
+            "port": "input-i"
           },
           "size": 4
         },
         {
           "source": {
             "block": "32bb9ced-3128-4f73-b178-7da0b145205d",
-            "port": "1d5b82e3-c49c-4b0d-9c7b-188cff058a9a"
+            "port": "output-o"
           },
           "target": {
-            "block": "ef7f9aa9-68b0-4d45-a0e2-af04e66f2bf1",
+            "block": "output-S",
             "port": "in"
           },
           "size": 4
@@ -346,7 +346,7 @@
     }
   }
     },
-    "7096786b51702a11488af288dd6b055e5113acf3": {
+    "346fec7e60ad5e9b68fbf99a73a1805befcf53f1": {
   "package": {
     "name": "NOT 4 bits bus",
     "version": "1.0.3",
@@ -358,7 +358,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "3270feb5-82ef-4092-91eb-7f1ccedbef45",
+          "id": "input-i",
           "type": "basic.input",
           "data": {
             "name": "i",
@@ -372,7 +372,7 @@
           }
         },
         {
-          "id": "1d5b82e3-c49c-4b0d-9c7b-188cff058a9a",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o",
@@ -420,7 +420,7 @@
       "wires": [
         {
           "source": {
-            "block": "3270feb5-82ef-4092-91eb-7f1ccedbef45",
+            "block": "input-i",
             "port": "out"
           },
           "target": {
@@ -435,7 +435,7 @@
             "port": "o"
           },
           "target": {
-            "block": "1d5b82e3-c49c-4b0d-9c7b-188cff058a9a",
+            "block": "output-o",
             "port": "in"
           },
           "size": 4

@@ -13,7 +13,7 @@
       "blocks": [
 @outputs,
         {
-          "id": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
+          "id": "input-b",
           "type": "basic.input",
           "data": {
             "name": "b"
@@ -61,7 +61,7 @@
       "wires": [
         {
           "source": {
-            "block": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
+            "block": "input-b",
             "port": "out"
           },
           "target": {

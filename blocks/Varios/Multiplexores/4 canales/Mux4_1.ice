@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "2257c1d2-f4ca-4e36-a52d-4c1d36b13486",
+          "id": "input-i0",
           "type": "basic.input",
           "data": {
             "name": "i0"
@@ -35,7 +35,7 @@
           }
         },
         {
-          "id": "9fa06e30-3244-4096-9758-df8766807d53",
+          "id": "input-i1",
           "type": "basic.input",
           "data": {
             "name": "i1"
@@ -58,7 +58,7 @@
           }
         },
         {
-          "id": "959ad4e8-c311-429c-ab8c-d87025928b23",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o"
@@ -80,7 +80,7 @@
           }
         },
         {
-          "id": "9b98a27c-03bf-4b50-8215-7a7e2d025f10",
+          "id": "input-i2",
           "type": "basic.input",
           "data": {
             "name": "i2"
@@ -103,7 +103,7 @@
           }
         },
         {
-          "id": "bc9bd8cb-ef94-4342-99ef-0c14acac75e1",
+          "id": "input-i3",
           "type": "basic.input",
           "data": {
             "name": "i3"
@@ -126,7 +126,7 @@
           }
         },
         {
-          "id": "4405fc00-9a59-456d-8115-e1ade0b8f123",
+          "id": "input-sel",
           "type": "basic.input",
           "data": {
             "name": "sel"
@@ -210,7 +210,7 @@
       "wires": [
         {
           "source": {
-            "block": "2257c1d2-f4ca-4e36-a52d-4c1d36b13486",
+            "block": "input-i0",
             "port": "out"
           },
           "target": {
@@ -221,7 +221,7 @@
         },
         {
           "source": {
-            "block": "9fa06e30-3244-4096-9758-df8766807d53",
+            "block": "input-i1",
             "port": "out"
           },
           "target": {
@@ -236,14 +236,14 @@
             "port": "o"
           },
           "target": {
-            "block": "959ad4e8-c311-429c-ab8c-d87025928b23",
+            "block": "output-o",
             "port": "in"
           }
           
         },
         {
           "source": {
-            "block": "9b98a27c-03bf-4b50-8215-7a7e2d025f10",
+            "block": "input-i2",
             "port": "out"
           },
           "target": {
@@ -254,7 +254,7 @@
         },
         {
           "source": {
-            "block": "bc9bd8cb-ef94-4342-99ef-0c14acac75e1",
+            "block": "input-i3",
             "port": "out"
           },
           "target": {
@@ -265,7 +265,7 @@
         },
         {
           "source": {
-            "block": "4405fc00-9a59-456d-8115-e1ade0b8f123",
+            "block": "input-sel",
             "port": "out"
           },
           "target": {

@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "34451ee7-68a5-4a42-ac27-cd00b724a527",
+          "id": "input-ena",
           "type": "basic.input",
           "data": {
             "name": "ena",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "5765df76-37c0-4ad7-b1ce-ab6791d93b99",
+          "id": "output-tc",
           "type": "basic.output",
           "data": {
             "name": "tc",
@@ -51,7 +51,7 @@
           }
         },
         {
-          "id": "a4a161c9-c9b0-417b-87b9-aea8cd956fc4",
+          "id": "input-clk",
           "type": "basic.input",
           "data": {
             "name": "clk",
@@ -71,7 +71,7 @@
           }
         },
         {
-          "id": "c10ef934-50c2-4ec5-a5ff-aa967e572523",
+          "id": "input-load",
           "type": "basic.input",
           "data": {
             "name": "load",
@@ -91,7 +91,7 @@
           }
         },
         {
-          "id": "8005e2cd-6c47-46f4-8edf-3369689103f1",
+          "id": "input-d",
           "type": "basic.input",
           "data": {
             "name": "d",
@@ -267,7 +267,7 @@
           }
         },
         {
-          "id": "b54d171f-c625-441c-85be-986b4ebee8cd",
+          "id": "output-cnt",
           "type": "basic.output",
           "data": {
             "name": "cnt",
@@ -442,7 +442,7 @@
           }
         },
         {
-          "id": "4d94ffed-3220-49a1-9c37-06f284bc86a7",
+          "id": "input-rst",
           "type": "basic.input",
           "data": {
             "name": "rst",
@@ -462,7 +462,7 @@
           }
         },
         {
-          "id": "0d76eb74-140d-4a82-8a9e-f4b85b62d808",
+          "id": "input-up",
           "type": "basic.input",
           "data": {
             "name": "up",
@@ -482,7 +482,7 @@
           }
         },
         {
-          "id": "5012573f-1480-47d3-8da2-9a29a2a05616",
+          "id": "constant-FROM",
           "type": "basic.constant",
           "data": {
             "name": "FROM",
@@ -495,7 +495,7 @@
           }
         },
         {
-          "id": "5a789c54-9d3c-4963-8880-69a82e462877",
+          "id": "constant-TO",
           "type": "basic.constant",
           "data": {
             "name": "TO",
@@ -568,7 +568,7 @@
       "wires": [
         {
           "source": {
-            "block": "34451ee7-68a5-4a42-ac27-cd00b724a527",
+            "block": "input-ena",
             "port": "out"
           },
           "target": {
@@ -578,7 +578,7 @@
         },
         {
           "source": {
-            "block": "c10ef934-50c2-4ec5-a5ff-aa967e572523",
+            "block": "input-load",
             "port": "out"
           },
           "target": {
@@ -588,7 +588,7 @@
         },
         {
           "source": {
-            "block": "8005e2cd-6c47-46f4-8edf-3369689103f1",
+            "block": "input-d",
             "port": "out"
           },
           "target": {
@@ -599,7 +599,7 @@
         },
         {
           "source": {
-            "block": "4d94ffed-3220-49a1-9c37-06f284bc86a7",
+            "block": "input-rst",
             "port": "out"
           },
           "target": {
@@ -613,7 +613,7 @@
             "port": "tc"
           },
           "target": {
-            "block": "5765df76-37c0-4ad7-b1ce-ab6791d93b99",
+            "block": "output-tc",
             "port": "in"
           }
         },
@@ -623,14 +623,14 @@
             "port": "cnt"
           },
           "target": {
-            "block": "b54d171f-c625-441c-85be-986b4ebee8cd",
+            "block": "output-cnt",
             "port": "in"
           },
           "size": 32
         },
         {
           "source": {
-            "block": "5012573f-1480-47d3-8da2-9a29a2a05616",
+            "block": "constant-FROM",
             "port": "constant-out"
           },
           "target": {
@@ -640,7 +640,7 @@
         },
         {
           "source": {
-            "block": "5a789c54-9d3c-4963-8880-69a82e462877",
+            "block": "constant-TO",
             "port": "constant-out"
           },
           "target": {
@@ -650,7 +650,7 @@
         },
         {
           "source": {
-            "block": "a4a161c9-c9b0-417b-87b9-aea8cd956fc4",
+            "block": "input-clk",
             "port": "out"
           },
           "target": {
@@ -660,7 +660,7 @@
         },
         {
           "source": {
-            "block": "0d76eb74-140d-4a82-8a9e-f4b85b62d808",
+            "block": "input-up",
             "port": "out"
           },
           "target": {

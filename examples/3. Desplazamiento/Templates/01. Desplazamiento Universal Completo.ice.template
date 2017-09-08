@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+          "id": "output-LED",
           "type": "basic.output",
           "data": {
             "name": "LED",
@@ -47,7 +47,7 @@
           }
         },
         {
-          "id": "8bbcad46-0363-4162-9d99-a38a16fddddc",
+          "id": "constant-DINI",
           "type": "basic.constant",
           "data": {
             "name": "DINI",
@@ -111,21 +111,21 @@
       "wires": [
         {
           "source": {
-            "block": "8bbcad46-0363-4162-9d99-a38a16fddddc",
+            "block": "constant-DINI",
             "port": "constant-out"
           },
           "target": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "651e5c56-c96e-4a31-b539-1813fc5d6061"
+            "port": "constant-DINI"
           }
         },
         {
           "source": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "48badb8e-e884-4306-933f-509ef615b10f"
+            "port": "output-q"
           },
           "target": {
-            "block": "5b0a51b6-4c5a-4506-a04d-aedabc90ef00",
+            "block": "output-LED",
             "port": "in"
           },
           "size": 4
@@ -133,11 +133,11 @@
         {
           "source": {
             "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "5953eb14-e751-4790-ab74-f079cc9bb239"
+            "port": "input-rst"
           },
           "vertices": [
             {
@@ -149,11 +149,11 @@
         {
           "source": {
             "block": "4c3902cd-193a-4e1c-a1e9-aa6cec02873a",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "dc27bf6c-e1d0-4bbe-8a2a-870da5ceb78c"
+            "port": "input-load"
           },
           "vertices": [
             {
@@ -165,11 +165,11 @@
         {
           "source": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "1ff1a9d4-7b2e-4798-b60e-59b184591336"
+            "port": "output-sor"
           },
           "target": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "ec29ba4b-b440-40de-9f14-8da5136ce1d2"
+            "port": "input-sir"
           },
           "vertices": [
             {
@@ -181,21 +181,21 @@
         {
           "source": {
             "block": "9c649b50-5afa-44f5-9d62-57b5c6f32cd6",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "2076d676-52bd-47ea-a3ce-fac1ba91a77e"
+            "port": "input-right"
           }
         },
         {
           "source": {
             "block": "b3792a48-163a-4fea-ae3e-f2d518a45e14",
-            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+            "port": "output-Pulso"
           },
           "target": {
             "block": "51d62fb2-1473-431f-b43c-45d54e73431c",
-            "port": "cbe066b5-d860-4f40-b9cf-15196e90023c"
+            "port": "input-ena"
           }
         }
       ]

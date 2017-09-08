@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "ddbef23c-72e4-428d-ac89-ef33b24e2b83",
+          "id": "output-Cout",
           "type": "basic.output",
           "data": {
             "name": "Cout",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "id": "56c2ea8a-0fcf-4827-8720-af69b4318887",
+          "id": "input-A",
           "type": "basic.input",
           "data": {
             "name": "A",
@@ -67,7 +67,7 @@
           }
         },
         {
-          "id": "dcab3b7d-7072-4eee-ac92-3b724367eeca",
+          "id": "input-B",
           "type": "basic.input",
           "data": {
             "name": "B",
@@ -103,7 +103,7 @@
           }
         },
         {
-          "id": "e5874e04-937f-4895-8ac9-d416db34e8b8",
+          "id": "output-S",
           "type": "basic.output",
           "data": {
             "name": "S",
@@ -138,7 +138,7 @@
           }
         },
         {
-          "id": "09eee0b6-1a4f-49bb-b2a9-bf8de8883f0b",
+          "id": "input-Cin",
           "type": "basic.input",
           "data": {
             "name": "Cin",
@@ -269,33 +269,33 @@
       "wires": [
         {
           "source": {
-            "block": "56c2ea8a-0fcf-4827-8720-af69b4318887",
+            "block": "input-A",
             "port": "out"
           },
           "target": {
             "block": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
-            "port": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f"
+            "port": "input-b"
           },
           "size": 4
         },
         {
           "source": {
-            "block": "dcab3b7d-7072-4eee-ac92-3b724367eeca",
+            "block": "input-B",
             "port": "out"
           },
           "target": {
             "block": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
-            "port": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f"
+            "port": "input-b"
           },
           "size": 4
         },
         {
           "source": {
             "block": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
-            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+            "port": "output-o"
           },
           "target": {
-            "block": "e5874e04-937f-4895-8ac9-d416db34e8b8",
+            "block": "output-S",
             "port": "in"
           },
           "size": 4
@@ -303,22 +303,22 @@
         {
           "source": {
             "block": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
-            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094"
+            "port": "output-h"
           },
           "target": {
             "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
-            "port": "a9cfe06c-3356-46e8-9485-9400af375c42"
+            "port": "input-A"
           },
           "size": 2
         },
         {
           "source": {
             "block": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
-            "port": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094"
+            "port": "output-h"
           },
           "target": {
             "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
-            "port": "3c16af6a-e73d-4380-a573-2507954f15f6"
+            "port": "input-B"
           },
           "vertices": [
             {
@@ -331,21 +331,21 @@
         {
           "source": {
             "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
-            "port": "4bbf09d5-5ba9-47e9-96e0-87909f2b2616"
+            "port": "output-Cout"
           },
           "target": {
-            "block": "ddbef23c-72e4-428d-ac89-ef33b24e2b83",
+            "block": "output-Cout",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
-            "port": "c4217ffb-708b-4ec0-9469-14b780793b58"
+            "port": "output-S"
           },
           "target": {
             "block": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
-            "port": "3cac4619-1f44-4d02-8d1e-6ab14779a115"
+            "port": "input-h"
           },
           "vertices": [
             {
@@ -357,43 +357,43 @@
         },
         {
           "source": {
-            "block": "09eee0b6-1a4f-49bb-b2a9-bf8de8883f0b",
+            "block": "input-Cin",
             "port": "out"
           },
           "target": {
             "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
-            "port": "48c42fbd-55a7-47d3-b982-0aeb1bd8e638"
+            "port": "input-Cin"
           }
         },
         {
           "source": {
             "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
-            "port": "c4217ffb-708b-4ec0-9469-14b780793b58"
+            "port": "output-S"
           },
           "target": {
             "block": "9c5cc244-0ac3-4ba5-bf03-69af59d1a1a9",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a"
+            "port": "input-l"
           },
           "size": 2
         },
         {
           "source": {
             "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
-            "port": "4bbf09d5-5ba9-47e9-96e0-87909f2b2616"
+            "port": "output-Cout"
           },
           "target": {
             "block": "2ff5b1f1-364a-4a1d-8eb7-02236e2fa241",
-            "port": "48c42fbd-55a7-47d3-b982-0aeb1bd8e638"
+            "port": "input-Cin"
           }
         },
         {
           "source": {
             "block": "45ddc336-49e4-4ae8-9a3f-7f8f204a338c",
-            "port": "30a1e000-69e2-4266-a8b2-ae7416120bd5"
+            "port": "output-l"
           },
           "target": {
             "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
-            "port": "a9cfe06c-3356-46e8-9485-9400af375c42"
+            "port": "input-A"
           },
           "vertices": [
             {
@@ -406,11 +406,11 @@
         {
           "source": {
             "block": "819f1f90-d355-4013-9cf5-41a5ee899cb6",
-            "port": "30a1e000-69e2-4266-a8b2-ae7416120bd5"
+            "port": "output-l"
           },
           "target": {
             "block": "be2489c2-2971-4942-a77a-88f9ec00bd49",
-            "port": "3c16af6a-e73d-4380-a573-2507954f15f6"
+            "port": "input-B"
           },
           "vertices": [
             {

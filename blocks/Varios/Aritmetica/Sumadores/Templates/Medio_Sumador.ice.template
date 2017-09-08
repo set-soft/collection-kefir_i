@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "0c446d2b-6dbe-416e-978b-5132da0a37e9",
+          "id": "input-A",
           "type": "basic.input",
           "data": {
             "name": "A",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "e02811e8-07fb-4d4e-abc7-649016328aa5",
+          "id": "output-S",
           "type": "basic.output",
           "data": {
             "name": "S",
@@ -51,7 +51,7 @@
           }
         },
         {
-          "id": "e262542f-43db-43f4-91b0-757ef5da7301",
+          "id": "output-Cy",
           "type": "basic.output",
           "data": {
             "name": "Cy",
@@ -70,7 +70,7 @@
           }
         },
         {
-          "id": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f",
+          "id": "input-B",
           "type": "basic.input",
           "data": {
             "name": "B",
@@ -198,31 +198,31 @@
         {
           "source": {
             "block": "a3af9b57-b159-482b-a470-40cd616978e2",
-            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+            "port": "output-o"
           },
           "target": {
-            "block": "e02811e8-07fb-4d4e-abc7-649016328aa5",
+            "block": "output-S",
             "port": "in"
           }
         },
         {
           "source": {
-            "block": "0c446d2b-6dbe-416e-978b-5132da0a37e9",
+            "block": "input-A",
             "port": "out"
           },
           "target": {
             "block": "a3af9b57-b159-482b-a470-40cd616978e2",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+            "port": "input-i1"
           }
         },
         {
           "source": {
-            "block": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f",
+            "block": "input-B",
             "port": "out"
           },
           "target": {
             "block": "a3af9b57-b159-482b-a470-40cd616978e2",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+            "port": "input-i0"
           },
           "vertices": [
             {
@@ -234,31 +234,31 @@
         {
           "source": {
             "block": "281c7773-7394-4c98-afbf-4dfbe23206d3",
-            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+            "port": "output-o"
           },
           "target": {
-            "block": "e262542f-43db-43f4-91b0-757ef5da7301",
+            "block": "output-Cy",
             "port": "in"
           }
         },
         {
           "source": {
-            "block": "0c446d2b-6dbe-416e-978b-5132da0a37e9",
+            "block": "input-A",
             "port": "out"
           },
           "target": {
             "block": "281c7773-7394-4c98-afbf-4dfbe23206d3",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+            "port": "input-i1"
           }
         },
         {
           "source": {
-            "block": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f",
+            "block": "input-B",
             "port": "out"
           },
           "target": {
             "block": "281c7773-7394-4c98-afbf-4dfbe23206d3",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+            "port": "input-i0"
           }
         }
       ]

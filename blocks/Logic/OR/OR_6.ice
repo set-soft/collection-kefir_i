@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
             {
-              "id": "63c7309a-4460-4727-99ac-8c08c900502a-5",
+              "id": "input-i5",
               "type": "basic.input",
               "data": {
                 "name": "i5",
@@ -32,7 +32,7 @@
               }
             },
             {
-              "id": "63c7309a-4460-4727-99ac-8c08c900502a-4",
+              "id": "input-i4",
               "type": "basic.input",
               "data": {
                 "name": "i4",
@@ -52,7 +52,7 @@
               }
             },
             {
-              "id": "63c7309a-4460-4727-99ac-8c08c900502a-3",
+              "id": "input-i3",
               "type": "basic.input",
               "data": {
                 "name": "i3",
@@ -72,7 +72,7 @@
               }
             },
             {
-              "id": "63c7309a-4460-4727-99ac-8c08c900502a-2",
+              "id": "input-i2",
               "type": "basic.input",
               "data": {
                 "name": "i2",
@@ -92,7 +92,7 @@
               }
             },
             {
-              "id": "63c7309a-4460-4727-99ac-8c08c900502a-1",
+              "id": "input-i1",
               "type": "basic.input",
               "data": {
                 "name": "i1",
@@ -112,7 +112,7 @@
               }
             },
             {
-              "id": "63c7309a-4460-4727-99ac-8c08c900502a-0",
+              "id": "input-i0",
               "type": "basic.input",
               "data": {
                 "name": "i0",
@@ -133,7 +133,7 @@
             }
 ,
         {
-          "id": "b6f82efb-fda0-4281-ad09-610526f0f7ea",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o",
@@ -196,14 +196,14 @@
             "port": "o"
           },
           "target": {
-            "block": "b6f82efb-fda0-4281-ad09-610526f0f7ea",
+            "block": "output-o",
             "port": "in"
           }
           
         },
                 {
           "source": {
-            "block": "63c7309a-4460-4727-99ac-8c08c900502a-5",
+            "block": "input-i5",
             "port": "out"
           },
           "target": {
@@ -213,7 +213,7 @@
         },
         {
           "source": {
-            "block": "63c7309a-4460-4727-99ac-8c08c900502a-4",
+            "block": "input-i4",
             "port": "out"
           },
           "target": {
@@ -223,7 +223,7 @@
         },
         {
           "source": {
-            "block": "63c7309a-4460-4727-99ac-8c08c900502a-3",
+            "block": "input-i3",
             "port": "out"
           },
           "target": {
@@ -233,7 +233,7 @@
         },
         {
           "source": {
-            "block": "63c7309a-4460-4727-99ac-8c08c900502a-2",
+            "block": "input-i2",
             "port": "out"
           },
           "target": {
@@ -243,7 +243,7 @@
         },
         {
           "source": {
-            "block": "63c7309a-4460-4727-99ac-8c08c900502a-1",
+            "block": "input-i1",
             "port": "out"
           },
           "target": {
@@ -253,7 +253,7 @@
         },
         {
           "source": {
-            "block": "63c7309a-4460-4727-99ac-8c08c900502a-0",
+            "block": "input-i0",
             "port": "out"
           },
           "target": {

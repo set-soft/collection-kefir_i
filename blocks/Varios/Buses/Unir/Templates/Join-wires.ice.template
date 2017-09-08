@@ -13,7 +13,7 @@
       "blocks": [
 @inputs,
         {
-          "id": "b6f82efb-fda0-4281-ad09-610526f0f7ea",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o"
@@ -64,7 +64,7 @@
             "port": "o"
           },
           "target": {
-            "block": "b6f82efb-fda0-4281-ad09-610526f0f7ea",
+            "block": "output-o",
             "port": "in"
           }
           @size_o

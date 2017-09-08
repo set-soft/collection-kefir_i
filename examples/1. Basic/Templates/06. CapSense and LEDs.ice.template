@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "e5abe48a-ffd6-4b5f-9f45-87f7e2af5cef",
+          "id": "output-LED1",
           "type": "basic.output",
           "data": {
             "name": "LED1",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "id": "269c6055-f567-4305-8970-08b656afc4f8",
+          "id": "input-BTN1",
           "type": "basic.input",
           "data": {
             "name": "BTN1",
@@ -51,7 +51,7 @@
           }
         },
         {
-          "id": "8228e6da-0c81-4809-ae7a-b66383ef9d7f",
+          "id": "output-LED2",
           "type": "basic.output",
           "data": {
             "name": "LED2",
@@ -70,7 +70,7 @@
           }
         },
         {
-          "id": "7c016ae6-c5a1-49f9-b2ec-ff9ae6707466",
+          "id": "input-BTN2",
           "type": "basic.input",
           "data": {
             "name": "BTN2",
@@ -90,7 +90,7 @@
           }
         },
         {
-          "id": "ff9c319c-d4e7-4b60-bec6-086caf6a59ff",
+          "id": "output-LED3",
           "type": "basic.output",
           "data": {
             "name": "LED3",
@@ -109,7 +109,7 @@
           }
         },
         {
-          "id": "61ba1cf6-b846-4331-b526-8a2240d754f6",
+          "id": "input-BTN3",
           "type": "basic.input",
           "data": {
             "name": "BTN3",
@@ -129,7 +129,7 @@
           }
         },
         {
-          "id": "ddec321a-4f6d-4395-ba2d-dfdd0a212e20",
+          "id": "output-LED4",
           "type": "basic.output",
           "data": {
             "name": "LED4",
@@ -148,7 +148,7 @@
           }
         },
         {
-          "id": "4da3acd8-c9f6-442b-931c-5aaf3053e113",
+          "id": "input-BTN4",
           "type": "basic.input",
           "data": {
             "name": "BTN4",
@@ -215,22 +215,22 @@
       "wires": [
         {
           "source": {
-            "block": "269c6055-f567-4305-8970-08b656afc4f8",
+            "block": "input-BTN1",
             "port": "out"
           },
           "target": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "c3026de9-5395-4b99-bc6a-53d0019aa4af"
+            "port": "input-PIN1"
           }
         },
         {
           "source": {
-            "block": "7c016ae6-c5a1-49f9-b2ec-ff9ae6707466",
+            "block": "input-BTN2",
             "port": "out"
           },
           "target": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "a0e44442-909c-4e74-8de1-23ca8735bfb2"
+            "port": "input-PIN2"
           },
           "vertices": [
             {
@@ -241,12 +241,12 @@
         },
         {
           "source": {
-            "block": "61ba1cf6-b846-4331-b526-8a2240d754f6",
+            "block": "input-BTN3",
             "port": "out"
           },
           "target": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "5284044b-520e-4e4b-aaeb-a473c22d1ed7"
+            "port": "input-PIN3"
           },
           "vertices": [
             {
@@ -257,41 +257,41 @@
         },
         {
           "source": {
-            "block": "4da3acd8-c9f6-442b-931c-5aaf3053e113",
+            "block": "input-BTN4",
             "port": "out"
           },
           "target": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "3839d47b-6a64-4dc2-b75e-9b02e7effb98"
+            "port": "input-PIN4"
           }
         },
         {
           "source": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "8c60528d-ccdc-4f86-92cd-4c06dc21ba34"
+            "port": "output-B1"
           },
           "target": {
-            "block": "e5abe48a-ffd6-4b5f-9f45-87f7e2af5cef",
+            "block": "output-LED1",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "b71173a6-3cf1-4279-b030-83342d7e7531"
+            "port": "output-B2"
           },
           "target": {
-            "block": "8228e6da-0c81-4809-ae7a-b66383ef9d7f",
+            "block": "output-LED2",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "fed819a7-1f4d-48ba-92b8-c9cc8de80e2f"
+            "port": "output-B3"
           },
           "target": {
-            "block": "ff9c319c-d4e7-4b60-bec6-086caf6a59ff",
+            "block": "output-LED3",
             "port": "in"
           },
           "vertices": [
@@ -304,10 +304,10 @@
         {
           "source": {
             "block": "cd0c1263-7995-4dc0-875b-cd4bb043a022",
-            "port": "23291c8a-8622-4751-b5af-cbf6b36c944b"
+            "port": "output-B4"
           },
           "target": {
-            "block": "ddec321a-4f6d-4395-ba2d-dfdd0a212e20",
+            "block": "output-LED4",
             "port": "in"
           },
           "vertices": [

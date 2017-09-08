@@ -36,7 +36,7 @@
           }
         },
         {
-          "id": "18c2ebc7-5152-439c-9b3f-851c59bac834",
+          "id": "input-1",
           "type": "basic.input",
           "data": {
             "name": "",
@@ -55,7 +55,7 @@
           }
         },
         {
-          "id": "664caf9e-5f40-4df4-800a-b626af702e62",
+          "id": "output-1",
           "type": "basic.output",
           "data": {
             "name": "",
@@ -77,7 +77,7 @@
       "wires": [
         {
           "source": {
-            "block": "18c2ebc7-5152-439c-9b3f-851c59bac834",
+            "block": "input-1",
             "port": "out"
           },
           "target": {
@@ -91,7 +91,7 @@
             "port": "c"
           },
           "target": {
-            "block": "664caf9e-5f40-4df4-800a-b626af702e62",
+            "block": "output-1",
             "port": "in"
           }
         }

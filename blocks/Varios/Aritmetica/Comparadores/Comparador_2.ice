@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "42dbe921-94e7-4a87-9570-44ee02ecb95a",
+          "id": "output-Mayor",
           "type": "basic.output",
           "data": {
             "name": "Mayor",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "id": "54682757-36e5-4faa-870e-97c5381d1370",
+          "id": "input-A",
           "type": "basic.input",
           "data": {
             "name": "A",
@@ -60,7 +60,7 @@
           }
         },
         {
-          "id": "5fefb46b-e0e3-45e3-9b2e-e2e0cfeb07af",
+          "id": "output-Igual",
           "type": "basic.output",
           "data": {
             "name": "Igual",
@@ -79,7 +79,7 @@
           }
         },
         {
-          "id": "0eda4438-c672-4ddd-bd21-0cdd6da385d7",
+          "id": "input-B",
           "type": "basic.input",
           "data": {
             "name": "B",
@@ -108,7 +108,7 @@
           }
         },
         {
-          "id": "1006bafd-edca-47a7-9daf-5d3bd0d145fe",
+          "id": "output-Menor",
           "type": "basic.output",
           "data": {
             "name": "Menor",
@@ -171,7 +171,7 @@
       "wires": [
         {
           "source": {
-            "block": "54682757-36e5-4faa-870e-97c5381d1370",
+            "block": "input-A",
             "port": "out"
           },
           "target": {
@@ -182,7 +182,7 @@
         },
         {
           "source": {
-            "block": "0eda4438-c672-4ddd-bd21-0cdd6da385d7",
+            "block": "input-B",
             "port": "out"
           },
           "target": {
@@ -197,7 +197,7 @@
             "port": "Menor"
           },
           "target": {
-            "block": "1006bafd-edca-47a7-9daf-5d3bd0d145fe",
+            "block": "output-Menor",
             "port": "in"
           }
         },
@@ -207,7 +207,7 @@
             "port": "Igual"
           },
           "target": {
-            "block": "5fefb46b-e0e3-45e3-9b2e-e2e0cfeb07af",
+            "block": "output-Igual",
             "port": "in"
           }
         },
@@ -217,7 +217,7 @@
             "port": "Mayor"
           },
           "target": {
-            "block": "42dbe921-94e7-4a87-9570-44ee02ecb95a",
+            "block": "output-Mayor",
             "port": "in"
           }
         }

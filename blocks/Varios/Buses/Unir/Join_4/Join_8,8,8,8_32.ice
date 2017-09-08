@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "f145523b-9d7e-403b-9c8c-c19f28b4e239",
+          "id": "input-i3",
           "type": "basic.input",
           "data": {
             "name": "i3"
@@ -77,7 +77,7 @@
           }
         },
         {
-          "id": "3561044c-44ef-4b1a-8397-40dbf979a554",
+          "id": "input-i2",
           "type": "basic.input",
           "data": {
             "name": "i2"
@@ -142,7 +142,7 @@
           }
         },
         {
-          "id": "73f8d2d8-796f-422c-b076-4bf394a3c1c7",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o"
@@ -350,7 +350,7 @@
           }
         },
         {
-          "id": "9bcf2981-24d6-4201-92bd-80267f4b28aa",
+          "id": "input-i1",
           "type": "basic.input",
           "data": {
             "name": "i1"
@@ -415,7 +415,7 @@
           }
         },
         {
-          "id": "9c44520a-b636-406c-a57e-fe9c3f723bf0",
+          "id": "input-i0",
           "type": "basic.input",
           "data": {
             "name": "i0"
@@ -530,7 +530,7 @@
       "wires": [
         {
           "source": {
-            "block": "3561044c-44ef-4b1a-8397-40dbf979a554",
+            "block": "input-i2",
             "port": "out"
           },
           "target": {
@@ -541,7 +541,7 @@
         },
         {
           "source": {
-            "block": "9bcf2981-24d6-4201-92bd-80267f4b28aa",
+            "block": "input-i1",
             "port": "out"
           },
           "target": {
@@ -552,7 +552,7 @@
         },
         {
           "source": {
-            "block": "9c44520a-b636-406c-a57e-fe9c3f723bf0",
+            "block": "input-i0",
             "port": "out"
           },
           "target": {
@@ -563,7 +563,7 @@
         },
         {
           "source": {
-            "block": "f145523b-9d7e-403b-9c8c-c19f28b4e239",
+            "block": "input-i3",
             "port": "out"
           },
           "target": {
@@ -578,7 +578,7 @@
             "port": "o"
           },
           "target": {
-            "block": "73f8d2d8-796f-422c-b076-4bf394a3c1c7",
+            "block": "output-o",
             "port": "in"
           }
           ,"size": 32

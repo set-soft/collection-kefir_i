@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "850c6dd7-ef01-42c8-bf2c-b007724a726a",
+          "id": "input-A",
           "type": "basic.input",
           "data": {
             "name": "A",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "4d0ce3f0-c4ba-44f5-a639-1163f7264f3f",
+          "id": "output-S",
           "type": "basic.output",
           "data": {
             "name": "S",
@@ -51,7 +51,7 @@
           }
         },
         {
-          "id": "7e34cac7-080b-4abe-97c8-fce1bd8489a5",
+          "id": "input-B",
           "type": "basic.input",
           "data": {
             "name": "B",
@@ -71,7 +71,7 @@
           }
         },
         {
-          "id": "c89ad475-3ea6-42b1-8b08-912aeaf802a2",
+          "id": "output-Cout",
           "type": "basic.output",
           "data": {
             "name": "Cout",
@@ -90,7 +90,7 @@
           }
         },
         {
-          "id": "9af08c5c-37ba-45e0-be6d-78e639cd34b9",
+          "id": "input-Cin",
           "type": "basic.input",
           "data": {
             "name": "Cin",
@@ -213,82 +213,82 @@
       "wires": [
         {
           "source": {
-            "block": "850c6dd7-ef01-42c8-bf2c-b007724a726a",
+            "block": "input-A",
             "port": "out"
           },
           "target": {
             "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-            "port": "0c446d2b-6dbe-416e-978b-5132da0a37e9"
+            "port": "input-A"
           }
         },
         {
           "source": {
-            "block": "7e34cac7-080b-4abe-97c8-fce1bd8489a5",
+            "block": "input-B",
             "port": "out"
           },
           "target": {
             "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-            "port": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f"
+            "port": "input-B"
           }
         },
         {
           "source": {
             "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-            "port": "e02811e8-07fb-4d4e-abc7-649016328aa5"
+            "port": "output-S"
           },
           "target": {
-            "block": "4d0ce3f0-c4ba-44f5-a639-1163f7264f3f",
+            "block": "output-S",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-            "port": "e02811e8-07fb-4d4e-abc7-649016328aa5"
+            "port": "output-S"
           },
           "target": {
             "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-            "port": "0c446d2b-6dbe-416e-978b-5132da0a37e9"
+            "port": "input-A"
           }
         },
         {
           "source": {
-            "block": "9af08c5c-37ba-45e0-be6d-78e639cd34b9",
+            "block": "input-Cin",
             "port": "out"
           },
           "target": {
             "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-            "port": "764aa6fe-ccd7-4343-89a4-38a5cef66e0f"
+            "port": "input-B"
           }
         },
         {
           "source": {
             "block": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
-            "port": "b6f82efb-fda0-4281-ad09-610526f0f7ea"
+            "port": "output-o"
           },
           "target": {
-            "block": "c89ad475-3ea6-42b1-8b08-912aeaf802a2",
+            "block": "output-Cout",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-            "port": "e262542f-43db-43f4-91b0-757ef5da7301"
+            "port": "output-Cy"
           },
           "target": {
             "block": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a-1"
+            "port": "input-i1"
           }
         },
         {
           "source": {
             "block": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-            "port": "e262542f-43db-43f4-91b0-757ef5da7301"
+            "port": "output-Cy"
           },
           "target": {
             "block": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
-            "port": "63c7309a-4460-4727-99ac-8c08c900502a-0"
+            "port": "input-i0"
           },
           "vertices": [
             {

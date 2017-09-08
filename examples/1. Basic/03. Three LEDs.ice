@@ -12,10 +12,10 @@
     "graph": {
       "blocks": [
         {
-          "id": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+          "id": "output-LED1",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED1",
             "pins": [
               {
                 "index": "0",
@@ -31,10 +31,10 @@
           }
         },
         {
-          "id": "c1eaa951-a70a-44c1-b3cd-c3bd0f355c0f",
+          "id": "output-LED2",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED2",
             "pins": [
               {
                 "index": "0",
@@ -50,10 +50,10 @@
           }
         },
         {
-          "id": "12762b6c-643e-4c42-b0f3-00d49b191718",
+          "id": "output-LED3",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED3",
             "pins": [
               {
                 "index": "0",
@@ -70,7 +70,7 @@
         },
         {
           "id": "eaf792b5-de98-4e2f-b78a-4023eb9a7f2b",
-          "type": "3e6c249e205080168c1bf4ee8dbc33b50653d5f4",
+          "type": "7a5052cf67ad629d54e75210928ff8eb02c7c09c",
           "position": {
             "x": 80,
             "y": 64
@@ -101,30 +101,30 @@
         {
           "source": {
             "block": "eaf792b5-de98-4e2f-b78a-4023eb9a7f2b",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
-            "block": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+            "block": "output-LED1",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "eaf792b5-de98-4e2f-b78a-4023eb9a7f2b",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
-            "block": "c1eaa951-a70a-44c1-b3cd-c3bd0f355c0f",
+            "block": "output-LED2",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "eaf792b5-de98-4e2f-b78a-4023eb9a7f2b",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
-            "block": "12762b6c-643e-4c42-b0f3-00d49b191718",
+            "block": "output-LED3",
             "port": "in"
           }
         }
@@ -139,7 +139,7 @@
     }
   },
   "dependencies": {
-    "3e6c249e205080168c1bf4ee8dbc33b50653d5f4": {
+    "7a5052cf67ad629d54e75210928ff8eb02c7c09c": {
   "package": {
     "name": "Bit 1",
     "version": "1.0.0",
@@ -171,7 +171,7 @@
           }
         },
         {
-          "id": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
+          "id": "output-1",
           "type": "basic.output",
           "data": {
             "name": ""
@@ -189,7 +189,7 @@
             "port": "v"
           },
           "target": {
-            "block": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
+            "block": "output-1",
             "port": "in"
           }
         }

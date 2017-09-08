@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "841486da-c923-436e-8fa4-1d24b4a7956d",
+          "id": "output-o3",
           "type": "basic.output",
           "data": {
             "name": "o3"
@@ -76,7 +76,7 @@
           }
         },
         {
-          "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094",
+          "id": "output-o2",
           "type": "basic.output",
           "data": {
             "name": "o2"
@@ -140,10 +140,10 @@
           }
         },
         {
-          "id": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
+          "id": "input-b",
           "type": "basic.input",
           "data": {
-            "name": "i"
+            "name": "b"
             ,"range": "[31:0]",
             "pins": [
 
@@ -349,7 +349,7 @@
           }
         },
         {
-          "id": "30a1e000-69e2-4266-a8b2-ae7416120bd5",
+          "id": "output-o1",
           "type": "basic.output",
           "data": {
             "name": "o1"
@@ -413,7 +413,7 @@
           }
         },
         {
-          "id": "d9712c67-35f8-4019-935d-fa5ac82c4569",
+          "id": "output-o0",
           "type": "basic.output",
           "data": {
             "name": "o0"
@@ -527,7 +527,7 @@
       "wires": [
         {
           "source": {
-            "block": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
+            "block": "input-b",
             "port": "out"
           },
           "target": {
@@ -542,7 +542,7 @@
             "port": "o2"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094",
+            "block": "output-o2",
             "port": "in"
           }
           ,"size": 8
@@ -553,7 +553,7 @@
             "port": "o1"
           },
           "target": {
-            "block": "30a1e000-69e2-4266-a8b2-ae7416120bd5",
+            "block": "output-o1",
             "port": "in"
           }
           ,"size": 8
@@ -564,7 +564,7 @@
             "port": "o0"
           },
           "target": {
-            "block": "d9712c67-35f8-4019-935d-fa5ac82c4569",
+            "block": "output-o0",
             "port": "in"
           }
           ,"size": 8
@@ -575,7 +575,7 @@
             "port": "o3"
           },
           "target": {
-            "block": "841486da-c923-436e-8fa4-1d24b4a7956d",
+            "block": "output-o3",
             "port": "in"
           }
           ,"size": 8

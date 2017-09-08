@@ -43,7 +43,7 @@
           }
         },
         {
-          "id": "076fd025-aa42-4f23-ae97-b65aec2298ce",
+          "id": "input-pin",
           "type": "basic.input",
           "data": {
             "name": "pin",
@@ -62,7 +62,7 @@
           }
         },
         {
-          "id": "f96a1baf-fc8b-4c25-b132-12552605743f",
+          "id": "input-oe",
           "type": "basic.input",
           "data": {
             "name": "oe",
@@ -81,7 +81,7 @@
           }
         },
         {
-          "id": "0b2a85b3-b6ac-4e8a-8b16-dd5a195fb058",
+          "id": "output-dout",
           "type": "basic.output",
           "data": {
             "name": "dout",
@@ -100,7 +100,7 @@
           }
         },
         {
-          "id": "04fdb7a7-2740-4ff1-ad26-56407ef5b958",
+          "id": "input-din",
           "type": "basic.input",
           "data": {
             "name": "din",
@@ -122,7 +122,7 @@
       "wires": [
         {
           "source": {
-            "block": "076fd025-aa42-4f23-ae97-b65aec2298ce",
+            "block": "input-pin",
             "port": "out"
           },
           "target": {
@@ -132,7 +132,7 @@
         },
         {
           "source": {
-            "block": "f96a1baf-fc8b-4c25-b132-12552605743f",
+            "block": "input-oe",
             "port": "out"
           },
           "target": {
@@ -142,7 +142,7 @@
         },
         {
           "source": {
-            "block": "04fdb7a7-2740-4ff1-ad26-56407ef5b958",
+            "block": "input-din",
             "port": "out"
           },
           "target": {
@@ -156,7 +156,7 @@
             "port": "dout"
           },
           "target": {
-            "block": "0b2a85b3-b6ac-4e8a-8b16-dd5a195fb058",
+            "block": "output-dout",
             "port": "in"
           }
         }

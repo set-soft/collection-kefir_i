@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "ebb89fd3-5bda-48d8-b35c-a1cff6bba512",
+          "id": "output-o3",
           "type": "basic.output",
           "data": {
             "name": "o3",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "id": "ab0f6056-ef73-42e2-be3f-3a83b8e15bd3",
+          "id": "output-o2",
           "type": "basic.output",
           "data": {
             "name": "o2",
@@ -50,7 +50,7 @@
           }
         },
         {
-          "id": "00dde7cc-bd88-41a3-9daf-a224ef40bb0a",
+          "id": "input-s",
           "type": "basic.input",
           "data": {
             "name": "s",
@@ -76,7 +76,7 @@
           }
         },
         {
-          "id": "2610330d-5e3c-4320-841e-7d62bf10c43d",
+          "id": "output-o1",
           "type": "basic.output",
           "data": {
             "name": "o1",
@@ -95,7 +95,7 @@
           }
         },
         {
-          "id": "d1e7112d-7581-44f3-84d9-99c6c98ebfe8",
+          "id": "output-o0",
           "type": "basic.output",
           "data": {
             "name": "o0",
@@ -160,7 +160,7 @@
             "port": "o1"
           },
           "target": {
-            "block": "2610330d-5e3c-4320-841e-7d62bf10c43d",
+            "block": "output-o1",
             "port": "in"
           }
         },
@@ -170,13 +170,13 @@
             "port": "o0"
           },
           "target": {
-            "block": "d1e7112d-7581-44f3-84d9-99c6c98ebfe8",
+            "block": "output-o0",
             "port": "in"
           }
         },
         {
           "source": {
-            "block": "00dde7cc-bd88-41a3-9daf-a224ef40bb0a",
+            "block": "input-s",
             "port": "out"
           },
           "target": {
@@ -191,7 +191,7 @@
             "port": "o2"
           },
           "target": {
-            "block": "ab0f6056-ef73-42e2-be3f-3a83b8e15bd3",
+            "block": "output-o2",
             "port": "in"
           }
         },
@@ -201,7 +201,7 @@
             "port": "o3"
           },
           "target": {
-            "block": "ebb89fd3-5bda-48d8-b35c-a1cff6bba512",
+            "block": "output-o3",
             "port": "in"
           }
         }

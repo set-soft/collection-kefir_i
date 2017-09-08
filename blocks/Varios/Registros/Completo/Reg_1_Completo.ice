@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "204b4f2f-b12f-46a8-be1f-de1e14a7d9b5",
+          "id": "input-clk",
           "type": "basic.input",
           "data": {
             "name": "clk",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "ecca0347-8d4a-420f-b9fd-3436388cfcb4",
+          "id": "input-d",
           "type": "basic.input",
           "data": {
             "name": "d"
@@ -55,7 +55,7 @@
           }
         },
         {
-          "id": "fb9daeb0-b67a-43f8-8c56-74b2ad046c8b",
+          "id": "output-q",
           "type": "basic.output",
           "data": {
             "name": "q"
@@ -77,7 +77,7 @@
           }
         },
         {
-          "id": "8a426613-10df-4c40-86af-10173a943f35",
+          "id": "input-rst",
           "type": "basic.input",
           "data": {
             "name": "rst",
@@ -97,7 +97,7 @@
           }
         },
         {
-          "id": "31208fc3-8e79-40f4-bd79-3dcfc10bfc70",
+          "id": "input-ena",
           "type": "basic.input",
           "data": {
             "name": "ena",
@@ -117,7 +117,7 @@
           }
         },
         {
-          "id": "209c5c8e-f8c8-42be-a723-682ef6c23676",
+          "id": "constant-DINI",
           "type": "basic.constant",
           "data": {
             "name": "DINI",
@@ -178,7 +178,7 @@
       "wires": [
         {
           "source": {
-            "block": "204b4f2f-b12f-46a8-be1f-de1e14a7d9b5",
+            "block": "input-clk",
             "port": "out"
           },
           "target": {
@@ -189,7 +189,7 @@
         },
         {
           "source": {
-            "block": "ecca0347-8d4a-420f-b9fd-3436388cfcb4",
+            "block": "input-d",
             "port": "out"
           },
           "target": {
@@ -200,7 +200,7 @@
         },
         {
           "source": {
-            "block": "8a426613-10df-4c40-86af-10173a943f35",
+            "block": "input-rst",
             "port": "out"
           },
           "target": {
@@ -210,7 +210,7 @@
         },
         {
           "source": {
-            "block": "31208fc3-8e79-40f4-bd79-3dcfc10bfc70",
+            "block": "input-ena",
             "port": "out"
           },
           "target": {
@@ -224,14 +224,14 @@
             "port": "q"
           },
           "target": {
-            "block": "fb9daeb0-b67a-43f8-8c56-74b2ad046c8b",
+            "block": "output-q",
             "port": "in"
           }
           
         },
         {
           "source": {
-            "block": "209c5c8e-f8c8-42be-a723-682ef6c23676",
+            "block": "constant-DINI",
             "port": "constant-out"
           },
           "target": {

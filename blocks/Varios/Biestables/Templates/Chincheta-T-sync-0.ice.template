@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "498ac25b-40a3-4cee-9708-30d9434b868d",
+          "id": "input-clk",
           "type": "basic.input",
           "data": {
             "name": "clk",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "d8b85f67-c352-499e-b923-dd128d980efa",
+          "id": "output-q",
           "type": "basic.output",
           "data": {
             "name": "q",
@@ -51,7 +51,7 @@
           }
         },
         {
-          "id": "9391dc12-2253-4557-adba-60a33e4f7eb2",
+          "id": "input-ena",
           "type": "basic.input",
           "data": {
             "name": "ena",
@@ -71,7 +71,7 @@
           }
         },
         {
-          "id": "4466ac94-8f05-4a7b-a328-543e7efd03c6",
+          "id": "constant-INI",
           "type": "basic.constant",
           "data": {
             "name": "INI",
@@ -99,41 +99,41 @@
       "wires": [
         {
           "source": {
-            "block": "9391dc12-2253-4557-adba-60a33e4f7eb2",
+            "block": "input-ena",
             "port": "out"
           },
           "target": {
             "block": "051529e6-e009-4605-9300-00ba742e3cf7",
-            "port": "e318155e-4ba9-4bfd-9c1e-93a2d902b4a3"
+            "port": "input-ena"
           }
         },
         {
           "source": {
-            "block": "498ac25b-40a3-4cee-9708-30d9434b868d",
+            "block": "input-clk",
             "port": "out"
           },
           "target": {
             "block": "051529e6-e009-4605-9300-00ba742e3cf7",
-            "port": "9fadb0bc-b949-4c36-b110-f4fea27399a4"
+            "port": "input-clk"
           }
         },
         {
           "source": {
-            "block": "4466ac94-8f05-4a7b-a328-543e7efd03c6",
+            "block": "constant-INI",
             "port": "constant-out"
           },
           "target": {
             "block": "051529e6-e009-4605-9300-00ba742e3cf7",
-            "port": "f447c56a-1988-4bb4-ad1c-9baf4e69d445"
+            "port": "constant-INI"
           }
         },
         {
           "source": {
             "block": "051529e6-e009-4605-9300-00ba742e3cf7",
-            "port": "f8940b3f-43fe-4db8-ba05-76ad90f4711c"
+            "port": "output-q"
           },
           "target": {
-            "block": "d8b85f67-c352-499e-b923-dd128d980efa",
+            "block": "output-q",
             "port": "in"
           }
         }

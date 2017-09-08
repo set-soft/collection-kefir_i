@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "4976678b-ee3d-47ed-8e8b-64bd81b2766f",
+          "id": "input-i",
           "type": "basic.input",
           "data": {
             "name": "i",
@@ -221,7 +221,7 @@
           }
         },
         {
-          "id": "5f693fc1-abe7-4da2-9230-3c9b88ef05f0",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o",
@@ -429,7 +429,7 @@
           }
         },
         {
-          "id": "7e916a4b-75b2-4fbe-b39d-892f4a9485da",
+          "id": "input-v",
           "type": "basic.input",
           "data": {
             "name": "v",
@@ -491,14 +491,14 @@
             "port": "o"
           },
           "target": {
-            "block": "5f693fc1-abe7-4da2-9230-3c9b88ef05f0",
+            "block": "output-o",
             "port": "in"
           },
           "size": 32
         },
         {
           "source": {
-            "block": "4976678b-ee3d-47ed-8e8b-64bd81b2766f",
+            "block": "input-i",
             "port": "out"
           },
           "target": {
@@ -509,7 +509,7 @@
         },
         {
           "source": {
-            "block": "7e916a4b-75b2-4fbe-b39d-892f4a9485da",
+            "block": "input-v",
             "port": "out"
           },
           "target": {

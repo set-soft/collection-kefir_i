@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "2257c1d2-f4ca-4e36-a52d-4c1d36b13486",
+          "id": "input-i0",
           "type": "basic.input",
           "data": {
             "name": "i0"
@@ -221,7 +221,7 @@
           }
         },
         {
-          "id": "9fa06e30-3244-4096-9758-df8766807d53",
+          "id": "input-i1",
           "type": "basic.input",
           "data": {
             "name": "i1"
@@ -430,7 +430,7 @@
           }
         },
         {
-          "id": "9b98a27c-03bf-4b50-8215-7a7e2d025f10",
+          "id": "input-i2",
           "type": "basic.input",
           "data": {
             "name": "i2"
@@ -639,7 +639,7 @@
           }
         },
         {
-          "id": "bc9bd8cb-ef94-4342-99ef-0c14acac75e1",
+          "id": "input-i3",
           "type": "basic.input",
           "data": {
             "name": "i3"
@@ -848,7 +848,7 @@
           }
         },
         {
-          "id": "959ad4e8-c311-429c-ab8c-d87025928b23",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o"
@@ -1056,7 +1056,7 @@
           }
         },
         {
-          "id": "927cde91-2d4b-44cf-bedd-0fe6328fe208",
+          "id": "input-i4",
           "type": "basic.input",
           "data": {
             "name": "i4"
@@ -1265,7 +1265,7 @@
           }
         },
         {
-          "id": "058c0308-3ce0-4cb6-995a-a946f71463cc",
+          "id": "input-i5",
           "type": "basic.input",
           "data": {
             "name": "i5"
@@ -1474,7 +1474,7 @@
           }
         },
         {
-          "id": "4328bd33-c5c6-4f7a-bf6f-d47210607dcc",
+          "id": "input-i6",
           "type": "basic.input",
           "data": {
             "name": "i6"
@@ -1683,7 +1683,7 @@
           }
         },
         {
-          "id": "63493f3f-bd2a-4b9d-b8d9-08b031556589",
+          "id": "input-i7",
           "type": "basic.input",
           "data": {
             "name": "i7"
@@ -1892,7 +1892,7 @@
           }
         },
         {
-          "id": "4405fc00-9a59-456d-8115-e1ade0b8f123",
+          "id": "input-sel",
           "type": "basic.input",
           "data": {
             "name": "sel"
@@ -2002,7 +2002,7 @@
       "wires": [
         {
           "source": {
-            "block": "2257c1d2-f4ca-4e36-a52d-4c1d36b13486",
+            "block": "input-i0",
             "port": "out"
           },
           "target": {
@@ -2013,7 +2013,7 @@
         },
         {
           "source": {
-            "block": "9fa06e30-3244-4096-9758-df8766807d53",
+            "block": "input-i1",
             "port": "out"
           },
           "target": {
@@ -2028,14 +2028,14 @@
             "port": "o"
           },
           "target": {
-            "block": "959ad4e8-c311-429c-ab8c-d87025928b23",
+            "block": "output-o",
             "port": "in"
           }
           ,"size": 32
         },
         {
           "source": {
-            "block": "9b98a27c-03bf-4b50-8215-7a7e2d025f10",
+            "block": "input-i2",
             "port": "out"
           },
           "target": {
@@ -2046,7 +2046,7 @@
         },
         {
           "source": {
-            "block": "bc9bd8cb-ef94-4342-99ef-0c14acac75e1",
+            "block": "input-i3",
             "port": "out"
           },
           "target": {
@@ -2057,7 +2057,7 @@
         },
         {
           "source": {
-            "block": "4405fc00-9a59-456d-8115-e1ade0b8f123",
+            "block": "input-sel",
             "port": "out"
           },
           "target": {
@@ -2068,7 +2068,7 @@
         },
         {
           "source": {
-            "block": "927cde91-2d4b-44cf-bedd-0fe6328fe208",
+            "block": "input-i4",
             "port": "out"
           },
           "target": {
@@ -2079,7 +2079,7 @@
         },
         {
           "source": {
-            "block": "058c0308-3ce0-4cb6-995a-a946f71463cc",
+            "block": "input-i5",
             "port": "out"
           },
           "target": {
@@ -2090,7 +2090,7 @@
         },
         {
           "source": {
-            "block": "4328bd33-c5c6-4f7a-bf6f-d47210607dcc",
+            "block": "input-i6",
             "port": "out"
           },
           "target": {
@@ -2101,7 +2101,7 @@
         },
         {
           "source": {
-            "block": "63493f3f-bd2a-4b9d-b8d9-08b031556589",
+            "block": "input-i7",
             "port": "out"
           },
           "target": {

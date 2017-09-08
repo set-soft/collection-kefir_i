@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "3d584b0a-29eb-47af-8c43-c0822282ef05",
+          "id": "output-1",
           "type": "basic.output",
           "data": {
             "name": "",
@@ -62,7 +62,7 @@
             "port": "q"
           },
           "target": {
-            "block": "3d584b0a-29eb-47af-8c43-c0822282ef05",
+            "block": "output-1",
             "port": "in"
           }
         }

@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-21",
+              "id": "output-o21",
               "type": "basic.output",
               "data": {
                 "name": "o21",
@@ -32,7 +32,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-20",
+              "id": "output-o20",
               "type": "basic.output",
               "data": {
                 "name": "o20",
@@ -52,7 +52,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-19",
+              "id": "output-o19",
               "type": "basic.output",
               "data": {
                 "name": "o19",
@@ -72,7 +72,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-18",
+              "id": "output-o18",
               "type": "basic.output",
               "data": {
                 "name": "o18",
@@ -92,7 +92,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-17",
+              "id": "output-o17",
               "type": "basic.output",
               "data": {
                 "name": "o17",
@@ -112,7 +112,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-16",
+              "id": "output-o16",
               "type": "basic.output",
               "data": {
                 "name": "o16",
@@ -132,7 +132,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-15",
+              "id": "output-o15",
               "type": "basic.output",
               "data": {
                 "name": "o15",
@@ -152,7 +152,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-14",
+              "id": "output-o14",
               "type": "basic.output",
               "data": {
                 "name": "o14",
@@ -172,7 +172,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-13",
+              "id": "output-o13",
               "type": "basic.output",
               "data": {
                 "name": "o13",
@@ -192,7 +192,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-12",
+              "id": "output-o12",
               "type": "basic.output",
               "data": {
                 "name": "o12",
@@ -212,7 +212,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-11",
+              "id": "output-o11",
               "type": "basic.output",
               "data": {
                 "name": "o11",
@@ -232,7 +232,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-10",
+              "id": "output-o10",
               "type": "basic.output",
               "data": {
                 "name": "o10",
@@ -252,7 +252,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-9",
+              "id": "output-o9",
               "type": "basic.output",
               "data": {
                 "name": "o9",
@@ -272,7 +272,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-8",
+              "id": "output-o8",
               "type": "basic.output",
               "data": {
                 "name": "o8",
@@ -292,7 +292,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-7",
+              "id": "output-o7",
               "type": "basic.output",
               "data": {
                 "name": "o7",
@@ -312,7 +312,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-6",
+              "id": "output-o6",
               "type": "basic.output",
               "data": {
                 "name": "o6",
@@ -332,7 +332,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-5",
+              "id": "output-o5",
               "type": "basic.output",
               "data": {
                 "name": "o5",
@@ -352,7 +352,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-4",
+              "id": "output-o4",
               "type": "basic.output",
               "data": {
                 "name": "o4",
@@ -372,7 +372,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-3",
+              "id": "output-o3",
               "type": "basic.output",
               "data": {
                 "name": "o3",
@@ -392,7 +392,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-2",
+              "id": "output-o2",
               "type": "basic.output",
               "data": {
                 "name": "o2",
@@ -412,7 +412,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1",
+              "id": "output-o1",
               "type": "basic.output",
               "data": {
                 "name": "o1",
@@ -432,7 +432,7 @@
               }
             },
             {
-              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0",
+              "id": "output-o0",
               "type": "basic.output",
               "data": {
                 "name": "o0",
@@ -453,10 +453,10 @@
             }
 ,
         {
-          "id": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
+          "id": "input-b",
           "type": "basic.input",
           "data": {
-            "name": "i"
+            "name": "b"
             ,"range": "[21:0]",
             "pins": [
 
@@ -699,7 +699,7 @@
       "wires": [
         {
           "source": {
-            "block": "6d0cff52-cadb-45eb-99a7-c02a7c8cdf4f",
+            "block": "input-b",
             "port": "out"
           },
           "target": {
@@ -714,7 +714,7 @@
             "port": "o21"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-21",
+            "block": "output-o21",
             "port": "in"
           }
         },
@@ -724,7 +724,7 @@
             "port": "o20"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-20",
+            "block": "output-o20",
             "port": "in"
           }
         },
@@ -734,7 +734,7 @@
             "port": "o19"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-19",
+            "block": "output-o19",
             "port": "in"
           }
         },
@@ -744,7 +744,7 @@
             "port": "o18"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-18",
+            "block": "output-o18",
             "port": "in"
           }
         },
@@ -754,7 +754,7 @@
             "port": "o17"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-17",
+            "block": "output-o17",
             "port": "in"
           }
         },
@@ -764,7 +764,7 @@
             "port": "o16"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-16",
+            "block": "output-o16",
             "port": "in"
           }
         },
@@ -774,7 +774,7 @@
             "port": "o15"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-15",
+            "block": "output-o15",
             "port": "in"
           }
         },
@@ -784,7 +784,7 @@
             "port": "o14"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-14",
+            "block": "output-o14",
             "port": "in"
           }
         },
@@ -794,7 +794,7 @@
             "port": "o13"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-13",
+            "block": "output-o13",
             "port": "in"
           }
         },
@@ -804,7 +804,7 @@
             "port": "o12"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-12",
+            "block": "output-o12",
             "port": "in"
           }
         },
@@ -814,7 +814,7 @@
             "port": "o11"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-11",
+            "block": "output-o11",
             "port": "in"
           }
         },
@@ -824,7 +824,7 @@
             "port": "o10"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-10",
+            "block": "output-o10",
             "port": "in"
           }
         },
@@ -834,7 +834,7 @@
             "port": "o9"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-9",
+            "block": "output-o9",
             "port": "in"
           }
         },
@@ -844,7 +844,7 @@
             "port": "o8"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-8",
+            "block": "output-o8",
             "port": "in"
           }
         },
@@ -854,7 +854,7 @@
             "port": "o7"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-7",
+            "block": "output-o7",
             "port": "in"
           }
         },
@@ -864,7 +864,7 @@
             "port": "o6"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-6",
+            "block": "output-o6",
             "port": "in"
           }
         },
@@ -874,7 +874,7 @@
             "port": "o5"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-5",
+            "block": "output-o5",
             "port": "in"
           }
         },
@@ -884,7 +884,7 @@
             "port": "o4"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-4",
+            "block": "output-o4",
             "port": "in"
           }
         },
@@ -894,7 +894,7 @@
             "port": "o3"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-3",
+            "block": "output-o3",
             "port": "in"
           }
         },
@@ -904,7 +904,7 @@
             "port": "o2"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-2",
+            "block": "output-o2",
             "port": "in"
           }
         },
@@ -914,7 +914,7 @@
             "port": "o1"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-1",
+            "block": "output-o1",
             "port": "in"
           }
         },
@@ -924,7 +924,7 @@
             "port": "o0"
           },
           "target": {
-            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-0",
+            "block": "output-o0",
             "port": "in"
           }
         }

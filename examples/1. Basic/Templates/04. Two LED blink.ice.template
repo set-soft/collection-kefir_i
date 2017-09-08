@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "d5975d7e-4231-4538-bf89-f762a63cb10a",
+          "id": "output-LED1",
           "type": "basic.output",
           "data": {
             "name": "LED1",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "id": "c0122f10-173c-4faa-b938-a5957b9e4bac",
+          "id": "output-LED2",
           "type": "basic.output",
           "data": {
             "name": "LED2",
@@ -50,7 +50,7 @@
           }
         },
         {
-          "id": "5bc3bd0f-86b5-4da1-8057-44e053d96e04",
+          "id": "constant-N",
           "type": "basic.constant",
           "data": {
             "name": "N",
@@ -123,30 +123,30 @@
         {
           "source": {
             "block": "cc95bf98-afa9-47dc-aa76-79f2fa67854c",
-            "port": "9300c558-2ae5-41b9-8945-36a052dcd2c4"
+            "port": "output-q"
           },
           "target": {
-            "block": "d5975d7e-4231-4538-bf89-f762a63cb10a",
+            "block": "output-LED1",
             "port": "in"
           }
         },
         {
           "source": {
-            "block": "5bc3bd0f-86b5-4da1-8057-44e053d96e04",
+            "block": "constant-N",
             "port": "constant-out"
           },
           "target": {
             "block": "cc95bf98-afa9-47dc-aa76-79f2fa67854c",
-            "port": "5e9ba116-18fe-427b-b6d7-778090ac88cf"
+            "port": "constant-N"
           }
         },
         {
           "source": {
             "block": "2857148d-685b-4f6c-80d0-4202cae80593",
-            "port": "f6615511-2d97-4f63-a7c2-106a7c91f33b"
+            "port": "output-q"
           },
           "target": {
-            "block": "c0122f10-173c-4faa-b938-a5957b9e4bac",
+            "block": "output-LED2",
             "port": "in"
           }
         }

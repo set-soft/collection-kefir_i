@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
+          "id": "output-LED4",
           "type": "basic.output",
           "data": {
             "name": "LED4",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "id": "5701b50c-904b-4776-ab4c-addc641b71ff",
+          "id": "output-LED3",
           "type": "basic.output",
           "data": {
             "name": "LED3",
@@ -50,7 +50,7 @@
           }
         },
         {
-          "id": "91843b6b-8476-4932-b882-b90402019475",
+          "id": "output-LED2",
           "type": "basic.output",
           "data": {
             "name": "LED2",
@@ -69,7 +69,7 @@
           }
         },
         {
-          "id": "e06b09a6-0a93-447e-be34-2a3b440a5330",
+          "id": "output-LED1",
           "type": "basic.output",
           "data": {
             "name": "LED1",
@@ -168,83 +168,83 @@
         {
           "source": {
             "block": "7e3120b9-d0c5-4cb4-beef-5fc9860e6ac9",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
             "block": "c329b914-23cc-4294-8a0f-a3062a634455",
-            "port": "4d94ffed-3220-49a1-9c37-06f284bc86a7"
+            "port": "input-rst"
           }
         },
         {
           "source": {
             "block": "c329b914-23cc-4294-8a0f-a3062a634455",
-            "port": "b54d171f-c625-441c-85be-986b4ebee8cd"
+            "port": "output-cnt"
           },
           "target": {
             "block": "e42d69dc-72fe-4547-8af4-da737647cb45",
-            "port": "be7f8279-3fc9-4e0b-a048-f210116637ab"
+            "port": "input-i"
           },
           "size": 32
         },
         {
           "source": {
             "block": "e42d69dc-72fe-4547-8af4-da737647cb45",
-            "port": "4cf14b5a-a543-40bc-bd30-232dfc12d418"
+            "port": "output-o"
           },
           "target": {
             "block": "aea70069-583a-4545-9e6e-d6c5d682a9a7",
-            "port": "00dde7cc-bd88-41a3-9daf-a224ef40bb0a"
+            "port": "input-s"
           },
           "size": 2
         },
         {
           "source": {
             "block": "aea70069-583a-4545-9e6e-d6c5d682a9a7",
-            "port": "ab0f6056-ef73-42e2-be3f-3a83b8e15bd3"
+            "port": "output-o2"
           },
           "target": {
-            "block": "5701b50c-904b-4776-ab4c-addc641b71ff",
+            "block": "output-LED3",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "aea70069-583a-4545-9e6e-d6c5d682a9a7",
-            "port": "ebb89fd3-5bda-48d8-b35c-a1cff6bba512"
+            "port": "output-o3"
           },
           "target": {
-            "block": "bba5bacd-2bbe-48a6-afda-3639d94f801a",
+            "block": "output-LED4",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "aea70069-583a-4545-9e6e-d6c5d682a9a7",
-            "port": "2610330d-5e3c-4320-841e-7d62bf10c43d"
+            "port": "output-o1"
           },
           "target": {
-            "block": "91843b6b-8476-4932-b882-b90402019475",
+            "block": "output-LED2",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "aea70069-583a-4545-9e6e-d6c5d682a9a7",
-            "port": "d1e7112d-7581-44f3-84d9-99c6c98ebfe8"
+            "port": "output-o0"
           },
           "target": {
-            "block": "e06b09a6-0a93-447e-be34-2a3b440a5330",
+            "block": "output-LED1",
             "port": "in"
           }
         },
         {
           "source": {
             "block": "5e53a0b2-9b0c-4435-be04-2762787a1b97",
-            "port": "8096d39a-cdf8-4ee2-bab0-ddc62e8fbd0d"
+            "port": "output-Pulso"
           },
           "target": {
             "block": "c329b914-23cc-4294-8a0f-a3062a634455",
-            "port": "34451ee7-68a5-4a42-ac27-cd00b724a527"
+            "port": "input-ena"
           }
         }
       ]

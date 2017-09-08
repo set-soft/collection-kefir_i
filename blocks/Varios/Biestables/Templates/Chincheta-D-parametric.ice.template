@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "6855f64f-fa1c-4371-b2e1-a98970674a96",
+          "id": "input-clk",
           "type": "basic.input",
           "data": {
             "name": "clk",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "ffdd9aa2-aea3-4aa9-8431-80e799226774",
+          "id": "output-q",
           "type": "basic.output",
           "data": {
             "name": "q",
@@ -51,7 +51,7 @@
           }
         },
         {
-          "id": "b32a6101-5bd1-4bcf-ae5f-e569b958a6a2",
+          "id": "input-d",
           "type": "basic.input",
           "data": {
             "name": "d",
@@ -71,7 +71,7 @@
           }
         },
         {
-          "id": "bfd12554-1a25-4ee2-8ab9-eeefad56595e",
+          "id": "constant-DINI",
           "type": "basic.constant",
           "data": {
             "name": "DINI",
@@ -122,7 +122,7 @@
       "wires": [
         {
           "source": {
-            "block": "b32a6101-5bd1-4bcf-ae5f-e569b958a6a2",
+            "block": "input-d",
             "port": "out"
           },
           "target": {
@@ -132,7 +132,7 @@
         },
         {
           "source": {
-            "block": "6855f64f-fa1c-4371-b2e1-a98970674a96",
+            "block": "input-clk",
             "port": "out"
           },
           "target": {
@@ -146,13 +146,13 @@
             "port": "q"
           },
           "target": {
-            "block": "ffdd9aa2-aea3-4aa9-8431-80e799226774",
+            "block": "output-q",
             "port": "in"
           }
         },
         {
           "source": {
-            "block": "bfd12554-1a25-4ee2-8ab9-eeefad56595e",
+            "block": "constant-DINI",
             "port": "constant-out"
           },
           "target": {

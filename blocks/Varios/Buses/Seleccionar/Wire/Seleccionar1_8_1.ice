@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "be7f8279-3fc9-4e0b-a048-f210116637ab",
+          "id": "input-i",
           "type": "basic.input",
           "data": {
             "name": "i"
@@ -77,7 +77,7 @@
           }
         },
         {
-          "id": "4cf14b5a-a543-40bc-bd30-232dfc12d418",
+          "id": "output-o",
           "type": "basic.output",
           "data": {
             "name": "o"
@@ -99,7 +99,7 @@
           }
         },
         {
-          "id": "18f56535-6252-4108-9d50-a9ae727f38ee",
+          "id": "constant-BIT",
           "type": "basic.constant",
           "data": {
             "name": "BIT",
@@ -151,7 +151,7 @@
       "wires": [
         {
           "source": {
-            "block": "be7f8279-3fc9-4e0b-a048-f210116637ab",
+            "block": "input-i",
             "port": "out"
           },
           "target": {
@@ -166,14 +166,14 @@
             "port": "o"
           },
           "target": {
-            "block": "4cf14b5a-a543-40bc-bd30-232dfc12d418",
+            "block": "output-o",
             "port": "in"
           }
           
         },
         {
           "source": {
-            "block": "18f56535-6252-4108-9d50-a9ae727f38ee",
+            "block": "constant-BIT",
             "port": "constant-out"
           },
           "target": {

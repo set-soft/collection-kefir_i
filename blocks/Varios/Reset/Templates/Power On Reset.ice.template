@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "3bf2a624-8eac-44b7-8cc0-7343f06828bc",
+          "id": "input-clk",
           "type": "basic.input",
           "data": {
             "name": "clk",
@@ -32,7 +32,7 @@
           }
         },
         {
-          "id": "550b5535-defd-4663-b1a1-413ca139073a",
+          "id": "output-rst",
           "type": "basic.output",
           "data": {
             "name": "rst",
@@ -82,7 +82,7 @@
       "wires": [
         {
           "source": {
-            "block": "3bf2a624-8eac-44b7-8cc0-7343f06828bc",
+            "block": "input-clk",
             "port": "out"
           },
           "target": {
@@ -96,7 +96,7 @@
             "port": "rst"
           },
           "target": {
-            "block": "550b5535-defd-4663-b1a1-413ca139073a",
+            "block": "output-rst",
             "port": "in"
           }
         }

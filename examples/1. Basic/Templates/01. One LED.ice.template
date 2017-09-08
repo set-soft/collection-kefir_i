@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+          "id": "output-LED",
           "type": "basic.output",
           "data": {
             "name": "LED",
@@ -63,10 +63,10 @@
         {
           "source": {
             "block": "8a5c45a1-cad6-45e9-920a-a1beebbfb31f",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
-            "block": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+            "block": "output-LED",
             "port": "in"
           }
         }

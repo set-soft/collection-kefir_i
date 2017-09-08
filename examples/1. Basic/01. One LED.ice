@@ -12,7 +12,7 @@
     "graph": {
       "blocks": [
         {
-          "id": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+          "id": "output-LED",
           "type": "basic.output",
           "data": {
             "name": "LED",
@@ -48,7 +48,7 @@
         },
         {
           "id": "8a5c45a1-cad6-45e9-920a-a1beebbfb31f",
-          "type": "3e6c249e205080168c1bf4ee8dbc33b50653d5f4",
+          "type": "7a5052cf67ad629d54e75210928ff8eb02c7c09c",
           "position": {
             "x": 144,
             "y": 136
@@ -63,10 +63,10 @@
         {
           "source": {
             "block": "8a5c45a1-cad6-45e9-920a-a1beebbfb31f",
-            "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
+            "port": "output-1"
           },
           "target": {
-            "block": "949075cb-26c0-49da-ba76-2496ea9aa7cc",
+            "block": "output-LED",
             "port": "in"
           }
         }
@@ -81,7 +81,7 @@
     }
   },
   "dependencies": {
-    "3e6c249e205080168c1bf4ee8dbc33b50653d5f4": {
+    "7a5052cf67ad629d54e75210928ff8eb02c7c09c": {
   "package": {
     "name": "Bit 1",
     "version": "1.0.0",
@@ -113,7 +113,7 @@
           }
         },
         {
-          "id": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
+          "id": "output-1",
           "type": "basic.output",
           "data": {
             "name": ""
@@ -131,7 +131,7 @@
             "port": "v"
           },
           "target": {
-            "block": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
+            "block": "output-1",
             "port": "in"
           }
         }
