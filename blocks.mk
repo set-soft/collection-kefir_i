@@ -556,7 +556,7 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 3.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 3.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 3.ice
 
-./blocks/Input/CapSense/CapSense\ 4.ice: ./blocks/Input/Templates/CapSense\ 4.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense4.v
+./blocks/Input/CapSense/CapSense\ 4.ice: ./blocks/Input/Templates/CapSense\ 4.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 4.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 4.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 4.ice
 
@@ -2210,11 +2210,11 @@ all:  \
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/05.\ Two\ LEDs\ alternate\ blink.ice.template 0 0 ./examples/1.\ Basic/05.\ Two\ LEDs\ alternate\ blink.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/05.\ Two\ LEDs\ alternate\ blink.ice
 
-./examples/1.\ Basic/06.\ CapSense\ and\ LEDs.ice: ./examples/1.\ Basic/Templates/06.\ CapSense\ and\ LEDs.ice.template tools/reemplaza.pl  ./blocks/Input/CapSense/CapSense\ 4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice
+./examples/1.\ Basic/06.\ CapSense\ and\ LEDs.ice: ./examples/1.\ Basic/Templates/06.\ CapSense\ and\ LEDs.ice.template tools/reemplaza.pl  ./blocks/Input/CapSense/CapSense\ 4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/06.\ CapSense\ and\ LEDs.ice.template 0 0 ./examples/1.\ Basic/06.\ CapSense\ and\ LEDs.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/06.\ CapSense\ and\ LEDs.ice
 
-./examples/1.\ Basic/07.\ CapSense\ toggle\ and\ LEDs.ice: ./examples/1.\ Basic/Templates/07.\ CapSense\ toggle\ and\ LEDs.ice.template tools/reemplaza.pl  ./blocks/Input/CapSense/CapSense\ 4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice
+./examples/1.\ Basic/07.\ CapSense\ toggle\ and\ LEDs.ice: ./examples/1.\ Basic/Templates/07.\ CapSense\ toggle\ and\ LEDs.ice.template tools/reemplaza.pl  ./blocks/Input/CapSense/CapSense\ 4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/07.\ CapSense\ toggle\ and\ LEDs.ice.template 0 0 ./examples/1.\ Basic/07.\ CapSense\ toggle\ and\ LEDs.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/07.\ CapSense\ toggle\ and\ LEDs.ice
 

@@ -1,0 +1,272 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "CapSense 4 (Logic)",
+    "version": "1.0.0",
+    "description": "4 capacitive buttons logic",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<CapSense.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "85e22dc3-4393-4d37-9c91-095d792cf0d2",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED1",
+                "value": "137"
+              },
+              {
+                "index": "2",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "1",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "0",
+                "name": "LED4",
+                "value": "121"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1808,
+            "y": 400
+          }
+        },
+        {
+          "id": "82f5ff27-9c1c-4f0f-955d-978d1a452be2",
+          "type": "basic.input",
+          "data": {
+            "name": "Reloj",
+            "pins": [
+              {
+                "index": "0",
+                "name": "CLK",
+                "value": "49"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 680,
+            "y": 400
+          }
+        },
+        {
+          "id": "fb68344d-a376-4dc4-ac06-b47f9dbf8f17",
+          "type": "basic.input",
+          "data": {
+            "name": "PIN",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "BTN1",
+                "value": "136"
+              },
+              {
+                "index": "2",
+                "name": "BTN2",
+                "value": "134"
+              },
+              {
+                "index": "1",
+                "name": "BTN3",
+                "value": "128"
+              },
+              {
+                "index": "0",
+                "name": "BTN4",
+                "value": "122"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 680,
+            "y": 600
+          }
+        },
+        {
+          "id": "1218ee70-57bb-48b5-bd42-ec1692653b9f",
+          "type": "basic.output",
+          "data": {
+            "name": "OE",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1808,
+            "y": 600
+          }
+        },
+        {
+          "id": "9d448824-9aef-4e9c-82dc-be99d424c782",
+          "type": "basic.constant",
+          "data": {
+            "name": "DIRECT",
+            "value": "1",
+            "local": false
+          },
+          "position": {
+            "x": 1048,
+            "y": 216
+          }
+        },
+        {
+          "id": "76096955-335a-417e-8e4e-391cbb68f540",
+          "type": "basic.constant",
+          "data": {
+            "name": "FREQUENCY",
+            "value": "24",
+            "local": false
+          },
+          "position": {
+            "x": 1448,
+            "y": 216
+          }
+        },
+        {
+          "id": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+          "type": "basic.code",
+          "data": {
+            "code": "@verilog<CapSense.v>",
+            "params": [
+              {
+                "name": "DIRECT"
+              },
+              {
+                "name": "FREQUENCY"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk_i"
+                },
+                {
+                  "name": "capsense_i",
+                  "range": "[3:0]",
+                  "size": 4
+                }
+              ],
+              "out": [
+                {
+                  "name": "buttons_o",
+                  "range": "[3:0]",
+                  "size": 4
+                },
+                {
+                  "name": "oe"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 896,
+            "y": 328
+          },
+          "size": {
+            "width": 800,
+            "height": 400
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "82f5ff27-9c1c-4f0f-955d-978d1a452be2",
+            "port": "out"
+          },
+          "target": {
+            "block": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+            "port": "clk_i"
+          }
+        },
+        {
+          "source": {
+            "block": "9d448824-9aef-4e9c-82dc-be99d424c782",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+            "port": "DIRECT"
+          }
+        },
+        {
+          "source": {
+            "block": "76096955-335a-417e-8e4e-391cbb68f540",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+            "port": "FREQUENCY"
+          }
+        },
+        {
+          "source": {
+            "block": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+            "port": "buttons_o"
+          },
+          "target": {
+            "block": "85e22dc3-4393-4d37-9c91-095d792cf0d2",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "fb68344d-a376-4dc4-ac06-b47f9dbf8f17",
+            "port": "out"
+          },
+          "target": {
+            "block": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+            "port": "capsense_i"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "3a552fa1-57f9-4430-99ef-99c06f494ad4",
+            "port": "oe"
+          },
+          "target": {
+            "block": "1218ee70-57bb-48b5-bd42-ec1692653b9f",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -458.6486,
+        "y": -63.3919
+      },
+      "zoom": 0.6926
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
