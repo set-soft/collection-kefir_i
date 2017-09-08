@@ -179,4 +179,34 @@ sub GetRule
  "|none";
 }
 
+sub GetTemplateFromRest
+{
+ my $rest=$_[0];
+
+ my @l=split(/\|/,$rest);
+ my $rule=$l[1];
+ return undef if $rule eq 'none';
+ $rule=~/(.*).template/ or die "Rule without template: $rule";
+ return UnEscapeForShell("$1.template");
+}
+
+sub GetBlockDepsFromRest
+{
+ my $rest=$_[0];
+
+ my @l=split(/\|/,$rest);
+ shift(@l); # Name
+ shift(@l); # Rule
+
+ my $childs;
+ my $d;
+ foreach $d (@l)
+    {
+     next unless $d=~/([0-9a-f]{40})/;
+     $childs.='|' if $childs;
+     $childs.=$d;
+    }
+ $childs;
+}
+
 1;

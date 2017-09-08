@@ -79,7 +79,12 @@ sub Convert
 {
  my ($ori,$des,$basedir)=@_;
  my ($res,$l,$sha1,$file,@deps);
+ my ($last_id,$last_type,$name);
+ my ($cnt_in,$cnt_out,$cnt_const);
+ my (%blocks,$id);
 
+ %blocks=();
+ my %used_names=();
  open(FI,$ori) || die "Can't open '$ori'";
  while ($l=<FI>)
    {
@@ -93,12 +98,51 @@ sub Convert
           $res.="  }\n}\n";
           last;
          }
+       elsif ($l=~/\"id\": \"([^\"]+)\"/)
+         {
+          $last_id=$1;
+         }
        elsif ($l=~/\"type\": \"([0-9a-f]{40})\"/)
          {
           $sha1=$1;
           push(@deps,$sha1);
           $file=Solve1Dep($sha1);
           $l=~s/$sha1/\@sha1<$file>/;
+         }
+       elsif ($l=~/\"type\": \"basic\.(input|output|constant)\"/)
+         {
+          $last_type=$1;
+          $cnt_in++    if $1 eq 'input';
+          $cnt_out++   if $1 eq 'output';
+          $cnt_const++ if $1 eq 'constant';
+         }
+       elsif ($last_id && $last_type && $l=~/\"name\": \"([^\"]*)\"/)
+         {
+          $name=$1;
+          $name=~s/\[(.*)\]//;
+          unless (length($name))
+            {# Give a name to nameless blocks
+             $name=$last_type eq 'input' ? $cnt_in :
+                   ($last_type eq 'output' ? $cnt_out : $cnt_const);
+             print STDERR "Warning: block $last_id of type $last_type doesn't have a name, using $name\n";
+            }
+          # Find a replacement for this block id
+          #print STDERR "$last_id $last_type $name\n";
+          $new_name="$last_type-$name";
+          $blocks{$last_id}=$new_name;
+
+          # Is a repeated name?
+          my $used=$used_names{$new_name};
+          if ($used)
+            {
+             $cnt_errors++;
+             print STDERR "Error: '$ori' block '$used' and '$last_id' has the same name and type ($name/$last_type)\n";
+            }
+          $used_names{$new_name}=$last_id;
+          print STDERR "$name\n";
+
+          $last_type=undef;
+          $last_id=undef;
          }
        elsif ($l=~/\"board\": \"icezum\"/)
          {
@@ -108,6 +152,15 @@ sub Convert
       }
    }
  close(FI);
+ die "Found $cnt_errors errors" if $cnt_errors;
+
+ # Replace the IDs for I/O blocks
+ foreach $id (keys %blocks)
+    {
+     $name=$blocks{$id};
+     $res=~s/$id/$name/g
+    }
+
  open(FI,">$des") || die "Can't create '$des'";
  print FI $res;
  close(FI);

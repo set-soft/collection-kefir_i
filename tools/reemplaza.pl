@@ -67,7 +67,7 @@ if ($c>0)
           $a=~s/\@range_i$c//g;
          }
        $inputs_rep.='            {'."\n";
-       $inputs_rep.='              "id": "63c7309a-4460-4727-99ac-8c08c900502a-'.$c.'",'."\n";
+       $inputs_rep.='              "id": "input-i'.$c.'",'."\n";
        $inputs_rep.='              "type": "basic.input",'."\n";
        $inputs_rep.='              "data": {'."\n";
        $inputs_rep.='                "name": "i'.$c.'",'."\n";
@@ -95,7 +95,7 @@ if ($c>0)
 
        $wires_in_rep.='        {'."\n";
        $wires_in_rep.='          "source": {'."\n";
-       $wires_in_rep.='            "block": "63c7309a-4460-4727-99ac-8c08c900502a-'.$c.'",'."\n";
+       $wires_in_rep.='            "block": "input-i'.$c.'",'."\n";
        $wires_in_rep.='            "port": "out"'."\n";
        $wires_in_rep.='          },'."\n";
        $wires_in_rep.='          "target": {'."\n";
@@ -201,7 +201,7 @@ if ($c>0)
           $a=~s/\@rg_i_o$c/$range/g;
          }
        $outputs_rep.='            {'."\n";
-       $outputs_rep.='              "id": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-'.$c.'",'."\n";
+       $outputs_rep.='              "id": "output-o'.$c.'",'."\n";
        $outputs_rep.='              "type": "basic.output",'."\n";
        $outputs_rep.='              "data": {'."\n";
        $outputs_rep.='                "name": "o'.$c.'",'."\n";
@@ -232,7 +232,7 @@ if ($c>0)
        $wires_out_rep.='            "port": "o'.$c.'"'."\n";
        $wires_out_rep.='          },'."\n";
        $wires_out_rep.='          "target": {'."\n";
-       $wires_out_rep.='            "block": "76ee1b1c-2f86-46d0-b39f-46bac3ac6094-'.$c.'",'."\n";
+       $wires_out_rep.='            "block": "output-o'.$c.'",'."\n";
        $wires_out_rep.='            "port": "in"'."\n";
        $wires_out_rep.='          }'."\n";
        $wires_out_rep.='          ,"size": '.$o."\n" if $o>1;
