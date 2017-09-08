@@ -69,6 +69,7 @@ sub EscapeCode
 {
  my $d=$_[0];
  $d=~s/\n/\\n/g;
+ $d=~s/\"/\\\"/g;
  $d;
 }
 
