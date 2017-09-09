@@ -548,11 +548,11 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Const.ice.template 0 8 ./blocks/Const/Bus/Val/Const_8_bits.ice
 	perl tools/update_db.pl ./blocks/Const/Bus/Val/Const_8_bits.ice
 
-./blocks/Input/CapSense/CapSense\ 2.ice: ./blocks/Input/Templates/CapSense\ 2.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense2.v
+./blocks/Input/CapSense/CapSense\ 2.ice: ./blocks/Input/Templates/CapSense\ 2.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 2.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 2.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 2.ice
 
-./blocks/Input/CapSense/CapSense\ 3.ice: ./blocks/Input/Templates/CapSense\ 3.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense3.v
+./blocks/Input/CapSense/CapSense\ 3.ice: ./blocks/Input/Templates/CapSense\ 3.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_3.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_3.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 3.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 3.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 3.ice
 
@@ -2218,15 +2218,15 @@ all:  \
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/07.\ CapSense\ toggle\ and\ LEDs.ice.template 0 0 ./examples/1.\ Basic/07.\ CapSense\ toggle\ and\ LEDs.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/07.\ CapSense\ toggle\ and\ LEDs.ice
 
-./examples/1.\ Basic/08.\ AND\ 1\ to\ all.ice: ./examples/1.\ Basic/Templates/08.\ AND\ 1\ to\ all.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/AND/1_to_all/AND_4.ice ./blocks/Logic/NOT/NOT.ice
+./examples/1.\ Basic/08.\ AND\ 1\ to\ all.ice: ./examples/1.\ Basic/Templates/08.\ AND\ 1\ to\ all.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Buses/AND/1_to_all/AND_4.ice ./blocks/Logic/NOT/NOT.ice
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/08.\ AND\ 1\ to\ all.ice.template 0 0 ./examples/1.\ Basic/08.\ AND\ 1\ to\ all.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/08.\ AND\ 1\ to\ all.ice
 
-./examples/1.\ Basic/09.\ OR\ 1\ to\ all.ice: ./examples/1.\ Basic/Templates/09.\ OR\ 1\ to\ all.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/OR/1_to_all/OR_4.ice
+./examples/1.\ Basic/09.\ OR\ 1\ to\ all.ice: ./examples/1.\ Basic/Templates/09.\ OR\ 1\ to\ all.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Buses/OR/1_to_all/OR_4.ice
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/09.\ OR\ 1\ to\ all.ice.template 0 0 ./examples/1.\ Basic/09.\ OR\ 1\ to\ all.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/09.\ OR\ 1\ to\ all.ice
 
-./examples/1.\ Basic/10.\ XOR\ 1\ to\ all.ice: ./examples/1.\ Basic/Templates/10.\ XOR\ 1\ to\ all.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice
+./examples/1.\ Basic/10.\ XOR\ 1\ to\ all.ice: ./examples/1.\ Basic/Templates/10.\ XOR\ 1\ to\ all.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice
 	perl tools/reemplaza.pl ./examples/1.\ Basic/Templates/10.\ XOR\ 1\ to\ all.ice.template 0 0 ./examples/1.\ Basic/10.\ XOR\ 1\ to\ all.ice
 	perl tools/update_db.pl ./examples/1.\ Basic/10.\ XOR\ 1\ to\ all.ice
 
