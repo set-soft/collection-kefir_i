@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use File::Basename;
-$mod=dirname(__FILE__).'/utils.pl';
+$mod='./'.dirname(__FILE__).'/utils.pl';
 require $mod;
 
 die "Must specify 1 argument (file or dir)" unless scalar(@ARGV)==1;
