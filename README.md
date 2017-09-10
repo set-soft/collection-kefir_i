@@ -89,6 +89,7 @@ Collection for the Kefir I board in Icestudio.
       * 1 bus of 2/4/8/16/32 elements, 1 bus output
   * *Codificadores*
     * *Bus* (32/16/8/4/2 inputs + group using buses)
+    * *Wires* (32/16/8/4 inputs + group using individual signals)
   * *Contadores*
     * *Asc_Desc* Up/Down counters
       * *32 bits* (3 versions)

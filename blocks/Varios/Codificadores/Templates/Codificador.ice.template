@@ -1,0 +1,120 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Codificador @num_ins/@num_outs",
+    "version": "1.0.0",
+    "description": "Codificador de @num_ins entradas y @num_outs salidas",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Codificador.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+@inputs<8,64>,
+@outputs<800,104>,
+        {
+          "id": "output-g",
+          "type": "basic.output",
+          "data": {
+            "name": "g",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 528,
+            "y": 288
+          }
+        },
+        {
+          "id": "d7832f2a-89d5-4333-ae44-fe426da1e509",
+          "type": "@sha1<blocks/Varios/Codificadores/Bus/Codificador_@num_ins_@num_outs_Bus.ice>",
+          "position": {
+            "x": 344,
+            "y": 224
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "variable-ins",
+          "type": "@sha1<./blocks/Varios/Buses/Unir/Join_wires/Join_@num_ins.ice>",
+          "position": {
+            "x": 168,
+            "y": 64
+          },
+          "size": {
+            "width": 96,
+            "height": @in_height
+          }
+        },
+        {
+          "id": "variable-outs",
+          "type": "@sha1<./blocks/Varios/Buses/Separar/Split_wires/Split_@num_outs.ice>",
+          "position": {
+            "x": 648,
+            "y": 104
+          },
+          "size": {
+            "width": 96,
+            "height": @out_height
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "variable-ins",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "d7832f2a-89d5-4333-ae44-fe426da1e509",
+            "port": "input-i"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "d7832f2a-89d5-4333-ae44-fe426da1e509",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "variable-outs",
+            "port": "input-b"
+          },
+          "size": 2
+        },
+@wires_out_bk,
+@wires_in_bk,
+        {
+          "source": {
+            "block": "d7832f2a-89d5-4333-ae44-fe426da1e509",
+            "port": "output-g"
+          },
+          "target": {
+            "block": "output-g",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 58,
+        "y": 95.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
