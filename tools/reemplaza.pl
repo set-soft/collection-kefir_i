@@ -40,8 +40,16 @@ $c--;
 $inputs_rep='';
 $in_code_rep='';
 $wires_in_rep='';
+$wires_in_rep_bk='';
 $code_join_wire_rep='assign o={';
+$xc=136;
 $yc=232;
+if ($a=~/\@inputs<(\d+),(\d+)>/)
+  {
+   $xc=$1;
+   $yc=$2;
+   $a=~s/\@inputs<$xc,$yc>/\@inputs/;
+  }
 if ($c>0)
   {
    $code_and_i='';
@@ -78,7 +86,7 @@ if ($c>0)
        $inputs_rep.='                "virtual": true'."\n";
        $inputs_rep.='              },'."\n";
        $inputs_rep.='              "position": {'."\n";
-       $inputs_rep.='                "x": 136,'."\n";
+       $inputs_rep.='                "x": '."$xc,\n";
        $inputs_rep.='                "y": '."$yc\n";
        $inputs_rep.='              }'."\n";
        $yc+=64; $in_height+=64;
@@ -105,6 +113,18 @@ if ($c>0)
        $wires_in_rep.='          ,"size": '.$i."\n" if $i>1;
        $wires_in_rep.='        }';
 
+       $wires_in_rep_bk.='        {'."\n";
+       $wires_in_rep_bk.='          "source": {'."\n";
+       $wires_in_rep_bk.='            "block": "input-i'.$c.'",'."\n";
+       $wires_in_rep_bk.='            "port": "out"'."\n";
+       $wires_in_rep_bk.='          },'."\n";
+       $wires_in_rep_bk.='          "target": {'."\n";
+       $wires_in_rep_bk.='            "block": "variable-ins",'."\n";
+       $wires_in_rep_bk.='            "port": "input-i'.$c.'"'."\n";
+       $wires_in_rep_bk.='          }'."\n";
+       $wires_in_rep_bk.='          ,"size": '.$i."\n" if $i>1;
+       $wires_in_rep_bk.='        }';
+
        $code_join_wire_rep.="i$c";
 
        $code_and_i.=' & ' if $code_and_i;
@@ -118,9 +138,11 @@ if ($c>0)
        $inputs_rep.="," if $c>=0;
        $in_code_rep.="," if $c>=0;
        $wires_in_rep.="," if $c>=0;
+       $wires_in_rep_bk.="," if $c>=0;
        $inputs_rep.="\n";
        $in_code_rep.="\n";
        $wires_in_rep.="\n";
+       $wires_in_rep_bk.="\n";
        $code_join_wire_rep.=',' if $c>=0;
       }
   }
@@ -166,12 +188,22 @@ else
 $code_join_wire_rep.="};\\n";
 
 @outputs=split(/,/,$outs);
-$c=scalar(@outputs)-1;
+$c=scalar(@outputs);
+$a=~s/\@num_outs/$c/g;
+$c--;
 $outputs_rep='';
 $out_code_rep='';
 $wires_out_rep='';
+$wires_out_rep_bk='';
 $code_split_wire_rep='';
+$xc=808;
 $yc=232;
+if ($a=~/\@outputs<(\d+),(\d+)>/)
+  {
+   $xc=$1;
+   $yc=$2;
+   $a=~s/\@outputs<$xc,$yc>/\@outputs/;
+  }
 if ($c>0)
   {
    print "Outputs:\n";
@@ -212,7 +244,7 @@ if ($c>0)
        $outputs_rep.='                "virtual": true'."\n";
        $outputs_rep.='              },'."\n";
        $outputs_rep.='              "position": {'."\n";
-       $outputs_rep.='                "x": 808,'."\n";
+       $outputs_rep.='                "x": '."$xc,\n";
        $outputs_rep.='                "y": '."$yc\n";
        $outputs_rep.='              }'."\n";
        $yc+=64; $out_height+=64;
@@ -226,6 +258,7 @@ if ($c>0)
           $out_code_rep.='                  ,"range": "'."$range\"\n";
          }
        $out_code_rep.='                }';
+
        $wires_out_rep.='        {'."\n";
        $wires_out_rep.='          "source": {'."\n";
        $wires_out_rep.='            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",'."\n";
@@ -237,14 +270,29 @@ if ($c>0)
        $wires_out_rep.='          }'."\n";
        $wires_out_rep.='          ,"size": '.$o."\n" if $o>1;
        $wires_out_rep.='        }';
+
+       $wires_out_rep_bk.='        {'."\n";
+       $wires_out_rep_bk.='          "source": {'."\n";
+       $wires_out_rep_bk.='            "block": "variable-outs",'."\n";
+       $wires_out_rep_bk.='            "port": "output-o'.$c.'"'."\n";
+       $wires_out_rep_bk.='          },'."\n";
+       $wires_out_rep_bk.='          "target": {'."\n";
+       $wires_out_rep_bk.='            "block": "output-o'.$c.'",'."\n";
+       $wires_out_rep_bk.='            "port": "in"'."\n";
+       $wires_out_rep_bk.='          }'."\n";
+       $wires_out_rep_bk.='          ,"size": '.$o."\n" if $o>1;
+       $wires_out_rep_bk.='        }';
+
        $code_split_wire_rep.="assign o$c=i[$c];\\n";
        $c--;
        $outputs_rep.="," if $c>=0;
        $out_code_rep.="," if $c>=0;
        $wires_out_rep.="," if $c>=0;
+       $wires_out_rep_bk.="," if $c>=0;
        $outputs_rep.="\n";
        $out_code_rep.="\n";
        $wires_out_rep.="\n";
+       $wires_out_rep_bk.="\n";
       }
   }
 else
@@ -275,12 +323,14 @@ else
 
 $a=~s/\@outputs/$outputs_rep/g;
 $a=~s/\@out_code/$out_code_rep/g;
+$a=~s/\@wires_out_bk/$wires_out_rep_bk/g;
 $a=~s/\@wires_out/$wires_out_rep/g;
 $a=~s/\@code_split_wire/$code_split_wire_rep/g;
 $a=~s/\@out_height/$out_height/g;
 
 $a=~s/\@inputs/$inputs_rep/g;
 $a=~s/\@in_code/$in_code_rep/g;
+$a=~s/\@wires_in_bk/$wires_in_rep_bk/g;
 $a=~s/\@wires_in/$wires_in_rep/g;
 $a=~s/\@code_join_wire/$code_join_wire_rep/g;
 $a=~s/\@in_height/$in_height/g;
