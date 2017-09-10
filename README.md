@@ -87,6 +87,8 @@ Collection for the Kefir I board in Icestudio.
       * 1 bit applied to the whole bus of 2/4/8/16/32 elements, 1 bus output
     * *NOT*
       * 1 bus of 2/4/8/16/32 elements, 1 bus output
+  * *Codificadores*
+    * *Bus* (32/16/8/4/2 inputs + group using buses)
   * *Contadores*
     * *Asc_Desc* Up/Down counters
       * *32 bits* (3 versions)
@@ -117,7 +119,7 @@ Collection for the Kefir I board in Icestudio.
     * *Shift Left Complete* (3/4/8/16/32)
     * *Shift Left ENA+RST* (3/4/8/16/32)
     * *Shift Left Simple* (3/4/8/16/32)
-  * *Registros*
+  * *Reset*
     * *Power on Reset*
 
 ## Examples

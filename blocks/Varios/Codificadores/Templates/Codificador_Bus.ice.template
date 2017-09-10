@@ -1,0 +1,196 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Codificador @sz_i/@sz_o Bus",
+    "version": "1.0.0",
+    "description": "Codificador de @sz_i entradas y @sz_o salidas (usando buses)",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Codificador.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-o",
+          "type": "basic.output",
+          "data": {
+            "name": "o",
+            "range": "@range_s_o",
+            "pins": [
+@pins_o
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 888,
+            "y": 264
+          }
+        },
+        {
+          "id": "input-i",
+          "type": "basic.input",
+          "data": {
+            "name": "i",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 112,
+            "y": 376
+          }
+        },
+        {
+          "id": "output-g",
+          "type": "basic.output",
+          "data": {
+            "name": "g",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 888,
+            "y": 488
+          }
+        },
+        {
+          "id": "21959c2d-436f-4298-8ab9-9b57ad1cbccb",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam N=@sz_o;\n\n@verilog<Codificador.v>",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "i",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                }
+              ],
+              "out": [
+                {
+                  "name": "o",
+                  "range": "@range_s_o",
+                  "size": @sz_o
+                },
+                {
+                  "name": "g"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 312,
+            "y": 184
+          },
+          "size": {
+            "width": 496,
+            "height": 448
+          }
+        },
+        {
+          "id": "27e6bb6a-be75-4941-9c43-2955e341a77a",
+          "type": "basic.info",
+          "data": {
+            "info": "2<sup>N</sup> entradas",
+            "readonly": true
+          },
+          "position": {
+            "x": 96,
+            "y": 344
+          },
+          "size": {
+            "width": 144,
+            "height": 48
+          }
+        },
+        {
+          "id": "c9fa59c9-0637-416d-8963-d770a7c5440e",
+          "type": "basic.info",
+          "data": {
+            "info": "N salidas\nIndica cuál entrada es 1\nLas más pesadas tienen prioridad",
+            "readonly": true
+          },
+          "position": {
+            "x": 880,
+            "y": 200
+          },
+          "size": {
+            "width": 336,
+            "height": 80
+          }
+        },
+        {
+          "id": "2904e8c1-7d42-4535-9611-f867174bef8c",
+          "type": "basic.info",
+          "data": {
+            "info": "Salida de grupo\nIndica que al menos una \nentrada es 1\nPermite distinguir el caso\nen que ninguna entrada sea 1\n",
+            "readonly": true
+          },
+          "position": {
+            "x": 880,
+            "y": 392
+          },
+          "size": {
+            "width": 352,
+            "height": 112
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-i",
+            "port": "out"
+          },
+          "target": {
+            "block": "21959c2d-436f-4298-8ab9-9b57ad1cbccb",
+            "port": "i"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "21959c2d-436f-4298-8ab9-9b57ad1cbccb",
+            "port": "o"
+          },
+          "target": {
+            "block": "output-o",
+            "port": "in"
+          },
+          "size": @sz_o
+        },
+        {
+          "source": {
+            "block": "21959c2d-436f-4298-8ab9-9b57ad1cbccb",
+            "port": "g"
+          },
+          "target": {
+            "block": "output-g",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 472,
+        "y": 201.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

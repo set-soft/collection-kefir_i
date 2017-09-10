@@ -1,0 +1,5 @@
+"Codificador_Bus.ice.template" 32 5 "Bus/Codificador_32_5_Bus.ice"
+"Codificador_Bus.ice.template" 16 4 "Bus/Codificador_16_4_Bus.ice"
+"Codificador_Bus.ice.template" 8 3 "Bus/Codificador_8_3_Bus.ice"
+"Codificador_Bus.ice.template" 4 2 "Bus/Codificador_4_2_Bus.ice"
+"Codificador_Bus.ice.template" 2 1 "Bus/Codificador_2_1_Bus.ice"
