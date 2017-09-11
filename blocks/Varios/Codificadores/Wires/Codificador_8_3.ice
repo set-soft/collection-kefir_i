@@ -254,7 +254,7 @@
         },
         {
           "id": "d7832f2a-89d5-4333-ae44-fe426da1e509",
-          "type": "5ebdbd69d07e0f7d45de5e8c21dc5fbfe65bf909",
+          "type": "9e7fffc749d5dfed68d0c0e1785c7374cef61294",
           "position": {
             "x": 344,
             "y": 224
@@ -445,7 +445,7 @@
     }
   },
   "dependencies": {
-    "5ebdbd69d07e0f7d45de5e8c21dc5fbfe65bf909": {
+    "9e7fffc749d5dfed68d0c0e1785c7374cef61294": {
   "package": {
     "name": "Codificador 8/3 Bus",
     "version": "1.0.0",
@@ -498,7 +498,7 @@
           "id": "21959c2d-436f-4298-8ab9-9b57ad1cbccb",
           "type": "basic.code",
           "data": {
-            "code": "localparam N=3;\n\nreg [2**N-1:0] o_aux;\nreg g_aux;\n\ninteger j;\nalways @(*)\nbegin\n   o_aux <= 0;\n   g_aux <= 1'b0;\n   for (j=2**N-1; j>=0; j=j-1)\n      begin\n      if (i[j])\n         begin\n         o_aux <= j;\n         g_aux <= 1'b1;\n         j=-1; // Salir del lazo\n         end\n      end\nend\n\nassign o=o_aux;\nassign g=g_aux;",
+            "code": "localparam N=3;\n\nreg [2**N-1:0] o_aux;\nreg g_aux;\n\ninteger j;\nalways @(*)\nbegin\n   o_aux <= 0;\n   g_aux <= 1'b0;\n   for (j=0; j<2**N; j=j+1)\n      begin\n      if (i[j])\n         begin\n         o_aux <= j;\n         g_aux <= 1'b1;\n         end\n      end\nend\n\nassign o=o_aux;\nassign g=g_aux;",
             "params": [],
             "ports": {
               "in": [
