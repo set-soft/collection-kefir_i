@@ -134,7 +134,7 @@
           }
         },
         {
-          "id": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o3=i[3];\nassign o2=i[2];\nassign o1=i[1];\nassign o0=i[0];\n",
@@ -181,14 +181,14 @@
             "port": "out"
           },
           "target": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "i"
           }
           ,"size": 4
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o3"
           },
           "target": {
@@ -198,7 +198,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o2"
           },
           "target": {
@@ -208,7 +208,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o1"
           },
           "target": {
@@ -218,7 +218,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o0"
           },
           "target": {

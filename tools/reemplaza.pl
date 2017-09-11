@@ -107,7 +107,7 @@ if ($c>0)
        $wires_in_rep.='            "port": "out"'."\n";
        $wires_in_rep.='          },'."\n";
        $wires_in_rep.='          "target": {'."\n";
-       $wires_in_rep.='            "block": "3545528c-05e2-4e95-8223-5b7b77587423",'."\n";
+       $wires_in_rep.='            "block": "variable-io",'."\n";
        $wires_in_rep.='            "port": "i'.$c.'"'."\n";
        $wires_in_rep.='          }'."\n";
        $wires_in_rep.='          ,"size": '.$i."\n" if $i>1;
@@ -261,7 +261,7 @@ if ($c>0)
 
        $wires_out_rep.='        {'."\n";
        $wires_out_rep.='          "source": {'."\n";
-       $wires_out_rep.='            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",'."\n";
+       $wires_out_rep.='            "block": "variable-io",'."\n";
        $wires_out_rep.='            "port": "o'.$c.'"'."\n";
        $wires_out_rep.='          },'."\n";
        $wires_out_rep.='          "target": {'."\n";

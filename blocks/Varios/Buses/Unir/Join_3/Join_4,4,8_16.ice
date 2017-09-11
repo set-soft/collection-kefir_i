@@ -271,7 +271,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o={i2,i1,i0};\n",
@@ -320,7 +320,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i2"
           }
           ,"size": 4
@@ -331,7 +331,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
           ,"size": 4
@@ -342,14 +342,14 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
           ,"size": 8
         },
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {

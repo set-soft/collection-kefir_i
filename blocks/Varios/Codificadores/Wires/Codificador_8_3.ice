@@ -266,7 +266,7 @@
         },
         {
           "id": "variable-ins",
-          "type": "c215dcbde12de3ed3d2d691facadff58acd65a43",
+          "type": "c1c865b4f3f3a5f9480778763df59e4e7f6ddebc",
           "position": {
             "x": 168,
             "y": 64
@@ -278,7 +278,7 @@
         },
         {
           "id": "variable-outs",
-          "type": "d2324584a2cb4d1ab4181cb50981b3149541b66b",
+          "type": "f8c6d4676d297a76da45ea7dc99d8b5947c4baa5",
           "position": {
             "x": 648,
             "y": 104
@@ -622,7 +622,7 @@
     }
   }
     },
-    "c215dcbde12de3ed3d2d691facadff58acd65a43": {
+    "c1c865b4f3f3a5f9480778763df59e4e7f6ddebc": {
   "package": {
     "name": "Join (wires -> 8)",
     "version": "0.0.1",
@@ -736,7 +736,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o={i7,i6,i5,i4,i3,i2,i1,i0};\n",
@@ -791,7 +791,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -806,7 +806,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i7"
           }
         },
@@ -816,7 +816,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i6"
           }
         },
@@ -826,7 +826,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i5"
           }
         },
@@ -836,7 +836,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i4"
           }
         },
@@ -846,7 +846,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i3"
           }
         },
@@ -856,7 +856,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i2"
           }
         },
@@ -866,7 +866,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -876,7 +876,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }
@@ -892,7 +892,7 @@
     }
   }
     },
-    "d2324584a2cb4d1ab4181cb50981b3149541b66b": {
+    "f8c6d4676d297a76da45ea7dc99d8b5947c4baa5": {
   "package": {
     "name": "Split (3 -> wires)",
     "version": "0.0.1",
@@ -952,7 +952,7 @@
           }
         },
         {
-          "id": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o2=i[2];\nassign o1=i[1];\nassign o0=i[0];\n",
@@ -996,14 +996,14 @@
             "port": "out"
           },
           "target": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "i"
           }
           ,"size": 3
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o2"
           },
           "target": {
@@ -1013,7 +1013,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o1"
           },
           "target": {
@@ -1023,7 +1023,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o0"
           },
           "target": {

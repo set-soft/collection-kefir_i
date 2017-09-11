@@ -705,7 +705,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o={i25,i24,i23,i22,i21,i20,i19,i18,i17,i16,i15,i14,i13,i12,i11,i10,i9,i8,i7,i6,i5,i4,i3,i2,i1,i0};\n",
@@ -814,7 +814,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -829,7 +829,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i25"
           }
         },
@@ -839,7 +839,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i24"
           }
         },
@@ -849,7 +849,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i23"
           }
         },
@@ -859,7 +859,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i22"
           }
         },
@@ -869,7 +869,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i21"
           }
         },
@@ -879,7 +879,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i20"
           }
         },
@@ -889,7 +889,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i19"
           }
         },
@@ -899,7 +899,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i18"
           }
         },
@@ -909,7 +909,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i17"
           }
         },
@@ -919,7 +919,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i16"
           }
         },
@@ -929,7 +929,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i15"
           }
         },
@@ -939,7 +939,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i14"
           }
         },
@@ -949,7 +949,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i13"
           }
         },
@@ -959,7 +959,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i12"
           }
         },
@@ -969,7 +969,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i11"
           }
         },
@@ -979,7 +979,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i10"
           }
         },
@@ -989,7 +989,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i9"
           }
         },
@@ -999,7 +999,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i8"
           }
         },
@@ -1009,7 +1009,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i7"
           }
         },
@@ -1019,7 +1019,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i6"
           }
         },
@@ -1029,7 +1029,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i5"
           }
         },
@@ -1039,7 +1039,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i4"
           }
         },
@@ -1049,7 +1049,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i3"
           }
         },
@@ -1059,7 +1059,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i2"
           }
         },
@@ -1069,7 +1069,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -1079,7 +1079,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }

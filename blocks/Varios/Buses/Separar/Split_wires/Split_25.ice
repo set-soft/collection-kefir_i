@@ -680,7 +680,7 @@
           }
         },
         {
-          "id": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o24=i[24];\nassign o23=i[23];\nassign o22=i[22];\nassign o21=i[21];\nassign o20=i[20];\nassign o19=i[19];\nassign o18=i[18];\nassign o17=i[17];\nassign o16=i[16];\nassign o15=i[15];\nassign o14=i[14];\nassign o13=i[13];\nassign o12=i[12];\nassign o11=i[11];\nassign o10=i[10];\nassign o9=i[9];\nassign o8=i[8];\nassign o7=i[7];\nassign o6=i[6];\nassign o5=i[5];\nassign o4=i[4];\nassign o3=i[3];\nassign o2=i[2];\nassign o1=i[1];\nassign o0=i[0];\n",
@@ -790,14 +790,14 @@
             "port": "out"
           },
           "target": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "i"
           }
           ,"size": 25
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o24"
           },
           "target": {
@@ -807,7 +807,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o23"
           },
           "target": {
@@ -817,7 +817,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o22"
           },
           "target": {
@@ -827,7 +827,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o21"
           },
           "target": {
@@ -837,7 +837,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o20"
           },
           "target": {
@@ -847,7 +847,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o19"
           },
           "target": {
@@ -857,7 +857,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o18"
           },
           "target": {
@@ -867,7 +867,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o17"
           },
           "target": {
@@ -877,7 +877,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o16"
           },
           "target": {
@@ -887,7 +887,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o15"
           },
           "target": {
@@ -897,7 +897,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o14"
           },
           "target": {
@@ -907,7 +907,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o13"
           },
           "target": {
@@ -917,7 +917,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o12"
           },
           "target": {
@@ -927,7 +927,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o11"
           },
           "target": {
@@ -937,7 +937,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o10"
           },
           "target": {
@@ -947,7 +947,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o9"
           },
           "target": {
@@ -957,7 +957,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o8"
           },
           "target": {
@@ -967,7 +967,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o7"
           },
           "target": {
@@ -977,7 +977,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o6"
           },
           "target": {
@@ -987,7 +987,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o5"
           },
           "target": {
@@ -997,7 +997,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o4"
           },
           "target": {
@@ -1007,7 +1007,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o3"
           },
           "target": {
@@ -1017,7 +1017,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o2"
           },
           "target": {
@@ -1027,7 +1027,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o1"
           },
           "target": {
@@ -1037,7 +1037,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o0"
           },
           "target": {

@@ -264,7 +264,7 @@
           }
         },
         {
-          "id": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o8=i[8];\nassign o7=i[7];\nassign o6=i[6];\nassign o5=i[5];\nassign o4=i[4];\nassign o3=i[3];\nassign o2=i[2];\nassign o1=i[1];\nassign o0=i[0];\n",
@@ -326,14 +326,14 @@
             "port": "out"
           },
           "target": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "i"
           }
           ,"size": 9
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o8"
           },
           "target": {
@@ -343,7 +343,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o7"
           },
           "target": {
@@ -353,7 +353,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o6"
           },
           "target": {
@@ -363,7 +363,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o5"
           },
           "target": {
@@ -373,7 +373,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o4"
           },
           "target": {
@@ -383,7 +383,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o3"
           },
           "target": {
@@ -393,7 +393,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o2"
           },
           "target": {
@@ -403,7 +403,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o1"
           },
           "target": {
@@ -413,7 +413,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o0"
           },
           "target": {

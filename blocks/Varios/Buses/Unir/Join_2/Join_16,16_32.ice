@@ -446,7 +446,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o={h,l};\n",
@@ -490,7 +490,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "h"
           }
           ,"size": 16
@@ -501,7 +501,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "l"
           }
           ,"size": 16
@@ -509,7 +509,7 @@
         },
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {

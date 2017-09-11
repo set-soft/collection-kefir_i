@@ -129,7 +129,7 @@
         },
         {
           "id": "d1b5a750-63d2-40e3-92d2-ebc6f1cf730a",
-          "type": "00fffa940e932df40913c596499d56bf39144fc0",
+          "type": "5204596c09fe587128e6bbccf7caf63cc4715f1a",
           "position": {
             "x": 288,
             "y": 88
@@ -349,7 +349,7 @@
     }
   }
     },
-    "00fffa940e932df40913c596499d56bf39144fc0": {
+    "5204596c09fe587128e6bbccf7caf63cc4715f1a": {
   "package": {
     "name": "CapSense 2",
     "version": "1.1.0",
@@ -527,7 +527,7 @@
         },
         {
           "id": "e789f3f3-f41c-43b7-ad52-45e9d77ff823",
-          "type": "39fbae8b2ba2baa5260d617191ad1a3ec2c8a3ba",
+          "type": "c736e7180b10c995846b9ca232113d6833f259f3",
           "position": {
             "x": 1840,
             "y": 400
@@ -539,7 +539,7 @@
         },
         {
           "id": "744d14c1-65b9-45fd-a2fc-79a249fe2952",
-          "type": "59419099eed44cf1bf3d67a74df663d717022e63",
+          "type": "f9052490725e5ac88d88e11756ce459116775515",
           "position": {
             "x": 648,
             "y": 600
@@ -940,7 +940,7 @@
     }
   }
     },
-    "39fbae8b2ba2baa5260d617191ad1a3ec2c8a3ba": {
+    "c736e7180b10c995846b9ca232113d6833f259f3": {
   "package": {
     "name": "Split (2 -> wires)",
     "version": "0.0.1",
@@ -989,7 +989,7 @@
           }
         },
         {
-          "id": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o1=i[1];\nassign o0=i[0];\n",
@@ -1030,14 +1030,14 @@
             "port": "out"
           },
           "target": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "i"
           }
           ,"size": 2
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o1"
           },
           "target": {
@@ -1047,7 +1047,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o0"
           },
           "target": {
@@ -1067,7 +1067,7 @@
     }
   }
     },
-    "59419099eed44cf1bf3d67a74df663d717022e63": {
+    "f9052490725e5ac88d88e11756ce459116775515": {
   "package": {
     "name": "Join (wires -> 2)",
     "version": "0.0.1",
@@ -1115,7 +1115,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o={i1,i0};\n",
@@ -1152,7 +1152,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -1167,7 +1167,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -1177,7 +1177,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }

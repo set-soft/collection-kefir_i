@@ -96,7 +96,7 @@
         },
         {
           "id": "d9d6673e-027b-4380-9b73-de1b3eb504fa",
-          "type": "e5c4ce94d73d80e76ea722b3ee100de94db7dee4",
+          "type": "ec0efc3f70de202cff45ecc692596fe216d933ef",
           "position": {
             "x": 752,
             "y": 360
@@ -1151,7 +1151,7 @@
     }
   }
     },
-    "e5c4ce94d73d80e76ea722b3ee100de94db7dee4": {
+    "ec0efc3f70de202cff45ecc692596fe216d933ef": {
   "package": {
     "name": "OR 2 inputs",
     "version": "1.0.1",
@@ -1197,7 +1197,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o=i1 | i0;",
@@ -1232,7 +1232,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -1247,7 +1247,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -1257,7 +1257,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }

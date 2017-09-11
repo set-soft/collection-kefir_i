@@ -171,7 +171,7 @@
         },
         {
           "id": "a3af9b57-b159-482b-a470-40cd616978e2",
-          "type": "7e367280ca5cbf974aa7bcd49e69f00a12f46ae9",
+          "type": "e69d3cb35e6ae239af80b400c55d7d2820942d68",
           "position": {
             "x": 376,
             "y": 144
@@ -183,7 +183,7 @@
         },
         {
           "id": "281c7773-7394-4c98-afbf-4dfbe23206d3",
-          "type": "ab12665dfa35eecaf9432146c7c6c4da55bc45cd",
+          "type": "9170e2a10979240b02bb2fe95860e44064cb83ba",
           "position": {
             "x": 376,
             "y": 224
@@ -272,7 +272,7 @@
     }
   },
   "dependencies": {
-    "7e367280ca5cbf974aa7bcd49e69f00a12f46ae9": {
+    "e69d3cb35e6ae239af80b400c55d7d2820942d68": {
   "package": {
     "name": "XOR 2 inputs",
     "version": "1.0.1",
@@ -318,7 +318,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o=i1 ^ i0;",
@@ -353,7 +353,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -368,7 +368,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -378,7 +378,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }
@@ -394,7 +394,7 @@
     }
   }
     },
-    "ab12665dfa35eecaf9432146c7c6c4da55bc45cd": {
+    "9170e2a10979240b02bb2fe95860e44064cb83ba": {
   "package": {
     "name": "AND 2 inputs",
     "version": "1.0.1",
@@ -440,7 +440,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o=i1 & i0;",
@@ -475,7 +475,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -490,7 +490,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -500,7 +500,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }

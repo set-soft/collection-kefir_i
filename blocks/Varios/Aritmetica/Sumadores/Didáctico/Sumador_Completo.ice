@@ -175,7 +175,7 @@
         },
         {
           "id": "d035bddb-3576-4eda-bd41-c266ba7dc81c",
-          "type": "be426baab20756d7592e52a8e6a7d852f3a66c70",
+          "type": "a8184aadb90914affb30201a505131ee6a17660f",
           "position": {
             "x": 312,
             "y": 176
@@ -187,7 +187,7 @@
         },
         {
           "id": "3cd67a71-e30b-463f-ace2-81c5e14f29d8",
-          "type": "be426baab20756d7592e52a8e6a7d852f3a66c70",
+          "type": "a8184aadb90914affb30201a505131ee6a17660f",
           "position": {
             "x": 496,
             "y": 176
@@ -199,7 +199,7 @@
         },
         {
           "id": "8c2560d9-ef34-4adc-848b-c8ac9b548bfa",
-          "type": "e5c4ce94d73d80e76ea722b3ee100de94db7dee4",
+          "type": "ec0efc3f70de202cff45ecc692596fe216d933ef",
           "position": {
             "x": 648,
             "y": 232
@@ -308,7 +308,7 @@
     }
   },
   "dependencies": {
-    "be426baab20756d7592e52a8e6a7d852f3a66c70": {
+    "a8184aadb90914affb30201a505131ee6a17660f": {
   "package": {
     "name": "Medio sumador",
     "version": "1.0.0",
@@ -447,7 +447,7 @@
         },
         {
           "id": "a3af9b57-b159-482b-a470-40cd616978e2",
-          "type": "7e367280ca5cbf974aa7bcd49e69f00a12f46ae9",
+          "type": "e69d3cb35e6ae239af80b400c55d7d2820942d68",
           "position": {
             "x": 376,
             "y": 144
@@ -459,7 +459,7 @@
         },
         {
           "id": "281c7773-7394-4c98-afbf-4dfbe23206d3",
-          "type": "ab12665dfa35eecaf9432146c7c6c4da55bc45cd",
+          "type": "9170e2a10979240b02bb2fe95860e44064cb83ba",
           "position": {
             "x": 376,
             "y": 224
@@ -548,7 +548,7 @@
     }
   }
     },
-    "7e367280ca5cbf974aa7bcd49e69f00a12f46ae9": {
+    "e69d3cb35e6ae239af80b400c55d7d2820942d68": {
   "package": {
     "name": "XOR 2 inputs",
     "version": "1.0.1",
@@ -594,7 +594,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o=i1 ^ i0;",
@@ -629,7 +629,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -644,7 +644,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -654,7 +654,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }
@@ -670,7 +670,7 @@
     }
   }
     },
-    "ab12665dfa35eecaf9432146c7c6c4da55bc45cd": {
+    "9170e2a10979240b02bb2fe95860e44064cb83ba": {
   "package": {
     "name": "AND 2 inputs",
     "version": "1.0.1",
@@ -716,7 +716,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o=i1 & i0;",
@@ -751,7 +751,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -766,7 +766,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -776,7 +776,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }
@@ -792,7 +792,7 @@
     }
   }
     },
-    "e5c4ce94d73d80e76ea722b3ee100de94db7dee4": {
+    "ec0efc3f70de202cff45ecc692596fe216d933ef": {
   "package": {
     "name": "OR 2 inputs",
     "version": "1.0.1",
@@ -838,7 +838,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o=i1 | i0;",
@@ -873,7 +873,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -888,7 +888,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -898,7 +898,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }

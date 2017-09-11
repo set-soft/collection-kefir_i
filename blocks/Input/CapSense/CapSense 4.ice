@@ -275,7 +275,7 @@
         },
         {
           "id": "f9842ef3-56e2-4df8-aadf-1de5fa34c952",
-          "type": "1ef58f3dda60e24c9e92a7522fb0790a6339e23f",
+          "type": "60cbe8a4a2f983d07ce52dd82959dacc5d3a8dcc",
           "position": {
             "x": 648,
             "y": 568
@@ -332,7 +332,7 @@
         },
         {
           "id": "273bf711-2a0a-4099-8fef-e01ed90378c4",
-          "type": "951452288a69be1c838260ed90f8c6c02b2d4adc",
+          "type": "d5daa4e5fd3de95c780e7d304ee75c1c5f4b30e3",
           "position": {
             "x": 1840,
             "y": 368
@@ -887,7 +887,7 @@
     }
   }
     },
-    "1ef58f3dda60e24c9e92a7522fb0790a6339e23f": {
+    "60cbe8a4a2f983d07ce52dd82959dacc5d3a8dcc": {
   "package": {
     "name": "Join (wires -> 4)",
     "version": "0.0.1",
@@ -957,7 +957,7 @@
           }
         },
         {
-          "id": "3545528c-05e2-4e95-8223-5b7b77587423",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o={i3,i2,i1,i0};\n",
@@ -1000,7 +1000,7 @@
       "wires": [
         {
           "source": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "o"
           },
           "target": {
@@ -1015,7 +1015,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i3"
           }
         },
@@ -1025,7 +1025,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i2"
           }
         },
@@ -1035,7 +1035,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i1"
           }
         },
@@ -1045,7 +1045,7 @@
             "port": "out"
           },
           "target": {
-            "block": "3545528c-05e2-4e95-8223-5b7b77587423",
+            "block": "variable-io",
             "port": "i0"
           }
         }
@@ -1061,7 +1061,7 @@
     }
   }
     },
-    "951452288a69be1c838260ed90f8c6c02b2d4adc": {
+    "d5daa4e5fd3de95c780e7d304ee75c1c5f4b30e3": {
   "package": {
     "name": "Split (4 -> wires)",
     "version": "0.0.1",
@@ -1132,7 +1132,7 @@
           }
         },
         {
-          "id": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+          "id": "variable-io",
           "type": "basic.code",
           "data": {
             "code": "assign o3=i[3];\nassign o2=i[2];\nassign o1=i[1];\nassign o0=i[0];\n",
@@ -1179,14 +1179,14 @@
             "port": "out"
           },
           "target": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "i"
           }
           ,"size": 4
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o3"
           },
           "target": {
@@ -1196,7 +1196,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o2"
           },
           "target": {
@@ -1206,7 +1206,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o1"
           },
           "target": {
@@ -1216,7 +1216,7 @@
         },
         {
           "source": {
-            "block": "35bc4c48-1bca-4e53-8ebb-fae8cb63cf6e",
+            "block": "variable-io",
             "port": "o0"
           },
           "target": {
