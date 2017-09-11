@@ -471,6 +471,11 @@ all:  \
 	./examples/5.\ Aritmetica/08.\ Restador.ice \
 	./examples/5.\ Aritmetica/09.\ Restador\ simple.ice \
 	./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice \
+	blocks/Varios/Buses/Cruzar/Wires/Cruzar_16.ice \
+	blocks/Varios/Buses/Cruzar/Wires/Cruzar_2.ice \
+	blocks/Varios/Buses/Cruzar/Wires/Cruzar_32.ice \
+	blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice \
+	blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice \
 	blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice \
 	blocks/Varios/Codificadores/Bus/Codificador_2_1_Bus.ice \
 	blocks/Varios/Codificadores/Bus/Codificador_32_5_Bus.ice \
@@ -2354,6 +2359,26 @@ all:  \
 ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice: ./examples/5.\ Aritmetica/Templates/10.\ Sumador\ didáctico.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_4_bits.ice ./blocks/Varios/Buses/Separar/Split_2/Split_4_2,2.ice ./blocks/Varios/Buses/Unir/Join_2/Join_2,2_4.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_2_bits.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_Completo.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Medio_Sumador.ice ./blocks/Logic/XOR/XOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/10.\ Sumador\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
 	perl tools/update_db.pl ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
+
+blocks/Varios/Buses/Cruzar/Wires/Cruzar_16.ice: blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template tools/reemplaza.pl  blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
+	perl tools/reemplaza.pl blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 blocks/Varios/Buses/Cruzar/Wires/Cruzar_16.ice
+	perl tools/update_db.pl blocks/Varios/Buses/Cruzar/Wires/Cruzar_16.ice
+
+blocks/Varios/Buses/Cruzar/Wires/Cruzar_2.ice: blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template tools/reemplaza.pl  blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
+	perl tools/reemplaza.pl blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1 1,1 blocks/Varios/Buses/Cruzar/Wires/Cruzar_2.ice
+	perl tools/update_db.pl blocks/Varios/Buses/Cruzar/Wires/Cruzar_2.ice
+
+blocks/Varios/Buses/Cruzar/Wires/Cruzar_32.ice: blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template tools/reemplaza.pl  blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
+	perl tools/reemplaza.pl blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 blocks/Varios/Buses/Cruzar/Wires/Cruzar_32.ice
+	perl tools/update_db.pl blocks/Varios/Buses/Cruzar/Wires/Cruzar_32.ice
+
+blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice: blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template tools/reemplaza.pl  blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
+	perl tools/reemplaza.pl blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1 1,1,1,1 blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice
+	perl tools/update_db.pl blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice
+
+blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice: blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template tools/reemplaza.pl  blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
+	perl tools/reemplaza.pl blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1 blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice
+	perl tools/update_db.pl blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice
 
 blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice: blocks/Varios/Codificadores/Templates/Codificador_Bus.ice.template tools/reemplaza.pl  blocks/Varios/Codificadores/Templates/Codificador.svg blocks/Varios/Codificadores/Templates/Codificador.v
 	perl tools/reemplaza.pl blocks/Varios/Codificadores/Templates/Codificador_Bus.ice.template 16 4 blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice

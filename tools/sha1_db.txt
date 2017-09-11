@@ -204,6 +204,8 @@
 6cf8fe2ca6786e5444f53f082354cb4919a66624 ./blocks/Varios/Contadores/Asc_Desc/BCD Natural/Contador_BCD_Simple_UD.ice|./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_UD.ice.template 0 0|7a5052cf67ad629d54e75210928ff8eb02c7c09c|12f840be412e23a4cb85d36e9c2439f230898a22
 6eb95c5989abb6d280f7b45729cc97627001b89b ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_4_2.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 4 2
 6f295fd723d0abb774229ecfc22c35df93e633b7 ./blocks/Varios/Buses/Unir/Join_3/Join_8,8,16_32.ice|./blocks/Varios/Buses/Unir/Templates/Join-3.ice.template 8,8,16 32
+6faabc5e003a05e24151ec30d9e993f1d60816ff blocks/Varios/Buses/Cruzar/Wires/Cruzar_32.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
+6fab89d9330568c5a0c534b36fb822f06fd8c382 blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
 703656d913dc4b78d9719a0304f06466a633a5aa ./blocks/Varios/Buses/Expandir/Expandir_16_32.ice|./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 16 32
 71436338ea74aeeeddf51a70d4f6fc0402427225 ./blocks/Const/Bus/1s/Valor_1s_32_bits.ice|./blocks/Const/Bus/Templates/Valor_1s.ice.template 0 32
 7164b557abe94f30f884e7c25cb66a8425cc200a ./blocks/Varios/Aritmetica/Comparadores/Comparador_4.ice|./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.ice.template 4 1
@@ -241,6 +243,7 @@
 7e63bd2c437d1420cb83f5085e472aed8cb15e29 ./blocks/Varios/Buses/Unir/Join_wires/Join_24.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 24
 7e7afee87be53064aaba7271b0aae64b7d4970f3 ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_8_2.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 8 2
 7ebba80e09039216e356945382130acca75e8492 ./blocks/Varios/Buses/Unir/Join_wires/Join_23.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 23
+7edd887ea6b6486a8cadea6bf293f80b35514769 blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1 1,1,1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
 7fb0032178bed0e7e1691be24b62e737831a5c69 ./blocks/Varios/Registros/Simple/Reg_16_Simple.ice|./blocks/Varios/Registros/Templates/Reg_Simple.ice.template 16 16|c4fcb55584b83b43b355218b1304eeb3504f8df5|78b882006678da24215d00b69cdf2c496f6f812f|7a5052cf67ad629d54e75210928ff8eb02c7c09c
 7fc983f00c79d0c3d6396a9d3e1c9ca38eeaf6c1 ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_16_Completo.ice|./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template 16 16|3c6294aaaf4b72713b91a45c2a3078a152811ae5|78b882006678da24215d00b69cdf2c496f6f812f
 80e99011f9eceedac107fabc39a03e429b17466c ./blocks/Varios/Buses/Unir/Join_wires/Join_16.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 16
@@ -463,6 +466,7 @@ f6503ef6c77a6d5a25a80ef4306925b4daa6706e ./blocks/Varios/Buses/Expandir/Expandir
 f651dbb9c691ca1e6519db6c09178e206bdae197 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_3_Ena_Rst.ice|./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 3 3|2a202f6f95c101d58be613f83f048dde00f1d416|78b882006678da24215d00b69cdf2c496f6f812f
 f72dd29db3a1fcff837c7061eb014579c30f25cb ./blocks/Varios/Buses/XNOR/bus_out/XNOR_16.ice|./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 16,16 16|./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 f770902438efe36580bb0cba0edbd22c8fcaa6fa ./examples/3. Desplazamiento/08. Desplazamiento Izquierda Simple.ice|./examples/3.\ Desplazamiento/Templates/08.\ Desplazamiento\ Izquierda\ Simple.ice.template 0 0|b2ff5c93417458e2e8934a326e1bb6b19782027e|0440039c47b72d27e0f3a082b4de4f2c7085ead7|92fe9816cb11035ae01029cef2805b7130a8ee0d|ec0efc3f70de202cff45ecc692596fe216d933ef
+f7e44106c5fa655dee5455f7037ab340825d9d2e blocks/Varios/Buses/Cruzar/Wires/Cruzar_16.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
 f82c15b4869c20b3cb40115e564066db9e0ffae7 ./blocks/Varios/Buses/Separar/Split_wires/Split_24.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 24 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 f8c6d4676d297a76da45ea7dc99d8b5947c4baa5 ./blocks/Varios/Buses/Separar/Split_wires/Split_3.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 3 1,1,1
 f9052490725e5ac88d88e11756ce459116775515 ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1 2
@@ -477,3 +481,4 @@ fcde3eadf1f6b1629e126309ac962e3a2dfbe210 ./blocks/Varios/Buses/Seleccionar/Bus/S
 fcfa8a56be05439f5f100b8278609f5791b1b3a9 ./blocks/Varios/Buses/Expandir/Expandir_8_16.ice|./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 8 16
 fe24141e636c8def4888c3ecbd9729ec94da8667 ./blocks/Logic/AND/AND_8.ice|./blocks/Logic/AND/Templates/AND.ice.template 1,1,1,1,1,1,1,1 1|./blocks/Logic/AND/Templates/AND.svg
 ff664633265f890b2c6809af265e41acc4307497 ./blocks/Varios/Contadores/Asc_Desc/32 bits/Contador_Simple_32_UD.ice|./blocks/Varios/Contadores/Templates/Contador_Simple_32_UD.ice.template 0 0|7a5052cf67ad629d54e75210928ff8eb02c7c09c|1e5f02c2566d5df911041b9eb02c79b13e33f709
+ffad33a89bb37d83d0a0284c7099b012f8982c0c blocks/Varios/Buses/Cruzar/Wires/Cruzar_2.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1 1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg

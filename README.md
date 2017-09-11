@@ -52,6 +52,8 @@ Collection for the Kefir I board in Icestudio.
   * *Biestables* D/RS/T flip-flops
   * *Bombeo* 1 Hz square wave
   * *Buses*
+    * *Crossover* (invert bit order)
+      * *Wires* (2/4/8/16/32)
     * *Expandir* expand a bus with 0s
       * 1 -> 2/4/8/16/32
       * 2 -> 4/8/16/32

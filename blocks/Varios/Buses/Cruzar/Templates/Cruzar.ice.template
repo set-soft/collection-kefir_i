@@ -1,0 +1,55 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Crossover of @num_ins wires",
+    "version": "1.0.0",
+    "description": "Exchanges the bit order (MSB<->LSB)",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Cross2.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+@inputs,
+@outputs,
+        {
+          "id": "variable-io",
+          "type": "basic.code",
+          "data": {
+            "code": "@crossover_code",
+            "params": [],
+            "ports": {
+              "in": [
+                @in_code
+              ],
+              "out": [
+                @out_code
+              ]
+            }
+          },
+          "position": {
+            "x": 320,
+            "y": 232
+          },
+          "size": {
+            "width": 288,
+            "height": @in_height
+          }
+        }
+      ],
+      "wires": [
+        @wires_in,
+        @wires_out
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -18,
+        "y": -56.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {}
+}

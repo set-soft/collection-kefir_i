@@ -1,0 +1,5 @@
+"Cruzar.ice.template" 1,1 1,1 "Wires/Cruzar_2.ice"
+"Cruzar.ice.template" 1,1,1,1 1,1,1,1 "Wires/Cruzar_4.ice"
+"Cruzar.ice.template" 1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1 "Wires/Cruzar_8.ice"
+"Cruzar.ice.template" 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 "Wires/Cruzar_16.ice"
+"Cruzar.ice.template" 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 "Wires/Cruzar_32.ice"

@@ -56,6 +56,7 @@ if ($c>0)
    $code_or_i='';
    $code_xor_i='';
    print "Inputs:\n";
+   $c2=0;
    foreach $i (@inputs)
       {
        $pins=GenPins($i);
@@ -134,6 +135,9 @@ if ($c>0)
        $code_or_i .="i$c";
        $code_xor_i.="i$c";
 
+       $crossover_code.="assign o$c=i$c2;\\n";
+
+       $c2++;
        $c--;
        $inputs_rep.="," if $c>=0;
        $in_code_rep.="," if $c>=0;
@@ -342,6 +346,7 @@ $a=~s/\@code_xor_bi/$code_xor_bi/g;
 $a=~s/\@code_and_i/$code_and_i/g;
 $a=~s/\@code_or_i/$code_or_i/g;
 $a=~s/\@code_xor_i/$code_xor_i/g;
+$a=~s/\@crossover_code/$crossover_code/g;
 
 $dif_sz=$outs-$ins;
 $a=~s/\@0o_i/$dif_sz\'b0/g;
