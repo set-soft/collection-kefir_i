@@ -461,6 +461,7 @@ all:  \
 	./examples/4.\ Combinacional\ Misc/04.\ Four\ LEDs\ sequence\ deco.ice \
 	./examples/4.\ Combinacional\ Misc/05.\ Two\ LEDs\ alternate\ blink\ deco\ no\ ena.ice \
 	./examples/4.\ Combinacional\ Misc/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice \
+	./examples/4.\ Combinacional\ Misc/07.\ Codificador\ 4\ a\ 2.ice \
 	./examples/5.\ Aritmetica/01.\ Comparar\ >,\=,<.ice \
 	./examples/5.\ Aritmetica/02.\ Comparar\ >\=,!\=,<\=.ice \
 	./examples/5.\ Aritmetica/03.\ Sumador.ice \
@@ -2319,6 +2320,10 @@ all:  \
 ./examples/4.\ Combinacional\ Misc/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice: ./examples/4.\ Combinacional\ Misc/Templates/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Reducir/Reducir_32_2.ice ./blocks/Varios/Decodificadores/Simple/Deco_2_4_no_ena.ice ./blocks/Varios/Pulso/Corazon_1Hz_P.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/4.\ Combinacional\ Misc/Templates/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice.template 0 0 ./examples/4.\ Combinacional\ Misc/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice
 	perl tools/update_db.pl ./examples/4.\ Combinacional\ Misc/06.\ Four\ LEDs\ sequence\ deco\ no\ ena.ice
+
+./examples/4.\ Combinacional\ Misc/07.\ Codificador\ 4\ a\ 2.ice: ./examples/4.\ Combinacional\ Misc/Templates/07.\ Codificador\ 4\ a\ 2.ice.template tools/reemplaza.pl  ./blocks/Input/CapSense/CapSense\ 4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice blocks/Varios/Codificadores/Wires/Codificador_4_2.ice blocks/Varios/Codificadores/Bus/Codificador_4_2_Bus.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_2.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_2.ice ./blocks/Const/Bus/0/Valor_0_2_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Logic/AND/AND_2.ice blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice
+	perl tools/reemplaza.pl ./examples/4.\ Combinacional\ Misc/Templates/07.\ Codificador\ 4\ a\ 2.ice.template 0 0 ./examples/4.\ Combinacional\ Misc/07.\ Codificador\ 4\ a\ 2.ice
+	perl tools/update_db.pl ./examples/4.\ Combinacional\ Misc/07.\ Codificador\ 4\ a\ 2.ice
 
 ./examples/5.\ Aritmetica/01.\ Comparar\ >,\=,<.ice: ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ >,\=,<.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_8_bits.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ \>,\=,\<.ice.template 0 0 ./examples/5.\ Aritmetica/01.\ Comparar\ \>,\=,\<.ice
