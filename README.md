@@ -159,6 +159,7 @@ Collection for the Kefir I board in Icestudio.
   * 04\. Four LEDs sequence deco
   * 05\. Two LEDs alternate blink deco no ena
   * 06\. Four LEDs sequence deco no ena
+  * 07\. Codificador 4 a 2
 * *5\. Aritmetica*
   * 01\. Comparar >,=,<
   * 02\. Comparar >=,!=,<=

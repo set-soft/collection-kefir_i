@@ -4,3 +4,4 @@
 "04. Four LEDs sequence deco.ice.template" 0 0 "04. Four LEDs sequence deco.ice"
 "05. Two LEDs alternate blink deco no ena.ice.template" 0 0 "05. Two LEDs alternate blink deco no ena.ice"
 "06. Four LEDs sequence deco no ena.ice.template" 0 0 "06. Four LEDs sequence deco no ena.ice"
+"07. Codificador 4 a 2.ice.template" 0 0 "07. Codificador 4 a 2.ice"
