@@ -1,0 +1,149 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Flip-flop D Simple @sz_i",
+    "version": "1.0.0",
+    "description": "Flip-flop D con valor inicial @sz_i",
+    "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
+    "image": "@svg<Flip-flop-D-0.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 120,
+            "y": 184
+          }
+        },
+        {
+          "id": "output-q",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 944,
+            "y": 288
+          }
+        },
+        {
+          "id": "input-d",
+          "type": "basic.input",
+          "data": {
+            "name": "d",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 120,
+            "y": 400
+          }
+        },
+        {
+          "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam cl=0;\nlocalparam pr=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam DINI=@sz_i;\nwire nq;\n\n@verilog<ffd.v>",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "d"
+                }
+              ],
+              "out": [
+                {
+                  "name": "q"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 320,
+            "y": 104
+          },
+          "size": {
+            "width": 560,
+            "height": 432
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "d"
+          }
+        },
+        {
+          "source": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "q"
+          },
+          "target": {
+            "block": "output-q",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 15,
+        "y": 85.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

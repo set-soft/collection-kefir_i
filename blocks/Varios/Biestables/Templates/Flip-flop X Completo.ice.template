@@ -1,0 +1,340 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Flip-flop D completo",
+    "version": "1.0.0",
+    "description": "Flip-flop D con entradas de fuerza, enable, reset y valor inicial",
+    "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
+    "image": "@svg<Flip-flop-D-DINI.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 128,
+            "y": 112
+          }
+        },
+        {
+          "id": "input-d",
+          "type": "basic.input",
+          "data": {
+            "name": "d",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 184
+          }
+        },
+        {
+          "id": "output-q",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 936,
+            "y": 184
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 256
+          }
+        },
+        {
+          "id": "input-ena",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 328
+          }
+        },
+        {
+          "id": "input-cl",
+          "type": "basic.input",
+          "data": {
+            "name": "cl",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 400
+          }
+        },
+        {
+          "id": "output-nq",
+          "type": "basic.output",
+          "data": {
+            "name": "nq",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 936,
+            "y": 400
+          }
+        },
+        {
+          "id": "input-pr",
+          "type": "basic.input",
+          "data": {
+            "name": "pr",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 472
+          }
+        },
+        {
+          "id": "constant-DINI",
+          "type": "basic.constant",
+          "data": {
+            "name": "DINI",
+            "value": "0",
+            "local": false
+          },
+          "position": {
+            "x": 552,
+            "y": -16
+          }
+        },
+        {
+          "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
+          "type": "basic.code",
+          "data": {
+            "code": "@verilog<ffd.v>",
+            "params": [
+              {
+                "name": "DINI"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "d"
+                },
+                {
+                  "name": "rst"
+                },
+                {
+                  "name": "ena"
+                },
+                {
+                  "name": "cl"
+                },
+                {
+                  "name": "pr"
+                }
+              ],
+              "out": [
+                {
+                  "name": "q"
+                },
+                {
+                  "name": "nq"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 320,
+            "y": 104
+          },
+          "size": {
+            "width": 560,
+            "height": 432
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-pr",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "pr"
+          }
+        },
+        {
+          "source": {
+            "block": "input-cl",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "cl"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "ena"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "rst"
+          }
+        },
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "d"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-DINI",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "DINI"
+          }
+        },
+        {
+          "source": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "q"
+          },
+          "target": {
+            "block": "output-q",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "nq"
+          },
+          "target": {
+            "block": "output-nq",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 114.2246,
+        "y": 53.0145
+      },
+      "zoom": 0.8134
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

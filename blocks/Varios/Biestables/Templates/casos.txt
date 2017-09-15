@@ -10,3 +10,8 @@
 "Chincheta-T-sync-0.ice.template" 0 0 "Chincheta-T-sync-0.ice"
 "Chincheta-T-sync-1.ice.template" 0 0 "Chincheta-T-sync-1.ice"
 "Chincheta-T-sync-ini.ice.template" 0 0 "Chincheta-T-sync-ini.ice"
+"Flip-flop X Completo.ice.template" 0 0 "Flip-flop D/Flip-flop D Completo.ice"
+"Flip-flop X Ena Rst.ice.template" 0 0 "Flip-flop D/Flip-flop D Ena Rst.ice"
+"Flip-flop X Simple DINI.ice.template" 0 0 "Flip-flop D/Flip-flop D Simple DINI.ice"
+"Flip-flop X Simple.ice.template" 0 0 "Flip-flop D/Flip-flop D Simple 0.ice"
+"Flip-flop X Simple.ice.template" 1 0 "Flip-flop D/Flip-flop D Simple 1.ice"
