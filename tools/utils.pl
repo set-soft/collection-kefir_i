@@ -190,6 +190,15 @@ sub GetTemplateFromRest
  return UnEscapeForShell("$1.template");
 }
 
+sub DecomposeRule
+{
+ my $rule=$_[0];
+
+ $rule=~/(.*).template\s+(\S+)\s+(\S+)/ or die "Malformed rule: <$rule>";
+
+ ("$1.template",$2,$3);
+}
+
 sub GetBlockDepsFromRest
 {
  my $rest=$_[0];
@@ -209,4 +218,79 @@ sub GetBlockDepsFromRest
  $childs;
 }
 
+sub FileNameIORep
+{
+ my ($a,$ins,$outs)=@_;
+ my (@inputs,@outputs);
+ my ($c,$rep,$o,$i);
+
+ @outputs=split(/,/,$outs);
+ $c=scalar(@outputs);
+ $a=~s/\@num_outs/$c/g;
+ $c--;
+ if ($c>0)
+   {
+    foreach $o (@outputs)
+       {
+        unless ($o=~/^\d/)
+          {# Alphanumeric
+           $rep=uc($o);
+           $a=~s/\@name_ou$c/$rep/g;
+           $rep=lc($o);
+           $a=~s/\@name_ol$c/$rep/g;
+           $rep=$o;
+           $a=~s/\@name_o$c/$rep/g;
+           $c--;
+          }
+       }
+   }
+ else
+   {
+    $o=$outs;
+    unless ($o=~/^\d/)
+      {# Alphanumeric
+       $rep=uc($o);
+       $a=~s/\@name_ou/$rep/g;
+       $rep=lc($o);
+       $a=~s/\@name_ol/$rep/g;
+       $rep=$o;
+       $a=~s/\@name_o/$rep/g;
+      }
+   }
+
+ @inputs=split(/,/,$ins);
+ $c=scalar(@inputs);
+ $a=~s/\@num_ins/$c/g;
+ $c--;
+ if ($c>0)
+   {
+    foreach $i (@inputs)
+       {
+        unless ($i=~/^\d/)
+          {# Alphanumeric
+           $rep=uc($i);
+           $a=~s/\@name_iu$c/$rep/g;
+           $rep=lc($i);
+           $a=~s/\@name_il$c/$rep/g;
+           $rep=$i;
+           $a=~s/\@name_i$c/$rep/g;
+           $c--;
+          }
+       }
+   }
+ else
+   {
+    $i=$ins;
+    unless ($i=~/^\d/)
+      {# Alphanumeric
+       $rep=uc($i);
+       $a=~s/\@name_iu/$rep/g;
+       $rep=lc($i);
+       $a=~s/\@name_il/$rep/g;
+       $rep=$i;
+       $a=~s/\@name_i/$rep/g;
+      }
+   }
+ $a;
+}
 1;

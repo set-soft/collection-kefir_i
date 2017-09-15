@@ -1,11 +1,11 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Flip-flop D completo",
+    "name": "Flip-flop @name_ou completo",
     "version": "1.0.0",
-    "description": "Flip-flop D con entradas de fuerza, enable, reset y valor inicial",
+    "description": "Flip-flop @name_ou con entradas de fuerza, enable, reset y valor inicial",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "@svg<Flip-flop-D-DINI.svg>"
+    "image": "@svg<Flip-flop-@name_ou-DINI.svg>"
   },
   "design": {
     "board": "kefir",
@@ -32,10 +32,10 @@
           }
         },
         {
-          "id": "input-d",
+          "id": "input-@name_ol",
           "type": "basic.input",
           "data": {
-            "name": "d",
+            "name": "@name_ol",
             "pins": [
               {
                 "index": "0",
@@ -186,7 +186,7 @@
           "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
           "type": "basic.code",
           "data": {
-            "code": "@verilog<ffd.v>",
+            "code": "@verilog<ff@name_ol.v>",
             "params": [
               {
                 "name": "DINI"
@@ -198,7 +198,7 @@
                   "name": "clk"
                 },
                 {
-                  "name": "d"
+                  "name": "@name_ol"
                 },
                 {
                   "name": "rst"
@@ -286,12 +286,12 @@
         },
         {
           "source": {
-            "block": "input-d",
+            "block": "input-@name_ol",
             "port": "out"
           },
           "target": {
             "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "d"
+            "port": "@name_ol"
           }
         },
         {

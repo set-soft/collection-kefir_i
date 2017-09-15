@@ -1,4 +1,10 @@
 #!/usr/bin/perl
+#
+# Usados cuando el segundo parámetro son letras
+# @name_ouN el nombre de ese parámetro en uppercase
+# @name_olN el nombre de ese parámetro en lowercase
+# @name_oN  el nombre de ese parámetro
+#
 use File::Basename;
 $mod='./'.dirname(__FILE__).'/utils.pl';
 require $mod;
@@ -16,6 +22,9 @@ $a=cat($tpl);
 $tpl=~/(.*)\/([^\/]+)$/;
 $tpldir=$1;
 
+# Alphanumeric replacements pass 1
+$a=FileNameIORep($a,$ins,$outs);
+
 # Replace the SVG first, it could contain tags
 while ($a=~/\@svg\<([^\>]+)\>/g)
   {
@@ -28,15 +37,16 @@ while ($a=~/\@svg\<([^\>]+)\>/g)
 while ($a=~/\@verilog\<([^\>]+)\>/g)
   {
    $f=$1;
-   $r=EscapeCode(cat("$tpldir/$f"));
-   $r=~s/(\\n)+$//;
-   $a=~s/\@verilog\<$f\>/$r/g;
+   unless ($f=~/\@/)
+     {
+      $r=EscapeCode(cat("$tpldir/$f"));
+      $r=~s/(\\n)+$//;
+      $a=~s/\@verilog\<$f\>/$r/g;
+     }
   }
 
 @inputs=split(/,/,$ins);
-$c=scalar(@inputs);
-$a=~s/\@num_ins/$c/g;
-$c--;
+$c=scalar(@inputs)-1;
 $inputs_rep='';
 $in_code_rep='';
 $wires_in_rep='';
@@ -192,9 +202,7 @@ else
 $code_join_wire_rep.="};\\n";
 
 @outputs=split(/,/,$outs);
-$c=scalar(@outputs);
-$a=~s/\@num_outs/$c/g;
-$c--;
+$c=scalar(@outputs)-1;
 $outputs_rep='';
 $out_code_rep='';
 $wires_out_rep='';
@@ -324,6 +332,9 @@ else
       $a=~s/\@range_s2_o//g;
      }
   }
+
+# Alphanumeric replacements pass 2
+$a=FileNameIORep($a,$ins,$outs);
 
 $a=~s/\@outputs/$outputs_rep/g;
 $a=~s/\@out_code/$out_code_rep/g;

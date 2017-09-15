@@ -1,11 +1,11 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Flip-flop D Simple @sz_i",
+    "name": "Flip-flop @name_ou Simple @sz_i",
     "version": "1.0.0",
-    "description": "Flip-flop D con valor inicial @sz_i",
+    "description": "Flip-flop @name_ou con valor inicial @sz_i",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "@svg<Flip-flop-D-0.svg>"
+    "image": "@svg<Flip-flop-@name_ou-N.svg>"
   },
   "design": {
     "board": "kefir",
@@ -51,10 +51,10 @@
           }
         },
         {
-          "id": "input-d",
+          "id": "input-@name_ol",
           "type": "basic.input",
           "data": {
-            "name": "d",
+            "name": "@name_ol",
             "pins": [
               {
                 "index": "0",
@@ -74,7 +74,7 @@
           "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
           "type": "basic.code",
           "data": {
-            "code": "localparam cl=0;\nlocalparam pr=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam DINI=@sz_i;\nwire nq;\n\n@verilog<ffd.v>",
+            "code": "localparam cl=0;\nlocalparam pr=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam DINI=@sz_i;\nwire nq;\n\n@verilog<ff@name_ol.v>",
             "params": [],
             "ports": {
               "in": [
@@ -82,7 +82,7 @@
                   "name": "clk"
                 },
                 {
-                  "name": "d"
+                  "name": "@name_ol"
                 }
               ],
               "out": [
@@ -115,12 +115,12 @@
         },
         {
           "source": {
-            "block": "input-d",
+            "block": "input-@name_ol",
             "port": "out"
           },
           "target": {
             "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "d"
+            "port": "@name_ol"
           }
         },
         {

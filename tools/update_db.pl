@@ -5,7 +5,7 @@ require $mod;
 
 ReadDB();
 
-die "Tell me the file that changed" unless scalar($ARGV)!=1;
+die "Tell me the file that changed" unless scalar(@ARGV)==1;
 
 $file=$ARGV[0];
 $sha1=$hf{$file};
@@ -53,10 +53,17 @@ $rule=GetRule($file);
 print STDERR "Rule: $rule\n";
 
 $svg=GetSVG($file);
-print STDERR "SVG:  $svg\n";
 
 $code=GetCode($file);
 unlink('pp.json');
+
+($tpl,$ins,$outs)=DecomposeRule($rule);
+if ($ins=~/[a-zA-Z]/ || $outs=~/[a-zA-Z]/)
+  {
+   $svg=FileNameIORep($svg,$ins,$outs);
+   $code=FileNameIORep($code,$ins,$outs);
+  }
+print STDERR "SVG:  $svg\n";
 print STDERR "Code: $code\n";
 
 $h{$sha1}=undef;

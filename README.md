@@ -54,6 +54,10 @@ Collection for the Kefir I board in Icestudio.
       * Async ins + clock enable + reset
       * Clock enable + reset
       * Simple
+    * *Flip-flop T*
+      * Async ins + clock enable + reset
+      * Clock enable + reset
+      * Simple
   * *Bombeo* 1 Hz square wave
   * *Buses*
     * *Crossover* (invert bit order)

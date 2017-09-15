@@ -36,8 +36,7 @@ foreach $sha1 (keys %h)
       }
     else
       {
-       $rule=~/(.*).template/ or die "Rule without template: $rule";
-       $tpl="$1.template";
+       ($tpl,$ins,$outs)=DecomposeRule($rule);
        $tpl=EscapeForMake(UnEscapeForShell($tpl));
        push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl $deps\n".
             "\tperl tools/reemplaza.pl $rule ".EscapeForShell($fname)."\n".
