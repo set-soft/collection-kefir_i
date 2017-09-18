@@ -1,13 +1,13 @@
 # Kefir I Collection
 
 [![Icestudio](https://img.shields.io/badge/collection-icestudio-blue.svg)](https://github.com/FPGAwars/icestudio)
-![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg)
+![Version](https://img.shields.io/badge/version-v0.2.0-orange.svg)
 
 Collection for the Kefir I board in Icestudio.
 
 ## Install
 
-* Download the collection: [stable](https://github.com/set-soft/collection-kefir_i/archive/v0.1.0.zip) or [development](https://github.com/set-soft/collection-kefir_i/archive/master.zip)
+* Download the collection: [stable](https://github.com/set-soft/collection-kefir_i/archive/v0.2.0.zip) or [development](https://github.com/set-soft/collection-kefir_i/archive/master.zip)
 * Install the collection: *Tools > Collections > Add*
 * Load the collection: *Select > Collection*
 
