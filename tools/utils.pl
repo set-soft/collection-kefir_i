@@ -47,6 +47,7 @@ sub UnEscapeForShell
 sub EscapeSVG
 {
  my $d=$_[0];
+ $d=~s/\%/\%25/g;
  $d=~s/\</\%3C/g;
  $d=~s/\>/\%3E/g;
  $d=~s/ /\%20/g;
@@ -62,6 +63,7 @@ sub UnEscapeSVG
  $d=~s/\%3E/>/g;
  $d=~s/\%20/ /g;
  $d=~s/\%22/\"/g;
+ $d=~s/\%25/\%/g;
  $d;
 }
 
