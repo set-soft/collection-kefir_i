@@ -34,21 +34,21 @@ Collection for the Kefir I board in Icestudio.
 * *Varios*
   * *Aritmetica*
     * *Comparadores*
-      * >/=/< (2/4/8/16/32)
+      * &gt;/=/&lt; (2/4/8/16/32)
       * Didactico
         * Comparador por = de 2 bits
-        * Comparador por > de 2 bits
-        * Comparador por >/=/< de 2 bits
+        * Comparador por &gt; de 2 bits
+        * Comparador por &gt;/=/&lt; de 2 bits
         * Comparador de 3 bits
         * Comparador de 4 bits
     * *Complemento a 1* (2/4/8/16/32)
     * *Complemento a 2* (2/4/8/16/32)
     * *Extender* sign extend
-      * 1 -> 2/4/8/16/32
-      * 2 -> 4/8/16/32
-      * 4 -> 8/16/32
-      * 8 -> 16/32
-      * 16 -> 32
+      * 1 &rarr; 2/4/8/16/32
+      * 2 &rarr; 4/8/16/32
+      * 4 &rarr; 8/16/32
+      * 8 &rarr; 16/32
+      * 16 &rarr; 32
     * *Incrementador* (2/4/8/16/32)
     * *Restadores*
       * Completo (Borrow in/out and oVerflow) (2/4/8/16/32)
@@ -84,17 +84,17 @@ Collection for the Kefir I board in Icestudio.
     * *Crossover* (invert bit order)
       * *Wires* (2/4/8/16/32)
     * *Expandir* expand a bus with 0s
-      * 1 -> 2/4/8/16/32
-      * 2 -> 4/8/16/32
-      * 4 -> 8/16/32
-      * 8 -> 16/32
-      * 16 -> 32
+      * 1 &rarr; 2/4/8/16/32
+      * 2 &rarr; 4/8/16/32
+      * 4 &rarr; 8/16/32
+      * 8 &rarr; 16/32
+      * 16 &rarr; 32
     * *Reduce* keep only the LSBs
-      * 32 -> 2/4/8/16
-      * 16 -> 2/4/8
-      * 8 -> 2/4
-      * 4 -> 2
-      * 2 -> 1
+      * 32 &rarr; 2/4/8/16
+      * 16 &rarr; 2/4/8
+      * 8 &rarr; 2/4
+      * 4 &rarr; 2
+      * 2 &rarr; 1
     * *Seleccionar* take a slice of a bus (conf. start)
       * 2 from 4
       * 2/4 from 8
@@ -190,8 +190,8 @@ Collection for the Kefir I board in Icestudio.
   * 06\. Four LEDs sequence deco no ena
   * 07\. Codificador 4 a 2
 * *5\. Aritmetica*
-  * 01\. Comparar >,=,<
-  * 02\. Comparar >=,!=,<=
+  * 01\. Comparar &gt;,=,&lt;
+  * 02\. Comparar &gt;=,!=,&lt;=
   * 03\. Sumador
   * 04\. Sumador Simple
   * 05\. Complemento a 1
@@ -200,12 +200,12 @@ Collection for the Kefir I board in Icestudio.
   * 08\. Restador
   * 09\. Restador simple
   * 10\. Sumador didactico
-  * 11\. Comparar >,=,< didáctico
+  * 11\. Comparar &gt;,=,&lt; didáctico
 
 ## Authors
-* [Salvador E. Tropea](https://github.com/set-soft)
-* [JesÃºs Arroyo Torrens](https://github.com/Jesus89)
-* [Juan GonzÃ¡lez](https://github.com/Obijuan)
+* [Salvador Eduardo Tropea](https://github.com/set-soft)
+* [Jesús Arroyo Torrens](https://github.com/Jesus89)
+* [Juan González](https://github.com/Obijuan)
 * Carlos Diaz
 
 ## License
