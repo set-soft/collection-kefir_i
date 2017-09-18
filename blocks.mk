@@ -477,6 +477,16 @@ all:  \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 1.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ DINI.ice \
+	blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Completo.ice \
+	blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Ena\ Rst.ice \
+	blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 0.ice \
+	blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 1.ice \
+	blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ INI.ice \
+	blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Completo.ice \
+	blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Ena\ Rst.ice \
+	blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 0.ice \
+	blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 1.ice \
+	blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ INI.ice \
 	blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 0.ice \
@@ -2375,43 +2385,83 @@ all:  \
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/10.\ Sumador\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
 	perl tools/update_db.pl ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
 
-blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-D-DINI.svg blocks/Varios/Biestables/Templates/ffd.v
+blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
 
-blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Ena\ Rst.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-D-DINI.svg blocks/Varios/Biestables/Templates/ffd.v
+blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Ena\ Rst.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Ena\ Rst.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice
 
-blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-D-N.svg blocks/Varios/Biestables/Templates/ffd.v
+blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-N.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice
 
-blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 1.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-D-N.svg blocks/Varios/Biestables/Templates/ffd.v
+blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 1.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-N.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template 1 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 1.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 1.ice
 
-blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ DINI.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple\ DINI.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-D-DINI.svg blocks/Varios/Biestables/Templates/ffd.v
+blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ DINI.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple\ DINI.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple\ DINI.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ DINI.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ DINI.ice
 
-blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-T-DINI.svg blocks/Varios/Biestables/Templates/fft.v
+blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg blocks/Varios/Biestables/Templates/ffjk.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Completo.ice.template 0 J,K blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Completo.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Completo.ice
+
+blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Ena\ Rst.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Ena\ Rst.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg blocks/Varios/Biestables/Templates/ffjk.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Ena\ Rst.ice.template 0 J,K blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Ena\ Rst.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Ena\ Rst.ice
+
+blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 0.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-N.svg blocks/Varios/Biestables/Templates/ffjk.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template 0 J,K blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 0.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 0.ice
+
+blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 1.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-N.svg blocks/Varios/Biestables/Templates/ffjk.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template 1 J,K blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 1.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ 1.ice
+
+blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ INI.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple\ INI.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg blocks/Varios/Biestables/Templates/ffjk.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple\ INI.ice.template 0 J,K blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ INI.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ JK/Flip-flop\ JK\ Simple\ INI.ice
+
+blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg blocks/Varios/Biestables/Templates/ffrs.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Completo.ice.template 0 R,S blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Completo.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Completo.ice
+
+blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Ena\ Rst.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Ena\ Rst.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg blocks/Varios/Biestables/Templates/ffrs.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Ena\ Rst.ice.template 0 R,S blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Ena\ Rst.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Ena\ Rst.ice
+
+blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 0.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-N.svg blocks/Varios/Biestables/Templates/ffrs.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template 0 R,S blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 0.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 0.ice
+
+blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 1.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-N.svg blocks/Varios/Biestables/Templates/ffrs.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple.ice.template 1 R,S blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 1.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ 1.ice
+
+blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ INI.ice: blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple\ INI.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg blocks/Varios/Biestables/Templates/ffrs.v
+	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple\ INI.ice.template 0 R,S blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ INI.ice
+	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ RS/Flip-flop\ RS\ Simple\ INI.ice
+
+blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/fft.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 T blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Completo.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Completo.ice
 
-blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Ena\ Rst.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Ena\ Rst.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-T-DINI.svg blocks/Varios/Biestables/Templates/fft.v
+blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Ena\ Rst.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Ena\ Rst.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/fft.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Ena\ Rst.ice.template 0 T blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Ena\ Rst.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Ena\ Rst.ice
 
-blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 0.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-T-N.svg blocks/Varios/Biestables/Templates/fft.v
+blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 0.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-N.svg blocks/Varios/Biestables/Templates/fft.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template 0 T blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 0.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 0.ice
 
-blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 1.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-T-N.svg blocks/Varios/Biestables/Templates/fft.v
+blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 1.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-N.svg blocks/Varios/Biestables/Templates/fft.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template 1 T blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 1.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 1.ice
 
-blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ DINI.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple\ DINI.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-T-DINI.svg blocks/Varios/Biestables/Templates/fft.v
+blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ DINI.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple\ DINI.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/fft.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple\ DINI.ice.template 0 T blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ DINI.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ DINI.ice
 

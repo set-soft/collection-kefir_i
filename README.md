@@ -49,12 +49,20 @@ Collection for the Kefir I board in Icestudio.
         * Sumador de 2 bits (using full adders)
         * Sumador de 4 bits (using 2 bits adders)
         * Sumador de 8 bits (using 4 bits adders)
-  * *Biestables* D/RS/T flip-flops
+  * *Biestables*
     * *Flip-flop D*
       * Async ins + clock enable + reset
       * Clock enable + reset
       * Simple
     * *Flip-flop T*
+      * Async ins + clock enable + reset
+      * Clock enable + reset
+      * Simple
+    * *Flip-flop RS*
+      * Async ins + clock enable + reset
+      * Clock enable + reset
+      * Simple
+    * *Flip-flop JK*
       * Async ins + clock enable + reset
       * Clock enable + reset
       * Simple

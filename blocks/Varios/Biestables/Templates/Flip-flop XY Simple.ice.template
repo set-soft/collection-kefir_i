@@ -1,11 +1,11 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Flip-flop @name_ou Simple @sz_i",
+    "name": "Flip-flop @name_ou1@name_ou0 completo",
     "version": "1.0.0",
-    "description": "Flip-flop @name_ou con valor inicial @sz_i",
+    "description": "Flip-flop @name_ou1@name_ou0 con entradas de fuerza, enable, reset y valor inicial",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "@svg<Flip-flop-X-N.svg>"
+    "image": "@svg<Flip-flop-XY-N.svg>"
   },
   "design": {
     "board": "kefir",
@@ -27,8 +27,28 @@
             "clock": true
           },
           "position": {
-            "x": 120,
-            "y": 184
+            "x": 128,
+            "y": 128
+          }
+        },
+        {
+          "id": "input-@name_ol1",
+          "type": "basic.input",
+          "data": {
+            "name": "@name_ol1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 248
           }
         },
         {
@@ -46,15 +66,15 @@
             "virtual": true
           },
           "position": {
-            "x": 944,
-            "y": 288
+            "x": 968,
+            "y": 248
           }
         },
         {
-          "id": "input-@name_ol",
+          "id": "input-@name_ol0",
           "type": "basic.input",
           "data": {
-            "name": "@name_ol",
+            "name": "@name_ol0",
             "pins": [
               {
                 "index": "0",
@@ -66,15 +86,15 @@
             "clock": false
           },
           "position": {
-            "x": 120,
-            "y": 400
+            "x": 128,
+            "y": 368
           }
         },
         {
           "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
           "type": "basic.code",
           "data": {
-            "code": "localparam cl=0;\nlocalparam pr=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam DINI=@sz_i;\nwire nq;\n\n@verilog<ff@name_ol.v>",
+            "code": "localparam cl=0;\nlocalparam pr=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam INI=@sz_i;\nwire nq;\n\n@verilog<ff@name_ol1@name_ol0.v>",
             "params": [],
             "ports": {
               "in": [
@@ -82,7 +102,10 @@
                   "name": "clk"
                 },
                 {
-                  "name": "@name_ol"
+                  "name": "@name_ol1"
+                },
+                {
+                  "name": "@name_ol0"
                 }
               ],
               "out": [
@@ -97,8 +120,8 @@
             "y": 104
           },
           "size": {
-            "width": 560,
-            "height": 432
+            "width": 576,
+            "height": 352
           }
         }
       ],
@@ -115,16 +138,6 @@
         },
         {
           "source": {
-            "block": "input-@name_ol",
-            "port": "out"
-          },
-          "target": {
-            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "@name_ol"
-          }
-        },
-        {
-          "source": {
             "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
             "port": "q"
           },
@@ -132,13 +145,33 @@
             "block": "output-q",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "input-@name_ol1",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "@name_ol1"
+          }
+        },
+        {
+          "source": {
+            "block": "input-@name_ol0",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "@name_ol0"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 15,
-        "y": 85.5
+        "x": 87,
+        "y": 105.5
       },
       "zoom": 1
     }

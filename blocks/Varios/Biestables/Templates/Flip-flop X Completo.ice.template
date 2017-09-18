@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "Flip-flop @name_ou con entradas de fuerza, enable, reset y valor inicial",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "@svg<Flip-flop-@name_ou-DINI.svg>"
+    "image": "@svg<Flip-flop-X-INI.svg>"
   },
   "design": {
     "board": "kefir",

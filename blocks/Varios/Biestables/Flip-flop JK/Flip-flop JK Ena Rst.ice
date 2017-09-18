@@ -1,11 +1,11 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Flip-flop T Enable/Reset",
+    "name": "Flip-flop JK completo",
     "version": "1.0.0",
-    "description": "Flip-flop T con entradas de enable, reset y valor inicial",
+    "description": "Flip-flop JK con entradas de fuerza, enable, reset y valor inicial",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2287.998%22%20height=%2260.81%22%20viewBox=%220%200%2082.498%2057.009%22%3E%3Cg%20transform=%22translate(-290.853%20-371.476)%22%3E%3Ctext%20style=%22line-height:0%%22%20x=%22310.204%22%20y=%22427.822%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22310.204%22%20y=%22427.822%22%20style=%22line-height:1.25;-inkscape-font-specification:'sans-serif,%20Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center%22%20font-weight=%22700%22%20font-size=%2240.87%22%20text-anchor=%22middle%22%3ET%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%%22%20x=%22289.914%22%20y=%22386.672%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22289.914%22%20y=%22386.672%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EFlip-Flop%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%%22%20x=%22341.738%22%20y=%22420.476%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#00f%22%3E%3Ctspan%20x=%22341.738%22%20y=%22420.476%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EIni%3C/tspan%3E%3C/text%3E%3Crect%20width=%2237.881%22%20height=%2227.274%22%20x=%22334.396%22%20y=%22400.212%22%20ry=%224.5%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2296.734%22%20height=%2263.29%22%20viewBox=%220%200%2090.688%2059.334%22%3E%3Cg%20transform=%22translate(-282.589%20-374.155)%22%3E%3Ctext%20style=%22line-height:0%%22%20x=%22308.195%22%20y=%22426.483%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22308.195%22%20y=%22426.483%22%20style=%22line-height:1.25;-inkscape-font-specification:'sans-serif,%20Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center%22%20font-weight=%22700%22%20font-size=%2235%22%20text-anchor=%22middle%22%3EJK%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%%22%20x=%22285.561%22%20y=%22389.35%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22285.561%22%20y=%22389.35%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EFlip-Flop%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%%22%20x=%22341.738%22%20y=%22420.476%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#00f%22%3E%3Ctspan%20x=%22341.738%22%20y=%22420.476%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EIni%3C/tspan%3E%3C/text%3E%3Crect%20width=%2237.881%22%20height=%2227.274%22%20x=%22334.396%22%20y=%22400.212%22%20ry=%224.5%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
   },
   "design": {
     "board": "kefir",
@@ -28,7 +28,7 @@
           },
           "position": {
             "x": 128,
-            "y": 128
+            "y": 104
           }
         },
         {
@@ -46,15 +46,15 @@
             "virtual": true
           },
           "position": {
-            "x": 936,
-            "y": 184
+            "x": 968,
+            "y": 160
           }
         },
         {
-          "id": "input-t",
+          "id": "input-j",
           "type": "basic.input",
           "data": {
-            "name": "t",
+            "name": "j",
             "pins": [
               {
                 "index": "0",
@@ -67,7 +67,27 @@
           },
           "position": {
             "x": 128,
-            "y": 232
+            "y": 176
+          }
+        },
+        {
+          "id": "input-k",
+          "type": "basic.input",
+          "data": {
+            "name": "k",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 128,
+            "y": 248
           }
         },
         {
@@ -87,7 +107,7 @@
           },
           "position": {
             "x": 128,
-            "y": 344
+            "y": 320
           }
         },
         {
@@ -105,8 +125,8 @@
             "virtual": true
           },
           "position": {
-            "x": 936,
-            "y": 400
+            "x": 968,
+            "y": 336
           }
         },
         {
@@ -126,19 +146,19 @@
           },
           "position": {
             "x": 128,
-            "y": 448
+            "y": 392
           }
         },
         {
-          "id": "constant-DINI",
+          "id": "constant-INI",
           "type": "basic.constant",
           "data": {
-            "name": "DINI",
+            "name": "INI",
             "value": "0",
             "local": false
           },
           "position": {
-            "x": 552,
+            "x": 560,
             "y": -16
           }
         },
@@ -146,10 +166,10 @@
           "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
           "type": "basic.code",
           "data": {
-            "code": "localparam cl=0;\nlocalparam pr=0;\n\nreg qr=DINI;\n\nalways @(posedge clk or posedge cl or posedge pr)\nbegin\n   if (cl)\n      qr <= 0;\n   else if (pr)\n      qr <= 1;\n   else if (clk)\n      begin\n      if (rst)\n         qr <= DINI;\n      else if (ena && t)\n         qr <= ~qr;\n      end\nend\n\nassign q=qr;\nassign nq=~qr;",
+            "code": "localparam cl=0;\nlocalparam pr=0;\n\nreg qr=INI;\n\nalways @(posedge clk or posedge cl or posedge pr)\nbegin\n   if (cl)\n      qr <= 0;\n   else if (pr)\n      qr <= 1;\n   else if (clk)\n      begin\n      if (rst)\n         qr <= INI;\n      else if (ena)\n         begin\n         if (j && k)\n            qr <= ~qr;\n         else if (j)\n            qr <= 1'b1;\n         else if (k)\n            qr <= 1'b0;\n         end\n      end\nend\n\nassign q=qr;\nassign nq=~qr;",
             "params": [
               {
-                "name": "DINI"
+                "name": "INI"
               }
             ],
             "ports": {
@@ -158,7 +178,10 @@
                   "name": "clk"
                 },
                 {
-                  "name": "t"
+                  "name": "j"
+                },
+                {
+                  "name": "k"
                 },
                 {
                   "name": "rst"
@@ -182,8 +205,8 @@
             "y": 104
           },
           "size": {
-            "width": 560,
-            "height": 432
+            "width": 576,
+            "height": 352
           }
         }
       ],
@@ -220,26 +243,6 @@
         },
         {
           "source": {
-            "block": "input-t",
-            "port": "out"
-          },
-          "target": {
-            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "t"
-          }
-        },
-        {
-          "source": {
-            "block": "constant-DINI",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "DINI"
-          }
-        },
-        {
-          "source": {
             "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
             "port": "q"
           },
@@ -257,15 +260,45 @@
             "block": "output-nq",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "constant-INI",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "INI"
+          }
+        },
+        {
+          "source": {
+            "block": "input-j",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "j"
+          }
+        },
+        {
+          "source": {
+            "block": "input-k",
+            "port": "out"
+          },
+          "target": {
+            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
+            "port": "k"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": -63.5,
-        "y": 58
+        "x": 267.3747,
+        "y": 136.0728
       },
-      "zoom": 1
+      "zoom": 0.8031
     }
   },
   "dependencies": {
