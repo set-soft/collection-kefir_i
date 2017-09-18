@@ -361,6 +361,7 @@ $a=~s/\@crossover_code/$crossover_code/g;
 
 $dif_sz=$outs-$ins;
 $a=~s/\@0o_i/$dif_sz\'b0/g;
+$a=~s/\@dif_sz/$dif_sz/g;
 
 # Fix dependencies
 while ($a=~/\@sha1\<([^\>]+)\>/g)
