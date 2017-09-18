@@ -33,7 +33,14 @@ Collection for the Kefir I board in Icestudio.
 
 * *Varios*
   * *Aritmetica*
-    * *Comparadores* >/=/< (2/4/8/16/32)
+    * *Comparadores*
+      * >/=/< (2/4/8/16/32)
+      * Didactico
+        * Comparador por = de 2 bits
+        * Comparador por > de 2 bits
+        * Comparador por >/=/< de 2 bits
+        * Comparador de 3 bits
+        * Comparador de 4 bits
     * *Complemento a 1* (2/4/8/16/32)
     * *Complemento a 2* (2/4/8/16/32)
     * *Incrementador* (2/4/8/16/32)
@@ -187,6 +194,7 @@ Collection for the Kefir I board in Icestudio.
   * 08\. Restador
   * 09\. Restador simple
   * 10\. Sumador didactico
+  * 11\. Comparar >,=,< didáctico
 
 ## Authors
 * [Salvador E. Tropea](https://github.com/set-soft)

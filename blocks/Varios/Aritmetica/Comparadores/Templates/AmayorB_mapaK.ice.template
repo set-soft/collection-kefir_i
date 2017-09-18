@@ -1,0 +1,44 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "A>B Karnaugh",
+    "version": "1.0.0",
+    "description": "Mapa de Karnaugh para A>B (2 bits)",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<mapak2.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "18ab8d79-0dcd-4043-987b-fd2e007c0d8f",
+          "type": "basic.info",
+          "data": {
+            "info": "<style>\ntable, th, td {\n    border: 2px solid black;\n    border-collapse: collapse;\n}\nth, td {\n    padding: 5px;\n}\ntd {\n  text-align: center;\n  vertical-align: middle;\n}\n</style>\n\n  Los mapas de Karnaugh son una forma manual de simplificar \nfunciones lógicas.\n  Este mapa muestra las ecuaciones lógicas para la comparación\nde A&gt;B con magnitudes de 2 bits.\n  La Tabla de verdad para esta ecuación es:\n\n<table border=\"1\" cellpadding=\"3\" align=\"center\">\n<tr><th>A1</th><th>A0</th><th>B1</th><th>B0</th><th>A&gt;B</th></tr>\n<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>\n<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>\n<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>\n<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>\n<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>\n</table>",
+            "readonly": true
+          },
+          "position": {
+            "x": 128,
+            "y": 56
+          },
+          "size": {
+            "width": 608,
+            "height": 368
+          }
+        }
+      ],
+      "wires": []
+    },
+    "state": {
+      "pan": {
+        "x": 273,
+        "y": -41.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

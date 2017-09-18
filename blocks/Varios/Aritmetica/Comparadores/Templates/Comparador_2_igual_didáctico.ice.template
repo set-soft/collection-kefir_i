@@ -1,0 +1,250 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Comparador = 2 bits",
+    "version": "1.0.0",
+    "description": "Comparador de igualdad para 2 bits",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Comparador_igual.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-A1",
+          "type": "basic.input",
+          "data": {
+            "name": "A1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 184
+          }
+        },
+        {
+          "id": "input-B1",
+          "type": "basic.input",
+          "data": {
+            "name": "B1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 256
+          }
+        },
+        {
+          "id": "output-igual",
+          "type": "basic.output",
+          "data": {
+            "name": "igual",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 616,
+            "y": 304
+          }
+        },
+        {
+          "id": "input-A0",
+          "type": "basic.input",
+          "data": {
+            "name": "A0",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 328
+          }
+        },
+        {
+          "id": "input-B0",
+          "type": "basic.input",
+          "data": {
+            "name": "B0",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 400
+          }
+        },
+        {
+          "id": "761efdd5-7a29-4ee5-a2aa-330260d6331c",
+          "type": "@sha1<./blocks/Logic/XNOR/XNOR_2.ice>",
+          "position": {
+            "x": 296,
+            "y": 224
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "3e6c1c8d-c598-411f-b5de-5e8a3df1c6dc",
+          "type": "@sha1<./blocks/Logic/XNOR/XNOR_2.ice>",
+          "position": {
+            "x": 296,
+            "y": 368
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "41028bc7-40ea-40af-b5aa-ab42daf4be17",
+          "type": "@sha1<./blocks/Logic/AND/AND_2.ice>",
+          "position": {
+            "x": 464,
+            "y": 304
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "546c7a80-de84-444a-b53a-ccc158473618",
+          "type": "basic.info",
+          "data": {
+            "info": "Los dos valores serán iguales cuando A1=B1 y A0=B0.\nPara determinar si A1=B1 basta con usar una XNOR.\nLa XOR es 1 cuando alguna de sus entradas es 1, pero no ambas a la vez.\nPor lo que una XOR nos dice si sus entradas son distintas.\nAl negarla sabremos si sus entradas son iguales.",
+            "readonly": true
+          },
+          "position": {
+            "x": 128,
+            "y": 80
+          },
+          "size": {
+            "width": 688,
+            "height": 128
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-A1",
+            "port": "out"
+          },
+          "target": {
+            "block": "761efdd5-7a29-4ee5-a2aa-330260d6331c",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "input-B1",
+            "port": "out"
+          },
+          "target": {
+            "block": "761efdd5-7a29-4ee5-a2aa-330260d6331c",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "input-A0",
+            "port": "out"
+          },
+          "target": {
+            "block": "3e6c1c8d-c598-411f-b5de-5e8a3df1c6dc",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "input-B0",
+            "port": "out"
+          },
+          "target": {
+            "block": "3e6c1c8d-c598-411f-b5de-5e8a3df1c6dc",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "761efdd5-7a29-4ee5-a2aa-330260d6331c",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "41028bc7-40ea-40af-b5aa-ab42daf4be17",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "3e6c1c8d-c598-411f-b5de-5e8a3df1c6dc",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "41028bc7-40ea-40af-b5aa-ab42daf4be17",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "41028bc7-40ea-40af-b5aa-ab42daf4be17",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-igual",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

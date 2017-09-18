@@ -1,0 +1,380 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Comparador de 3 bits didáctico",
+    "version": "1.0.0",
+    "description": "Comparador de magnitudes de 3 bits didáctico",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Comparador.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-A2",
+          "type": "basic.input",
+          "data": {
+            "name": "A2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 128
+          }
+        },
+        {
+          "id": "input-A1",
+          "type": "basic.input",
+          "data": {
+            "name": "A1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 192
+          }
+        },
+        {
+          "id": "output-Mayor",
+          "type": "basic.output",
+          "data": {
+            "name": "Mayor",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 736,
+            "y": 216
+          }
+        },
+        {
+          "id": "input-A0",
+          "type": "basic.input",
+          "data": {
+            "name": "A0",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 256
+          }
+        },
+        {
+          "id": "output-Igual",
+          "type": "basic.output",
+          "data": {
+            "name": "Igual",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 736,
+            "y": 288
+          }
+        },
+        {
+          "id": "output-Menor",
+          "type": "basic.output",
+          "data": {
+            "name": "Menor",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 736,
+            "y": 360
+          }
+        },
+        {
+          "id": "input-B2",
+          "type": "basic.input",
+          "data": {
+            "name": "B2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 376
+          }
+        },
+        {
+          "id": "input-B1",
+          "type": "basic.input",
+          "data": {
+            "name": "B1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 440
+          }
+        },
+        {
+          "id": "input-B0",
+          "type": "basic.input",
+          "data": {
+            "name": "B0",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 504
+          }
+        },
+        {
+          "id": "bc753da7-de2b-459b-a794-86826c63e7b9",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice>",
+          "position": {
+            "x": 320,
+            "y": 264
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "9628735d-3b36-407e-ac9f-f01579facdc1",
+          "type": "basic.info",
+          "data": {
+            "info": "  Para expandir un comparador de 2 bits a 3 bits basta con colocar un segundo comparador\nen cascada.\n  Si el bit más pesado de A y B alcanza para decidir si es &gt; o &lt; el segundo comparador\npodrá resolver el resultado con sus bits A1 y B1.\n  En el caso en que A1 y B1 sean iguales la decisión quedará en manos de A0 y B0. Estas \nentradas están conectadas al primer comparador, quien resuelve la comparación de los bits\nmenos pesados de la entrada.\n  En líneas generales, para comparar N bits basta con N-1 comparadores de 2 bits en cascada.",
+            "readonly": true
+          },
+          "position": {
+            "x": 88,
+            "y": -40
+          },
+          "size": {
+            "width": 928,
+            "height": 160
+          }
+        },
+        {
+          "id": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice>",
+          "position": {
+            "x": 552,
+            "y": 256
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-B1",
+            "port": "out"
+          },
+          "target": {
+            "block": "bc753da7-de2b-459b-a794-86826c63e7b9",
+            "port": "dd6a79d2-e661-41d2-b919-4dfc81b0534a"
+          },
+          "vertices": [
+            {
+              "x": 280,
+              "y": 464
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-A0",
+            "port": "out"
+          },
+          "target": {
+            "block": "bc753da7-de2b-459b-a794-86826c63e7b9",
+            "port": "dd726f49-e409-449d-82d7-91f6b7070cb8"
+          },
+          "vertices": [
+            {
+              "x": 280,
+              "y": 312
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-A1",
+            "port": "out"
+          },
+          "target": {
+            "block": "bc753da7-de2b-459b-a794-86826c63e7b9",
+            "port": "474e39c9-bdfd-41e0-97cf-a1b82446e35f"
+          }
+        },
+        {
+          "source": {
+            "block": "input-B0",
+            "port": "out"
+          },
+          "target": {
+            "block": "bc753da7-de2b-459b-a794-86826c63e7b9",
+            "port": "ca8e9248-4b6a-4444-bb10-d4734e732710"
+          }
+        },
+        {
+          "source": {
+            "block": "bc753da7-de2b-459b-a794-86826c63e7b9",
+            "port": "3963beaa-2735-4ad2-a214-ddac78edd378"
+          },
+          "target": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "dd726f49-e409-449d-82d7-91f6b7070cb8"
+          },
+          "vertices": [
+            {
+              "x": 488,
+              "y": 296
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "bc753da7-de2b-459b-a794-86826c63e7b9",
+            "port": "0ba5193c-4c03-4ece-915a-c7073fdb73b1"
+          },
+          "target": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "ca8e9248-4b6a-4444-bb10-d4734e732710"
+          }
+        },
+        {
+          "source": {
+            "block": "input-A2",
+            "port": "out"
+          },
+          "target": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "474e39c9-bdfd-41e0-97cf-a1b82446e35f"
+          }
+        },
+        {
+          "source": {
+            "block": "input-B2",
+            "port": "out"
+          },
+          "target": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "dd6a79d2-e661-41d2-b919-4dfc81b0534a"
+          },
+          "vertices": [
+            {
+              "x": 496,
+              "y": 352
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "3963beaa-2735-4ad2-a214-ddac78edd378"
+          },
+          "target": {
+            "block": "output-Mayor",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "0ba5193c-4c03-4ece-915a-c7073fdb73b1"
+          },
+          "target": {
+            "block": "output-Menor",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "ae1fb46f-f80d-4e2c-9aff-78ba7f070b2c",
+            "port": "97fa97e4-88f9-4e41-8323-f754e3e291c3"
+          },
+          "target": {
+            "block": "output-Igual",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 400,
+        "y": 209.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

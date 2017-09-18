@@ -71,6 +71,12 @@ all:  \
 	./blocks/Varios/Aritmetica/Comparadores/Comparador_32.ice \
 	./blocks/Varios/Aritmetica/Comparadores/Comparador_4.ice \
 	./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice \
+	./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice \
+	./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice \
+	./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice \
+	./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice \
+	./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_3_didáctico.ice \
+	./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_4_didáctico.ice \
 	./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_16.ice \
 	./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_2.ice \
 	./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_32.ice \
@@ -472,6 +478,7 @@ all:  \
 	./examples/5.\ Aritmetica/08.\ Restador.ice \
 	./examples/5.\ Aritmetica/09.\ Restador\ simple.ice \
 	./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice \
+	./examples/5.\ Aritmetica/11.\ Comparar\ >,\=,<\ didáctico.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -786,6 +793,30 @@ all:  \
 ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.ice.template 8 1 ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice
+
+./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/AmayorB_mapaK.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Templates/mapak2.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/AmayorB_mapaK.ice.template 0 0 ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice
+
+./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_didáctico.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Logic/OR/OR_3.ice ./blocks/Logic/NOR/NOR_2.ice ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_didáctico.ice.template 0 0 ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice
+
+./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_igual_didáctico.ice.template tools/reemplaza.pl  ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_igual.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_igual_didáctico.ice.template 0 0 ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice
+
+./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_mayor_didáctico.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Logic/OR/OR_3.ice ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_mayor.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_mayor_didáctico.ice.template 0 0 ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice
+
+./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_3_didáctico.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_3_didáctico.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Logic/OR/OR_3.ice ./blocks/Logic/NOR/NOR_2.ice ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_3_didáctico.ice.template 0 0 ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_3_didáctico.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_3_didáctico.ice
+
+./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_4_didáctico.ice: ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_4_didáctico.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Logic/OR/OR_3.ice ./blocks/Logic/NOR/NOR_2.ice ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_4_didáctico.ice.template 0 0 ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_4_didáctico.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_4_didáctico.ice
 
 ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_16.ice: ./blocks/Varios/Aritmetica/Complemento_a_1/Templates/Complemento_a_1.ice.template tools/reemplaza.pl  ./blocks/Varios/Buses/NOT/NOT_16.ice
 	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Complemento_a_1/Templates/Complemento_a_1.ice.template 16 16 ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_16.ice
@@ -2384,6 +2415,10 @@ all:  \
 ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice: ./examples/5.\ Aritmetica/Templates/10.\ Sumador\ didáctico.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_4_bits.ice ./blocks/Varios/Buses/Separar/Split_2/Split_4_2,2.ice ./blocks/Varios/Buses/Unir/Join_2/Join_2,2_4.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_2_bits.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Sumador_Completo.ice ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Medio_Sumador.ice ./blocks/Logic/XOR/XOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/10.\ Sumador\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
 	perl tools/update_db.pl ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
+
+./examples/5.\ Aritmetica/11.\ Comparar\ >,\=,<\ didáctico.ice: ./examples/5.\ Aritmetica/Templates/11.\ Comparar\ >,\=,<\ didáctico.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_4_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Logic/OR/OR_3.ice ./blocks/Logic/NOR/NOR_2.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/11.\ Comparar\ \>,\=,\<\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/11.\ Comparar\ \>,\=,\<\ didáctico.ice
+	perl tools/update_db.pl ./examples/5.\ Aritmetica/11.\ Comparar\ \>,\=,\<\ didáctico.ice
 
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice

@@ -1,0 +1,378 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Comparador de 2 bits didáctico",
+    "version": "1.0.0",
+    "description": "Comparador de magnitudes de 2 bits didáctico",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Comparador.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-Mayor",
+          "type": "basic.output",
+          "data": {
+            "name": "Mayor",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1168,
+            "y": 216
+          }
+        },
+        {
+          "id": "input-A1",
+          "type": "basic.input",
+          "data": {
+            "name": "A1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 456,
+            "y": 240
+          }
+        },
+        {
+          "id": "output-Igual",
+          "type": "basic.output",
+          "data": {
+            "name": "Igual",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1168,
+            "y": 288
+          }
+        },
+        {
+          "id": "input-A0",
+          "type": "basic.input",
+          "data": {
+            "name": "A0",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 456,
+            "y": 304
+          }
+        },
+        {
+          "id": "output-Menor",
+          "type": "basic.output",
+          "data": {
+            "name": "Menor",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1168,
+            "y": 360
+          }
+        },
+        {
+          "id": "input-B1",
+          "type": "basic.input",
+          "data": {
+            "name": "B1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 456,
+            "y": 448
+          }
+        },
+        {
+          "id": "input-B0",
+          "type": "basic.input",
+          "data": {
+            "name": "B0",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 456,
+            "y": 512
+          }
+        },
+        {
+          "id": "6542a2c4-d064-4cc8-b2b2-f992ebdd1c57",
+          "type": "basic.info",
+          "data": {
+            "info": "Existen <b>6</b> tipos de comparaciones: &gt;, &lt;, =, &le;, &ge; y &ne;.\nLas últimas 3 son las inversas de las 3 primeras, por ejemplo: lo inverso de &gt; es &le;.\nPor lo que un comparador genérico solo necesita computar las <b>3</b> primeras.\n\nOtro detalle importante es que conocidas <b>2</b> de ellas la tercera se puede calcular como la NOR.\nPor ejemplo: será &lt; si no es &gt; o = [no (&gt; o =)]\n\nPor lo tanto en un comparador genérico basta con determinar &gt; e =.",
+            "readonly": true
+          },
+          "position": {
+            "x": 448,
+            "y": 64
+          },
+          "size": {
+            "width": 928,
+            "height": 160
+          }
+        },
+        {
+          "id": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice>",
+          "position": {
+            "x": 856,
+            "y": 256
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "40e8a72e-b485-44af-8696-cfa48523959e",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice>",
+          "position": {
+            "x": 856,
+            "y": 400
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "0366336d-29f8-49bc-92ee-db5bea7157b1",
+          "type": "@sha1<./blocks/Logic/NOR/NOR_2.ice>",
+          "position": {
+            "x": 1024,
+            "y": 360
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-A1",
+            "port": "out"
+          },
+          "target": {
+            "block": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+            "port": "638ad5d2-e2fb-42c5-8bac-b9510ae36b9f"
+          }
+        },
+        {
+          "source": {
+            "block": "input-A0",
+            "port": "out"
+          },
+          "target": {
+            "block": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+            "port": "90ece6e8-f08d-4404-a376-bc4dd4bdb747"
+          }
+        },
+        {
+          "source": {
+            "block": "input-B1",
+            "port": "out"
+          },
+          "target": {
+            "block": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+            "port": "ca7b7e7e-1d17-4cbe-bc67-6bb8b4da8e41"
+          },
+          "vertices": [
+            {
+              "x": 688,
+              "y": 400
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-B0",
+            "port": "out"
+          },
+          "target": {
+            "block": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+            "port": "0cdb1f98-36d4-426a-b36e-61418627262d"
+          },
+          "vertices": [
+            {
+              "x": 712,
+              "y": 464
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-A1",
+            "port": "out"
+          },
+          "target": {
+            "block": "40e8a72e-b485-44af-8696-cfa48523959e",
+            "port": "638ad5d2-e2fb-42c5-8bac-b9510ae36b9f"
+          },
+          "vertices": [
+            {
+              "x": 760,
+              "y": 360
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-A0",
+            "port": "out"
+          },
+          "target": {
+            "block": "40e8a72e-b485-44af-8696-cfa48523959e",
+            "port": "90ece6e8-f08d-4404-a376-bc4dd4bdb747"
+          },
+          "vertices": [
+            {
+              "x": 800,
+              "y": 392
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-B1",
+            "port": "out"
+          },
+          "target": {
+            "block": "40e8a72e-b485-44af-8696-cfa48523959e",
+            "port": "ca7b7e7e-1d17-4cbe-bc67-6bb8b4da8e41"
+          }
+        },
+        {
+          "source": {
+            "block": "input-B0",
+            "port": "out"
+          },
+          "target": {
+            "block": "40e8a72e-b485-44af-8696-cfa48523959e",
+            "port": "0cdb1f98-36d4-426a-b36e-61418627262d"
+          },
+          "vertices": [
+            {
+              "x": 712,
+              "y": 512
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+            "port": "727ea941-f229-40a5-a4e7-c6a7e0d9f012"
+          },
+          "target": {
+            "block": "0366336d-29f8-49bc-92ee-db5bea7157b1",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "40e8a72e-b485-44af-8696-cfa48523959e",
+            "port": "727ea941-f229-40a5-a4e7-c6a7e0d9f012"
+          },
+          "target": {
+            "block": "0366336d-29f8-49bc-92ee-db5bea7157b1",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "0366336d-29f8-49bc-92ee-db5bea7157b1",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-Menor",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "a4d764cf-91e2-4de1-a103-79db0a628f54",
+            "port": "727ea941-f229-40a5-a4e7-c6a7e0d9f012"
+          },
+          "target": {
+            "block": "output-Igual",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "40e8a72e-b485-44af-8696-cfa48523959e",
+            "port": "727ea941-f229-40a5-a4e7-c6a7e0d9f012"
+          },
+          "target": {
+            "block": "output-Mayor",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -366.5,
+        "y": 5.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
