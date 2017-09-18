@@ -9,3 +9,4 @@
 "09. Restador simple.ice.template" 0 0 "09. Restador simple.ice"
 "10. Sumador didáctico.ice.template" 0 0 "10. Sumador didáctico.ice"
 "11. Comparar >,=,< didáctico.ice.template" 0 0 "11. Comparar >,=,< didáctico.ice"
+"12. Extensión de signo.ice.template" 0 0 "12. Extensión de signo.ice"

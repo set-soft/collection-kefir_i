@@ -43,6 +43,12 @@ Collection for the Kefir I board in Icestudio.
         * Comparador de 4 bits
     * *Complemento a 1* (2/4/8/16/32)
     * *Complemento a 2* (2/4/8/16/32)
+    * *Extender* sign extend
+      * 1 -> 2/4/8/16/32
+      * 2 -> 4/8/16/32
+      * 4 -> 8/16/32
+      * 8 -> 16/32
+      * 16 -> 32
     * *Incrementador* (2/4/8/16/32)
     * *Restadores*
       * Completo (Borrow in/out and oVerflow) (2/4/8/16/32)

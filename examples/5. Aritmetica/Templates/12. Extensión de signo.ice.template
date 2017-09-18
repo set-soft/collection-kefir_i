@@ -1,0 +1,149 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LED",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 440,
+            "y": 144
+          }
+        },
+        {
+          "id": "constant-V",
+          "type": "basic.constant",
+          "data": {
+            "name": "V",
+            "value": "-2",
+            "local": true
+          },
+          "position": {
+            "x": 104,
+            "y": 80
+          }
+        },
+        {
+          "id": "4204f801-603a-4b1c-8cd0-96ea04307053",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_2_bits.ice>",
+          "position": {
+            "x": 104,
+            "y": 192
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "671b9529-5a67-43d0-b03a-c2b354489d5c",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice>",
+          "position": {
+            "x": 280,
+            "y": 192
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "4c980d24-d161-4ca5-b012-157d0c1178c4",
+          "type": "basic.info",
+          "data": {
+            "info": "Ingresar un valor entero (Ca2) de 2 bits (-2,-1,0 o 1)\nEl 0 y 1 completan con dos 0s\nEl -1 y el -2 con dos 1s\nDe esta manera el valor de 4 bits sigue representando\nel mismo valor que el de 2 bits.",
+            "readonly": true
+          },
+          "position": {
+            "x": 96,
+            "y": -32
+          },
+          "size": {
+            "width": 528,
+            "height": 112
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-V",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "4204f801-603a-4b1c-8cd0-96ea04307053",
+            "port": "constant-V"
+          }
+        },
+        {
+          "source": {
+            "block": "4204f801-603a-4b1c-8cd0-96ea04307053",
+            "port": "output-K"
+          },
+          "target": {
+            "block": "671b9529-5a67-43d0-b03a-c2b354489d5c",
+            "port": "input-i"
+          },
+          "size": 2
+        },
+        {
+          "source": {
+            "block": "671b9529-5a67-43d0-b03a-c2b354489d5c",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-LED",
+            "port": "in"
+          },
+          "size": 4
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 130,
+        "y": 71.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Sign extend @sz_i -> @sz_o",
+    "version": "1.0.0",
+    "description": "Extiende un bus de @sz_i bits a @sz_o bits manteniendo el signo (Ca2)",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Extend.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-i",
+          "type": "basic.input",
+          "data": {
+            "name": "i"
+            @range_i,
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 232
+          }
+        },
+        {
+          "id": "output-o",
+          "type": "basic.output",
+          "data": {
+            "name": "o"
+            @range_o,
+            "pins": [
+@pins_o
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 648,
+            "y": 232
+          }
+        },
+        {
+          "id": "3a73f618-74ef-49c2-a366-093ae2c74f36",
+          "type": "basic.code",
+          "data": {
+            "code": "assign o={{@dif_sz{i[@sz_i-1]}},i};",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "i"
+                  @range_i
+                  @size_i
+                }
+              ],
+              "out": [
+                {
+                  "name": "o"
+                  @range_o
+                  @size_o
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 304,
+            "y": 208
+          },
+          "size": {
+            "width": 288,
+            "height": 112
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-i",
+            "port": "out"
+          },
+          "target": {
+            "block": "3a73f618-74ef-49c2-a366-093ae2c74f36",
+            "port": "i"
+          }
+          @size_i
+        },
+        {
+          "source": {
+            "block": "3a73f618-74ef-49c2-a366-093ae2c74f36",
+            "port": "o"
+          },
+          "target": {
+            "block": "output-o",
+            "port": "in"
+          }
+          @size_o
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {}
+}

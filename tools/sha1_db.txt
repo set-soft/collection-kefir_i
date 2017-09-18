@@ -16,6 +16,7 @@
 05d7aafdb388acc78f83b3466959539eaff2ce80 ./blocks/Varios/Multiplexores/4 canales/Mux4_8.ice|./blocks/Varios/Multiplexores/Templates/Mux4.ice.template 2,8,8,8,8 8
 05ea0737f3f86368d4feccdbabba2f5c8582df69 ./blocks/Varios/Registros/Completo/Reg_4_Completo.ice|./blocks/Varios/Registros/Templates/Reg_Completo.ice.template 4 4
 06803e3dfb4aaf0da926e7a9c1163cb2e753d636 ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_8.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 16 8
+069acd5a87bb8332e69d28cc00ded1ccfa117d58 ./blocks/Varios/Aritmetica/Extender/Extender_8_16.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 8 16|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 069c0275dae56310c34ea927dc6f05799ed7686e blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
 06f92e32363445694db54db72c49848466b15c60 ./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice|./blocks/Varios/Contadores/Templates/PrescalerN_simple.ice.template 0 0|d5969be9149dd884a1bbc56ccb6a04f816548eb6|78b882006678da24215d00b69cdf2c496f6f812f|7a5052cf67ad629d54e75210928ff8eb02c7c09c|./blocks/Varios/Contadores/Templates/Fdiv2N.svg
 074f6e27a2efd0462dadb83d47d96589ad4ecbce ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_32_8.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 32 8
@@ -46,6 +47,7 @@
 1360032949ec0f1c5324aeae9379fd4bc9944b11 ./blocks/Varios/Demultiplexores/Demux_2.ice|./blocks/Varios/Demultiplexores/Templates/Demux_2.ice.template 0 0
 1382559b56d5db9685353fa38f55d20cb4745673 ./examples/3. Desplazamiento/07. Desplazamiento Izquierda ENA-RST.ice|./examples/3.\ Desplazamiento/Templates/07.\ Desplazamiento\ Izquierda\ ENA-RST.ice.template 0 0|78b882006678da24215d00b69cdf2c496f6f812f|bce582baa019a6e6135506f4ffef5597326a0102|92fe9816cb11035ae01029cef2805b7130a8ee0d
 13b289a3448822ee6e9eb0b7c985a55d7f51f9ce ./blocks/Varios/Buses/NOR/bus_out/NOR_32.ice|./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 32,32 32|./blocks/Varios/Buses/NOR/Templates/NOR.svg
+1556418a48b653adb25d3a393eebc8a0d57a3d07 ./examples/5. Aritmetica/12. Extensión de signo.ice|./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template 0 0|3d8450a0f31201ef20e0dba8bf08bf4b33194713|5b6607920a8a6cb59e510c2e4ad8c41c545623c5
 170f218536e291db489de36239c78217c730fe70 ./blocks/Varios/Biestables/Chincheta-D-0.ice|./blocks/Varios/Biestables/Templates/Chincheta-D-0.ice.template 0 0|e22a504cc1510d150fc309120a2e17b8f5cda1a8
 17d4bccd3d9dcbc289a37e3dc4f5fca44c0fea4f ./blocks/Varios/Multiplexores/4 canales/Mux4_1.ice|./blocks/Varios/Multiplexores/Templates/Mux4.ice.template 2,1,1,1,1 1
 18b5989ccf35c1a65177600e9b135c5a4bdfded0 ./blocks/Varios/Buses/XOR/1_to_all/XOR_4.ice|./blocks/Varios/Buses/XOR/Templates/XOR_1_to_all.ice.template 4 1|./blocks/Varios/Buses/XOR/Templates/XOR.svg
@@ -79,6 +81,7 @@
 27f5be35774f634aeee3a888b289ca94f8359a57 blocks/Varios/Codificadores/Wires/Codificador_32_5.ice|blocks/Varios/Codificadores/Templates/Codificador.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 1,1,1,1,1|6a4fbd6315cbde3fa67ac4d4fe900c16d5060725|128e31eee038c744c844eba6d64142ddab0351cb|992a4954618ae409624233ea7efa16876beac260|blocks/Varios/Codificadores/Templates/Codificador.svg
 28cc7f9c81c1483b37f6ffad2892e04b3725a8b6 ./blocks/Varios/Multiplexores/8 canales/Mux8_1.ice|./blocks/Varios/Multiplexores/Templates/Mux8.ice.template 3,1,1,1,1,1,1,1,1 1
 2a202f6f95c101d58be613f83f048dde00f1d416 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice|./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 3 3
+2a975ab457dafc4c11e747a175f8531c8479f289 ./blocks/Varios/Aritmetica/Extender/Extender_1_16.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 16|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 2ae85c8b9e5557e7ce00ac96c33ac99b94852983 ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice|./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 8,8 8|./blocks/Varios/Buses/XOR/Templates/XOR.svg
 2b0571c5e81551963019f093b2816b142f179cd0 ./blocks/Varios/Buses/XOR/1_out/XOR_4.ice|./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 4 1|./blocks/Varios/Buses/XOR/Templates/XOR.svg
 2b1d11e22f254f47b4f223d57a5e28cbe7637dcd ./blocks/Varios/Multiplexores/8 canales/Mux8_4.ice|./blocks/Varios/Multiplexores/Templates/Mux8.ice.template 3,4,4,4,4,4,4,4,4 4
@@ -117,12 +120,15 @@
 38d93f88e9e383e547b162f86e0e89513db4ccd1 ./blocks/Varios/Buses/Unir/Join_wires/Join_31.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 31
 3b261ed833d393bc29c00005e3e98de1849317a8 ./blocks/Varios/Buses/OR/1_to_all/OR_2.ice|./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 2 1|./blocks/Varios/Buses/OR/Templates/OR.svg
 3b3a299c995e1d5bc4b2f7b66cd6d29b8d0a272b ./blocks/Varios/Buses/Separar/Split_wires/Split_9.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 9 1,1,1,1,1,1,1,1,1
+3c16de77cd01f48e45ed7d4a5e08b88ee930c6b7 ./blocks/Varios/Aritmetica/Extender/Extender_8_32.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 8 32|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 3c1dde3a46816a0aab099f16c556d4df29b3e636 ./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_2.ice|./blocks/Varios/Aritmetica/Complemento_a_2/Templates/Complemento_a_2.ice.template 2 2|6034a997b53bdfab95b67ca0af103b49d0188666|d077c68dafec2a471d1fdedde161952f05746b8f
 3c6294aaaf4b72713b91a45c2a3078a152811ae5 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice|./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 16 16
 3d0b7d0a5dd7285a06db8d6e6df2d7abdaca2df7 ./blocks/Varios/Aritmetica/Restadores/Completo/Restador_Completo_16.ice|./blocks/Varios/Aritmetica/Restadores/Templates/Restador_Completo.ice.template 16 16|67400fe306c364f3e0e84495d36788c726c84a0e|bcc6282c1749e3549e5206843ac4c7b6a05e5f7e|9e8fb8e66f2d2dae541ef4eda9196ee8db33a92b
+3d750ac52dbe844326030bffd5a5c748da4dacbb ./blocks/Varios/Aritmetica/Extender/Extender_4_8.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 4 8|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 3d8450a0f31201ef20e0dba8bf08bf4b33194713 ./blocks/Const/Bus/Val/Const_2_bits.ice|./blocks/Const/Bus/Templates/Const.ice.template 0 2|./blocks/Const/Bus/Templates/Const.svg
 3d915bbc2db7cefefc45e08fd91867c0ffc291dc ./blocks/Varios/Buses/NAND/1_out/NAND_32.ice|./blocks/Varios/Buses/NAND/Templates/NAND_1_out.ice.template 32 1|./blocks/Varios/Buses/NAND/Templates/NAND.svg
 3e20f01f151d7223cc78e8529de7836710fd7b72 ./blocks/Logic/OR/OR_7.ice|./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1,1 1|./blocks/Logic/OR/Templates/OR.svg
+3e95aea2345a3a0ddd2ea648f1a637974a533eb7 ./blocks/Varios/Aritmetica/Extender/Extender_16_32.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 16 32|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 3fc6ff94c512a45e4738be669292e00de44295af ./blocks/Varios/Buses/AND/1_out/AND_4.ice|./blocks/Varios/Buses/AND/Templates/AND_1_out.ice.template 4 1
 40997243d3b9cf85c48e8d54ca30f2d3b099deb3 ./blocks/Varios/Multiplexores/4 canales/Mux4_4.ice|./blocks/Varios/Multiplexores/Templates/Mux4.ice.template 2,4,4,4,4 4
 40ef31fd5a900f03e1b5bf8b0f4c86a9f2312afb ./blocks/Varios/Buses/Separar/Split_4/Split_16_4,4,4,4.ice|./blocks/Varios/Buses/Separar/Templates/Split-4.ice.template 16 4,4,4,4
@@ -179,6 +185,7 @@
 59c1c4af2d533e31d17a1e97b9fb10cf23fa7c01 ./blocks/Varios/Buses/NAND/bus_out/NAND_32.ice|./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 32,32 32|./blocks/Varios/Buses/NAND/Templates/NAND.svg
 5b268b7cafa24a7d206e49a46d6fe7327ed8fc70 ./blocks/Varios/Aritmetica/Sumadores/Simple/Sumador_Simple_16.ice|./blocks/Varios/Aritmetica/Sumadores/Templates/Sumador_Simple.ice.template 16 16
 5b321814c2ec21a8b9f6bfd38334ae16435cea4d ./blocks/Varios/Buses/Separar/Split_wires/Split_15.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 15 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+5b6607920a8a6cb59e510c2e4ad8c41c545623c5 ./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 4|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 5b8b3eeaa6afd974be50d05791830dbff5a31359 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice|./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 16 16|3c6294aaaf4b72713b91a45c2a3078a152811ae5|7a5052cf67ad629d54e75210928ff8eb02c7c09c|78b882006678da24215d00b69cdf2c496f6f812f
 5c4f09c054b2ed3c7d57f6ee7cef75e77b33fdd4 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_16_Ena_Rst.ice|./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 16 16|3c6294aaaf4b72713b91a45c2a3078a152811ae5|78b882006678da24215d00b69cdf2c496f6f812f
 5cd69f78edfe70e02aaba2f278e60d7e78b3d6ac ./examples/1. Basic/08. AND 1 to all.ice|./examples/1.\ Basic/Templates/08.\ AND\ 1\ to\ all.ice.template 0 0|899f7854816f516e1541c4cbc2b6afd64666adac|5204596c09fe587128e6bbccf7caf63cc4715f1a|91ae45ab2ad5dae2d0d2557d5c66a11179f5c435|9e8fb8e66f2d2dae541ef4eda9196ee8db33a92b
@@ -219,6 +226,7 @@
 6eb95c5989abb6d280f7b45729cc97627001b89b ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_4_2.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 4 2
 6f295fd723d0abb774229ecfc22c35df93e633b7 ./blocks/Varios/Buses/Unir/Join_3/Join_8,8,16_32.ice|./blocks/Varios/Buses/Unir/Templates/Join-3.ice.template 8,8,16 32
 703656d913dc4b78d9719a0304f06466a633a5aa ./blocks/Varios/Buses/Expandir/Expandir_16_32.ice|./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 16 32
+706cd61b3cf0440b30dae11ee6f9627504f8fc3b ./blocks/Varios/Aritmetica/Extender/Extender_2_32.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 32|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 7111c2eb6a159e110c5c226fb3da139396d42db0 blocks/Varios/Buses/Cruzar/Wires/Cruzar_2.ice|blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1 1,1|blocks/Varios/Buses/Cruzar/Templates/Cross2.svg
 71436338ea74aeeeddf51a70d4f6fc0402427225 ./blocks/Const/Bus/1s/Valor_1s_32_bits.ice|./blocks/Const/Bus/Templates/Valor_1s.ice.template 0 32
 7164b557abe94f30f884e7c25cb66a8425cc200a ./blocks/Varios/Aritmetica/Comparadores/Comparador_4.ice|./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador.ice.template 4 1
@@ -295,6 +303,7 @@
 94d3a9f4c7434aeec9922247d6832624146055ea ./blocks/Const/Bus/1s/Valor_1s_2_bits.ice|./blocks/Const/Bus/Templates/Valor_1s.ice.template 0 2
 960d226bea521d3bc45ecb635596c3846b204684 ./blocks/Varios/Aritmetica/Sumadores/Simple/Sumador_Simple_32.ice|./blocks/Varios/Aritmetica/Sumadores/Templates/Sumador_Simple.ice.template 32 32
 961f125e5cd5b9a437219bee120765cb265b19ca ./blocks/Varios/Buses/Expandir/Expandir_8_32.ice|./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 8 32
+9699621e86496e9a13487a74ea1a2ffdbbe3cfa7 ./blocks/Varios/Aritmetica/Extender/Extender_2_8.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 8|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 96e2a86107d8f0b205d35733830638a19825e749 ./examples/1. Basic/10. XOR 1 to all.ice|./examples/1.\ Basic/Templates/10.\ XOR\ 1\ to\ all.ice.template 0 0|899f7854816f516e1541c4cbc2b6afd64666adac|5204596c09fe587128e6bbccf7caf63cc4715f1a|18b5989ccf35c1a65177600e9b135c5a4bdfded0
 97cd4a61df730164eb5366a4d89508edb15e6f1d ./blocks/Varios/Multiplexores/8 canales/Mux8_16.ice|./blocks/Varios/Multiplexores/Templates/Mux8.ice.template 3,16,16,16,16,16,16,16,16 16
 9899533b2f1596b3e0d3caff5bbf9dc157026216 blocks/Varios/Biestables/Flip-flop D/Flip-flop D Simple 1.ice|blocks/Varios/Biestables/Templates/Flip-flop\ X\ Simple.ice.template 1 D|blocks/Varios/Biestables/Templates/Flip-flop-X-N.svg|blocks/Varios/Biestables/Templates/ffd.v
@@ -334,6 +343,7 @@ a6faaf87767f201bb42150e42f1e342448156e89 ./blocks/Varios/Buses/NAND/1_out/NAND_8
 a7d1b5c3ed4f1f61c59410ad73d4a001a6891944 ./blocks/Varios/Biestables/Chincheta-T-sync-1.ice|./blocks/Varios/Biestables/Templates/Chincheta-T-sync-1.ice.template 0 0|7c11b59bf582233ee561b5d2b9cc03d97b6bb797
 a8145ee6b1b7429498d57e641bdd5e4ad8189cb8 ./blocks/Varios/Buses/Reducir/Reducir_8_2.ice|./blocks/Varios/Buses/Reducir/Templates/Reducir.ice.template 8 2
 a8184aadb90914affb30201a505131ee6a17660f ./blocks/Varios/Aritmetica/Sumadores/Didáctico/Medio_Sumador.ice|./blocks/Varios/Aritmetica/Sumadores/Templates/Medio_Sumador.ice.template 0 0|e69d3cb35e6ae239af80b400c55d7d2820942d68|9170e2a10979240b02bb2fe95860e44064cb83ba
+a8711a0b4a20b8e2fcaf19d8eb5d31bd83e7286e ./blocks/Varios/Aritmetica/Extender/Extender_2_16.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 16|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 a911f6322d1ceb41cf8d926dbd815f9f0321069e ./blocks/Varios/Buses/Unir/Join_wires/Join_10.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1 10
 a92c592e0859aabecc473fd7eea51de0773ea9de ./blocks/Varios/Buses/Unir/Join_wires/Join_22.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 22
 a96da4bb77787477b04e64eebb79cf37d52a84cf ./blocks/Varios/Buses/NOR/1_out/NOR_2.ice|./blocks/Varios/Buses/NOR/Templates/NOR_1_out.ice.template 2 1|./blocks/Varios/Buses/NOR/Templates/NOR.svg
@@ -370,6 +380,7 @@ b4d969d510aa2cd9036b2dbd17633d29e2d700ec ./blocks/Varios/Buses/XOR/1_to_all/XOR_
 b502ffcf224e7d0008216a8ff03d9eee61e6e994 ./blocks/Varios/Buses/Reducir/Reducir_32_16.ice|./blocks/Varios/Buses/Reducir/Templates/Reducir.ice.template 32 16
 b52ab35991436e7023492e54d8ceb8e9ad5aa88b ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice|./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_2_mayor_didáctico.ice.template 0 0|0495a449ce33d2a2290ba6dfe7dc540696681b6b|9e8fb8e66f2d2dae541ef4eda9196ee8db33a92b|9170e2a10979240b02bb2fe95860e44064cb83ba|bfa3fd57476767688d0375080a07ceff80cc4762|acf2221429614f244c61acbc8ead7fa901d07f87|./blocks/Varios/Aritmetica/Comparadores/Templates/Comparador_mayor.svg
 b5b1ef6e5d50791959435911d45dccb18e866707 ./blocks/Varios/Buses/XOR/bus_out/XOR_2.ice|./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 2,2 2|./blocks/Varios/Buses/XOR/Templates/XOR.svg
+b5c838092a884cafa731c523344a0925e08a2658 ./blocks/Varios/Aritmetica/Extender/Extender_1_2.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 2|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 b661ece7d1d1b10683df7c2baf49f93e23771a10 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_8_Simple.ice|./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 8 8|bcf5a3f835bb2cf2b4afde6c88bf2e88e56e8323|7a5052cf67ad629d54e75210928ff8eb02c7c09c|78b882006678da24215d00b69cdf2c496f6f812f
 b75f38ab1819b3b9f35795669e81ae2b6e6bf2a2 ./examples/5. Aritmetica/04. Sumador Simple.ice|./examples/5.\ Aritmetica/Templates/04.\ Sumador\ Simple.ice.template 0 0|3d8450a0f31201ef20e0dba8bf08bf4b33194713|560600bab49c479c491bec3780621837c598c23f
 b767fdbc6e3ee3c7b809a1877f8ccc354adf62a5 ./blocks/Logic/NOR/NOR_4.ice|./blocks/Logic/NOR/Templates/NOR.ice.template 1,1,1,1 1|./blocks/Logic/NOR/Templates/NOR.svg
@@ -460,6 +471,7 @@ e22a504cc1510d150fc309120a2e17b8f5cda1a8 ./blocks/Varios/Biestables/Chincheta-D-
 e27aef13ed0e3803d032a86d7ca3298aae8a9187 ./blocks/Varios/Buses/Unir/Join_wires/Join_18.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 18
 e330201aa868015bd5a0b92f69efcebf48992357 ./blocks/Varios/Buses/Separar/Split_3/Split_16_4,4,8.ice|./blocks/Varios/Buses/Separar/Templates/Split-3.ice.template 16 4,4,8
 e3717de5be6f602aba649adbeac4d62a4e712b42 ./blocks/Const/Bus/0/Valor_0_4_bits.ice|./blocks/Const/Bus/Templates/Valor_0.ice.template 0 4
+e383c98facc073a56e09aa720386aa5ed6a93843 ./blocks/Varios/Aritmetica/Extender/Extender_1_32.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 32|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 e3f43b3c4319117a70ca7e30c628c5f17bfedf46 ./blocks/Varios/Buses/Separar/Split_3/Split_8_2,2,4.ice|./blocks/Varios/Buses/Separar/Templates/Split-3.ice.template 8 2,2,4
 e425ad46db92c78efd83ae96b392bbc4ce268706 ./blocks/Varios/Buses/AND/1_to_all/AND_32.ice|./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 32 1|./blocks/Varios/Buses/AND/Templates/AND.svg
 e43f39a2080a2bd59743107f0a3a67921d186b55 ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_2.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 16 2
@@ -473,6 +485,7 @@ e6ada76dd7211a370577fd3a2bb3827ba2ace742 ./blocks/Varios/Buses/Unir/Join_wires/J
 e7572d99f3a9231cf04e1a02bb47cb5a07faaa63 ./blocks/Varios/Buses/AND/bus_out/AND_2.ice|./blocks/Varios/Buses/AND/Templates/AND_bus_out.ice.template 2,2 2|./blocks/Varios/Buses/AND/Templates/AND.svg
 e764051768cc8d48d3b5b8bf55e3d24ec5d87a2f ./blocks/Varios/Pulso/Corazon_2Hz_P.ice|./blocks/Varios/Pulso/Templates/Corazon_2Hz_P.ice.template 0 0|78b882006678da24215d00b69cdf2c496f6f812f|7a5052cf67ad629d54e75210928ff8eb02c7c09c|c2e4c474a8c48ef3166dc1d32638716b81fd9ed1
 e795d3c6d17f3c7bc3e85909c0bc3044180975cf ./examples/5. Aritmetica/07. Complemento a 2.ice|./examples/5.\ Aritmetica/Templates/07.\ Complemento\ a\ 2.ice.template 0 0|899f7854816f516e1541c4cbc2b6afd64666adac|85247d6b85b436772e4ee5e6dbddf6951f9d16f5
+e8860cb571357b9f6f298b4fcbb9f2ac68abe075 ./blocks/Varios/Aritmetica/Extender/Extender_1_4.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 4|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 e9028cdfbe143282d4b57faf1471b40d63708e07 ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice|./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar1.ice.template 32 1
 eae4db203b424245bde9255d8ff4900f7bc12eff ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_8_Simple.ice|./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template 8 8|bcf5a3f835bb2cf2b4afde6c88bf2e88e56e8323|7a5052cf67ad629d54e75210928ff8eb02c7c09c|78b882006678da24215d00b69cdf2c496f6f812f
 eb68b1ad14a56de3fd09c618b201cbc8ade5d3fd ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_32_Ena_Rst.ice|./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 32 32|7757e70e0cf8ec80f510d66f3ab19043b9c2713a|7a5052cf67ad629d54e75210928ff8eb02c7c09c|78b882006678da24215d00b69cdf2c496f6f812f
@@ -481,12 +494,14 @@ ec0efc3f70de202cff45ecc692596fe216d933ef ./blocks/Logic/OR/OR_2.ice|./blocks/Log
 ec36702b84d688af47e30926a501c43e6f39ad00 ./blocks/Varios/Buses/XOR/1_out/XOR_32.ice|./blocks/Varios/Buses/XOR/Templates/XOR_1_out.ice.template 32 1|./blocks/Varios/Buses/XOR/Templates/XOR.svg
 ee03a3b13069a446101f81caef80b07f8115af13 ./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset.ice|./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset.ice.template 0 0|78b882006678da24215d00b69cdf2c496f6f812f|c2e4c474a8c48ef3166dc1d32638716b81fd9ed1
 eee31b19ba60526aae70c6a465de89e20b10b5bf ./blocks/Varios/Multiplexores/2 canales/Mux2_16.ice|./blocks/Varios/Multiplexores/Templates/Mux2.ice.template 1,16,16 16
+efd5e99cfb7a03d06202b7b9ab98159747e88ad8 ./blocks/Varios/Aritmetica/Extender/Extender_4_32.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 4 32|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 f1f1fdb52d7175dc85209705fd2207394a487fe8 ./blocks/Varios/Biestables/Chincheta-T-sync-0.ice|./blocks/Varios/Biestables/Templates/Chincheta-T-sync-0.ice.template 0 0|7c11b59bf582233ee561b5d2b9cc03d97b6bb797
 f23fe91b3e8a1dc06fc697b4ac72af31ee88ebbd ./blocks/Varios/Buses/NAND/bus_out/NAND_16.ice|./blocks/Varios/Buses/NAND/Templates/NAND_bus_out.ice.template 16,16 16|./blocks/Varios/Buses/NAND/Templates/NAND.svg
 f2f6a9b50ad6b031e2e6be8216ac64c93f6c21df ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_16.ice|./blocks/Varios/Aritmetica/Complemento_a_1/Templates/Complemento_a_1.ice.template 16 16|be8914e9d2f211a75081f1fed4ce7f0fd5833b03
 f2f9ef34843071a8af6dcac0a1b32afbfe5dbc69 ./blocks/Varios/Buses/Unir/Join_wires/Join_11.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1,1,1,1,1,1,1,1,1,1 11
 f2fe236d74aa6c2b76d768c16717c9c2ed11b8e3 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_32_Ena_Rst.ice|./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 32 32|7757e70e0cf8ec80f510d66f3ab19043b9c2713a|78b882006678da24215d00b69cdf2c496f6f812f
 f38b99720333743977591fb654fa1efbe5c8aabb ./blocks/Const/Bus/0/Valor_0_32_bits.ice|./blocks/Const/Bus/Templates/Valor_0.ice.template 0 32
+f39c35a111979c3ffabd6232afa9b0c22cf5f9a8 ./blocks/Varios/Aritmetica/Extender/Extender_4_16.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 4 16|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 f4fdff1c8e548eba16768248c05316a95b4c8b2f ./blocks/Varios/Buses/OR/1_to_all/OR_4.ice|./blocks/Varios/Buses/OR/Templates/OR_1_to_all.ice.template 4 1|./blocks/Varios/Buses/OR/Templates/OR.svg
 f5f8235651cc0ab7905c69e82582ba29085d95a6 ./blocks/Varios/Buses/XOR/bus_out/XOR_16.ice|./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 16,16 16|./blocks/Varios/Buses/XOR/Templates/XOR.svg
 f606809e5048323053f8b8af0b4f2b0b85dd2e79 ./blocks/Varios/Buses/Unir/Join_2/Join_2,2_4.ice|./blocks/Varios/Buses/Unir/Templates/Join-2.ice.template 2,2 4
@@ -495,6 +510,7 @@ f651dbb9c691ca1e6519db6c09178e206bdae197 ./blocks/Varios/Registros/Izquierda/Ena
 f72dd29db3a1fcff837c7061eb014579c30f25cb ./blocks/Varios/Buses/XNOR/bus_out/XNOR_16.ice|./blocks/Varios/Buses/XNOR/Templates/XNOR_bus_out.ice.template 16,16 16|./blocks/Varios/Buses/XNOR/Templates/XNOR.svg
 f770902438efe36580bb0cba0edbd22c8fcaa6fa ./examples/3. Desplazamiento/08. Desplazamiento Izquierda Simple.ice|./examples/3.\ Desplazamiento/Templates/08.\ Desplazamiento\ Izquierda\ Simple.ice.template 0 0|b2ff5c93417458e2e8934a326e1bb6b19782027e|0440039c47b72d27e0f3a082b4de4f2c7085ead7|92fe9816cb11035ae01029cef2805b7130a8ee0d|ec0efc3f70de202cff45ecc692596fe216d933ef
 f7dd46e3ad488ff5029bf66e04c633e893d4c93e blocks/Varios/Biestables/Flip-flop RS/Flip-flop RS Simple INI.ice|blocks/Varios/Biestables/Templates/Flip-flop\ XY\ Simple\ INI.ice.template 0 R,S|blocks/Varios/Biestables/Templates/Flip-flop-XY-INI.svg|blocks/Varios/Biestables/Templates/ffrs.v
+f80c16555d0677b8d574a3e8259792c4079d5089 ./blocks/Varios/Aritmetica/Extender/Extender_1_8.ice|./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 8|./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
 f82c15b4869c20b3cb40115e564066db9e0ffae7 ./blocks/Varios/Buses/Separar/Split_wires/Split_24.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 24 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 f8c6d4676d297a76da45ea7dc99d8b5947c4baa5 ./blocks/Varios/Buses/Separar/Split_wires/Split_3.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 3 1,1,1
 f9052490725e5ac88d88e11756ce459116775515 ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice|./blocks/Varios/Buses/Unir/Templates/Join-wires.ice.template 1,1 2

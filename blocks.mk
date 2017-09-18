@@ -87,6 +87,21 @@ all:  \
 	./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_32.ice \
 	./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_4.ice \
 	./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_8.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_16_32.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_1_16.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_1_2.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_1_32.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_1_4.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_1_8.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_2_16.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_2_32.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_2_8.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_4_16.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_4_32.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_4_8.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_8_16.ice \
+	./blocks/Varios/Aritmetica/Extender/Extender_8_32.ice \
 	./blocks/Varios/Aritmetica/Incrementador/Incrementador_16.ice \
 	./blocks/Varios/Aritmetica/Incrementador/Incrementador_2.ice \
 	./blocks/Varios/Aritmetica/Incrementador/Incrementador_32.ice \
@@ -857,6 +872,66 @@ all:  \
 ./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_8.ice: ./blocks/Varios/Aritmetica/Complemento_a_2/Templates/Complemento_a_2.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Incrementador/Incrementador_8.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_8.ice ./blocks/Const/Bus/0/Valor_0_8_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_8.ice ./blocks/Varios/Buses/NOT/NOT_8.ice
 	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Complemento_a_2/Templates/Complemento_a_2.ice.template 8 8 ./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Complemento_a_2/Complemento_a_2_8.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_16_32.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 16 32 ./blocks/Varios/Aritmetica/Extender/Extender_16_32.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_16_32.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_1_16.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 16 ./blocks/Varios/Aritmetica/Extender/Extender_1_16.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_1_16.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_1_2.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 2 ./blocks/Varios/Aritmetica/Extender/Extender_1_2.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_1_2.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_1_32.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 32 ./blocks/Varios/Aritmetica/Extender/Extender_1_32.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_1_32.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_1_4.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 4 ./blocks/Varios/Aritmetica/Extender/Extender_1_4.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_1_4.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_1_8.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 1 8 ./blocks/Varios/Aritmetica/Extender/Extender_1_8.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_1_8.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_2_16.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 16 ./blocks/Varios/Aritmetica/Extender/Extender_2_16.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_2_16.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_2_32.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 32 ./blocks/Varios/Aritmetica/Extender/Extender_2_32.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_2_32.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 4 ./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_2_8.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 2 8 ./blocks/Varios/Aritmetica/Extender/Extender_2_8.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_2_8.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_4_16.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 4 16 ./blocks/Varios/Aritmetica/Extender/Extender_4_16.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_4_16.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_4_32.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 4 32 ./blocks/Varios/Aritmetica/Extender/Extender_4_32.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_4_32.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_4_8.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 4 8 ./blocks/Varios/Aritmetica/Extender/Extender_4_8.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_4_8.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_8_16.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 8 16 ./blocks/Varios/Aritmetica/Extender/Extender_8_16.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_8_16.ice
+
+./blocks/Varios/Aritmetica/Extender/Extender_8_32.ice: ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Extender/Templates/Extend.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Extender/Templates/Extender.ice.template 8 32 ./blocks/Varios/Aritmetica/Extender/Extender_8_32.ice
+	perl tools/update_db.pl ./blocks/Varios/Aritmetica/Extender/Extender_8_32.ice
 
 ./blocks/Varios/Aritmetica/Incrementador/Incrementador_16.ice: ./blocks/Varios/Aritmetica/Incrementador/Templates/Incrementador.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_16.ice ./blocks/Const/Bus/0/Valor_0_16_bits.ice ./blocks/Const/Bit/1.ice
 	perl tools/reemplaza.pl ./blocks/Varios/Aritmetica/Incrementador/Templates/Incrementador.ice.template 16 16 ./blocks/Varios/Aritmetica/Incrementador/Incrementador_16.ice
