@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "Flip-flop RS con entradas de fuerza, enable, reset y valor inicial",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2296.734%22%20height=%2263.29%22%20viewBox=%220%200%2090.688%2059.334%22%3E%3Cg%20transform=%22translate(-282.589%20-374.155)%22%3E%3Ctext%20style=%22line-height:0%%22%20x=%22308.195%22%20y=%22426.483%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22308.195%22%20y=%22426.483%22%20style=%22line-height:1.25;-inkscape-font-specification:'sans-serif,%20Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center%22%20font-weight=%22700%22%20font-size=%2235%22%20text-anchor=%22middle%22%3ERS%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%%22%20x=%22285.561%22%20y=%22389.35%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22285.561%22%20y=%22389.35%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EFlip-Flop%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%%22%20x=%22341.738%22%20y=%22420.476%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#00f%22%3E%3Ctspan%20x=%22341.738%22%20y=%22420.476%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EIni%3C/tspan%3E%3C/text%3E%3Crect%20width=%2237.881%22%20height=%2227.274%22%20x=%22334.396%22%20y=%22400.212%22%20ry=%224.5%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2296.734%22%20height=%2263.29%22%20viewBox=%220%200%2090.688%2059.334%22%3E%3Cg%20transform=%22translate(-282.589%20-374.155)%22%3E%3Ctext%20style=%22line-height:0%25%22%20x=%22308.195%22%20y=%22426.483%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22308.195%22%20y=%22426.483%22%20style=%22line-height:1.25;-inkscape-font-specification:'sans-serif,%20Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center%22%20font-weight=%22700%22%20font-size=%2235%22%20text-anchor=%22middle%22%3ERS%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%25%22%20x=%22285.561%22%20y=%22389.35%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22285.561%22%20y=%22389.35%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EFlip-Flop%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:0%25%22%20x=%22341.738%22%20y=%22420.476%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#00f%22%3E%3Ctspan%20x=%22341.738%22%20y=%22420.476%22%20style=%22line-height:1.25%22%20font-size=%2220%22%3EIni%3C/tspan%3E%3C/text%3E%3Crect%20width=%2237.881%22%20height=%2227.274%22%20x=%22334.396%22%20y=%22400.212%22%20ry=%224.5%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
   },
   "design": {
     "board": "kefir",
@@ -28,7 +28,7 @@
           },
           "position": {
             "x": 128,
-            "y": 104
+            "y": 112
           }
         },
         {
@@ -48,7 +48,7 @@
           },
           "position": {
             "x": 128,
-            "y": 176
+            "y": 200
           }
         },
         {
@@ -87,7 +87,7 @@
           },
           "position": {
             "x": 128,
-            "y": 248
+            "y": 280
           }
         },
         {
@@ -107,7 +107,7 @@
           },
           "position": {
             "x": 128,
-            "y": 320
+            "y": 360
           }
         },
         {
@@ -127,7 +127,7 @@
           },
           "position": {
             "x": 128,
-            "y": 392
+            "y": 448
           }
         },
         {
@@ -166,27 +166,7 @@
           },
           "position": {
             "x": 128,
-            "y": 464
-          }
-        },
-        {
-          "id": "input-pr",
-          "type": "basic.input",
-          "data": {
-            "name": "pr",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true,
-            "clock": false
-          },
-          "position": {
-            "x": 128,
-            "y": 536
+            "y": 528
           }
         },
         {
@@ -206,7 +186,7 @@
           "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
           "type": "basic.code",
           "data": {
-            "code": "reg qr=INI;\n\nalways @(posedge clk or posedge cl or posedge pr)\nbegin\n   if (cl)\n      qr <= 0;\n   else if (pr)\n      qr <= 1;\n   else if (clk)\n      begin\n      if (rst)\n         qr <= INI;\n      else if (ena)\n         begin\n         if (s)\n            qr <= 1'b1;\n         else\n            if (r)\n               qr <= 1'b0;\n         end\n      end\nend\n\nassign q=qr;\nassign nq=~qr;",
+            "code": "reg qr=INI;\n\nalways @(posedge clk or posedge cl)\nbegin\n   if (cl)\n      qr <= 0;\n   else\n      begin\n      if (rst)\n         qr <= INI;\n      else if (ena)\n         begin\n         if (s)\n            qr <= 1'b1;\n         else\n            if (r)\n               qr <= 1'b0;\n         end\n      end\nend\n\nassign q=qr;\nassign nq=~qr;",
             "params": [
               {
                 "name": "INI"
@@ -231,9 +211,6 @@
                 },
                 {
                   "name": "cl"
-                },
-                {
-                  "name": "pr"
                 }
               ],
               "out": [
@@ -265,16 +242,6 @@
           "target": {
             "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
             "port": "clk"
-          }
-        },
-        {
-          "source": {
-            "block": "input-pr",
-            "port": "out"
-          },
-          "target": {
-            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "pr"
           }
         },
         {
@@ -361,10 +328,10 @@
     },
     "state": {
       "pan": {
-        "x": 267.3747,
-        "y": 136.0728
+        "x": 17.513,
+        "y": 51.6104
       },
-      "zoom": 0.8031
+      "zoom": 0.7256
     }
   },
   "dependencies": {

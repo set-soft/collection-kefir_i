@@ -1,12 +1,10 @@
 reg qr=DINI;
 
-always @(posedge clk or posedge cl or posedge pr)
+always @(posedge clk or posedge cl)
 begin
    if (cl)
       qr <= 0;
-   else if (pr)
-      qr <= 1;
-   else if (clk)
+   else
       begin
       if (rst)
          qr <= DINI;

@@ -32,6 +32,25 @@
           }
         },
         {
+          "id": "output-q",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 936,
+            "y": 168
+          }
+        },
+        {
           "id": "input-@name_ol",
           "type": "basic.input",
           "data": {
@@ -48,25 +67,6 @@
           },
           "position": {
             "x": 128,
-            "y": 184
-          }
-        },
-        {
-          "id": "output-q",
-          "type": "basic.output",
-          "data": {
-            "name": "q",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true
-          },
-          "position": {
-            "x": 936,
             "y": 184
           }
         },
@@ -111,6 +111,25 @@
           }
         },
         {
+          "id": "output-nq",
+          "type": "basic.output",
+          "data": {
+            "name": "nq",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 936,
+            "y": 352
+          }
+        },
+        {
           "id": "input-cl",
           "type": "basic.input",
           "data": {
@@ -128,45 +147,6 @@
           "position": {
             "x": 128,
             "y": 400
-          }
-        },
-        {
-          "id": "output-nq",
-          "type": "basic.output",
-          "data": {
-            "name": "nq",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true
-          },
-          "position": {
-            "x": 936,
-            "y": 400
-          }
-        },
-        {
-          "id": "input-pr",
-          "type": "basic.input",
-          "data": {
-            "name": "pr",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true,
-            "clock": false
-          },
-          "position": {
-            "x": 128,
-            "y": 472
           }
         },
         {
@@ -208,9 +188,6 @@
                 },
                 {
                   "name": "cl"
-                },
-                {
-                  "name": "pr"
                 }
               ],
               "out": [
@@ -229,7 +206,7 @@
           },
           "size": {
             "width": 560,
-            "height": 432
+            "height": 368
           }
         }
       ],
@@ -242,16 +219,6 @@
           "target": {
             "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
             "port": "clk"
-          }
-        },
-        {
-          "source": {
-            "block": "input-pr",
-            "port": "out"
-          },
-          "target": {
-            "block": "a840852a-b458-4b03-a23a-c34cc58840c4",
-            "port": "pr"
           }
         },
         {
@@ -328,10 +295,10 @@
     },
     "state": {
       "pan": {
-        "x": 114.2246,
-        "y": 53.0145
+        "x": -19.6739,
+        "y": 52.9565
       },
-      "zoom": 0.8134
+      "zoom": 0.8098
     }
   },
   "dependencies": {

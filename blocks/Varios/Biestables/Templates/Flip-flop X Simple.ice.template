@@ -74,7 +74,7 @@
           "id": "a840852a-b458-4b03-a23a-c34cc58840c4",
           "type": "basic.code",
           "data": {
-            "code": "localparam cl=0;\nlocalparam pr=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam DINI=@sz_i;\nwire nq;\n\n@verilog<ff@name_ol.v>",
+            "code": "wire cl=0;\nlocalparam rst=0;\nlocalparam ena=1;\nlocalparam DINI=@sz_i;\nwire nq;\n\n@verilog<ff@name_ol.v>",
             "params": [],
             "ports": {
               "in": [
