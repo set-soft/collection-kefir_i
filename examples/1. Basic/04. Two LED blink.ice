@@ -96,7 +96,7 @@
         },
         {
           "id": "cc95bf98-afa9-47dc-aa76-79f2fa67854c",
-          "type": "06f92e32363445694db54db72c49848466b15c60",
+          "type": "5c79f708856fa6fbc990345ea01126fab6ca08b3",
           "position": {
             "x": 160,
             "y": 96
@@ -161,13 +161,13 @@
     }
   },
   "dependencies": {
-    "06f92e32363445694db54db72c49848466b15c60": {
+    "5c79f708856fa6fbc990345ea01126fab6ca08b3": {
   "package": {
     "name": "Prescaler de N+1 bits simple",
     "version": "1.0.0",
     "description": "Divisor de frecuencia por la potencia N+1 de 2, versión simple",
     "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.534%22%20width=%2295.859%22%20viewBox=%220%200%2089.868%2030.501%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2230.55%22%20y=%2226.729%22%20x=%22.356%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2226.729%22%20x=%22.356%22%20font-weight=%22bold%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.534%22%20width=%2295.859%22%20viewBox=%220%200%2089.868%2030.501%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2230.55%22%20y=%2226.729%22%20x=%22.356%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2226.729%22%20x=%22.356%22%20font-weight=%22bold%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%25%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "graph": {
@@ -210,7 +210,7 @@
         },
         {
           "id": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
-          "type": "d5969be9149dd884a1bbc56ccb6a04f816548eb6",
+          "type": "aebb404b9bfbd05aa8df03fc55cd5665c1fafd69",
           "position": {
             "x": 384,
             "y": 208
@@ -313,13 +313,13 @@
     }
   }
     },
-    "d5969be9149dd884a1bbc56ccb6a04f816548eb6": {
+    "aebb404b9bfbd05aa8df03fc55cd5665c1fafd69": {
   "package": {
     "name": "Prescaler de N+1 bits",
     "version": "1.0.0",
     "description": "Divide la frecuencia del enable por la potencia N+1 de 2",
     "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.534%22%20width=%2295.859%22%20viewBox=%220%200%2089.868%2030.501%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2230.55%22%20y=%2226.729%22%20x=%22.356%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2226.729%22%20x=%22.356%22%20font-weight=%22bold%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2232.534%22%20width=%2295.859%22%20viewBox=%220%200%2089.868%2030.501%22%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2230.55%22%20y=%2226.729%22%20x=%22.356%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%2226.729%22%20x=%22.356%22%20font-weight=%22bold%22%20fill=%22green%22%3Ef/2%3Ctspan%20font-size=%2260.938%25%22%20baseline-shift=%22super%22%3EN+1%3C/tspan%3E%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "graph": {
