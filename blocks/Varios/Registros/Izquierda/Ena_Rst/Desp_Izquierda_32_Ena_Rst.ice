@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "Registro de desplazamiento a izquierda de 32 bits con reset, enable y carga paralela",
     "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.49939%2013.8132%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.357%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.357%22%20fill=%22green%22%3E%C2%AB%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.499%2013.813%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.357%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.357%22%20fill=%22green%22%3E«%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "board": "kefir",
@@ -58,26 +58,199 @@
             "name": "q",
             "range": "[31:0]",
             "pins": [
-              {
-                "index": "3",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "2",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "1",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
+
+{
+ "index": "31",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "30",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "29",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "28",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "27",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "26",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "25",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "24",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "23",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "22",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "21",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "20",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "19",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "18",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "17",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "16",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "15",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "14",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "13",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "12",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "11",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "10",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "9",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "8",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "7",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "6",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "5",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "4",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "3",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "2",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "1",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "0",
+ "name": "",
+ "value": "0"
+}
+
             ],
             "virtual": true
           },

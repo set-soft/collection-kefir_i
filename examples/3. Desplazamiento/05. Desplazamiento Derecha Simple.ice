@@ -48,7 +48,7 @@
         },
         {
           "id": "f66265e3-b56f-4923-873d-b5ac28001428",
-          "type": "a36a13e08a1a3d5c3774162e68a1470ed90a6ee4",
+          "type": "b2826916d0e0aeb0236fcfbcb3de26ce4fed6b29",
           "position": {
             "x": 400,
             "y": 184
@@ -203,13 +203,13 @@
     }
   },
   "dependencies": {
-    "a36a13e08a1a3d5c3774162e68a1470ed90a6ee4": {
+    "b2826916d0e0aeb0236fcfbcb3de26ce4fed6b29": {
   "package": {
     "name": "Shift Right Register 4 bits Simple",
     "version": "1.0.0",
     "description": "Registro de desplazamiento a derecha de 4 bits",
     "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.49939%2013.8132%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.879%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.879%22%20fill=%22green%22%3E%C2%BB%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.499%2013.813%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.879%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.879%22%20fill=%22green%22%3E»%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "graph": {
