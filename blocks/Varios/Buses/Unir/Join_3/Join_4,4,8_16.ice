@@ -281,17 +281,17 @@
                 {
                   "name": "i2"
                   ,"range": "[3:0]"
-                  @size_2
+                  ,"size": 4
                 },
                 {
                   "name": "i1"
                   ,"range": "[3:0]"
-                  @size_1
+                  ,"size": 4
                 },
                 {
                   "name": "i0"
                   ,"range": "[7:0]"
-                  @size_0
+                  ,"size": 8
                 }
               ],
               "out": [

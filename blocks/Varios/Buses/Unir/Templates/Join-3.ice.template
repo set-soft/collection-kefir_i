@@ -89,17 +89,17 @@
                 {
                   "name": "i2"
                   @range_i2
-                  @size_2
+                  @size_i2
                 },
                 {
                   "name": "i1"
                   @range_i1
-                  @size_1
+                  @size_i1
                 },
                 {
                   "name": "i0"
                   @range_i0
-                  @size_0
+                  @size_i0
                 }
               ],
               "out": [

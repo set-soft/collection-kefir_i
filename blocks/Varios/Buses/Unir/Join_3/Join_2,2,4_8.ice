@@ -185,17 +185,17 @@
                 {
                   "name": "i2"
                   ,"range": "[1:0]"
-                  @size_2
+                  ,"size": 2
                 },
                 {
                   "name": "i1"
                   ,"range": "[1:0]"
-                  @size_1
+                  ,"size": 2
                 },
                 {
                   "name": "i0"
                   ,"range": "[3:0]"
-                  @size_0
+                  ,"size": 4
                 }
               ],
               "out": [
