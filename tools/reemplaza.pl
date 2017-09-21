@@ -31,6 +31,7 @@ while ($a=~/\@svg\<([^\>]+)\>/g)
    $f=$1;
    $r=`tools/svgo/bin/svgo -i "$tpldir/$f" -o -`;
    $r=EscapeSVG($r);
+   $f=EscapeForShell($f);
    $a=~s/\@svg\<$f\>/$r/g;
   }
 # Also Verilog code
@@ -41,6 +42,7 @@ while ($a=~/\@verilog\<([^\>]+)\>/g)
      {
       $r=EscapeCode(cat("$tpldir/$f"));
       $r=~s/(\\n)+$//;
+      $f=EscapeForShell($f);
       $a=~s/\@verilog\<$f\>/$r/g;
      }
   }
@@ -369,6 +371,7 @@ while ($a=~/\@sha1\<([^\>]+)\>/g)
    my $f=$1;
    $r=$hf{$f};
    die "Unknown block '$f' <$tpl>" unless $r;
+   $f=EscapeForShell($f);
    $a=~s/\@sha1\<$f\>/$r/g;
    #print "SHA1 for $f\n";
    push(@deps,$r);
