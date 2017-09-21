@@ -51,10 +51,10 @@
           }
         },
         {
-          "id": "input-d",
+          "id": "input-rst",
           "type": "basic.input",
           "data": {
-            "name": "d",
+            "name": "rst",
             "pins": [
               {
                 "index": "0",
@@ -71,10 +71,10 @@
           }
         },
         {
-          "id": "input-rst",
+          "id": "input-d",
           "type": "basic.input",
           "data": {
-            "name": "rst",
+            "name": "d",
             "pins": [
               {
                 "index": "0",
@@ -178,10 +178,10 @@
                   "name": "clk"
                 },
                 {
-                  "name": "d"
+                  "name": "rst"
                 },
                 {
-                  "name": "rst"
+                  "name": "d"
                 },
                 {
                   "name": "ena"

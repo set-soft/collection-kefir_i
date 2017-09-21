@@ -51,10 +51,10 @@
           }
         },
         {
-          "id": "input-@name_ol",
+          "id": "input-rst",
           "type": "basic.input",
           "data": {
-            "name": "@name_ol",
+            "name": "rst",
             "pins": [
               {
                 "index": "0",
@@ -71,10 +71,10 @@
           }
         },
         {
-          "id": "input-rst",
+          "id": "input-@name_ol",
           "type": "basic.input",
           "data": {
-            "name": "rst",
+            "name": "@name_ol",
             "pins": [
               {
                 "index": "0",
@@ -178,10 +178,10 @@
                   "name": "clk"
                 },
                 {
-                  "name": "@name_ol"
+                  "name": "rst"
                 },
                 {
-                  "name": "rst"
+                  "name": "@name_ol"
                 },
                 {
                   "name": "ena"
