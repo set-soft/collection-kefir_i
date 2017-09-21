@@ -5,6 +5,7 @@
 "Join-3.ice.template" 2,2,4 8 "Join_3/Join_2,2,4_8.ice"
 "Join-3.ice.template" 4,4,8 16 "Join_3/Join_4,4,8_16.ice"
 "Join-3.ice.template" 8,8,16 32 "Join_3/Join_8,8,16_32.ice"
+"Join-3.ice.template" 1,8,1 10 "Join_3/Join_1,8,1_10.ice"
 "Join-4.ice.template" 2,2,2,2 8 "Join_4/Join_2,2,2,2_8.ice"
 "Join-4.ice.template" 4,4,4,4 16 "Join_4/Join_4,4,4,4_16.ice"
 "Join-4.ice.template" 8,8,8,8 32 "Join_4/Join_8,8,8,8_32.ice"

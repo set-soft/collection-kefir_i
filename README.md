@@ -110,7 +110,7 @@ Collection for the Kefir I board in Icestudio.
       * 2 buses (2/4/8/16)
       * 4 buses (2/4/8)
       * Single bits to any bus upto 32 bits
-      * 3 buses 4(1+1+2)/8(2+2+4)/16(4+4+8)/32(8+8+16)
+      * 3 buses 4(1+1+2)/8(2+2+4)/10(1+8+1)/16(4+4+8)/32(8+8+16)
     * *AND*, *NAND*, *OR*, *NOR*, *XOR*, *XNOR*
       * 1 bus of 2/4/8/16/32 elements, 1 bit output
       * 2 buses of 2/4/8/16/32 elements, 1 bus output
