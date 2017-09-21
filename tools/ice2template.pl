@@ -161,6 +161,24 @@ sub Convert
      $res=~s/$id/$name/g
     }
 
+ # Do we know about it?
+ my $oldHash=$hf{$ori};
+ if ($oldHash)
+   {
+    print "Already on the database\n";
+    my $svg=GetSVGFromRest($h{$oldHash});
+    if ($svg)
+      {
+       print "SVG: $svg\n";
+       my ($nsvg,$dir,$suf)=fileparse($svg);
+       $res=~s/(\s*)\"image\":(\s*)\"(.*)\"/$1\"image\":$2\"\@svg<$nsvg$suf>\"/;
+      }
+    else
+      {
+       print "No SVG\n";
+      }
+   }
+
  open(FI,">$des") || die "Can't create '$des'";
  print FI $res;
  close(FI);
