@@ -121,6 +121,8 @@ Collection for the Kefir I board in Icestudio.
   * *Codificadores*
     * *Bus* (32/16/8/4/2 inputs + group using buses)
     * *Wires* (32/16/8/4 inputs + group using individual signals)
+  * *Comunicación*
+    * TX RS-232 (115200 and configurable)
   * *Contadores*
     * *Asc_Desc* Up/Down counters
       * *32 bits* (3 versions)
@@ -201,6 +203,8 @@ Collection for the Kefir I board in Icestudio.
   * 09\. Restador simple
   * 10\. Sumador didactico
   * 11\. Comparar &gt;,=,&lt; didáctico
+* *6\. Comunicación*
+  * 01\. Transmisión Serie
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)

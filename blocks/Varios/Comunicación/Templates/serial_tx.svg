@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="61.978" width="104.99" version="1.1" viewBox="0 0 98.428246 58.104694">
+<path stroke-linejoin="round" d="m74.997 20.584 0.167 19.068 21.39-19.731v-17.743z" stroke="#000" stroke-linecap="round" stroke-width="1.875" fill="#ececec"/>
+<path stroke-linejoin="round" d="m2.0396 20.778 28.188-18.903 65.994 0.332-20.892 18.903" stroke="#000" stroke-linecap="round" stroke-width="1.875" fill="#e6e6e6"/>
+<g word-spacing="0" letter-spacing="0" font-weight="400" font-family="sans-serif">
+<text style="word-spacing:0;letter-spacing:0" font-size="29.899px" line-height="125%" y="70.334007" x="8.1706238" fill="#0000ff"/>
+<text style="word-spacing:0;letter-spacing:0" font-size="18.75px" line-height="125%" y="98.184006" x="44.322624"/>
+<text style="word-spacing:0;letter-spacing:0" font-size="16.326px" line-height="125%" y="56.936008" x="7.2776241" fill="#0000ff">
+<tspan y="56.936008" x="7.2776241" font-weight="700">Serial</tspan>
+</text>
+</g>
+<g stroke="#000" stroke-linecap="square">
+<rect ry="1.858" height="19.234" width="73.621" y="20.916" x="1.8746" stroke-width="1.875" fill="#e6e6e6"/>
+<g stroke-width="0.938">
+<circle cy="30.367" cx="11.326" r="3.15" fill="#f00"/>
+<circle cy="30.367" cx="20.611" r="3.15" fill="#faa"/>
+<circle cy="30.367" cx="62.82" r="3.15" fill="#008000"/>
+<circle cy="30.367" cx="30.554" r="3.15" fill="#f00"/>
+</g>
+</g>
+<text style="word-spacing:0;letter-spacing:0" font-family="sans-serif" font-size="16.326px" letter-spacing="0" line-height="125%" word-spacing="0" y="56.663006" x="64.043625" font-weight="400" fill="#008000">
+<tspan y="56.663006" x="64.043625" font-weight="700">TX</tspan>
+</text>
+</svg>

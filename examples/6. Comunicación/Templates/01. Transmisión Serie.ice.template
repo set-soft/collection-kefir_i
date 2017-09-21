@@ -1,0 +1,763 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LED1",
+          "type": "basic.output",
+          "data": {
+            "name": "LED1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 680,
+            "y": -64
+          }
+        },
+        {
+          "id": "input-Boton1",
+          "type": "basic.input",
+          "data": {
+            "name": "Boton1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "BTN1",
+                "value": "136"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": -240,
+            "y": 16
+          }
+        },
+        {
+          "id": "output-Tx",
+          "type": "basic.output",
+          "data": {
+            "name": "Tx",
+            "pins": [
+              {
+                "index": "0",
+                "name": "Milk_RXD",
+                "value": "38"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 680,
+            "y": 16
+          }
+        },
+        {
+          "id": "output-CTS",
+          "type": "basic.output",
+          "data": {
+            "name": "CTS",
+            "pins": [
+              {
+                "index": "0",
+                "name": "Milk_CTS",
+                "value": "41"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 272,
+            "y": 32
+          }
+        },
+        {
+          "id": "input-Boton2",
+          "type": "basic.input",
+          "data": {
+            "name": "Boton2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "BTN2",
+                "value": "134"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": -240,
+            "y": 88
+          }
+        },
+        {
+          "id": "output-ARDU00",
+          "type": "basic.output",
+          "data": {
+            "name": "ARDU00",
+            "pins": [
+              {
+                "index": "0",
+                "name": "ARDU00",
+                "value": "138"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 680,
+            "y": 88
+          }
+        },
+        {
+          "id": "output-DSR",
+          "type": "basic.output",
+          "data": {
+            "name": "DSR",
+            "pins": [
+              {
+                "index": "0",
+                "name": "Milk_DSR",
+                "value": "43"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 272,
+            "y": 104
+          }
+        },
+        {
+          "id": "input-Boton3",
+          "type": "basic.input",
+          "data": {
+            "name": "Boton3",
+            "pins": [
+              {
+                "index": "0",
+                "name": "BTN3",
+                "value": "128"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": -240,
+            "y": 160
+          }
+        },
+        {
+          "id": "input-DTR",
+          "type": "basic.input",
+          "data": {
+            "name": "DTR",
+            "pins": [
+              {
+                "index": "0",
+                "name": "Milk_DTR",
+                "value": "42"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 480,
+            "y": 288
+          }
+        },
+        {
+          "id": "output-LED4",
+          "type": "basic.output",
+          "data": {
+            "name": "LED4",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED4",
+                "value": "121"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 768,
+            "y": 288
+          }
+        },
+        {
+          "id": "input-RTS",
+          "type": "basic.input",
+          "data": {
+            "name": "RTS",
+            "pins": [
+              {
+                "index": "0",
+                "name": "Milk_RTS",
+                "value": "39"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 480,
+            "y": 384
+          }
+        },
+        {
+          "id": "output-LED3",
+          "type": "basic.output",
+          "data": {
+            "name": "LED3",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED3",
+                "value": "129"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 768,
+            "y": 384
+          }
+        },
+        {
+          "id": "constant-FROM",
+          "type": "basic.constant",
+          "data": {
+            "name": "FROM",
+            "value": "65",
+            "local": true
+          },
+          "position": {
+            "x": -192,
+            "y": 256
+          }
+        },
+        {
+          "id": "constant-TO",
+          "type": "basic.constant",
+          "data": {
+            "name": "TO",
+            "value": "91",
+            "local": true
+          },
+          "position": {
+            "x": -88,
+            "y": 256
+          }
+        },
+        {
+          "id": "constant-EOL",
+          "type": "basic.constant",
+          "data": {
+            "name": "EOL",
+            "value": "10",
+            "local": true
+          },
+          "position": {
+            "x": 72,
+            "y": 520
+          }
+        },
+        {
+          "id": "6b2d2a9d-aac8-4e70-b128-04d6eece5df2",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 624,
+            "y": 288
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "f8b27e22-36f4-447b-9253-7f9c51dc12d8",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 624,
+            "y": 384
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+          "type": "@sha1<./blocks/Input/CapSense/CapSense 3.ice>",
+          "position": {
+            "x": -48,
+            "y": 0
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "cc75bf55-41a3-4491-97fd-3f7a9381d02f",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 128,
+            "y": 32
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d1372def-8ad4-40c5-9475-81a6cd66b70a",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 128,
+            "y": 104
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "43016edb-f3e2-421e-ae67-e26e399300c0",
+          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_8.ice>",
+          "position": {
+            "x": 64,
+            "y": 408
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "48625ebc-aad1-4b46-8fa6-114911487db3",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": -304,
+            "y": 416
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
+          "position": {
+            "x": -136,
+            "y": 368
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "e98ec179-9018-44b6-bd8d-050530f40637",
+          "type": "@sha1<./blocks/Varios/Multiplexores/2 canales/Mux2_8.ice>",
+          "position": {
+            "x": 280,
+            "y": 424
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "902045a3-f7e9-4a6b-9b61-e81824c8b4d8",
+          "type": "@sha1<./blocks/Const/Bus/Val/Const_8_bits.ice>",
+          "position": {
+            "x": 72,
+            "y": 632
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "854d84d6-c1a5-407b-911e-9ade1995c72a",
+          "type": "basic.info",
+          "data": {
+            "info": "De la A a la Z más\nuno.",
+            "readonly": true
+          },
+          "position": {
+            "x": 16,
+            "y": 256
+          },
+          "size": {
+            "width": 176,
+            "height": 64
+          }
+        },
+        {
+          "id": "69efc41e-ec10-4a80-aefe-a60d4b06424b",
+          "type": "basic.info",
+          "data": {
+            "info": "Cuando está en cuenta\nterminal (Z+1) envía\nun avance de línea (10)",
+            "readonly": true
+          },
+          "position": {
+            "x": 240,
+            "y": 592
+          },
+          "size": {
+            "width": 240,
+            "height": 112
+          }
+        },
+        {
+          "id": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+          "type": "@sha1<./blocks/Varios/Comunicación/Serie (RS-232)/TX_serie_115200.ice>",
+          "position": {
+            "x": 480,
+            "y": -24
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "f3c64f67-5540-42a3-898d-5ab3007bb735",
+          "type": "basic.info",
+          "data": {
+            "info": "El botón 1 inicia una ráfaga de transmisión del abecedario.\nLos botones 2 y 3 controlan las señales CTS y DSR del modem.\nEl LED1 indica que el transmisor está listo (se apaga al presionar el botón 1).\nLas señales DTR y RTS del modem se indican en los LEDs 4 y 3.",
+            "readonly": true
+          },
+          "position": {
+            "x": -296,
+            "y": -160
+          },
+          "size": {
+            "width": 864,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-DTR",
+            "port": "out"
+          },
+          "target": {
+            "block": "6b2d2a9d-aac8-4e70-b128-04d6eece5df2",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "6b2d2a9d-aac8-4e70-b128-04d6eece5df2",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "output-LED4",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "input-RTS",
+            "port": "out"
+          },
+          "target": {
+            "block": "f8b27e22-36f4-447b-9253-7f9c51dc12d8",
+            "port": "input-1"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "f8b27e22-36f4-447b-9253-7f9c51dc12d8",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "output-LED3",
+            "port": "in"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "input-Boton1",
+            "port": "out"
+          },
+          "target": {
+            "block": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+            "port": "input-PIN1"
+          }
+        },
+        {
+          "source": {
+            "block": "input-Boton2",
+            "port": "out"
+          },
+          "target": {
+            "block": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+            "port": "input-PIN2"
+          },
+          "vertices": [
+            {
+              "x": -112,
+              "y": 96
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-Boton3",
+            "port": "out"
+          },
+          "target": {
+            "block": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+            "port": "input-PIN3"
+          }
+        },
+        {
+          "source": {
+            "block": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+            "port": "output-B2"
+          },
+          "target": {
+            "block": "cc75bf55-41a3-4491-97fd-3f7a9381d02f",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "cc75bf55-41a3-4491-97fd-3f7a9381d02f",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "output-CTS",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "d1372def-8ad4-40c5-9475-81a6cd66b70a",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "output-DSR",
+            "port": "in"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+            "port": "output-B3"
+          },
+          "target": {
+            "block": "d1372def-8ad4-40c5-9475-81a6cd66b70a",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-FROM",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+            "port": "constant-FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-TO",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "43016edb-f3e2-421e-ae67-e26e399300c0",
+            "port": "input-i"
+          },
+          "size": 32
+        },
+        {
+          "source": {
+            "block": "48625ebc-aad1-4b46-8fa6-114911487db3",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "43016edb-f3e2-421e-ae67-e26e399300c0",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "e98ec179-9018-44b6-bd8d-050530f40637",
+            "port": "input-i0"
+          },
+          "vertices": [],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+            "port": "output-tc"
+          },
+          "target": {
+            "block": "e98ec179-9018-44b6-bd8d-050530f40637",
+            "port": "input-sel"
+          },
+          "vertices": [
+            {
+              "x": 16,
+              "y": 504
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "902045a3-f7e9-4a6b-9b61-e81824c8b4d8",
+            "port": "output-K"
+          },
+          "target": {
+            "block": "e98ec179-9018-44b6-bd8d-050530f40637",
+            "port": "input-i1"
+          },
+          "vertices": [
+            {
+              "x": 232,
+              "y": 568
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "constant-EOL",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "902045a3-f7e9-4a6b-9b61-e81824c8b4d8",
+            "port": "constant-V"
+          }
+        },
+        {
+          "source": {
+            "block": "70db8186-bec1-4474-aff8-c1a8416ce26b",
+            "port": "output-B1"
+          },
+          "target": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "input-start"
+          }
+        },
+        {
+          "source": {
+            "block": "e98ec179-9018-44b6-bd8d-050530f40637",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "input-data"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "output-LED1",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "6c44f11c-3ee8-4229-96cd-cfbd089dae20",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": -288,
+              "y": -48
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "output-TX"
+          },
+          "target": {
+            "block": "output-Tx",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "output-TX"
+          },
+          "target": {
+            "block": "output-ARDU00",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 686.8056,
+        "y": 196.1111
+      },
+      "zoom": 0.9757
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

@@ -352,6 +352,9 @@ all:  \
 	./blocks/Varios/Buses/XOR/bus_out/XOR_32.ice \
 	./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice \
 	./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice \
+	./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_115200.ice \
+	./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_config.ice \
+	./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice \
 	./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Completo_32_UD.ice \
 	./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Simple_32_UD.ice \
 	./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Simple_Enable_32_UD.ice \
@@ -404,6 +407,7 @@ all:  \
 	./blocks/Varios/Registros/Completo/Reg_32_Completo.ice \
 	./blocks/Varios/Registros/Completo/Reg_4_Completo.ice \
 	./blocks/Varios/Registros/Completo/Reg_8_Completo.ice \
+	./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice \
 	./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_16_Completo.ice \
 	./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_32_Completo.ice \
 	./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_3_Completo.ice \
@@ -440,6 +444,7 @@ all:  \
 	./blocks/Varios/Registros/Simple/Reg_32_Simple.ice \
 	./blocks/Varios/Registros/Simple/Reg_4_Simple.ice \
 	./blocks/Varios/Registros/Simple/Reg_8_Simple.ice \
+	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice \
 	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice \
 	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice \
 	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice \
@@ -494,6 +499,7 @@ all:  \
 	./examples/5.\ Aritmetica/09.\ Restador\ simple.ice \
 	./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice \
 	./examples/5.\ Aritmetica/11.\ Comparar\ >,\=,<\ didáctico.ice \
+	./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -519,6 +525,7 @@ all:  \
 	blocks/Varios/Buses/Cruzar/Wires/Cruzar_32.ice \
 	blocks/Varios/Buses/Cruzar/Wires/Cruzar_4.ice \
 	blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice \
+	blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice \
 	blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice \
 	blocks/Varios/Codificadores/Bus/Codificador_2_1_Bus.ice \
 	blocks/Varios/Codificadores/Bus/Codificador_32_5_Bus.ice \
@@ -527,7 +534,8 @@ all:  \
 	blocks/Varios/Codificadores/Wires/Codificador_16_4.ice \
 	blocks/Varios/Codificadores/Wires/Codificador_32_5.ice \
 	blocks/Varios/Codificadores/Wires/Codificador_4_2.ice \
-	blocks/Varios/Codificadores/Wires/Codificador_8_3.ice
+	blocks/Varios/Codificadores/Wires/Codificador_8_3.ice \
+	blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice
 
 ./blocks/Const/Bit/0-torch.ice: ./blocks/Const/Bit/Templates/0-torch.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Const/Bit/Templates/0-torch.ice.template 0 0 ./blocks/Const/Bit/0-torch.ice
@@ -1927,6 +1935,18 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 
+./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_115200.ice: ./blocks/Varios/Comunicación/Templates/TX_serie_115200.ice.template tools/reemplaza.pl  ./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_config.ice ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Templates/serial_tx_115200.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/TX_serie_115200.ice.template 0 0 ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_115200.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_115200.ice
+
+./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_config.ice: ./blocks/Varios/Comunicación/Templates/TX_serie_config.ice.template tools/reemplaza.pl  ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Templates/serial_tx_config.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/TX_serie_config.ice.template 0 0 ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_config.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_config.ice
+
+./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice: ./blocks/Varios/Comunicación/Templates/TX_Serie_base.ice.template tools/reemplaza.pl  blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Templates/serial_tx.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/TX_Serie_base.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice
+
 ./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Completo_32_UD.ice: ./blocks/Varios/Contadores/Templates/Contador_Completo_32_UD.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_Completo_32_UD.ice.template 0 0 ./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Completo_32_UD.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Completo_32_UD.ice
@@ -2135,123 +2155,127 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Completo.ice.template 8 8 ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice
 
-./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_16_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template 10 10 ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice
+	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice
+
+./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_16_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template 16 16 ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_16_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_16_Completo.ice
 
-./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_32_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_32_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template 32 32 ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_32_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_32_Completo.ice
 
-./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_3_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_3_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template 3 3 ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_3_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_3_Completo.ice
 
-./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_4_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_4_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template 4 4 ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_4_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_4_Completo.ice
 
-./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_8_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_8_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Completo.ice.template 8 8 ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_8_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_8_Completo.ice
 
-./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_16_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_16_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 16 16 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_16_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_16_Ena_Rst.ice
 
-./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_32_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_32_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 32 32 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_32_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_32_Ena_Rst.ice
 
-./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_3_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_3_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 3 3 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_3_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_3_Ena_Rst.ice
 
-./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_4_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_4_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 4 4 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_4_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_4_Ena_Rst.ice
 
-./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 8 8 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice
 
-./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 16 16 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice
 
-./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_32_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_32_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 32 32 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_32_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_32_Simple.ice
 
-./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_3_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_3_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 3 3 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_3_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_3_Simple.ice
 
-./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_4_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_4_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 4 4 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_4_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_4_Simple.ice
 
-./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_8_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_8_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 8 8 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_8_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_8_Simple.ice
 
-./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_16_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_16_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template 16 16 ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_16_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_16_Completo.ice
 
-./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_32_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_32_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template 32 32 ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_32_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_32_Completo.ice
 
-./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_3_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_3_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template 3 3 ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_3_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_3_Completo.ice
 
-./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_4_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_4_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template 4 4 ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_4_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_4_Completo.ice
 
-./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_8_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_8_Completo.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Completo.ice.template 8 8 ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_8_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Completo/Desp_Izquierda_8_Completo.ice
 
-./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_16_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_16_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 16 16 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_16_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_16_Ena_Rst.ice
 
-./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_32_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_32_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 32 32 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_32_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_32_Ena_Rst.ice
 
-./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_3_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_3_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 3 3 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_3_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_3_Ena_Rst.ice
 
-./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_4_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_4_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 4 4 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_4_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_4_Ena_Rst.ice
 
-./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_8_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_8_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Ena_Rst.ice.template 8 8 ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_8_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Ena_Rst/Desp_Izquierda_8_Ena_Rst.ice
 
-./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_16_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_16_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template 16 16 ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_16_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_16_Simple.ice
 
-./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_32_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_32_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_32_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template 32 32 ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_32_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_32_Simple.ice
 
-./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_3_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_3_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template 3 3 ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_3_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_3_Simple.ice
 
-./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_4_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_4_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template 4 4 ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_4_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_4_Simple.ice
 
-./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_8_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_8_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegLeft.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Izquierda_Simple.ice.template 8 8 ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_8_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Izquierda/Simple/Desp_Izquierda_8_Simple.ice
 
@@ -2278,6 +2302,10 @@ all:  \
 ./blocks/Varios/Registros/Simple/Reg_8_Simple.ice: ./blocks/Varios/Registros/Templates/Reg_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Simple.ice.template 8 8 ./blocks/Varios/Registros/Simple/Reg_8_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Simple/Reg_8_Simple.ice
+
+./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice: ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template tools/reemplaza.pl 
+	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 10 10 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice
+	perl tools/update_db.pl ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice
 
 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice: ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 16 16 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice
@@ -2495,6 +2523,10 @@ all:  \
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/11.\ Comparar\ \>,\=,\<\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/11.\ Comparar\ \>,\=,\<\ didáctico.ice
 	perl tools/update_db.pl ./examples/5.\ Aritmetica/11.\ Comparar\ \>,\=,\<\ didáctico.ice
 
+./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice: ./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_2_bits.ice ./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template 0 0 ./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice
+	perl tools/update_db.pl ./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice
+
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
@@ -2595,6 +2627,10 @@ blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice: blocks/Varios/Buses/Cruzar/Templa
 	perl tools/reemplaza.pl blocks/Varios/Buses/Cruzar/Templates/Cruzar.ice.template 1,1,1,1,1,1,1,1 1,1,1,1,1,1,1,1 blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice
 	perl tools/update_db.pl blocks/Varios/Buses/Cruzar/Wires/Cruzar_8.ice
 
+blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice: blocks/Varios/Buses/Unir/Templates/Join-3.ice.template tools/reemplaza.pl 
+	perl tools/reemplaza.pl blocks/Varios/Buses/Unir/Templates/Join-3.ice.template 1,8,1 10 blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice
+	perl tools/update_db.pl blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice
+
 blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice: blocks/Varios/Codificadores/Templates/Codificador_Bus.ice.template tools/reemplaza.pl  blocks/Varios/Codificadores/Templates/Codificador.svg blocks/Varios/Codificadores/Templates/Codificador.v
 	perl tools/reemplaza.pl blocks/Varios/Codificadores/Templates/Codificador_Bus.ice.template 16 4 blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice
 	perl tools/update_db.pl blocks/Varios/Codificadores/Bus/Codificador_16_4_Bus.ice
@@ -2630,4 +2666,8 @@ blocks/Varios/Codificadores/Wires/Codificador_4_2.ice: blocks/Varios/Codificador
 blocks/Varios/Codificadores/Wires/Codificador_8_3.ice: blocks/Varios/Codificadores/Templates/Codificador.ice.template tools/reemplaza.pl  blocks/Varios/Codificadores/Bus/Codificador_8_3_Bus.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_8.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_3.ice blocks/Varios/Codificadores/Templates/Codificador.svg
 	perl tools/reemplaza.pl blocks/Varios/Codificadores/Templates/Codificador.ice.template 1,1,1,1,1,1,1,1 1,1,1 blocks/Varios/Codificadores/Wires/Codificador_8_3.ice
 	perl tools/update_db.pl blocks/Varios/Codificadores/Wires/Codificador_8_3.ice
+
+blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice: blocks/Varios/Comunicación/Templates/FSM_TX_simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice
+	perl tools/reemplaza.pl blocks/Varios/Comunicación/Templates/FSM_TX_simple.ice.template 0 0 blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice
+	perl tools/update_db.pl blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice
 

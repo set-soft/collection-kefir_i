@@ -1,0 +1,255 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Transmisor Serie 115200",
+    "version": "1.0.0",
+    "description": "Transmisor serie 8N1 115200",
+    "author": "Salvador E. Tropea,  Juan Gonzalez-Gomez (Obijuan)",
+    "image": "@svg<serial_tx_115200.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 216,
+            "y": 80
+          }
+        },
+        {
+          "id": "output-rdy",
+          "type": "basic.output",
+          "data": {
+            "name": "rdy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 552,
+            "y": 176
+          }
+        },
+        {
+          "id": "input-start",
+          "type": "basic.input",
+          "data": {
+            "name": "start",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 216,
+            "y": 224
+          }
+        },
+        {
+          "id": "output-TX",
+          "type": "basic.output",
+          "data": {
+            "name": "TX",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 552,
+            "y": 240
+          }
+        },
+        {
+          "id": "input-data",
+          "type": "basic.input",
+          "data": {
+            "name": "data",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "6",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "5",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "4",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 216,
+            "y": 296
+          }
+        },
+        {
+          "id": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+          "type": "@sha1<./blocks/Varios/Comunicación/Serie (RS-232)/TX_serie_config.ice>",
+          "position": {
+            "x": 392,
+            "y": 176
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "e8241e99-29a6-41aa-965e-bbda83fdfc61",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 216,
+            "y": 152
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "output-rdy",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+            "port": "output-TX"
+          },
+          "target": {
+            "block": "output-TX",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "e8241e99-29a6-41aa-965e-bbda83fdfc61",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 352,
+              "y": 200
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+            "port": "input-clk"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "input-start",
+            "port": "out"
+          },
+          "target": {
+            "block": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+            "port": "input-start"
+          }
+        },
+        {
+          "source": {
+            "block": "input-data",
+            "port": "out"
+          },
+          "target": {
+            "block": "951375ac-2f63-4043-89bb-67cf33eac4f0",
+            "port": "input-data"
+          },
+          "size": 8
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 148.5,
+        "y": 127
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
