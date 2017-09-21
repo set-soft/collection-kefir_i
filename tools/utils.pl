@@ -30,6 +30,8 @@ sub EscapeForShell
  $n=~s/\!/\\\!/g;
  $n=~s/\</\\\</g;
  $n=~s/\=/\\\=/g;
+ $n=~s/\(/\\\(/g;
+ $n=~s/\)/\\\)/g;
  $n;
 }
 
@@ -41,6 +43,8 @@ sub UnEscapeForShell
  $n=~s/\\\!/\!/g;
  $n=~s/\\\</\</g;
  $n=~s/\\\=/\=/g;
+ $n=~s/\\\(/\(/g;
+ $n=~s/\\\)/\)/g;
  $n;
 }
 
@@ -218,6 +222,22 @@ sub GetBlockDepsFromRest
      $childs.=$d;
     }
  $childs;
+}
+
+sub GetSVGFromRest
+{
+ my $rest=$_[0];
+
+ my @l=split(/\|/,$rest);
+ shift(@l); # Name
+ shift(@l); # Rule
+
+ my $d;
+ foreach $d (@l)
+    {
+     return $d if $d=~/svg$/;
+    }
+ undef;
 }
 
 sub FileNameIORep
