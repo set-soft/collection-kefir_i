@@ -226,6 +226,7 @@ all:  \
 	./blocks/Varios/Buses/Reducir/Reducir_4_2.ice \
 	./blocks/Varios/Buses/Reducir/Reducir_8_2.ice \
 	./blocks/Varios/Buses/Reducir/Reducir_8_4.ice \
+	./blocks/Varios/Buses/Reducir/Reducir_9_8.ice \
 	./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_2.ice \
 	./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_4.ice \
 	./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_8.ice \
@@ -352,8 +353,16 @@ all:  \
 	./blocks/Varios/Buses/XOR/bus_out/XOR_32.ice \
 	./blocks/Varios/Buses/XOR/bus_out/XOR_4.ice \
 	./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice \
+	./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_115200.ice \
+	./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_config.ice \
 	./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_115200.ice \
 	./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_config.ice \
+	./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice \
+	./blocks/Varios/Comunicación/Soporte/Detecta_Subida.ice \
+	./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice \
+	./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice \
+	./blocks/Varios/Comunicación/Soporte/Sync_x1.ice \
+	./blocks/Varios/Comunicación/Soporte/Sync_x2.ice \
 	./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice \
 	./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Completo_32_UD.ice \
 	./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Simple_32_UD.ice \
@@ -418,6 +427,7 @@ all:  \
 	./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_3_Ena_Rst.ice \
 	./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_4_Ena_Rst.ice \
 	./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice \
+	./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_9_Ena_Rst.ice \
 	./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice \
 	./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_32_Simple.ice \
 	./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_3_Simple.ice \
@@ -450,6 +460,7 @@ all:  \
 	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_3_Completo.ice \
 	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_4_Completo.ice \
 	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice \
+	./blocks/Varios/Registros/Universal/Completo/Reg_Universal_9_Completo.ice \
 	./blocks/Varios/Registros/Universal/Simple/Reg_Universal_16_Simple.ice \
 	./blocks/Varios/Registros/Universal/Simple/Reg_Universal_32_Simple.ice \
 	./blocks/Varios/Registros/Universal/Simple/Reg_Universal_3_Simple.ice \
@@ -500,6 +511,7 @@ all:  \
 	./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice \
 	./examples/5.\ Aritmetica/11.\ Comparar\ >,\=,<\ didáctico.ice \
 	./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice \
+	./examples/6.\ Comunicación/02.\ Recepción\ Serie.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -1437,6 +1449,10 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/Reducir/Templates/Reducir.ice.template 8 4 ./blocks/Varios/Buses/Reducir/Reducir_8_4.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/Reducir/Reducir_8_4.ice
 
+./blocks/Varios/Buses/Reducir/Reducir_9_8.ice: ./blocks/Varios/Buses/Reducir/Templates/Reducir.ice.template tools/reemplaza.pl 
+	perl tools/reemplaza.pl ./blocks/Varios/Buses/Reducir/Templates/Reducir.ice.template 9 8 ./blocks/Varios/Buses/Reducir/Reducir_9_8.ice
+	perl tools/update_db.pl ./blocks/Varios/Buses/Reducir/Reducir_9_8.ice
+
 ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_2.ice: ./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/Seleccionar/Templates/Seleccionar.ice.template 16 2 ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_2.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_2.ice
@@ -1935,6 +1951,14 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 
+./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_115200.ice: ./blocks/Varios/Comunicación/Templates/RX_serie_115200.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_config.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice ./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Templates/serial_rx_115200.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/RX_serie_115200.ice.template 0 0 ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/RX_serie_115200.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/RX_serie_115200.ice
+
+./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_config.ice: ./blocks/Varios/Comunicación/Templates/RX_serie_config.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice ./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Templates/serial_rx_config.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/RX_serie_config.ice.template 0 0 ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/RX_serie_config.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/RX_serie_config.ice
+
 ./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_115200.ice: ./blocks/Varios/Comunicación/Templates/TX_serie_115200.ice.template tools/reemplaza.pl  ./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_config.ice ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Templates/serial_tx_115200.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/TX_serie_115200.ice.template 0 0 ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_115200.ice
 	perl tools/update_db.pl ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_115200.ice
@@ -1942,6 +1966,30 @@ all:  \
 ./blocks/Varios/Comunicación/Serie\ (RS-232)/TX_serie_config.ice: ./blocks/Varios/Comunicación/Templates/TX_serie_config.ice.template tools/reemplaza.pl  ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Templates/serial_tx_config.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/TX_serie_config.ice.template 0 0 ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_config.ice
 	perl tools/update_db.pl ./blocks/Varios/Comunicación/Serie\ \(RS-232\)/TX_serie_config.ice
+
+./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice: ./blocks/Varios/Comunicación/Templates/Detecta_Bajada.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Comunicación/Templates/detect_fall.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/Detecta_Bajada.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice
+
+./blocks/Varios/Comunicación/Soporte/Detecta_Subida.ice: ./blocks/Varios/Comunicación/Templates/Detecta_Subida.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Comunicación/Templates/detect_rise.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/Detecta_Subida.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/Detecta_Subida.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/Detecta_Subida.ice
+
+./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice: ./blocks/Varios/Comunicación/Templates/FSM_RX_simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Comunicación/Templates/cerebro_rx.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/FSM_RX_simple.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice
+
+./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice: ./blocks/Varios/Comunicación/Templates/RX_Serie_base.ice.template tools/reemplaza.pl  ./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Templates/serial_rx.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/RX_Serie_base.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice
+
+./blocks/Varios/Comunicación/Soporte/Sync_x1.ice: ./blocks/Varios/Comunicación/Templates/Sync_x1.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Varios/Comunicación/Templates/sync_x1.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/Sync_x1.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/Sync_x1.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/Sync_x1.ice
+
+./blocks/Varios/Comunicación/Soporte/Sync_x2.ice: ./blocks/Varios/Comunicación/Templates/Sync_x2.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Varios/Comunicación/Templates/sync_x2.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/Sync_x2.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/Sync_x2.ice
+	perl tools/update_db.pl ./blocks/Varios/Comunicación/Soporte/Sync_x2.ice
 
 ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice: ./blocks/Varios/Comunicación/Templates/TX_Serie_base.ice.template tools/reemplaza.pl  blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Buses/Unir/Join_3/Join_1,8,1_10.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Derecha/Completo/Desp_Derecha_10_Completo.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_10_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Templates/serial_tx.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/TX_Serie_base.ice.template 0 0 ./blocks/Varios/Comunicación/Soporte/TX_Serie_base.ice
@@ -2199,6 +2247,10 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 8 8 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice
 
+./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_9_Ena_Rst.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_9_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 9 9 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_9_Ena_Rst.ice
+	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_9_Ena_Rst.ice
+
 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice: ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Desp_Derecha_Simple.ice.template 16 16 ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Derecha/Simple/Desp_Derecha_16_Simple.ice
@@ -2326,6 +2378,10 @@ all:  \
 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice: ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template tools/reemplaza.pl 
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 8 8 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice
+
+./blocks/Varios/Registros/Universal/Completo/Reg_Universal_9_Completo.ice: ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template tools/reemplaza.pl 
+	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 9 9 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_9_Completo.ice
+	perl tools/update_db.pl ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_9_Completo.ice
 
 ./blocks/Varios/Registros/Universal/Simple/Reg_Universal_16_Simple.ice: ./blocks/Varios/Registros/Templates/Reg_Universal_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_16_Completo.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./blocks/Varios/Registros/Templates/Reg_Universal_Simple.ice.template 16 16 ./blocks/Varios/Registros/Universal/Simple/Reg_Universal_16_Simple.ice
@@ -2527,6 +2583,10 @@ all:  \
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template 0 0 ./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice
 	perl tools/update_db.pl ./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice
 
+./examples/6.\ Comunicación/02.\ Recepción\ Serie.ice: ./examples/6.\ Comunicación/Templates/02.\ Recepción\ Serie.ice.template tools/reemplaza.pl  ./blocks/Input/CapSense/CapSense\ 4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice blocks/Varios/Codificadores/Wires/Codificador_4_2.ice blocks/Varios/Codificadores/Bus/Codificador_4_2_Bus.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Multiplexores/4\ canales/Mux4_4.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_115200.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Comunicación/Serie\ (RS-232)/RX_serie_config.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice ./blocks/Varios/Comunicación/Soporte/FSM_RX_simple.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Separar/Split_2/Split_8_4,4.ice ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice blocks/Varios/Biestables/Flip-flop\ T/Flip-flop\ T\ Simple\ 0.ice
+	perl tools/reemplaza.pl ./examples/6.\ Comunicación/Templates/02.\ Recepción\ Serie.ice.template 0 0 ./examples/6.\ Comunicación/02.\ Recepción\ Serie.ice
+	perl tools/update_db.pl ./examples/6.\ Comunicación/02.\ Recepción\ Serie.ice
+
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
 	perl tools/update_db.pl blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
@@ -2667,7 +2727,7 @@ blocks/Varios/Codificadores/Wires/Codificador_8_3.ice: blocks/Varios/Codificador
 	perl tools/reemplaza.pl blocks/Varios/Codificadores/Templates/Codificador.ice.template 1,1,1,1,1,1,1,1 1,1,1 blocks/Varios/Codificadores/Wires/Codificador_8_3.ice
 	perl tools/update_db.pl blocks/Varios/Codificadores/Wires/Codificador_8_3.ice
 
-blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice: blocks/Varios/Comunicación/Templates/FSM_TX_simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice
+blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice: blocks/Varios/Comunicación/Templates/FSM_TX_simple.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Comunicación/Templates/cerebro.svg
 	perl tools/reemplaza.pl blocks/Varios/Comunicación/Templates/FSM_TX_simple.ice.template 0 0 blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice
 	perl tools/update_db.pl blocks/Varios/Comunicación/Soporte/FSM_TX_simple.ice
 

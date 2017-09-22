@@ -124,6 +124,10 @@ Collection for the Kefir I board in Icestudio.
     * *Wires* (32/16/8/4 inputs + group using individual signals)
   * *Comunicación*
     * TX RS-232 (115200 and configurable)
+    * RX RS-232 (115200 and configurable)
+    * *Support*
+      * Rising/falling edge detector
+      * 1 and 2 flip-flops synchronizer
   * *Contadores*
     * *Asc_Desc* Up/Down counters
       * *32 bits* (3 versions)

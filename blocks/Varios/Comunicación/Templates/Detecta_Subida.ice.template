@@ -1,0 +1,184 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Detecta Subida",
+    "version": "1.0.0",
+    "description": "Detector de flanco de subida simple",
+    "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
+    "image": "@svg<detect_rise.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 192,
+            "y": 256
+          }
+        },
+        {
+          "id": "output-q",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 808,
+            "y": 288
+          }
+        },
+        {
+          "id": "input-d",
+          "type": "basic.input",
+          "data": {
+            "name": "d",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 192,
+            "y": 352
+          }
+        },
+        {
+          "id": "fb56a8c5-9350-458a-a96e-1c96fe84ff5b",
+          "type": "@sha1<blocks/Varios/Biestables/Flip-flop D/Flip-flop D Simple 0.ice>",
+          "position": {
+            "x": 368,
+            "y": 272
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "61ee1bf8-0b6b-4915-9916-a4025fa4bafc",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 512,
+            "y": 272
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "f9be71ae-ec85-457a-8842-edaedc7c94f8",
+          "type": "@sha1<./blocks/Logic/AND/AND_2.ice>",
+          "position": {
+            "x": 656,
+            "y": 288
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "fb56a8c5-9350-458a-a96e-1c96fe84ff5b",
+            "port": "input-d"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "fb56a8c5-9350-458a-a96e-1c96fe84ff5b",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "f9be71ae-ec85-457a-8842-edaedc7c94f8",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-q",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "fb56a8c5-9350-458a-a96e-1c96fe84ff5b",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "61ee1bf8-0b6b-4915-9916-a4025fa4bafc",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "61ee1bf8-0b6b-4915-9916-a4025fa4bafc",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "f9be71ae-ec85-457a-8842-edaedc7c94f8",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "f9be71ae-ec85-457a-8842-edaedc7c94f8",
+            "port": "input-i0"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -82,
+        "y": -72.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

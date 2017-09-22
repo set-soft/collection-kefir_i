@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="53.144" width="113.8" version="1.1" viewBox="0 0 106.69049 49.822719">
+<defs>
+<marker id="a" overflow="visible" orient="auto">
+<path d="m2.308 0l-3.46 2v-4l3.46 2z" fill-rule="evenodd" stroke="red" stroke-width=".4pt" fill="red"/>
+</marker>
+</defs>
+<g stroke-linejoin="bevel" stroke-linecap="round" fill="none">
+<path d="m0.95 0.938h22.82v47.907h23.513" stroke="#00f" stroke-width="2.813"/>
+<path marker-end="url(#a)" d="m51.854 25.07h15.196" stroke="red" stroke-width="2.813"/>
+<path d="m78.89 48.845h10.205v-47.907h7.952v47.947h8.693" stroke="#00f" stroke-width="2.813"/>
+</g>
+</svg>

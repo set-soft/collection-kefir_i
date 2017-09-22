@@ -1,1 +1,6 @@
 "01. Transmisión Serie.ice.template" 0 0 "01. Transmisión Serie.ice"
+"02. Recepción Serie.ice.template" 0 0 "02. Recepción Serie.ice"
+"02. Recepción Serie.ice.template" 0 0 "02. Recepción Serie.ice"
+"02. Recepción Serie.ice.template" 0 0 "02. Recepción Serie.ice"
+"02. Recepción Serie.ice.template" 0 0 "02. Recepción Serie.ice"
+"02. Recepción Serie.ice.template" 0 0 "02. Recepción Serie.ice"

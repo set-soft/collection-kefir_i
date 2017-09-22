@@ -1,0 +1,431 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Receptor Serie Config",
+    "version": "1.0.0",
+    "description": "Receptor serie de velocidad configurable",
+    "author": "Salvador E. Tropea,  Juan Gonzalez-Gomez (Obijuan)",
+    "image": "@svg<serial_rx_config.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": -72,
+            "y": -24
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -72,
+            "y": 48
+          }
+        },
+        {
+          "id": "output-rdy",
+          "type": "basic.output",
+          "data": {
+            "name": "rdy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 896,
+            "y": 288
+          }
+        },
+        {
+          "id": "output-data",
+          "type": "basic.output",
+          "data": {
+            "name": "data",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "6",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "5",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "4",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 896,
+            "y": 400
+          }
+        },
+        {
+          "id": "input-RX",
+          "type": "basic.input",
+          "data": {
+            "name": "RX",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 376,
+            "y": 456
+          }
+        },
+        {
+          "id": "constant-DIV",
+          "type": "basic.constant",
+          "data": {
+            "name": "DIV",
+            "value": "103",
+            "local": false
+          },
+          "position": {
+            "x": 288,
+            "y": 176
+          }
+        },
+        {
+          "id": "13f6374b-fc2f-467d-8907-87996f0cd064",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_32.ice>",
+          "position": {
+            "x": 264,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "94277c48-0de8-40d5-8ea0-94f1361cde50",
+          "type": "@sha1<./blocks/Logic/OR/OR_2.ice>",
+          "position": {
+            "x": 104,
+            "y": 312
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "06b19b12-3d39-424e-9bfd-1bcd2e29d1ae",
+          "type": "basic.info",
+          "data": {
+            "info": "Al comenzar una\nrecepción el \ngenerador de tiempo\nse reinicia.\nSe muestrea en medio\nde los bits, por esto\nes que trabajamos al\ndoble de frecuencia.",
+            "readonly": true
+          },
+          "position": {
+            "x": 16,
+            "y": 384
+          },
+          "size": {
+            "width": 224,
+            "height": 144
+          }
+        },
+        {
+          "id": "ecd7eeba-416b-4522-88cd-db3bb9aa3cdf",
+          "type": "basic.info",
+          "data": {
+            "info": "f<sub>reloj</sub>/(2*baud_rate)-1",
+            "readonly": true
+          },
+          "position": {
+            "x": 256,
+            "y": 136
+          },
+          "size": {
+            "width": 192,
+            "height": 48
+          }
+        },
+        {
+          "id": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+          "type": "@sha1<./blocks/Varios/Comunicación/Soporte/RX_Serie_base.ice>",
+          "position": {
+            "x": 712,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 160
+          }
+        },
+        {
+          "id": "c78c974f-f49b-4c2c-be30-b959c3cb6f61",
+          "type": "@sha1<./blocks/Varios/Comunicación/Soporte/Sync_x2.ice>",
+          "position": {
+            "x": 536,
+            "y": 440
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "5a765294-8e22-40db-a0aa-3b4d2e62dc90",
+          "type": "basic.info",
+          "data": {
+            "info": "  Este sincronizador es opcional.\n  Reduce la probabilidad de \nmetaestabilidad.",
+            "readonly": true
+          },
+          "position": {
+            "x": 472,
+            "y": 512
+          },
+          "size": {
+            "width": 336,
+            "height": 80
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-DIV",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "13f6374b-fc2f-467d-8907-87996f0cd064",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "13f6374b-fc2f-467d-8907-87996f0cd064",
+            "port": "output-tc"
+          },
+          "target": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 592,
+              "y": 336
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "94277c48-0de8-40d5-8ea0-94f1361cde50",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "13f6374b-fc2f-467d-8907-87996f0cd064",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "13f6374b-fc2f-467d-8907-87996f0cd064",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "94277c48-0de8-40d5-8ea0-94f1361cde50",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 632,
+              "y": 104
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "output-rdy",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "output-data"
+          },
+          "target": {
+            "block": "output-data",
+            "port": "in"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "output-rst_bg"
+          },
+          "target": {
+            "block": "94277c48-0de8-40d5-8ea0-94f1361cde50",
+            "port": "input-i0"
+          },
+          "vertices": [
+            {
+              "x": 1016,
+              "y": 560
+            },
+            {
+              "x": 0,
+              "y": 560
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "c78c974f-f49b-4c2c-be30-b959c3cb6f61",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
+            "port": "input-RX"
+          }
+        },
+        {
+          "source": {
+            "block": "input-RX",
+            "port": "out"
+          },
+          "target": {
+            "block": "c78c974f-f49b-4c2c-be30-b959c3cb6f61",
+            "port": "input-d"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "c78c974f-f49b-4c2c-be30-b959c3cb6f61",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": 496,
+              "y": 200
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 538,
+        "y": 205.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

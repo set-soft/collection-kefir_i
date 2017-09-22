@@ -1,16 +1,35 @@
 {
   "version": "1.1",
   "package": {
-    "name": "FSM Tx",
+    "name": "FSM Rx",
     "version": "1.0.0",
-    "description": "Máquina de estados de transmisión",
+    "description": "Máquina de estados de recepción",
     "author": "Salvador E. Tropea, Juan Gonzalez-Gomez (Obijuan)",
-    "image": "@svg<cerebro.svg>"
+    "image": "@svg<cerebro_rx.svg>"
   },
   "design": {
     "board": "kefir",
     "graph": {
       "blocks": [
+        {
+          "id": "output-ready",
+          "type": "basic.output",
+          "data": {
+            "name": "ready",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 664,
+            "y": -24
+          }
+        },
         {
           "id": "input-clk",
           "type": "basic.input",
@@ -52,10 +71,10 @@
           }
         },
         {
-          "id": "output-transmit",
+          "id": "output-receive",
           "type": "basic.output",
           "data": {
-            "name": "transmit",
+            "name": "receive",
             "pins": [
               {
                 "index": "0",
@@ -110,10 +129,10 @@
           }
         },
         {
-          "id": "output-start_tx",
+          "id": "output-start_rx",
           "type": "basic.output",
           "data": {
-            "name": "start_tx",
+            "name": "start_rx",
             "pins": [
               {
                 "index": "0",
@@ -129,10 +148,10 @@
           }
         },
         {
-          "id": "input-inicio",
+          "id": "input-start",
           "type": "basic.input",
           "data": {
-            "name": "inicio",
+            "name": "start",
             "pins": [
               {
                 "index": "0",
@@ -212,12 +231,12 @@
           "id": "5a2f8c49-b6e0-4be2-b3d0-855171b4e03c",
           "type": "basic.info",
           "data": {
-            "info": "  El flip-flop arranca en 0. Por lo que su salida negada es 1 y estamos en el estado de IDLE.\n  La AND <b>1</b> se encarga de realizar la transición al estado TRANSMIT.\n  Cuando la entrada <b>inicio</b> pasa a 1 esta AND lleva el flip-flop a 1.\n  Cuando el flip-flop está en 1 estamos en el estado de TRANSMIT.\n  La señal de cuenta terminal (<b>tc</b>) se encarga de la transición al estado IDLE.\n  Normalmente es 0, que al pasar por el negador mantiene a la AND <b>2</b> habilitada. Al terminar\nla transmisión pasa a 1 forzando a la AND <b>2</b> a 0, y por consiguiente se pasa al estado IDLE. \n  La AND <b>2</b> se encarga de retener el estado TRANSMIT. Durante la transmisión sus entradas son\n1, pasando i0 a 0 al terminar la transmisión. Con lo cual volvemos al estado de IDLE.",
+            "info": "  El flip-flop arranca en 0. Por lo que su salida negada es 1 y estamos en el estado de IDLE.\n  La AND <b>1</b> se encarga de realizar la transición al estado RECEIVE.\n  Cuando la entrada <b>start</b> pasa a 1 esta AND lleva el flip-flop a 1.\n  Cuando el flip-flop está en 1 estamos en el estado de RECEIVE.\n  La señal de cuenta terminal (<b>tc</b>) se encarga de la transición al estado IDLE.\n  Normalmente es 0, que al pasar por el negador mantiene a la AND <b>2</b> habilitada. Al terminar\nla recepción pasa a 1 forzando a la AND <b>2</b> a 0, y por consiguiente se pasa al estado IDLE. \n  La AND <b>2</b> se encarga de retener el estado RECEIVE. Durante la recepción sus entradas son\n1, pasando i0 a 0 al terminar la recepción. Con lo cual volvemos al estado de IDLE.",
             "readonly": true
           },
           "position": {
-            "x": -216,
-            "y": -136
+            "x": -200,
+            "y": -216
           },
           "size": {
             "width": 928,
@@ -267,6 +286,34 @@
             "width": 96,
             "height": 64
           }
+        },
+        {
+          "id": "5f26c95d-97a9-4929-a963-cf1ef56f8aef",
+          "type": "@sha1<./blocks/Logic/AND/AND_2.ice>",
+          "position": {
+            "x": 520,
+            "y": -24
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "dd78489a-26f3-46e1-9a4d-4420cc6e8189",
+          "type": "basic.info",
+          "data": {
+            "info": "<big>\n3\n</big>",
+            "readonly": true
+          },
+          "position": {
+            "x": 544,
+            "y": 16
+          },
+          "size": {
+            "width": 64,
+            "height": 80
+          }
         }
       ],
       "wires": [
@@ -276,7 +323,7 @@
             "port": "output-q"
           },
           "target": {
-            "block": "output-transmit",
+            "block": "output-receive",
             "port": "in"
           }
         },
@@ -292,7 +339,7 @@
         },
         {
           "source": {
-            "block": "input-inicio",
+            "block": "input-start",
             "port": "out"
           },
           "target": {
@@ -316,7 +363,7 @@
             "port": "output-o"
           },
           "target": {
-            "block": "output-start_tx",
+            "block": "output-start_rx",
             "port": "in"
           }
         },
@@ -427,13 +474,43 @@
             "block": "26231310-932c-41c4-8e98-2354b124be32",
             "port": "input-i0"
           }
+        },
+        {
+          "source": {
+            "block": "input-tc",
+            "port": "out"
+          },
+          "target": {
+            "block": "5f26c95d-97a9-4929-a963-cf1ef56f8aef",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "a0f2c79a-1296-4d8c-88ad-19ab2ba3c257",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "5f26c95d-97a9-4929-a963-cf1ef56f8aef",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "5f26c95d-97a9-4929-a963-cf1ef56f8aef",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-ready",
+            "port": "in"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 712,
-        "y": 305.5
+        "x": 700,
+        "y": 289.5
       },
       "zoom": 1
     }

@@ -1,0 +1,219 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Receptor Serie 115200",
+    "version": "1.0.0",
+    "description": "Receptor serie 8N1 115200",
+    "author": "Salvador E. Tropea,  Juan Gonzalez-Gomez (Obijuan)",
+    "image": "@svg<serial_rx_115200.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 216,
+            "y": 128
+          }
+        },
+        {
+          "id": "output-rdy",
+          "type": "basic.output",
+          "data": {
+            "name": "rdy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 552,
+            "y": 176
+          }
+        },
+        {
+          "id": "output-data",
+          "type": "basic.output",
+          "data": {
+            "name": "data",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "6",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "5",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "4",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 552,
+            "y": 240
+          }
+        },
+        {
+          "id": "input-RX",
+          "type": "basic.input",
+          "data": {
+            "name": "RX",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 216,
+            "y": 288
+          }
+        },
+        {
+          "id": "e8241e99-29a6-41aa-965e-bbda83fdfc61",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 216,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
+          "type": "@sha1<./blocks/Varios/Comunicación/Serie (RS-232)/RX_serie_config.ice>",
+          "position": {
+            "x": 392,
+            "y": 176
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
+            "port": "input-clk"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "input-RX",
+            "port": "out"
+          },
+          "target": {
+            "block": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
+            "port": "input-RX"
+          }
+        },
+        {
+          "source": {
+            "block": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "output-rdy",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
+            "port": "output-data"
+          },
+          "target": {
+            "block": "output-data",
+            "port": "in"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "e8241e99-29a6-41aa-965e-bbda83fdfc61",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
+            "port": "input-rst"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 18,
+        "y": 43.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Sincronizador x2",
+    "version": "1.0.0",
+    "description": "Sincronizador de dos etapa",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<sync_x2.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 328,
+            "y": 256
+          }
+        },
+        {
+          "id": "output-q",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 816,
+            "y": 296
+          }
+        },
+        {
+          "id": "input-d",
+          "type": "basic.input",
+          "data": {
+            "name": "d",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 328,
+            "y": 328
+          }
+        },
+        {
+          "id": "3dab09e1-b222-45cd-9710-e4b9f3167c39",
+          "type": "@sha1<blocks/Varios/Biestables/Flip-flop D/Flip-flop D Simple 0.ice>",
+          "position": {
+            "x": 504,
+            "y": 312
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "7afbad63-a77d-4127-9003-c0ad0bd00c85",
+          "type": "@sha1<blocks/Varios/Biestables/Flip-flop D/Flip-flop D Simple 0.ice>",
+          "position": {
+            "x": 672,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "3dab09e1-b222-45cd-9710-e4b9f3167c39",
+            "port": "input-d"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "3dab09e1-b222-45cd-9710-e4b9f3167c39",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "3dab09e1-b222-45cd-9710-e4b9f3167c39",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "7afbad63-a77d-4127-9003-c0ad0bd00c85",
+            "port": "input-d"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "7afbad63-a77d-4127-9003-c0ad0bd00c85",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "7afbad63-a77d-4127-9003-c0ad0bd00c85",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-q",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

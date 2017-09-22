@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="126.1" width="204.69" version="1.1" viewBox="0 0 191.89871 118.21825">
+<defs>
+<marker id="a" overflow="visible" orient="auto">
+<path d="m2.308 0-3.46 2v-4z" fill-rule="evenodd" stroke="#f00" stroke-width="0.4pt" fill="#f00"/>
+</marker>
+</defs>
+<g stroke-linejoin="bevel" transform="translate(3.725 58.02)" stroke-linecap="round" stroke-width="2.813" fill="none">
+<path d="m25.906 0.938h22.82v47.907h23.513" stroke="#00f"/>
+<path marker-end="url(#a)" d="m42.925 24.841h15.196" stroke="#f00"/>
+</g>
+<g stroke-linejoin="bevel" transform="translate(2.3516 2.342)" stroke-linecap="round" fill="none">
+<path stroke-width="2.813" stroke="#00f" d="m0.95 0.938h22.82v47.907h23.513"/>
+<g stroke-linejoin="bevel" stroke="#00f" stroke-linecap="round" fill="none">
+<g stroke-width="2.813">
+<path d="m70.796 48.845v-47.907h23.513"/>
+<path d="m47.283 48.845h23.513"/>
+<path d="m117.82 48.845v-47.907h-23.511"/>
+</g>
+<path d="m70.426 55.687v47.903" stroke-dasharray="2.81257875, 5.62515749" stroke-width="2.8126"/>
+</g>
+<g font-size="37.501px" font-family="sans-serif" fill="#000000">
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" line-height="1.25" y="34.069481" x="123.40356"><tspan font-family="sans-serif" font-weight="bold" font-size="25.001px" y="34.069481" x="123.40356" stroke-width=".93753">CLK</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" line-height="1.25" y="82.606781" x="76.926796"><tspan font-family="sans-serif" font-weight="bold" y="82.606781" x="76.926796" stroke-width=".93753">SYNC</tspan></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" line-height="1.25" y="114.00228" x="102.70321"><tspan font-family="sans-serif" font-weight="bold" y="114.00228" x="102.70321" stroke-width=".93753" fill="#000000">x2</tspan></text>
+</g>
+</g>
+</svg>
