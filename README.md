@@ -92,6 +92,7 @@ Collection for the Kefir I board in Icestudio.
     * *Reduce* keep only the LSBs
       * 32 &rarr; 2/4/8/16
       * 16 &rarr; 2/4/8
+      * 9 &rarr; 8
       * 8 &rarr; 2/4
       * 4 &rarr; 2
       * 2 &rarr; 1

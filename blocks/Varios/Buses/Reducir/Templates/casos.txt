@@ -2,6 +2,7 @@
 "Reducir.ice.template" 4 2 "Reducir_4_2.ice"
 "Reducir.ice.template" 8 4 "Reducir_8_4.ice"
 "Reducir.ice.template" 8 2 "Reducir_8_2.ice"
+"Reducir.ice.template" 9 8 "Reducir_9_8.ice"
 "Reducir.ice.template" 16 8 "Reducir_16_8.ice"
 "Reducir.ice.template" 16 4 "Reducir_16_4.ice"
 "Reducir.ice.template" 16 2 "Reducir_16_2.ice"
