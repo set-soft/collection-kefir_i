@@ -150,10 +150,10 @@ Collection for the Kefir I board in Icestudio.
   * *Registros*
     * *PIPO* (1/2/4/8/16/32)
     * *PIPO Simple* (1/2/4/8/16/32)
-    * *Universal Complete* (3/4/8/9/10/16/32)
+    * *Universal Complete* (2/3/4/8/9/10/16/32)
     * *Universal Simple* (3/4/8/16/32)
     * *Shift Right Complete* (3/4/8/10/16/32)
-    * *Shift Right ENA+RST* (3/4/8/9/16/32)
+    * *Shift Right ENA+RST* (2/3/4/8/9/16/32)
     * *Shift Right Simple* (3/4/8/16/32)
     * *Shift Left Complete* (3/4/8/16/32)
     * *Shift Left ENA+RST* (3/4/8/16/32)
