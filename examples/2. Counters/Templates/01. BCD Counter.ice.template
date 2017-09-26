@@ -63,8 +63,8 @@
           "id": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
           "type": "@sha1<./blocks/Const/Bit/0.ice>",
           "position": {
-            "x": 240,
-            "y": 280
+            "x": 232,
+            "y": 224
           },
           "size": {
             "width": 96,
@@ -99,8 +99,8 @@
           "id": "0af901db-7628-4744-af6b-df4e90a6ceae",
           "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
           "position": {
-            "x": 240,
-            "y": 208
+            "x": 232,
+            "y": 296
           },
           "size": {
             "width": 96,
@@ -165,8 +165,8 @@
     },
     "state": {
       "pan": {
-        "x": -94,
-        "y": 19.5
+        "x": 416,
+        "y": 217.5
       },
       "zoom": 1
     }

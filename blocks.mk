@@ -2027,27 +2027,27 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_UD.ice.template 0 0 ./blocks/Varios/Contadores/Asc_Desc/BCD\ Natural/Contador_BCD_Simple_UD.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Asc_Desc/BCD\ Natural/Contador_BCD_Simple_UD.ice
 
-./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice: ./blocks/Varios/Contadores/Templates/Contador_Completo_32.ice.template tools/reemplaza.pl 
+./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice: ./blocks/Varios/Contadores/Templates/Contador_Completo_32.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Templates/contador-up-ini-0.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_Completo_32.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice
 
-./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice: ./blocks/Varios/Contadores/Templates/Contador_Simple_32.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice: ./blocks/Varios/Contadores/Templates/Contador_Simple_32.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Templates/contador-up-ini-0.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_Simple_32.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_32.ice
 
-./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice: ./blocks/Varios/Contadores/Templates/Contador_Simple_Enable_32.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice: ./blocks/Varios/Contadores/Templates/Contador_Simple_Enable_32.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Templates/contador-up-ini-0.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_Simple_Enable_32.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice
 
-./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice
+./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Varios/Contadores/Templates/contador-up-ini-0-BCD.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_BCD_Completo.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice
 
-./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice
+./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Templates/contador-up-ini-0-BCD.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple.ice
 
-./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_Enable.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice: ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_Enable.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Templates/contador-up-ini-0-BCD.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_Enable.ice.template 0 0 ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice
 
@@ -2167,23 +2167,23 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Multiplexores/Templates/Mux8.ice.template 3,8,8,8,8,8,8,8,8 8 ./blocks/Varios/Multiplexores/8\ canales/Mux8_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Multiplexores/8\ canales/Mux8_8.ice
 
-./blocks/Varios/Pulso/Corazon_1Hz_P.ice: ./blocks/Varios/Pulso/Templates/Corazon_1Hz_P.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Pulso/Corazon_1Hz_P.ice: ./blocks/Varios/Pulso/Templates/Corazon_1Hz_P.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Pulso/Templates/Corazon_1Hz_P.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Pulso/Templates/Corazon_1Hz_P.ice.template 0 0 ./blocks/Varios/Pulso/Corazon_1Hz_P.ice
 	perl tools/update_db.pl ./blocks/Varios/Pulso/Corazon_1Hz_P.ice
 
-./blocks/Varios/Pulso/Corazon_2Hz_P.ice: ./blocks/Varios/Pulso/Templates/Corazon_2Hz_P.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Pulso/Corazon_2Hz_P.ice: ./blocks/Varios/Pulso/Templates/Corazon_2Hz_P.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Pulso/Templates/Corazon_2Hz_P.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Pulso/Templates/Corazon_2Hz_P.ice.template 0 0 ./blocks/Varios/Pulso/Corazon_2Hz_P.ice
 	perl tools/update_db.pl ./blocks/Varios/Pulso/Corazon_2Hz_P.ice
 
-./blocks/Varios/Pulso/Divisor_Frecuencia_Completo.ice: ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Pulso/Divisor_Frecuencia_Completo.ice: ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Completo.ice.template tools/reemplaza.pl  ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Pulso/Templates/Corazon_P.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Completo.ice.template 0 0 ./blocks/Varios/Pulso/Divisor_Frecuencia_Completo.ice
 	perl tools/update_db.pl ./blocks/Varios/Pulso/Divisor_Frecuencia_Completo.ice
 
-./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset.ice: ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset.ice: ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Pulso/Templates/Corazon_P.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset.ice.template 0 0 ./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset.ice
 	perl tools/update_db.pl ./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset.ice
 
-./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice: ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset_y_Enable.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice
+./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice: ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset_y_Enable.ice.template tools/reemplaza.pl  ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Pulso/Templates/Corazon_P.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Pulso/Templates/Divisor_Frecuencia_Sin_Reset_y_Enable.ice.template 0 0 ./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice
 	perl tools/update_db.pl ./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice
 

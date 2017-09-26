@@ -12,25 +12,6 @@
     "graph": {
       "blocks": [
         {
-          "id": "output-rdy",
-          "type": "basic.output",
-          "data": {
-            "name": "rdy",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true
-          },
-          "position": {
-            "x": 1712,
-            "y": -240
-          }
-        },
-        {
           "id": "input-clk",
           "type": "basic.input",
           "data": {
@@ -48,6 +29,25 @@
           "position": {
             "x": 40,
             "y": -216
+          }
+        },
+        {
+          "id": "output-rdy",
+          "type": "basic.output",
+          "data": {
+            "name": "rdy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1712,
+            "y": -208
           }
         },
         {
@@ -194,7 +194,7 @@
           },
           "position": {
             "x": 1552,
-            "y": -344
+            "y": -312
           }
         },
         {
@@ -250,7 +250,7 @@
           "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
           "position": {
             "x": 1528,
-            "y": -232
+            "y": -200
           },
           "size": {
             "width": 96,
@@ -398,7 +398,7 @@
           },
           "position": {
             "x": 1520,
-            "y": -120
+            "y": -88
           },
           "size": {
             "width": 288,
@@ -538,7 +538,7 @@
           "vertices": [
             {
               "x": 1464,
-              "y": -8
+              "y": 24
             }
           ]
         },
@@ -562,7 +562,12 @@
             "block": "56f13b11-83db-4c64-924d-bf622db554b0",
             "port": "input-rst"
           },
-          "vertices": []
+          "vertices": [
+            {
+              "x": 1432,
+              "y": -104
+            }
+          ]
         },
         {
           "source": {
@@ -703,10 +708,10 @@
     },
     "state": {
       "pan": {
-        "x": 50.0327,
-        "y": 378.7757
+        "x": 36,
+        "y": 401.5
       },
-      "zoom": 0.9848
+      "zoom": 1
     }
   },
   "dependencies": {

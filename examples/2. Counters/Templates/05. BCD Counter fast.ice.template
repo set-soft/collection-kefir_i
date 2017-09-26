@@ -55,16 +55,16 @@
             "local": true
           },
           "position": {
-            "x": 240,
-            "y": 96
+            "x": 248,
+            "y": 288
           }
         },
         {
           "id": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
           "type": "@sha1<./blocks/Const/Bit/0.ice>",
           "position": {
-            "x": 240,
-            "y": 280
+            "x": 136,
+            "y": 240
           },
           "size": {
             "width": 96,
@@ -87,8 +87,8 @@
           "id": "04adeadb-2f40-47ab-a3ac-12e1029b8774",
           "type": "@sha1<./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice>",
           "position": {
-            "x": 240,
-            "y": 208
+            "x": 248,
+            "y": 400
           },
           "size": {
             "width": 96,
@@ -105,7 +105,8 @@
           "target": {
             "block": "05ccdee4-ab6a-4a29-9b3a-3d4fc4d9fa4c",
             "port": "input-rst"
-          }
+          },
+          "vertices": []
         },
         {
           "source": {

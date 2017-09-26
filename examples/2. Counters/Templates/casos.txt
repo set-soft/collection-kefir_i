@@ -3,3 +3,6 @@
 "03. BCD Down Counter.ice.template" 0 0 "03. BCD Down Counter.ice"
 "04. BCD Down Counter 2.ice.template" 0 0 "04. BCD Down Counter 2.ice"
 "05. BCD Counter fast.ice.template" 0 0 "05. BCD Counter fast.ice"
+"02. BCD Counter 2.ice.template" 0 0 "02. BCD Counter 2.ice"
+"05. BCD Counter fast.ice.template" 0 0 "05. BCD Counter fast.ice"
+"01. BCD Counter.ice.template" 0 0 "01. BCD Counter.ice"

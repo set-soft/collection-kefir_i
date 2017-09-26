@@ -28,7 +28,7 @@
           },
           "position": {
             "x": 176,
-            "y": 224
+            "y": 152
           }
         },
         {
@@ -80,7 +80,7 @@
           "type": "@sha1<./blocks/Const/Bit/0.ice>",
           "position": {
             "x": 176,
-            "y": 296
+            "y": 224
           },
           "size": {
             "width": 96,
@@ -92,7 +92,7 @@
           "type": "@sha1<./blocks/Const/Bit/1.ice>",
           "position": {
             "x": 176,
-            "y": 152
+            "y": 296
           },
           "size": {
             "width": 96,
@@ -123,22 +123,6 @@
         },
         {
           "source": {
-            "block": "b82197a5-a4b4-4599-a959-4e4fc342e412",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
-            "port": "input-ena"
-          },
-          "vertices": [
-            {
-              "x": 336,
-              "y": 192
-            }
-          ]
-        },
-        {
-          "source": {
             "block": "9f79fe01-9449-47f7-9587-3bb2a6248a99",
             "port": "output-1"
           },
@@ -156,13 +140,23 @@
             "block": "output-q",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "b82197a5-a4b4-4599-a959-4e4fc342e412",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "e16cfaa5-43d8-4d19-8453-007805e32b2d",
+            "port": "input-ena"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 0,
-        "y": 0
+        "x": 34,
+        "y": 35.5
       },
       "zoom": 1
     }

@@ -51,7 +51,7 @@
           "type": "@sha1<./blocks/Const/Bit/0.ice>",
           "position": {
             "x": 240,
-            "y": 280
+            "y": 240
           },
           "size": {
             "width": 96,
@@ -75,7 +75,7 @@
           "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
           "position": {
             "x": 240,
-            "y": 208
+            "y": 312
           },
           "size": {
             "width": 96,

@@ -12,26 +12,6 @@
     "graph": {
       "blocks": [
         {
-          "id": "input-ena",
-          "type": "basic.input",
-          "data": {
-            "name": "ena",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true,
-            "clock": false
-          },
-          "position": {
-            "x": 152,
-            "y": 176
-          }
-        },
-        {
           "id": "input-clk",
           "type": "basic.input",
           "data": {
@@ -45,6 +25,26 @@
             ],
             "virtual": true,
             "clock": true
+          },
+          "position": {
+            "x": 152,
+            "y": 176
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
           },
           "position": {
             "x": 152,
@@ -71,10 +71,10 @@
           }
         },
         {
-          "id": "input-rst",
+          "id": "input-ena",
           "type": "basic.input",
           "data": {
-            "name": "rst",
+            "name": "ena",
             "pins": [
               {
                 "index": "0",
@@ -169,12 +169,7 @@
             "block": "2e3d6ad9-e1ad-4169-b8b2-baf4429cf1e9",
             "port": "input-ena"
           },
-          "vertices": [
-            {
-              "x": 320,
-              "y": 216
-            }
-          ]
+          "vertices": []
         },
         {
           "source": {
@@ -200,8 +195,8 @@
     },
     "state": {
       "pan": {
-        "x": 0,
-        "y": 0
+        "x": 36,
+        "y": 43.5
       },
       "zoom": 1
     }

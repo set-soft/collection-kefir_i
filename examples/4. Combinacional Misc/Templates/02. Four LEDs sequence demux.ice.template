@@ -116,7 +116,7 @@
           "type": "@sha1<./blocks/Const/Bit/0.ice>",
           "position": {
             "x": -352,
-            "y": 0
+            "y": -48
           },
           "size": {
             "width": 96,
@@ -168,7 +168,7 @@
           "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
           "position": {
             "x": -352,
-            "y": -64
+            "y": 24
           },
           "size": {
             "width": 96,
@@ -273,10 +273,10 @@
     },
     "state": {
       "pan": {
-        "x": 362.9651,
-        "y": 333.4427
+        "x": 724,
+        "y": 469.5
       },
-      "zoom": 0.8027
+      "zoom": 1
     }
   },
   "dependencies": {
