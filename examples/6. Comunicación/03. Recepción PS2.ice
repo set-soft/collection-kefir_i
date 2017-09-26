@@ -212,7 +212,7 @@
         },
         {
           "id": "0a52fb3c-e1a3-415e-916d-bca942d669be",
-          "type": "bf5c7ae4e47f3f2d05c7d88e1ef5c800b8ea4050",
+          "type": "258a8a9a079e9034f9a8db55f95de6ccffe4d05a",
           "position": {
             "x": -128,
             "y": 64
@@ -4879,7 +4879,7 @@
     }
   }
     },
-    "bf5c7ae4e47f3f2d05c7d88e1ef5c800b8ea4050": {
+    "258a8a9a079e9034f9a8db55f95de6ccffe4d05a": {
   "package": {
     "name": "PS/2 RX",
     "version": "1.0.0",
@@ -5024,7 +5024,7 @@
         },
         {
           "id": "fbb86911-3740-4594-a0ed-c7874bd1e8e9",
-          "type": "e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b",
+          "type": "85fdc67caf3f92843d8011d071e337eecb16748a",
           "position": {
             "x": 872,
             "y": 128
@@ -5912,11 +5912,11 @@
     }
   }
     },
-    "e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b": {
+    "85fdc67caf3f92843d8011d071e337eecb16748a": {
   "package": {
     "name": "Shift Right Register 8 bits",
     "version": "1.0.0",
-    "description": "Registro de desplazamiento a derecha de 8 bits con reset, enable y carga paralela",
+    "description": "Registro de desplazamiento a derecha de 8 bits con reset y enable",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.499%2013.813%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.879%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.879%22%20fill=%22green%22%3E»%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },

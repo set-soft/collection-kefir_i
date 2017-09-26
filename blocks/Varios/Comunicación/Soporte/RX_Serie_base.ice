@@ -303,7 +303,7 @@
         },
         {
           "id": "f87f0f29-f1e5-489f-9249-156e65676035",
-          "type": "e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b",
+          "type": "85fdc67caf3f92843d8011d071e337eecb16748a",
           "position": {
             "x": 824,
             "y": 240
@@ -2675,11 +2675,11 @@
     }
   }
     },
-    "e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b": {
+    "85fdc67caf3f92843d8011d071e337eecb16748a": {
   "package": {
     "name": "Shift Right Register 8 bits",
     "version": "1.0.0",
-    "description": "Registro de desplazamiento a derecha de 8 bits con reset, enable y carga paralela",
+    "description": "Registro de desplazamiento a derecha de 8 bits con reset y enable",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.499%2013.813%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.879%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.879%22%20fill=%22green%22%3E»%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },

@@ -3,7 +3,7 @@
   "package": {
     "name": "Shift Right Register @sz_o bits",
     "version": "1.0.0",
-    "description": "Registro de desplazamiento a derecha de @sz_o bits con reset, enable y carga paralela",
+    "description": "Registro de desplazamiento a derecha de @sz_o bits con reset y enable",
     "author": "Salvador E. Tropea",
     "image": "@svg<ShiftRegRight.svg>"
   },

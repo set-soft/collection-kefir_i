@@ -3,7 +3,7 @@
   "package": {
     "name": "Shift Right Register 32 bits",
     "version": "1.0.0",
-    "description": "Registro de desplazamiento a derecha de 32 bits con reset, enable y carga paralela",
+    "description": "Registro de desplazamiento a derecha de 32 bits con reset y enable",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.499%2013.813%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.879%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.879%22%20fill=%22green%22%3E»%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },

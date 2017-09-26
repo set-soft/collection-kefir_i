@@ -139,7 +139,7 @@
         },
         {
           "id": "4aa1adbd-6e30-461f-ab97-e99f79cf1a69",
-          "type": "3d0eddb617f6898af7a1abf6df8b21a22dbbb347",
+          "type": "a22cad56c418ccecafaf2a4235d8679af0287b9c",
           "position": {
             "x": 392,
             "y": 176
@@ -279,7 +279,7 @@
     }
   }
     },
-    "3d0eddb617f6898af7a1abf6df8b21a22dbbb347": {
+    "a22cad56c418ccecafaf2a4235d8679af0287b9c": {
   "package": {
     "name": "Receptor Serie Config",
     "version": "1.0.0",
@@ -421,7 +421,7 @@
         },
         {
           "id": "0f4a668a-cab8-435e-8288-667b9c28b9c7",
-          "type": "cfa2c646831555ba036be9175977bda99bf3c98a",
+          "type": "339d27098f9300daaecdc233b7711700aa0f3f25",
           "position": {
             "x": 712,
             "y": 296
@@ -1516,7 +1516,7 @@
     }
   }
     },
-    "cfa2c646831555ba036be9175977bda99bf3c98a": {
+    "339d27098f9300daaecdc233b7711700aa0f3f25": {
   "package": {
     "name": "Transmisor Serie base",
     "version": "1.0.0",
@@ -1729,7 +1729,7 @@
         },
         {
           "id": "f87f0f29-f1e5-489f-9249-156e65676035",
-          "type": "e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b",
+          "type": "85fdc67caf3f92843d8011d071e337eecb16748a",
           "position": {
             "x": 824,
             "y": 240
@@ -3346,11 +3346,11 @@
     }
   }
     },
-    "e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b": {
+    "85fdc67caf3f92843d8011d071e337eecb16748a": {
   "package": {
     "name": "Shift Right Register 8 bits",
     "version": "1.0.0",
-    "description": "Registro de desplazamiento a derecha de 8 bits con reset, enable y carga paralela",
+    "description": "Registro de desplazamiento a derecha de 8 bits con reset y enable",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2214.734%22%20width=%2215.466%22%20viewBox=%220%200%2014.499%2013.813%22%3E%3Ctext%20font-size=%2230.55%22%20y=%2215.857%22%20x=%22-2.879%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2215.857%22%20x=%22-2.879%22%20fill=%22green%22%3E»%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
