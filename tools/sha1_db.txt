@@ -45,6 +45,7 @@
 12f840be412e23a4cb85d36e9c2439f230898a22 ./blocks/Varios/Contadores/Asc_Desc/BCD Natural/Contador_BCD_Simple_Enable_UD.ice|./blocks/Varios/Contadores/Templates/Contador_BCD_Simple_Enable_UD.ice.template 0 0|78b882006678da24215d00b69cdf2c496f6f812f|b8df9a88bc4b8356ac901e430301e65fdd49fe5c
 1360032949ec0f1c5324aeae9379fd4bc9944b11 ./blocks/Varios/Demultiplexores/Demux_2.ice|./blocks/Varios/Demultiplexores/Templates/Demux_2.ice.template 0 0
 13b289a3448822ee6e9eb0b7c985a55d7f51f9ce ./blocks/Varios/Buses/NOR/bus_out/NOR_32.ice|./blocks/Varios/Buses/NOR/Templates/NOR_bus_out.ice.template 32,32 32|./blocks/Varios/Buses/NOR/Templates/NOR.svg
+142a37e7d41a6fe210388891d46aeccddf46dd9f ./blocks/Varios/Comunicación/PS2/RX_PS2.ice|./blocks/Varios/Comunicación/Templates/RX_PS2.ice.template 0 0|6154b17c512f5fbc9ea32b930bc962be428c56f6|ec63fc0d24f1f1d82cb9ac5109368b8dc7c2d1dd|e3ec6402c38ecc1e8b74b9bb6d75ebb178a9bf5b|c2e4c474a8c48ef3166dc1d32638716b81fd9ed1|d05c8d2b06624ea6cbc6777d7d9b11b3adb17103|b2277eb2b973c2a5456d6ff8776973b3632e1148|c3c931e5ea2e568412f7c089f410bb742e5b7f76|./blocks/Varios/Comunicación/Templates/ps2_rx.svg
 1556418a48b653adb25d3a393eebc8a0d57a3d07 ./examples/5. Aritmetica/12. Extensión de signo.ice|./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template 0 0|3d8450a0f31201ef20e0dba8bf08bf4b33194713|5b6607920a8a6cb59e510c2e4ad8c41c545623c5
 170f218536e291db489de36239c78217c730fe70 ./blocks/Varios/Biestables/Chincheta-D-0.ice|./blocks/Varios/Biestables/Templates/Chincheta-D-0.ice.template 0 0|e22a504cc1510d150fc309120a2e17b8f5cda1a8
 17d4bccd3d9dcbc289a37e3dc4f5fca44c0fea4f ./blocks/Varios/Multiplexores/4 canales/Mux4_1.ice|./blocks/Varios/Multiplexores/Templates/Mux4.ice.template 2,1,1,1,1 1
@@ -312,6 +313,7 @@
 906c99b24fda75ffc502e02d46fb08a73b76f5a9 ./blocks/Logic/NAND/NAND_2.ice|./blocks/Logic/NAND/Templates/NAND.ice.template 1,1 1|./blocks/Logic/NAND/Templates/NAND.svg
 9170e2a10979240b02bb2fe95860e44064cb83ba ./blocks/Logic/AND/AND_2.ice|./blocks/Logic/AND/Templates/AND.ice.template 1,1 1|./blocks/Logic/AND/Templates/AND.svg
 91ae45ab2ad5dae2d0d2557d5c66a11179f5c435 ./blocks/Varios/Buses/AND/1_to_all/AND_4.ice|./blocks/Varios/Buses/AND/Templates/AND_1_to_all.ice.template 4 1|./blocks/Varios/Buses/AND/Templates/AND.svg
+91afaf48a0f1f43db4d523abfda5b0068dc74fa1 ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_2_Ena_Rst.ice|./blocks/Varios/Registros/Templates/Desp_Derecha_Ena_Rst.ice.template 2 2|bfee35423cd6f26776306db134ba6a6f6bc47dd6|7a5052cf67ad629d54e75210928ff8eb02c7c09c|78b882006678da24215d00b69cdf2c496f6f812f|./blocks/Varios/Registros/Templates/ShiftRegRight.svg
 926a602c44ae9c25cc8ee007961b2e12c7c9279e ./blocks/Varios/Bombeo/Corazon_x1.ice|./blocks/Varios/Bombeo/Templates/Corazon_x1.ice.template 0 0|d9395526317fed3334520151de88e0e859b45cf8|e764051768cc8d48d3b5b8bf55e3d24ec5d87a2f
 92fe9816cb11035ae01029cef2805b7130a8ee0d ./blocks/Varios/Pulso/Corazon_1Hz_P.ice|./blocks/Varios/Pulso/Templates/Corazon_1Hz_P.ice.template 0 0|78b882006678da24215d00b69cdf2c496f6f812f|7a5052cf67ad629d54e75210928ff8eb02c7c09c|c2e4c474a8c48ef3166dc1d32638716b81fd9ed1
 93eb190413ceddf126ae830e92fad6831ed49a22 ./blocks/Const/Bit/1-torch.ice|./blocks/Const/Bit/Templates/1-torch.ice.template 0 0
@@ -342,6 +344,7 @@
 9e7fffc749d5dfed68d0c0e1785c7374cef61294 blocks/Varios/Codificadores/Bus/Codificador_8_3_Bus.ice|blocks/Varios/Codificadores/Templates/Codificador_Bus.ice.template 8 3|blocks/Varios/Codificadores/Templates/Codificador.svg|blocks/Varios/Codificadores/Templates/Codificador.v
 9e8fb8e66f2d2dae541ef4eda9196ee8db33a92b ./blocks/Logic/NOT/NOT.ice|./blocks/Logic/NOT/Templates/NOT.ice.template 0 0|./blocks/Logic/NOT/Templates/NOT.svg
 9ecd79b07b419f2988e735419fa646e37d18e544 ./blocks/Varios/Buses/Expandir/Expandir_1_8.ice|./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 1 8
+a001e0ea3edb15202836271abb7d7a10c1c38c43 ./examples/6. Comunicación/03. Recepción PS2.ice|./examples/6.\ Comunicación/Templates/03.\ Recepción\ PS2.ice.template 0 0|3e6987f6bbf5725e908b67b9b401e24928d45304|142a37e7d41a6fe210388891d46aeccddf46dd9f|9e8fb8e66f2d2dae541ef4eda9196ee8db33a92b|9170e2a10979240b02bb2fe95860e44064cb83ba|0f14207f33a527e0ac5adc2c4a4332c33e6feb48
 a05e3ad099476b975f314e92a0d69795afae497e ./blocks/Const/Bus/Val/Const_8_bits.ice|./blocks/Const/Bus/Templates/Const.ice.template 0 8|./blocks/Const/Bus/Templates/Const.svg
 a18eeed8947c9bcb4742798d57754b3e494db0fb ./blocks/Varios/Buses/NOT/NOT_2.ice|./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 2 2|./blocks/Varios/Buses/NOT/Templates/NOT.svg
 a1b3bfa2dda8534333546c579a15496e5a11fd2c ./blocks/Logic/OR/OR_6.ice|./blocks/Logic/OR/Templates/OR.ice.template 1,1,1,1,1,1 1|./blocks/Logic/OR/Templates/OR.svg
@@ -416,6 +419,7 @@ be6bdf8618ced3b5a683cfc76bdf37a68f56d497 ./blocks/Varios/Buses/XOR/bus_out/XOR_3
 be8914e9d2f211a75081f1fed4ce7f0fd5833b03 ./blocks/Varios/Buses/NOT/NOT_16.ice|./blocks/Varios/Buses/NOT/Templates/NOT.ice.template 16 16|./blocks/Varios/Buses/NOT/Templates/NOT.svg
 bf1fe0ad50879110deca5666f3e9a541495efdf6 ./blocks/Varios/Biestables/Chincheta-D-ena-0.ice|./blocks/Varios/Biestables/Templates/Chincheta-D-ena-0.ice.template 0 0|5dc726463ece8d6a610116761b5bc6ee7927cd3e
 bfa3fd57476767688d0375080a07ceff80cc4762 ./blocks/Logic/AND/AND_3.ice|./blocks/Logic/AND/Templates/AND.ice.template 1,1,1 1|./blocks/Logic/AND/Templates/AND.svg
+bfee35423cd6f26776306db134ba6a6f6bc47dd6 ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_2_Completo.ice|./blocks/Varios/Registros/Templates/Reg_Universal_Completo.ice.template 2 2
 c03d5f8ff46bb607d2ceedcc7cac068d9f0a22d7 ./blocks/Varios/Buses/Expandir/Expandir_1_16.ice|./blocks/Varios/Buses/Expandir/Templates/Expandir.ice.template 1 16
 c06f7f9f1e58eddc6ad2d992700280f1de26b992 ./blocks/Varios/Buses/Separar/Split_wires/Split_13.ice|./blocks/Varios/Buses/Separar/Templates/Split-wires.ice.template 13 1,1,1,1,1,1,1,1,1,1,1,1,1
 c08078b8563a424264da506e60089bc37e231d33 ./examples/5. Aritmetica/08. Restador.ice|./examples/5.\ Aritmetica/Templates/08.\ Restador.ice.template 0 0|3d8450a0f31201ef20e0dba8bf08bf4b33194713|78b882006678da24215d00b69cdf2c496f6f812f|12609ae7137ecc7399c4fca0b18314ad4f86d374

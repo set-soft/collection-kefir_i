@@ -125,6 +125,7 @@ Collection for the Kefir I board in Icestudio.
   * *Comunicación*
     * TX RS-232 (115200 and configurable)
     * RX RS-232 (115200 and configurable)
+    * RX PS/2
     * *Support*
       * Rising/falling edge detector
       * 1 and 2 flip-flops synchronizer

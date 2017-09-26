@@ -38,3 +38,8 @@
 "Sync_x1.ice.template" 0 0 "Soporte/Sync_x1.ice"
 "Sync_x2.ice.template" 0 0 "Soporte/Sync_x2.ice"
 "RX_serie_config.ice.template" 0 0 "Serie (RS-232)/RX_serie_config.ice"
+"RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"
+"RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"
+"RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"
+"RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"
+"RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"

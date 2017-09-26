@@ -1,0 +1,491 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "ps2-keyboard",
+    "version": "0.1",
+    "description": "Modulo lector de un teclado PS/2. Devuelve todos los codigos recibidos al pulsar una tecla. Emite un pulso para indicar que se ha recibido un dato",
+    "author": "Juan Gonzalez-Gomez (Obijuan)",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-DBG_RDY",
+          "type": "basic.output",
+          "data": {
+            "name": "DBG_RDY",
+            "pins": [
+              {
+                "index": "0",
+                "name": "ARDU08",
+                "value": "19"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 208,
+            "y": -176
+          }
+        },
+        {
+          "id": "output-TX",
+          "type": "basic.output",
+          "data": {
+            "name": "TX",
+            "pins": [
+              {
+                "index": "0",
+                "name": "Milk_RXD",
+                "value": "38"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 536,
+            "y": -48
+          }
+        },
+        {
+          "id": "output-LED",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "ARDU29",
+                "value": "2"
+              },
+              {
+                "index": "6",
+                "name": "ARDU28",
+                "value": "144"
+              },
+              {
+                "index": "5",
+                "name": "ARDU27",
+                "value": "142"
+              },
+              {
+                "index": "4",
+                "name": "ARDU26",
+                "value": "139"
+              },
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 536,
+            "y": 40
+          }
+        },
+        {
+          "id": "output-DBG_DATA",
+          "type": "basic.output",
+          "data": {
+            "name": "DBG_DATA",
+            "pins": [
+              {
+                "index": "0",
+                "name": "ARDU00",
+                "value": "138"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": -296,
+            "y": 64
+          }
+        },
+        {
+          "id": "input-PS2_DATA",
+          "type": "basic.input",
+          "data": {
+            "name": "PS2_DATA",
+            "pins": [
+              {
+                "index": "0",
+                "name": "PMA0",
+                "value": "74"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": -456,
+            "y": 112
+          }
+        },
+        {
+          "id": "input-PS2_CLK",
+          "type": "basic.input",
+          "data": {
+            "name": "PS2_CLK",
+            "pins": [
+              {
+                "index": "0",
+                "name": "PMA2",
+                "value": "76"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": -456,
+            "y": 192
+          }
+        },
+        {
+          "id": "output-DBG_CLK",
+          "type": "basic.output",
+          "data": {
+            "name": "DBG_CLK",
+            "pins": [
+              {
+                "index": "0",
+                "name": "ARDU01",
+                "value": "141"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": -304,
+            "y": 248
+          }
+        },
+        {
+          "id": "2a7713d4-2ded-4639-9816-c6cd7c399c1a",
+          "type": "basic.info",
+          "data": {
+            "info": "Prueba de lectura del teclado PS/2\nControlador de bajo nivel: todos los datos \nrecibidos se muestran por los leds",
+            "readonly": true
+          },
+          "position": {
+            "x": -344,
+            "y": -16
+          },
+          "size": {
+            "width": 352,
+            "height": 64
+          }
+        },
+        {
+          "id": "b9642a84-0d31-46af-973d-3104ac2d4432",
+          "type": "@sha1<./blocks/Varios/Comunicación/Serie (RS-232)/TX_serie_115200.ice>",
+          "position": {
+            "x": 384,
+            "y": -88
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+          "type": "@sha1<./blocks/Varios/Comunicación/PS2/RX_PS2.ice>",
+          "position": {
+            "x": -128,
+            "y": 64
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "f3482efc-91bf-4f5a-8907-c4da814ede30",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 16,
+            "y": 96
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "17f8ff59-4cb0-4ad0-b4cc-1e7f74329ae3",
+          "type": "@sha1<./blocks/Logic/AND/AND_2.ice>",
+          "position": {
+            "x": 208,
+            "y": -72
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "b603887a-1b82-4b33-bc31-42e4f360daeb",
+          "type": "@sha1<./blocks/Varios/Registros/Completo/Reg_8_Completo.ice>",
+          "position": {
+            "x": 384,
+            "y": 120
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "522bb138-3171-4ed4-a8e8-cbe07a5e5a62",
+          "type": "basic.info",
+          "data": {
+            "info": "Es necesario registrar\nel valor cuando la señal\nde rdy lo indica.",
+            "readonly": true
+          },
+          "position": {
+            "x": 304,
+            "y": 248
+          },
+          "size": {
+            "width": 240,
+            "height": 64
+          }
+        },
+        {
+          "id": "bbef617d-a72b-4616-a6d0-0b6d70440e4f",
+          "type": "basic.info",
+          "data": {
+            "info": "Sólo enviamos\npor RS-232 los\nque no tengan\nerror.",
+            "readonly": true
+          },
+          "position": {
+            "x": 312,
+            "y": -184
+          },
+          "size": {
+            "width": 160,
+            "height": 96
+          }
+        },
+        {
+          "id": "c42a8a50-b96a-4495-9f5b-bd18d22d44a6",
+          "type": "basic.info",
+          "data": {
+            "info": "Las señales DBG_*\nson de depuración.",
+            "readonly": true
+          },
+          "position": {
+            "x": -208,
+            "y": 256
+          },
+          "size": {
+            "width": 192,
+            "height": 48
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "b9642a84-0d31-46af-973d-3104ac2d4432",
+            "port": "output-TX"
+          },
+          "target": {
+            "block": "output-TX",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "input-PS2_DATA",
+            "port": "out"
+          },
+          "target": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "input-data"
+          }
+        },
+        {
+          "source": {
+            "block": "input-PS2_CLK",
+            "port": "out"
+          },
+          "target": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "input-ps2_clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-PS2_DATA",
+            "port": "out"
+          },
+          "target": {
+            "block": "output-DBG_DATA",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "input-PS2_CLK",
+            "port": "out"
+          },
+          "target": {
+            "block": "output-DBG_CLK",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "output-DBG_RDY",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 152,
+              "y": 32
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "output-error"
+          },
+          "target": {
+            "block": "f3482efc-91bf-4f5a-8907-c4da814ede30",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "17f8ff59-4cb0-4ad0-b4cc-1e7f74329ae3",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "b9642a84-0d31-46af-973d-3104ac2d4432",
+            "port": "input-start"
+          }
+        },
+        {
+          "source": {
+            "block": "f3482efc-91bf-4f5a-8907-c4da814ede30",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "17f8ff59-4cb0-4ad0-b4cc-1e7f74329ae3",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "17f8ff59-4cb0-4ad0-b4cc-1e7f74329ae3",
+            "port": "input-i1"
+          },
+          "vertices": [
+            {
+              "x": 152,
+              "y": 40
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "b603887a-1b82-4b33-bc31-42e4f360daeb",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-LED",
+            "port": "in"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "b603887a-1b82-4b33-bc31-42e4f360daeb",
+            "port": "input-d"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "b603887a-1b82-4b33-bc31-42e4f360daeb",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 152,
+              "y": 184
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "0a52fb3c-e1a3-415e-916d-bca942d669be",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "b9642a84-0d31-46af-973d-3104ac2d4432",
+            "port": "input-data"
+          },
+          "vertices": [
+            {
+              "x": 312,
+              "y": 72
+            }
+          ],
+          "size": 8
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 872,
+        "y": 385.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
