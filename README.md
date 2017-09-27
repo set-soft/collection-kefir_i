@@ -21,6 +21,8 @@ Collection for the Kefir I board in Icestudio.
 
 * *Input*
   * *CapSense* 2/3/4 capacitive buttons
+  * *Teclado base* (detecta extendidos y soltar teclas)
+  * *Tecla estado y presionada* (0/1/2/3/4/5/6/7/8/9)
 
 * *Logic*
   * *AND* 2 to 8 inputs

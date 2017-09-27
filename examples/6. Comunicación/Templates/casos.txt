@@ -10,3 +10,7 @@
 "03. Recepción PS2.ice.template" 0 0 "03. Recepción PS2.ice"
 "03. Recepción PS2.ice.template" 0 0 "03. Recepción PS2.ice"
 "03. Recepción PS2.ice.template" 0 0 "03. Recepción PS2.ice"
+"04. Teclado PS2.ice.template" 0 0 "04. Teclado PS2.ice"
+"04. Teclado PS2.ice.template" 0 0 "04. Teclado PS2.ice"
+"05. Teclado PS2 y LEDs.ice.template" 0 0 "05. Teclado PS2 y LEDs.ice"
+"06. Teclado PS2 y LEDs 2.ice.template" 0 0 "06. Teclado PS2 y LEDs 2.ice"
