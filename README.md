@@ -35,6 +35,8 @@ Collection for the Kefir I board in Icestudio.
   * *Aritmetica*
     * *Comparadores*
       * &gt;/=/&lt; (2/4/8/16/32)
+      * = (2/4/8/16/32)
+      * = constante (2/4/8/16/32)
       * Didactico
         * Comparador por = de 2 bits
         * Comparador por &gt; de 2 bits

@@ -1,0 +1,143 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Comparador de igualdad de @sz_i bits con constante",
+    "version": "1.0.0",
+    "description": "Compara si la entrada es igual a una constante (@sz_i bits)",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<Comparador_igual.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-A",
+          "type": "basic.input",
+          "data": {
+            "name": "A",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 152
+          }
+        },
+        {
+          "id": "output-Igual",
+          "type": "basic.output",
+          "data": {
+            "name": "Igual",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 688,
+            "y": 152
+          }
+        },
+        {
+          "id": "constant-K",
+          "type": "basic.constant",
+          "data": {
+            "name": "K",
+            "value": "0",
+            "local": false
+          },
+          "position": {
+            "x": 424,
+            "y": 40
+          }
+        },
+        {
+          "id": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+          "type": "basic.code",
+          "data": {
+            "code": "assign Igual=A==K;",
+            "params": [
+              {
+                "name": "K"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "A",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                }
+              ],
+              "out": [
+                {
+                  "name": "Igual"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 328,
+            "y": 160
+          },
+          "size": {
+            "width": 288,
+            "height": 48
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-A",
+            "port": "out"
+          },
+          "target": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "A"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "Igual"
+          },
+          "target": {
+            "block": "output-Igual",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-K",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
+            "port": "K"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -18,
+        "y": 7.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
