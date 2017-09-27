@@ -19,3 +19,5 @@
 "PrescalerN.ice.template" 0 0 "Prescaler/PrescalerN.ice"
 "PrescalerN_simple.ice.template" 0 0 "Prescaler/PrescalerN_simple.ice"
 "Contador_Simple_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Simple_32.ice"
+"Contador_Completo_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Completo_32.ice"
+"Contador_Completo_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Completo_32.ice"
