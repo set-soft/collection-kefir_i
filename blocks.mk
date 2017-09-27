@@ -45,7 +45,12 @@ all:  \
 	./blocks/Input/Teclado/Teclado_9_presionada.ice \
 	./blocks/Input/Teclado/Teclado_base.ice \
 	./blocks/Input/Teclado/Teclado_estado.ice \
+	./blocks/Input/Teclado/Teclado_estado_ext.ice \
 	./blocks/Input/Teclado/Teclado_presionada.ice \
+	./blocks/Input/Teclado/Teclado_←_estado_ext.ice \
+	./blocks/Input/Teclado/Teclado_↑_estado_ext.ice \
+	./blocks/Input/Teclado/Teclado_→_estado_ext.ice \
+	./blocks/Input/Teclado/Teclado_↓_estado_ext.ice \
 	./blocks/Logic/AND/AND_2.ice \
 	./blocks/Logic/AND/AND_3.ice \
 	./blocks/Logic/AND/AND_4.ice \
@@ -552,6 +557,7 @@ all:  \
 	./examples/6.\ Comunicación/04.\ Teclado\ PS2.ice \
 	./examples/6.\ Comunicación/05.\ Teclado\ PS2\ y\ LEDs.ice \
 	./examples/6.\ Comunicación/06.\ Teclado\ PS2\ y\ LEDs\ 2.ice \
+	./examples/6.\ Comunicación/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -765,9 +771,29 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_estado.ice.template \? 0 ./blocks/Input/Teclado/Teclado_estado.ice
 	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_estado.ice
 
+./blocks/Input/Teclado/Teclado_estado_ext.ice: ./blocks/Input/Templates/Teclado_estado_ext.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Templates/tecla.svg
+	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_estado_ext.ice.template \? 0 ./blocks/Input/Teclado/Teclado_estado_ext.ice
+	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_estado_ext.ice
+
 ./blocks/Input/Teclado/Teclado_presionada.ice: ./blocks/Input/Templates/Teclado_presionada.ice.template tools/reemplaza.pl  ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/AND/AND_4.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Input/Templates/tecla.svg
 	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_presionada.ice.template \? 0 ./blocks/Input/Teclado/Teclado_presionada.ice
 	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_presionada.ice
+
+./blocks/Input/Teclado/Teclado_←_estado_ext.ice: ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template tools/reemplaza.pl  ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Templates/tecla.svg
+	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template ← 0 ./blocks/Input/Teclado/Teclado_←_estado_ext.ice
+	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_←_estado_ext.ice
+
+./blocks/Input/Teclado/Teclado_↑_estado_ext.ice: ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template tools/reemplaza.pl  ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Templates/tecla.svg
+	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template ↑ 0 ./blocks/Input/Teclado/Teclado_↑_estado_ext.ice
+	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_↑_estado_ext.ice
+
+./blocks/Input/Teclado/Teclado_→_estado_ext.ice: ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template tools/reemplaza.pl  ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Templates/tecla.svg
+	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template → 0 ./blocks/Input/Teclado/Teclado_→_estado_ext.ice
+	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_→_estado_ext.ice
+
+./blocks/Input/Teclado/Teclado_↓_estado_ext.ice: ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template tools/reemplaza.pl  ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Templates/tecla.svg
+	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_x_estado_ext.ice.template ↓ 0 ./blocks/Input/Teclado/Teclado_↓_estado_ext.ice
+	perl tools/update_db.pl ./blocks/Input/Teclado/Teclado_↓_estado_ext.ice
 
 ./blocks/Logic/AND/AND_2.ice: ./blocks/Logic/AND/Templates/AND.ice.template tools/reemplaza.pl  ./blocks/Logic/AND/Templates/AND.svg
 	perl tools/reemplaza.pl ./blocks/Logic/AND/Templates/AND.ice.template 1,1 1 ./blocks/Logic/AND/AND_2.ice
@@ -2786,6 +2812,10 @@ all:  \
 ./examples/6.\ Comunicación/06.\ Teclado\ PS2\ y\ LEDs\ 2.ice: ./examples/6.\ Comunicación/Templates/06.\ Teclado\ PS2\ y\ LEDs\ 2.ice.template tools/reemplaza.pl  ./blocks/Input/Teclado/Teclado_base.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Varios/Comunicación/PS2/RX_PS2.ice ./blocks/Varios/Comunicación/Soporte/Sync_x2.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Varios/Buses/XOR/1_out/XOR_8.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Input/Teclado/Teclado_1_estado.ice ./blocks/Input/Teclado/Teclado_estado.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Teclado/Teclado_2_estado.ice ./blocks/Input/Teclado/Teclado_estado.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Teclado/Teclado_3_estado.ice ./blocks/Input/Teclado/Teclado_estado.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Teclado/Teclado_4_estado.ice ./blocks/Input/Teclado/Teclado_estado.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice
 	perl tools/reemplaza.pl ./examples/6.\ Comunicación/Templates/06.\ Teclado\ PS2\ y\ LEDs\ 2.ice.template 0 0 ./examples/6.\ Comunicación/06.\ Teclado\ PS2\ y\ LEDs\ 2.ice
 	perl tools/update_db.pl ./examples/6.\ Comunicación/06.\ Teclado\ PS2\ y\ LEDs\ 2.ice
+
+./examples/6.\ Comunicación/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice: ./examples/6.\ Comunicación/Templates/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice.template tools/reemplaza.pl  ./blocks/Input/Teclado/Teclado_base.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/NOT/NOT.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Const/Bit/1.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Varios/Comunicación/PS2/RX_PS2.ice ./blocks/Varios/Comunicación/Soporte/Sync_x2.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Bajada.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Registros/Derecha/Ena_Rst/Desp_Derecha_8_Ena_Rst.ice ./blocks/Varios/Registros/Universal/Completo/Reg_Universal_8_Completo.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Const/Bit/0.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Varios/Buses/XOR/1_out/XOR_8.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Input/Teclado/Teclado_↑_estado_ext.ice ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Teclado/Teclado_↓_estado_ext.ice ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Teclado/Teclado_→_estado_ext.ice ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Teclado/Teclado_←_estado_ext.ice ./blocks/Input/Teclado/Teclado_estado_ext.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice
+	perl tools/reemplaza.pl ./examples/6.\ Comunicación/Templates/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice.template 0 0 ./examples/6.\ Comunicación/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice
+	perl tools/update_db.pl ./examples/6.\ Comunicación/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice
 
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice

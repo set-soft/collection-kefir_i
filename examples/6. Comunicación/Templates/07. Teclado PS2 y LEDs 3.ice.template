@@ -1,0 +1,544 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LED4",
+          "type": "basic.output",
+          "data": {
+            "name": "LED4",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED4",
+                "value": "121"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": -376
+          }
+        },
+        {
+          "id": "output-LED3",
+          "type": "basic.output",
+          "data": {
+            "name": "LED3",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED3",
+                "value": "129"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": -176
+          }
+        },
+        {
+          "id": "output-LED2",
+          "type": "basic.output",
+          "data": {
+            "name": "LED2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 24
+          }
+        },
+        {
+          "id": "output-LED1",
+          "type": "basic.output",
+          "data": {
+            "name": "LED1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 224
+          }
+        },
+        {
+          "id": "input-PS2_DATA",
+          "type": "basic.input",
+          "data": {
+            "name": "PS2_DATA",
+            "pins": [
+              {
+                "index": "0",
+                "name": "PMA0",
+                "value": "74"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 8,
+            "y": 312
+          }
+        },
+        {
+          "id": "input-PS2_CLK",
+          "type": "basic.input",
+          "data": {
+            "name": "PS2_CLK",
+            "pins": [
+              {
+                "index": "0",
+                "name": "PMA2",
+                "value": "76"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 8,
+            "y": 392
+          }
+        },
+        {
+          "id": "fe42cc99-0254-492b-bed2-1e0513863a47",
+          "type": "@sha1<./blocks/Input/Teclado/Teclado_base.ice>",
+          "position": {
+            "x": 360,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 160
+          }
+        },
+        {
+          "id": "89d87606-6f16-4430-844d-132638002fc2",
+          "type": "@sha1<./blocks/Varios/Comunicación/PS2/RX_PS2.ice>",
+          "position": {
+            "x": 176,
+            "y": 264
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "cb39071a-717c-43e5-9007-715dfb5f0026",
+          "type": "@sha1<./blocks/Input/Teclado/Teclado_↑_estado_ext.ice>",
+          "position": {
+            "x": 632,
+            "y": 160
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        },
+        {
+          "id": "335cb6e9-9cfd-4b03-98ad-a6f02b7318f6",
+          "type": "@sha1<./blocks/Input/Teclado/Teclado_↓_estado_ext.ice>",
+          "position": {
+            "x": 632,
+            "y": -40
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        },
+        {
+          "id": "ed9974e1-326d-4dbe-9a0a-11d559ac9b9b",
+          "type": "@sha1<./blocks/Input/Teclado/Teclado_→_estado_ext.ice>",
+          "position": {
+            "x": 632,
+            "y": -240
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        },
+        {
+          "id": "53678305-50f7-4532-922b-8e167d16990f",
+          "type": "@sha1<./blocks/Input/Teclado/Teclado_←_estado_ext.ice>",
+          "position": {
+            "x": 632,
+            "y": -440
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "89d87606-6f16-4430-844d-132638002fc2",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "input-rdy"
+          }
+        },
+        {
+          "source": {
+            "block": "89d87606-6f16-4430-844d-132638002fc2",
+            "port": "output-error"
+          },
+          "target": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "input-error"
+          }
+        },
+        {
+          "source": {
+            "block": "89d87606-6f16-4430-844d-132638002fc2",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "input-d"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "input-PS2_DATA",
+            "port": "out"
+          },
+          "target": {
+            "block": "89d87606-6f16-4430-844d-132638002fc2",
+            "port": "input-data"
+          }
+        },
+        {
+          "source": {
+            "block": "input-PS2_CLK",
+            "port": "out"
+          },
+          "target": {
+            "block": "89d87606-6f16-4430-844d-132638002fc2",
+            "port": "input-ps2_clk"
+          }
+        },
+        {
+          "source": {
+            "block": "cb39071a-717c-43e5-9007-715dfb5f0026",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-LED1",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-break"
+          },
+          "target": {
+            "block": "cb39071a-717c-43e5-9007-715dfb5f0026",
+            "port": "input-break"
+          }
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-ext"
+          },
+          "target": {
+            "block": "cb39071a-717c-43e5-9007-715dfb5f0026",
+            "port": "input-ext"
+          }
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "cb39071a-717c-43e5-9007-715dfb5f0026",
+            "port": "input-d"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "cb39071a-717c-43e5-9007-715dfb5f0026",
+            "port": "input-rdy"
+          }
+        },
+        {
+          "source": {
+            "block": "53678305-50f7-4532-922b-8e167d16990f",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-LED4",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "ed9974e1-326d-4dbe-9a0a-11d559ac9b9b",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-LED3",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "335cb6e9-9cfd-4b03-98ad-a6f02b7318f6",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-LED2",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "335cb6e9-9cfd-4b03-98ad-a6f02b7318f6",
+            "port": "input-d"
+          },
+          "vertices": [
+            {
+              "x": 568,
+              "y": 216
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "ed9974e1-326d-4dbe-9a0a-11d559ac9b9b",
+            "port": "input-d"
+          },
+          "vertices": [
+            {
+              "x": 568,
+              "y": 104
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "53678305-50f7-4532-922b-8e167d16990f",
+            "port": "input-d"
+          },
+          "vertices": [
+            {
+              "x": 568,
+              "y": 112
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-break"
+          },
+          "target": {
+            "block": "335cb6e9-9cfd-4b03-98ad-a6f02b7318f6",
+            "port": "input-break"
+          },
+          "vertices": [
+            {
+              "x": 544,
+              "y": 232
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-break"
+          },
+          "target": {
+            "block": "ed9974e1-326d-4dbe-9a0a-11d559ac9b9b",
+            "port": "input-break"
+          },
+          "vertices": [
+            {
+              "x": 544,
+              "y": 88
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-break"
+          },
+          "target": {
+            "block": "53678305-50f7-4532-922b-8e167d16990f",
+            "port": "input-break"
+          },
+          "vertices": [
+            {
+              "x": 544,
+              "y": 48
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-ext"
+          },
+          "target": {
+            "block": "335cb6e9-9cfd-4b03-98ad-a6f02b7318f6",
+            "port": "input-ext"
+          },
+          "vertices": [
+            {
+              "x": 520,
+              "y": 152
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-ext"
+          },
+          "target": {
+            "block": "ed9974e1-326d-4dbe-9a0a-11d559ac9b9b",
+            "port": "input-ext"
+          },
+          "vertices": [
+            {
+              "x": 520,
+              "y": 88
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-ext"
+          },
+          "target": {
+            "block": "53678305-50f7-4532-922b-8e167d16990f",
+            "port": "input-ext"
+          },
+          "vertices": [
+            {
+              "x": 520,
+              "y": -8
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "335cb6e9-9cfd-4b03-98ad-a6f02b7318f6",
+            "port": "input-rdy"
+          },
+          "vertices": [
+            {
+              "x": 496,
+              "y": 120
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "ed9974e1-326d-4dbe-9a0a-11d559ac9b9b",
+            "port": "input-rdy"
+          },
+          "vertices": [
+            {
+              "x": 496,
+              "y": -48
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "fe42cc99-0254-492b-bed2-1e0513863a47",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "53678305-50f7-4532-922b-8e167d16990f",
+            "port": "input-rdy"
+          },
+          "vertices": [
+            {
+              "x": 496,
+              "y": -264
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 546.9847,
+        "y": 454.966
+      },
+      "zoom": 0.9387
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

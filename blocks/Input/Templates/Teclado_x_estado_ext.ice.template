@@ -1,0 +1,328 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Tecla @name_i estado",
+    "version": "1.0.0",
+    "description": "Informa el estado de la tecla @name_i",
+    "author": "Salvador E. Tropea, ObiJuan",
+    "image": "@svg<tecla.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 136,
+            "y": 48
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 120
+          }
+        },
+        {
+          "id": "input-rdy",
+          "type": "basic.input",
+          "data": {
+            "name": "rdy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 192
+          }
+        },
+        {
+          "id": "output-q",
+          "type": "basic.output",
+          "data": {
+            "name": "q",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 488,
+            "y": 248
+          }
+        },
+        {
+          "id": "input-d",
+          "type": "basic.input",
+          "data": {
+            "name": "d",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "6",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "5",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "4",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 264
+          }
+        },
+        {
+          "id": "input-ext",
+          "type": "basic.input",
+          "data": {
+            "name": "ext",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 336
+          }
+        },
+        {
+          "id": "input-break",
+          "type": "basic.input",
+          "data": {
+            "name": "break",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 136,
+            "y": 408
+          }
+        },
+        {
+          "id": "constant-KEYCODE",
+          "type": "basic.constant",
+          "data": {
+            "name": "KEYCODE",
+            "value": "8'h@keycode_i",
+            "local": true
+          },
+          "position": {
+            "x": 336,
+            "y": 72
+          }
+        },
+        {
+          "id": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+          "type": "@sha1<./blocks/Input/Teclado/Teclado_estado_ext.ice>",
+          "position": {
+            "x": 336,
+            "y": 184
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-q",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-KEYCODE",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "constant-KEYCODE"
+          }
+        },
+        {
+          "source": {
+            "block": "input-break",
+            "port": "out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "input-break"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ext",
+            "port": "out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "input-ext"
+          },
+          "vertices": [
+            {
+              "x": 288,
+              "y": 336
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "input-d"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "input-rdy",
+            "port": "out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "input-rdy"
+          },
+          "vertices": [
+            {
+              "x": 280,
+              "y": 256
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 296,
+              "y": 176
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "2dadec01-9370-42f4-8b3c-b41d46eb7527",
+            "port": "input-clk"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 90,
+        "y": 3.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

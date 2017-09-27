@@ -22,7 +22,8 @@ Collection for the Kefir I board in Icestudio.
 * *Input*
   * *CapSense* 2/3/4 capacitive buttons
   * *Teclado base* (detecta extendidos y soltar teclas)
-  * *Tecla estado y presionada* (0/1/2/3/4/5/6/7/8/9)
+  * *Tecla presionada* (0/1/2/3/4/5/6/7/8/9)
+  * *Tecla estado* (0/1/2/3/4/5/6/7/8/9/&uparrow;/&downarrow;/&leftarrow;/&rightarrow;)
 
 * *Logic*
   * *AND* 2 to 8 inputs
@@ -220,6 +221,7 @@ Collection for the Kefir I board in Icestudio.
   * 04\. Teclado PS2
   * 05\. Teclado PS2 y LEDs
   * 06\. Teclado PS2 y LEDs 2
+  * 07\. Teclado PS2 y LEDs 3
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
