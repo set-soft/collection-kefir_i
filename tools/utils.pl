@@ -288,30 +288,24 @@ sub FileNameIORep
    {
     foreach $i (@inputs)
        {
-        unless ($i=~/^\d/)
-          {# Alphanumeric
-           $rep=uc($i);
-           $a=~s/\@name_iu$c/$rep/g;
-           $rep=lc($i);
-           $a=~s/\@name_il$c/$rep/g;
-           $rep=$i;
-           $a=~s/\@name_i$c/$rep/g;
-           $c--;
-          }
+        $rep=uc($i);
+        $a=~s/\@name_iu$c/$rep/g;
+        $rep=lc($i);
+        $a=~s/\@name_il$c/$rep/g;
+        $rep=$i;
+        $a=~s/\@name_i$c/$rep/g;
+        $c--;
        }
    }
  else
    {
     $i=$ins;
-    unless ($i=~/^\d/)
-      {# Alphanumeric
-       $rep=uc($i);
-       $a=~s/\@name_iu/$rep/g;
-       $rep=lc($i);
-       $a=~s/\@name_il/$rep/g;
-       $rep=$i;
-       $a=~s/\@name_i/$rep/g;
-      }
+    $rep=uc($i);
+    $a=~s/\@name_iu/$rep/g;
+    $rep=lc($i);
+    $a=~s/\@name_il/$rep/g;
+    $rep=$i;
+    $a=~s/\@name_i/$rep/g;
    }
  $a;
 }
