@@ -22,6 +22,20 @@ $a=cat($tpl);
 $tpl=~/(.*)\/([^\/]+)$/;
 $tpldir=$1;
 
+my %keycode=
+(
+ "1" => "16",
+ "2" => "1E",
+ "3" => "26",
+ "4" => "25",
+ "5" => "2E",
+ "6" => "36",
+ "7" => "3D",
+ "8" => "3E",
+ "9" => "46",
+ "0" => "45"
+);
+
 # Alphanumeric replacements pass 1
 $a=FileNameIORep($a,$ins,$outs);
 
@@ -200,6 +214,8 @@ else
      }
    $do_split=1;
    $split_max=$ins;
+   my $kc=$keycode{$i};
+   $a=~s/\@keycode_i/$kc/g if $kc;
   }
 $code_join_wire_rep.="};\\n";
 
