@@ -55,6 +55,8 @@ Collection for the Kefir I board in Icestudio.
       * 8 &rarr; 16/32
       * 16 &rarr; 32
     * *Incrementador* (2/4/8/16/32)
+      * Con carry y overflow (2/4/8/16/32)
+      * Simple (2/4/8/16/32)
     * *Restadores*
       * Completo (Borrow in/out and oVerflow) (2/4/8/16/32)
       * Simple (Borrow out) (2/4/8/16/32)

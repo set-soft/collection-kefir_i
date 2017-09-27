@@ -41,45 +41,7 @@
           },
           "position": {
             "x": 624,
-            "y": 72
-          }
-        },
-        {
-          "id": "output-cout",
-          "type": "basic.output",
-          "data": {
-            "name": "cout",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true
-          },
-          "position": {
-            "x": 624,
-            "y": 144
-          }
-        },
-        {
-          "id": "output-v",
-          "type": "basic.output",
-          "data": {
-            "name": "v",
-            "pins": [
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true
-          },
-          "position": {
-            "x": 624,
-            "y": 216
+            "y": 112
           }
         },
         {
@@ -169,33 +131,13 @@
             }
           ],
           "size": @sz_i
-        },
-        {
-          "source": {
-            "block": "e0e2714a-b8df-4c61-b636-545fa4017728",
-            "port": "output-cout"
-          },
-          "target": {
-            "block": "output-cout",
-            "port": "in"
-          }
-        },
-        {
-          "source": {
-            "block": "e0e2714a-b8df-4c61-b636-545fa4017728",
-            "port": "output-v"
-          },
-          "target": {
-            "block": "output-v",
-            "port": "in"
-          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 34,
-        "y": 15.5
+        "x": -42,
+        "y": 87.5
       },
       "zoom": 1
     }
