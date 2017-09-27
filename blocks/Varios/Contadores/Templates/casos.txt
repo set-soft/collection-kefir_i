@@ -21,3 +21,4 @@
 "Contador_Simple_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Simple_32.ice"
 "Contador_Completo_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Completo_32.ice"
 "Contador_Completo_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Completo_32.ice"
+"Contador_Completo_32.ice.template" 0 0 "Ascendente/32 bits/Contador_Completo_32.ice"
