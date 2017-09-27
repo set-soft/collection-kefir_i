@@ -215,6 +215,11 @@ Collection for the Kefir I board in Icestudio.
   * 11\. Comparar &gt;,=,&lt; didáctico
 * *6\. Comunicación*
   * 01\. Transmisión Serie
+  * 02\. Recepción Serie
+  * 03\. Recepción PS2
+  * 04\. Teclado PS2
+  * 05\. Teclado PS2 y LEDs
+  * 06\. Teclado PS2 y LEDs 2
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
