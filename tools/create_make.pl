@@ -44,6 +44,7 @@ foreach $sha1 (keys %h)
       }
    }
 print "#!/usr/bin/make\n\n";
+print "EQUAL==\n\n";
 print "all: ";
 @n=sort(@names);
 foreach $name (@n)

@@ -18,7 +18,7 @@ sub EscapeForMake
 {
  my $n=shift(@_);
  $n=~s/ /\\ /g;
- $n=~s/\=/\\\=/g;
+ $n=~s/\=/\$\(EQUAL\)/g;
  $n;
 }
 

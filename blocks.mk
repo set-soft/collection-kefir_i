@@ -1,4 +1,5 @@
 #!/usr/bin/make
+
 EQUAL==
 
 all:  \
@@ -2773,12 +2774,12 @@ all:  \
 	perl tools/update_db.pl ./examples/4.\ Combinacional\ Misc/07.\ Codificador\ 4\ a\ 2.ice
 
 ./examples/5.\ Aritmetica/01.\ Comparar\ >,$(EQUAL),<.ice: ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ >,$(EQUAL),<.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_8_bits.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice
-	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ \>,$(EQUAL),\<.ice.template 0 0 ./examples/5.\ Aritmetica/01.\ Comparar\ \>,$(EQUAL),\<.ice
-	perl tools/update_db.pl ./examples/5.\ Aritmetica/01.\ Comparar\ \>,$(EQUAL),\<.ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/01.\ Comparar\ \>,\=,\<.ice.template 0 0 ./examples/5.\ Aritmetica/01.\ Comparar\ \>,\=,\<.ice
+	perl tools/update_db.pl ./examples/5.\ Aritmetica/01.\ Comparar\ \>,\=,\<.ice
 
 ./examples/5.\ Aritmetica/02.\ Comparar\ >$(EQUAL),!$(EQUAL),<$(EQUAL).ice: ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ >$(EQUAL),!$(EQUAL),<$(EQUAL).ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_8_bits.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_8.ice ./blocks/Logic/NOT/NOT.ice
-	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>$(EQUAL),\!$(EQUAL),\<$(EQUAL).ice.template 0 0 ./examples/5.\ Aritmetica/02.\ Comparar\ \>$(EQUAL),\!$(EQUAL),\<$(EQUAL).ice
-	perl tools/update_db.pl ./examples/5.\ Aritmetica/02.\ Comparar\ \>$(EQUAL),\!$(EQUAL),\<$(EQUAL).ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/02.\ Comparar\ \>\=,\!\=,\<\=.ice.template 0 0 ./examples/5.\ Aritmetica/02.\ Comparar\ \>\=,\!\=,\<\=.ice
+	perl tools/update_db.pl ./examples/5.\ Aritmetica/02.\ Comparar\ \>\=,\!\=,\<\=.ice
 
 ./examples/5.\ Aritmetica/03.\ Sumador.ice: ./examples/5.\ Aritmetica/Templates/03.\ Sumador.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_2_bits.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_2.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/03.\ Sumador.ice.template 0 0 ./examples/5.\ Aritmetica/03.\ Sumador.ice
@@ -2813,8 +2814,8 @@ all:  \
 	perl tools/update_db.pl ./examples/5.\ Aritmetica/10.\ Sumador\ didáctico.ice
 
 ./examples/5.\ Aritmetica/11.\ Comparar\ >,$(EQUAL),<\ didáctico.ice: ./examples/5.\ Aritmetica/Templates/11.\ Comparar\ >,$(EQUAL),<\ didáctico.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_4_bits.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_4_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_igual_didáctico.ice ./blocks/Logic/XNOR/XNOR_2.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/Comparador_2_mayor_didáctico.ice ./blocks/Varios/Aritmetica/Comparadores/Didáctico/AmayorB_mapaK.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Logic/AND/AND_3.ice ./blocks/Logic/OR/OR_3.ice ./blocks/Logic/NOR/NOR_2.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice
-	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/11.\ Comparar\ \>,$(EQUAL),\<\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/11.\ Comparar\ \>,$(EQUAL),\<\ didáctico.ice
-	perl tools/update_db.pl ./examples/5.\ Aritmetica/11.\ Comparar\ \>,$(EQUAL),\<\ didáctico.ice
+	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/11.\ Comparar\ \>,\=,\<\ didáctico.ice.template 0 0 ./examples/5.\ Aritmetica/11.\ Comparar\ \>,\=,\<\ didáctico.ice
+	perl tools/update_db.pl ./examples/5.\ Aritmetica/11.\ Comparar\ \>,\=,\<\ didáctico.ice
 
 ./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice: ./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template tools/reemplaza.pl  ./blocks/Const/Bus/Val/Const_2_bits.ice ./blocks/Varios/Aritmetica/Extender/Extender_2_4.ice
 	perl tools/reemplaza.pl ./examples/5.\ Aritmetica/Templates/12.\ Extensión\ de\ signo.ice.template 0 0 ./examples/5.\ Aritmetica/12.\ Extensión\ de\ signo.ice
