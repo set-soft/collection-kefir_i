@@ -41,6 +41,34 @@ my %keycode=
 
 );
 
+my %pin_repl=
+(
+ 'ARDU0(\d)' =>  'IO',
+ 'ARDU([1-9]\d)' => 'IO',
+ "Milk_TXD" =>  "TXD",
+ "Milk_RXD" =>  "RXD",
+ "Milk_RTS" =>  "RTS",
+ "Milk_CTS" =>  "CTS",
+ "Milk_DTR" =>  "DTR",
+ "Milk_DSR" =>  "DSR",
+ "Milk_DCD" =>  "DCD",
+ "Milk_RI" =>   "RI",
+ "ISP_RESET" => "IRST",
+ "ISP_SCK" =>   "ISCK",
+ "ISP_MOSI" =>  "MOSI",
+ "ISP_MISO" =>  "MISO",
+ "SS_B" =>      "SS",
+ "RESET_P2" =>  "PRST",
+ "AD_Din" =>    "AD_DI",
+ "AD_Dout" =>   "AD_DO",
+ "AD_Clk" =>    "AD_CK",
+ "USB_Vp_o" =>  "U_VPO",
+ "USB_Vm_o" =>  "U_VMO",
+ "USB_Vm_i" =>  "U_VMI",
+ "USB_Vp_i" =>  "U_VPI",
+ "USB_nOE" =>   "U_NOE"
+);
+
 # Alphanumeric replacements pass 1
 $a=FileNameIORep($a,$ins,$outs);
 
@@ -433,6 +461,12 @@ while ($a=~/\@dependency\<([^\>]+)\>/g)
        "    }";
    $a=~s/\@dependency\<$1\>/$r2/g;
    unlink('pp.json');
+  }
+
+# Pin name changes
+while (my ($key,$value)=each(%pin_repl))
+  {
+   $a=~s/\"name\":\s+\"$key\"/\"name\": \"$value$1\"/g;
   }
 replace($sal,$a);
 0;

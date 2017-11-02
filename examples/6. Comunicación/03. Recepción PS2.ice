@@ -19,7 +19,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "ARDU08",
+                "name": "IO8",
                 "value": "19"
               }
             ],
@@ -38,7 +38,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_RXD",
+                "name": "RXD",
                 "value": "38"
               }
             ],
@@ -58,22 +58,22 @@
             "pins": [
               {
                 "index": "7",
-                "name": "ARDU29",
+                "name": "IO29",
                 "value": "2"
               },
               {
                 "index": "6",
-                "name": "ARDU28",
+                "name": "IO28",
                 "value": "144"
               },
               {
                 "index": "5",
-                "name": "ARDU27",
+                "name": "IO27",
                 "value": "142"
               },
               {
                 "index": "4",
-                "name": "ARDU26",
+                "name": "IO26",
                 "value": "139"
               },
               {
@@ -112,7 +112,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "ARDU00",
+                "name": "IO0",
                 "value": "138"
               }
             ],
@@ -171,7 +171,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "ARDU01",
+                "name": "IO1",
                 "value": "141"
               }
             ],

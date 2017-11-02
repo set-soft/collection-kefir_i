@@ -15,11 +15,11 @@
           "id": "output-ARDU01",
           "type": "basic.output",
           "data": {
-            "name": "ARDU01",
+            "name": "IO1",
             "pins": [
               {
                 "index": "0",
-                "name": "ARDU01",
+                "name": "IO1",
                 "value": "141"
               }
             ],
@@ -34,11 +34,11 @@
           "id": "output-ARDU00",
           "type": "basic.output",
           "data": {
-            "name": "ARDU00",
+            "name": "IO0",
             "pins": [
               {
                 "index": "0",
-                "name": "ARDU00",
+                "name": "IO0",
                 "value": "138"
               }
             ],
@@ -57,7 +57,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_TXD",
+                "name": "TXD",
                 "value": "37"
               }
             ],
@@ -112,7 +112,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_DTR",
+                "name": "DTR",
                 "value": "42"
               }
             ],
@@ -132,7 +132,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_RTS",
+                "name": "RTS",
                 "value": "39"
               }
             ],
@@ -232,7 +232,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_CTS",
+                "name": "CTS",
                 "value": "41"
               }
             ],
@@ -251,7 +251,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_DSR",
+                "name": "DSR",
                 "value": "43"
               }
             ],

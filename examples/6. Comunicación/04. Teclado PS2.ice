@@ -19,7 +19,7 @@
             "pins": [
               {
                 "index": "0",
-                "name": "Milk_RXD",
+                "name": "RXD",
                 "value": "38"
               }
             ],
