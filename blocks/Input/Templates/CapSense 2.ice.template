@@ -127,7 +127,7 @@
           "type": "basic.constant",
           "data": {
             "name": "FREQUENCY",
-            "value": "24",
+            "value": "@clkMHz",
             "local": false
           },
           "position": {

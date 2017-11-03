@@ -38,7 +38,7 @@ foreach $sha1 (keys %h)
       {
        ($tpl,$ins,$outs)=DecomposeRule($rule);
        $tpl=EscapeForMake(UnEscapeForShell($tpl));
-       push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl $deps\n".
+       push(@rules,EscapeForMake($fname).": $tpl tools/reemplaza.pl ".GetCfgName()." $deps\n".
             "\tperl tools/reemplaza.pl $rule ".EscapeForShell($fname)."\n".
             "\tperl tools/update_db.pl ".EscapeForShell($fname));
       }

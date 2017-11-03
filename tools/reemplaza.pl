@@ -72,6 +72,23 @@ my %pin_repl=
 # Alphanumeric replacements pass 1
 $a=FileNameIORep($a,$ins,$outs);
 
+# Clock frequency and other setting stuff
+$cfg=GetCfgName();
+open(FIL,$cfg) || die "Failed to open $cfg";
+while (<FIL>)
+  {
+   next if $_=~/^\#/;
+   if ($_=~/([^=]+)=(.*)/)
+     {
+      my $tag='@'.$1;
+      my $rep=$2;
+      #print "$tag -> $rep\n";
+      $a=~s/$tag/$rep/g;
+     }
+  }
+close(FIL);
+
+
 # Replace the SVG first, it could contain tags
 while ($a=~/\@svg\<([^\>]+)\>/g)
   {

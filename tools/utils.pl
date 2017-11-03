@@ -309,4 +309,9 @@ sub FileNameIORep
    }
  $a;
 }
+
+sub GetCfgName()
+{
+ return './'.dirname(__FILE__).'/board.cfg';
+}
 1;

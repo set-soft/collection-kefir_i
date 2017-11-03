@@ -170,7 +170,7 @@
           "type": "basic.constant",
           "data": {
             "name": "DIV",
-            "value": "207",
+            "value": "@div115200",
             "local": false
           },
           "position": {

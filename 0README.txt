@@ -14,3 +14,9 @@ $ npm install --no-optional
 
 4) Test is it works running: tools/svgo/bin/svgo
 
+
+How to configure the clock frequency:
+-------------------------------------
+
+Edit the tools/boards.cfg and change the definitions.
+Most of them can be computed from the clock, so you can use "tools/create_cfg.pl"
