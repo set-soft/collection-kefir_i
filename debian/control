@@ -1,0 +1,15 @@
+Source: icestudio-coll-kefir
+Section: electronics
+Priority: optional
+Maintainer: SET <set@ieee.org>
+Build-Depends: debhelper (>= 9)
+Homepage: https://github.com/set-soft/collection-kefir_i
+Standards-Version: 3.9.5
+
+Package: icestudio-coll-kefir
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, icestudio
+Description: Kefir I blocks collection for icestudio
+ This package contains Kefir I collection of blocks for icestudio
+
+
