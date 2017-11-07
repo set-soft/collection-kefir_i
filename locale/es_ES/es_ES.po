@@ -1,0 +1,5455 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-11-07 09:19-0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: translation.js\n"
+
+#: translation.js:12
+msgid "Input"
+msgstr ""
+
+#: translation.js:13
+msgid "Teclado"
+msgstr ""
+
+#: translation.js:14
+msgid "Teclado_2_presionada"
+msgstr ""
+
+#: translation.js:15
+msgid "Informa cuando se presionó la tecla 2"
+msgstr ""
+
+#: translation.js:16
+msgid "Teclado_1_presionada"
+msgstr ""
+
+#: translation.js:17
+msgid "Informa cuando se presionó la tecla 1"
+msgstr ""
+
+#: translation.js:18
+msgid "Teclado_↓_estado_ext"
+msgstr ""
+
+#: translation.js:19
+msgid "Informa el estado de la tecla ↓"
+msgstr ""
+
+#: translation.js:20
+msgid "Teclado_7_presionada"
+msgstr ""
+
+#: translation.js:21
+msgid "Informa cuando se presionó la tecla 7"
+msgstr ""
+
+#: translation.js:22
+msgid "Teclado_4_presionada"
+msgstr ""
+
+#: translation.js:23
+msgid "Informa cuando se presionó la tecla 4"
+msgstr ""
+
+#: translation.js:24
+msgid "Teclado_1_estado"
+msgstr ""
+
+#: translation.js:25
+msgid "Informa el estado de la tecla 1"
+msgstr ""
+
+#: translation.js:26
+msgid "Teclado_9_presionada"
+msgstr ""
+
+#: translation.js:27
+msgid "Informa cuando se presionó la tecla 9"
+msgstr ""
+
+#: translation.js:28
+msgid "Teclado_→_estado_ext"
+msgstr ""
+
+#: translation.js:29
+msgid "Informa el estado de la tecla →"
+msgstr ""
+
+#: translation.js:30
+msgid "Teclado_4_estado"
+msgstr ""
+
+#: translation.js:31
+msgid "Informa el estado de la tecla 4"
+msgstr ""
+
+#: translation.js:32
+msgid "Teclado_2_estado"
+msgstr ""
+
+#: translation.js:33
+msgid "Informa el estado de la tecla 2"
+msgstr ""
+
+#: translation.js:34
+msgid "Teclado_8_estado"
+msgstr ""
+
+#: translation.js:35
+msgid "Informa el estado de la tecla 8"
+msgstr ""
+
+#: translation.js:36
+msgid "Teclado_8_presionada"
+msgstr ""
+
+#: translation.js:37
+msgid "Informa cuando se presionó la tecla 8"
+msgstr ""
+
+#: translation.js:38
+msgid "Teclado_←_estado_ext"
+msgstr ""
+
+#: translation.js:39
+msgid "Informa el estado de la tecla ←"
+msgstr ""
+
+#: translation.js:40
+msgid "Teclado_5_estado"
+msgstr ""
+
+#: translation.js:41
+msgid "Informa el estado de la tecla 5"
+msgstr ""
+
+#: translation.js:42
+msgid "Teclado_3_estado"
+msgstr ""
+
+#: translation.js:43
+msgid "Informa el estado de la tecla 3"
+msgstr ""
+
+#: translation.js:44
+msgid "Teclado_base"
+msgstr ""
+
+#: translation.js:45
+msgid "Bloque básico para decodificar key up y extendidos"
+msgstr ""
+
+#: translation.js:46
+msgid ""
+"Procesamos los valores\n"
+"sin error."
+msgstr ""
+
+#: translation.js:47
+msgid ""
+"F0 es el código que indica que estamos soltando una tecla.\n"
+"Esta primer parte del circuito detecta el F0 y lo memoriza \n"
+"para indicar que el próximo valor es soltar y no presionar."
+msgstr ""
+
+#: translation.js:48
+msgid ""
+"E0 es el código de tecla extendida.\n"
+"Cuando se suelta una tecla extendida recibimos E0,F0,tecla.\n"
+"Es por esta razón que la memoria de código extendido ignora\n"
+"al F0 que puede aparecer entre E0 y la tecla (la AND)"
+msgstr ""
+
+#: translation.js:49
+msgid ""
+"Esta AND ignora los códigos\n"
+"E0 y F0 que los informamos\n"
+"por separado."
+msgstr ""
+
+#: translation.js:50
+msgid ""
+"En este registro memorizamos\n"
+"la última tecla.\n"
+"Los E0 y F0 no se almacenan."
+msgstr ""
+
+#: translation.js:51
+msgid ""
+"La señal que indica que\n"
+"recibimos una nueva\n"
+"tecla debe acompañar\n"
+"al valor del registro.\n"
+"Es decir que se demora\n"
+"un ciclo."
+msgstr ""
+
+#: translation.js:52
+msgid "Teclado_6_estado"
+msgstr ""
+
+#: translation.js:53
+msgid "Informa el estado de la tecla 6"
+msgstr ""
+
+#: translation.js:54
+msgid "Teclado_0_estado"
+msgstr ""
+
+#: translation.js:55
+msgid "Informa el estado de la tecla 0"
+msgstr ""
+
+#: translation.js:56
+msgid "Teclado_6_presionada"
+msgstr ""
+
+#: translation.js:57
+msgid "Informa cuando se presionó la tecla 6"
+msgstr ""
+
+#: translation.js:58
+msgid "Teclado_7_estado"
+msgstr ""
+
+#: translation.js:59
+msgid "Informa el estado de la tecla 7"
+msgstr ""
+
+#: translation.js:60
+msgid "Teclado_3_presionada"
+msgstr ""
+
+#: translation.js:61
+msgid "Informa cuando se presionó la tecla 3"
+msgstr ""
+
+#: translation.js:62
+msgid "Teclado_9_estado"
+msgstr ""
+
+#: translation.js:63
+msgid "Informa el estado de la tecla 9"
+msgstr ""
+
+#: translation.js:64
+msgid "Teclado_presionada"
+msgstr ""
+
+#: translation.js:65
+msgid "Indica si se presionó la tecla indicada"
+msgstr ""
+
+#: translation.js:66
+msgid "Teclado_↑_estado_ext"
+msgstr ""
+
+#: translation.js:67
+msgid "Informa el estado de la tecla ↑"
+msgstr ""
+
+#: translation.js:68
+msgid "Teclado_estado_ext"
+msgstr ""
+
+#: translation.js:69
+msgid "Indica el estado de una tecla extendida"
+msgstr ""
+
+#: translation.js:70
+msgid "Teclado_5_presionada"
+msgstr ""
+
+#: translation.js:71
+msgid "Informa cuando se presionó la tecla 5"
+msgstr ""
+
+#: translation.js:72
+msgid "Teclado_estado"
+msgstr ""
+
+#: translation.js:73
+msgid "Indica el estado de una tecla"
+msgstr ""
+
+#: translation.js:74
+msgid "Teclado_0_presionada"
+msgstr ""
+
+#: translation.js:75
+msgid "Informa cuando se presionó la tecla 0"
+msgstr ""
+
+#: translation.js:76
+msgid "CapSense"
+msgstr ""
+
+#: translation.js:77
+msgid "CapSense 2"
+msgstr ""
+
+#: translation.js:78
+msgid "2 capacitive buttons"
+msgstr "2 botones capacitivos"
+
+#: translation.js:79
+msgid "CapSense 3"
+msgstr ""
+
+#: translation.js:80
+msgid "3 capacitive buttons"
+msgstr "3 botones capacitivos"
+
+#: translation.js:81
+msgid "CapSense 4"
+msgstr ""
+
+#: translation.js:82
+msgid "4 capacitive buttons"
+msgstr "4 botones capacitivos"
+
+#: translation.js:83
+msgid "Logic"
+msgstr "Lógica"
+
+#: translation.js:84 translation.js:85 translation.js:528
+msgid "NOT"
+msgstr "NOT"
+
+#: translation.js:86
+msgid "NOT logic gate"
+msgstr "Puerta lógica NOT"
+
+#: translation.js:87 translation.js:539
+msgid "AND"
+msgstr "AND"
+
+#: translation.js:88 translation.js:541 translation.js:552 translation.js:563
+msgid "AND_2"
+msgstr "AND 2"
+
+#: translation.js:89
+msgid "AND logic gate 2 inputs"
+msgstr "Puerta lógica AND de 2 entradas"
+
+#: translation.js:90
+msgid "AND_6"
+msgstr "AND 6"
+
+#: translation.js:91
+msgid "AND logic gate 6 inputs"
+msgstr "Puerta lógica AND de 6 entradas"
+
+#: translation.js:92 translation.js:543 translation.js:554 translation.js:565
+msgid "AND_4"
+msgstr "AND 4"
+
+#: translation.js:93
+msgid "AND logic gate 4 inputs"
+msgstr "Puerta lógica AND de 4 entradas"
+
+#: translation.js:94
+msgid "AND_5"
+msgstr "AND 5"
+
+#: translation.js:95
+msgid "AND logic gate 5 inputs"
+msgstr "Puerta lógica AND de 5 entradas"
+
+#: translation.js:96
+msgid "AND_3"
+msgstr "AND 3"
+
+#: translation.js:97
+msgid "AND logic gate 3 inputs"
+msgstr "Puerta lógica AND de 3 entradas"
+
+#: translation.js:98 translation.js:549 translation.js:560 translation.js:571
+msgid "AND_8"
+msgstr "AND 8"
+
+#: translation.js:99
+msgid "AND logic gate 8 inputs"
+msgstr "Puerta lógica AND de 8 entradas"
+
+#: translation.js:100
+msgid "AND_7"
+msgstr "AND 7"
+
+#: translation.js:101
+msgid "AND logic gate 7 inputs"
+msgstr "Puerta lógica AND de 7 entradas"
+
+#: translation.js:102 translation.js:573
+msgid "OR"
+msgstr "OR"
+
+#: translation.js:103
+msgid "OR_7"
+msgstr "OR 7"
+
+#: translation.js:104
+msgid "OR logic gate 7 inputs"
+msgstr "Puerta lógica OR de 7 entradas"
+
+#: translation.js:105
+msgid "OR_5"
+msgstr ""
+
+#: translation.js:106
+msgid "OR logic gate 5 inputs"
+msgstr "Puerta lógica OR de 5 entradas"
+
+#: translation.js:107
+msgid "OR_3"
+msgstr ""
+
+#: translation.js:108
+msgid "OR logic gate 3 inputs"
+msgstr "Puerta lógica OR de 3 entradas"
+
+#: translation.js:109 translation.js:579 translation.js:590 translation.js:601
+msgid "OR_8"
+msgstr ""
+
+#: translation.js:110
+msgid "OR logic gate 8 inputs"
+msgstr "Puerta lógica OR de 8 entradas"
+
+#: translation.js:111 translation.js:581 translation.js:592 translation.js:603
+msgid "OR_2"
+msgstr ""
+
+#: translation.js:112
+msgid "OR logic gate 2 inputs"
+msgstr "Puerta lógica OR de 2 entradas"
+
+#: translation.js:113
+msgid "OR_6"
+msgstr ""
+
+#: translation.js:114
+msgid "OR logic gate 6 inputs"
+msgstr "Puerta lógica OR de 6 entradas"
+
+#: translation.js:115 translation.js:583 translation.js:594 translation.js:605
+msgid "OR_4"
+msgstr ""
+
+#: translation.js:116
+msgid "OR logic gate 4 inputs"
+msgstr "Puerta lógica OR de 4 entradas"
+
+#: translation.js:117 translation.js:607
+msgid "NOR"
+msgstr ""
+
+#: translation.js:118
+msgid "NOR_5"
+msgstr ""
+
+#: translation.js:119
+msgid "NOR logic gate 5 inputs"
+msgstr "Puerta lógica NOR de 5 entradas"
+
+#: translation.js:120 translation.js:609 translation.js:620
+msgid "NOR_4"
+msgstr ""
+
+#: translation.js:121
+msgid "NOR logic gate 4 inputs"
+msgstr "Puerta lógica NOR de 4 entradas"
+
+#: translation.js:122
+msgid "NOR_7"
+msgstr ""
+
+#: translation.js:123
+msgid "NOR logic gate 7 inputs"
+msgstr "Puerta lógica NOR de 7 entradas"
+
+#: translation.js:124 translation.js:615 translation.js:626
+msgid "NOR_8"
+msgstr ""
+
+#: translation.js:125
+msgid "NOR logic gate 8 inputs"
+msgstr "Puerta lógica NOR de 8 entradas"
+
+#: translation.js:126
+msgid "NOR_6"
+msgstr ""
+
+#: translation.js:127
+msgid "NOR logic gate 6 inputs"
+msgstr "Puerta lógica NOR de 6 entradas"
+
+#: translation.js:128
+msgid "NOR_3"
+msgstr ""
+
+#: translation.js:129
+msgid "NOR logic gate 3 inputs"
+msgstr "Puerta lógica NOR de 3 entradas"
+
+#: translation.js:130 translation.js:617 translation.js:628
+msgid "NOR_2"
+msgstr ""
+
+#: translation.js:131
+msgid "NOR logic gate 2 inputs"
+msgstr "Puerta lógica NOR de 2 entradas"
+
+#: translation.js:132 translation.js:847
+msgid "XOR"
+msgstr ""
+
+#: translation.js:133
+msgid "XOR_6"
+msgstr ""
+
+#: translation.js:134
+msgid "XOR logic gate 6 inputs"
+msgstr "Puerta lógica XOR de 6 entradas"
+
+#: translation.js:135 translation.js:851 translation.js:862 translation.js:873
+msgid "XOR_2"
+msgstr ""
+
+#: translation.js:136
+msgid "XOR logic gate 2 inputs"
+msgstr "Puerta lógica XOR de 2 entradas"
+
+#: translation.js:137
+msgid "XOR_3"
+msgstr ""
+
+#: translation.js:138
+msgid "XOR logic gate 3 inputs"
+msgstr "Puerta lógica XOR de 3 entradas"
+
+#: translation.js:139
+msgid "XOR_7"
+msgstr ""
+
+#: translation.js:140
+msgid "XOR logic gate 7 inputs"
+msgstr "Puerta lógica XOR de 7 entradas"
+
+#: translation.js:141
+msgid "XOR_5"
+msgstr ""
+
+#: translation.js:142
+msgid "XOR logic gate 5 inputs"
+msgstr "Puerta lógica XOR de 5 entradas"
+
+#: translation.js:143 translation.js:853 translation.js:864 translation.js:875
+msgid "XOR_4"
+msgstr ""
+
+#: translation.js:144
+msgid "XOR logic gate 4 inputs"
+msgstr "Puerta lógica XOR de 4 entradas"
+
+#: translation.js:145 translation.js:857 translation.js:868 translation.js:879
+msgid "XOR_8"
+msgstr ""
+
+#: translation.js:146
+msgid "XOR logic gate 8 inputs"
+msgstr "Puerta lógica XOR de 8 entradas"
+
+#: translation.js:147 translation.js:937
+msgid "NAND"
+msgstr ""
+
+#: translation.js:148
+msgid "NAND_5"
+msgstr ""
+
+#: translation.js:149
+msgid "NAND logic gate 5 inputs"
+msgstr "Puerta lógica NAND de 5 entradas"
+
+#: translation.js:150
+msgid "NAND_6"
+msgstr ""
+
+#: translation.js:151
+msgid "NAND logic gate 6 inputs"
+msgstr "Puerta lógica NAND de 6 entradas"
+
+#: translation.js:152
+msgid "NAND_3"
+msgstr ""
+
+#: translation.js:153
+msgid "NAND logic gate 3 inputs"
+msgstr "Puerta lógica NAND de 3 entradas"
+
+#: translation.js:154 translation.js:941 translation.js:952
+msgid "NAND_4"
+msgstr ""
+
+#: translation.js:155
+msgid "NAND logic gate 4 inputs"
+msgstr "Puerta lógica NAND de 4 entradas"
+
+#: translation.js:156 translation.js:943 translation.js:954
+msgid "NAND_2"
+msgstr ""
+
+#: translation.js:157
+msgid "NAND logic gate 2 inputs"
+msgstr "Puerta lógica NAND de 2 entradas"
+
+#: translation.js:158
+msgid "NAND_7"
+msgstr ""
+
+#: translation.js:159
+msgid "NAND logic gate 7 inputs"
+msgstr "Puerta lógica NAND de 7 entradas"
+
+#: translation.js:160 translation.js:945 translation.js:956
+msgid "NAND_8"
+msgstr ""
+
+#: translation.js:161
+msgid "NAND logic gate 8 inputs"
+msgstr "Puerta lógica NAND de 8 entradas"
+
+#: translation.js:162 translation.js:972
+msgid "XNOR"
+msgstr ""
+
+#: translation.js:163
+msgid "XNOR_3"
+msgstr ""
+
+#: translation.js:164
+msgid "XNOR logic gate 3 inputs"
+msgstr "Puerta lógica XNOR de 3 entradas"
+
+#: translation.js:165
+msgid "XNOR_7"
+msgstr ""
+
+#: translation.js:166
+msgid "XNOR logic gate 7 inputs"
+msgstr "Puerta lógica XNOR de 7 entradas"
+
+#: translation.js:167 translation.js:974 translation.js:985
+msgid "XNOR_4"
+msgstr ""
+
+#: translation.js:168
+msgid "XNOR logic gate 4 inputs"
+msgstr "Puerta lógica XNOR de 4 entradas"
+
+#: translation.js:169
+msgid "XNOR_6"
+msgstr ""
+
+#: translation.js:170
+msgid "XNOR logic gate 6 inputs"
+msgstr "Puerta lógica XNOR de 6 entradas"
+
+#: translation.js:171 translation.js:978 translation.js:989
+msgid "XNOR_8"
+msgstr ""
+
+#: translation.js:172
+msgid "XNOR logic gate 8 inputs"
+msgstr "Puerta lógica XNOR de 8 entradas"
+
+#: translation.js:173 translation.js:980 translation.js:991
+msgid "XNOR_2"
+msgstr ""
+
+#: translation.js:174
+msgid "XNOR logic gate 2 inputs"
+msgstr "Puerta lógica XNOR de 2 entradas"
+
+#: translation.js:175
+msgid "XNOR_5"
+msgstr ""
+
+#: translation.js:176
+msgid "XNOR logic gate 5 inputs"
+msgstr "Puerta lógica XNOR de 5 entradas"
+
+#: translation.js:177
+msgid "Const"
+msgstr ""
+
+#: translation.js:178 translation.js:411 translation.js:731
+msgid "Bus"
+msgstr ""
+
+#: translation.js:179
+msgid "1s"
+msgstr ""
+
+#: translation.js:180
+msgid "Valor_1s_8_bits"
+msgstr ""
+
+#: translation.js:181
+msgid "Valor constante de unos para bus de 8 bits"
+msgstr ""
+
+#: translation.js:182
+msgid "Valor_1s_4_bits"
+msgstr ""
+
+#: translation.js:183
+msgid "Valor constante de unos para bus de 4 bits"
+msgstr ""
+
+#: translation.js:184
+msgid "Valor_1s_16_bits"
+msgstr ""
+
+#: translation.js:185
+msgid "Valor constante de unos para bus de 16 bits"
+msgstr ""
+
+#: translation.js:186
+msgid "Valor_1s_32_bits"
+msgstr ""
+
+#: translation.js:187
+msgid "Valor constante de unos para bus de 32 bits"
+msgstr ""
+
+#: translation.js:188
+msgid "Valor_1s_2_bits"
+msgstr ""
+
+#: translation.js:189
+msgid "Valor constante de unos para bus de 2 bits"
+msgstr ""
+
+#: translation.js:190
+msgid "Val"
+msgstr ""
+
+#: translation.js:191
+msgid "Const_16_bits"
+msgstr ""
+
+#: translation.js:192
+msgid "Valor constante para bus de 16 bits"
+msgstr ""
+
+#: translation.js:193
+msgid "Const_32_bits"
+msgstr ""
+
+#: translation.js:194
+msgid "Valor constante para bus de 32 bits"
+msgstr ""
+
+#: translation.js:195
+msgid "Const_8_bits"
+msgstr ""
+
+#: translation.js:196
+msgid "Valor constante para bus de 8 bits"
+msgstr ""
+
+#: translation.js:197
+msgid "Const_4_bits"
+msgstr ""
+
+#: translation.js:198
+msgid "Valor constante para bus de 4 bits"
+msgstr ""
+
+#: translation.js:199
+msgid "Const_2_bits"
+msgstr ""
+
+#: translation.js:200
+msgid "Valor constante para bus de 2 bits"
+msgstr ""
+
+#: translation.js:201 translation.js:217
+msgid "0"
+msgstr ""
+
+#: translation.js:202
+msgid "Valor_0_2_bits"
+msgstr ""
+
+#: translation.js:203
+msgid "Valor constante 0 para bus de 2 bits"
+msgstr ""
+
+#: translation.js:204
+msgid "Valor_0_32_bits"
+msgstr ""
+
+#: translation.js:205
+msgid "Valor constante 0 para bus de 32 bits"
+msgstr ""
+
+#: translation.js:206
+msgid "Valor_0_8_bits"
+msgstr ""
+
+#: translation.js:207
+msgid "Valor constante 0 para bus de 8 bits"
+msgstr ""
+
+#: translation.js:208
+msgid "Valor_0_16_bits"
+msgstr ""
+
+#: translation.js:209
+msgid "Valor constante 0 para bus de 16 bits"
+msgstr ""
+
+#: translation.js:210
+msgid "Valor_0_4_bits"
+msgstr ""
+
+#: translation.js:211
+msgid "Valor constante 0 para bus de 4 bits"
+msgstr ""
+
+#: translation.js:212
+msgid "Bit"
+msgstr ""
+
+#: translation.js:213
+msgid "0-torch"
+msgstr "0 antorcha"
+
+#: translation.js:214
+msgid "Un bit constante a 0"
+msgstr ""
+
+#: translation.js:215
+msgid "1-torch"
+msgstr "1 antorcha"
+
+#: translation.js:216
+msgid "Un bit constante a 1"
+msgstr ""
+
+#: translation.js:218
+msgid "Assign 0 to the output wire"
+msgstr "Asignar 0 al cable de salida"
+
+#: translation.js:219
+msgid "1"
+msgstr ""
+
+#: translation.js:220
+msgid "Assign 1 to the output wire"
+msgstr "Asignar 1 al cable de salida"
+
+#: translation.js:221
+msgid "Varios"
+msgstr ""
+
+#: translation.js:222
+msgid "Registros"
+msgstr ""
+
+#: translation.js:223
+msgid "Universal"
+msgstr ""
+
+#: translation.js:224 translation.js:252 translation.js:281 translation.js:330
+#: translation.js:996 translation.js:1086 translation.js:1138
+msgid "Simple"
+msgstr ""
+
+#: translation.js:225
+msgid "Reg_Universal_32_Simple"
+msgstr ""
+
+#: translation.js:226
+msgid ""
+"Registro de desplazamiento universal de 32 bits con enable, carga paralela y "
+"desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:227
+msgid "Reg_Universal_3_Simple"
+msgstr ""
+
+#: translation.js:228
+msgid ""
+"Registro de desplazamiento universal de 3 bits con enable, carga paralela y "
+"desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:229
+msgid "Reg_Universal_16_Simple"
+msgstr ""
+
+#: translation.js:230
+msgid ""
+"Registro de desplazamiento universal de 16 bits con enable, carga paralela y "
+"desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:231
+msgid "Reg_Universal_4_Simple"
+msgstr ""
+
+#: translation.js:232
+msgid ""
+"Registro de desplazamiento universal de 4 bits con enable, carga paralela y "
+"desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:233
+msgid "Reg_Universal_8_Simple"
+msgstr ""
+
+#: translation.js:234
+msgid ""
+"Registro de desplazamiento universal de 8 bits con enable, carga paralela y "
+"desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:235 translation.js:292 translation.js:305 translation.js:341
+#: translation.js:1126 translation.js:1154
+msgid "Completo"
+msgstr ""
+
+#: translation.js:236
+msgid "Reg_Universal_8_Completo"
+msgstr ""
+
+#: translation.js:237
+msgid ""
+"Registro de desplazamiento universal de 8 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:238
+msgid "Reg_Universal_9_Completo"
+msgstr ""
+
+#: translation.js:239
+msgid ""
+"Registro de desplazamiento universal de 9 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:240
+msgid "Reg_Universal_3_Completo"
+msgstr ""
+
+#: translation.js:241
+msgid ""
+"Registro de desplazamiento universal de 3 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:242
+msgid "Reg_Universal_32_Completo"
+msgstr ""
+
+#: translation.js:243
+msgid ""
+"Registro de desplazamiento universal de 32 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:244
+msgid "Reg_Universal_4_Completo"
+msgstr ""
+
+#: translation.js:245
+msgid ""
+"Registro de desplazamiento universal de 4 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:246
+msgid "Reg_Universal_2_Completo"
+msgstr ""
+
+#: translation.js:247
+msgid ""
+"Registro de desplazamiento universal de 2 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:248
+msgid "Reg_Universal_10_Completo"
+msgstr ""
+
+#: translation.js:249
+msgid ""
+"Registro de desplazamiento universal de 10 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:250
+msgid "Reg_Universal_16_Completo"
+msgstr ""
+
+#: translation.js:251
+msgid ""
+"Registro de desplazamiento universal de 16 bits con reset, enable, carga "
+"paralela y desplazamiento bidireccional"
+msgstr ""
+
+#: translation.js:253
+msgid "Reg_1_Simple"
+msgstr ""
+
+#: translation.js:254
+msgid "Registro de 1 bits simplificado"
+msgstr ""
+
+#: translation.js:255
+msgid "Reg_2_Simple"
+msgstr ""
+
+#: translation.js:256
+msgid "Registro de 2 bits simplificado"
+msgstr ""
+
+#: translation.js:257
+msgid "Reg_8_Simple"
+msgstr ""
+
+#: translation.js:258
+msgid "Registro de 8 bits simplificado"
+msgstr ""
+
+#: translation.js:259
+msgid "Reg_16_Simple"
+msgstr ""
+
+#: translation.js:260
+msgid "Registro de 16 bits simplificado"
+msgstr ""
+
+#: translation.js:261
+msgid "Reg_32_Simple"
+msgstr ""
+
+#: translation.js:262
+msgid "Registro de 32 bits simplificado"
+msgstr ""
+
+#: translation.js:263
+msgid "Reg_4_Simple"
+msgstr ""
+
+#: translation.js:264
+msgid "Registro de 4 bits simplificado"
+msgstr ""
+
+#: translation.js:265
+msgid "Derecha"
+msgstr ""
+
+#: translation.js:266 translation.js:319
+msgid "Ena_Rst"
+msgstr ""
+
+#: translation.js:267
+msgid "Desp_Derecha_2_Ena_Rst"
+msgstr ""
+
+#: translation.js:268
+msgid "Registro de desplazamiento a derecha de 2 bits con reset y enable"
+msgstr ""
+
+#: translation.js:269
+msgid "Desp_Derecha_8_Ena_Rst"
+msgstr ""
+
+#: translation.js:270
+msgid "Registro de desplazamiento a derecha de 8 bits con reset y enable"
+msgstr ""
+
+#: translation.js:271
+msgid "Desp_Derecha_9_Ena_Rst"
+msgstr ""
+
+#: translation.js:272
+msgid "Registro de desplazamiento a derecha de 9 bits con reset y enable"
+msgstr ""
+
+#: translation.js:273
+msgid "Desp_Derecha_32_Ena_Rst"
+msgstr ""
+
+#: translation.js:274
+msgid "Registro de desplazamiento a derecha de 32 bits con reset y enable"
+msgstr ""
+
+#: translation.js:275
+msgid "Desp_Derecha_4_Ena_Rst"
+msgstr ""
+
+#: translation.js:276
+msgid "Registro de desplazamiento a derecha de 4 bits con reset y enable"
+msgstr ""
+
+#: translation.js:277
+msgid "Desp_Derecha_3_Ena_Rst"
+msgstr ""
+
+#: translation.js:278
+msgid "Registro de desplazamiento a derecha de 3 bits con reset y enable"
+msgstr ""
+
+#: translation.js:279
+msgid "Desp_Derecha_16_Ena_Rst"
+msgstr ""
+
+#: translation.js:280
+msgid "Registro de desplazamiento a derecha de 16 bits con reset y enable"
+msgstr ""
+
+#: translation.js:282
+msgid "Desp_Derecha_4_Simple"
+msgstr ""
+
+#: translation.js:283
+msgid "Registro de desplazamiento a derecha de 4 bits"
+msgstr ""
+
+#: translation.js:284
+msgid "Desp_Derecha_8_Simple"
+msgstr ""
+
+#: translation.js:285
+msgid "Registro de desplazamiento a derecha de 8 bits"
+msgstr ""
+
+#: translation.js:286
+msgid "Desp_Derecha_16_Simple"
+msgstr ""
+
+#: translation.js:287
+msgid "Registro de desplazamiento a derecha de 16 bits"
+msgstr ""
+
+#: translation.js:288
+msgid "Desp_Derecha_32_Simple"
+msgstr ""
+
+#: translation.js:289
+msgid "Registro de desplazamiento a derecha de 32 bits"
+msgstr ""
+
+#: translation.js:290
+msgid "Desp_Derecha_3_Simple"
+msgstr ""
+
+#: translation.js:291
+msgid "Registro de desplazamiento a derecha de 3 bits"
+msgstr ""
+
+#: translation.js:293
+msgid "Desp_Derecha_8_Completo"
+msgstr ""
+
+#: translation.js:294
+msgid ""
+"Registro de desplazamiento a derecha de 8 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:295
+msgid "Desp_Derecha_32_Completo"
+msgstr ""
+
+#: translation.js:296
+msgid ""
+"Registro de desplazamiento a derecha de 32 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:297
+msgid "Desp_Derecha_10_Completo"
+msgstr ""
+
+#: translation.js:298
+msgid ""
+"Registro de desplazamiento a derecha de 10 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:299
+msgid "Desp_Derecha_3_Completo"
+msgstr ""
+
+#: translation.js:300
+msgid ""
+"Registro de desplazamiento a derecha de 3 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:301
+msgid "Desp_Derecha_16_Completo"
+msgstr ""
+
+#: translation.js:302
+msgid ""
+"Registro de desplazamiento a derecha de 16 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:303
+msgid "Desp_Derecha_4_Completo"
+msgstr ""
+
+#: translation.js:304
+msgid ""
+"Registro de desplazamiento a derecha de 4 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:306
+msgid "Reg_1_Completo"
+msgstr ""
+
+#: translation.js:307
+msgid "Registro de 1 bits con reset, enable y valor inicial "
+msgstr ""
+
+#: translation.js:308
+msgid "Reg_4_Completo"
+msgstr ""
+
+#: translation.js:309
+msgid "Registro de 4 bits con reset, enable y valor inicial "
+msgstr ""
+
+#: translation.js:310
+msgid "Reg_16_Completo"
+msgstr ""
+
+#: translation.js:311
+msgid "Registro de 16 bits con reset, enable y valor inicial "
+msgstr ""
+
+#: translation.js:312
+msgid "Reg_32_Completo"
+msgstr ""
+
+#: translation.js:313
+msgid "Registro de 32 bits con reset, enable y valor inicial "
+msgstr ""
+
+#: translation.js:314
+msgid "Reg_2_Completo"
+msgstr ""
+
+#: translation.js:315
+msgid "Registro de 2 bits con reset, enable y valor inicial "
+msgstr ""
+
+#: translation.js:316
+msgid "Reg_8_Completo"
+msgstr ""
+
+#: translation.js:317
+msgid "Registro de 8 bits con reset, enable y valor inicial "
+msgstr ""
+
+#: translation.js:318
+msgid "Izquierda"
+msgstr ""
+
+#: translation.js:320
+msgid "Desp_Izquierda_3_Ena_Rst"
+msgstr ""
+
+#: translation.js:321 translation.js:343
+msgid ""
+"Registro de desplazamiento a izquierda de 3 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:322
+msgid "Desp_Izquierda_32_Ena_Rst"
+msgstr ""
+
+#: translation.js:323 translation.js:347
+msgid ""
+"Registro de desplazamiento a izquierda de 32 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:324
+msgid "Desp_Izquierda_4_Ena_Rst"
+msgstr ""
+
+#: translation.js:325 translation.js:351
+msgid ""
+"Registro de desplazamiento a izquierda de 4 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:326
+msgid "Desp_Izquierda_8_Ena_Rst"
+msgstr ""
+
+#: translation.js:327 translation.js:349
+msgid ""
+"Registro de desplazamiento a izquierda de 8 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:328
+msgid "Desp_Izquierda_16_Ena_Rst"
+msgstr ""
+
+#: translation.js:329 translation.js:345
+msgid ""
+"Registro de desplazamiento a izquierda de 16 bits con reset, enable y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:331
+msgid "Desp_Izquierda_16_Simple"
+msgstr ""
+
+#: translation.js:332
+msgid "Registro de desplazamiento a izquierda de 16 bits"
+msgstr ""
+
+#: translation.js:333
+msgid "Desp_Izquierda_8_Simple"
+msgstr ""
+
+#: translation.js:334
+msgid "Registro de desplazamiento a izquierda de 8 bits"
+msgstr ""
+
+#: translation.js:335
+msgid "Desp_Izquierda_32_Simple"
+msgstr ""
+
+#: translation.js:336
+msgid "Registro de desplazamiento a izquierda de 32 bits"
+msgstr ""
+
+#: translation.js:337
+msgid "Desp_Izquierda_3_Simple"
+msgstr ""
+
+#: translation.js:338
+msgid "Registro de desplazamiento a izquierda de 3 bits"
+msgstr ""
+
+#: translation.js:339
+msgid "Desp_Izquierda_4_Simple"
+msgstr ""
+
+#: translation.js:340
+msgid "Registro de desplazamiento a izquierda de 4 bits"
+msgstr ""
+
+#: translation.js:342
+msgid "Desp_Izquierda_3_Completo"
+msgstr ""
+
+#: translation.js:344
+msgid "Desp_Izquierda_16_Completo"
+msgstr ""
+
+#: translation.js:346
+msgid "Desp_Izquierda_32_Completo"
+msgstr ""
+
+#: translation.js:348
+msgid "Desp_Izquierda_8_Completo"
+msgstr ""
+
+#: translation.js:350
+msgid "Desp_Izquierda_4_Completo"
+msgstr ""
+
+#: translation.js:352
+msgid "Comunicación"
+msgstr ""
+
+#: translation.js:353
+msgid "PS2"
+msgstr ""
+
+#: translation.js:354
+msgid "RX_PS2"
+msgstr ""
+
+#: translation.js:355
+msgid "Receptor PS/2"
+msgstr ""
+
+#: translation.js:356
+msgid ""
+"Los sincronizadores\n"
+"reducen el riesgo\n"
+"de metaestabilidad."
+msgstr ""
+
+#: translation.js:357
+msgid ""
+"Los datos se muestrean\n"
+"en el flanco descendente\n"
+"del reloj."
+msgstr ""
+
+#: translation.js:358
+msgid "8 bits de datos"
+msgstr ""
+
+#: translation.js:359
+msgid "1 bit de paridad"
+msgstr ""
+
+#: translation.js:360
+msgid ""
+"El flip-flop D junto con\n"
+"el registro de 8 bits\n"
+"forman uno de 9 bits."
+msgstr ""
+
+#: translation.js:361
+msgid ""
+"Cálculo de la paridad\n"
+"impar (XNOR de los 9 bits)"
+msgstr ""
+
+#: translation.js:362
+msgid ""
+"En total son 11 bits:\n"
+"<ul><li>1 START</li><li>8 Datos</li><li>1 Paridad</li><li>1 STOP</li></ul>El "
+"contador cuenta de 0 a 10,\n"
+"por lo que es módulo 11.\n"
+"La señal de <b>rdy</b> se\n"
+"enciende justo antes que\n"
+"el bit de STOP ingrese al\n"
+"registro."
+msgstr ""
+
+#: translation.js:363
+msgid "Serie (RS-232)"
+msgstr ""
+
+#: translation.js:364
+msgid "RX_serie_115200"
+msgstr ""
+
+#: translation.js:365
+msgid "Receptor serie 8N1 115200"
+msgstr ""
+
+#: translation.js:366
+msgid "TX_serie_config"
+msgstr ""
+
+#: translation.js:367
+msgid "Transmisor serie de velocidad configurable"
+msgstr ""
+
+#: translation.js:368
+msgid ""
+"Al comenzar una\n"
+"transmisión el \n"
+"generador de tiempo\n"
+"se reinicia.\n"
+"Asegurando la \n"
+"duración del 1er bit."
+msgstr ""
+
+#: translation.js:369
+msgid "f<sub>reloj</sub>/baud_rate-1"
+msgstr ""
+
+#: translation.js:370
+msgid "RX_serie_config"
+msgstr ""
+
+#: translation.js:371
+msgid "Receptor serie de velocidad configurable"
+msgstr ""
+
+#: translation.js:372
+msgid ""
+"Al comenzar una\n"
+"recepción el \n"
+"generador de tiempo\n"
+"se reinicia.\n"
+"Se muestrea en medio\n"
+"de los bits, por esto\n"
+"es que trabajamos al\n"
+"doble de frecuencia."
+msgstr ""
+
+#: translation.js:373
+msgid "f<sub>reloj</sub>/(2*baud_rate)-1"
+msgstr ""
+
+#: translation.js:374
+msgid ""
+"  Este sincronizador es opcional.\n"
+"  Reduce la probabilidad de \n"
+"metaestabilidad."
+msgstr ""
+
+#: translation.js:375
+msgid "TX_serie_115200"
+msgstr ""
+
+#: translation.js:376
+msgid "Transmisor serie 8N1 115200"
+msgstr ""
+
+#: translation.js:377
+msgid "Soporte"
+msgstr ""
+
+#: translation.js:378
+msgid "Sync_x1"
+msgstr ""
+
+#: translation.js:379
+msgid "Sincronizador de una etapa"
+msgstr ""
+
+#: translation.js:380
+msgid "Detecta_Subida"
+msgstr ""
+
+#: translation.js:381
+msgid "Detector de flanco de subida simple"
+msgstr ""
+
+#: translation.js:382
+msgid "FSM_RX_simple"
+msgstr ""
+
+#: translation.js:383
+msgid "Máquina de estados de recepción"
+msgstr ""
+
+#: translation.js:384
+msgid ""
+"  El flip-flop arranca en 0. Por lo que su salida negada es 1 y estamos en "
+"el estado de IDLE.\n"
+"  La AND <b>1</b> se encarga de realizar la transición al estado RECEIVE.\n"
+"  Cuando la entrada <b>start</b> pasa a 1 esta AND lleva el flip-flop a 1.\n"
+"  Cuando el flip-flop está en 1 estamos en el estado de RECEIVE.\n"
+"  La señal de cuenta terminal (<b>tc</b>) se encarga de la transición al "
+"estado IDLE.\n"
+"  Normalmente es 0, que al pasar por el negador mantiene a la AND <b>2</b> "
+"habilitada. Al terminar\n"
+"la recepción pasa a 1 forzando a la AND <b>2</b> a 0, y por consiguiente se "
+"pasa al estado IDLE. \n"
+"  La AND <b>2</b> se encarga de retener el estado RECEIVE. Durante la "
+"recepción sus entradas son\n"
+"1, pasando i0 a 0 al terminar la recepción. Con lo cual volvemos al estado "
+"de IDLE."
+msgstr ""
+
+#: translation.js:385 translation.js:395
+msgid ""
+"<big>\n"
+"2\n"
+"</big>"
+msgstr ""
+
+#: translation.js:386 translation.js:396
+msgid ""
+"<big>\n"
+"1\n"
+"</big>"
+msgstr ""
+
+#: translation.js:387
+msgid ""
+"<big>\n"
+"3\n"
+"</big>"
+msgstr ""
+
+#: translation.js:388
+msgid "Sync_x2"
+msgstr ""
+
+#: translation.js:389
+msgid "Sincronizador de dos etapa"
+msgstr ""
+
+#: translation.js:390
+msgid "Detecta_Bajada"
+msgstr ""
+
+#: translation.js:391
+msgid "Detector de flanco de bajada simple"
+msgstr ""
+
+#: translation.js:392
+msgid "FSM_TX_simple"
+msgstr ""
+
+#: translation.js:393
+msgid "Máquina de estados de transmisión"
+msgstr ""
+
+#: translation.js:394
+msgid ""
+"  El flip-flop arranca en 0. Por lo que su salida negada es 1 y estamos en "
+"el estado de IDLE.\n"
+"  La AND <b>1</b> se encarga de realizar la transición al estado TRANSMIT.\n"
+"  Cuando la entrada <b>inicio</b> pasa a 1 esta AND lleva el flip-flop a 1.\n"
+"  Cuando el flip-flop está en 1 estamos en el estado de TRANSMIT.\n"
+"  La señal de cuenta terminal (<b>tc</b>) se encarga de la transición al "
+"estado IDLE.\n"
+"  Normalmente es 0, que al pasar por el negador mantiene a la AND <b>2</b> "
+"habilitada. Al terminar\n"
+"la transmisión pasa a 1 forzando a la AND <b>2</b> a 0, y por consiguiente "
+"se pasa al estado IDLE. \n"
+"  La AND <b>2</b> se encarga de retener el estado TRANSMIT. Durante la "
+"transmisión sus entradas son\n"
+"1, pasando i0 a 0 al terminar la transmisión. Con lo cual volvemos al estado "
+"de IDLE."
+msgstr ""
+
+#: translation.js:397
+msgid "TX_Serie_base"
+msgstr ""
+
+#: translation.js:398 translation.js:406
+msgid "Transmisor serie sin generador de baudate"
+msgstr ""
+
+#: translation.js:399
+msgid "Bit de stop"
+msgstr ""
+
+#: translation.js:400
+msgid "Bit de start"
+msgstr ""
+
+#: translation.js:401 translation.js:402
+msgid ""
+"El bus permanece\n"
+"en 1 cuando no\n"
+"se transmite"
+msgstr ""
+
+#: translation.js:403
+msgid ""
+"1 bit start +\n"
+"8 bits datos +\n"
+"1 bit stop = 10 bits"
+msgstr ""
+
+#: translation.js:404
+msgid ""
+"La OR habilita el\n"
+"registro para la\n"
+"carga paralela"
+msgstr ""
+
+#: translation.js:405
+msgid "RX_Serie_base"
+msgstr ""
+
+#: translation.js:407
+msgid ""
+"  ¿Por qué el contador es hasta 18?\n"
+"  Un dato son 10 bits: 1 bit start + 8 bits datos + 1 bit stop = 10 bits\n"
+"  Muestreamos al doble de frecuencia para poder muestrear el medio de los "
+"bits.\n"
+"  Cuando estamos en la mitad del bit de STOP ya podemos dar por concluida\n"
+"la recepción. Esto es 9 bits + 1/2 del de STOP. Y por esto es que son 19\n"
+"los pulsos necesarios (0 a 18)."
+msgstr ""
+
+#: translation.js:408
+msgid ""
+"  Ingresamos 1 bit cada 2 pulsos de <b>ena</b>, de esta manera\n"
+"muestreamos en el medio del bit.\n"
+"  Por eso usamos los valores pares del contador.\n"
+"  Los valores impares son las puntas del bit.\n"
+"  Tener en cuenta que al iniciar la recepción reseteamos el \n"
+"contador, por lo que durante la primer mitad del bit de START\n"
+"el contador es 0, y ese valor es par. El muestreo se hace al\n"
+"terminar ese medio bit."
+msgstr ""
+
+#: translation.js:409
+msgid ""
+"  El bit de <b>START</b> ingresa al\n"
+"registro, pero como sólo \n"
+"tiene 8 bits es desplazado\n"
+"afuera por los 8 bits de\n"
+"datos.\n"
+"  El bit de <b>STOP</b> ingresa\n"
+"al registro después del pulso\n"
+"de <b>rdy</b>, por lo que se supone\n"
+"que el usuario ya retiró el\n"
+"resultado."
+msgstr ""
+
+#: translation.js:410
+msgid "Codificadores"
+msgstr ""
+
+#: translation.js:412
+msgid "Codificador_4_2_Bus"
+msgstr ""
+
+#: translation.js:413
+msgid "Codificador de 4 entradas y 2 salidas (usando buses)"
+msgstr ""
+
+#: translation.js:414 translation.js:419 translation.js:424 translation.js:429
+#: translation.js:434
+msgid "2<sup>N</sup> entradas"
+msgstr ""
+
+#: translation.js:415 translation.js:420 translation.js:425 translation.js:430
+#: translation.js:435
+msgid ""
+"N salidas\n"
+"Indica cuál entrada es 1\n"
+"Las más pesadas tienen prioridad"
+msgstr ""
+
+#: translation.js:416 translation.js:421 translation.js:426 translation.js:431
+#: translation.js:436
+msgid ""
+"Salida de grupo\n"
+"Indica que al menos una \n"
+"entrada es 1\n"
+"Permite distinguir el caso\n"
+"en que ninguna entrada sea 1\n"
+msgstr ""
+
+#: translation.js:417
+msgid "Codificador_32_5_Bus"
+msgstr ""
+
+#: translation.js:418
+msgid "Codificador de 32 entradas y 5 salidas (usando buses)"
+msgstr ""
+
+#: translation.js:422
+msgid "Codificador_2_1_Bus"
+msgstr ""
+
+#: translation.js:423
+msgid "Codificador de 2 entradas y 1 salidas (usando buses)"
+msgstr ""
+
+#: translation.js:427
+msgid "Codificador_8_3_Bus"
+msgstr ""
+
+#: translation.js:428
+msgid "Codificador de 8 entradas y 3 salidas (usando buses)"
+msgstr ""
+
+#: translation.js:432
+msgid "Codificador_16_4_Bus"
+msgstr ""
+
+#: translation.js:433
+msgid "Codificador de 16 entradas y 4 salidas (usando buses)"
+msgstr ""
+
+#: translation.js:437 translation.js:961
+msgid "Wires"
+msgstr "Cables"
+
+#: translation.js:438
+msgid "Codificador_32_5"
+msgstr ""
+
+#: translation.js:439
+msgid "Codificador de 32 entradas y 5 salidas"
+msgstr ""
+
+#: translation.js:440
+msgid "Codificador_8_3"
+msgstr ""
+
+#: translation.js:441
+msgid "Codificador de 8 entradas y 3 salidas"
+msgstr ""
+
+#: translation.js:442
+msgid "Codificador_4_2"
+msgstr ""
+
+#: translation.js:443
+msgid "Codificador de 4 entradas y 2 salidas"
+msgstr ""
+
+#: translation.js:444
+msgid "Codificador_16_4"
+msgstr ""
+
+#: translation.js:445
+msgid "Codificador de 16 entradas y 4 salidas"
+msgstr ""
+
+#: translation.js:446
+msgid "Setup"
+msgstr ""
+
+#: translation.js:447
+msgid "Tri-state"
+msgstr ""
+
+#: translation.js:448
+msgid "Tri-state logic block"
+msgstr ""
+
+#: translation.js:449
+msgid "Pull-up"
+msgstr ""
+
+#: translation.js:450
+msgid "FPGA internal pull-up configuration on the connected input port"
+msgstr "Resistencia de pull-up interna de la FPGA en el pin de entrada"
+
+#: translation.js:451
+msgid "Multiplexores"
+msgstr ""
+
+#: translation.js:452
+msgid "2 canales"
+msgstr ""
+
+#: translation.js:453
+msgid "Mux2_32"
+msgstr ""
+
+#: translation.js:454
+msgid "Multiplexor de 2 a 1 de buses de 32 bits"
+msgstr ""
+
+#: translation.js:455
+msgid "Mux2_8"
+msgstr ""
+
+#: translation.js:456
+msgid "Multiplexor de 2 a 1 de buses de 8 bits"
+msgstr ""
+
+#: translation.js:457
+msgid "Mux2_2"
+msgstr ""
+
+#: translation.js:458
+msgid "Multiplexor de 2 a 1 de buses de 2 bits"
+msgstr ""
+
+#: translation.js:459
+msgid "Mux2_16"
+msgstr ""
+
+#: translation.js:460
+msgid "Multiplexor de 2 a 1 de buses de 16 bits"
+msgstr ""
+
+#: translation.js:461
+msgid "Mux2_1"
+msgstr ""
+
+#: translation.js:462
+msgid "Multiplexor de 2 a 1 de buses de 1 bits"
+msgstr ""
+
+#: translation.js:463
+msgid "Mux2_4"
+msgstr ""
+
+#: translation.js:464
+msgid "Multiplexor de 2 a 1 de buses de 4 bits"
+msgstr ""
+
+#: translation.js:465
+msgid "4 canales"
+msgstr ""
+
+#: translation.js:466
+msgid "Mux4_2"
+msgstr ""
+
+#: translation.js:467
+msgid "Multiplexor de 4 a 1 de buses de 2 bits"
+msgstr ""
+
+#: translation.js:468
+msgid "Mux4_1"
+msgstr ""
+
+#: translation.js:469
+msgid "Multiplexor de 4 a 1 de buses de 1 bits"
+msgstr ""
+
+#: translation.js:470
+msgid "Mux4_8"
+msgstr ""
+
+#: translation.js:471
+msgid "Multiplexor de 4 a 1 de buses de 8 bits"
+msgstr ""
+
+#: translation.js:472
+msgid "Mux4_16"
+msgstr ""
+
+#: translation.js:473
+msgid "Multiplexor de 4 a 1 de buses de 16 bits"
+msgstr ""
+
+#: translation.js:474
+msgid "Mux4_4"
+msgstr ""
+
+#: translation.js:475
+msgid "Multiplexor de 4 a 1 de buses de 4 bits"
+msgstr ""
+
+#: translation.js:476
+msgid "Mux4_32"
+msgstr ""
+
+#: translation.js:477
+msgid "Multiplexor de 4 a 1 de buses de 32 bits"
+msgstr ""
+
+#: translation.js:478
+msgid "8 canales"
+msgstr ""
+
+#: translation.js:479
+msgid "Mux8_32"
+msgstr ""
+
+#: translation.js:480
+msgid "Multiplexor de 8 a 1 de buses de 32 bits"
+msgstr ""
+
+#: translation.js:481
+msgid "Mux8_8"
+msgstr ""
+
+#: translation.js:482
+msgid "Multiplexor de 8 a 1 de buses de 8 bits"
+msgstr ""
+
+#: translation.js:483
+msgid "Mux8_2"
+msgstr ""
+
+#: translation.js:484
+msgid "Multiplexor de 8 a 1 de buses de 2 bits"
+msgstr ""
+
+#: translation.js:485
+msgid "Mux8_16"
+msgstr ""
+
+#: translation.js:486
+msgid "Multiplexor de 8 a 1 de buses de 16 bits"
+msgstr ""
+
+#: translation.js:487
+msgid "Mux8_1"
+msgstr ""
+
+#: translation.js:488
+msgid "Multiplexor de 8 a 1 de buses de 1 bits"
+msgstr ""
+
+#: translation.js:489
+msgid "Mux8_4"
+msgstr ""
+
+#: translation.js:490
+msgid "Multiplexor de 8 a 1 de buses de 4 bits"
+msgstr ""
+
+#: translation.js:491
+msgid "Contadores"
+msgstr ""
+
+#: translation.js:492
+msgid "Prescaler"
+msgstr ""
+
+#: translation.js:493
+msgid "PrescalerN"
+msgstr ""
+
+#: translation.js:494
+msgid "Divide la frecuencia del enable por la potencia N+1 de 2"
+msgstr ""
+
+#: translation.js:495
+msgid "PrescalerN_simple"
+msgstr ""
+
+#: translation.js:496
+msgid "Divisor de frecuencia por la potencia N+1 de 2, versión simple"
+msgstr ""
+
+#: translation.js:497
+msgid "Asc_Desc"
+msgstr ""
+
+#: translation.js:498 translation.js:513
+msgid "BCD Natural"
+msgstr ""
+
+#: translation.js:499
+msgid "Contador_BCD_Completo_UD"
+msgstr ""
+
+#: translation.js:500
+msgid ""
+"Contador BCD Natural des/ascendente con habilitación, reset y carga paralela"
+msgstr ""
+
+#: translation.js:501
+msgid "Contador_BCD_Simple_UD"
+msgstr ""
+
+#: translation.js:502
+msgid "Contador BCD Natural des/ascendente con reset"
+msgstr ""
+
+#: translation.js:503
+msgid "Contador_BCD_Simple_Enable_UD"
+msgstr ""
+
+#: translation.js:504
+msgid "Contador BCD des/ascendente con enable y reset"
+msgstr ""
+
+#: translation.js:505 translation.js:520
+msgid "32 bits"
+msgstr ""
+
+#: translation.js:506
+msgid "Contador_Simple_Enable_32_UD"
+msgstr ""
+
+#: translation.js:507
+msgid "Contador de hasta 32 bits des/ascedente con inicio, fin, reset y enable"
+msgstr ""
+
+#: translation.js:508
+msgid "Contador_Completo_32_UD"
+msgstr ""
+
+#: translation.js:509
+msgid ""
+"Contador de hasta 32 bits des/ascendente, con inicio, fin, reset y carga "
+"paralela"
+msgstr ""
+
+#: translation.js:510
+msgid "Contador_Simple_32_UD"
+msgstr ""
+
+#: translation.js:511
+msgid "Contador de hasta 32 bits des/ascendente, con inicio, fin y reset"
+msgstr ""
+
+#: translation.js:512
+msgid "Ascendente"
+msgstr ""
+
+#: translation.js:514
+msgid "Contador_BCD_Simple_Enable"
+msgstr ""
+
+#: translation.js:515
+msgid "Contador BCD con enable y reset"
+msgstr ""
+
+#: translation.js:516
+msgid "Contador_BCD_Simple"
+msgstr ""
+
+#: translation.js:517
+msgid "Contador BCD Natural con reset"
+msgstr ""
+
+#: translation.js:518
+msgid "Contador_BCD_Completo"
+msgstr ""
+
+#: translation.js:519
+msgid "Contador BCD Natural con habilitación, reset y carga paralela"
+msgstr ""
+
+#: translation.js:521
+msgid "Contador_Simple_Enable_32"
+msgstr ""
+
+#: translation.js:522
+msgid "Contador de hasta 32 bits con inicio, fin, reset y enable"
+msgstr ""
+
+#: translation.js:523
+msgid "Contador_Completo_32"
+msgstr ""
+
+#: translation.js:524
+msgid "Contador de hasta 32 bits con inicio, fin, reset y carga paralela"
+msgstr ""
+
+#: translation.js:525
+msgid "Contador_Simple_32"
+msgstr ""
+
+#: translation.js:526
+msgid "Contador de hasta 32 bits con inicio, fin y reset"
+msgstr ""
+
+#: translation.js:527
+msgid "Buses"
+msgstr ""
+
+#: translation.js:529
+msgid "NOT_4"
+msgstr ""
+
+#: translation.js:530
+msgid "NOT logic gate for a 4 bits bus"
+msgstr "Puerta lógica NOT para un bus de 4 bits"
+
+#: translation.js:531
+msgid "NOT_16"
+msgstr ""
+
+#: translation.js:532
+msgid "NOT logic gate for a 16 bits bus"
+msgstr "Puerta lógica NOT para un bus de 16 bits"
+
+#: translation.js:533
+msgid "NOT_8"
+msgstr ""
+
+#: translation.js:534
+msgid "NOT logic gate for a 8 bits bus"
+msgstr "Puerta lógica NOT para un bus de 8 bits"
+
+#: translation.js:535
+msgid "NOT_32"
+msgstr ""
+
+#: translation.js:536
+msgid "NOT logic gate for a 32 bits bus"
+msgstr "Puerta lógica NOT para un bus de 32 bits"
+
+#: translation.js:537
+msgid "NOT_2"
+msgstr ""
+
+#: translation.js:538
+msgid "NOT logic gate for a 2 bits bus"
+msgstr "Puerta lógica NOT para un bus de 2 bits"
+
+#: translation.js:540 translation.js:574 translation.js:608 translation.js:848
+#: translation.js:938 translation.js:973
+msgid "bus_out"
+msgstr ""
+
+#: translation.js:542
+msgid "AND logic gate for two 2 bits buses"
+msgstr "Puerta lógica AND para dos buses de 2 bits"
+
+#: translation.js:544
+msgid "AND logic gate for two 4 bits buses"
+msgstr "Puerta lógica AND para dos buses de 4 bits"
+
+#: translation.js:545 translation.js:556 translation.js:567
+msgid "AND_32"
+msgstr ""
+
+#: translation.js:546
+msgid "AND logic gate for two 32 bits buses"
+msgstr "Puerta lógica AND para dos buses de 32 bits"
+
+#: translation.js:547 translation.js:558 translation.js:569
+msgid "AND_16"
+msgstr ""
+
+#: translation.js:548
+msgid "AND logic gate for two 16 bits buses"
+msgstr "Puerta lógica AND para dos buses de 16 bits"
+
+#: translation.js:550
+msgid "AND logic gate for two 8 bits buses"
+msgstr "Puerta lógica AND para dos buses de 8 bits"
+
+#: translation.js:551 translation.js:585 translation.js:619 translation.js:859
+#: translation.js:949 translation.js:984
+msgid "1_out"
+msgstr "1 salida"
+
+#: translation.js:553
+msgid "AND logic gate for a 2 bits bus"
+msgstr "Puerta lógica AND para un bus de 2 bits"
+
+#: translation.js:555
+msgid "AND logic gate for a 4 bits bus"
+msgstr "Puerta lógica AND para un bus de 4 bits"
+
+#: translation.js:557
+msgid "AND logic gate for a 32 bits bus"
+msgstr "Puerta lógica AND para un bus de 32 bits"
+
+#: translation.js:559
+msgid "AND logic gate for a 16 bits bus"
+msgstr "Puerta lógica AND para un bus de 16 bits"
+
+#: translation.js:561
+msgid "AND logic gate for a 8 bits bus"
+msgstr "Puerta lógica AND para un bus de 8 bits"
+
+#: translation.js:562 translation.js:596 translation.js:870
+msgid "1_to_all"
+msgstr "1 a todas"
+
+#: translation.js:564 translation.js:566 translation.js:568 translation.js:570
+#: translation.js:572
+msgid "Applies the AND between v and each member of i"
+msgstr "Aplica la AND entre v y cada miembro de i"
+
+#: translation.js:575 translation.js:586 translation.js:597
+msgid "OR_32"
+msgstr ""
+
+#: translation.js:576
+msgid "OR logic gate for two 32 bits buses"
+msgstr "Puerta lógica OR para dos buses de 32 bits"
+
+#: translation.js:577 translation.js:588 translation.js:599
+msgid "OR_16"
+msgstr ""
+
+#: translation.js:578
+msgid "OR logic gate for two 16 bits buses"
+msgstr "Puerta lógica OR para dos buses de 16 bits"
+
+#: translation.js:580
+msgid "OR logic gate for two 8 bits buses"
+msgstr "Puerta lógica OR para dos buses de 8 bits"
+
+#: translation.js:582
+msgid "OR logic gate for two 2 bits buses"
+msgstr "Puerta lógica OR para dos buses de 2 bits"
+
+#: translation.js:584
+msgid "OR logic gate for two 4 bits buses"
+msgstr "Puerta lógica OR para dos buses de 4 bits"
+
+#: translation.js:587
+msgid "OR logic gate for a 32 bits bus"
+msgstr "Puerta lógica OR para un bus de 32 bits"
+
+#: translation.js:589
+msgid "OR logic gate for a 16 bits bus"
+msgstr "Puerta lógica OR para un bus de 16 bits"
+
+#: translation.js:591
+msgid "OR logic gate for a 8 bits bus"
+msgstr "Puerta lógica OR para un bus de 8 bits"
+
+#: translation.js:593
+msgid "OR logic gate for a 2 bits bus"
+msgstr "Puerta lógica OR para un bus de 2 bits"
+
+#: translation.js:595
+msgid "OR logic gate for a 4 bits bus"
+msgstr "Puerta lógica OR para un bus de 4 bits"
+
+#: translation.js:598 translation.js:600 translation.js:602 translation.js:604
+#: translation.js:606
+msgid "Applies the OR between v and each member of i"
+msgstr "Aplica la OR entre v y cada miembro de i"
+
+#: translation.js:610
+msgid "NOR logic gate for two 4 bits buses"
+msgstr "Puerta lógica NOR para dos buses de 4 bits"
+
+#: translation.js:611 translation.js:622
+msgid "NOR_32"
+msgstr ""
+
+#: translation.js:612
+msgid "NOR logic gate for two 32 bits buses"
+msgstr "Puerta lógica NOR para dos buses de 32 bits"
+
+#: translation.js:613 translation.js:624
+msgid "NOR_16"
+msgstr ""
+
+#: translation.js:614
+msgid "NOR logic gate for two 16 bits buses"
+msgstr "Puerta lógica NOR para dos buses de 16 bits"
+
+#: translation.js:616
+msgid "NOR logic gate for two 8 bits buses"
+msgstr "Puerta lógica NOR para dos buses de 8 bits"
+
+#: translation.js:618
+msgid "NOR logic gate for two 2 bits buses"
+msgstr "Puerta lógica NOR para dos buses de 2 bits"
+
+#: translation.js:621
+msgid "NOR logic gate for a 4 bits bus"
+msgstr "Puerta lógica NOR para un bus de 4 bits"
+
+#: translation.js:623
+msgid "NOR logic gate for a 32 bits bus"
+msgstr "Puerta lógica NOR para un bus de 32 bits"
+
+#: translation.js:625
+msgid "NOR logic gate for a 16 bits bus"
+msgstr "Puerta lógica NOR para un bus de 16 bits"
+
+#: translation.js:627
+msgid "NOR logic gate for a 8 bits bus"
+msgstr "Puerta lógica NOR para un bus de 8 bits"
+
+#: translation.js:629
+msgid "NOR logic gate for a 2 bits bus"
+msgstr "Puerta lógica NOR para un bus de 2 bits"
+
+#: translation.js:630
+msgid "Separar"
+msgstr ""
+
+#: translation.js:631
+msgid "Split_wires"
+msgstr "Separar cables"
+
+#: translation.js:632
+msgid "Split_31"
+msgstr ""
+
+#: translation.js:633
+msgid "Separador de 1 bus de 31 bits a bits"
+msgstr ""
+
+#: translation.js:634
+msgid "Split_5"
+msgstr ""
+
+#: translation.js:635
+msgid "Separador de 1 bus de 5 bits a bits"
+msgstr ""
+
+#: translation.js:636
+msgid "Split_15"
+msgstr ""
+
+#: translation.js:637
+msgid "Separador de 1 bus de 15 bits a bits"
+msgstr ""
+
+#: translation.js:638
+msgid "Split_32"
+msgstr ""
+
+#: translation.js:639
+msgid "Separador de 1 bus de 32 bits a bits"
+msgstr ""
+
+#: translation.js:640
+msgid "Split_13"
+msgstr ""
+
+#: translation.js:641
+msgid "Separador de 1 bus de 13 bits a bits"
+msgstr ""
+
+#: translation.js:642
+msgid "Split_8"
+msgstr ""
+
+#: translation.js:643
+msgid "Separador de 1 bus de 8 bits a bits"
+msgstr ""
+
+#: translation.js:644
+msgid "Split_20"
+msgstr ""
+
+#: translation.js:645
+msgid "Separador de 1 bus de 20 bits a bits"
+msgstr ""
+
+#: translation.js:646
+msgid "Split_6"
+msgstr ""
+
+#: translation.js:647
+msgid "Separador de 1 bus de 6 bits a bits"
+msgstr ""
+
+#: translation.js:648
+msgid "Split_22"
+msgstr ""
+
+#: translation.js:649
+msgid "Separador de 1 bus de 22 bits a bits"
+msgstr ""
+
+#: translation.js:650
+msgid "Split_29"
+msgstr ""
+
+#: translation.js:651
+msgid "Separador de 1 bus de 29 bits a bits"
+msgstr ""
+
+#: translation.js:652
+msgid "Split_19"
+msgstr ""
+
+#: translation.js:653
+msgid "Separador de 1 bus de 19 bits a bits"
+msgstr ""
+
+#: translation.js:654
+msgid "Split_18"
+msgstr ""
+
+#: translation.js:655
+msgid "Separador de 1 bus de 18 bits a bits"
+msgstr ""
+
+#: translation.js:656
+msgid "Split_24"
+msgstr ""
+
+#: translation.js:657
+msgid "Separador de 1 bus de 24 bits a bits"
+msgstr ""
+
+#: translation.js:658
+msgid "Split_26"
+msgstr ""
+
+#: translation.js:659
+msgid "Separador de 1 bus de 26 bits a bits"
+msgstr ""
+
+#: translation.js:660 translation.js:701
+msgid "Split_2"
+msgstr ""
+
+#: translation.js:661
+msgid "Separador de 1 bus de 2 bits a bits"
+msgstr ""
+
+#: translation.js:662
+msgid "Split_27"
+msgstr ""
+
+#: translation.js:663
+msgid "Separador de 1 bus de 27 bits a bits"
+msgstr ""
+
+#: translation.js:664
+msgid "Split_14"
+msgstr ""
+
+#: translation.js:665
+msgid "Separador de 1 bus de 14 bits a bits"
+msgstr ""
+
+#: translation.js:666
+msgid "Split_23"
+msgstr ""
+
+#: translation.js:667
+msgid "Separador de 1 bus de 23 bits a bits"
+msgstr ""
+
+#: translation.js:668
+msgid "Split_7"
+msgstr ""
+
+#: translation.js:669
+msgid "Separador de 1 bus de 7 bits a bits"
+msgstr ""
+
+#: translation.js:670
+msgid "Split_25"
+msgstr ""
+
+#: translation.js:671
+msgid "Separador de 1 bus de 25 bits a bits"
+msgstr ""
+
+#: translation.js:672
+msgid "Split_11"
+msgstr ""
+
+#: translation.js:673
+msgid "Separador de 1 bus de 11 bits a bits"
+msgstr ""
+
+#: translation.js:674 translation.js:710
+msgid "Split_3"
+msgstr ""
+
+#: translation.js:675
+msgid "Separador de 1 bus de 3 bits a bits"
+msgstr ""
+
+#: translation.js:676
+msgid "Split_28"
+msgstr ""
+
+#: translation.js:677
+msgid "Separador de 1 bus de 28 bits a bits"
+msgstr ""
+
+#: translation.js:678
+msgid "Split_30"
+msgstr ""
+
+#: translation.js:679
+msgid "Separador de 1 bus de 30 bits a bits"
+msgstr ""
+
+#: translation.js:680
+msgid "Split_10"
+msgstr ""
+
+#: translation.js:681
+msgid "Separador de 1 bus de 10 bits a bits"
+msgstr ""
+
+#: translation.js:682 translation.js:694
+msgid "Split_4"
+msgstr ""
+
+#: translation.js:683
+msgid "Separador de 1 bus de 4 bits a bits"
+msgstr ""
+
+#: translation.js:684
+msgid "Split_12"
+msgstr ""
+
+#: translation.js:685
+msgid "Separador de 1 bus de 12 bits a bits"
+msgstr ""
+
+#: translation.js:686
+msgid "Split_9"
+msgstr ""
+
+#: translation.js:687
+msgid "Separador de 1 bus de 9 bits a bits"
+msgstr ""
+
+#: translation.js:688
+msgid "Split_21"
+msgstr ""
+
+#: translation.js:689
+msgid "Separador de 1 bus de 21 bits a bits"
+msgstr ""
+
+#: translation.js:690
+msgid "Split_16"
+msgstr ""
+
+#: translation.js:691
+msgid "Separador de 1 bus de 16 bits a bits"
+msgstr ""
+
+#: translation.js:692
+msgid "Split_17"
+msgstr ""
+
+#: translation.js:693
+msgid "Separador de 1 bus de 17 bits a bits"
+msgstr ""
+
+#: translation.js:695
+msgid "Split_32_8,8,8,8"
+msgstr ""
+
+#: translation.js:696
+msgid "Separador de 1 bus de 32 bits a 4 buses de 8/8/8/8 bits"
+msgstr ""
+
+#: translation.js:697
+msgid "Split_16_4,4,4,4"
+msgstr ""
+
+#: translation.js:698
+msgid "Separador de 1 bus de 16 bits a 4 buses de 4/4/4/4 bits"
+msgstr ""
+
+#: translation.js:699
+msgid "Split_8_2,2,2,2"
+msgstr ""
+
+#: translation.js:700
+msgid "Separador de 1 bus de 8 bits a 4 buses de 2/2/2/2 bits"
+msgstr ""
+
+#: translation.js:702
+msgid "Split_8_4,4"
+msgstr ""
+
+#: translation.js:703
+msgid "Separador de 1 bus de 8 bits a 2 buses de 4/4 bits"
+msgstr ""
+
+#: translation.js:704
+msgid "Split_32_16,16"
+msgstr ""
+
+#: translation.js:705
+msgid "Separador de 1 bus de 32 bits a 2 buses de 16/16 bits"
+msgstr ""
+
+#: translation.js:706
+msgid "Split_16_8,8"
+msgstr ""
+
+#: translation.js:707
+msgid "Separador de 1 bus de 16 bits a 2 buses de 8/8 bits"
+msgstr ""
+
+#: translation.js:708
+msgid "Split_4_2,2"
+msgstr ""
+
+#: translation.js:709
+msgid "Separador de 1 bus de 4 bits a 2 buses de 2/2 bits"
+msgstr ""
+
+#: translation.js:711
+msgid "Split_16_4,4,8"
+msgstr ""
+
+#: translation.js:712
+msgid "Separador de 1 bus de 16 bits a 3 buses de 4/4/8 bits"
+msgstr ""
+
+#: translation.js:713
+msgid "Split_4_1,1,2"
+msgstr ""
+
+#: translation.js:714
+msgid "Separador de 1 bus de 4 bits a 3 buses de 1/1/2 bits"
+msgstr ""
+
+#: translation.js:715
+msgid "Split_32_8,8,16"
+msgstr ""
+
+#: translation.js:716
+msgid "Separador de 1 bus de 32 bits a 3 buses de 8/8/16 bits"
+msgstr ""
+
+#: translation.js:717
+msgid "Split_8_2,2,4"
+msgstr ""
+
+#: translation.js:718
+msgid "Separador de 1 bus de 8 bits a 3 buses de 2/2/4 bits"
+msgstr ""
+
+#: translation.js:719
+msgid "Seleccionar"
+msgstr ""
+
+#: translation.js:720
+msgid "Wire"
+msgstr "Cable"
+
+#: translation.js:721
+msgid "Seleccionar1_2_1"
+msgstr ""
+
+#: translation.js:722
+msgid "Separa 1 bit de un bus de 2 bits"
+msgstr ""
+
+#: translation.js:723
+msgid "Seleccionar1_4_1"
+msgstr ""
+
+#: translation.js:724
+msgid "Separa 1 bit de un bus de 4 bits"
+msgstr ""
+
+#: translation.js:725
+msgid "Seleccionar1_16_1"
+msgstr ""
+
+#: translation.js:726
+msgid "Separa 1 bit de un bus de 16 bits"
+msgstr ""
+
+#: translation.js:727
+msgid "Seleccionar1_8_1"
+msgstr ""
+
+#: translation.js:728
+msgid "Separa 1 bit de un bus de 8 bits"
+msgstr ""
+
+#: translation.js:729
+msgid "Seleccionar1_32_1"
+msgstr ""
+
+#: translation.js:730
+msgid "Separa 1 bit de un bus de 32 bits"
+msgstr ""
+
+#: translation.js:732
+msgid "Seleccionar_16_8"
+msgstr ""
+
+#: translation.js:733
+msgid "Separa 8 bits de un bus de 16 bits"
+msgstr ""
+
+#: translation.js:734
+msgid "Seleccionar_4_2"
+msgstr ""
+
+#: translation.js:735
+msgid "Separa 2 bits de un bus de 4 bits"
+msgstr ""
+
+#: translation.js:736
+msgid "Seleccionar_16_4"
+msgstr ""
+
+#: translation.js:737
+msgid "Separa 4 bits de un bus de 16 bits"
+msgstr ""
+
+#: translation.js:738
+msgid "Seleccionar_16_2"
+msgstr ""
+
+#: translation.js:739
+msgid "Separa 2 bits de un bus de 16 bits"
+msgstr ""
+
+#: translation.js:740
+msgid "Seleccionar_8_2"
+msgstr ""
+
+#: translation.js:741
+msgid "Separa 2 bits de un bus de 8 bits"
+msgstr ""
+
+#: translation.js:742
+msgid "Seleccionar_8_4"
+msgstr ""
+
+#: translation.js:743
+msgid "Separa 4 bits de un bus de 8 bits"
+msgstr ""
+
+#: translation.js:744
+msgid "Seleccionar_32_2"
+msgstr ""
+
+#: translation.js:745
+msgid "Separa 2 bits de un bus de 32 bits"
+msgstr ""
+
+#: translation.js:746
+msgid "Seleccionar_32_8"
+msgstr ""
+
+#: translation.js:747
+msgid "Separa 8 bits de un bus de 32 bits"
+msgstr ""
+
+#: translation.js:748
+msgid "Seleccionar_32_16"
+msgstr ""
+
+#: translation.js:749
+msgid "Separa 16 bits de un bus de 32 bits"
+msgstr ""
+
+#: translation.js:750
+msgid "Seleccionar_32_4"
+msgstr ""
+
+#: translation.js:751
+msgid "Separa 4 bits de un bus de 32 bits"
+msgstr ""
+
+#: translation.js:752
+msgid "Unir"
+msgstr ""
+
+#: translation.js:753 translation.js:807
+msgid "Join_2"
+msgstr ""
+
+#: translation.js:754
+msgid "Join_1,1_2"
+msgstr ""
+
+#: translation.js:755
+msgid "Agregador de 2 buses de 1/1 bits a 1 bus de 2 bits"
+msgstr ""
+
+#: translation.js:756
+msgid "Join_4,4_8"
+msgstr ""
+
+#: translation.js:757
+msgid "Agregador de 2 buses de 4/4 bits a 1 bus de 8 bits"
+msgstr ""
+
+#: translation.js:758
+msgid "Join_16,16_32"
+msgstr ""
+
+#: translation.js:759
+msgid "Agregador de 2 buses de 16/16 bits a 1 bus de 32 bits"
+msgstr ""
+
+#: translation.js:760
+msgid "Join_8,8_16"
+msgstr ""
+
+#: translation.js:761
+msgid "Agregador de 2 buses de 8/8 bits a 1 bus de 16 bits"
+msgstr ""
+
+#: translation.js:762
+msgid "Join_2,2_4"
+msgstr ""
+
+#: translation.js:763
+msgid "Agregador de 2 buses de 2/2 bits a 1 bus de 4 bits"
+msgstr ""
+
+#: translation.js:764 translation.js:843
+msgid "Join_3"
+msgstr ""
+
+#: translation.js:765
+msgid "Join_2,2,4_8"
+msgstr ""
+
+#: translation.js:766
+msgid "Agregador de 3 buses de 2/2/4 bits a 1 bus de 8 bits"
+msgstr ""
+
+#: translation.js:767
+msgid "Join_4,4,8_16"
+msgstr ""
+
+#: translation.js:768
+msgid "Agregador de 3 buses de 4/4/8 bits a 1 bus de 16 bits"
+msgstr ""
+
+#: translation.js:769
+msgid "Join_1,1,2_4"
+msgstr ""
+
+#: translation.js:770
+msgid "Agregador de 3 buses de 1/1/2 bits a 1 bus de 4 bits"
+msgstr ""
+
+#: translation.js:771
+msgid "Join_8,8,16_32"
+msgstr ""
+
+#: translation.js:772
+msgid "Agregador de 3 buses de 8/8/16 bits a 1 bus de 32 bits"
+msgstr ""
+
+#: translation.js:773
+msgid "Join_1,8,1_10"
+msgstr ""
+
+#: translation.js:774
+msgid "Agregador de 3 buses de 1/8/1 bits a 1 bus de 10 bits"
+msgstr ""
+
+#: translation.js:775 translation.js:841
+msgid "Join_4"
+msgstr ""
+
+#: translation.js:776
+msgid "Join_8,8,8,8_32"
+msgstr ""
+
+#: translation.js:777
+msgid "Agregador de 4 buses de 8/8/8/8 bits a 1 bus de 32 bits"
+msgstr ""
+
+#: translation.js:778
+msgid "Join_4,4,4,4_16"
+msgstr ""
+
+#: translation.js:779
+msgid "Agregador de 4 buses de 4/4/4/4 bits a 1 bus de 16 bits"
+msgstr ""
+
+#: translation.js:780
+msgid "Join_1,1,1,1_4"
+msgstr ""
+
+#: translation.js:781
+msgid "Agregador de 4 buses de 1/1/1/1 bits a 1 bus de 4 bits"
+msgstr ""
+
+#: translation.js:782
+msgid "Join_2,2,2,2_8"
+msgstr ""
+
+#: translation.js:783
+msgid "Agregador de 4 buses de 2/2/2/2 bits a 1 bus de 8 bits"
+msgstr ""
+
+#: translation.js:784
+msgid "Join_wires"
+msgstr "Unir cables"
+
+#: translation.js:785
+msgid "Join_28"
+msgstr ""
+
+#: translation.js:786
+msgid "Agregador de 28 bits a 1 bus"
+msgstr ""
+
+#: translation.js:787
+msgid "Join_7"
+msgstr ""
+
+#: translation.js:788
+msgid "Agregador de 7 bits a 1 bus"
+msgstr ""
+
+#: translation.js:789
+msgid "Join_19"
+msgstr ""
+
+#: translation.js:790
+msgid "Agregador de 19 bits a 1 bus"
+msgstr ""
+
+#: translation.js:791
+msgid "Join_12"
+msgstr ""
+
+#: translation.js:792
+msgid "Agregador de 12 bits a 1 bus"
+msgstr ""
+
+#: translation.js:793
+msgid "Join_13"
+msgstr ""
+
+#: translation.js:794
+msgid "Agregador de 13 bits a 1 bus"
+msgstr ""
+
+#: translation.js:795
+msgid "Join_5"
+msgstr ""
+
+#: translation.js:796
+msgid "Agregador de 5 bits a 1 bus"
+msgstr ""
+
+#: translation.js:797
+msgid "Join_27"
+msgstr ""
+
+#: translation.js:798
+msgid "Agregador de 27 bits a 1 bus"
+msgstr ""
+
+#: translation.js:799
+msgid "Join_10"
+msgstr ""
+
+#: translation.js:800
+msgid "Agregador de 10 bits a 1 bus"
+msgstr ""
+
+#: translation.js:801
+msgid "Join_32"
+msgstr ""
+
+#: translation.js:802
+msgid "Agregador de 32 bits a 1 bus"
+msgstr ""
+
+#: translation.js:803
+msgid "Join_29"
+msgstr ""
+
+#: translation.js:804
+msgid "Agregador de 29 bits a 1 bus"
+msgstr ""
+
+#: translation.js:805
+msgid "Join_14"
+msgstr ""
+
+#: translation.js:806
+msgid "Agregador de 14 bits a 1 bus"
+msgstr ""
+
+#: translation.js:808
+msgid "Agregador de 2 bits a 1 bus"
+msgstr ""
+
+#: translation.js:809
+msgid "Join_11"
+msgstr ""
+
+#: translation.js:810
+msgid "Agregador de 11 bits a 1 bus"
+msgstr ""
+
+#: translation.js:811
+msgid "Join_17"
+msgstr ""
+
+#: translation.js:812
+msgid "Agregador de 17 bits a 1 bus"
+msgstr ""
+
+#: translation.js:813
+msgid "Join_16"
+msgstr ""
+
+#: translation.js:814
+msgid "Agregador de 16 bits a 1 bus"
+msgstr ""
+
+#: translation.js:815
+msgid "Join_22"
+msgstr ""
+
+#: translation.js:816
+msgid "Agregador de 22 bits a 1 bus"
+msgstr ""
+
+#: translation.js:817
+msgid "Join_9"
+msgstr ""
+
+#: translation.js:818
+msgid "Agregador de 9 bits a 1 bus"
+msgstr ""
+
+#: translation.js:819
+msgid "Join_6"
+msgstr ""
+
+#: translation.js:820
+msgid "Agregador de 6 bits a 1 bus"
+msgstr ""
+
+#: translation.js:821
+msgid "Join_18"
+msgstr ""
+
+#: translation.js:822
+msgid "Agregador de 18 bits a 1 bus"
+msgstr ""
+
+#: translation.js:823
+msgid "Join_31"
+msgstr ""
+
+#: translation.js:824
+msgid "Agregador de 31 bits a 1 bus"
+msgstr ""
+
+#: translation.js:825
+msgid "Join_25"
+msgstr ""
+
+#: translation.js:826
+msgid "Agregador de 25 bits a 1 bus"
+msgstr ""
+
+#: translation.js:827
+msgid "Join_15"
+msgstr ""
+
+#: translation.js:828
+msgid "Agregador de 15 bits a 1 bus"
+msgstr ""
+
+#: translation.js:829
+msgid "Join_30"
+msgstr ""
+
+#: translation.js:830
+msgid "Agregador de 30 bits a 1 bus"
+msgstr ""
+
+#: translation.js:831
+msgid "Join_24"
+msgstr ""
+
+#: translation.js:832
+msgid "Agregador de 24 bits a 1 bus"
+msgstr ""
+
+#: translation.js:833
+msgid "Join_8"
+msgstr ""
+
+#: translation.js:834
+msgid "Agregador de 8 bits a 1 bus"
+msgstr ""
+
+#: translation.js:835
+msgid "Join_20"
+msgstr ""
+
+#: translation.js:836
+msgid "Agregador de 20 bits a 1 bus"
+msgstr ""
+
+#: translation.js:837
+msgid "Join_23"
+msgstr ""
+
+#: translation.js:838
+msgid "Agregador de 23 bits a 1 bus"
+msgstr ""
+
+#: translation.js:839
+msgid "Join_26"
+msgstr ""
+
+#: translation.js:840
+msgid "Agregador de 26 bits a 1 bus"
+msgstr ""
+
+#: translation.js:842
+msgid "Agregador de 4 bits a 1 bus"
+msgstr ""
+
+#: translation.js:844
+msgid "Agregador de 3 bits a 1 bus"
+msgstr ""
+
+#: translation.js:845
+msgid "Join_21"
+msgstr ""
+
+#: translation.js:846
+msgid "Agregador de 21 bits a 1 bus"
+msgstr ""
+
+#: translation.js:849 translation.js:860 translation.js:871
+msgid "XOR_32"
+msgstr ""
+
+#: translation.js:850
+msgid "XOR logic gate for two 32 bits buses"
+msgstr "Puerta lógica XOR para dos buses de 32 bits"
+
+#: translation.js:852
+msgid "XOR logic gate for two 2 bits buses"
+msgstr "Puerta lógica XOR para dos buses de 2 bits"
+
+#: translation.js:854
+msgid "XOR logic gate for two 4 bits buses"
+msgstr "Puerta lógica XOR para dos buses de 4 bits"
+
+#: translation.js:855 translation.js:866 translation.js:877
+msgid "XOR_16"
+msgstr ""
+
+#: translation.js:856
+msgid "XOR logic gate for two 16 bits buses"
+msgstr "Puerta lógica XOR para dos buses de 16 bits"
+
+#: translation.js:858
+msgid "XOR logic gate for two 8 bits buses"
+msgstr "Puerta lógica XOR para dos buses de 8 bits"
+
+#: translation.js:861
+msgid "XOR logic gate for a 32 bits bus"
+msgstr "Puerta lógica XOR para un bus de 32 bits"
+
+#: translation.js:863
+msgid "XOR logic gate for a 2 bits bus"
+msgstr "Puerta lógica XOR para un bus de 2 bits"
+
+#: translation.js:865
+msgid "XOR logic gate for a 4 bits bus"
+msgstr "Puerta lógica XOR para un bus de 4 bits"
+
+#: translation.js:867
+msgid "XOR logic gate for a 16 bits bus"
+msgstr "Puerta lógica XOR para un bus de 16 bits"
+
+#: translation.js:869
+msgid "XOR logic gate for a 8 bits bus"
+msgstr "Puerta lógica XOR para un bus de 8 bits"
+
+#: translation.js:872 translation.js:874 translation.js:876 translation.js:878
+#: translation.js:880
+msgid "Applies the XOR between v and each member of i"
+msgstr "Aplica la XOR entre v y cada miembro de i"
+
+#: translation.js:881
+msgid "Reducir"
+msgstr ""
+
+#: translation.js:882
+msgid "Reducir_9_8"
+msgstr ""
+
+#: translation.js:883
+msgid "Reduce un bus de 9 bits a 8 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:884
+msgid "Reducir_16_4"
+msgstr ""
+
+#: translation.js:885
+msgid "Reduce un bus de 16 bits a 4 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:886
+msgid "Reducir_32_4"
+msgstr ""
+
+#: translation.js:887
+msgid "Reduce un bus de 32 bits a 4 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:888
+msgid "Reducir_8_4"
+msgstr ""
+
+#: translation.js:889
+msgid "Reduce un bus de 8 bits a 4 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:890
+msgid "Reducir_16_8"
+msgstr ""
+
+#: translation.js:891
+msgid "Reduce un bus de 16 bits a 8 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:892
+msgid "Reducir_32_2"
+msgstr ""
+
+#: translation.js:893
+msgid "Reduce un bus de 32 bits a 2 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:894
+msgid "Reducir_16_2"
+msgstr ""
+
+#: translation.js:895
+msgid "Reduce un bus de 16 bits a 2 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:896
+msgid "Reducir_4_2"
+msgstr ""
+
+#: translation.js:897
+msgid "Reduce un bus de 4 bits a 2 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:898
+msgid "Reducir_32_16"
+msgstr ""
+
+#: translation.js:899
+msgid "Reduce un bus de 32 bits a 16 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:900
+msgid "Reducir_2_1"
+msgstr ""
+
+#: translation.js:901
+msgid "Reduce un bus de 2 bits a 1 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:902
+msgid "Reducir_32_8"
+msgstr ""
+
+#: translation.js:903
+msgid "Reduce un bus de 32 bits a 8 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:904
+msgid "Reducir_8_2"
+msgstr ""
+
+#: translation.js:905
+msgid "Reduce un bus de 8 bits a 2 bits (toma los LSBs)"
+msgstr ""
+
+#: translation.js:906
+msgid "Expandir"
+msgstr ""
+
+#: translation.js:907
+msgid "Expandir_1_8"
+msgstr ""
+
+#: translation.js:908
+msgid "Expande un bus de 1 bits a 8 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:909
+msgid "Expandir_2_16"
+msgstr ""
+
+#: translation.js:910
+msgid "Expande un bus de 2 bits a 16 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:911
+msgid "Expandir_4_16"
+msgstr ""
+
+#: translation.js:912
+msgid "Expande un bus de 4 bits a 16 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:913
+msgid "Expandir_8_32"
+msgstr ""
+
+#: translation.js:914
+msgid "Expande un bus de 8 bits a 32 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:915
+msgid "Expandir_4_8"
+msgstr ""
+
+#: translation.js:916
+msgid "Expande un bus de 4 bits a 8 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:917
+msgid "Expandir_2_8"
+msgstr ""
+
+#: translation.js:918
+msgid "Expande un bus de 2 bits a 8 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:919
+msgid "Expandir_2_4"
+msgstr ""
+
+#: translation.js:920
+msgid "Expande un bus de 2 bits a 4 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:921
+msgid "Expandir_1_32"
+msgstr ""
+
+#: translation.js:922
+msgid "Expande un bus de 1 bits a 32 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:923
+msgid "Expandir_1_2"
+msgstr ""
+
+#: translation.js:924
+msgid "Expande un bus de 1 bits a 2 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:925
+msgid "Expandir_4_32"
+msgstr ""
+
+#: translation.js:926
+msgid "Expande un bus de 4 bits a 32 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:927
+msgid "Expandir_1_4"
+msgstr ""
+
+#: translation.js:928
+msgid "Expande un bus de 1 bits a 4 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:929
+msgid "Expandir_8_16"
+msgstr ""
+
+#: translation.js:930
+msgid "Expande un bus de 8 bits a 16 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:931
+msgid "Expandir_2_32"
+msgstr ""
+
+#: translation.js:932
+msgid "Expande un bus de 2 bits a 32 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:933
+msgid "Expandir_16_32"
+msgstr ""
+
+#: translation.js:934
+msgid "Expande un bus de 16 bits a 32 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:935
+msgid "Expandir_1_16"
+msgstr ""
+
+#: translation.js:936
+msgid "Expande un bus de 1 bits a 16 bits (rellena con 0s)"
+msgstr ""
+
+#: translation.js:939 translation.js:950
+msgid "NAND_16"
+msgstr ""
+
+#: translation.js:940
+msgid "NAND logic gate for two 16 bits buses"
+msgstr "Puerta lógica NAND para dos buses de 16 bits"
+
+#: translation.js:942
+msgid "NAND logic gate for two 4 bits buses"
+msgstr "Puerta lógica NAND para dos buses de 4 bits"
+
+#: translation.js:944
+msgid "NAND logic gate for two 2 bits buses"
+msgstr "Puerta lógica NAND para dos buses de 2 bits"
+
+#: translation.js:946
+msgid "NAND logic gate for two 8 bits buses"
+msgstr "Puerta lógica NAND para dos buses de 8 bits"
+
+#: translation.js:947 translation.js:958
+msgid "NAND_32"
+msgstr ""
+
+#: translation.js:948
+msgid "NAND logic gate for two 32 bits buses"
+msgstr "Puerta lógica NAND para dos buses de 32 bits"
+
+#: translation.js:951
+msgid "NAND logic gate for a 16 bits bus"
+msgstr "Puerta lógica NAND para un bus de 16 bits"
+
+#: translation.js:953
+msgid "NAND logic gate for a 4 bits bus"
+msgstr "Puerta lógica NAND para un bus de 4 bits"
+
+#: translation.js:955
+msgid "NAND logic gate for a 2 bits bus"
+msgstr "Puerta lógica NAND para un bus de 2 bits"
+
+#: translation.js:957
+msgid "NAND logic gate for a 8 bits bus"
+msgstr "Puerta lógica NAND para un bus de 8 bits"
+
+#: translation.js:959
+msgid "NAND logic gate for a 32 bits bus"
+msgstr "Puerta lógica NAND para un bus de 32 bits"
+
+#: translation.js:960
+msgid "Cruzar"
+msgstr ""
+
+#: translation.js:962
+msgid "Cruzar_4"
+msgstr ""
+
+#: translation.js:963 translation.js:965 translation.js:967 translation.js:969
+#: translation.js:971
+msgid "Exchanges the bit order (MSB<->LSB)"
+msgstr "Intercambia el orden de los bits (MSB<->LSB)"
+
+#: translation.js:964
+msgid "Cruzar_16"
+msgstr ""
+
+#: translation.js:966
+msgid "Cruzar_2"
+msgstr ""
+
+#: translation.js:968
+msgid "Cruzar_32"
+msgstr ""
+
+#: translation.js:970
+msgid "Cruzar_8"
+msgstr ""
+
+#: translation.js:975
+msgid "XNOR logic gate for two 4 bits buses"
+msgstr "Puerta lógica XNOR para dos buses de 4 bits"
+
+#: translation.js:976 translation.js:987
+msgid "XNOR_16"
+msgstr ""
+
+#: translation.js:977
+msgid "XNOR logic gate for two 16 bits buses"
+msgstr "Puerta lógica XNOR para dos buses de 16 bits"
+
+#: translation.js:979
+msgid "XNOR logic gate for two 8 bits buses"
+msgstr "Puerta lógica XNOR para dos buses de 8 bits"
+
+#: translation.js:981
+msgid "XNOR logic gate for two 2 bits buses"
+msgstr "Puerta lógica XNOR para dos buses de 2 bits"
+
+#: translation.js:982 translation.js:993
+msgid "XNOR_32"
+msgstr ""
+
+#: translation.js:983
+msgid "XNOR logic gate for two 32 bits buses"
+msgstr "Puerta lógica XNOR para dos buses de 32 bits"
+
+#: translation.js:986
+msgid "XNOR logic gate for a 4 bits bus"
+msgstr "Puerta lógica XNOR para un bus de 4 bits"
+
+#: translation.js:988
+msgid "XNOR logic gate for a 16 bits bus"
+msgstr "Puerta lógica XNOR para un bus de 16 bits"
+
+#: translation.js:990
+msgid "XNOR logic gate for a 8 bits bus"
+msgstr "Puerta lógica XNOR para un bus de 8 bits"
+
+#: translation.js:992
+msgid "XNOR logic gate for a 2 bits bus"
+msgstr "Puerta lógica XNOR para un bus de 42bits"
+
+#: translation.js:994
+msgid "XNOR logic gate for a 32 bits bus"
+msgstr "Puerta lógica XNOR para un bus de 32 bits"
+
+#: translation.js:995
+msgid "Decodificadores"
+msgstr ""
+
+#: translation.js:997
+msgid "Deco_1_2_no_ena"
+msgstr ""
+
+#: translation.js:998
+msgid "1 to 2 decoder without enable"
+msgstr "Decodificador de 1 a 2 sin habilitación"
+
+#: translation.js:999
+msgid "Deco_3_8_no_ena"
+msgstr ""
+
+#: translation.js:1000
+msgid "3 to 8 decoder without enable"
+msgstr "Decodificador de 3 a 8 sin habilitación"
+
+#: translation.js:1001
+msgid "Deco_2_4_no_ena"
+msgstr ""
+
+#: translation.js:1002
+msgid "2 to 4 decoder without enable"
+msgstr "Decodificador de 2 a 4 sin habilitación"
+
+#: translation.js:1003
+msgid "Enable"
+msgstr "Habilitación"
+
+#: translation.js:1004
+msgid "Deco_1_2"
+msgstr ""
+
+#: translation.js:1005
+msgid "1 to 2 decoder"
+msgstr "Decodificador de 1 a 2"
+
+#: translation.js:1006
+msgid "Deco_3_8"
+msgstr ""
+
+#: translation.js:1007
+msgid "3 to 8 decoder"
+msgstr "Decodificador de 3 a 8"
+
+#: translation.js:1008
+msgid "Deco_2_4"
+msgstr ""
+
+#: translation.js:1009
+msgid "2 to 4 decoder"
+msgstr "Decodificador de 2 a 4"
+
+#: translation.js:1010
+msgid "Demultiplexores"
+msgstr ""
+
+#: translation.js:1011
+msgid "Demux_4"
+msgstr ""
+
+#: translation.js:1012
+msgid "4 outputs demultiplexer"
+msgstr "Demultiplexor de 4 salidas"
+
+#: translation.js:1013
+msgid "Demux_2"
+msgstr ""
+
+#: translation.js:1014
+msgid "2 outputs demultiplexer"
+msgstr "Demultiplexor de 2 salidas"
+
+#: translation.js:1015
+msgid "Demux_8"
+msgstr ""
+
+#: translation.js:1016
+msgid "8 outputs demultiplexer"
+msgstr "Demultiplexor de 8 salidas"
+
+#: translation.js:1017
+msgid "Reset"
+msgstr ""
+
+#: translation.js:1018
+msgid "Power On Reset"
+msgstr ""
+
+#: translation.js:1019
+msgid "Pulso de reset inicial"
+msgstr ""
+
+#: translation.js:1020
+msgid "Pulso"
+msgstr ""
+
+#: translation.js:1021
+msgid "Divisor_Frecuencia_Completo"
+msgstr ""
+
+#: translation.js:1022 translation.js:1026 translation.js:1030
+msgid "Genera un pulso de reloj cada una cantidad dada de los del sistema."
+msgstr ""
+
+#: translation.js:1023
+msgid "Corazon_2Hz_P"
+msgstr ""
+
+#: translation.js:1024
+msgid "Genera 2 pulsos por segundo"
+msgstr ""
+
+#: translation.js:1025
+msgid "Divisor_Frecuencia_Sin_Reset"
+msgstr ""
+
+#: translation.js:1027
+msgid "Corazon_1Hz_P"
+msgstr ""
+
+#: translation.js:1028
+msgid "Genera 1 pulso por segundo"
+msgstr ""
+
+#: translation.js:1029
+msgid "Divisor_Frecuencia_Sin_Reset_y_Enable"
+msgstr ""
+
+#: translation.js:1031
+msgid "Aritmetica"
+msgstr "Aritmética"
+
+#: translation.js:1032
+msgid "Comparadores"
+msgstr ""
+
+#: translation.js:1033
+msgid "Comparador_4"
+msgstr ""
+
+#: translation.js:1034
+msgid "Comparador de magnitudes de 4 bits. "
+msgstr ""
+
+#: translation.js:1035
+msgid "Comparador_8"
+msgstr ""
+
+#: translation.js:1036
+msgid "Comparador de magnitudes de 8 bits. "
+msgstr ""
+
+#: translation.js:1037
+msgid "Comparador_igual_K_4"
+msgstr ""
+
+#: translation.js:1038
+msgid "Compara si la entrada es igual a una constante (4 bits)"
+msgstr ""
+
+#: translation.js:1039
+msgid "Comparador_igual_K_8"
+msgstr ""
+
+#: translation.js:1040
+msgid "Compara si la entrada es igual a una constante (8 bits)"
+msgstr ""
+
+#: translation.js:1041 translation.js:1097
+msgid "Didáctico"
+msgstr ""
+
+#: translation.js:1042
+msgid "Comparador_2_igual_didáctico"
+msgstr ""
+
+#: translation.js:1043
+msgid "Comparador de igualdad para 2 bits"
+msgstr ""
+
+#: translation.js:1044
+msgid ""
+"Los dos valores serán iguales cuando A1=B1 y A0=B0.\n"
+"Para determinar si A1=B1 basta con usar una XNOR.\n"
+"La XOR es 1 cuando alguna de sus entradas es 1, pero no ambas a la vez.\n"
+"Por lo que una XOR nos dice si sus entradas son distintas.\n"
+"Al negarla sabremos si sus entradas son iguales."
+msgstr ""
+
+#: translation.js:1045
+msgid "AmayorB_mapaK"
+msgstr ""
+
+#: translation.js:1046
+msgid "Mapa de Karnaugh para A>B (2 bits)"
+msgstr ""
+
+#: translation.js:1047
+msgid ""
+"<style>\n"
+"table, th, td {\n"
+"    border: 2px solid black;\n"
+"    border-collapse: collapse;\n"
+"}\n"
+"th, td {\n"
+"    padding: 5px;\n"
+"}\n"
+"td {\n"
+"  text-align: center;\n"
+"  vertical-align: middle;\n"
+"}\n"
+"</style>\n"
+"\n"
+"  Los mapas de Karnaugh son una forma manual de simplificar \n"
+"funciones lógicas.\n"
+"  Este mapa muestra las ecuaciones lógicas para la comparación\n"
+"de A&gt;B con magnitudes de 2 bits.\n"
+"  La Tabla de verdad para esta ecuación es:\n"
+"\n"
+"<table border=\"1\" cellpadding=\"3\" align=\"center\">\n"
+"<tr><th>A1</th><th>A0</th><th>B1</th><th>B0</th><th>A&gt;B</th></tr>\n"
+"<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\n"
+"<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>\n"
+"<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\n"
+"<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>\n"
+"<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>\n"
+"<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>\n"
+"<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>\n"
+"<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>\n"
+"<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>\n"
+"<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>\n"
+"<tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>\n"
+"<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>\n"
+"<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>\n"
+"<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>\n"
+"<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>\n"
+"<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>\n"
+"</table>"
+msgstr ""
+
+#: translation.js:1048
+msgid "Comparador_2_didáctico"
+msgstr ""
+
+#: translation.js:1049
+msgid "Comparador de magnitudes de 2 bits didáctico"
+msgstr ""
+
+#: translation.js:1050
+msgid ""
+"Existen <b>6</b> tipos de comparaciones: &gt;, &lt;, =, &le;, &ge; y &ne;.\n"
+"Las últimas 3 son las inversas de las 3 primeras, por ejemplo: lo inverso de "
+"&gt; es &le;.\n"
+"Por lo que un comparador genérico solo necesita computar las <b>3</b> "
+"primeras.\n"
+"\n"
+"Otro detalle importante es que conocidas <b>2</b> de ellas la tercera se "
+"puede calcular como la NOR.\n"
+"Por ejemplo: será &lt; si no es &gt; o = [no (&gt; o =)]\n"
+"\n"
+"Por lo tanto en un comparador genérico basta con determinar &gt; e =."
+msgstr ""
+
+#: translation.js:1051
+msgid "Comparador_4_didáctico"
+msgstr ""
+
+#: translation.js:1052
+msgid "Comparador de magnitudes de 4 bits didáctico"
+msgstr ""
+
+#: translation.js:1053
+msgid ""
+"  Para hacer un comparador de 4 bits podríamos aplicar la misma técnica "
+"usada para el de 3 bits,\n"
+"es decir, usar tres comparadores de 2 bits en cascada.\n"
+"  Sin embargo cuando el número de entradas es par podemos optar por una "
+"conexión en árbol.\n"
+"  Esta conexión requiere la misma cantidad de comparadores, pero tiene menor "
+"profundidad lógica. \n"
+"Es decir que el camino más largo entre entradas y salidas es más corto que "
+"en caso de la conexión\n"
+"en cascada.\n"
+"  El comparador <b>1</b> se encarga de los bits menos pesados, y por eso se "
+"conecta a los menos\n"
+"pesados de <b>3</b>.\n"
+"  Análogamente el <b>2</b> se encarga de los bits más pesados, y por eso se "
+"conecta a los más\n"
+"pesados de <b>3</b>.\n"
+"  "
+msgstr ""
+
+#: translation.js:1054
+msgid "<h1>1</h1>"
+msgstr ""
+
+#: translation.js:1055
+msgid "<h1>2</h1>"
+msgstr ""
+
+#: translation.js:1056
+msgid "<h1>3</h1>"
+msgstr ""
+
+#: translation.js:1057
+msgid "Comparador_3_didáctico"
+msgstr ""
+
+#: translation.js:1058
+msgid "Comparador de magnitudes de 3 bits didáctico"
+msgstr ""
+
+#: translation.js:1059
+msgid ""
+"  Para expandir un comparador de 2 bits a 3 bits basta con colocar un "
+"segundo comparador\n"
+"en cascada.\n"
+"  Si el bit más pesado de A y B alcanza para decidir si es &gt; o &lt; el "
+"segundo comparador\n"
+"podrá resolver el resultado con sus bits A1 y B1.\n"
+"  En el caso en que A1 y B1 sean iguales la decisión quedará en manos de A0 "
+"y B0. Estas \n"
+"entradas están conectadas al primer comparador, quien resuelve la "
+"comparación de los bits\n"
+"menos pesados de la entrada.\n"
+"  En líneas generales, para comparar N bits basta con N-1 comparadores de 2 "
+"bits en cascada."
+msgstr ""
+
+#: translation.js:1060
+msgid "Comparador_2_mayor_didáctico"
+msgstr ""
+
+#: translation.js:1061
+msgid "Comparador de A mayor que B para 2 bits"
+msgstr ""
+
+#: translation.js:1062
+msgid ""
+"  La comparación de A>B puede resolverse planteando la tabla de verdad y\n"
+"luego simplificando por el método de Karnaugh.\n"
+"  Ingresando al bloque del mapa de Karnaugh se puede ver la tabla de "
+"verdad.\n"
+"  Lo que nos dicen las ecuaciones es que A>B cuando se cumple alguno de los\n"
+"siguientes casos:\n"
+"1) A1 es 1 y B1 es 0\n"
+"2) A0 es 1 y B=0\n"
+"3) A=11 y B no es 11 (B0=1)\n"
+"  "
+msgstr ""
+
+#: translation.js:1063
+msgid "Comparador_32"
+msgstr ""
+
+#: translation.js:1064
+msgid "Comparador de magnitudes de 32 bits. "
+msgstr ""
+
+#: translation.js:1065
+msgid "Comparador_igual_8"
+msgstr ""
+
+#: translation.js:1066
+msgid "Comparador de igualdad de 8 bits "
+msgstr ""
+
+#: translation.js:1067
+msgid "Comparador_16"
+msgstr ""
+
+#: translation.js:1068
+msgid "Comparador de magnitudes de 16 bits. "
+msgstr ""
+
+#: translation.js:1069
+msgid "Comparador_igual_2"
+msgstr ""
+
+#: translation.js:1070
+msgid "Comparador de igualdad de 2 bits "
+msgstr ""
+
+#: translation.js:1071
+msgid "Comparador_igual_4"
+msgstr ""
+
+#: translation.js:1072
+msgid "Comparador de igualdad de 4 bits "
+msgstr ""
+
+#: translation.js:1073
+msgid "Comparador_2"
+msgstr ""
+
+#: translation.js:1074
+msgid "Comparador de magnitudes de 2 bits. "
+msgstr ""
+
+#: translation.js:1075
+msgid "Comparador_igual_K_2"
+msgstr ""
+
+#: translation.js:1076
+msgid "Compara si la entrada es igual a una constante (2 bits)"
+msgstr ""
+
+#: translation.js:1077
+msgid "Comparador_igual_32"
+msgstr ""
+
+#: translation.js:1078
+msgid "Comparador de igualdad de 32 bits "
+msgstr ""
+
+#: translation.js:1079
+msgid "Comparador_igual_K_32"
+msgstr ""
+
+#: translation.js:1080
+msgid "Compara si la entrada es igual a una constante (32 bits)"
+msgstr ""
+
+#: translation.js:1081
+msgid "Comparador_igual_16"
+msgstr ""
+
+#: translation.js:1082
+msgid "Comparador de igualdad de 16 bits "
+msgstr ""
+
+#: translation.js:1083
+msgid "Comparador_igual_K_16"
+msgstr ""
+
+#: translation.js:1084
+msgid "Compara si la entrada es igual a una constante (16 bits)"
+msgstr ""
+
+#: translation.js:1085
+msgid "Sumadores"
+msgstr ""
+
+#: translation.js:1087
+msgid "Sumador_Simple_2"
+msgstr ""
+
+#: translation.js:1088
+msgid "Sumador de 2 bits (solo cout)"
+msgstr ""
+
+#: translation.js:1089
+msgid "Sumador_Simple_32"
+msgstr ""
+
+#: translation.js:1090
+msgid "Sumador de 32 bits (solo cout)"
+msgstr ""
+
+#: translation.js:1091
+msgid "Sumador_Simple_8"
+msgstr ""
+
+#: translation.js:1092
+msgid "Sumador de 8 bits (solo cout)"
+msgstr ""
+
+#: translation.js:1093
+msgid "Sumador_Simple_16"
+msgstr ""
+
+#: translation.js:1094
+msgid "Sumador de 16 bits (solo cout)"
+msgstr ""
+
+#: translation.js:1095
+msgid "Sumador_Simple_4"
+msgstr ""
+
+#: translation.js:1096
+msgid "Sumador de 4 bits (solo cout)"
+msgstr ""
+
+#: translation.js:1098
+msgid "Medio_Sumador"
+msgstr ""
+
+#: translation.js:1099
+msgid "Sumador de 1 bit con acarreo de salida, pero no de entrada"
+msgstr ""
+
+#: translation.js:1100
+msgid ""
+"Medio sumador:\n"
+"Es la celda básica de la suma.\n"
+"S es la suma de A y B, pero módulo 2 (0 o 1)\n"
+"Cy es el acarreo"
+msgstr ""
+
+#: translation.js:1101
+msgid ""
+"La XOR es la suma módulo 2 de\n"
+"sus entradas. 1+1=2 => 0"
+msgstr ""
+
+#: translation.js:1102
+msgid "Hay acarreo cuando A y B son 1"
+msgstr ""
+
+#: translation.js:1103
+msgid ""
+"Se lo llama \"medio sumador\" porque necesitamos dos de\n"
+"ellos para un sumador completo (con acarreo de entrada)"
+msgstr ""
+
+#: translation.js:1104
+msgid ""
+"Tabla de verdad\n"
+"A B  Suma Acarreo\n"
+"0 0    0     0\n"
+"0 1    1     0\n"
+"1 0    1     0\n"
+"1 1    0     1    <= 1+1=2, es decir 10 en binario\n"
+"                     me quedo con el 0 y acarreo 1"
+msgstr ""
+
+#: translation.js:1105
+msgid "Sumador_2_bits"
+msgstr ""
+
+#: translation.js:1106
+msgid "Sumador de 2 valores de 2 bits con acarreo de entrada y salida."
+msgstr ""
+
+#: translation.js:1107
+msgid ""
+"Este sumador se \n"
+"encarga del \n"
+"bit más pesado"
+msgstr ""
+
+#: translation.js:1108
+msgid ""
+"Este sumador se \n"
+"encarga del \n"
+"bit menos pesado"
+msgstr ""
+
+#: translation.js:1109
+msgid ""
+"Sumador de 2 bits:\n"
+"Se construye a partir de dos sumadores completos.\n"
+"Primero sumamos los bits menos pesados, al igual que como hacemos "
+"manualmente (sumamos las unidades),\n"
+"luego sumamos los más pesados, junto con el posible acarreo de la etapa "
+"anterior."
+msgstr ""
+
+#: translation.js:1110
+msgid "Sumador_8_bits"
+msgstr ""
+
+#: translation.js:1111 translation.js:1122
+msgid "Sumador de dos valores de 4 bits con acarreo de entrada y salida"
+msgstr ""
+
+#: translation.js:1112
+msgid ""
+"Sumador de 8 bits:\n"
+"Se construye a partir de dos sumadores de 4 bits.\n"
+"Primero sumamos los bits menos pesados, al igual que como hacemos "
+"manualmente (sumamos las unidades),\n"
+"luego sumamos los más pesados, junto con el posible acarreo de la etapa "
+"anterior."
+msgstr ""
+
+#: translation.js:1113
+msgid ""
+"Este sumador se \n"
+"encarga de los 4\n"
+"bits más pesados"
+msgstr ""
+
+#: translation.js:1114
+msgid ""
+"Este sumador se \n"
+"encarga de los 4 \n"
+"bits menos pesados"
+msgstr ""
+
+#: translation.js:1115
+msgid "Sumador_Completo"
+msgstr ""
+
+#: translation.js:1116
+msgid "Sumador de 1 bit con acarreo de entrada y salida"
+msgstr ""
+
+#: translation.js:1117
+msgid ""
+"Sumador completo:\n"
+"Se construye a partir de dos \"medio sumadores\".\n"
+"S es la suma de A, B y el acarreo de la etapa anterior.\n"
+"Cout es 1 cuando cualquiera de las dos sumas parciales generó acarreo.\n"
+msgstr ""
+
+#: translation.js:1118
+msgid ""
+"S es la suma módulo 2 de las 3 entradas\n"
+"Se computa como la XOR de las 3."
+msgstr ""
+
+#: translation.js:1119
+msgid ""
+"Hay acarreo cuando el resultado es 2 o más.\n"
+"Esto es cuando cualquiera de las sumas \n"
+"parciales dió 2 o más y por lo tanto generó\n"
+"acarreo."
+msgstr ""
+
+#: translation.js:1120
+msgid ""
+"Tabla de verdad:\n"
+"A B Cin  Suma Acarreo\n"
+"0 0 0      0     0\n"
+"0 0 1      1     0\n"
+"0 1 0      1     0\n"
+"0 1 1      0     1\n"
+"1 0 0      1     0\n"
+"1 0 1      0     1\n"
+"1 1 0      0     1\n"
+"1 1 1      1     1"
+msgstr ""
+
+#: translation.js:1121
+msgid "Sumador_4_bits"
+msgstr ""
+
+#: translation.js:1123
+msgid ""
+"Sumador de 4 bits:\n"
+"Se construye a partir de dos sumadores de 2 bits.\n"
+"Primero sumamos los bits menos pesados, al igual que como hacemos "
+"manualmente (sumamos las unidades),\n"
+"luego sumamos los más pesados, junto con el posible acarreo de la etapa "
+"anterior."
+msgstr ""
+
+#: translation.js:1124
+msgid ""
+"Este sumador se \n"
+"encarga de los 2\n"
+"bits más pesados"
+msgstr ""
+
+#: translation.js:1125
+msgid ""
+"Este sumador se \n"
+"encarga de los 2 \n"
+"bits menos pesados"
+msgstr ""
+
+#: translation.js:1127
+msgid "Sumador_Completo_2"
+msgstr ""
+
+#: translation.js:1128
+msgid "Sumador de 2 bits (cin, cout y oVerflow)"
+msgstr ""
+
+#: translation.js:1129
+msgid "Sumador_Completo_4"
+msgstr ""
+
+#: translation.js:1130
+msgid "Sumador de 4 bits (cin, cout y oVerflow)"
+msgstr ""
+
+#: translation.js:1131
+msgid "Sumador_Completo_8"
+msgstr ""
+
+#: translation.js:1132
+msgid "Sumador de 8 bits (cin, cout y oVerflow)"
+msgstr ""
+
+#: translation.js:1133
+msgid "Sumador_Completo_32"
+msgstr ""
+
+#: translation.js:1134
+msgid "Sumador de 32 bits (cin, cout y oVerflow)"
+msgstr ""
+
+#: translation.js:1135
+msgid "Sumador_Completo_16"
+msgstr ""
+
+#: translation.js:1136
+msgid "Sumador de 16 bits (cin, cout y oVerflow)"
+msgstr ""
+
+#: translation.js:1137
+msgid "Restadores"
+msgstr ""
+
+#: translation.js:1139
+msgid "Restador_Simple_16"
+msgstr ""
+
+#: translation.js:1140
+msgid "Restador de 16 bits (solo bout)"
+msgstr ""
+
+#: translation.js:1141 translation.js:1144 translation.js:1147
+#: translation.js:1150 translation.js:1153 translation.js:1157
+#: translation.js:1160 translation.js:1163 translation.js:1166
+#: translation.js:1169
+msgid ""
+"La resta puede implementarse como suma de A y el Ca2 de B.\n"
+"Esto es porque usamos aritmética modular, donde:\n"
+"A+Ca2(B)=A+2^N-B=A-B\n"
+"2^N es precisamente el módulo del binario de N bits. \n"
+"Por lo que al aplicar módulo 2^N a A+2^N-B obtenemos A-B."
+msgstr ""
+
+#: translation.js:1142
+msgid "Restador_Simple_32"
+msgstr ""
+
+#: translation.js:1143
+msgid "Restador de 32 bits (solo bout)"
+msgstr ""
+
+#: translation.js:1145
+msgid "Restador_Simple_2"
+msgstr ""
+
+#: translation.js:1146
+msgid "Restador de 2 bits (solo bout)"
+msgstr ""
+
+#: translation.js:1148
+msgid "Restador_Simple_8"
+msgstr ""
+
+#: translation.js:1149
+msgid "Restador de 8 bits (solo bout)"
+msgstr ""
+
+#: translation.js:1151
+msgid "Restador_Simple_4"
+msgstr ""
+
+#: translation.js:1152
+msgid "Restador de 4 bits (solo bout)"
+msgstr ""
+
+#: translation.js:1155
+msgid "Restador_Completo_4"
+msgstr ""
+
+#: translation.js:1156
+msgid "Restador de 4 bits (bin, bout y oVerflow)"
+msgstr ""
+
+#: translation.js:1158
+msgid "Restador_Completo_8"
+msgstr ""
+
+#: translation.js:1159
+msgid "Restador de 8 bits (bin, bout y oVerflow)"
+msgstr ""
+
+#: translation.js:1161
+msgid "Restador_Completo_32"
+msgstr ""
+
+#: translation.js:1162
+msgid "Restador de 32 bits (bin, bout y oVerflow)"
+msgstr ""
+
+#: translation.js:1164
+msgid "Restador_Completo_2"
+msgstr ""
+
+#: translation.js:1165
+msgid "Restador de 2 bits (bin, bout y oVerflow)"
+msgstr ""
+
+#: translation.js:1167
+msgid "Restador_Completo_16"
+msgstr ""
+
+#: translation.js:1168
+msgid "Restador de 16 bits (bin, bout y oVerflow)"
+msgstr ""
+
+#: translation.js:1170
+msgid "Complemento_a_2"
+msgstr ""
+
+#: translation.js:1171
+msgid "Complemento_a_2_32"
+msgstr ""
+
+#: translation.js:1172 translation.js:1175 translation.js:1178
+#: translation.js:1181 translation.js:1184
+msgid "Calcula el complemento a 2 de la entrada"
+msgstr ""
+
+#: translation.js:1173 translation.js:1176 translation.js:1179
+#: translation.js:1182 translation.js:1185
+msgid ""
+"Es el complemento a la \"base\"\n"
+"Matemáticamente se calcula como 2^N-V\n"
+"Donde N es el número de bits.\n"
+"El complemento a 2 es el complemento a 1 más 1.\n"
+"\n"
+msgstr ""
+
+#: translation.js:1174
+msgid "Complemento_a_2_16"
+msgstr ""
+
+#: translation.js:1177
+msgid "Complemento_a_2_4"
+msgstr ""
+
+#: translation.js:1180
+msgid "Complemento_a_2_8"
+msgstr ""
+
+#: translation.js:1183
+msgid "Complemento_a_2_2"
+msgstr ""
+
+#: translation.js:1186
+msgid "Complemento_a_1"
+msgstr ""
+
+#: translation.js:1187
+msgid "Complemento_a_1_16"
+msgstr ""
+
+#: translation.js:1188 translation.js:1191 translation.js:1194
+#: translation.js:1197 translation.js:1200
+msgid "Calcula el complemento a 1 de la entrada"
+msgstr ""
+
+#: translation.js:1189 translation.js:1192 translation.js:1195
+#: translation.js:1198 translation.js:1201
+msgid ""
+"El complemento a 1 es equivalente a negar todos\n"
+"los bits.\n"
+"Matemáticamente se calcula como 2^N-1-V\n"
+"Donde N es el número de bits.\n"
+"Es el complemento a la \"base menos 1\""
+msgstr ""
+
+#: translation.js:1190
+msgid "Complemento_a_1_8"
+msgstr ""
+
+#: translation.js:1193
+msgid "Complemento_a_1_32"
+msgstr ""
+
+#: translation.js:1196
+msgid "Complemento_a_1_4"
+msgstr ""
+
+#: translation.js:1199
+msgid "Complemento_a_1_2"
+msgstr ""
+
+#: translation.js:1202
+msgid "Extender"
+msgstr "Extensor"
+
+#: translation.js:1203
+msgid "Extender_8_32"
+msgstr ""
+
+#: translation.js:1204
+msgid "Extiende un bus de 8 bits a 32 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1205
+msgid "Extender_1_8"
+msgstr ""
+
+#: translation.js:1206
+msgid "Extiende un bus de 1 bits a 8 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1207
+msgid "Extender_1_16"
+msgstr ""
+
+#: translation.js:1208
+msgid "Extiende un bus de 1 bits a 16 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1209
+msgid "Extender_1_2"
+msgstr ""
+
+#: translation.js:1210
+msgid "Extiende un bus de 1 bits a 2 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1211
+msgid "Extender_2_32"
+msgstr ""
+
+#: translation.js:1212
+msgid "Extiende un bus de 2 bits a 32 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1213
+msgid "Extender_4_16"
+msgstr ""
+
+#: translation.js:1214
+msgid "Extiende un bus de 4 bits a 16 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1215
+msgid "Extender_1_4"
+msgstr ""
+
+#: translation.js:1216
+msgid "Extiende un bus de 1 bits a 4 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1217
+msgid "Extender_8_16"
+msgstr ""
+
+#: translation.js:1218
+msgid "Extiende un bus de 8 bits a 16 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1219
+msgid "Extender_1_32"
+msgstr ""
+
+#: translation.js:1220
+msgid "Extiende un bus de 1 bits a 32 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1221
+msgid "Extender_16_32"
+msgstr ""
+
+#: translation.js:1222
+msgid "Extiende un bus de 16 bits a 32 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1223
+msgid "Extender_2_4"
+msgstr ""
+
+#: translation.js:1224
+msgid "Extiende un bus de 2 bits a 4 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1225
+msgid "Extender_2_8"
+msgstr ""
+
+#: translation.js:1226
+msgid "Extiende un bus de 2 bits a 8 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1227
+msgid "Extender_4_8"
+msgstr ""
+
+#: translation.js:1228
+msgid "Extiende un bus de 4 bits a 8 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1229
+msgid "Extender_4_32"
+msgstr ""
+
+#: translation.js:1230
+msgid "Extiende un bus de 4 bits a 32 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1231
+msgid "Extender_2_16"
+msgstr ""
+
+#: translation.js:1232
+msgid "Extiende un bus de 2 bits a 16 bits manteniendo el signo (Ca2)"
+msgstr ""
+
+#: translation.js:1233
+msgid "Incrementador"
+msgstr ""
+
+#: translation.js:1234
+msgid "Incrementador_Simple_2"
+msgstr ""
+
+#: translation.js:1235 translation.js:1237 translation.js:1239
+#: translation.js:1241 translation.js:1243 translation.js:1245
+#: translation.js:1247 translation.js:1249 translation.js:1251
+#: translation.js:1253
+msgid "Suma 1 a la entrada"
+msgstr ""
+
+#: translation.js:1236
+msgid "Incrementador_8"
+msgstr ""
+
+#: translation.js:1238
+msgid "Incrementador_Simple_8"
+msgstr ""
+
+#: translation.js:1240
+msgid "Incrementador_16"
+msgstr ""
+
+#: translation.js:1242
+msgid "Incrementador_Simple_16"
+msgstr ""
+
+#: translation.js:1244
+msgid "Incrementador_4"
+msgstr ""
+
+#: translation.js:1246
+msgid "Incrementador_Simple_32"
+msgstr ""
+
+#: translation.js:1248
+msgid "Incrementador_2"
+msgstr ""
+
+#: translation.js:1250
+msgid "Incrementador_Simple_4"
+msgstr ""
+
+#: translation.js:1252
+msgid "Incrementador_32"
+msgstr ""
+
+#: translation.js:1254
+msgid "Bombeo"
+msgstr ""
+
+#: translation.js:1255
+msgid "Corazon_x1"
+msgstr ""
+
+#: translation.js:1256
+msgid "Generacion de una señal cuadrada de 1Hz (1 pulso/segundo)"
+msgstr ""
+
+#: translation.js:1257
+msgid ""
+"Generador de señales cuadradas de 1 Hz\n"
+"\n"
+"Se usa un corazón de pulsos de 2 Hz y se pasa por un biestable T\n"
+"que divide la frecuencia entre 2, obteniéndose una señal de 1 Hz\n"
+"y un ciclo de trabajo del 50% (la mitad del tiempo a 0, la otra \n"
+"mitad a 1)"
+msgstr ""
+
+#: translation.js:1258
+msgid "Biestables"
+msgstr ""
+
+#: translation.js:1259
+msgid "Chincheta-D-parametric"
+msgstr ""
+
+#: translation.js:1260
+msgid "Biestable D con inicialización paramétrica"
+msgstr ""
+
+#: translation.js:1261
+msgid "Chincheta-D-1"
+msgstr ""
+
+#: translation.js:1262 translation.js:1279
+msgid "Biestable D inicializado a 0"
+msgstr ""
+
+#: translation.js:1263
+msgid "Chincheta-T-ena-0"
+msgstr ""
+
+#: translation.js:1264 translation.js:1283
+msgid "Biestable tipo T"
+msgstr ""
+
+#: translation.js:1265
+msgid "Chincheta-T-1"
+msgstr ""
+
+#: translation.js:1266
+msgid "Biestable tipo T inicializado a 1"
+msgstr ""
+
+#: translation.js:1267
+msgid "Flip-flop T"
+msgstr ""
+
+#: translation.js:1268
+msgid "Flip-flop T Simple 1"
+msgstr ""
+
+#: translation.js:1269
+msgid "Flip-flop T con valor inicial 1"
+msgstr ""
+
+#: translation.js:1270
+msgid "Flip-flop T Simple DINI"
+msgstr ""
+
+#: translation.js:1271
+msgid "Flip-flop T con valor inicial"
+msgstr ""
+
+#: translation.js:1272
+msgid "Flip-flop T Ena Rst"
+msgstr ""
+
+#: translation.js:1273
+msgid "Flip-flop T con entradas de enable, reset y valor inicial"
+msgstr ""
+
+#: translation.js:1274
+msgid "Flip-flop T Completo"
+msgstr ""
+
+#: translation.js:1275
+msgid "Flip-flop T con entradas de fuerza, enable, reset y valor inicial"
+msgstr ""
+
+#: translation.js:1276
+msgid "Flip-flop T Simple 0"
+msgstr ""
+
+#: translation.js:1277
+msgid "Flip-flop T con valor inicial 0"
+msgstr ""
+
+#: translation.js:1278
+msgid "Chincheta-D-0"
+msgstr ""
+
+#: translation.js:1280
+msgid "Chincheta-T-sync-0"
+msgstr ""
+
+#: translation.js:1281
+msgid "Biestable T síncrono, inicializado a 0"
+msgstr ""
+
+#: translation.js:1282
+msgid "Chincheta-T-0"
+msgstr ""
+
+#: translation.js:1284
+msgid "Chincheta-D-ena-parametric"
+msgstr ""
+
+#: translation.js:1285
+msgid "Biestable tipo D con entrada de enable, inicializado al parámetro INI"
+msgstr ""
+
+#: translation.js:1286
+msgid "Chincheta-D-0-set-rst"
+msgstr ""
+
+#: translation.js:1287
+msgid "Biestable D con entradas de reset y set síncronas, inicializado a 0"
+msgstr ""
+
+#: translation.js:1288
+msgid "Flip-flop RS"
+msgstr ""
+
+#: translation.js:1289
+msgid "Flip-flop RS Simple 1"
+msgstr ""
+
+#: translation.js:1290 translation.js:1292 translation.js:1294
+#: translation.js:1296 translation.js:1298
+msgid "Flip-flop RS con entradas de fuerza, enable, reset y valor inicial"
+msgstr ""
+
+#: translation.js:1291
+msgid "Flip-flop RS Ena Rst"
+msgstr ""
+
+#: translation.js:1293
+msgid "Flip-flop RS Simple INI"
+msgstr ""
+
+#: translation.js:1295
+msgid "Flip-flop RS Simple 0"
+msgstr ""
+
+#: translation.js:1297
+msgid "Flip-flop RS Completo"
+msgstr ""
+
+#: translation.js:1299
+msgid "Flip-flop D"
+msgstr ""
+
+#: translation.js:1300
+msgid "Flip-flop D Simple 1"
+msgstr ""
+
+#: translation.js:1301
+msgid "Flip-flop D con valor inicial 1"
+msgstr ""
+
+#: translation.js:1302
+msgid "Flip-flop D Completo"
+msgstr ""
+
+#: translation.js:1303
+msgid "Flip-flop D con entradas de fuerza, enable, reset y valor inicial"
+msgstr ""
+
+#: translation.js:1304
+msgid "Flip-flop D Simple DINI"
+msgstr ""
+
+#: translation.js:1305
+msgid "Flip-flop D con valor inicial"
+msgstr ""
+
+#: translation.js:1306
+msgid "Flip-flop D Simple 0"
+msgstr ""
+
+#: translation.js:1307
+msgid "Flip-flop D con valor inicial 0"
+msgstr ""
+
+#: translation.js:1308
+msgid "Flip-flop D Ena Rst"
+msgstr ""
+
+#: translation.js:1309
+msgid "Flip-flop D con entradas de enable, reset y valor inicial"
+msgstr ""
+
+#: translation.js:1310
+msgid "Chincheta-D-ena-0"
+msgstr ""
+
+#: translation.js:1311
+msgid "Biestable D con enable inicializado a 0"
+msgstr ""
+
+#: translation.js:1312
+msgid "Flip-flop JK"
+msgstr ""
+
+#: translation.js:1313
+msgid "Flip-flop JK Simple INI"
+msgstr ""
+
+#: translation.js:1314 translation.js:1316 translation.js:1318
+#: translation.js:1320 translation.js:1322
+msgid "Flip-flop JK con entradas de fuerza, enable, reset y valor inicial"
+msgstr ""
+
+#: translation.js:1315
+msgid "Flip-flop JK Simple 1"
+msgstr ""
+
+#: translation.js:1317
+msgid "Flip-flop JK Completo"
+msgstr ""
+
+#: translation.js:1319
+msgid "Flip-flop JK Simple 0"
+msgstr ""
+
+#: translation.js:1321
+msgid "Flip-flop JK Ena Rst"
+msgstr ""
+
+#: translation.js:1323
+msgid "Chincheta-T-sync-ini"
+msgstr ""
+
+#: translation.js:1324
+msgid "Biestable T síncrono, inicializado por parametro INI"
+msgstr ""
+
+#: translation.js:1325
+msgid "Chincheta-T-sync-1"
+msgstr ""
+
+#: translation.js:1326
+msgid "Biestable T síncrono, inicializado a 1"
+msgstr ""
+
+#: translation.js:1327
+msgid "3. Desplazamiento"
+msgstr ""
+
+#: translation.js:1328
+msgid "08. Desplazamiento Izquierda Simple"
+msgstr ""
+
+#: translation.js:1329 translation.js:1334 translation.js:1341
+msgid "Ejemplo de uso de un registro de desplazamiento a izquierda"
+msgstr ""
+
+#: translation.js:1330 translation.js:1339
+msgid ""
+"USO ASINCRÓNICO\n"
+"NO RECOMENDABLE"
+msgstr ""
+
+#: translation.js:1331
+msgid "04. Desplazamiento Derecha ENA-RST"
+msgstr ""
+
+#: translation.js:1332 translation.js:1336 translation.js:1338
+#: translation.js:1343 translation.js:1345
+msgid "Ejemplo de uso de un registro de desplazamiento a derecha"
+msgstr ""
+
+#: translation.js:1333
+msgid "07. Desplazamiento Izquierda ENA-RST"
+msgstr ""
+
+#: translation.js:1335
+msgid "02. Desplazamiento Universal Simple"
+msgstr ""
+
+#: translation.js:1337
+msgid "05. Desplazamiento Derecha Simple"
+msgstr ""
+
+#: translation.js:1340
+msgid "06. Desplazamiento Izquierda Completo"
+msgstr ""
+
+#: translation.js:1342
+msgid "01. Desplazamiento Universal Completo"
+msgstr ""
+
+#: translation.js:1344
+msgid "03. Desplazamiento Derecha Completo"
+msgstr ""
+
+#: translation.js:1346
+msgid "2. Counters"
+msgstr "2. Contadores"
+
+#: translation.js:1347
+msgid "02. BCD Counter 2"
+msgstr "02. Contador BCD 2"
+
+#: translation.js:1348
+msgid "03. BCD Down Counter"
+msgstr "03. Contador BCD descendente"
+
+#: translation.js:1349
+msgid "05. BCD Counter fast"
+msgstr "05. Contador BCD rápido"
+
+#: translation.js:1350
+msgid "04. BCD Down Counter 2"
+msgstr "04. Contador BCD descendente 2"
+
+#: translation.js:1351
+msgid "01. BCD Counter"
+msgstr "01. Contador BCD"
+
+#: translation.js:1352
+msgid "4. Combinacional Misc"
+msgstr "4. Varios combinacionales"
+
+#: translation.js:1353
+msgid "06. Four LEDs sequence deco no ena"
+msgstr "06. Secuenciador de 4 LEDs con deco sin ena"
+
+#: translation.js:1354 translation.js:1356 translation.js:1367
+msgid "LEDs 4 to 1 are turned on in sequence"
+msgstr "Los LEDs 4 a 1 se encienden en secuencia"
+
+#: translation.js:1355
+msgid "02. Four LEDs sequence demux"
+msgstr "02. Secuenciador de 4 LEDs con demux"
+
+#: translation.js:1357
+msgid "03. Two LEDs alternate blink deco"
+msgstr "03. Destellador de 2 LEDs con deco"
+
+#: translation.js:1358 translation.js:1369 translation.js:1371
+#: translation.js:1378
+msgid "LEDs 1 and 2 are blinking alternatively"
+msgstr "Los LEDs 1 y 2 parpadean alternativamente"
+
+#: translation.js:1359
+msgid "07. Codificador 4 a 2"
+msgstr ""
+
+#: translation.js:1360
+msgid ""
+"Accionar 1 o más botones\n"
+"El BTN1 tiene más prioridad que los 2, 3 y 4\n"
+"El BTN2 que los 3 y 4\n"
+"El BTN3 que el 4"
+msgstr ""
+
+#: translation.js:1361
+msgid ""
+"  Este ejemplo muestra en los LEDs 2, 3 y 4 el número de botón presionado.\n"
+"  El LED2 es el más significativo y el LED4 el menos significativo.\n"
+"  Como los botones se numeran desde el 1 necesitamos sumarle 1 a la salida "
+"del codificador.\n"
+"  La salida G (grupo) del codificador permite distinguir el caso en que "
+"todas las entradas son 0, \n"
+"del caso en que la entrada I0 es 1. Por eso actúa como condicionadora de las "
+"salidas del incrementador"
+msgstr ""
+
+#: translation.js:1362
+msgid ""
+"El acarreo es el <b>bit 2</b> del\n"
+"resultado."
+msgstr ""
+
+#: translation.js:1363
+msgid "<H1><b>Bit 2</b></H1>"
+msgstr ""
+
+#: translation.js:1364
+msgid "<H1><b>Bit 0</b></H1>"
+msgstr ""
+
+#: translation.js:1365
+msgid "<H1><b>Bit 1</b></H1>"
+msgstr ""
+
+#: translation.js:1366
+msgid "04. Four LEDs sequence deco"
+msgstr "04. Secuenciador de 4 LEDs con deco"
+
+#: translation.js:1368
+msgid "01. Two LEDs alternate blink deco"
+msgstr "01. Destellador de 2 LEDs con deco"
+
+#: translation.js:1370
+msgid "05. Two LEDs alternate blink deco no ena"
+msgstr "05. Destellador de 2 LEDs con deco sin ena"
+
+#: translation.js:1372
+msgid "1. Basic"
+msgstr "1. Básicolo"
+
+#: translation.js:1373
+msgid "07. CapSense toggle and LEDs"
+msgstr "07. Botones capacitivos alternantes y LEDs"
+
+#: translation.js:1374 translation.js:1389
+msgid ""
+"Estos son los 4 sensores\n"
+"capacitivos que están \n"
+"junto a los LEDs"
+msgstr ""
+
+#: translation.js:1375 translation.js:1390
+msgid "Estos son los 4 LEDs"
+msgstr ""
+
+#: translation.js:1376
+msgid ""
+"Esta constante controla si\n"
+"los sensores reflejan su estado\n"
+"en forma directa o cambian con \n"
+"cada toque."
+msgstr ""
+
+#: translation.js:1377
+msgid "05. Two LEDs alternate blink"
+msgstr "05. Destellador de 2 LEDs"
+
+#: translation.js:1379
+msgid "08. AND 1 to all"
+msgstr "08. AND, 1 entrada a todos"
+
+#: translation.js:1380
+msgid ""
+"En este ejemplo el botón 1 condiciona el valor\n"
+"mostrado en los LEDs.\n"
+"Cuando no está presionado el valor mostrado en\n"
+"los LEDs es la constante C.\n"
+"Cuando lo presionamos se apagan todos los LEDs."
+msgstr ""
+
+#: translation.js:1381
+msgid "02. Two LEDs"
+msgstr "02. Dos LEDs"
+
+#: translation.js:1382
+msgid "Turn on two LEDs"
+msgstr "Encender dos LEDs"
+
+#: translation.js:1383
+msgid ""
+"Esta es una variante\n"
+"para el 1 lógico"
+msgstr ""
+
+#: translation.js:1384
+msgid "09. OR 1 to all"
+msgstr "09. OR, 1 entrada a todos"
+
+#: translation.js:1385
+msgid ""
+"En este ejemplo el botón 1 condiciona el valor\n"
+"mostrado en los LEDs.\n"
+"Cuando no está presionado el valor mostrado en\n"
+"los LEDs es la constante C.\n"
+"Cuando lo presionamos se encienden todos los LEDs."
+msgstr ""
+
+#: translation.js:1386
+msgid "01. One LED"
+msgstr "01. Un LED"
+
+#: translation.js:1387
+msgid "Encender LED1"
+msgstr ""
+
+#: translation.js:1388
+msgid "06. CapSense and LEDs"
+msgstr "06. Botones capacitivos y LEDs"
+
+#: translation.js:1391
+msgid "03. Three LEDs"
+msgstr "03. Tres LEDs"
+
+#: translation.js:1392
+msgid "Turn on three LEDs"
+msgstr "Encender tres LEDs"
+
+#: translation.js:1393
+msgid "10. XOR 1 to all"
+msgstr "10. XOR, 1 entrada a todos"
+
+#: translation.js:1394
+msgid ""
+"En este ejemplo el botón 1 condiciona el valor\n"
+"mostrado en los LEDs.\n"
+"Cuando no está presionado el valor mostrado en\n"
+"los LEDs es la constante C.\n"
+"Cuando lo presionamos se invierten todos los LEDs.\n"
+"La XOR actúa como un inversor controlado."
+msgstr ""
+
+#: translation.js:1395
+msgid "04. Two LED blink"
+msgstr "04. Destellador de dos LEDs"
+
+#: translation.js:1396
+msgid "Blinking LED"
+msgstr "LED parpadeante"
+
+#: translation.js:1397
+msgid "Otra forma de hacerlo"
+msgstr ""
+
+#: translation.js:1398
+msgid "5. Aritmetica"
+msgstr "5. Aritmética"
+
+#: translation.js:1399
+msgid "03. Sumador"
+msgstr ""
+
+#: translation.js:1400 translation.js:1406 translation.js:1415
+#: translation.js:1426
+msgid ""
+"Ingresar aquí el valor\n"
+"de A, 2 bits (magnitud o\n"
+"entero)"
+msgstr ""
+
+#: translation.js:1401 translation.js:1407 translation.js:1416
+#: translation.js:1427
+msgid "Ingresar B, 2 bits\n"
+msgstr ""
+
+#: translation.js:1402 translation.js:1408
+msgid "Resultado de A+B"
+msgstr ""
+
+#: translation.js:1403 translation.js:1429
+msgid ""
+"Indicación de desborde\n"
+"Solo útil para enteros\n"
+"representados en \n"
+"complemento a 2"
+msgstr ""
+
+#: translation.js:1404 translation.js:1409
+msgid ""
+"Indicación de acarreo\n"
+"Solo útila para \n"
+"magnitudes"
+msgstr ""
+
+#: translation.js:1405
+msgid "04. Sumador Simple"
+msgstr ""
+
+#: translation.js:1410
+msgid "05. Complemento a 1"
+msgstr ""
+
+#: translation.js:1411 translation.js:1413 translation.js:1447
+msgid ""
+"Ingresar aquí el valor\n"
+"a compementar, 4 bits"
+msgstr ""
+
+#: translation.js:1412
+msgid "06. Incrementador"
+msgstr ""
+
+#: translation.js:1414
+msgid "09. Restador simple"
+msgstr ""
+
+#: translation.js:1417 translation.js:1428
+msgid "Resultado de A-B"
+msgstr ""
+
+#: translation.js:1418 translation.js:1430
+msgid ""
+"Indicación de borrow\n"
+"Solo útila para \n"
+"magnitudes"
+msgstr ""
+
+#: translation.js:1419
+msgid "02. Comparar >=,!=,<="
+msgstr ""
+
+#: translation.js:1420 translation.js:1432 translation.js:1441
+msgid ""
+"Ingresar aquí el valor\n"
+"de A, se compara con B."
+msgstr ""
+
+#: translation.js:1421 translation.js:1433 translation.js:1442
+msgid ""
+"En B ingresamos la \n"
+"referencia."
+msgstr ""
+
+#: translation.js:1422
+msgid "LED que indica que A≤B"
+msgstr ""
+
+#: translation.js:1423
+msgid "LED que indica que A≥B"
+msgstr ""
+
+#: translation.js:1424
+msgid "LED que indica que A≠B"
+msgstr ""
+
+#: translation.js:1425
+msgid "08. Restador"
+msgstr ""
+
+#: translation.js:1431
+msgid "01. Comparar >,=,<"
+msgstr ""
+
+#: translation.js:1434 translation.js:1443
+msgid "LED que indica que A>B"
+msgstr ""
+
+#: translation.js:1435 translation.js:1444
+msgid "LED que indica que A&lt;B"
+msgstr ""
+
+#: translation.js:1436 translation.js:1445
+msgid "LED que indica que A=B"
+msgstr ""
+
+#: translation.js:1437
+msgid "10. Sumador didáctico"
+msgstr ""
+
+#: translation.js:1438
+msgid ""
+"Ingresar aquí el valor\n"
+"de A, 4 bits (magnitud o\n"
+"entero)"
+msgstr ""
+
+#: translation.js:1439
+msgid "Ingresar B, 4 bits\n"
+msgstr ""
+
+#: translation.js:1440
+msgid "11. Comparar >,=,< didáctico"
+msgstr ""
+
+#: translation.js:1446
+msgid "07. Complemento a 2"
+msgstr ""
+
+#: translation.js:1448
+msgid "12. Extensión de signo"
+msgstr ""
+
+#: translation.js:1449
+msgid ""
+"Ingresar un valor entero (Ca2) de 2 bits (-2,-1,0 o 1)\n"
+"El 0 y 1 completan con dos 0s\n"
+"El -1 y el -2 con dos 1s\n"
+"De esta manera el valor de 4 bits sigue representando\n"
+"el mismo valor que el de 2 bits."
+msgstr ""
+
+#: translation.js:1450
+msgid "6. Comunicación"
+msgstr ""
+
+#: translation.js:1451
+msgid "04. Teclado PS2"
+msgstr ""
+
+#: translation.js:1452
+msgid "02. Recepción Serie"
+msgstr ""
+
+#: translation.js:1453
+msgid ""
+"  Este registro captura el valor recibido.\n"
+"  No hay garantía que el mismo permanezca\n"
+"sin cambios, por lo que siempre es \n"
+"necesario capturarlo."
+msgstr ""
+
+#: translation.js:1454
+msgid ""
+"  Este multiplexor elige que vemos\n"
+"en los LEDs:\n"
+"<ul><li><b>Botón 4 o nada</b>: los 4 bits más pesados \n"
+"recibidos</li><li><b>Botón 3</b>: los 4 bits menos pesados \n"
+"recibidos</li><li><b>Botón 2</b>: sin usar, todo 0</li><li><b>Botón 1</b>:"
+"<ul><li>LED4 cambia con cada recepción</li><li>LED2 DTR</li><li>LED1 RTS</"
+"li></ul></li></ul>"
+msgstr ""
+
+#: translation.js:1455
+msgid ""
+"Los botones 3 y 4 controlan\n"
+"CTS y DSR"
+msgstr ""
+
+#: translation.js:1456
+msgid ""
+"El botón 1 genera el código 11 ya\n"
+"que está conectado a i3.\n"
+"Así el 4 genera el código 0."
+msgstr ""
+
+#: translation.js:1457
+msgid "07. Teclado PS2 y LEDs 3"
+msgstr ""
+
+#: translation.js:1458
+msgid "06. Teclado PS2 y LEDs 2"
+msgstr ""
+
+#: translation.js:1459
+msgid "03. Recepción PS2"
+msgstr ""
+
+#: translation.js:1460
+msgid ""
+"Modulo lector de un teclado PS/2. Devuelve todos los codigos recibidos al "
+"pulsar una tecla. Emite un pulso para indicar que se ha recibido un dato"
+msgstr ""
+
+#: translation.js:1461
+msgid ""
+"Prueba de lectura del teclado PS/2\n"
+"Controlador de bajo nivel: todos los datos \n"
+"recibidos se muestran por los leds"
+msgstr ""
+
+#: translation.js:1462
+msgid ""
+"Es necesario registrar\n"
+"el valor cuando la señal\n"
+"de rdy lo indica."
+msgstr ""
+
+#: translation.js:1463
+msgid ""
+"Sólo enviamos\n"
+"por RS-232 los\n"
+"que no tengan\n"
+"error."
+msgstr ""
+
+#: translation.js:1464
+msgid ""
+"Las señales DBG_*\n"
+"son de depuración."
+msgstr ""
+
+#: translation.js:1465
+msgid "01. Transmisión Serie"
+msgstr ""
+
+#: translation.js:1466
+msgid ""
+"De la A a la Z más\n"
+"uno."
+msgstr ""
+
+#: translation.js:1467
+msgid ""
+"Cuando está en cuenta\n"
+"terminal (Z+1) envía\n"
+"un avance de línea (10)"
+msgstr ""
+
+#: translation.js:1468
+msgid ""
+"El botón 1 inicia una ráfaga de transmisión del abecedario.\n"
+"Los botones 2 y 3 controlan las señales CTS y DSR del modem.\n"
+"El LED1 indica que el transmisor está listo (se apaga al presionar el botón "
+"1).\n"
+"Las señales DTR y RTS del modem se indican en los LEDs 4 y 3."
+msgstr ""
+
+#: translation.js:1469
+msgid "05. Teclado PS2 y LEDs"
+msgstr ""
