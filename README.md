@@ -103,6 +103,9 @@ Collection for the Kefir I board in Icestudio.
       * 8 &rarr; 2/4
       * 4 &rarr; 2
       * 2 &rarr; 1
+    * *Reduce sequencial* send by parts
+      * 32 &rarr; 8/16
+      * 16 &rarr; 8
     * *Seleccionar* take a slice of a bus (conf. start)
       * 2 from 4
       * 2/4 from 8

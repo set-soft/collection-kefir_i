@@ -10,3 +10,6 @@
 "Reducir.ice.template" 32 8 "Reducir_32_8.ice"
 "Reducir.ice.template" 32 4 "Reducir_32_4.ice"
 "Reducir.ice.template" 32 2 "Reducir_32_2.ice"
+"ReduSec.ice.template" 16 8 "ReduSec_16_8.ice"
+"ReduSec.ice.template" 32 8 "ReduSec_32_8.ice"
+"ReduSec.ice.template" 32 16 "ReduSec_32_16.ice"

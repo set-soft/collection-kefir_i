@@ -1,0 +1,312 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Reducir en secuencia @sz_i -> @sz_o",
+    "version": "1.0.0",
+    "description": "Adapta @sz_i bits a @sz_o bits en @sz_i/@sz_o pasos",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<ReduSec.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 8,
+            "y": 72
+          }
+        },
+        {
+          "id": "output-in_empty",
+          "type": "basic.output",
+          "data": {
+            "name": "in_empty",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 104
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 8,
+            "y": 160
+          }
+        },
+        {
+          "id": "input-in_d",
+          "type": "basic.input",
+          "data": {
+            "name": "in_d"
+            @range_i,
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 8,
+            "y": 248
+          }
+        },
+        {
+          "id": "output-out",
+          "type": "basic.output",
+          "data": {
+            "name": "out"
+            @range_o,
+            "pins": [
+@pins_o
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 248
+          }
+        },
+        {
+          "id": "input-in_wr",
+          "type": "basic.input",
+          "data": {
+            "name": "in_wr",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 8,
+            "y": 336
+          }
+        },
+        {
+          "id": "output-out_wr",
+          "type": "basic.output",
+          "data": {
+            "name": "out_wr",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 392
+          }
+        },
+        {
+          "id": "input-out_full",
+          "type": "basic.input",
+          "data": {
+            "name": "out_full",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 8,
+            "y": 424
+          }
+        },
+        {
+          "id": "e2d05c2c-efb1-4289-b578-56066681949b",
+          "type": "basic.code",
+          "data": {
+            "code": "/***********************************************************************\n\n  Reducer\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  This file implements a generic M*N bits to N bits \"reducer\".\n  The component is little endian and needs M clocks to send the data.\n  It uses a FIFO style handshake. in_* signals are the M*N input and\n  out_* signals de N bits output.\n  When the input can accept more data in_empty_o is 1. Avoid writing\n  data (in_wr_i='1') when empty is 0.\n  When the out_d_o data is valid out_wr_o is 1. If you need to stop\n  the output (introducing wait states) just drive out_full_i to 1.\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti gov ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti gov ar>\n Copyright (c) 2017 Instituto Nacional de Tecnología Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      Reducer\n File name:        reducer.v\n Note:             None\n Limitations:      None\n Errors:           None known\n Library:          usb\n Dependencies:     -\n Target FPGA:      None\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  N/A\n Simulation tools: -\n Text editor:      SETEdit 0.5.8\n\n***********************************************************************/\n\n// Configuration\nlocalparam N_IN=@sz_i;\nlocalparam N_OUT=@sz_o;\n\nlocalparam integer STEPS=N_IN/N_OUT;\nlocalparam integer CNT_BITS=$clog2(STEPS);\nreg busy_r=0;\nreg [CNT_BITS-1:0] cnt_r;\nreg [N_IN-1:0] in_d_r;\nwire last;\nwire in_empty;\n\n// Handshake FSM\nalways @(posedge clk)\nbegin : do_fsm\n  if (rst)\n     begin\n     cnt_r  <= 0;\n     busy_r <= 0;\n     end\n  else // reset_i==0\n     begin\n     if (busy_r && !out_full)\n        begin\n        if (last)\n           begin\n           busy_r <= 0;\n           cnt_r  <= 0;\n           end\n        else\n           cnt_r  <= cnt_r+1;\n        end\n     if (in_wr)\n        begin\n        in_d_r <= in_d;\n        busy_r <= 1;\n        cnt_r  <= 0;\n        end\n     end\nend // do_fsm\n\nassign last=cnt_r==STEPS-1 && !out_full;\nassign in_empty=!busy_r || last;\nassign out_wr=!out_full && busy_r;\nassign in_empty=in_empty;\n\n// Output nibble multiplexer\ninteger i;\nreg [N_OUT-1:0] out_d_aux;\nalways @ (*)\nbegin : do_mux\n  for (i=0; i<N_OUT; i=i+1)\n      out_d_aux[i]=in_d_r[cnt_r*N_OUT+i];\nend // do_mux\nassign out_d=out_d_aux;",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "rst"
+                },
+                {
+                  "name": "in_d"
+                  @range_i,
+                  "size": @sz_i
+                },
+                {
+                  "name": "in_wr"
+                },
+                {
+                  "name": "out_full"
+                }
+              ],
+              "out": [
+                {
+                  "name": "in_empty"
+                },
+                {
+                  "name": "out_d"
+                  @range_o,
+                  "size": @sz_o
+                },
+                {
+                  "name": "out_wr"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 232,
+            "y": 64
+          },
+          "size": {
+            "width": 736,
+            "height": 432
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "rst"
+          }
+        },
+        {
+          "source": {
+            "block": "input-in_d",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "in_d"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "input-in_wr",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "in_wr"
+          }
+        },
+        {
+          "source": {
+            "block": "input-out_full",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "out_full"
+          }
+        },
+        {
+          "source": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "in_empty"
+          },
+          "target": {
+            "block": "output-in_empty",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "out_d"
+          },
+          "target": {
+            "block": "output-out",
+            "port": "in"
+          },
+          "size": @sz_o
+        },
+        {
+          "source": {
+            "block": "e2d05c2c-efb1-4289-b578-56066681949b",
+            "port": "out_wr"
+          },
+          "target": {
+            "block": "output-out_wr",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 359.5,
+        "y": 181.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
