@@ -32,10 +32,10 @@
           }
         },
         {
-          "id": "output-in_empty",
+          "id": "output-in_full",
           "type": "basic.output",
           "data": {
-            "name": "in_empty",
+            "name": "in_full",
             "pins": [
               {
                 "index": "0",
@@ -280,10 +280,10 @@
           }
         },
         {
-          "id": "output-out",
+          "id": "output-out_d",
           "type": "basic.output",
           "data": {
-            "name": "out"
+            "name": "out_d"
             ,"range": "[15:0]",
             "pins": [
 
@@ -431,10 +431,10 @@
           }
         },
         {
-          "id": "input-out_full",
+          "id": "input-out_empty",
           "type": "basic.input",
           "data": {
-            "name": "out_full",
+            "name": "out_empty",
             "pins": [
               {
                 "index": "0",
@@ -454,7 +454,7 @@
           "id": "e2d05c2c-efb1-4289-b578-56066681949b",
           "type": "basic.code",
           "data": {
-            "code": "/***********************************************************************\n\n  Reducer\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  This file implements a generic M*N bits to N bits \"reducer\".\n  The component is little endian and needs M clocks to send the data.\n  It uses a FIFO style handshake. in_* signals are the M*N input and\n  out_* signals de N bits output.\n  When the input can accept more data in_empty_o is 1. Avoid writing\n  data (in_wr_i='1') when empty is 0.\n  When the out_d_o data is valid out_wr_o is 1. If you need to stop\n  the output (introducing wait states) just drive out_full_i to 1.\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti gov ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti gov ar>\n Copyright (c) 2017 Instituto Nacional de Tecnología Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      Reducer\n File name:        reducer.v\n Note:             None\n Limitations:      None\n Errors:           None known\n Library:          usb\n Dependencies:     -\n Target FPGA:      None\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  N/A\n Simulation tools: -\n Text editor:      SETEdit 0.5.8\n\n***********************************************************************/\n\n// Configuration\nlocalparam N_IN=32;\nlocalparam N_OUT=16;\n\nlocalparam integer STEPS=N_IN/N_OUT;\nlocalparam integer CNT_BITS=$clog2(STEPS);\nreg busy_r=0;\nreg [CNT_BITS-1:0] cnt_r;\nreg [N_IN-1:0] in_d_r;\nwire last;\nwire in_empty;\n\n// Handshake FSM\nalways @(posedge clk)\nbegin : do_fsm\n  if (rst)\n     begin\n     cnt_r  <= 0;\n     busy_r <= 0;\n     end\n  else // reset_i==0\n     begin\n     if (busy_r && !out_full)\n        begin\n        if (last)\n           begin\n           busy_r <= 0;\n           cnt_r  <= 0;\n           end\n        else\n           cnt_r  <= cnt_r+1;\n        end\n     if (in_wr)\n        begin\n        in_d_r <= in_d;\n        busy_r <= 1;\n        cnt_r  <= 0;\n        end\n     end\nend // do_fsm\n\nassign last=cnt_r==STEPS-1 && !out_full;\nassign in_empty=!busy_r || last;\nassign out_wr=!out_full && busy_r;\nassign in_empty=in_empty;\n\n// Output nibble multiplexer\ninteger i;\nreg [N_OUT-1:0] out_d_aux;\nalways @ (*)\nbegin : do_mux\n  for (i=0; i<N_OUT; i=i+1)\n      out_d_aux[i]=in_d_r[cnt_r*N_OUT+i];\nend // do_mux\nassign out_d=out_d_aux;",
+            "code": "/***********************************************************************\n\n  Reducer\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  This file implements a generic M*N bits to N bits \"reducer\".\n  The component is little endian and needs M clocks to send the data.\n  It uses a FIFO style handshake. in_* signals are the M*N input and\n  out_* signals de N bits output.\n  When the input can accept more data in_full is 0. Avoid writing\n  data (in_wr_i='1') when empty is 1.\n  When the out_d_o data is valid out_wr_o is 1. If you need to stop\n  the output (introducing wait states) just drive out_empty_i to 0.\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti gov ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti gov ar>\n Copyright (c) 2017 Instituto Nacional de Tecnología Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      Reducer\n File name:        reducer.v\n Note:             None\n Limitations:      None\n Errors:           None known\n Library:          usb\n Dependencies:     -\n Target FPGA:      None\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  N/A\n Simulation tools: -\n Text editor:      SETEdit 0.5.8\n\n***********************************************************************/\n\n// Configuration\nlocalparam N_IN=32;\nlocalparam N_OUT=16;\n\nlocalparam integer STEPS=N_IN/N_OUT;\nlocalparam integer CNT_BITS=$clog2(STEPS);\nreg busy_r=0;\nreg [CNT_BITS-1:0] cnt_r;\nreg [N_IN-1:0] in_d_r;\nwire last;\nwire in_full_aux;\n\n// Handshake FSM\nalways @(posedge clk)\nbegin : do_fsm\n  if (rst)\n     begin\n     cnt_r  <= 0;\n     busy_r <= 0;\n     end\n  else // reset_i==0\n     begin\n     if (busy_r && out_empty)\n        begin\n        if (last)\n           begin\n           busy_r <= 0;\n           cnt_r  <= 0;\n           end\n        else\n           cnt_r  <= cnt_r+1;\n        end\n     if (in_wr)\n        begin\n        in_d_r <= in_d;\n        busy_r <= 1;\n        cnt_r  <= 0;\n        end\n     end\nend // do_fsm\n\nassign last=cnt_r==STEPS-1 && out_empty;\nassign in_full_aux=busy_r && !last;\nassign out_wr=out_empty && busy_r;\nassign in_full=in_full_aux;\n\n// Output nibble multiplexer\ninteger i;\nreg [N_OUT-1:0] out_d_aux;\nalways @ (*)\nbegin : do_mux\n  for (i=0; i<N_OUT; i=i+1)\n      out_d_aux[i]=in_d_r[cnt_r*N_OUT+i];\nend // do_mux\nassign out_d=out_d_aux;",
             "params": [],
             "ports": {
               "in": [
@@ -473,12 +473,12 @@
                   "name": "in_wr"
                 },
                 {
-                  "name": "out_full"
+                  "name": "out_empty"
                 }
               ],
               "out": [
                 {
-                  "name": "in_empty"
+                  "name": "in_full"
                 },
                 {
                   "name": "out_d"
@@ -545,21 +545,21 @@
         },
         {
           "source": {
-            "block": "input-out_full",
+            "block": "input-out_empty",
             "port": "out"
           },
           "target": {
             "block": "e2d05c2c-efb1-4289-b578-56066681949b",
-            "port": "out_full"
+            "port": "out_empty"
           }
         },
         {
           "source": {
             "block": "e2d05c2c-efb1-4289-b578-56066681949b",
-            "port": "in_empty"
+            "port": "in_full"
           },
           "target": {
-            "block": "output-in_empty",
+            "block": "output-in_full",
             "port": "in"
           }
         },
@@ -569,7 +569,7 @@
             "port": "out_d"
           },
           "target": {
-            "block": "output-out",
+            "block": "output-out_d",
             "port": "in"
           },
           "size": 16

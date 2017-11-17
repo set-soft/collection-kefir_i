@@ -359,7 +359,7 @@
         },
         {
           "id": "f7137891-4be2-44cf-bc5a-54f4544ca873",
-          "type": "13bc236570efa846043c280411bcdacadd32e049",
+          "type": "b3866eb320919adb6383993b7643238778e5515d",
           "position": {
             "x": 192,
             "y": -24
@@ -373,8 +373,8 @@
           "id": "3b0119a8-8cdb-4e54-9d48-48f31178bb9c",
           "type": "9e8fb8e66f2d2dae541ef4eda9196ee8db33a92b",
           "position": {
-            "x": 40,
-            "y": 136
+            "x": -176,
+            "y": -24
           },
           "size": {
             "width": 96,
@@ -425,7 +425,7 @@
           "id": "771c2f7c-8b96-4c3b-84c9-c8825c748075",
           "type": "basic.info",
           "data": {
-            "info": "<b>Arbitraje de la entrada</b>:\n  Sólo transmitimos cuando hay espacio en <b>Reduce</b>, es decir <tt>in_empty</tt> es 1.\n  Sólo transmitimos una palabra por cada vez que se presiona el botón 1, por eso usamos\nel detector de flanco.\n\n<b>Arbitraje de la salida</b>:\n  Sólo indicamos <tt>start</tt> cuando <tt>rdy</tt> es 0, es decir que el transmisor no\nestá <i>full</i>.\n  El comienzo (<tt>start</tt>) es controlado por <tt>out_wr</tt> que sólo escribe cuando\n<tt>out_full</tt> es 0.",
+            "info": "<b>Arbitraje de la entrada</b>:\n  Sólo transmitimos cuando hay espacio en <b>Reduce</b>, es decir <tt>in_full</tt> es 0.\n  Sólo transmitimos una palabra por cada vez que se presiona el botón 1, por eso usamos\nel detector de flanco.\n\n<b>Arbitraje de la salida</b>:\n  Sólo indicamos <tt>start</tt> cuando <tt>rdy</tt> es 1, es decir que el transmisor \nestá <i>empty</i>.\n  El comienzo (<tt>start</tt>) es controlado por <tt>out_wr</tt> que sólo escribe cuando\n<tt>out_empty</tt> es 1.",
             "readonly": true
           },
           "position": {
@@ -622,43 +622,6 @@
         },
         {
           "source": {
-            "block": "f7137891-4be2-44cf-bc5a-54f4544ca873",
-            "port": "output-out"
-          },
-          "target": {
-            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
-            "port": "input-data"
-          },
-          "size": 8
-        },
-        {
-          "source": {
-            "block": "3b0119a8-8cdb-4e54-9d48-48f31178bb9c",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "f7137891-4be2-44cf-bc5a-54f4544ca873",
-            "port": "input-out_full"
-          }
-        },
-        {
-          "source": {
-            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
-            "port": "output-rdy"
-          },
-          "target": {
-            "block": "3b0119a8-8cdb-4e54-9d48-48f31178bb9c",
-            "port": "input-1"
-          },
-          "vertices": [
-            {
-              "x": 632,
-              "y": 232
-            }
-          ]
-        },
-        {
-          "source": {
             "block": "6716dce0-0744-43fe-b3b6-f97fc2cc318e",
             "port": "output-q"
           },
@@ -685,22 +648,6 @@
         },
         {
           "source": {
-            "block": "f7137891-4be2-44cf-bc5a-54f4544ca873",
-            "port": "output-in_empty"
-          },
-          "target": {
-            "block": "c1fb0af9-6b9a-4f8b-8b39-db83495352cb",
-            "port": "input-i1"
-          },
-          "vertices": [
-            {
-              "x": 360,
-              "y": -104
-            }
-          ]
-        },
-        {
-          "source": {
             "block": "7ed013bb-a223-4b5a-81be-de1938bdc199",
             "port": "output-K"
           },
@@ -719,13 +666,70 @@
             "block": "7ed013bb-a223-4b5a-81be-de1938bdc199",
             "port": "constant-V"
           }
+        },
+        {
+          "source": {
+            "block": "f7137891-4be2-44cf-bc5a-54f4544ca873",
+            "port": "output-out_d"
+          },
+          "target": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "input-data"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "f7137891-4be2-44cf-bc5a-54f4544ca873",
+            "port": "output-in_full"
+          },
+          "target": {
+            "block": "3b0119a8-8cdb-4e54-9d48-48f31178bb9c",
+            "port": "input-1"
+          },
+          "vertices": [
+            {
+              "x": 344,
+              "y": 0
+            },
+            {
+              "x": -168,
+              "y": -160
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "3b0119a8-8cdb-4e54-9d48-48f31178bb9c",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "c1fb0af9-6b9a-4f8b-8b39-db83495352cb",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "296c5bc2-4106-472a-9e9f-31f9b5416cc6",
+            "port": "output-rdy"
+          },
+          "target": {
+            "block": "f7137891-4be2-44cf-bc5a-54f4544ca873",
+            "port": "input-out_empty"
+          },
+          "vertices": [
+            {
+              "x": 616,
+              "y": 192
+            }
+          ]
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 928,
-        "y": 252.5668
+        "x": 948,
+        "y": 272.5668
       },
       "zoom": 1
     }
@@ -7417,7 +7421,7 @@
     }
   }
     },
-    "13bc236570efa846043c280411bcdacadd32e049": {
+    "b3866eb320919adb6383993b7643238778e5515d": {
   "package": {
     "name": "Reducir en secuencia 32 -> 8",
     "version": "1.0.0",
@@ -7441,10 +7445,10 @@
           }
         },
         {
-          "id": "output-in_empty",
+          "id": "output-in_full",
           "type": "basic.output",
           "data": {
-            "name": "in_empty"
+            "name": "in_full"
           },
           "position": {
             "x": 1096,
@@ -7478,10 +7482,10 @@
           }
         },
         {
-          "id": "output-out",
+          "id": "output-out_d",
           "type": "basic.output",
           "data": {
-            "name": "out"
+            "name": "out_d"
             ,"range": "[7:0]"
 ,"size": 8
           },
@@ -7514,10 +7518,10 @@
           }
         },
         {
-          "id": "input-out_full",
+          "id": "input-out_empty",
           "type": "basic.input",
           "data": {
-            "name": "out_full",
+            "name": "out_empty",
             "clock": false
           },
           "position": {
@@ -7529,7 +7533,7 @@
           "id": "e2d05c2c-efb1-4289-b578-56066681949b",
           "type": "basic.code",
           "data": {
-            "code": "/***********************************************************************\n\n  Reducer\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  This file implements a generic M*N bits to N bits \"reducer\".\n  The component is little endian and needs M clocks to send the data.\n  It uses a FIFO style handshake. in_* signals are the M*N input and\n  out_* signals de N bits output.\n  When the input can accept more data in_empty_o is 1. Avoid writing\n  data (in_wr_i='1') when empty is 0.\n  When the out_d_o data is valid out_wr_o is 1. If you need to stop\n  the output (introducing wait states) just drive out_full_i to 1.\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti gov ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti gov ar>\n Copyright (c) 2017 Instituto Nacional de Tecnología Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      Reducer\n File name:        reducer.v\n Note:             None\n Limitations:      None\n Errors:           None known\n Library:          usb\n Dependencies:     -\n Target FPGA:      None\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  N/A\n Simulation tools: -\n Text editor:      SETEdit 0.5.8\n\n***********************************************************************/\n\n// Configuration\nlocalparam N_IN=32;\nlocalparam N_OUT=8;\n\nlocalparam integer STEPS=N_IN/N_OUT;\nlocalparam integer CNT_BITS=$clog2(STEPS);\nreg busy_r=0;\nreg [CNT_BITS-1:0] cnt_r;\nreg [N_IN-1:0] in_d_r;\nwire last;\nwire in_empty;\n\n// Handshake FSM\nalways @(posedge clk)\nbegin : do_fsm\n  if (rst)\n     begin\n     cnt_r  <= 0;\n     busy_r <= 0;\n     end\n  else // reset_i==0\n     begin\n     if (busy_r && !out_full)\n        begin\n        if (last)\n           begin\n           busy_r <= 0;\n           cnt_r  <= 0;\n           end\n        else\n           cnt_r  <= cnt_r+1;\n        end\n     if (in_wr)\n        begin\n        in_d_r <= in_d;\n        busy_r <= 1;\n        cnt_r  <= 0;\n        end\n     end\nend // do_fsm\n\nassign last=cnt_r==STEPS-1 && !out_full;\nassign in_empty=!busy_r || last;\nassign out_wr=!out_full && busy_r;\nassign in_empty=in_empty;\n\n// Output nibble multiplexer\ninteger i;\nreg [N_OUT-1:0] out_d_aux;\nalways @ (*)\nbegin : do_mux\n  for (i=0; i<N_OUT; i=i+1)\n      out_d_aux[i]=in_d_r[cnt_r*N_OUT+i];\nend // do_mux\nassign out_d=out_d_aux;",
+            "code": "/***********************************************************************\n\n  Reducer\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  This file implements a generic M*N bits to N bits \"reducer\".\n  The component is little endian and needs M clocks to send the data.\n  It uses a FIFO style handshake. in_* signals are the M*N input and\n  out_* signals de N bits output.\n  When the input can accept more data in_full is 0. Avoid writing\n  data (in_wr_i='1') when empty is 1.\n  When the out_d_o data is valid out_wr_o is 1. If you need to stop\n  the output (introducing wait states) just drive out_empty_i to 0.\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti gov ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti gov ar>\n Copyright (c) 2017 Instituto Nacional de Tecnología Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      Reducer\n File name:        reducer.v\n Note:             None\n Limitations:      None\n Errors:           None known\n Library:          usb\n Dependencies:     -\n Target FPGA:      None\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  N/A\n Simulation tools: -\n Text editor:      SETEdit 0.5.8\n\n***********************************************************************/\n\n// Configuration\nlocalparam N_IN=32;\nlocalparam N_OUT=8;\n\nlocalparam integer STEPS=N_IN/N_OUT;\nlocalparam integer CNT_BITS=$clog2(STEPS);\nreg busy_r=0;\nreg [CNT_BITS-1:0] cnt_r;\nreg [N_IN-1:0] in_d_r;\nwire last;\nwire in_full_aux;\n\n// Handshake FSM\nalways @(posedge clk)\nbegin : do_fsm\n  if (rst)\n     begin\n     cnt_r  <= 0;\n     busy_r <= 0;\n     end\n  else // reset_i==0\n     begin\n     if (busy_r && out_empty)\n        begin\n        if (last)\n           begin\n           busy_r <= 0;\n           cnt_r  <= 0;\n           end\n        else\n           cnt_r  <= cnt_r+1;\n        end\n     if (in_wr)\n        begin\n        in_d_r <= in_d;\n        busy_r <= 1;\n        cnt_r  <= 0;\n        end\n     end\nend // do_fsm\n\nassign last=cnt_r==STEPS-1 && out_empty;\nassign in_full_aux=busy_r && !last;\nassign out_wr=out_empty && busy_r;\nassign in_full=in_full_aux;\n\n// Output nibble multiplexer\ninteger i;\nreg [N_OUT-1:0] out_d_aux;\nalways @ (*)\nbegin : do_mux\n  for (i=0; i<N_OUT; i=i+1)\n      out_d_aux[i]=in_d_r[cnt_r*N_OUT+i];\nend // do_mux\nassign out_d=out_d_aux;",
             "params": [],
             "ports": {
               "in": [
@@ -7548,12 +7552,12 @@
                   "name": "in_wr"
                 },
                 {
-                  "name": "out_full"
+                  "name": "out_empty"
                 }
               ],
               "out": [
                 {
-                  "name": "in_empty"
+                  "name": "in_full"
                 },
                 {
                   "name": "out_d"
@@ -7620,21 +7624,21 @@
         },
         {
           "source": {
-            "block": "input-out_full",
+            "block": "input-out_empty",
             "port": "out"
           },
           "target": {
             "block": "e2d05c2c-efb1-4289-b578-56066681949b",
-            "port": "out_full"
+            "port": "out_empty"
           }
         },
         {
           "source": {
             "block": "e2d05c2c-efb1-4289-b578-56066681949b",
-            "port": "in_empty"
+            "port": "in_full"
           },
           "target": {
-            "block": "output-in_empty",
+            "block": "output-in_full",
             "port": "in"
           }
         },
@@ -7644,7 +7648,7 @@
             "port": "out_d"
           },
           "target": {
-            "block": "output-out",
+            "block": "output-out_d",
             "port": "in"
           },
           "size": 8
