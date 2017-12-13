@@ -124,7 +124,7 @@
         },
         {
           "id": "9f2d6354-6c21-48c8-b5c6-0e467c5489cc",
-          "type": "@sha1<./blocks/Varios/Memoria/FIFO_16x8.ice>",
+          "type": "@sha1<./blocks/Varios/Memoria/FIFO/FIFO_16x8.ice>",
           "position": {
             "x": 584,
             "y": 184
