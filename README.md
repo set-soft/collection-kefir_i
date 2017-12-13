@@ -153,6 +153,8 @@ Collection for the Kefir I board in Icestudio.
     * Without enable (2/4/8 outputs)
   * *Demultiplexers*
     * With enable (2/4/8 outputs)
+  * *Memoria*
+    * FIFO 8 bits (8/16/32/64/128/256/512 bytes)
   * *Multiplexores* Multiplexers
     * *2 channels* (1/2/4/8/16/32)
     * *4 channels* (1/2/4/8/16/32)
@@ -171,6 +173,7 @@ Collection for the Kefir I board in Icestudio.
     * *Shift Left Simple* (3/4/8/16/32)
   * *Reset*
     * *Power on Reset*
+    * *Power on Reset long*
 
 ## Examples
 * *1\. Basic*
@@ -227,6 +230,8 @@ Collection for the Kefir I board in Icestudio.
   * 05\. Teclado PS2 y LEDs
   * 06\. Teclado PS2 y LEDs 2
   * 07\. Teclado PS2 y LEDs 3
+* *7\. Memoria*
+  * 01\. FIFO 16x8 contador
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)

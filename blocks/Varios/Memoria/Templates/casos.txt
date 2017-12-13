@@ -1,0 +1,7 @@
+"FIFO.ice.template" 8 3 "FIFO_8x8.ice"
+"FIFO.ice.template" 8 4 "FIFO_16x8.ice"
+"FIFO.ice.template" 8 5 "FIFO_32x8.ice"
+"FIFO.ice.template" 8 6 "FIFO_64x8.ice"
+"FIFO.ice.template" 8 7 "FIFO_128x8.ice"
+"FIFO.ice.template" 8 8 "FIFO_256x8.ice"
+"FIFO.ice.template" 8 9 "FIFO_512x8.ice"

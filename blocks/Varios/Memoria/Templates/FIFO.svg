@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="61.789" width="37.579" version="1.1" viewBox="0 0 35.229905 57.926695">
+<defs>
+<marker id="Arrow2Mstart" refY="0" refX="0" orient="auto" overflow="visible">
+<path stroke-linejoin="round" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" transform="scale(.6)" stroke="#000" stroke-width=".625"/>
+</marker>
+<marker id="marker4912" refY="0" refX="0" orient="auto" overflow="visible">
+<path stroke-linejoin="round" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" transform="scale(-.6)" stroke="#000" stroke-width=".625"/>
+</marker>
+</defs>
+<text style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" xml:space="preserve" font-size="12.858px" line-height="125%" y="11.418015" x="0.69466263" fill="#000000"><tspan font-family="sans-serif" y="11.418015" x="0.69466263" font-weight="bold">FIFO</tspan></text>
+<g transform="translate(9.3306 -1.9482)">
+<g stroke="#040404" stroke-width=".93146" fill="#0000f7">
+<rect rx="0" ry="2.9283" height="6.7427" width="20.406" y="23.811" x="-2.2743"/>
+<rect rx="0" ry="2.9283" height="6.7427" width="20.406" y="32.721" x="-2.2743"/>
+<rect rx="0" ry="2.9283" height="6.7427" width="20.406" y="41.631" x="-2.2743"/>
+</g>
+<path marker-end="url(#marker4912)" d="m-2.3127 16.383c5.0486 0.333 6.3701-1.647 12.98 5.43" stroke="#000" stroke-width="1.1906" fill="none"/>
+<path d="m16.008 55.334c-5.049-0.333-6.3704 1.647-12.98-5.429" marker-start="url(#Arrow2Mstart)" stroke="#000" stroke-width="1.1906" fill="none"/>
+</g>
+</svg>

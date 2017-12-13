@@ -1,0 +1,376 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "FIFO @sz_2p_ox@sz_i bits",
+    "version": "1.0.0",
+    "description": "FIFO de @sz_2p_o palabras de @sz_i bits",
+    "author": "Salvador E. Tropea et al",
+    "image": "@svg<FIFO.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 152,
+            "y": 88
+          }
+        },
+        {
+          "id": "output-datao",
+          "type": "basic.output",
+          "data": {
+            "name": "datao",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1136,
+            "y": 88
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 192
+          }
+        },
+        {
+          "id": "output-full",
+          "type": "basic.output",
+          "data": {
+            "name": "full",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1136,
+            "y": 192
+          }
+        },
+        {
+          "id": "input-we",
+          "type": "basic.input",
+          "data": {
+            "name": "we",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 296
+          }
+        },
+        {
+          "id": "output-avail",
+          "type": "basic.output",
+          "data": {
+            "name": "avail",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1136,
+            "y": 296
+          }
+        },
+        {
+          "id": "input-re",
+          "type": "basic.input",
+          "data": {
+            "name": "re",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 400
+          }
+        },
+        {
+          "id": "output-empty",
+          "type": "basic.output",
+          "data": {
+            "name": "empty",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1136,
+            "y": 400
+          }
+        },
+        {
+          "id": "input-datai",
+          "type": "basic.input",
+          "data": {
+            "name": "datai",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 152,
+            "y": 504
+          }
+        },
+        {
+          "id": "output-used",
+          "type": "basic.output",
+          "data": {
+            "name": "used",
+            "range": "@range_sp1_o",
+            "pins": [
+@pins_p1_o
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1136,
+            "y": 504
+          }
+        },
+        {
+          "id": "66f96010-773d-4516-b4e5-11be6ab2c472",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam ADDR_W=@sz_o;\nlocalparam DATA_W=@sz_i;\nlocalparam DEPTH=@sz_2p_o;\n@verilog<fifo.v>",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "rst"
+                },
+                {
+                  "name": "we"
+                },
+                {
+                  "name": "re"
+                },
+                {
+                  "name": "datai",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                }
+              ],
+              "out": [
+                {
+                  "name": "datao",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                },
+                {
+                  "name": "full"
+                },
+                {
+                  "name": "avail"
+                },
+                {
+                  "name": "empty"
+                },
+                {
+                  "name": "used",
+                  "range": "@range_sp1_o",
+                  "size": @sz_p1_o
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 328,
+            "y": 72
+          },
+          "size": {
+            "width": 720,
+            "height": 512
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "rst"
+          }
+        },
+        {
+          "source": {
+            "block": "input-we",
+            "port": "out"
+          },
+          "target": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "we"
+          }
+        },
+        {
+          "source": {
+            "block": "input-re",
+            "port": "out"
+          },
+          "target": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "re"
+          }
+        },
+        {
+          "source": {
+            "block": "input-datai",
+            "port": "out"
+          },
+          "target": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "datai"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "full"
+          },
+          "target": {
+            "block": "output-full",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "avail"
+          },
+          "target": {
+            "block": "output-avail",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "empty"
+          },
+          "target": {
+            "block": "output-empty",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "used"
+          },
+          "target": {
+            "block": "output-used",
+            "port": "in"
+          },
+          "size": @sz_p1_o
+        },
+        {
+          "source": {
+            "block": "66f96010-773d-4516-b4e5-11be6ab2c472",
+            "port": "datao"
+          },
+          "target": {
+            "block": "output-datao",
+            "port": "in"
+          },
+          "size": @sz_i
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 100,
+        "y": 30
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
