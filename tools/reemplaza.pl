@@ -137,6 +137,8 @@ if ($c>0)
       {
        $pins=GenPins($i);
        $a=~s/\@pins_i$c/$pins/g;
+       $pins_p1=GenPins($i+1);
+       $a=~s/\@pins_p1_i/$pins_p1/g;
        print " Size i$c=$i\n";
        $a=~s/\@sz_i$c/$i/g;
        if ($i>1)
@@ -231,16 +233,24 @@ else
    $i=$ins;
    $pins=GenPins($i);
    $a=~s/\@pins_i/$pins/g;
+   $pins_p1=GenPins($i+1);
+   $a=~s/\@pins_p1_i/$pins_p1/g;
    print "Input:\n";
    print " Size i=$i\n";
    $a=~s/\@sz_i/$i/g;
+   $aux=2**$i;
+   $a=~s/\@sz_2p_i/$aux/g;
+   $aux=$i+1;
+   $a=~s/\@sz_p1_i/$aux/g;
    if ($i>1)
      {
       $a=~s/\@size_i/,\"size\": $i/g;
       $range='['.($i-1).':0]';
+      $range_p1="[$i:0]";
       print " Range i=$range\n";
       $a=~s/\@range_i/,\"range\": \"$range\"/g;
       $a=~s/\@range_s_i/$range/g;
+      $a=~s/\@range_sp1_i/$range_p1/g;
       $a=~s/\@range_s2_i/$range/g;
       $code_and_bi='';
       $code_or_bi='';
@@ -291,6 +301,8 @@ if ($c>0)
       {
        $pins=GenPins($o);
        $a=~s/\@pins_o$c/$pins/g;
+       $pins_p1=GenPins($o+1);
+       $a=~s/\@pins_p1_o/$pins_p1/g;
        print " Size o$c=$o\n";
        $a=~s/\@sz_o$c/$o/g;
        if ($o>1)
@@ -380,16 +392,24 @@ else
    $o=$outs;
    $pins=GenPins($o);
    $a=~s/\@pins_o/$pins/g;
+   $pins_p1=GenPins($o+1);
+   $a=~s/\@pins_p1_o/$pins_p1/g;
    print "Output:\n";
    print " Size o=$o\n";
    $a=~s/\@sz_o/$o/g;
+   $aux=2**$o;
+   $a=~s/\@sz_2p_o/$aux/g;
+   $aux=$o+1;
+   $a=~s/\@sz_p1_o/$aux/g;
    if ($o>1)
      {
       $a=~s/\@size_o/,\"size\": $o/g;
       $range='['.($o-1).':0]';
+      $range_p1="[$o:0]";
       print " Range o=$range\n";
       $a=~s/\@range_o/,\"range\": \"$range\"/g;
       $a=~s/\@range_s_o/$range/g;
+      $a=~s/\@range_sp1_o/$range_p1/g;
       $a=~s/\@range_s2_o/$range/g;
      }
    else

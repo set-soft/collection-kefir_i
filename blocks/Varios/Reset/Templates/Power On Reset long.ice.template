@@ -1,9 +1,9 @@
 {
   "version": "1.1",
   "package": {
-    "name": "Power On Reset",
+    "name": "Power On Reset long",
     "version": "1.0.0",
-    "description": "Pulso de reset inicial",
+    "description": "Pulso de reset inicial largo (64 pulsos de reloj)",
     "author": "Salvador E. Tropea",
     "image": "@svg<POR2.svg>"
   },
@@ -46,7 +46,7 @@
             "virtual": true
           },
           "position": {
-            "x": 704,
+            "x": 776,
             "y": 376
           }
         },
@@ -54,7 +54,7 @@
           "id": "d3940fb9-78be-41c1-989f-5a9b4ddf21a7",
           "type": "basic.code",
           "data": {
-            "code": "reg q=0;\n\nalways @(posedge clk)\nbegin : do_reset\n  if (!q)\n     q <= 1;\nend // do_reset\n\nassign rst=~q;",
+            "code": "reg  [5:0] cntrst_r=6'b0;\n\nalways @(posedge clk)\nbegin : do_rst\n  if (cntrst_r!=6'b111111)\n     cntrst_r <= cntrst_r+1;\nend // do_rst\nassign rst=cntrst_r!=6'b111111;",
             "params": [],
             "ports": {
               "in": [
@@ -74,7 +74,7 @@
             "y": 304
           },
           "size": {
-            "width": 288,
+            "width": 336,
             "height": 208
           }
         }
@@ -104,10 +104,10 @@
     },
     "state": {
       "pan": {
-        "x": 0,
-        "y": 0
+        "x": -383.944,
+        "y": -429.0448
       },
-      "zoom": 1
+      "zoom": 1.9303
     }
   },
   "dependencies": {
