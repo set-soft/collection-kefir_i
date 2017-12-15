@@ -159,18 +159,6 @@
           }
         },
         {
-          "id": "72a5575c-410c-4a27-9e0c-eef0e741d68f",
-          "type": "@sha1<./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_4.ice>",
-          "position": {
-            "x": 152,
-            "y": 336
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
           "id": "82d9257c-8632-448e-a4e2-603133e32678",
           "type": "@sha1<./blocks/Const/Bus/1s/Valor_1s_4_bits.ice>",
           "position": {
@@ -297,28 +285,6 @@
               "y": 112
             }
           ]
-        },
-        {
-          "source": {
-            "block": "db2de2c2-57a4-4bf9-95c2-99d65c1e1275",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "72a5575c-410c-4a27-9e0c-eef0e741d68f",
-            "port": "input-A"
-          },
-          "size": 4
-        },
-        {
-          "source": {
-            "block": "72a5575c-410c-4a27-9e0c-eef0e741d68f",
-            "port": "output-S"
-          },
-          "target": {
-            "block": "15792a58-97ee-49bb-b161-daa52793621f",
-            "port": "input-l"
-          },
-          "size": 4
         },
         {
           "source": {
@@ -472,22 +438,6 @@
         },
         {
           "source": {
-            "block": "1d26f77e-b3f2-45a2-b172-b7952575e64a",
-            "port": "output-q"
-          },
-          "target": {
-            "block": "b6fe65f5-1d43-40f1-8d6b-01ef7bfe1436",
-            "port": "input-we"
-          },
-          "vertices": [
-            {
-              "x": 464,
-              "y": 232
-            }
-          ]
-        },
-        {
-          "source": {
             "block": "7f871f74-e513-404a-b9f8-ecdc2b116ee1",
             "port": "output-q"
           },
@@ -501,15 +451,42 @@
               "y": 408
             }
           ]
+        },
+        {
+          "source": {
+            "block": "1d26f77e-b3f2-45a2-b172-b7952575e64a",
+            "port": "output-nq"
+          },
+          "target": {
+            "block": "b6fe65f5-1d43-40f1-8d6b-01ef7bfe1436",
+            "port": "input-we"
+          },
+          "vertices": [
+            {
+              "x": 456,
+              "y": 280
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "db2de2c2-57a4-4bf9-95c2-99d65c1e1275",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "15792a58-97ee-49bb-b161-daa52793621f",
+            "port": "input-l"
+          },
+          "size": 4
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 390.5,
-        "y": 296.4766
+        "x": 206.6667,
+        "y": 242.8497
       },
-      "zoom": 1
+      "zoom": 0.7716
     }
   },
   "dependencies": {

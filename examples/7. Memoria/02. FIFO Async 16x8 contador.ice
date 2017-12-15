@@ -159,18 +159,6 @@
           }
         },
         {
-          "id": "72a5575c-410c-4a27-9e0c-eef0e741d68f",
-          "type": "aa9a5765b7a4e8261c5d342fbf1bffa6bdf0583b",
-          "position": {
-            "x": 152,
-            "y": 336
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
           "id": "82d9257c-8632-448e-a4e2-603133e32678",
           "type": "07f96b4e2d4c5a22d879b35d646a8e9aced69718",
           "position": {
@@ -297,28 +285,6 @@
               "y": 112
             }
           ]
-        },
-        {
-          "source": {
-            "block": "db2de2c2-57a4-4bf9-95c2-99d65c1e1275",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "72a5575c-410c-4a27-9e0c-eef0e741d68f",
-            "port": "input-A"
-          },
-          "size": 4
-        },
-        {
-          "source": {
-            "block": "72a5575c-410c-4a27-9e0c-eef0e741d68f",
-            "port": "output-S"
-          },
-          "target": {
-            "block": "15792a58-97ee-49bb-b161-daa52793621f",
-            "port": "input-l"
-          },
-          "size": 4
         },
         {
           "source": {
@@ -472,22 +438,6 @@
         },
         {
           "source": {
-            "block": "1d26f77e-b3f2-45a2-b172-b7952575e64a",
-            "port": "output-q"
-          },
-          "target": {
-            "block": "b6fe65f5-1d43-40f1-8d6b-01ef7bfe1436",
-            "port": "input-we"
-          },
-          "vertices": [
-            {
-              "x": 464,
-              "y": 232
-            }
-          ]
-        },
-        {
-          "source": {
             "block": "7f871f74-e513-404a-b9f8-ecdc2b116ee1",
             "port": "output-q"
           },
@@ -501,15 +451,42 @@
               "y": 408
             }
           ]
+        },
+        {
+          "source": {
+            "block": "1d26f77e-b3f2-45a2-b172-b7952575e64a",
+            "port": "output-nq"
+          },
+          "target": {
+            "block": "b6fe65f5-1d43-40f1-8d6b-01ef7bfe1436",
+            "port": "input-we"
+          },
+          "vertices": [
+            {
+              "x": 456,
+              "y": 280
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "db2de2c2-57a4-4bf9-95c2-99d65c1e1275",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "15792a58-97ee-49bb-b161-daa52793621f",
+            "port": "input-l"
+          },
+          "size": 4
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 390.5,
-        "y": 296.4766
+        "x": 206.6667,
+        "y": 242.8497
       },
-      "zoom": 1
+      "zoom": 0.7716
     }
   },
   "dependencies": {
@@ -4180,212 +4157,6 @@
       "pan": {
         "x": -63.5,
         "y": 58
-      },
-      "zoom": 1
-    }
-  }
-    },
-    "aa9a5765b7a4e8261c5d342fbf1bffa6bdf0583b": {
-  "package": {
-    "name": "Complemento a 1 de 4 bits",
-    "version": "1.0.0",
-    "description": "Calcula el complemento a 1 de la entrada",
-    "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%229.402%22%20width=%2218.255%22%3E%3Ctext%20style=%22text-align:start%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-253.76%20-195.51)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3ECa1%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-  },
-  "design": {
-    "graph": {
-      "blocks": [
-        {
-          "id": "input-A",
-          "type": "basic.input",
-          "data": {
-            "name": "A",
-            "range": "[3:0]",
-            "clock": false
-,"size": 4
-          },
-          "position": {
-            "x": 120,
-            "y": 144
-          }
-        },
-        {
-          "id": "output-S",
-          "type": "basic.output",
-          "data": {
-            "name": "S",
-            "range": "[3:0]"
-,"size": 4
-          },
-          "position": {
-            "x": 416,
-            "y": 144
-          }
-        },
-        {
-          "id": "32bb9ced-3128-4f73-b178-7da0b145205d",
-          "type": "346fec7e60ad5e9b68fbf99a73a1805befcf53f1",
-          "position": {
-            "x": 272,
-            "y": 144
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "247b77cd-a75c-4a5d-a5ea-068e8586fd08",
-          "type": "basic.info",
-          "data": {
-            "info": "El complemento a 1 es equivalente a negar todos\nlos bits.\nMatemáticamente se calcula como 2^N-1-V\nDonde N es el número de bits.\nEs el complemento a la \"base menos 1\"",
-            "readonly": true
-          },
-          "position": {
-            "x": 120,
-            "y": 232
-          },
-          "size": {
-            "width": 480,
-            "height": 112
-          }
-        }
-      ],
-      "wires": [
-        {
-          "source": {
-            "block": "input-A",
-            "port": "out"
-          },
-          "target": {
-            "block": "32bb9ced-3128-4f73-b178-7da0b145205d",
-            "port": "input-i"
-          },
-          "size": 4
-        },
-        {
-          "source": {
-            "block": "32bb9ced-3128-4f73-b178-7da0b145205d",
-            "port": "output-o"
-          },
-          "target": {
-            "block": "output-S",
-            "port": "in"
-          },
-          "size": 4
-        }
-      ]
-    },
-    "state": {
-      "pan": {
-        "x": -50,
-        "y": 23.5
-      },
-      "zoom": 1
-    }
-  }
-    },
-    "346fec7e60ad5e9b68fbf99a73a1805befcf53f1": {
-  "package": {
-    "name": "NOT 4 bits bus",
-    "version": "1.0.3",
-    "description": "NOT logic gate for a 4 bits bus",
-    "author": "Jesús Arroyo, Juan González, Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2268.24%22%20width=%22111.59%22%20version=%221%22%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M24.372%201.5l57.29%2032.619-57.29%2032.62V1.5z%22%20stroke=%22#000%22%20stroke-width=%223%22%20fill=%22none%22/%3E%3Cellipse%20stroke-linejoin=%22round%22%20stroke-linecap=%22round%22%20rx=%227.572%22%20ry=%227.677%22%20stroke=%22#000%22%20cy=%2234.017%22%20cx=%2291.101%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3Cpath%20d=%22M1.014%2034.281h23.1m75.26%200h11.2%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3Ctext%20font-size=%2217.5%22%20y=%2239.46%22%20x=%2228.438%22%20font-family=%22sans-serif%22%20fill=%22#00f%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2239.46%22%20x=%2228.438%22%3ENot%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-  },
-  "design": {
-    "graph": {
-      "blocks": [
-        {
-          "id": "input-i",
-          "type": "basic.input",
-          "data": {
-            "name": "i",
-            "range": "[3:0]",
-            "clock": false
-,"size": 4
-          },
-          "position": {
-            "x": 88,
-            "y": 144
-          }
-        },
-        {
-          "id": "output-o",
-          "type": "basic.output",
-          "data": {
-            "name": "o",
-            "range": "[3:0]"
-,"size": 4
-          },
-          "position": {
-            "x": 656,
-            "y": 144
-          }
-        },
-        {
-          "id": "5365ed8c-e5db-4445-938f-8d689830ea5c",
-          "type": "basic.code",
-          "data": {
-            "code": "//-- Puerta NOT\n\n//-- module (input wire i, output wire o);\n\n\nassign o = ~i;\n\n\n//-- endmodule\n",
-            "params": [],
-            "ports": {
-              "in": [
-                {
-                  "name": "i",
-                  "range": "[3:0]",
-                  "size": 4
-                }
-              ],
-              "out": [
-                {
-                  "name": "o",
-                  "range": "[3:0]",
-                  "size": 4
-                }
-              ]
-            }
-          },
-          "position": {
-            "x": 264,
-            "y": 136
-          },
-          "size": {
-            "width": 304,
-            "height": 80
-          }
-        }
-      ],
-      "wires": [
-        {
-          "source": {
-            "block": "input-i",
-            "port": "out"
-          },
-          "target": {
-            "block": "5365ed8c-e5db-4445-938f-8d689830ea5c",
-            "port": "i"
-          },
-          "size": 4
-        },
-        {
-          "source": {
-            "block": "5365ed8c-e5db-4445-938f-8d689830ea5c",
-            "port": "o"
-          },
-          "target": {
-            "block": "output-o",
-            "port": "in"
-          },
-          "size": 4
-        }
-      ]
-    },
-    "state": {
-      "pan": {
-        "x": -6,
-        "y": 87.5
       },
       "zoom": 1
     }
