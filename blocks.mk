@@ -443,6 +443,13 @@ all:  \
 	./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice \
 	./blocks/Varios/Memoria/FIFO/FIFO_64x8.ice \
 	./blocks/Varios/Memoria/FIFO/FIFO_8x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_128x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_256x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_32x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_512x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_64x8.ice \
+	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice \
 	./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice \
 	./blocks/Varios/Multiplexores/2\ canales/Mux2_16.ice \
 	./blocks/Varios/Multiplexores/2\ canales/Mux2_2.ice \
@@ -579,6 +586,7 @@ all:  \
 	./examples/6.\ Comunicación/07.\ Teclado\ PS2\ y\ LEDs\ 3.ice \
 	./examples/6.\ Comunicación/08.\ Transmisión\ Serie\ 32\ bits.ice \
 	./examples/7.\ Memoria/01.\ FIFO\ 16x8\ contador.ice \
+	./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -2370,6 +2378,34 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO.ice.template 8 3 ./blocks/Varios/Memoria/FIFO/FIFO_8x8.ice
 	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO/FIFO_8x8.ice
 
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_128x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 7 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_128x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_128x8.ice
+
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 4 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice
+
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_256x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 8 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_256x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_256x8.ice
+
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_32x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 5 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_32x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_32x8.ice
+
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_512x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 9 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_512x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_512x8.ice
+
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_64x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 6 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_64x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_64x8.ice
+
+./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice: ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/FIFO.svg ./blocks/Varios/Memoria/Templates/fifo_async.v
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 3 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice
+
 ./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice: ./blocks/Varios/Multiplexores/Templates/Mux2.ice.template tools/reemplaza.pl ././tools/board.cfg 
 	perl tools/reemplaza.pl ./blocks/Varios/Multiplexores/Templates/Mux2.ice.template 1,1,1 1 ./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice
 	perl tools/update_db.pl ./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice
@@ -2913,6 +2949,10 @@ all:  \
 ./examples/7.\ Memoria/01.\ FIFO\ 16x8\ contador.ice: ./examples/7.\ Memoria/Templates/01.\ FIFO\ 16x8\ contador.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Comunicación/Soporte/Detecta_Subida.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Memoria/FIFO/FIFO_16x8.ice ./blocks/Varios/Buses/Unir/Join_2/Join_4,4_8.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Buses/Reducir/Reducir_8_4.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_4.ice ./blocks/Varios/Buses/NOT/NOT_4.ice ./blocks/Const/Bus/1s/Valor_1s_4_bits.ice ./blocks/Varios/Reset/Power\ On\ Reset\ long.ice ./blocks/Logic/OR/OR_2.ice
 	perl tools/reemplaza.pl ./examples/7.\ Memoria/Templates/01.\ FIFO\ 16x8\ contador.ice.template 0 0 ./examples/7.\ Memoria/01.\ FIFO\ 16x8\ contador.ice
 	perl tools/update_db.pl ./examples/7.\ Memoria/01.\ FIFO\ 16x8\ contador.ice
+
+./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice: ./examples/7.\ Memoria/Templates/02.\ FIFO\ Async\ 16x8\ contador.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Unir/Join_2/Join_4,4_8.ice ./blocks/Varios/Buses/Reducir/Reducir_8_4.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Aritmetica/Complemento_a_1/Complemento_a_1_4.ice ./blocks/Varios/Buses/NOT/NOT_4.ice ./blocks/Const/Bus/1s/Valor_1s_4_bits.ice ./blocks/Varios/Reset/Power\ On\ Reset\ long.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice ./blocks/Varios/Bombeo/Corazon_x1.ice ./blocks/Varios/Biestables/Chincheta-T-ena-0.ice ./blocks/Varios/Pulso/Corazon_2Hz_P.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+	perl tools/reemplaza.pl ./examples/7.\ Memoria/Templates/02.\ FIFO\ Async\ 16x8\ contador.ice.template 0 0 ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice
+	perl tools/update_db.pl ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice
 
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl ././tools/board.cfg  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice
