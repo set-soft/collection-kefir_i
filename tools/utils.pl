@@ -74,6 +74,7 @@ sub UnEscapeSVG
 sub EscapeCode
 {
  my $d=$_[0];
+ $d=~s/\\/\\\\/g;
  $d=~s/\n/\\n/g;
  $d=~s/\"/\\\"/g;
  $d;
