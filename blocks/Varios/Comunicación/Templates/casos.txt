@@ -46,3 +46,5 @@
 "TX_Serie_base.ice.template" 0 0 "Soporte/TX_Serie_base.ice"
 "RX_Serie_base.ice.template" 0 0 "Soporte/RX_Serie_base.ice"
 "RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"
+"FT245_Sync_If.ice.template" 0 0 "FT245/FT245_Sync_If.ice"
+"FT245_Sync_If.ice.template" 0 0 "FT245/FT245_Sync_If.ice"

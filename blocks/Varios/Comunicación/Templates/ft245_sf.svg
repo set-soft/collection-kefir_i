@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="51.423" width="61.294" version="1.1" viewBox="0 0 57.462956 48.209316">
+<g letter-spacing="0" font-family="sans-serif" style="word-spacing:0;letter-spacing:0" transform="translate(-.45241 -28.535)" word-spacing="0" font-weight="400">
+<text style="word-spacing:0;letter-spacing:0" font-size="29.899px" line-height="125%" y="70.334007" x="8.1706238" fill="#0000ff"/>
+<text style="word-spacing:0;letter-spacing:0" font-size="18.75px" line-height="125%" y="98.184006" x="44.322624"/>
+<text style="word-spacing:0;letter-spacing:0" font-size="16.326px" line-height="125%" y="56.936008" x="7.2776241" fill="#0000ff">
+<tspan y="56.936008" x="7.2776241" font-weight="700">Sync</tspan>
+</text>
+</g>
+<text style="word-spacing:0;letter-spacing:0" font-family="sans-serif" font-size="16.326px" letter-spacing="0" word-spacing="0" y="46.103127" x="7.2477136" font-weight="400" line-height="125%" fill="#008000">
+<tspan y="46.103127" x="7.2477136" font-weight="700">FIFO</tspan>
+</text>
+<text style="word-spacing:0;letter-spacing:0" font-size="16.326px" line-height="125%" y="13.991963" x="0.37612629" fill="#0000ff">
+<tspan y="13.991963" x="0.37612629" font-weight="700" fill="#000000">FT245</tspan>
+</text>
+</svg>

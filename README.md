@@ -136,6 +136,7 @@ Collection for the Kefir I board in Icestudio.
     * TX RS-232 (115200 and configurable)
     * RX RS-232 (115200 and configurable)
     * RX PS/2
+    * FT245 Sync FIFO (FT2232H high speed communication)
     * *Support*
       * Rising/falling edge detector
       * 1 and 2 flip-flops synchronizer
@@ -231,6 +232,8 @@ Collection for the Kefir I board in Icestudio.
   * 05\. Teclado PS2 y LEDs
   * 06\. Teclado PS2 y LEDs 2
   * 07\. Teclado PS2 y LEDs 3
+  * 08\. Transmisión Serie 32 bits
+  * 09\. FT245 Sync FIFO contador
 * *7\. Memoria*
   * 01\. FIFO 16x8 contador
 

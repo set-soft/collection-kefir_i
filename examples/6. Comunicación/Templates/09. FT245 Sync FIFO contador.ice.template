@@ -1,0 +1,715 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-FT_DATA",
+          "type": "basic.output",
+          "data": {
+            "name": "FT_DATA",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "AD7",
+                "value": "45"
+              },
+              {
+                "index": "6",
+                "name": "AD6",
+                "value": "44"
+              },
+              {
+                "index": "5",
+                "name": "AD5",
+                "value": "43"
+              },
+              {
+                "index": "4",
+                "name": "AD4",
+                "value": "42"
+              },
+              {
+                "index": "3",
+                "name": "AD3",
+                "value": "41"
+              },
+              {
+                "index": "2",
+                "name": "AD2",
+                "value": "39"
+              },
+              {
+                "index": "1",
+                "name": "AD1",
+                "value": "38"
+              },
+              {
+                "index": "0",
+                "name": "AD0",
+                "value": "37"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 904,
+            "y": -160
+          }
+        },
+        {
+          "id": "output-FT_RD",
+          "type": "basic.output",
+          "data": {
+            "name": "FT_RD",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC2",
+                "value": "56"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 904,
+            "y": 136
+          }
+        },
+        {
+          "id": "input-FT_RXF",
+          "type": "basic.input",
+          "data": {
+            "name": "FT_RXF",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC0",
+                "value": "47"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 360,
+            "y": 176
+          }
+        },
+        {
+          "id": "output-FT_WR",
+          "type": "basic.output",
+          "data": {
+            "name": "FT_WR",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC3",
+                "value": "60"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 904,
+            "y": 208
+          }
+        },
+        {
+          "id": "input-FT_TXE",
+          "type": "basic.input",
+          "data": {
+            "name": "FT_TXE",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC1",
+                "value": "48"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 360,
+            "y": 248
+          }
+        },
+        {
+          "id": "output-FT_OE",
+          "type": "basic.output",
+          "data": {
+            "name": "FT_OE",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC6",
+                "value": "63"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 904,
+            "y": 280
+          }
+        },
+        {
+          "id": "input-FT_CLKOUT",
+          "type": "basic.input",
+          "data": {
+            "name": "FT_CLKOUT",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC5",
+                "value": "62"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": -168,
+            "y": 296
+          }
+        },
+        {
+          "id": "output-FT_SIWU",
+          "type": "basic.output",
+          "data": {
+            "name": "FT_SIWU",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AC4",
+                "value": "61"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 904,
+            "y": 352
+          }
+        },
+        {
+          "id": "output-LED",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 1392,
+            "y": 384
+          }
+        },
+        {
+          "id": "constant-Desde",
+          "type": "basic.constant",
+          "data": {
+            "name": "Desde",
+            "value": "97",
+            "local": true
+          },
+          "position": {
+            "x": 168,
+            "y": 432
+          }
+        },
+        {
+          "id": "constant-Hasta",
+          "type": "basic.constant",
+          "data": {
+            "name": "Hasta",
+            "value": "122",
+            "local": true
+          },
+          "position": {
+            "x": 280,
+            "y": 432
+          }
+        },
+        {
+          "id": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+          "type": "@sha1<./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice>",
+          "position": {
+            "x": 616,
+            "y": 240
+          },
+          "size": {
+            "width": 96,
+            "height": 256
+          }
+        },
+        {
+          "id": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
+          "type": "@sha1<./blocks/Varios/Reset/Power On Reset.ice>",
+          "position": {
+            "x": -8,
+            "y": 336
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
+          "position": {
+            "x": 224,
+            "y": 544
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "8aa5e6c6-8f59-4f7a-923f-c73edced4221",
+          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_8.ice>",
+          "position": {
+            "x": 384,
+            "y": 584
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "5ea536be-70db-4e2a-abc0-325109cec7b4",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 408,
+            "y": 408
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "4ef84eb2-8dad-43be-97a0-e482596044c1",
+          "type": "@sha1<./blocks/Varios/Registros/Completo/Reg_8_Completo.ice>",
+          "position": {
+            "x": 1104,
+            "y": 400
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "7b0ced68-073c-4d60-b61f-50954bf320be",
+          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_8_4.ice>",
+          "position": {
+            "x": 1248,
+            "y": 432
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-FT_Data"
+          },
+          "target": {
+            "block": "output-FT_DATA",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 808,
+              "y": 232
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "input-FT_RXF",
+            "port": "out"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-FT_nRxF"
+          },
+          "vertices": [
+            {
+              "x": 544,
+              "y": 240
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-FT_CLKOUT",
+            "port": "out"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-FT_Clk"
+          },
+          "vertices": [
+            {
+              "x": 472,
+              "y": 328
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-FT_CLKOUT",
+            "port": "out"
+          },
+          "target": {
+            "block": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
+            "port": "output-rst"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-FT_nRd"
+          },
+          "target": {
+            "block": "output-FT_RD",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 840,
+              "y": 224
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-FT_nWr"
+          },
+          "target": {
+            "block": "output-FT_WR",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 856,
+              "y": 288
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-FT_nOE"
+          },
+          "target": {
+            "block": "output-FT_OE",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 872,
+              "y": 336
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-FT_SIWU"
+          },
+          "target": {
+            "block": "output-FT_SIWU",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-Desde",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "port": "constant-FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-Hasta",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "8aa5e6c6-8f59-4f7a-923f-c73edced4221",
+            "port": "input-i"
+          },
+          "size": 32
+        },
+        {
+          "source": {
+            "block": "8aa5e6c6-8f59-4f7a-923f-c73edced4221",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-TxData"
+          },
+          "vertices": [
+            {
+              "x": 528,
+              "y": 464
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-TxRead"
+          },
+          "target": {
+            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 816,
+              "y": 728
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
+            "port": "output-rst"
+          },
+          "target": {
+            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 112,
+              "y": 576
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-FT_CLKOUT",
+            "port": "out"
+          },
+          "target": {
+            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": 136,
+              "y": 408
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "5ea536be-70db-4e2a-abc0-325109cec7b4",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-TxEmpty"
+          }
+        },
+        {
+          "source": {
+            "block": "5ea536be-70db-4e2a-abc0-325109cec7b4",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-RxFull"
+          },
+          "vertices": [
+            {
+              "x": 560,
+              "y": 472
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-RxData"
+          },
+          "target": {
+            "block": "4ef84eb2-8dad-43be-97a0-e482596044c1",
+            "port": "input-d"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "output-RxValid"
+          },
+          "target": {
+            "block": "4ef84eb2-8dad-43be-97a0-e482596044c1",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 824,
+              "y": 504
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-FT_CLKOUT",
+            "port": "out"
+          },
+          "target": {
+            "block": "4ef84eb2-8dad-43be-97a0-e482596044c1",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": -32,
+              "y": -192
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
+            "port": "output-rst"
+          },
+          "target": {
+            "block": "4ef84eb2-8dad-43be-97a0-e482596044c1",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 112,
+              "y": -168
+            },
+            {
+              "x": 1056,
+              "y": -32
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "4ef84eb2-8dad-43be-97a0-e482596044c1",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "7b0ced68-073c-4d60-b61f-50954bf320be",
+            "port": "input-i"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "7b0ced68-073c-4d60-b61f-50954bf320be",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "output-LED",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "input-FT_TXE",
+            "port": "out"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-FT_nTxE"
+          },
+          "vertices": [
+            {
+              "x": 520,
+              "y": 296
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 348.6832,
+        "y": 201.2891
+      },
+      "zoom": 0.9262
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

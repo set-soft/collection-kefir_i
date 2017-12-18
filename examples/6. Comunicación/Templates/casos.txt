@@ -7,3 +7,5 @@
 "07. Teclado PS2 y LEDs 3.ice.template" 0 0 "07. Teclado PS2 y LEDs 3.ice"
 "08. Transmisión Serie 32 bits.ice.template" 0 0 "08. Transmisión Serie 32 bits.ice"
 "08. Transmisión Serie 32 bits.ice.template" 0 0 "08. Transmisión Serie 32 bits.ice"
+"09. FT245 Sync FIFO contador.ice.template" 0 0 "09. FT245 Sync FIFO contador.ice"
+"09. FT245 Sync FIFO contador.ice.template" 0 0 "09. FT245 Sync FIFO contador.ice"
