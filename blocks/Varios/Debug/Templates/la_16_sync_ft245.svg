@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="271.6mm" width="210.23mm" version="1.1" viewBox="0 0 210.23373 271.60074">
+<g transform="translate(-2.1385 -2.2336)">
+<g fill="none" transform="translate(18.432 28.348)">
+<rect ry="26.151" height="91.47" width="133.8" stroke="#040404" y="71.726" x="21.923" stroke-width="4"/>
+<path stroke-width="3" d="m23.057 106.88 51.782-0.38v-17.009h20.033v17.389h45.358v-17.767h13.607" stroke="#000"/>
+<path stroke-width="3" d="m24.007 139.95h27.781l0.18899-17.387h28.348v17.387h42.333v-17.954l31.75 0.18899" stroke="#000"/>
+</g>
+<text style="word-spacing:0;letter-spacing:0" stroke-width="2.5763" font-size="42.06px" y="36.188278" x="44.113972" font-weight="700" line-height="125%" fill="#000000">
+<tspan y="36.188278" x="44.113972">Logic</tspan>
+<tspan y="36.188278" x="44.113972"/>
+</text>
+<g fill="#0000ff">
+<text style="word-spacing:0;letter-spacing:0" font-size="42.06px" line-height="125%" y="83.921326" x="3.9331217" stroke-width="2.5763">
+<tspan stroke-width="2.5763" y="83.921326" x="3.9331217" font-weight="700" fill="#000000">Analyzer</tspan>
+</text>
+<text style="word-spacing:0;letter-spacing:0" font-size="35.474px" line-height="125%" y="227.6821" x="4.6093621" stroke-width="2.1728">
+<tspan stroke-width="2.1728" y="227.6821" x="4.6093621" font-weight="700" fill="#000000">16ch/Sync</tspan>
+</text>
+<text style="word-spacing:0;letter-spacing:0" font-size="42.06px" line-height="125%" y="271.23981" x="34.204819" stroke-width="2.5763">
+<tspan stroke-width="2.5763" y="271.23981" x="34.204819" font-weight="700" fill="#000000">FT245</tspan>
+</text>
+</g>
+</g>
+<flowRoot style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.26459 0 0 .26459 -1.3066 -.0021515)" line-height="1.25" font-size="40px" font-family="sans-serif" fill="#000000"><flowRegion><rect y="-382.77" width="2083.5" x="-578.5" height="2583.7"/></flowRegion><flowPara/></flowRoot>
+</svg>

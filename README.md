@@ -153,7 +153,7 @@ Collection for the Kefir I board in Icestudio.
     * With enable (2/4/8 outputs)
     * Without enable (2/4/8 outputs)
   * *Debug*
-    * Analizador lógico de 8 canales
+    * Analizador lógico de 8/16 canales
   * *Demultiplexers*
     * With enable (2/4/8 outputs)
   * *Memoria*
@@ -240,6 +240,7 @@ Collection for the Kefir I board in Icestudio.
   * 01\. FIFO 16x8 contador
 * *8\. Debug*
   * 01\. Analizador 8 canales contador FT245 Sync
+  * 02\. Analizador 16 canales contador FT245 Sync
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
