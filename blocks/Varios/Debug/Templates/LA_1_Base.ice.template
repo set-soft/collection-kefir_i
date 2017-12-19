@@ -1,0 +1,573 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Logic Analyzer 1 Base (@sz_i channels)",
+    "version": "1.0.0",
+    "description": "Núcleo del analizador lógico LA_1 (@sz_i canales)",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<la_cerebro.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 16,
+            "y": 72
+          }
+        },
+        {
+          "id": "output-tx_data",
+          "type": "basic.output",
+          "data": {
+            "name": "tx_data",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1072,
+            "y": 104
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 16,
+            "y": 144
+          }
+        },
+        {
+          "id": "input-tx_full",
+          "type": "basic.input",
+          "data": {
+            "name": "tx_full",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 16,
+            "y": 216
+          }
+        },
+        {
+          "id": "output-tx_wr",
+          "type": "basic.output",
+          "data": {
+            "name": "tx_wr",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1072,
+            "y": 224
+          }
+        },
+        {
+          "id": "input-tx_ft_full",
+          "type": "basic.input",
+          "data": {
+            "name": "tx_ft_full",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 16,
+            "y": 288
+          }
+        },
+        {
+          "id": "output-wr",
+          "type": "basic.output",
+          "data": {
+            "name": "wr",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1072,
+            "y": 352
+          }
+        },
+        {
+          "id": "input-rx_rd",
+          "type": "basic.input",
+          "data": {
+            "name": "rx_rd",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 16,
+            "y": 360
+          }
+        },
+        {
+          "id": "input-rx_data",
+          "type": "basic.input",
+          "data": {
+            "name": "rx_data",
+            "range": "[7:0]",
+            "pins": [
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "6",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "5",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "4",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 16,
+            "y": 432
+          }
+        },
+        {
+          "id": "output-dbg",
+          "type": "basic.output",
+          "data": {
+            "name": "dbg",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1072,
+            "y": 472
+          }
+        },
+        {
+          "id": "input-chn",
+          "type": "basic.input",
+          "data": {
+            "name": "chn",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 16,
+            "y": 504
+          }
+        },
+        {
+          "id": "constant-CLK_DIV",
+          "type": "basic.constant",
+          "data": {
+            "name": "CLK_DIV",
+            "value": "1",
+            "local": false
+          },
+          "position": {
+            "x": 256,
+            "y": -64
+          }
+        },
+        {
+          "id": "constant-N_FIFO",
+          "type": "basic.constant",
+          "data": {
+            "name": "N_FIFO",
+            "value": "9",
+            "local": false
+          },
+          "position": {
+            "x": 440,
+            "y": -64
+          }
+        },
+        {
+          "id": "constant-N_TX",
+          "type": "basic.constant",
+          "data": {
+            "name": "N_TX",
+            "value": "10",
+            "local": false
+          },
+          "position": {
+            "x": 632,
+            "y": -64
+          }
+        },
+        {
+          "id": "constant-C_TX",
+          "type": "basic.constant",
+          "data": {
+            "name": "C_TX",
+            "value": "1000",
+            "local": false
+          },
+          "position": {
+            "x": 816,
+            "y": -64
+          }
+        },
+        {
+          "id": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam N_CH=@sz_i;\n@verilog<la_1_base.v>",
+            "params": [
+              {
+                "name": "CLK_DIV"
+              },
+              {
+                "name": "N_FIFO"
+              },
+              {
+                "name": "N_TX"
+              },
+              {
+                "name": "C_TX"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk_i"
+                },
+                {
+                  "name": "rst_i"
+                },
+                {
+                  "name": "tx_full_i"
+                },
+                {
+                  "name": "tx_ft_full_i"
+                },
+                {
+                  "name": "rx_rd_i"
+                },
+                {
+                  "name": "rx_data_i",
+                  "range": "[7:0]",
+                  "size": 8
+                },
+                {
+                  "name": "chn_i",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                }
+              ],
+              "out": [
+                {
+                  "name": "tx_data_o",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                },
+                {
+                  "name": "tx_wr_o"
+                },
+                {
+                  "name": "wr_o"
+                },
+                {
+                  "name": "dbg_o",
+                  "range": "[3:0]",
+                  "size": 4
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 208,
+            "y": 72
+          },
+          "size": {
+            "width": 752,
+            "height": 496
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "clk_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "rst_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-tx_full",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "tx_full_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-tx_ft_full",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "tx_ft_full_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rx_rd",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "rx_rd_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rx_data",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "rx_data_i"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "input-chn",
+            "port": "out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "chn_i"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "tx_data_o"
+          },
+          "target": {
+            "block": "output-tx_data",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "tx_wr_o"
+          },
+          "target": {
+            "block": "output-tx_wr",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "wr_o"
+          },
+          "target": {
+            "block": "output-wr",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "dbg_o"
+          },
+          "target": {
+            "block": "output-dbg",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "constant-CLK_DIV",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "CLK_DIV"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-N_FIFO",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "N_FIFO"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-N_TX",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "N_TX"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-C_TX",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "C_TX"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 368,
+        "y": 209.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

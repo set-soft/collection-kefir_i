@@ -1,0 +1,2 @@
+"01. Analizador 8 canales contador FT245 Sync.ice.template" 0 0 "01. Analizador 8 canales contador FT245 Sync.ice"
+"01. Analizador 8 canales contador FT245 Sync.ice.template" 0 0 "01. Analizador 8 canales contador FT245 Sync.ice"

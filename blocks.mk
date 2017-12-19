@@ -428,6 +428,10 @@ all:  \
 	./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice \
 	./blocks/Varios/Contadores/Prescaler/PrescalerN.ice \
 	./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice \
+	./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice \
+	./blocks/Varios/Debug/LA_1/LA_1_Base_16.ice \
+	./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice \
+	./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice \
 	./blocks/Varios/Decodificadores/Enable/Deco_1_2.ice \
 	./blocks/Varios/Decodificadores/Enable/Deco_2_4.ice \
 	./blocks/Varios/Decodificadores/Enable/Deco_3_8.ice \
@@ -589,6 +593,7 @@ all:  \
 	./examples/6.\ Comunicación/09.\ FT245\ Sync\ FIFO\ contador.ice \
 	./examples/7.\ Memoria/01.\ FIFO\ 16x8\ contador.ice \
 	./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice \
+	./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -2212,7 +2217,7 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Buses/XOR/Templates/XOR_bus_out.ice.template 8,8 8 ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 	perl tools/update_db.pl ./blocks/Varios/Buses/XOR/bus_out/XOR_8.ice
 
-./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice: ./blocks/Varios/Comunicación/Templates/FT245_Sync_If.ice.template tools/reemplaza.pl ././tools/board.cfg 
+./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice: ./blocks/Varios/Comunicación/Templates/FT245_Sync_If.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Comunicación/Templates/ft245_sf.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Comunicación/Templates/FT245_Sync_If.ice.template 0 0 ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice
 	perl tools/update_db.pl ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice
 
@@ -2319,6 +2324,22 @@ all:  \
 ./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice: ./blocks/Varios/Contadores/Templates/PrescalerN_simple.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Contadores/Prescaler/PrescalerN.ice ./blocks/Varios/Buses/Seleccionar/Wire/Seleccionar1_32_1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Templates/Fdiv2N.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Contadores/Templates/PrescalerN_simple.ice.template 0 0 ./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice
 	perl tools/update_db.pl ./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice
+
+./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice: ./blocks/Varios/Debug/Templates/LA_1_8_Sync_FT245.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Debug/Templates/la_8_sync_ft245.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_8_Sync_FT245.ice.template 0 0 ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice
+	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice
+
+./blocks/Varios/Debug/LA_1/LA_1_Base_16.ice: ./blocks/Varios/Debug/Templates/LA_1_Base.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/Templates/la_1_base.v
+	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_Base.ice.template 16 0 ./blocks/Varios/Debug/LA_1/LA_1_Base_16.ice
+	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_Base_16.ice
+
+./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice: ./blocks/Varios/Debug/Templates/LA_1_Base.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/Templates/la_1_base.v
+	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_Base.ice.template 32 0 ./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice
+	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice
+
+./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice: ./blocks/Varios/Debug/Templates/LA_1_Base.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/Templates/la_1_base.v
+	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_Base.ice.template 8 0 ./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice
+	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice
 
 ./blocks/Varios/Decodificadores/Enable/Deco_1_2.ice: ./blocks/Varios/Decodificadores/Templates/Deco_1_2.ice.template tools/reemplaza.pl ././tools/board.cfg 
 	perl tools/reemplaza.pl ./blocks/Varios/Decodificadores/Templates/Deco_1_2.ice.template 0 0 ./blocks/Varios/Decodificadores/Enable/Deco_1_2.ice
@@ -2963,6 +2984,10 @@ all:  \
 ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice: ./examples/7.\ Memoria/Templates/02.\ FIFO\ Async\ 16x8\ contador.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Buses/Expandir/Expandir_4_32.ice ./blocks/Varios/Buses/Reducir/Reducir_32_4.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Unir/Join_2/Join_4,4_8.ice ./blocks/Varios/Buses/Reducir/Reducir_8_4.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bus/1s/Valor_1s_4_bits.ice ./blocks/Varios/Reset/Power\ On\ Reset\ long.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice ./blocks/Varios/Bombeo/Corazon_x1.ice ./blocks/Varios/Biestables/Chincheta-T-ena-0.ice ./blocks/Varios/Pulso/Corazon_2Hz_P.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/7.\ Memoria/Templates/02.\ FIFO\ Async\ 16x8\ contador.ice.template 0 0 ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice
 	perl tools/update_db.pl ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice
+
+./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice: ./examples/8.\ Debug/Templates/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Reset/Power\ On\ Reset.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Reducir/Reducir_32_8.ice
+	perl tools/reemplaza.pl ./examples/8.\ Debug/Templates/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice.template 0 0 ./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice
+	perl tools/update_db.pl ./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice
 
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl ././tools/board.cfg  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice

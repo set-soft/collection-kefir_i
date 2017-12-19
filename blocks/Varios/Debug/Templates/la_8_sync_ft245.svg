@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="271.6mm" width="210.23mm" version="1.1" viewBox="0 0 210.2339 271.60288">
+<g transform="translate(-.83181 -2.2325)">
+<g transform="translate(17.124 28.348)" fill="none">
+<rect ry="26.151" height="91.47" width="133.8" stroke="#040404" y="71.726" x="21.923" stroke-width="4"/>
+<path d="m23.057 106.88 51.782-0.38v-17.009h20.033v17.389h45.358v-17.767h13.607" stroke="#000" stroke-width="3"/>
+<path d="m24.007 139.95h27.781l0.18899-17.387h28.348v17.387h42.333v-17.954l31.75 0.18899" stroke="#000" stroke-width="3"/>
+</g>
+<text style="word-spacing:0;letter-spacing:0" font-weight="700" font-size="42.06px" line-height="125%" y="36.188278" x="42.807343" stroke-width="2.5763" fill="#000000">
+<tspan y="36.188278" x="42.807343">Logic</tspan>
+<tspan y="36.188278" x="42.807343"/>
+</text>
+<text style="word-spacing:0;letter-spacing:0" font-size="42.06px" line-height="125%" y="83.921326" x="2.6264381" stroke-width="2.5763" fill="#0000ff">
+<tspan stroke-width="2.5763" y="83.921326" x="2.6264381" font-weight="700" fill="#000000">Analyzer</tspan>
+</text>
+<text style="word-spacing:0;letter-spacing:0" font-size="35.474px" line-height="125%" y="227.6821" x="10.388133" stroke-width="2.1728" fill="#0000ff">
+<tspan stroke-width="2.1728" y="227.6821" x="10.388133" font-weight="700" fill="#000000">8 ch/Sync</tspan>
+</text>
+<text style="word-spacing:0;letter-spacing:0" font-size="42.06px" line-height="125%" y="271.23981" x="32.898174" stroke-width="2.5763" fill="#0000ff">
+<tspan stroke-width="2.5763" y="271.23981" x="32.898174" font-weight="700" fill="#000000">FT245</tspan>
+</text>
+</g>
+</svg>

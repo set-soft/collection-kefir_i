@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210.2339mm"
+   height="193.31215mm"
+   viewBox="0 0 210.2339 193.31215"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="la.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="444.70425"
+     inkscape:cy="176.5467"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.83180948,-2.2324973)">
+    <g
+       id="g4538"
+       transform="translate(17.124357,28.348215)">
+      <rect
+         ry="26.150829"
+         y="71.726196"
+         x="21.922617"
+         height="91.470238"
+         width="133.80357"
+         id="rect4485"
+         style="fill:none;fill-opacity:1;stroke:#040404;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="path4487"
+         d="M 23.056548,106.87798 74.839284,106.5 V 89.491071 H 94.872023 V 106.87798 H 140.22916 V 89.113095 h 13.60715"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="path4487-3"
+         d="m 24.00696,139.9509 h 27.781248 l 0.188988,-17.38691 h 28.348216 v 17.38691 h 42.333348 v -17.95387 l 31.75,0.18899"
+         style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       style="font-size:42.06005096px;line-height:125%;letter-spacing:0;word-spacing:0;fill:#0000ff;stroke-width:2.576262"
+       font-size="16.326px"
+       line-height="125%"
+       y="36.188278"
+       x="42.807343"
+       id="text18">
+      <tspan
+         style="font-weight:700;fill:#000000;stroke-width:2.576262"
+         y="36.188278"
+         x="42.807343"
+         font-weight="700"
+         id="tspan16">Logic</tspan>
+      <tspan
+         style="font-weight:700;fill:#000000;stroke-width:2.576262"
+         y="36.188278"
+         x="42.807343"
+         font-weight="700"
+         id="tspan4512" />
+    </text>
+    <text
+       style="font-size:42.06005096px;line-height:125%;letter-spacing:0;word-spacing:0;fill:#0000ff;stroke-width:2.576262"
+       font-size="16.326px"
+       line-height="125%"
+       y="83.921326"
+       x="2.6264381"
+       id="text18-6">
+      <tspan
+         style="font-weight:700;fill:#000000;stroke-width:2.576262"
+         y="83.921326"
+         x="2.6264381"
+         font-weight="700"
+         id="tspan16-7">Analyzer</tspan>
+    </text>
+  </g>
+</svg>

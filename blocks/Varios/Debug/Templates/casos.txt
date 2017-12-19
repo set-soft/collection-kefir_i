@@ -1,0 +1,4 @@
+"LA_1_Base.ice.template" 8 0 "LA_1/LA_1_Base_8.ice"
+"LA_1_Base.ice.template" 16 0 "LA_1/LA_1_Base_16.ice"
+"LA_1_Base.ice.template" 32 0 "LA_1/LA_1_Base_32.ice"
+"LA_1_8_Sync_FT245.ice.template" 0 0 "LA_1/LA_1_8_Sync_FT245.ice"
