@@ -429,6 +429,7 @@ all:  \
 	./blocks/Varios/Contadores/Prescaler/PrescalerN.ice \
 	./blocks/Varios/Contadores/Prescaler/PrescalerN_simple.ice \
 	./blocks/Varios/Debug/LA_1/LA_1_16_Sync_FT245.ice \
+	./blocks/Varios/Debug/LA_1/LA_1_32_Sync_FT245.ice \
 	./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice \
 	./blocks/Varios/Debug/LA_1/LA_1_Base_16.ice \
 	./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice \
@@ -596,6 +597,7 @@ all:  \
 	./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice \
 	./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice \
 	./examples/8.\ Debug/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice \
+	./examples/8.\ Debug/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -2331,6 +2333,10 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_16_Sync_FT245.ice.template 0 0 ./blocks/Varios/Debug/LA_1/LA_1_16_Sync_FT245.ice
 	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_16_Sync_FT245.ice
 
+./blocks/Varios/Debug/LA_1/LA_1_32_Sync_FT245.ice: ./blocks/Varios/Debug/Templates/LA_1_32_Sync_FT245.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Reducir/ReduSec_32_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Debug/Templates/la_32_sync_ft245.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_32_Sync_FT245.ice.template 0 0 ./blocks/Varios/Debug/LA_1/LA_1_32_Sync_FT245.ice
+	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_32_Sync_FT245.ice
+
 ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice: ./blocks/Varios/Debug/Templates/LA_1_8_Sync_FT245.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Debug/Templates/la_8_sync_ft245.svg
 	perl tools/reemplaza.pl ./blocks/Varios/Debug/Templates/LA_1_8_Sync_FT245.ice.template 0 0 ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice
 	perl tools/update_db.pl ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice
@@ -2998,6 +3004,10 @@ all:  \
 ./examples/8.\ Debug/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice: ./examples/8.\ Debug/Templates/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/LA_1/LA_1_16_Sync_FT245.ice ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_16.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Reducir/ReduSec_16_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Reset/Power\ On\ Reset.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Simple_Enable_32_UD.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Contadores/Asc_Desc/32\ bits/Contador_Completo_32_UD.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Unir/Join_2/Join_8,8_16.ice ./blocks/Varios/Buses/Reducir/Reducir_32_8.ice
 	perl tools/reemplaza.pl ./examples/8.\ Debug/Templates/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice.template 0 0 ./examples/8.\ Debug/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice
 	perl tools/update_db.pl ./examples/8.\ Debug/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice
+
+./examples/8.\ Debug/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice: ./examples/8.\ Debug/Templates/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/LA_1/LA_1_32_Sync_FT245.ice ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Reducir/ReduSec_32_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Reset/Power\ On\ Reset.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
+	perl tools/reemplaza.pl ./examples/8.\ Debug/Templates/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice.template 0 0 ./examples/8.\ Debug/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice
+	perl tools/update_db.pl ./examples/8.\ Debug/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice
 
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl ././tools/board.cfg  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice

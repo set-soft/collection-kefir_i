@@ -153,7 +153,7 @@ Collection for the Kefir I board in Icestudio.
     * With enable (2/4/8 outputs)
     * Without enable (2/4/8 outputs)
   * *Debug*
-    * Analizador lógico de 8/16 canales
+    * Analizador lógico de 8/16/32 canales
   * *Demultiplexers*
     * With enable (2/4/8 outputs)
   * *Memoria*
