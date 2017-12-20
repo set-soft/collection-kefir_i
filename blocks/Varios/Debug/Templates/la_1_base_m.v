@@ -4,7 +4,8 @@ module LA_1_Base
     parameter N_FIFO=9,
     parameter N_TX=10,
     parameter C_TX=1000,
-    parameter CLK_DIV=1)
+    parameter CLK_DIV=1,
+    parameter F_CLK=60)
    (
     // System
     input             clk_i,

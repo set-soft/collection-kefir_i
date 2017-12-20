@@ -361,7 +361,7 @@
             "local": false
           },
           "position": {
-            "x": 128,
+            "x": 112,
             "y": 120
           }
         },
@@ -374,7 +374,7 @@
             "local": true
           },
           "position": {
-            "x": 232,
+            "x": 224,
             "y": 120
           }
         },
@@ -387,8 +387,8 @@
             "local": true
           },
           "position": {
-            "x": 336,
-            "y": 120
+            "x": 288,
+            "y": 48
           }
         },
         {
@@ -400,7 +400,20 @@
             "local": true
           },
           "position": {
-            "x": 440,
+            "x": 352,
+            "y": 120
+          }
+        },
+        {
+          "id": "constant-F_CLK",
+          "type": "basic.constant",
+          "data": {
+            "name": "F_CLK",
+            "value": "24",
+            "local": true
+          },
+          "position": {
+            "x": 464,
             "y": 120
           }
         },
@@ -418,7 +431,7 @@
         },
         {
           "id": "57dc4ee2-bf81-4287-80dd-06480663e543",
-          "type": "11541fe6dfbe3d71967f28a92edc5fbdbd3013ff",
+          "type": "042c894ab98fd935a477f6c75e71fa940df2ce7e",
           "position": {
             "x": 208,
             "y": 248
@@ -1102,6 +1115,16 @@
               "y": 736
             }
           ]
+        },
+        {
+          "source": {
+            "block": "constant-F_CLK",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "57dc4ee2-bf81-4287-80dd-06480663e543",
+            "port": "constant-F_CLK"
+          }
         }
       ]
     },
@@ -1542,7 +1565,7 @@
     }
   }
     },
-    "11541fe6dfbe3d71967f28a92edc5fbdbd3013ff": {
+    "042c894ab98fd935a477f6c75e71fa940df2ce7e": {
   "package": {
     "name": "Logic Analyzer 1 Base (8 channels)",
     "version": "1.0.0",
@@ -1698,7 +1721,7 @@
             "local": false
           },
           "position": {
-            "x": 256,
+            "x": 232,
             "y": -64
           }
         },
@@ -1711,7 +1734,7 @@
             "local": false
           },
           "position": {
-            "x": 440,
+            "x": 384,
             "y": -64
           }
         },
@@ -1724,7 +1747,7 @@
             "local": false
           },
           "position": {
-            "x": 632,
+            "x": 536,
             "y": -64
           }
         },
@@ -1737,7 +1760,20 @@
             "local": false
           },
           "position": {
-            "x": 816,
+            "x": 688,
+            "y": -64
+          }
+        },
+        {
+          "id": "constant-F_CLK",
+          "type": "basic.constant",
+          "data": {
+            "name": "F_CLK",
+            "value": "60",
+            "local": false
+          },
+          "position": {
+            "x": 840,
             "y": -64
           }
         },
@@ -1745,7 +1781,7 @@
           "id": "37adbf83-88c5-44c0-82e6-5521a43010a3",
           "type": "basic.code",
           "data": {
-            "code": "localparam N_CH=8;\n/***********************************************************************\n\n  Logic Analyzer 1 (base module)\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  Implements an internal logic analyzer of 8/16/32 channels using\n  the FT245 sync FIFO core.\n  Implements 1 stage trigger and supports independent clock.\n  This module is the logic analyzer itself (without support logic)\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti.gob.ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti.gob.ar>\n Copyright (c) 2017 Instituto Nacional de Tecnología Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      LA_1_Base(RTL) (Entity and architecture)\n File name:        la_1_base.v\n Note:             None\n Limitations:      None known\n Errors:           None known\n Library:          avr\n Dependencies:     IEEE.std_logic_1164\n                   IEEE.numeric_std\n                   utils.stdlib\n                   mems.devices\n Target FPGA:      iCE40HX4K-TQ144\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  Lattice iCECube2 2017.01.27914\n Simulation tools: GHDL [Sokcho edition] (0.2x)\n Text editor:      SETEdit 0.5.x\n\n***********************************************************************/\n\nreg             start_r;\nreg             start_acq_r=0;\nreg             was_full;\nwire            next_data;\nwire            tx_wr;\n\nwire [N_CH-1:0] acq_data;\nreg  [N_CH-1:0] acq_data_r;\n\n// Triggers\nreg  [N_CH-1:0] trg_mask=0;\nreg  [N_CH-1:0] trg_value=0;\nreg  [N_CH-1:0] trg_edge=0;\nwire [N_CH-1:0] acq_edge;\nwire            trigger;\n\nreg  [1:0]      cnt_rx=2'b0;\n\nreg  [N_TX-1:0] cnt_tx=0;\nwire [1:0]      cnt_tx_sel;\nreg  [7:0]      cnt_cdiv=7'b0;\n\n// Config\nreg             cfg_src_r=1'b0; // Read from the config registers\nwire [N_CH-1:0] cfg_data; // Data for the host\n\nassign tx_data_o=cfg_src_r ? cfg_data : acq_data_r;\nassign acq_data=chn_i;\n\ngenerate\nif (N_CH==8)\n   begin : cfg_8\n   assign cnt_tx_sel=cnt_tx[1:0];\n   assign cfg_data=cnt_tx_sel==2'd0 ? 8'h08 : (  // 8 channels\n                   cnt_tx_sel==2'd1 ? N_FIFO[7:0] : ( // FIFO size\n                   cnt_tx_sel==2'd2 ? CLK_DIV[7:0] : (// Clock divider\n                   8'b0)));\n   end // cfg_8\nelse if (N_CH==16)\n   begin : cfg_16\n   assign cfg_data=cnt_tx[0]==1'b0 ? {N_FIFO[7:0], 8'h10} : // 16 channels/FIFO size\n                                     {8'b0, CLK_DIV[7:0]};  // Clock divider/00\n   end // cfg_16\nelse if (N_CH==32)\n   begin : cfg_32\n   assign cfg_data={8'b0, CLK_DIV[7:0], N_FIFO[7:0], 8'h20};\n   end // cfg_32\nendgenerate\n\nassign tx_wr=!tx_full_i && (start_acq_r || (start_r && trigger)) && cnt_cdiv==0;\nassign tx_wr_o=tx_wr;\n\nassign next_data=!tx_full_i && start_r && cnt_cdiv==0 && !cfg_src_r;\nassign wr_o=next_data;\n\nalways @(posedge clk_i)\nbegin : do_clk_div\n  if (rst_i || (rx_rd_i && rx_data_i[0]))\n     cnt_cdiv <= 0;\n  else\n     begin\n     cnt_cdiv <= cnt_cdiv+1;\n     if (cnt_cdiv==CLK_DIV-1)\n        cnt_cdiv <= 0;\n     end\nend // do_clk_div\n\nalways @(posedge clk_i)\nbegin : do_regs\n  if (rst_i)\n     begin\n     start_r     <= 1'b0;\n     start_acq_r <= 1'b0;\n     cfg_src_r   <= 1'b0;\n     was_full    <= 1'b0;\n     cnt_tx      <= {N_TX{1'b0}};\n     cnt_rx      <= 2'b0;\n     trg_mask    <= 8'b0;\n     trg_value   <= 8'b0;\n     trg_edge    <= 8'b0;\n     end\n  else\n     begin\n     if (tx_ft_full_i && start_r)\n         was_full <= 1'b1;\n     // Start writing\n     if (start_r && (trigger || cfg_src_r))\n        start_acq_r <= 1'b1;\n     // Stop after filling the FIFO once\n     if (tx_wr)\n        begin\n        cnt_tx <= cnt_tx+1;\n        if (cnt_tx==C_TX-1 ||\n           (cfg_src_r && cnt_tx[1:0]==2'b11 && N_CH==8)  ||\n           (cfg_src_r && cnt_tx[0:0]==1'b1  && N_CH==16) ||\n           (cfg_src_r && N_CH==32))\n           begin\n           start_r     <= 1'b0;\n           start_acq_r <= 1'b0;\n           end\n        end\n     // Registers\n     if (rx_rd_i)\n        begin\n        cnt_rx <= cnt_rx+1;\n        case (cnt_rx)\n             2'd0: trg_mask  <= rx_data_i;\n             2'd1: trg_value <= rx_data_i;\n             2'd2: trg_edge  <= rx_data_i;\n             2'd3:\n                begin\n                start_r   <= rx_data_i[0];\n                cfg_src_r <= rx_data_i[1];\n                if (!start_r && rx_data_i[0])\n                   begin\n                   was_full <= 1'b0;\n                   cnt_tx <= {N_TX{1'b0}};\n                   // If we don't have a trigger start acq right now\n                   if (trg_mask==8'b0)\n                      start_acq_r <= 1'b1;\n                   end\n                if (!rx_data_i[0])\n                   start_acq_r <= 1'b0;\n                end\n        endcase\n        end\n     if (!rx_rd_i)\n        // Ensure we go back to 0 after a burst\n        cnt_rx <= 2'b0;\n     end\nend // do_regs\n\n////////////////////////////////\n// 4 bits debug output (LEDs) //\n////////////////////////////////\n//assign dbg_o={1'b0,status_empty,was_full,start_r};\n//assign dbg_o={2'b0,cnt_rx};\n//assign dbg_o={ft_full,1'b0,cnt_rx2};\n//assign dbg_o=dbg_fifo;\n//assign dbg_o=trg_edge[3:0];\n//assign dbg_o=trg_mask[3:0];\n//assign dbg_o=trg_value[3:0];\nassign dbg_o=4'b0;\n\n///////////////////\n// Trigger logic //\n///////////////////\nalways @(posedge clk_i)\nbegin : do_acq_data_r\n  if (next_data)\n     acq_data_r <= acq_data;\nend // do_acq_data_r\n\nassign acq_edge=(acq_data_r ^ acq_data) &&\n                trg_edge; // Ignore edges on level triggers\n\nassign trigger=trg_mask==8'b0 || // No mask, always triggered\n               ((trg_value ~^ acq_data_r) & // Compare the data with the trigger value\n                (trg_edge  ~^ acq_edge) &   // Compare the data edge with the trigger edge\n                 trg_mask)==trg_mask; // Apply the trigger mask   ",
+            "code": "localparam N_CH=8;\n/***********************************************************************\n\n  Logic Analyzer 1 (base module)\n\n  This file is part FPGA Libre project http://fpgalibre.sf.net/\n\n  Description:\n  Implements an internal logic analyzer of 8/16/32 channels using\n  the FT245 sync FIFO core.\n  Implements 1 stage trigger and supports independent clock.\n  This module is the logic analyzer itself (without support logic)\n\n  To Do:\n  -\n\n  Author:\n    - Salvador E. Tropea, salvador en inti.gob.ar\n\n------------------------------------------------------------------------------\n\n Copyright (c) 2017 Salvador E. Tropea <salvador en inti.gob.ar>\n Copyright (c) 2017 Instituto Nacional de Tecnologï¿½a Industrial\n\n Distributed under the GPL v2 or newer license\n\n------------------------------------------------------------------------------\n\n Design unit:      LA_1_Base(RTL) (Entity and architecture)\n File name:        la_1_base.v\n Note:             None\n Limitations:      None known\n Errors:           None known\n Library:          avr\n Dependencies:     IEEE.std_logic_1164\n                   IEEE.numeric_std\n                   utils.stdlib\n                   mems.devices\n Target FPGA:      iCE40HX4K-TQ144\n Language:         Verilog\n Wishbone:         None\n Synthesis tools:  Lattice iCECube2 2017.01.27914\n Simulation tools: GHDL [Sokcho edition] (0.2x)\n Text editor:      SETEdit 0.5.x\n\n***********************************************************************/\n\nreg             start_r;\nreg             start_acq_r=0;\nreg             was_full;\nwire            next_data;\nwire            tx_wr;\n\nwire [N_CH-1:0] acq_data;\nreg  [N_CH-1:0] acq_data_r;\n\n// Triggers\nreg  [N_CH-1:0] trg_mask=0;\nreg  [N_CH-1:0] trg_value=0;\nreg  [N_CH-1:0] trg_edge=0;\nwire [N_CH-1:0] acq_edge;\nwire            trigger;\n\nreg  [1:0]      cnt_rx=2'b0;\n\nreg  [N_TX-1:0] cnt_tx=0;\nwire [1:0]      cnt_tx_sel;\nreg  [7:0]      cnt_cdiv=7'b0;\n\n// Config\nreg             cfg_src_r=1'b0; // Read from the config registers\nwire [N_CH-1:0] cfg_data; // Data for the host\n\nassign tx_data_o=cfg_src_r ? cfg_data : acq_data_r;\nassign acq_data=chn_i;\n\ngenerate\nif (N_CH==8)\n   begin : cfg_8\n   assign cnt_tx_sel=cnt_tx[1:0];\n   assign cfg_data=cnt_tx_sel==2'd0 ? 8'h08 : (  // 8 channels\n                   cnt_tx_sel==2'd1 ? N_FIFO[7:0] : ( // FIFO size\n                   cnt_tx_sel==2'd2 ? CLK_DIV[7:0] : (// Clock divider\n                                      F_CLK[7:0])));  // Clock\n   end // cfg_8\nelse if (N_CH==16)\n   begin : cfg_16\n   assign cfg_data=cnt_tx[0]==1'b0 ? {N_FIFO[7:0], 8'h10} :      // 16 channels/FIFO size\n                                     {F_CLK[7:0], CLK_DIV[7:0]}; // Clock divider/Clock\n   end // cfg_16\nelse if (N_CH==32)\n   begin : cfg_32\n   assign cfg_data={F_CLK[7:0], CLK_DIV[7:0], N_FIFO[7:0], 8'h20};\n   end // cfg_32\nendgenerate\n\nassign tx_wr=!tx_full_i && (start_acq_r || (start_r && trigger)) && cnt_cdiv==0;\nassign tx_wr_o=tx_wr;\n\nassign next_data=!tx_full_i && start_r && cnt_cdiv==0 && !cfg_src_r;\nassign wr_o=next_data;\n\nalways @(posedge clk_i)\nbegin : do_clk_div\n  if (rst_i || (rx_rd_i && rx_data_i[0]))\n     cnt_cdiv <= 0;\n  else\n     begin\n     cnt_cdiv <= cnt_cdiv+1;\n     if (cnt_cdiv==CLK_DIV-1)\n        cnt_cdiv <= 0;\n     end\nend // do_clk_div\n\nalways @(posedge clk_i)\nbegin : do_regs\n  if (rst_i)\n     begin\n     start_r     <= 1'b0;\n     start_acq_r <= 1'b0;\n     cfg_src_r   <= 1'b0;\n     was_full    <= 1'b0;\n     cnt_tx      <= {N_TX{1'b0}};\n     cnt_rx      <= 2'b0;\n     trg_mask    <= 8'b0;\n     trg_value   <= 8'b0;\n     trg_edge    <= 8'b0;\n     end\n  else\n     begin\n     if (tx_ft_full_i && start_r)\n         was_full <= 1'b1;\n     // Start writing\n     if (start_r && (trigger || cfg_src_r))\n        start_acq_r <= 1'b1;\n     // Stop after filling the FIFO once\n     if (tx_wr)\n        begin\n        cnt_tx <= cnt_tx+1;\n        if (cnt_tx==C_TX-1 ||\n           (cfg_src_r && cnt_tx[1:0]==2'b11 && N_CH==8)  ||\n           (cfg_src_r && cnt_tx[0:0]==1'b1  && N_CH==16) ||\n           (cfg_src_r && N_CH==32))\n           begin\n           start_r     <= 1'b0;\n           start_acq_r <= 1'b0;\n           end\n        end\n     // Registers\n     if (rx_rd_i)\n        begin\n        cnt_rx <= cnt_rx+1;\n        case (cnt_rx)\n             2'd0: trg_mask  <= rx_data_i;\n             2'd1: trg_value <= rx_data_i;\n             2'd2: trg_edge  <= rx_data_i;\n             2'd3:\n                begin\n                start_r   <= rx_data_i[0];\n                cfg_src_r <= rx_data_i[1];\n                if (!start_r && rx_data_i[0])\n                   begin\n                   was_full <= 1'b0;\n                   cnt_tx <= {N_TX{1'b0}};\n                   // If we don't have a trigger start acq right now\n                   if (trg_mask==8'b0)\n                      start_acq_r <= 1'b1;\n                   end\n                if (!rx_data_i[0])\n                   start_acq_r <= 1'b0;\n                end\n        endcase\n        end\n     if (!rx_rd_i)\n        // Ensure we go back to 0 after a burst\n        cnt_rx <= 2'b0;\n     end\nend // do_regs\n\n////////////////////////////////\n// 4 bits debug output (LEDs) //\n////////////////////////////////\n//assign dbg_o={1'b0,status_empty,was_full,start_r};\n//assign dbg_o={2'b0,cnt_rx};\n//assign dbg_o={ft_full,1'b0,cnt_rx2};\n//assign dbg_o=dbg_fifo;\n//assign dbg_o=trg_edge[3:0];\n//assign dbg_o=trg_mask[3:0];\n//assign dbg_o=trg_value[3:0];\nassign dbg_o=4'b0;\n\n///////////////////\n// Trigger logic //\n///////////////////\nalways @(posedge clk_i)\nbegin : do_acq_data_r\n  if (next_data)\n     acq_data_r <= acq_data;\nend // do_acq_data_r\n\nassign acq_edge=(acq_data_r ^ acq_data) &&\n                trg_edge; // Ignore edges on level triggers\n\nassign trigger=trg_mask==8'b0 || // No mask, always triggered\n               ((trg_value ~^ acq_data_r) & // Compare the data with the trigger value\n                (trg_edge  ~^ acq_edge) &   // Compare the data edge with the trigger edge\n                 trg_mask)==trg_mask; // Apply the trigger mask   ",
             "params": [
               {
                 "name": "CLK_DIV"
@@ -1758,6 +1794,9 @@
               },
               {
                 "name": "C_TX"
+              },
+              {
+                "name": "F_CLK"
               }
             ],
             "ports": {
@@ -1972,13 +2011,23 @@
             "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
             "port": "C_TX"
           }
+        },
+        {
+          "source": {
+            "block": "constant-F_CLK",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "37adbf83-88c5-44c0-82e6-5521a43010a3",
+            "port": "F_CLK"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 368,
-        "y": 209.5
+        "x": 40,
+        "y": 146.5
       },
       "zoom": 1
     }

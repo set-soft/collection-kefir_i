@@ -80,16 +80,16 @@ if (N_CH==8)
    assign cfg_data=cnt_tx_sel==2'd0 ? 8'h08 : (  // 8 channels
                    cnt_tx_sel==2'd1 ? N_FIFO[7:0] : ( // FIFO size
                    cnt_tx_sel==2'd2 ? CLK_DIV[7:0] : (// Clock divider
-                   8'b0)));
+                                      F_CLK[7:0])));  // Clock
    end // cfg_8
 else if (N_CH==16)
    begin : cfg_16
-   assign cfg_data=cnt_tx[0]==1'b0 ? {N_FIFO[7:0], 8'h10} : // 16 channels/FIFO size
-                                     {8'b0, CLK_DIV[7:0]};  // Clock divider/00
+   assign cfg_data=cnt_tx[0]==1'b0 ? {N_FIFO[7:0], 8'h10} :      // 16 channels/FIFO size
+                                     {F_CLK[7:0], CLK_DIV[7:0]}; // Clock divider/Clock
    end // cfg_16
 else if (N_CH==32)
    begin : cfg_32
-   assign cfg_data={8'b0, CLK_DIV[7:0], N_FIFO[7:0], 8'h20};
+   assign cfg_data={F_CLK[7:0], CLK_DIV[7:0], N_FIFO[7:0], 8'h20};
    end // cfg_32
 endgenerate
 

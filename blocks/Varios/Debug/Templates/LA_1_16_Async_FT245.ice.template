@@ -401,7 +401,7 @@
             "local": false
           },
           "position": {
-            "x": 128,
+            "x": 112,
             "y": 120
           }
         },
@@ -414,7 +414,7 @@
             "local": true
           },
           "position": {
-            "x": 232,
+            "x": 224,
             "y": 120
           }
         },
@@ -427,8 +427,8 @@
             "local": true
           },
           "position": {
-            "x": 336,
-            "y": 120
+            "x": 288,
+            "y": 48
           }
         },
         {
@@ -440,7 +440,20 @@
             "local": true
           },
           "position": {
-            "x": 440,
+            "x": 352,
+            "y": 120
+          }
+        },
+        {
+          "id": "constant-F_CLK",
+          "type": "basic.constant",
+          "data": {
+            "name": "F_CLK",
+            "value": "24",
+            "local": true
+          },
+          "position": {
+            "x": 464,
             "y": 120
           }
         },
@@ -594,7 +607,7 @@
           "vertices": [
             {
               "x": 1160,
-              "y": 56
+              "y": 8
             },
             {
               "x": 80,
@@ -1258,15 +1271,25 @@
               "y": 384
             }
           ]
+        },
+        {
+          "source": {
+            "block": "constant-F_CLK",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "57dc4ee2-bf81-4287-80dd-06480663e543",
+            "port": "constant-F_CLK"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 310.0534,
-        "y": 245.9237
+        "x": 278.3555,
+        "y": 250.75
       },
-      "zoom": 0.8044
+      "zoom": 0.8232
     }
   },
   "dependencies": {
