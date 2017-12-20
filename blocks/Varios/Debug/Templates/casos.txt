@@ -6,3 +6,5 @@
 "LA_1_32_Sync_FT245.ice.template" 0 0 "LA_1/LA_1_32_Sync_FT245.ice"
 "LA_1_32_Sync_FT245.ice.template" 0 0 "LA_1/LA_1_32_Sync_FT245.ice"
 "LA_1_8_Async_FT245.ice.template" 0 0 "LA_1/LA_1_8_Async_FT245.ice"
+"LA_1_16_Async_FT245.ice.template" 0 0 "LA_1/LA_1_16_Async_FT245.ice"
+"LA_1_16_Async_FT245.ice.template" 0 0 "LA_1/LA_1_16_Async_FT245.ice"

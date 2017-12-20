@@ -243,6 +243,7 @@ Collection for the Kefir I board in Icestudio.
   * 02\. Analizador 16 canales contador FT245 Sync
   * 03\. Analizador 32 canales contador FT245 Sync
   * 04\. Analizador 8 canales contador FT245 Async
+  * 05\. Analizador 16 canales contador FT245 Async
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
