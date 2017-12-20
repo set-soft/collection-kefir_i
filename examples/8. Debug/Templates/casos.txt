@@ -1,4 +1,4 @@
 "01. Analizador 8 canales contador FT245 Sync.ice.template" 0 0 "01. Analizador 8 canales contador FT245 Sync.ice"
 "02. Analizador 16 canales contador FT245 Sync.ice.template" 0 0 "02. Analizador 16 canales contador FT245 Sync.ice"
 "03. Analizador 32 canales contador FT245 Sync.ice.template" 0 0 "03. Analizador 32 canales contador FT245 Sync.ice"
-"03. Analizador 32 canales contador FT245 Sync.ice.template" 0 0 "03. Analizador 32 canales contador FT245 Sync.ice"
+"04. Analizador 8 canales contador FT245 Async.ice.template" 0 0 "04. Analizador 8 canales contador FT245 Async.ice"
