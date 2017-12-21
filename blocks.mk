@@ -10,6 +10,7 @@ all:  \
 	./blocks/Const/Bus/0/Valor_0_16_bits.ice \
 	./blocks/Const/Bus/0/Valor_0_2_bits.ice \
 	./blocks/Const/Bus/0/Valor_0_32_bits.ice \
+	./blocks/Const/Bus/0/Valor_0_3_bits.ice \
 	./blocks/Const/Bus/0/Valor_0_4_bits.ice \
 	./blocks/Const/Bus/0/Valor_0_8_bits.ice \
 	./blocks/Const/Bus/1s/Valor_1s_16_bits.ice \
@@ -25,6 +26,7 @@ all:  \
 	./blocks/Input/CapSense/CapSense\ 2.ice \
 	./blocks/Input/CapSense/CapSense\ 3.ice \
 	./blocks/Input/CapSense/CapSense\ 4.ice \
+	./blocks/Input/Convertidor_AD/MCP300x.ice \
 	./blocks/Input/Teclado/Teclado_0_estado.ice \
 	./blocks/Input/Teclado/Teclado_0_presionada.ice \
 	./blocks/Input/Teclado/Teclado_1_estado.ice \
@@ -604,6 +606,7 @@ all:  \
 	./examples/8.\ Debug/04.\ Analizador\ 8\ canales\ contador\ FT245\ Async.ice \
 	./examples/8.\ Debug/05.\ Analizador\ 16\ canales\ contador\ FT245\ Async.ice \
 	./examples/8.\ Debug/06.\ Analizador\ 32\ canales\ contador\ FT245\ Async.ice \
+	./examples/9.\ Analógico/01.\ ADC\ y\ LEDs.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice \
 	blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice \
@@ -669,6 +672,10 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Valor_0.ice.template 0 32 ./blocks/Const/Bus/0/Valor_0_32_bits.ice
 	perl tools/update_db.pl ./blocks/Const/Bus/0/Valor_0_32_bits.ice
 
+./blocks/Const/Bus/0/Valor_0_3_bits.ice: ./blocks/Const/Bus/Templates/Valor_0.ice.template tools/reemplaza.pl ././tools/board.cfg 
+	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Valor_0.ice.template 0 3 ./blocks/Const/Bus/0/Valor_0_3_bits.ice
+	perl tools/update_db.pl ./blocks/Const/Bus/0/Valor_0_3_bits.ice
+
 ./blocks/Const/Bus/0/Valor_0_4_bits.ice: ./blocks/Const/Bus/Templates/Valor_0.ice.template tools/reemplaza.pl ././tools/board.cfg 
 	perl tools/reemplaza.pl ./blocks/Const/Bus/Templates/Valor_0.ice.template 0 4 ./blocks/Const/Bus/0/Valor_0_4_bits.ice
 	perl tools/update_db.pl ./blocks/Const/Bus/0/Valor_0_4_bits.ice
@@ -728,6 +735,10 @@ all:  \
 ./blocks/Input/CapSense/CapSense\ 4.ice: ./blocks/Input/Templates/CapSense\ 4.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_4.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_4.ice ./blocks/Input/Templates/CapSense.svg ./blocks/Input/Templates/CapSense.v
 	perl tools/reemplaza.pl ./blocks/Input/Templates/CapSense\ 4.ice.template 0 0 ./blocks/Input/CapSense/CapSense\ 4.ice
 	perl tools/update_db.pl ./blocks/Input/CapSense/CapSense\ 4.ice
+
+./blocks/Input/Convertidor_AD/MCP300x.ice: ./blocks/Input/Templates/MCP300x.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Logic/NOT/NOT.ice ./blocks/Input/Templates/ADC_Symbol.svg ./blocks/Input/Templates/mcp300x.v
+	perl tools/reemplaza.pl ./blocks/Input/Templates/MCP300x.ice.template 0 0 ./blocks/Input/Convertidor_AD/MCP300x.ice
+	perl tools/update_db.pl ./blocks/Input/Convertidor_AD/MCP300x.ice
 
 ./blocks/Input/Teclado/Teclado_0_estado.ice: ./blocks/Input/Templates/Teclado_x_estado.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Input/Teclado/Teclado_estado.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Logic/AND/AND_3.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Input/Templates/tecla.svg
 	perl tools/reemplaza.pl ./blocks/Input/Templates/Teclado_x_estado.ice.template 0 0 ./blocks/Input/Teclado/Teclado_0_estado.ice
@@ -3038,6 +3049,10 @@ all:  \
 ./examples/8.\ Debug/06.\ Analizador\ 32\ canales\ contador\ FT245\ Async.ice: ./examples/8.\ Debug/Templates/06.\ Analizador\ 32\ canales\ contador\ FT245\ Async.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/LA_1/LA_1_32_Async_FT245.ice ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_32.ice ./blocks/Varios/Buses/Reducir/ReduSec_32_8.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Simple\ 0.ice ./blocks/Varios/Reset/Power\ On\ Reset.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/8.\ Debug/Templates/06.\ Analizador\ 32\ canales\ contador\ FT245\ Async.ice.template 0 0 ./examples/8.\ Debug/06.\ Analizador\ 32\ canales\ contador\ FT245\ Async.ice
 	perl tools/update_db.pl ./examples/8.\ Debug/06.\ Analizador\ 32\ canales\ contador\ FT245\ Async.ice
+
+./examples/9.\ Analógico/01.\ ADC\ y\ LEDs.ice: ./examples/9.\ Analógico/Templates/01.\ ADC\ y\ LEDs.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Input/Convertidor_AD/MCP300x.ice ./blocks/Logic/NOT/NOT.ice ./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bus/0/Valor_0_3_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Registros/Completo/Reg_4_Completo.ice ./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_4.ice
+	perl tools/reemplaza.pl ./examples/9.\ Analógico/Templates/01.\ ADC\ y\ LEDs.ice.template 0 0 ./examples/9.\ Analógico/01.\ ADC\ y\ LEDs.ice
+	perl tools/update_db.pl ./examples/9.\ Analógico/01.\ ADC\ y\ LEDs.ice
 
 blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice: blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template tools/reemplaza.pl ././tools/board.cfg  blocks/Varios/Biestables/Templates/Flip-flop-X-INI.svg blocks/Varios/Biestables/Templates/ffd.v
 	perl tools/reemplaza.pl blocks/Varios/Biestables/Templates/Flip-flop\ X\ Completo.ice.template 0 D blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Completo.ice

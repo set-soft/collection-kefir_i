@@ -4,6 +4,7 @@
 "Const.ice.template" 0 16 "Val/Const_16_bits.ice"
 "Const.ice.template" 0 32 "Val/Const_32_bits.ice"
 "Valor_0.ice.template" 0 2 "0/Valor_0_2_bits.ice"
+"Valor_0.ice.template" 0 3 "0/Valor_0_3_bits.ice"
 "Valor_0.ice.template" 0 4 "0/Valor_0_4_bits.ice"
 "Valor_0.ice.template" 0 8 "0/Valor_0_8_bits.ice"
 "Valor_0.ice.template" 0 16 "0/Valor_0_16_bits.ice"
