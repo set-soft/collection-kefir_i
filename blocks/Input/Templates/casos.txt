@@ -41,3 +41,4 @@
 "Teclado_x_estado_ext.ice.template" ↓ 0 "Teclado/Teclado_↓_estado_ext.ice"
 "Teclado_x_estado_ext.ice.template" → 0 "Teclado/Teclado_→_estado_ext.ice"
 "Teclado_x_estado_ext.ice.template" ← 0 "Teclado/Teclado_←_estado_ext.ice"
+"MCP300x.ice.template" 0 0 "Convertidor_AD/MCP300x.ice"

@@ -24,6 +24,7 @@ Collection for the Kefir I board in Icestudio.
   * *Teclado base* (detecta extendidos y soltar teclas)
   * *Tecla presionada* (0/1/2/3/4/5/6/7/8/9)
   * *Tecla estado* (0/1/2/3/4/5/6/7/8/9/&uparrow;/&downarrow;/&leftarrow;/&rightarrow;)
+  * *Conversor A/D* (Kéfir I MCP3008)
 
 * *Logic*
   * *AND* 2 to 8 inputs
@@ -245,6 +246,8 @@ Collection for the Kefir I board in Icestudio.
   * 04\. Analizador 8 canales contador FT245 Async
   * 05\. Analizador 16 canales contador FT245 Async
   * 06\. Analizador 32 canales contador FT245 Async
+* *9\. Analógico*
+  * 01\. ADC y LEDs
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)

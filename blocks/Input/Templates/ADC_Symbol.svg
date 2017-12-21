@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="291.41" width="250" version="1.1">
+<g stroke="#000">
+<path d="m4.8735 50.614q27.368-91.227 54.736 0t54.736 0" stroke-width="6" fill="none"/>
+<g stroke-width="5">
+<path d="m26.996 239.91 56-50h145v97h-145z" fill="#e8eff9"/>
+<line y2="239.91" x2="26.996" y1="239.91" x1="6.9962"/>
+<line y2="239.91" x2="248" y1="239.91" x1="228"/>
+</g>
+<polyline transform="matrix(2.4848 0 0 2.4848 -664.59 16.802)" points="305 60 315 60 315 45 325 45 325 60 335 60 335 45 346 45 345 60 355 60 355 45 365 45" stroke-width="2.4147" fill="none"/>
+</g>
+<g font-family="Arial" font-weight="bold">
+<text font-size="20px" y="244.9146" x="47.996216">IN</text>
+<text font-size="46.505px" y="252.9426" x="78.780037" stroke-width="1.6609">ADC</text>
+<text font-size="20px" y="244.9146" x="182.99622">OUT</text>
+</g>
+<path d="m9.2623 176.78 225.88-169.61" stroke="#000" stroke-width="6" fill="none"/>
+</svg>

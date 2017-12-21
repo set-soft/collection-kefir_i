@@ -1,0 +1,396 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LED",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 1208,
+            "y": 264
+          }
+        },
+        {
+          "id": "output-AD_nCS",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_nCS",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_CS",
+                "value": "101"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 344
+          }
+        },
+        {
+          "id": "output-AD_Clk",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_Clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_CK",
+                "value": "105"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 416
+          }
+        },
+        {
+          "id": "input-AD_Dout",
+          "type": "basic.input",
+          "data": {
+            "name": "AD_Dout",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_DO",
+                "value": "104"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 416,
+            "y": 416
+          }
+        },
+        {
+          "id": "output-AD_Din",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_Din",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_DI",
+                "value": "102"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 488
+          }
+        },
+        {
+          "id": "constant-DIV_1",
+          "type": "basic.constant",
+          "data": {
+            "name": "DIV_1",
+            "value": "11",
+            "local": true
+          },
+          "position": {
+            "x": 224,
+            "y": 264
+          }
+        },
+        {
+          "id": "constant-LSB",
+          "type": "basic.constant",
+          "data": {
+            "name": "LSB",
+            "value": "6",
+            "local": true
+          },
+          "position": {
+            "x": 880,
+            "y": 184
+          }
+        },
+        {
+          "id": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+          "type": "@sha1<./blocks/Input/Convertidor_AD/MCP300x.ice>",
+          "position": {
+            "x": 576,
+            "y": 232
+          },
+          "size": {
+            "width": 96,
+            "height": 224
+          }
+        },
+        {
+          "id": "7b699cab-c2f3-40eb-95f2-5c0e8ebf7e98",
+          "type": "@sha1<./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice>",
+          "position": {
+            "x": 224,
+            "y": 376
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "0bd4946d-5f2e-401c-be85-2d65d008c961",
+          "type": "@sha1<./blocks/Const/Bus/0/Valor_0_3_bits.ice>",
+          "position": {
+            "x": 352,
+            "y": 312
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "e8d85f84-ce3d-4491-88f6-1f200b0d2f64",
+          "type": "@sha1<./blocks/Const/Bit/1.ice>",
+          "position": {
+            "x": 352,
+            "y": 240
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "e2349c7f-7919-4bcd-9032-482a60f36c66",
+          "type": "@sha1<./blocks/Varios/Registros/Completo/Reg_4_Completo.ice>",
+          "position": {
+            "x": 1056,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "4f721a39-c1ae-4d8c-83da-853d14b038c7",
+          "type": "@sha1<./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_4.ice>",
+          "position": {
+            "x": 880,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-DIV_1",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "7b699cab-c2f3-40eb-95f2-5c0e8ebf7e98",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "0bd4946d-5f2e-401c-be85-2d65d008c961",
+            "port": "output-K"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-chn"
+          },
+          "size": 3
+        },
+        {
+          "source": {
+            "block": "input-AD_Dout",
+            "port": "out"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-AD_Dout"
+          }
+        },
+        {
+          "source": {
+            "block": "7b699cab-c2f3-40eb-95f2-5c0e8ebf7e98",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-ena"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "e8d85f84-ce3d-4491-88f6-1f200b0d2f64",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-start"
+          },
+          "vertices": [
+            {
+              "x": 496,
+              "y": 280
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-AD_nCS"
+          },
+          "target": {
+            "block": "output-AD_nCS",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-AD_Clk"
+          },
+          "target": {
+            "block": "output-AD_Clk",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-AD_Din"
+          },
+          "target": {
+            "block": "output-AD_Din",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 736,
+              "y": 504
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "e2349c7f-7919-4bcd-9032-482a60f36c66",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-LED",
+            "port": "in"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-eoc"
+          },
+          "target": {
+            "block": "e2349c7f-7919-4bcd-9032-482a60f36c66",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 728,
+              "y": 160
+            },
+            {
+              "x": 1328,
+              "y": 456
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-data"
+          },
+          "target": {
+            "block": "4f721a39-c1ae-4d8c-83da-853d14b038c7",
+            "port": "input-i"
+          },
+          "size": 16
+        },
+        {
+          "source": {
+            "block": "4f721a39-c1ae-4d8c-83da-853d14b038c7",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "e2349c7f-7919-4bcd-9032-482a60f36c66",
+            "port": "input-d"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "constant-LSB",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "4f721a39-c1ae-4d8c-83da-853d14b038c7",
+            "port": "constant-FROM"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 194,
+        "y": 116.5668
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

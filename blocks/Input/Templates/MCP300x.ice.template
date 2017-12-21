@@ -1,0 +1,589 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "A/D Converter",
+    "version": "1.0.0",
+    "description": "MCP3008 10 bits A/D",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<ADC_Symbol.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 104,
+            "y": 144
+          }
+        },
+        {
+          "id": "output-busy",
+          "type": "basic.output",
+          "data": {
+            "name": "busy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 152
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 224
+          }
+        },
+        {
+          "id": "output-eoc",
+          "type": "basic.output",
+          "data": {
+            "name": "eoc",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 248
+          }
+        },
+        {
+          "id": "input-start",
+          "type": "basic.input",
+          "data": {
+            "name": "start",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 304
+          }
+        },
+        {
+          "id": "output-data",
+          "type": "basic.output",
+          "data": {
+            "name": "data",
+            "range": "[15:0]",
+            "pins": [
+              {
+                "index": "15",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "14",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "13",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "12",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "11",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "10",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "9",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "8",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "6",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "5",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "4",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "3",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 336
+          }
+        },
+        {
+          "id": "input-chn",
+          "type": "basic.input",
+          "data": {
+            "name": "chn",
+            "range": "[2:0]",
+            "pins": [
+              {
+                "index": "2",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 384
+          }
+        },
+        {
+          "id": "output-AD_nCS",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_nCS",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 432
+          }
+        },
+        {
+          "id": "input-diff",
+          "type": "basic.input",
+          "data": {
+            "name": "diff",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -8,
+            "y": 464
+          }
+        },
+        {
+          "id": "output-AD_Clk",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_Clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 528
+          }
+        },
+        {
+          "id": "input-ena",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 544
+          }
+        },
+        {
+          "id": "output-AD_Din",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_Din",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1216,
+            "y": 616
+          }
+        },
+        {
+          "id": "input-AD_Dout",
+          "type": "basic.input",
+          "data": {
+            "name": "AD_Dout",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 104,
+            "y": 624
+          }
+        },
+        {
+          "id": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam FULL_RESET=1;\n@verilog<mcp300x.v>",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk_i"
+                },
+                {
+                  "name": "rst_i"
+                },
+                {
+                  "name": "start_i"
+                },
+                {
+                  "name": "chn_i",
+                  "range": "[2:0]",
+                  "size": 3
+                },
+                {
+                  "name": "single_i"
+                },
+                {
+                  "name": "ena_i"
+                },
+                {
+                  "name": "ad_dout_i"
+                }
+              ],
+              "out": [
+                {
+                  "name": "busy_o"
+                },
+                {
+                  "name": "eoc_o"
+                },
+                {
+                  "name": "data_o",
+                  "range": "[15:0]",
+                  "size": 16
+                },
+                {
+                  "name": "ad_ncs_o"
+                },
+                {
+                  "name": "ad_clk_o"
+                },
+                {
+                  "name": "ad_din_o"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 296,
+            "y": 136
+          },
+          "size": {
+            "width": 816,
+            "height": 560
+          }
+        },
+        {
+          "id": "89759ca3-c63d-4085-ade8-6ad3de5ba3cf",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 136,
+            "y": 464
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "clk_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "rst_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-start",
+            "port": "out"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "start_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-diff",
+            "port": "out"
+          },
+          "target": {
+            "block": "89759ca3-c63d-4085-ade8-6ad3de5ba3cf",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "89759ca3-c63d-4085-ade8-6ad3de5ba3cf",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "single_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "ena_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-AD_Dout",
+            "port": "out"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "ad_dout_i"
+          }
+        },
+        {
+          "source": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "busy_o"
+          },
+          "target": {
+            "block": "output-busy",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "eoc_o"
+          },
+          "target": {
+            "block": "output-eoc",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "ad_ncs_o"
+          },
+          "target": {
+            "block": "output-AD_nCS",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "ad_clk_o"
+          },
+          "target": {
+            "block": "output-AD_Clk",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "ad_din_o"
+          },
+          "target": {
+            "block": "output-AD_Din",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "data_o"
+          },
+          "target": {
+            "block": "output-data",
+            "port": "in"
+          },
+          "size": 16
+        },
+        {
+          "source": {
+            "block": "input-chn",
+            "port": "out"
+          },
+          "target": {
+            "block": "556f4e30-fe59-4a8d-a775-218fa53333ad",
+            "port": "chn_i"
+          },
+          "size": 3
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 142,
+        "y": 15
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
