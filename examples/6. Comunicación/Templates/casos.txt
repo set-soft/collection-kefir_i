@@ -9,3 +9,4 @@
 "08. Transmisión Serie 32 bits.ice.template" 0 0 "08. Transmisión Serie 32 bits.ice"
 "09. FT245 Sync FIFO contador.ice.template" 0 0 "09. FT245 Sync FIFO contador.ice"
 "09. FT245 Sync FIFO contador.ice.template" 0 0 "09. FT245 Sync FIFO contador.ice"
+"10. SPI Flash a Serie.ice.template" 0 0 "10. SPI Flash a Serie.ice"

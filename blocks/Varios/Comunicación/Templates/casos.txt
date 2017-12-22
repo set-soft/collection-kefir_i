@@ -48,3 +48,4 @@
 "RX_PS2.ice.template" 0 0 "PS2/RX_PS2.ice"
 "FT245_Sync_If.ice.template" 0 0 "FT245/FT245_Sync_If.ice"
 "FT245_Sync_If.ice.template" 0 0 "FT245/FT245_Sync_If.ice"
+"SPI_Master.ice.template" 8 0 "SPI/SPI_Master_8.ice"

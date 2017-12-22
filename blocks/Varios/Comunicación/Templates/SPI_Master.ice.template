@@ -1,0 +1,573 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "SPI Master (@sz_i bits)",
+    "version": "1.0.0",
+    "description": "SPI Master @sz_i bits",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<spi_master.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 88,
+            "y": 64
+          }
+        },
+        {
+          "id": "output-rx",
+          "type": "basic.output",
+          "data": {
+            "name": "rx",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 88
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 136
+          }
+        },
+        {
+          "id": "input-ena",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 208
+          }
+        },
+        {
+          "id": "output-busy",
+          "type": "basic.output",
+          "data": {
+            "name": "busy",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 208
+          }
+        },
+        {
+          "id": "input-start",
+          "type": "basic.input",
+          "data": {
+            "name": "start",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 280
+          }
+        },
+        {
+          "id": "output-irq",
+          "type": "basic.output",
+          "data": {
+            "name": "irq",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 328
+          }
+        },
+        {
+          "id": "input-tx",
+          "type": "basic.input",
+          "data": {
+            "name": "tx",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 352
+          }
+        },
+        {
+          "id": "input-iack",
+          "type": "basic.input",
+          "data": {
+            "name": "iack",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 432
+          }
+        },
+        {
+          "id": "output-sclk",
+          "type": "basic.output",
+          "data": {
+            "name": "sclk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 456
+          }
+        },
+        {
+          "id": "input-cpol",
+          "type": "basic.input",
+          "data": {
+            "name": "cpol",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 504
+          }
+        },
+        {
+          "id": "input-dord",
+          "type": "basic.input",
+          "data": {
+            "name": "dord",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 576
+          }
+        },
+        {
+          "id": "output-mosi_en",
+          "type": "basic.output",
+          "data": {
+            "name": "mosi_en",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 576
+          }
+        },
+        {
+          "id": "input-cpha",
+          "type": "basic.input",
+          "data": {
+            "name": "cpha",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 648
+          }
+        },
+        {
+          "id": "output-mosi",
+          "type": "basic.output",
+          "data": {
+            "name": "mosi",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1096,
+            "y": 696
+          }
+        },
+        {
+          "id": "input-miso",
+          "type": "basic.input",
+          "data": {
+            "name": "miso",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 88,
+            "y": 720
+          }
+        },
+        {
+          "id": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam DATA_W=@sz_i;\n@verilog<spi_master.v>",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk_i"
+                },
+                {
+                  "name": "rst_i"
+                },
+                {
+                  "name": "ena_i"
+                },
+                {
+                  "name": "start_i"
+                },
+                {
+                  "name": "tx_i",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                },
+                {
+                  "name": "ack_i"
+                },
+                {
+                  "name": "cpol_i"
+                },
+                {
+                  "name": "dord_i"
+                },
+                {
+                  "name": "cpha_i"
+                },
+                {
+                  "name": "miso_i"
+                }
+              ],
+              "out": [
+                {
+                  "name": "rx_o",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                },
+                {
+                  "name": "busy_o"
+                },
+                {
+                  "name": "irq_o"
+                },
+                {
+                  "name": "sclk_o"
+                },
+                {
+                  "name": "mosi_en_o"
+                },
+                {
+                  "name": "mosi_o"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 272,
+            "y": 56
+          },
+          "size": {
+            "width": 736,
+            "height": 736
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "rst_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "clk_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "ena_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-start",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "start_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-iack",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "ack_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-cpol",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "cpol_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-dord",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "dord_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-miso",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "miso_i"
+          }
+        },
+        {
+          "source": {
+            "block": "input-tx",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "tx_i"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "input-cpha",
+            "port": "out"
+          },
+          "target": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "cpha_i"
+          }
+        },
+        {
+          "source": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "rx_o"
+          },
+          "target": {
+            "block": "output-rx",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "busy_o"
+          },
+          "target": {
+            "block": "output-busy",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "irq_o"
+          },
+          "target": {
+            "block": "output-irq",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "mosi_en_o"
+          },
+          "target": {
+            "block": "output-mosi_en",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "sclk_o"
+          },
+          "target": {
+            "block": "output-sclk",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "e585f607-26ae-4614-a0c4-7cf2e2c233f1",
+            "port": "mosi_o"
+          },
+          "target": {
+            "block": "output-mosi",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 375.5,
+        "y": 45.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

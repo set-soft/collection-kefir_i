@@ -138,6 +138,7 @@ Collection for the Kefir I board in Icestudio.
     * RX RS-232 (115200 and configurable)
     * RX PS/2
     * FT245 Sync FIFO (FT2232H high speed communication)
+    * SPI Master (8 bits)
     * *Support*
       * Rising/falling edge detector
       * 1 and 2 flip-flops synchronizer
