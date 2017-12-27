@@ -167,7 +167,9 @@ Collection for the Kefir I board in Icestudio.
     * *8 channels* (1/2/4/8/16/32)
   * *PWM*
     * De 4/8/16 bits de resolución
-  * *Pulso* one pulse from N frequency dividers, including 1 and 2 Hz and configurable versions
+  * *Pulso*
+    * One pulse from N frequency dividers, including 1 and 2 Hz and configurable versions
+    * One pulse every N ms
   * *Registros*
     * *PIPO* (1/2/4/8/16/32)
     * *PIPO Simple* (1/2/4/8/16/32)

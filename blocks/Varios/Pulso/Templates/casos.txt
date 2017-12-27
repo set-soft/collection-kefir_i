@@ -9,4 +9,4 @@
 "Divisor_Frecuencia_Sin_Reset_y_Enable.ice.template" 0 0 "Divisor_Frecuencia_Sin_Reset_y_Enable.ice"
 "Corazon_1Hz_P.ice.template" 0 0 "Corazon_1Hz_P.ice"
 "Corazon_Xms_N_P.ice.template" 0 0 "Corazon_Xms_N_P.ice"
-"Corazon_Xms_N_P.ice.template" 0 0 "Corazon_Xms_N_P.ice"
+"Corazon_Xms_P.ice.template" 0 0 "Corazon_Xms_P.ice"
