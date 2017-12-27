@@ -165,6 +165,8 @@ Collection for the Kefir I board in Icestudio.
     * *2 channels* (1/2/4/8/16/32)
     * *4 channels* (1/2/4/8/16/32)
     * *8 channels* (1/2/4/8/16/32)
+  * *PWM*
+    * De 4/8/16 bits de resolución
   * *Pulso* one pulse from N frequency dividers, including 1 and 2 Hz and configurable versions
   * *Registros*
     * *PIPO* (1/2/4/8/16/32)
@@ -249,12 +251,14 @@ Collection for the Kefir I board in Icestudio.
   * 06\. Analizador 32 canales contador FT245 Async
 * *9\. Analógico*
   * 01\. ADC y LEDs
+  * 02\. PWM y LEDs
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
 * [Jesús Arroyo Torrens](https://github.com/Jesus89)
 * [Juan González](https://github.com/Obijuan)
 * Carlos Diaz
+* José Picó
 
 ## License
 

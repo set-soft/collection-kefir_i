@@ -1,0 +1,218 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "PWM clock enable",
+    "version": "1.0.0",
+    "description": "Habilitación de reloj configurable para PWM",
+    "author": "José Picó, Salvador E. Tropea",
+    "image": "@svg<Corazon_Xms_P.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 168,
+            "y": 152
+          }
+        },
+        {
+          "id": "output-Pulso",
+          "type": "basic.output",
+          "data": {
+            "name": "Pulso",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 1056,
+            "y": 280
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 168,
+            "y": 416
+          }
+        },
+        {
+          "id": "constant-ms",
+          "type": "basic.constant",
+          "data": {
+            "name": "ms",
+            "value": "20",
+            "local": false
+          },
+          "position": {
+            "x": 456,
+            "y": -72
+          }
+        },
+        {
+          "id": "constant-N_bits",
+          "type": "basic.constant",
+          "data": {
+            "name": "N_bits",
+            "value": "8",
+            "local": false
+          },
+          "position": {
+            "x": 784,
+            "y": -80
+          }
+        },
+        {
+          "id": "f9e175a6-9c77-443b-8633-a62bb58442dd",
+          "type": "basic.info",
+          "data": {
+            "info": "Módulo usado para generar el período adecuado\nde una señal PWM.\nDado los milisegundos que se quieren obtener para\nel período de la señal PWM y el número de bits\ncon los cuales va a trabajar el PWM se \nhacen los cálculos necesarios para obtener la\nfrecuencia del reloj en Hercios que debe tener\nel reloj del módulo PWM.\n\n8bits = 2^8 (256)\nSi quiero Período de la señal PWM de 20ms con 8 bits\n(256) necesitaré una frecuencia de reloj de \n256*1000/20 = 12800 Hercios.",
+            "readonly": true
+          },
+          "position": {
+            "x": -224,
+            "y": -144
+          },
+          "size": {
+            "width": 448,
+            "height": 256
+          }
+        },
+        {
+          "id": "f54545c4-308e-4787-8383-c79146f70ab8",
+          "type": "basic.code",
+          "data": {
+            "code": "localparam i_freq=@clkHz;\n@verilog<pulso_ms_N.v>",
+            "params": [
+              {
+                "name": "ms"
+              },
+              {
+                "name": "N_bits"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk_i"
+                },
+                {
+                  "name": "rst_i"
+                }
+              ],
+              "out": [
+                {
+                  "name": "clk_o"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 336,
+            "y": 48
+          },
+          "size": {
+            "width": 656,
+            "height": 528
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "f54545c4-308e-4787-8383-c79146f70ab8",
+            "port": "ms"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-N_bits",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "f54545c4-308e-4787-8383-c79146f70ab8",
+            "port": "N_bits"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "f54545c4-308e-4787-8383-c79146f70ab8",
+            "port": "clk_i"
+          }
+        },
+        {
+          "source": {
+            "block": "f54545c4-308e-4787-8383-c79146f70ab8",
+            "port": "clk_o"
+          },
+          "target": {
+            "block": "output-Pulso",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "f54545c4-308e-4787-8383-c79146f70ab8",
+            "port": "rst_i"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 484,
+        "y": 225.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

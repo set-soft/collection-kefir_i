@@ -1,0 +1,234 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "PWM base @sz_i bits",
+    "version": "1.0.0",
+    "description": "PWM base de @sz_i bits de resolucion",
+    "author": "Salvador E. Tropea, José Picó",
+    "image": "@svg<PWM.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 168,
+            "y": 112
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 168,
+            "y": 184
+          }
+        },
+        {
+          "id": "input-ena",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 168,
+            "y": 256
+          }
+        },
+        {
+          "id": "output-PWM",
+          "type": "basic.output",
+          "data": {
+            "name": "PWM",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 896,
+            "y": 264
+          }
+        },
+        {
+          "id": "input-Dutty",
+          "type": "basic.input",
+          "data": {
+            "name": "Dutty",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 168,
+            "y": 392
+          }
+        },
+        {
+          "id": "e2936681-d8dc-4768-af67-141cff9d83c0",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
+          "position": {
+            "x": 352,
+            "y": 168
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "9b176772-9df1-4ef8-bfb6-8cb6075a3454",
+          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_@sz_i.ice>",
+          "position": {
+            "x": 552,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Comparador_@sz_i.ice>",
+          "position": {
+            "x": 736,
+            "y": 216
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "9b176772-9df1-4ef8-bfb6-8cb6075a3454",
+            "port": "input-i"
+          },
+          "size": 32
+        },
+        {
+          "source": {
+            "block": "9b176772-9df1-4ef8-bfb6-8cb6075a3454",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
+            "port": "input-A"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "input-Dutty",
+            "port": "out"
+          },
+          "target": {
+            "block": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
+            "port": "input-B"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
+            "port": "output-Menor"
+          },
+          "target": {
+            "block": "output-PWM",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

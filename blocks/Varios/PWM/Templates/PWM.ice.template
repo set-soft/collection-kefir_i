@@ -1,0 +1,286 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "PWM @sz_i bits",
+    "version": "1.0.0",
+    "description": "PWM de período ajustable y @sz_i bits de resolución",
+    "author": "José Picó, Salvador E. Tropea",
+    "image": "@svg<PWM.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 224,
+            "y": 112
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 224,
+            "y": 192
+          }
+        },
+        {
+          "id": "output-PWM",
+          "type": "basic.output",
+          "data": {
+            "name": "PWM",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 888,
+            "y": 344
+          }
+        },
+        {
+          "id": "input-Dutty",
+          "type": "basic.input",
+          "data": {
+            "name": "Dutty",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 232,
+            "y": 440
+          }
+        },
+        {
+          "id": "constant-T_ms",
+          "type": "basic.constant",
+          "data": {
+            "name": "T_ms",
+            "value": "20",
+            "local": false
+          },
+          "position": {
+            "x": 416,
+            "y": 248
+          }
+        },
+        {
+          "id": "constant-Nbits",
+          "type": "basic.constant",
+          "data": {
+            "name": "Nbits",
+            "value": "@sz_i",
+            "local": true
+          },
+          "position": {
+            "x": 536,
+            "y": 248
+          }
+        },
+        {
+          "id": "13ad3964-bbde-4957-bcf1-3da7e796de18",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_Xms_N_P.ice>",
+          "position": {
+            "x": 480,
+            "y": 360
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "d39c1b36-0e4d-4121-932b-6a006e543c0c",
+          "type": "@sha1<./blocks/Varios/PWM/PWM_base_@sz_i.ice>",
+          "position": {
+            "x": 736,
+            "y": 312
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "a10e4ba4-894f-4915-8762-a61b7261b5b5",
+          "type": "basic.info",
+          "data": {
+            "info": "Introduciendo el período T que se desea para nuestro PWM, el número de bits\ncon los que trabaja nuestro PWM (resolución)  y \"Dutty\" que nos indican el \ndutty que queremos tener.\n\nSi estoy trabajando con 8 bits como es el caso trabajo hasta un valor de 255\nque corresponderá a un dutty de casi el 100%",
+            "readonly": true
+          },
+          "position": {
+            "x": 216,
+            "y": -48
+          },
+          "size": {
+            "width": 656,
+            "height": 128
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-T_ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "13ad3964-bbde-4957-bcf1-3da7e796de18",
+            "port": "constant-ms"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-Nbits",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "13ad3964-bbde-4957-bcf1-3da7e796de18",
+            "port": "constant-N_bits"
+          }
+        },
+        {
+          "source": {
+            "block": "13ad3964-bbde-4957-bcf1-3da7e796de18",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "d39c1b36-0e4d-4121-932b-6a006e543c0c",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "input-Dutty",
+            "port": "out"
+          },
+          "target": {
+            "block": "d39c1b36-0e4d-4121-932b-6a006e543c0c",
+            "port": "input-Dutty"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "13ad3964-bbde-4957-bcf1-3da7e796de18",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 360,
+              "y": 400
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "d39c1b36-0e4d-4121-932b-6a006e543c0c",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 648,
+              "y": 320
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "13ad3964-bbde-4957-bcf1-3da7e796de18",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": 392,
+              "y": 192
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "d39c1b36-0e4d-4121-932b-6a006e543c0c",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": 680,
+              "y": 264
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "d39c1b36-0e4d-4121-932b-6a006e543c0c",
+            "port": "output-PWM"
+          },
+          "target": {
+            "block": "output-PWM",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 34,
+        "y": 172.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
