@@ -31,16 +31,16 @@
           }
         },
         {
-          "id": "constant-DIV",
+          "id": "constant-ms",
           "type": "basic.constant",
           "data": {
-            "name": "DIV",
-            "value": "239999",
+            "name": "ms",
+            "value": "10",
             "local": true
           },
           "position": {
             "x": 200,
-            "y": 88
+            "y": 96
           }
         },
         {
@@ -67,18 +67,6 @@
           "position": {
             "x": 800,
             "y": 40
-          }
-        },
-        {
-          "id": "e2f2afa1-bbd1-430d-b660-f097abf1ae0e",
-          "type": "f5026a7c830293b77e4cf4b332f1705948be0dca",
-          "position": {
-            "x": 200,
-            "y": 208
-          },
-          "size": {
-            "width": 96,
-            "height": 64
           }
         },
         {
@@ -132,29 +120,21 @@
             "width": 800,
             "height": 112
           }
+        },
+        {
+          "id": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+          "type": "24e40ca6c5e46b189e75212af692fbfc9dd34d59",
+          "position": {
+            "x": 200,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
         }
       ],
       "wires": [
-        {
-          "source": {
-            "block": "constant-DIV",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "e2f2afa1-bbd1-430d-b660-f097abf1ae0e",
-            "port": "constant-TO"
-          }
-        },
-        {
-          "source": {
-            "block": "e2f2afa1-bbd1-430d-b660-f097abf1ae0e",
-            "port": "output-Pulso"
-          },
-          "target": {
-            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
-            "port": "input-ena"
-          }
-        },
         {
           "source": {
             "block": "constant-TO",
@@ -206,319 +186,38 @@
             "block": "output-LED",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "constant-ms"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 104,
-        "y": 211
+        "x": 81.5,
+        "y": 264
       },
       "zoom": 1
     }
   },
   "dependencies": {
-    "f5026a7c830293b77e4cf4b332f1705948be0dca": {
-  "package": {
-    "name": "Divisor Frecuencia Sin Reset y Enable",
-    "version": "1.0.0",
-    "description": "Genera un pulso de reloj cada una cantidad dada de los del sistema.",
-    "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2281.268%22%20width=%2288.955%22%20viewBox=%220%200%2088.955%2081.268%22%3E%3Cpath%20d=%22M43.571%2078.683c-1.401-2.405-3.574-4.759-7.691-8.333-2.23-1.936-3.587-3.011-11.312-8.961-6.055-4.665-9.075-7.252-12.576-10.774-3.499-3.522-5.555-6.328-7.32-9.985-1.126-2.336-1.9-4.587-2.383-6.925-.61-2.97-.694-3.977-.69-8.35.003-5.74.193-6.695%202.084-10.525%201.404-2.844%202.471-4.341%204.693-6.59%202.158-2.184%203.558-3.176%206.588-4.67%203.365-1.66%205.799-2.095%2010.814-1.934%203.896.126%205.322.512%208.411%202.285%204.862%202.79%208.635%207.267%209.68%2011.488.17.69.346%201.256.39%201.256s.439-.808.875-1.794c1.485-3.355%202.864-5.402%205.055-7.508C56.897.914%2067.473-.25%2076.025%204.513c3.492%201.946%206.334%204.779%208.536%208.51%201.733%202.937%202.62%206.837%202.77%2012.195.22%207.762-1.205%2013.141-4.994%2018.874-1.504%202.275-2.617%203.653-4.703%205.825-3.367%203.506-6.402%206.083-13.57%2011.518-4.522%203.43-7.203%205.634-11.082%209.12-3.11%202.793-7.927%207.655-8.39%208.467-.203.356-.387.646-.408.646-.021%200-.297-.443-.612-.985z%22%20stroke=%22#000%22%20stroke-width=%223.2%22%20fill=%22#F00%22/%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M30.711%2055.733h8.215V22.162h10.357v33.57h8.571%22%20stroke=%22#00F%22%20stroke-linecap=%22round%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3C/svg%3E"
-  },
-  "design": {
-    "graph": {
-      "blocks": [
-        {
-          "id": "input-clk",
-          "type": "basic.input",
-          "data": {
-            "name": "clk",
-            "clock": false
-          },
-          "position": {
-            "x": 376,
-            "y": 248
-          }
-        },
-        {
-          "id": "output-Pulso",
-          "type": "basic.output",
-          "data": {
-            "name": "Pulso"
-          },
-          "position": {
-            "x": 728,
-            "y": 296
-          }
-        },
-        {
-          "id": "constant-FROM",
-          "type": "basic.constant",
-          "data": {
-            "name": "FROM",
-            "value": "0",
-            "local": true
-          },
-          "position": {
-            "x": 480,
-            "y": 192
-          }
-        },
-        {
-          "id": "constant-TO",
-          "type": "basic.constant",
-          "data": {
-            "name": "TO",
-            "value": "23999999",
-            "local": false
-          },
-          "position": {
-            "x": 592,
-            "y": 192
-          }
-        },
-        {
-          "id": "d5f0e82c-093c-48af-b60d-d8033824b2fd",
-          "type": "78b882006678da24215d00b69cdf2c496f6f812f",
-          "position": {
-            "x": 376,
-            "y": 320
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "d28138ce-4488-4ae1-8fbd-43d6f9babbdd",
-          "type": "7a5052cf67ad629d54e75210928ff8eb02c7c09c",
-          "position": {
-            "x": 376,
-            "y": 392
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-          "type": "90733826a1446019af80962f39a12195cb55b447",
-          "position": {
-            "x": 544,
-            "y": 304
-          },
-          "size": {
-            "width": 96,
-            "height": 96
-          }
-        }
-      ],
-      "wires": [
-        {
-          "source": {
-            "block": "d28138ce-4488-4ae1-8fbd-43d6f9babbdd",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-            "port": "input-ena"
-          },
-          "vertices": []
-        },
-        {
-          "source": {
-            "block": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-            "port": "output-tc"
-          },
-          "target": {
-            "block": "output-Pulso",
-            "port": "in"
-          }
-        },
-        {
-          "source": {
-            "block": "input-clk",
-            "port": "out"
-          },
-          "target": {
-            "block": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-            "port": "input-clk"
-          },
-          "vertices": []
-        },
-        {
-          "source": {
-            "block": "d5f0e82c-093c-48af-b60d-d8033824b2fd",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-            "port": "input-rst"
-          }
-        },
-        {
-          "source": {
-            "block": "constant-FROM",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-            "port": "constant-FROM"
-          }
-        },
-        {
-          "source": {
-            "block": "constant-TO",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "9381cda7-16c9-4e4d-b75e-65e4c08787f4",
-            "port": "constant-TO"
-          }
-        }
-      ]
-    },
-    "state": {
-      "pan": {
-        "x": -305.987,
-        "y": -152.7603
-      },
-      "zoom": 1.3546
-    }
-  }
-    },
-    "78b882006678da24215d00b69cdf2c496f6f812f": {
-  "package": {
-    "name": "Bit 0",
-    "version": "1.0.0",
-    "description": "Assign 0 to the output wire",
-    "author": "Jesús Arroyo",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2247.303%22%20height=%2227.648%22%20viewBox=%220%200%2044.346456%2025.919999%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22325.37%22%20y=%22315.373%22%20font-weight=%22400%22%20font-size=%2212.669%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-307.01%20-298.51)%22%3E%3Ctspan%20x=%22325.37%22%20y=%22315.373%22%20style=%22-inkscape-font-specification:'Courier%2010%20Pitch'%22%20font-family=%22Courier%2010%20Pitch%22%3E0%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-  },
-  "design": {
-    "graph": {
-      "blocks": [
-        {
-          "id": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
-          "type": "basic.code",
-          "data": {
-            "code": "// Bit 0\n\nassign v = 1'b0;",
-            "params": [],
-            "ports": {
-              "in": [],
-              "out": [
-                {
-                  "name": "v"
-                }
-              ]
-            }
-          },
-          "position": {
-            "x": 96,
-            "y": 96
-          }
-        },
-        {
-          "id": "output-1",
-          "type": "basic.output",
-          "data": {
-            "name": ""
-          },
-          "position": {
-            "x": 608,
-            "y": 192
-          }
-        }
-      ],
-      "wires": [
-        {
-          "source": {
-            "block": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
-            "port": "v"
-          },
-          "target": {
-            "block": "output-1",
-            "port": "in"
-          }
-        }
-      ]
-    },
-    "state": {
-      "pan": {
-        "x": 0,
-        "y": 0
-      },
-      "zoom": 1
-    }
-  }
-    },
-    "7a5052cf67ad629d54e75210928ff8eb02c7c09c": {
-  "package": {
-    "name": "Bit 1",
-    "version": "1.0.0",
-    "description": "Assign 1 to the output wire",
-    "author": "Jesús Arroyo",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2247.303%22%20height=%2227.648%22%20viewBox=%220%200%2044.346456%2025.919999%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22325.218%22%20y=%22315.455%22%20font-weight=%22400%22%20font-size=%2212.669%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-307.01%20-298.51)%22%3E%3Ctspan%20x=%22325.218%22%20y=%22315.455%22%20style=%22-inkscape-font-specification:'Courier%2010%20Pitch'%22%20font-family=%22Courier%2010%20Pitch%22%3E1%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-  },
-  "design": {
-    "graph": {
-      "blocks": [
-        {
-          "id": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
-          "type": "basic.code",
-          "data": {
-            "code": "// Bit 1\n\nassign v = 1'b1;",
-            "params": [],
-            "ports": {
-              "in": [],
-              "out": [
-                {
-                  "name": "v"
-                }
-              ]
-            }
-          },
-          "position": {
-            "x": 96,
-            "y": 96
-          }
-        },
-        {
-          "id": "output-1",
-          "type": "basic.output",
-          "data": {
-            "name": ""
-          },
-          "position": {
-            "x": 608,
-            "y": 192
-          }
-        }
-      ],
-      "wires": [
-        {
-          "source": {
-            "block": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
-            "port": "v"
-          },
-          "target": {
-            "block": "output-1",
-            "port": "in"
-          }
-        }
-      ]
-    },
-    "state": {
-      "pan": {
-        "x": 0,
-        "y": 0
-      },
-      "zoom": 1
-    }
-  }
-    },
     "90733826a1446019af80962f39a12195cb55b447": {
   "package": {
     "name": "Contador Simple Enable 32",
@@ -2349,6 +2048,136 @@
     }
   }
     },
+    "7a5052cf67ad629d54e75210928ff8eb02c7c09c": {
+  "package": {
+    "name": "Bit 1",
+    "version": "1.0.0",
+    "description": "Assign 1 to the output wire",
+    "author": "Jesús Arroyo",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2247.303%22%20height=%2227.648%22%20viewBox=%220%200%2044.346456%2025.919999%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22325.218%22%20y=%22315.455%22%20font-weight=%22400%22%20font-size=%2212.669%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-307.01%20-298.51)%22%3E%3Ctspan%20x=%22325.218%22%20y=%22315.455%22%20style=%22-inkscape-font-specification:'Courier%2010%20Pitch'%22%20font-family=%22Courier%2010%20Pitch%22%3E1%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "graph": {
+      "blocks": [
+        {
+          "id": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
+          "type": "basic.code",
+          "data": {
+            "code": "// Bit 1\n\nassign v = 1'b1;",
+            "params": [],
+            "ports": {
+              "in": [],
+              "out": [
+                {
+                  "name": "v"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 96,
+            "y": 96
+          }
+        },
+        {
+          "id": "output-1",
+          "type": "basic.output",
+          "data": {
+            "name": ""
+          },
+          "position": {
+            "x": 608,
+            "y": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
+            "port": "v"
+          },
+          "target": {
+            "block": "output-1",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  }
+    },
+    "78b882006678da24215d00b69cdf2c496f6f812f": {
+  "package": {
+    "name": "Bit 0",
+    "version": "1.0.0",
+    "description": "Assign 0 to the output wire",
+    "author": "Jesús Arroyo",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2247.303%22%20height=%2227.648%22%20viewBox=%220%200%2044.346456%2025.919999%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22325.37%22%20y=%22315.373%22%20font-weight=%22400%22%20font-size=%2212.669%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-307.01%20-298.51)%22%3E%3Ctspan%20x=%22325.37%22%20y=%22315.373%22%20style=%22-inkscape-font-specification:'Courier%2010%20Pitch'%22%20font-family=%22Courier%2010%20Pitch%22%3E0%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+  },
+  "design": {
+    "graph": {
+      "blocks": [
+        {
+          "id": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
+          "type": "basic.code",
+          "data": {
+            "code": "// Bit 0\n\nassign v = 1'b0;",
+            "params": [],
+            "ports": {
+              "in": [],
+              "out": [
+                {
+                  "name": "v"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 96,
+            "y": 96
+          }
+        },
+        {
+          "id": "output-1",
+          "type": "basic.output",
+          "data": {
+            "name": ""
+          },
+          "position": {
+            "x": 608,
+            "y": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
+            "port": "v"
+          },
+          "target": {
+            "block": "output-1",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  }
+    },
     "2d713fe9c4ad421a8e40a994491f70a6d15c3b95": {
   "package": {
     "name": "Reducir 32 -> 8",
@@ -3255,6 +3084,153 @@
           },
           "target": {
             "block": "output-Mayor",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "zoom": 1
+    }
+  }
+    },
+    "24e40ca6c5e46b189e75212af692fbfc9dd34d59": {
+  "package": {
+    "name": "Pulse X ms",
+    "version": "1.0.0",
+    "description": "Genera un pulso cada \"ms\" milisegundos",
+    "author": "Salvador E. Tropea",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%22101.805%22%20width=%22118.163%22%20viewBox=%220%200%20110.77966%2095.443106%22%3E%3Cpath%20d=%22M50.66%2085.77c-1.402-2.404-3.574-4.758-7.692-8.333-2.23-1.936-3.587-3.011-11.312-8.96-6.054-4.665-9.075-7.253-12.576-10.775-3.498-3.522-5.555-6.327-7.32-9.985-1.125-2.336-1.9-4.586-2.382-6.925-.611-2.97-.694-3.976-.691-8.35.004-5.74.194-6.695%202.084-10.524%201.405-2.844%202.472-4.342%204.693-6.591%202.158-2.184%203.559-3.176%206.588-4.67%203.365-1.659%205.8-2.094%2010.814-1.933%203.897.126%205.323.512%208.412%202.285%204.862%202.789%208.634%207.267%209.679%2011.488.17.69.346%201.255.391%201.255s.439-.807.875-1.794c1.485-3.354%202.864-5.401%205.055-7.507C63.986%208%2074.562%206.836%2083.114%2011.6c3.492%201.945%206.334%204.778%208.535%208.51%201.733%202.936%202.62%206.837%202.771%2012.195.219%207.762-1.205%2013.14-4.995%2018.874-1.504%202.275-2.616%203.653-4.703%205.825-3.366%203.506-6.402%206.083-13.569%2011.518-4.522%203.429-7.203%205.634-11.083%209.12-3.11%202.792-7.926%207.654-8.39%208.467-.203.355-.386.645-.408.645-.02%200-.296-.443-.612-.984z%22%20stroke=%22#000%22%20stroke-width=%223.2%22%20fill=%22red%22/%3E%3Ctext%20font-family=%22sans-serif%22%20font-size=%2229.312%22%20letter-spacing=%220%22%20word-spacing=%220%22%20y=%22564.142%22%20x=%22371.827%22%20font-weight=%22400%22%20fill=%22#00f%22%20transform=%22translate(-307.7%20-476.07)%22%3E%3Ctspan%20font-size=%2216.75%22%20y=%22564.142%22%20x=%22371.827%22%20font-weight=%22700%22%3EXms%3C/tspan%3E%3C/text%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M37.8%2062.82h8.214V29.249h10.357V62.82h8.572%22%20stroke=%22#00f%22%20stroke-linecap=%22round%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3C/svg%3E"
+  },
+  "design": {
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "clock": true
+          },
+          "position": {
+            "x": 368,
+            "y": 232
+          }
+        },
+        {
+          "id": "output-Pulso",
+          "type": "basic.output",
+          "data": {
+            "name": "Pulso"
+          },
+          "position": {
+            "x": 688,
+            "y": 272
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "clock": false
+          },
+          "position": {
+            "x": 368,
+            "y": 304
+          }
+        },
+        {
+          "id": "constant-ms",
+          "type": "basic.constant",
+          "data": {
+            "name": "ms",
+            "value": "10",
+            "local": false
+          },
+          "position": {
+            "x": 480,
+            "y": 152
+          }
+        },
+        {
+          "id": "constant-N",
+          "type": "basic.constant",
+          "data": {
+            "name": "N",
+            "value": "0",
+            "local": true
+          },
+          "position": {
+            "x": 600,
+            "y": 152
+          }
+        },
+        {
+          "id": "b45ea7dd-0390-4f05-b0c0-a9181885042d",
+          "type": "5055e8b31e21ad162fd9e2b1cefdff5a4d5d99b4",
+          "position": {
+            "x": 536,
+            "y": 272
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "b45ea7dd-0390-4f05-b0c0-a9181885042d",
+            "port": "constant-ms"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-N",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "b45ea7dd-0390-4f05-b0c0-a9181885042d",
+            "port": "constant-N_bits"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "b45ea7dd-0390-4f05-b0c0-a9181885042d",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "b45ea7dd-0390-4f05-b0c0-a9181885042d",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "b45ea7dd-0390-4f05-b0c0-a9181885042d",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "output-Pulso",
             "port": "in"
           }
         }

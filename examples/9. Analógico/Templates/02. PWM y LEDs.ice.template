@@ -31,16 +31,16 @@
           }
         },
         {
-          "id": "constant-DIV",
+          "id": "constant-ms",
           "type": "basic.constant",
           "data": {
-            "name": "DIV",
-            "value": "239999",
+            "name": "ms",
+            "value": "10",
             "local": true
           },
           "position": {
             "x": 200,
-            "y": 88
+            "y": 96
           }
         },
         {
@@ -67,18 +67,6 @@
           "position": {
             "x": 800,
             "y": 40
-          }
-        },
-        {
-          "id": "e2f2afa1-bbd1-430d-b660-f097abf1ae0e",
-          "type": "@sha1<./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice>",
-          "position": {
-            "x": 200,
-            "y": 208
-          },
-          "size": {
-            "width": 96,
-            "height": 64
           }
         },
         {
@@ -132,29 +120,21 @@
             "width": 800,
             "height": 112
           }
+        },
+        {
+          "id": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_Xms_P.ice>",
+          "position": {
+            "x": 200,
+            "y": 208
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
         }
       ],
       "wires": [
-        {
-          "source": {
-            "block": "constant-DIV",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "e2f2afa1-bbd1-430d-b660-f097abf1ae0e",
-            "port": "constant-TO"
-          }
-        },
-        {
-          "source": {
-            "block": "e2f2afa1-bbd1-430d-b660-f097abf1ae0e",
-            "port": "output-Pulso"
-          },
-          "target": {
-            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
-            "port": "input-ena"
-          }
-        },
         {
           "source": {
             "block": "constant-TO",
@@ -206,13 +186,33 @@
             "block": "output-LED",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "constant-ms"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 104,
-        "y": 211
+        "x": 81.5,
+        "y": 264
       },
       "zoom": 1
     }
