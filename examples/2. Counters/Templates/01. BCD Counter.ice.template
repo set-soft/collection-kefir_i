@@ -42,7 +42,7 @@
             "virtual": false
           },
           "position": {
-            "x": 800,
+            "x": 576,
             "y": 216
           }
         },
@@ -72,30 +72,6 @@
           }
         },
         {
-          "id": "d5d7f03f-75cb-4c37-b8cf-148c7c2af097",
-          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_4.ice>",
-          "position": {
-            "x": 624,
-            "y": 264
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
-          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
-          "position": {
-            "x": 416,
-            "y": 224
-          },
-          "size": {
-            "width": 96,
-            "height": 96
-          }
-        },
-        {
           "id": "0af901db-7628-4744-af6b-df4e90a6ceae",
           "type": "@sha1<./blocks/Varios/Pulso/Corazon_1Hz_P.ice>",
           "position": {
@@ -106,49 +82,29 @@
             "width": 96,
             "height": 64
           }
+        },
+        {
+          "id": "ce8f27ab-541c-4ea0-af65-88b8c5dcf27b",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/4 bits/Contador_Simple_Enable_4.ice>",
+          "position": {
+            "x": 416,
+            "y": 224
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
         }
       ],
       "wires": [
-        {
-          "source": {
-            "block": "d5d7f03f-75cb-4c37-b8cf-148c7c2af097",
-            "port": "output-o"
-          },
-          "target": {
-            "block": "output-LED",
-            "port": "in"
-          },
-          "size": 4
-        },
-        {
-          "source": {
-            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "d5d7f03f-75cb-4c37-b8cf-148c7c2af097",
-            "port": "input-i"
-          },
-          "size": 32
-        },
         {
           "source": {
             "block": "constant-TO",
             "port": "constant-out"
           },
           "target": {
-            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+            "block": "ce8f27ab-541c-4ea0-af65-88b8c5dcf27b",
             "port": "constant-TO"
-          }
-        },
-        {
-          "source": {
-            "block": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
-            "port": "input-rst"
           }
         },
         {
@@ -157,15 +113,36 @@
             "port": "output-Pulso"
           },
           "target": {
-            "block": "43d8ba34-1d43-4a20-a3a3-5ff2ee5c89b3",
+            "block": "ce8f27ab-541c-4ea0-af65-88b8c5dcf27b",
             "port": "input-ena"
           }
+        },
+        {
+          "source": {
+            "block": "ebbb6d1e-b7c0-4ab7-9531-19533e49a0f5",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "ce8f27ab-541c-4ea0-af65-88b8c5dcf27b",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "ce8f27ab-541c-4ea0-af65-88b8c5dcf27b",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "output-LED",
+            "port": "in"
+          },
+          "size": 4
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 416,
+        "x": 420,
         "y": 217.5
       },
       "zoom": 1
