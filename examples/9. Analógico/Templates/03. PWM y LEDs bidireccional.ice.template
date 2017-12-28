@@ -12,10 +12,10 @@
     "graph": {
       "blocks": [
         {
-          "id": "output-LED",
+          "id": "output-LED1",
           "type": "basic.output",
           "data": {
-            "name": "LED",
+            "name": "LED1",
             "pins": [
               {
                 "index": "0",
@@ -26,7 +26,26 @@
             "virtual": false
           },
           "position": {
-            "x": 824,
+            "x": 992,
+            "y": 104
+          }
+        },
+        {
+          "id": "output-LED2",
+          "type": "basic.output",
+          "data": {
+            "name": "LED2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 992,
             "y": 192
           }
         },
@@ -210,8 +229,20 @@
           "id": "7141065e-6af9-4aff-b58e-d8b144f8f6c6",
           "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
           "position": {
-            "x": -208,
+            "x": -200,
             "y": 184
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "cbe26e6e-fa54-4e69-a2f4-4bfc9c87ecf6",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 848,
+            "y": 104
           },
           "size": {
             "width": 96,
@@ -236,7 +267,7 @@
             "port": "output-PWM"
           },
           "target": {
-            "block": "output-LED",
+            "block": "output-LED2",
             "port": "in"
           }
         },
@@ -441,13 +472,33 @@
               "y": 368
             }
           ]
+        },
+        {
+          "source": {
+            "block": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
+            "port": "output-PWM"
+          },
+          "target": {
+            "block": "cbe26e6e-fa54-4e69-a2f4-4bfc9c87ecf6",
+            "port": "input-1"
+          }
+        },
+        {
+          "source": {
+            "block": "cbe26e6e-fa54-4e69-a2f4-4bfc9c87ecf6",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "output-LED1",
+            "port": "in"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 340,
-        "y": 177.5
+        "x": 620.25,
+        "y": 165.5
       },
       "zoom": 1
     }
