@@ -4,3 +4,7 @@
 "04. Analizador 8 canales contador FT245 Async.ice.template" 0 0 "04. Analizador 8 canales contador FT245 Async.ice"
 "05. Analizador 16 canales contador FT245 Async.ice.template" 0 0 "05. Analizador 16 canales contador FT245 Async.ice"
 "06. Analizador 32 canales contador FT245 Async.ice.template" 0 0 "06. Analizador 32 canales contador FT245 Async.ice"
+"01. Analizador 8 canales contador FT245 Sync.ice.template" 0 0 "01. Analizador 8 canales contador FT245 Sync.ice"
+"02. Analizador 16 canales contador FT245 Sync.ice.template" 0 0 "02. Analizador 16 canales contador FT245 Sync.ice"
+"04. Analizador 8 canales contador FT245 Async.ice.template" 0 0 "04. Analizador 8 canales contador FT245 Async.ice"
+"05. Analizador 16 canales contador FT245 Async.ice.template" 0 0 "05. Analizador 16 canales contador FT245 Async.ice"

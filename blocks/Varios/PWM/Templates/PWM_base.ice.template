@@ -86,7 +86,7 @@
             "virtual": true
           },
           "position": {
-            "x": 896,
+            "x": 680,
             "y": 264
           }
         },
@@ -104,15 +104,15 @@
           },
           "position": {
             "x": 168,
-            "y": 392
+            "y": 328
           }
         },
         {
-          "id": "e2936681-d8dc-4768-af67-141cff9d83c0",
-          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
+          "id": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Comparador_@sz_i.ice>",
           "position": {
-            "x": 352,
-            "y": 168
+            "x": 520,
+            "y": 216
           },
           "size": {
             "width": 96,
@@ -120,23 +120,11 @@
           }
         },
         {
-          "id": "9b176772-9df1-4ef8-bfb6-8cb6075a3454",
-          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_@sz_i.ice>",
+          "id": "3b2dd863-d9a5-4b1d-af37-1977e69af082",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/@sz_i bits/Contador_Simple_Enable_@sz_i.ice>",
           "position": {
-            "x": 552,
-            "y": 208
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
-          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Comparador_@sz_i.ice>",
-          "position": {
-            "x": 736,
-            "y": 216
+            "x": 328,
+            "y": 168
           },
           "size": {
             "width": 96,
@@ -145,58 +133,6 @@
         }
       ],
       "wires": [
-        {
-          "source": {
-            "block": "input-clk",
-            "port": "out"
-          },
-          "target": {
-            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
-            "port": "input-clk"
-          }
-        },
-        {
-          "source": {
-            "block": "input-rst",
-            "port": "out"
-          },
-          "target": {
-            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
-            "port": "input-rst"
-          }
-        },
-        {
-          "source": {
-            "block": "input-ena",
-            "port": "out"
-          },
-          "target": {
-            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
-            "port": "input-ena"
-          }
-        },
-        {
-          "source": {
-            "block": "e2936681-d8dc-4768-af67-141cff9d83c0",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "9b176772-9df1-4ef8-bfb6-8cb6075a3454",
-            "port": "input-i"
-          },
-          "size": 32
-        },
-        {
-          "source": {
-            "block": "9b176772-9df1-4ef8-bfb6-8cb6075a3454",
-            "port": "output-o"
-          },
-          "target": {
-            "block": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
-            "port": "input-A"
-          },
-          "size": @sz_i
-        },
         {
           "source": {
             "block": "input-Dutty",
@@ -217,13 +153,54 @@
             "block": "output-PWM",
             "port": "in"
           }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "3b2dd863-d9a5-4b1d-af37-1977e69af082",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "3b2dd863-d9a5-4b1d-af37-1977e69af082",
+            "port": "input-rst"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "3b2dd863-d9a5-4b1d-af37-1977e69af082",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "3b2dd863-d9a5-4b1d-af37-1977e69af082",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "d84b4786-3fff-4acb-b56f-c6c3697cccbb",
+            "port": "input-A"
+          },
+          "size": @sz_i
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 0,
-        "y": 0
+        "x": 380,
+        "y": 177.5
       },
       "zoom": 1
     }

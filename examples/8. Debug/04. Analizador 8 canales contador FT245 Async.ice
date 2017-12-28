@@ -286,30 +286,6 @@
           }
         },
         {
-          "id": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
-          "type": "90733826a1446019af80962f39a12195cb55b447",
-          "position": {
-            "x": 120,
-            "y": 472
-          },
-          "size": {
-            "width": 96,
-            "height": 96
-          }
-        },
-        {
-          "id": "6fbc2170-0199-4e78-bc5f-de15e3e45649",
-          "type": "2d713fe9c4ad421a8e40a994491f70a6d15c3b95",
-          "position": {
-            "x": 280,
-            "y": 512
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
           "id": "23fa82c0-78f6-4316-8ef2-86fc5b7ce600",
           "type": "basic.info",
           "data": {
@@ -333,12 +309,24 @@
             "readonly": true
           },
           "position": {
-            "x": 56,
-            "y": 616
+            "x": 64,
+            "y": 608
           },
           "size": {
             "width": 256,
             "height": 64
+          }
+        },
+        {
+          "id": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
+          "type": "7f9ef6ed2874d9468e5c10183b3e101318e356d3",
+          "position": {
+            "x": 112,
+            "y": 472
+          },
+          "size": {
+            "width": 96,
+            "height": 96
           }
         }
       ],
@@ -371,40 +359,6 @@
         },
         {
           "source": {
-            "block": "constant-Desde",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
-            "port": "constant-FROM"
-          },
-          "vertices": []
-        },
-        {
-          "source": {
-            "block": "constant-Hasta",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
-            "port": "constant-TO"
-          },
-          "vertices": []
-        },
-        {
-          "source": {
-            "block": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "6fbc2170-0199-4e78-bc5f-de15e3e45649",
-            "port": "input-i"
-          },
-          "vertices": [],
-          "size": 32
-        },
-        {
-          "source": {
             "block": "input-FT_RXF",
             "port": "out"
           },
@@ -432,44 +386,17 @@
         },
         {
           "source": {
-            "block": "6fbc2170-0199-4e78-bc5f-de15e3e45649",
-            "port": "output-o"
-          },
-          "target": {
-            "block": "e07ba323-5af4-4083-9d78-b50f66ac68b9",
-            "port": "input-chn"
-          },
-          "size": 8
-        },
-        {
-          "source": {
             "block": "e07ba323-5af4-4083-9d78-b50f66ac68b9",
             "port": "output-wr"
           },
           "target": {
-            "block": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
+            "block": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
             "port": "input-ena"
           },
           "vertices": [
             {
               "x": 728,
-              "y": 608
-            }
-          ]
-        },
-        {
-          "source": {
-            "block": "3678bcff-0ed6-47c7-a6ef-6bfbc6ab6b5a",
-            "port": "output-rst"
-          },
-          "target": {
-            "block": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
-            "port": "input-rst"
-          },
-          "vertices": [
-            {
-              "x": -8,
-              "y": 512
+              "y": 600
             }
           ]
         },
@@ -580,22 +507,6 @@
         },
         {
           "source": {
-            "block": "input-CLK",
-            "port": "out"
-          },
-          "target": {
-            "block": "b57aae66-96db-4ff0-aa89-579642dcb0d4",
-            "port": "input-clk"
-          },
-          "vertices": [
-            {
-              "x": -184,
-              "y": 488
-            }
-          ]
-        },
-        {
-          "source": {
             "block": "input-FT_CLKOUT",
             "port": "out"
           },
@@ -603,13 +514,76 @@
             "block": "e07ba323-5af4-4083-9d78-b50f66ac68b9",
             "port": "input-ft_clk"
           }
+        },
+        {
+          "source": {
+            "block": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "e07ba323-5af4-4083-9d78-b50f66ac68b9",
+            "port": "input-chn"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "constant-Hasta",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-Desde",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
+            "port": "constant-FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "3678bcff-0ed6-47c7-a6ef-6bfbc6ab6b5a",
+            "port": "output-rst"
+          },
+          "target": {
+            "block": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 8,
+              "y": 424
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-CLK",
+            "port": "out"
+          },
+          "target": {
+            "block": "347a9878-c5d7-4f87-8ea6-4add0a1a56e2",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": -184,
+              "y": 392
+            }
+          ]
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 462.5,
-        "y": 48
+        "x": 492.5,
+        "y": 89
       },
       "zoom": 1
     }
@@ -3421,11 +3395,11 @@
     }
   }
     },
-    "90733826a1446019af80962f39a12195cb55b447": {
+    "7f9ef6ed2874d9468e5c10183b3e101318e356d3": {
   "package": {
-    "name": "Contador Simple Enable 32",
+    "name": "Contador Simple Enable 8",
     "version": "1.0.0",
-    "description": "Contador de hasta 32 bits con inicio, fin, reset y enable",
+    "description": "Contador de hasta 8 bits con inicio, fin, reset y enable",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22222.875%22%20height=%22100.409%22%20viewBox=%220%200%20208.945%2094.133%22%3E%3Cdefs%3E%3Cmarker%20orient=%22auto%22%20id=%22a%22%20overflow=%22visible%22%3E%3Cpath%20d=%22M2.308%200l-3.46%202v-4l3.46%202z%22%20fill=%22#00f%22%20fill-rule=%22evenodd%22%20stroke=%22#00f%22%20stroke-width=%22.4pt%22/%3E%3C/marker%3E%3C/defs%3E%3Cg%20transform=%22translate(-184.027%20-300.01)%22%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22318.242%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22340.77%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22340.77%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M319.74%20362.607h37.093%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22229.495%22%20y=%22314.854%22%20font-weight=%22400%22%20font-size=%2220%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22229.495%22%20y=%22314.854%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3EContador%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M378.373%20388.969V343.75%22%20fill=%22#00f%22%20stroke=%22#00f%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20marker-end=%22url(#a)%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22273.599%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22293.536%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22293.536%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M275.097%20362.607h37.093%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22229.67%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22247.059%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22247.059%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M231.168%20362.607h37.094%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22185.027%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22199.826%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22199.826%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M186.525%20362.607h37.094%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
   },
@@ -3472,8 +3446,8 @@
           "type": "basic.output",
           "data": {
             "name": "cnt",
-            "range": "[31:0]"
-,"size": 32
+            "range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": 520,
@@ -3510,7 +3484,7 @@
           "type": "basic.constant",
           "data": {
             "name": "TO",
-            "value": "4294967295",
+            "value": "255",
             "local": false
           },
           "position": {
@@ -3520,7 +3494,7 @@
         },
         {
           "id": "771f27b6-d886-45e5-a6a4-55884e4f00e4",
-          "type": "2c8cddb6e546fd320b5a1cd636ccc105540b5342",
+          "type": "27e624f6295057120ecfcb9bf952a275f87de65b",
           "position": {
             "x": 360,
             "y": 152
@@ -3619,7 +3593,7 @@
             "block": "output-cnt",
             "port": "in"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -3642,11 +3616,11 @@
     }
   }
     },
-    "2c8cddb6e546fd320b5a1cd636ccc105540b5342": {
+    "27e624f6295057120ecfcb9bf952a275f87de65b": {
   "package": {
-    "name": "Contador Completo 32",
+    "name": "Contador Completo 8",
     "version": "2.0.0",
-    "description": "Contador de hasta 32 bits con inicio, fin, reset y carga paralela",
+    "description": "Contador de hasta 8 bits con inicio, fin, reset y carga paralela",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22222.875%22%20height=%22100.409%22%20viewBox=%220%200%20208.945%2094.133%22%3E%3Cdefs%3E%3Cmarker%20orient=%22auto%22%20id=%22a%22%20overflow=%22visible%22%3E%3Cpath%20d=%22M2.308%200l-3.46%202v-4l3.46%202z%22%20fill=%22#00f%22%20fill-rule=%22evenodd%22%20stroke=%22#00f%22%20stroke-width=%22.4pt%22/%3E%3C/marker%3E%3C/defs%3E%3Cg%20transform=%22translate(-184.027%20-300.01)%22%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22318.242%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22340.77%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22340.77%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M319.74%20362.607h37.093%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22229.495%22%20y=%22314.854%22%20font-weight=%22400%22%20font-size=%2220%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22229.495%22%20y=%22314.854%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3EContador%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M378.373%20388.969V343.75%22%20fill=%22#00f%22%20stroke=%22#00f%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20marker-end=%22url(#a)%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22273.599%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22293.536%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22293.536%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M275.097%20362.607h37.093%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22229.67%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22247.059%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22247.059%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M231.168%20362.607h37.094%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3Crect%20width=%2239.464%22%20height=%2263.929%22%20x=%22185.027%22%20y=%22329.214%22%20ry=%223.75%22%20fill=%22#666%22%20stroke=%22#000%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22199.826%22%20y=%22359.153%22%20transform=%22scale(.94516%201.05802)%22%20font-weight=%22400%22%20font-size=%2247.638%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%222%22%3E%3Ctspan%20x=%22199.826%22%20y=%22359.153%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M186.525%20362.607h37.094%22%20fill=%22#fff%22%20stroke=%22#000%22%20stroke-width=%223%22%20stroke-linecap=%22square%22%20stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E"
   },
@@ -3693,8 +3667,8 @@
           "type": "basic.output",
           "data": {
             "name": "cnt",
-            "range": "[31:0]"
-,"size": 32
+            "range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": 664,
@@ -3718,9 +3692,9 @@
           "type": "basic.input",
           "data": {
             "name": "d",
-            "range": "[31:0]",
+            "range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": -216,
@@ -3757,7 +3731,7 @@
           "type": "basic.constant",
           "data": {
             "name": "TO",
-            "value": "4294967295",
+            "value": "255",
             "local": false
           },
           "position": {
@@ -3767,7 +3741,7 @@
         },
         {
           "id": "53d8c712-9b60-4d66-8e07-3992c71a3b6a",
-          "type": "9e0f56f043b162c7a5d15aa5a645f5477ebf0906",
+          "type": "0f14207f33a527e0ac5adc2c4a4332c33e6feb48",
           "position": {
             "x": 488,
             "y": 240
@@ -3779,7 +3753,7 @@
         },
         {
           "id": "b90dfff0-ee99-4bab-8248-478317ef0f8d",
-          "type": "34a3668e2f4a9efe10ab52739dca3d58531bf1ea",
+          "type": "b0a14e9db9dacd52edf564acd5c6cc6aafd02273",
           "position": {
             "x": 88,
             "y": 240
@@ -3803,7 +3777,7 @@
         },
         {
           "id": "97790edb-f802-4d50-99fd-f0c1a049ba6c",
-          "type": "83552a0321b2043819a96736a08da402ae012b9c",
+          "type": "f46a8f61fd5ba4ec6653e47fb4533f6a3e795442",
           "position": {
             "x": 840,
             "y": 272
@@ -3827,7 +3801,7 @@
         },
         {
           "id": "b077551c-e12b-4c32-99cd-7b16a3513252",
-          "type": "f9f09547cf08ee45a9e14ca06c1181d298e2acbb",
+          "type": "662f25c49175c6dcf2cf5cac331fd64929de51db",
           "position": {
             "x": 664,
             "y": 168
@@ -3869,7 +3843,7 @@
             "block": "53d8c712-9b60-4d66-8e07-3992c71a3b6a",
             "port": "input-d"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -3896,7 +3870,7 @@
               "y": 368
             }
           ],
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -3934,7 +3908,7 @@
             "port": "in"
           },
           "vertices": [],
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -4017,7 +3991,7 @@
             "block": "b077551c-e12b-4c32-99cd-7b16a3513252",
             "port": "input-A"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -4038,7 +4012,7 @@
               "y": 24
             }
           ],
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -4049,7 +4023,7 @@
             "block": "97790edb-f802-4d50-99fd-f0c1a049ba6c",
             "port": "input-A"
           },
-          "size": 32
+          "size": 8
         }
       ]
     },
@@ -4062,11 +4036,11 @@
     }
   }
     },
-    "9e0f56f043b162c7a5d15aa5a645f5477ebf0906": {
+    "0f14207f33a527e0ac5adc2c4a4332c33e6feb48": {
   "package": {
-    "name": "Registro Completo de 32 bits",
+    "name": "Registro Completo de 8 bits",
     "version": "0.0.1",
-    "description": "Registro de 32 bits con reset, enable y valor inicial ",
+    "description": "Registro de 8 bits con reset, enable y valor inicial ",
     "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2277.949%22%20width=%22109.406%22%20viewBox=%220%200%20102.56663%2073.076845%22%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M80.318%2046.993L84.49%2072.58l5.175-25.586%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20fill=%22#CCC%22/%3E%3Ctext%20font-size=%2227.335%22%20y=%22444.804%22%20x=%22207.303%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-208.312%20-424.877)%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%22444.804%22%20x=%22207.303%22%3EReg%3C/tspan%3E%3C/text%3E%3Cpath%20stroke-linejoin=%22round%22%20d=%22M77.458%2034.133L79.65%208.115h-9.015V3.131h29.214v4.984h-8.514l1.582%2026.253s6.884%201.14%208.498%205.913c1.614%204.774-.336%206.65.138%206.717l-33.08-.04s-.748-5.57%201.849-8.39c2.596-2.82%207.136-4.435%207.136-4.435z%22%20stroke=%22#000%22%20stroke-linecap=%22round%22%20fill=%22#F00%22/%3E%3Cg%20transform=%22translate(-206.312%20-424.877)%22%3E%3Ctext%20font-size=%2220%22%20y=%22480.075%22%20x=%22212.366%22%20font-family=%22sans-serif%22%20fill=%22#00f%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20y=%22480.075%22%20x=%22212.366%22%3EDINI%3C/tspan%3E%3C/text%3E%3Crect%20rx=%223.018%22%20ry=%223.018%22%20height=%2231.82%22%20width=%2250.003%22%20stroke=%22#00F%22%20stroke-linecap=%22square%22%20y=%22457.55%22%20x=%22209.81%22%20stroke-width=%223%22%20fill=%22none%22/%3E%3C/g%3E%3C/svg%3E"
   },
@@ -4090,9 +4064,9 @@
           "type": "basic.input",
           "data": {
             "name": "d"
-            ,"range": "[31:0]",
+            ,"range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": 544,
@@ -4104,8 +4078,8 @@
           "type": "basic.output",
           "data": {
             "name": "q"
-            ,"range": "[31:0]"
-,"size": 32
+            ,"range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": 1280,
@@ -4141,7 +4115,7 @@
           "type": "basic.constant",
           "data": {
             "name": "DINI",
-            "value": "32'b0",
+            "value": "8'b0",
             "local": false
           },
           "position": {
@@ -4153,7 +4127,7 @@
           "id": "3cde35d8-225a-4a66-9595-1711ca0a5fb0",
           "type": "basic.code",
           "data": {
-            "code": "reg [31:0] q=DINI;\n\nalways @(posedge clk)\nbegin\n  if (rst)\n     q <= DINI;\n  else\n     if (ena)\n        q <= d;\nend",
+            "code": "reg [7:0] q=DINI;\n\nalways @(posedge clk)\nbegin\n  if (rst)\n     q <= DINI;\n  else\n     if (ena)\n        q <= d;\nend",
             "params": [
               {
                 "name": "DINI"
@@ -4166,8 +4140,8 @@
                 },
                 {
                   "name": "d"
-                  ,"range": "[31:0]"
-                  ,"size": 32
+                  ,"range": "[7:0]"
+                  ,"size": 8
                 },
                 {
                   "name": "rst"
@@ -4179,8 +4153,8 @@
               "out": [
                 {
                   "name": "q"
-                  ,"range": "[31:0]"
-                  ,"size": 32
+                  ,"range": "[7:0]"
+                  ,"size": 8
                 }
               ]
             }
@@ -4216,7 +4190,7 @@
             "block": "3cde35d8-225a-4a66-9595-1711ca0a5fb0",
             "port": "d"
           }
-          ,"size": 32
+          ,"size": 8
         },
         {
           "source": {
@@ -4247,7 +4221,7 @@
             "block": "output-q",
             "port": "in"
           }
-          ,"size": 32
+          ,"size": 8
         },
         {
           "source": {
@@ -4270,11 +4244,11 @@
     }
   }
     },
-    "34a3668e2f4a9efe10ab52739dca3d58531bf1ea": {
+    "b0a14e9db9dacd52edf564acd5c6cc6aafd02273": {
   "package": {
-    "name": "Mux 2 -> 1 (32 bits)",
+    "name": "Mux 2 -> 1 (8 bits)",
     "version": "0.0.1",
-    "description": "Multiplexor de 2 a 1 de buses de 32 bits",
+    "description": "Multiplexor de 2 a 1 de buses de 8 bits",
     "author": "Juan Gonzalez-Gomez (obijuan)/Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2290.67%22%20height=%22113.793%22%20viewBox=%220%200%2085.00353%20106.68137%22%3E%3Cpath%20d=%22M66.671%2021.324c0-7.134-3.893-13.724-10.206-17.275a20.674%2020.674%200%200%200-20.365.08c-6.284%203.6-10.124%2010.219-10.066%2017.353v41.836c-.058%207.135%203.782%2013.755%2010.066%2017.355a20.674%2020.674%200%200%200%2020.365.079c6.313-3.55%2010.206-10.14%2010.206-17.275z%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222.813%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%2234.576%22%20y=%2230.222%22%20font-weight=%22400%22%20font-size=%2218.75%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%2234.576%22%20y=%2230.222%22%3E0%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:125%25%22%20x=%2233.518%22%20y=%2266.815%22%20font-weight=%22400%22%20font-size=%2218.75%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%2233.518%22%20y=%2266.815%22%3E1%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:125%25%22%20x=%2224.905%22%20y=%22106.416%22%20font-weight=%22400%22%20font-size=%2218.75%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%2224.905%22%20y=%22106.416%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%3EMux%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M26.122%2023.954H1.426M26.122%2059.737H1.426M66.945%2040.082h16.632%22%20fill=%22none%22%20stroke=%22#00f%22%20stroke-width=%222.813%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/svg%3E"
   },
@@ -4286,9 +4260,9 @@
           "type": "basic.input",
           "data": {
             "name": "i0"
-            ,"range": "[31:0]",
+            ,"range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": -704,
@@ -4300,9 +4274,9 @@
           "type": "basic.input",
           "data": {
             "name": "i1"
-            ,"range": "[31:0]",
+            ,"range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": -704,
@@ -4314,8 +4288,8 @@
           "type": "basic.output",
           "data": {
             "name": "o"
-            ,"range": "[31:0]"
-,"size": 32
+            ,"range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": -48,
@@ -4339,19 +4313,19 @@
           "id": "34e6d77b-15a8-4b7c-8c41-09e9b8d4d2be",
           "type": "basic.code",
           "data": {
-            "code": "//-- Multiplexor de 2 a 1, \n//-- de 32 bits\n\nreg [31:0] _o;\n\nalways @(*) begin\n    case(sel)\n        0: _o = i0;\n        1: _o = i1;\n        default: _o = i0;\n    endcase\nend\n\nassign o = _o;\n",
+            "code": "//-- Multiplexor de 2 a 1, \n//-- de 8 bits\n\nreg [7:0] _o;\n\nalways @(*) begin\n    case(sel)\n        0: _o = i0;\n        1: _o = i1;\n        default: _o = i0;\n    endcase\nend\n\nassign o = _o;\n",
             "params": [],
             "ports": {
               "in": [
                 {
                   "name": "i0"
-                  ,"range": "[31:0]"
-                  ,"size": 32
+                  ,"range": "[7:0]"
+                  ,"size": 8
                 },
                 {
                   "name": "i1"
-                  ,"range": "[31:0]"
-                  ,"size": 32
+                  ,"range": "[7:0]"
+                  ,"size": 8
                 },
                 {
                   "name": "sel"
@@ -4362,8 +4336,8 @@
               "out": [
                 {
                   "name": "o"
-                  ,"range": "[31:0]"
-                  ,"size": 32
+                  ,"range": "[7:0]"
+                  ,"size": 8
                 }
               ]
             }
@@ -4388,7 +4362,7 @@
             "block": "34e6d77b-15a8-4b7c-8c41-09e9b8d4d2be",
             "port": "i0"
           }
-          ,"size": 32
+          ,"size": 8
         },
         {
           "source": {
@@ -4399,7 +4373,7 @@
             "block": "34e6d77b-15a8-4b7c-8c41-09e9b8d4d2be",
             "port": "i1"
           }
-          ,"size": 32
+          ,"size": 8
         },
         {
           "source": {
@@ -4421,7 +4395,7 @@
             "block": "output-o",
             "port": "in"
           }
-          ,"size": 32
+          ,"size": 8
         }
       ]
     },
@@ -4556,11 +4530,11 @@
     }
   }
     },
-    "83552a0321b2043819a96736a08da402ae012b9c": {
+    "f46a8f61fd5ba4ec6653e47fb4533f6a3e795442": {
   "package": {
-    "name": "Comparador de igualdad de 32 bits con constante",
+    "name": "Comparador de igualdad de 8 bits con constante",
     "version": "1.0.0",
-    "description": "Compara si la entrada es igual a una constante (32 bits)",
+    "description": "Compara si la entrada es igual a una constante (8 bits)",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%227.391%22%20width=%227.015%22%3E%3Ctext%20font-weight=%22bold%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20transform=%22translate(-253.71%20-196.79)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20fill=%22#0056f3%22%3E=%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
@@ -4572,9 +4546,9 @@
           "type": "basic.input",
           "data": {
             "name": "A",
-            "range": "[31:0]",
+            "range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": 152,
@@ -4619,8 +4593,8 @@
               "in": [
                 {
                   "name": "A",
-                  "range": "[31:0]",
-                  "size": 32
+                  "range": "[7:0]",
+                  "size": 8
                 }
               ],
               "out": [
@@ -4650,7 +4624,7 @@
             "block": "bde84cfc-56e2-4c53-b5cb-2b2412dc338f",
             "port": "A"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -4805,9 +4779,9 @@
     }
   }
     },
-    "f9f09547cf08ee45a9e14ca06c1181d298e2acbb": {
+    "662f25c49175c6dcf2cf5cac331fd64929de51db": {
   "package": {
-    "name": "Incrementador de 32 bits",
+    "name": "Incrementador de 8 bits",
     "version": "1.0.0",
     "description": "Suma 1 a la entrada",
     "author": "Salvador E. Tropea",
@@ -4821,9 +4795,9 @@
           "type": "basic.input",
           "data": {
             "name": "A",
-            "range": "[31:0]",
+            "range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": 264,
@@ -4835,8 +4809,8 @@
           "type": "basic.output",
           "data": {
             "name": "S",
-            "range": "[31:0]"
-,"size": 32
+            "range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": 624,
@@ -4845,7 +4819,7 @@
         },
         {
           "id": "e0e2714a-b8df-4c61-b636-545fa4017728",
-          "type": "b0b9fa199f78f99d4e80bbd5f8eaf2713fe0a7e2",
+          "type": "48c0aa87c2c0c523e6f36e55eee6e2af26153465",
           "position": {
             "x": 456,
             "y": 128
@@ -4857,7 +4831,7 @@
         },
         {
           "id": "d2429413-2f41-4589-9d93-9087306b3d48",
-          "type": "f38b99720333743977591fb654fa1efbe5c8aabb",
+          "type": "12ee003a1aae385171e0a33621ef1c1abd7b082b",
           "position": {
             "x": 264,
             "y": 144
@@ -4890,7 +4864,7 @@
             "block": "output-S",
             "port": "in"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -4902,7 +4876,7 @@
             "port": "input-B"
           },
           "vertices": [],
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -4929,7 +4903,7 @@
               "y": 120
             }
           ],
-          "size": 32
+          "size": 8
         }
       ]
     },
@@ -4942,11 +4916,11 @@
     }
   }
     },
-    "b0b9fa199f78f99d4e80bbd5f8eaf2713fe0a7e2": {
+    "48c0aa87c2c0c523e6f36e55eee6e2af26153465": {
   "package": {
-    "name": "Sumador de 32 bits completo",
+    "name": "Sumador de 8 bits completo",
     "version": "1.1.0",
-    "description": "Sumador de 32 bits (cin, cout y oVerflow)",
+    "description": "Sumador de 8 bits (cin, cout y oVerflow)",
     "author": "Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%225.005%22%20width=%225.005%22%3E%3Ctext%20style=%22text-align:start%22%20font-size=%2210%22%20y=%22203.791%22%20x=%22254.286%22%20font-family=%22Arial%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-254.7%20-197.756)%22%3E%3Ctspan%20y=%22203.791%22%20x=%22254.286%22%20font-weight=%22bold%22%20fill=%22#0056f3%22%3E+%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
@@ -4958,9 +4932,9 @@
           "type": "basic.input",
           "data": {
             "name": "A",
-            "range": "[31:0]",
+            "range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": 120,
@@ -4972,8 +4946,8 @@
           "type": "basic.output",
           "data": {
             "name": "S",
-            "range": "[31:0]"
-,"size": 32
+            "range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": 784,
@@ -4985,9 +4959,9 @@
           "type": "basic.input",
           "data": {
             "name": "B",
-            "range": "[31:0]",
+            "range": "[7:0]",
             "clock": false
-,"size": 32
+,"size": 8
           },
           "position": {
             "x": 120,
@@ -5032,19 +5006,19 @@
           "id": "5c7d4387-024b-4288-a13c-a77800ff2a9b",
           "type": "basic.code",
           "data": {
-            "code": "// Para computar el acarreo usamos\n// 1 bit extra\nwire [32:0] res;\n\n// Suma con 1 bit extra y con el \n// acarreo de entrada\nassign res={1'b0,A}+B+cin;\n// El resultado contiene la misma\n// cantidad de bits que la entrada\nassign S=res[31:0];\n// El bit extra es el acarreo\nassign cout=res[32];\n// oVerflow: sirve para enteros\n// Dos positivos dan negativo\nassign v=(~A[32-1] & ~B[32-1] & S[32-1]) |\n// o dos negativos dan positivo\n         ( A[32-1] &  B[32-1] & ~S[32-1]);\n",
+            "code": "// Para computar el acarreo usamos\n// 1 bit extra\nwire [8:0] res;\n\n// Suma con 1 bit extra y con el \n// acarreo de entrada\nassign res={1'b0,A}+B+cin;\n// El resultado contiene la misma\n// cantidad de bits que la entrada\nassign S=res[7:0];\n// El bit extra es el acarreo\nassign cout=res[8];\n// oVerflow: sirve para enteros\n// Dos positivos dan negativo\nassign v=(~A[8-1] & ~B[8-1] & S[8-1]) |\n// o dos negativos dan positivo\n         ( A[8-1] &  B[8-1] & ~S[8-1]);\n",
             "params": [],
             "ports": {
               "in": [
                 {
                   "name": "A",
-                  "range": "[31:0]",
-                  "size": 32
+                  "range": "[7:0]",
+                  "size": 8
                 },
                 {
                   "name": "B",
-                  "range": "[31:0]",
-                  "size": 32
+                  "range": "[7:0]",
+                  "size": 8
                 },
                 {
                   "name": "cin"
@@ -5053,8 +5027,8 @@
               "out": [
                 {
                   "name": "S",
-                  "range": "[31:0]",
-                  "size": 32
+                  "range": "[7:0]",
+                  "size": 8
                 },
                 {
                   "name": "cout"
@@ -5085,7 +5059,7 @@
             "block": "5c7d4387-024b-4288-a13c-a77800ff2a9b",
             "port": "A"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -5096,7 +5070,7 @@
             "block": "5c7d4387-024b-4288-a13c-a77800ff2a9b",
             "port": "B"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -5117,7 +5091,7 @@
             "block": "output-S",
             "port": "in"
           },
-          "size": 32
+          "size": 8
         },
         {
           "source": {
@@ -5150,11 +5124,11 @@
     }
   }
     },
-    "f38b99720333743977591fb654fa1efbe5c8aabb": {
+    "12ee003a1aae385171e0a33621ef1c1abd7b082b": {
   "package": {
-    "name": "Valor 0 32 bits",
+    "name": "Valor 0 8 bits",
     "version": "0.0.1",
-    "description": "Valor constante 0 para bus de 32 bits",
+    "description": "Valor constante 0 para bus de 8 bits",
     "author": "Juan Gonzalez-Gomez (Obijuan)/Salvador E. Tropea",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2219.555%22%20height=%2224.647%22%20viewBox=%220%200%2018.333077%2023.106531%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22-1.462%22%20y=%2222.674%22%20font-weight=%22400%22%20font-size=%2230.55%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20x=%22-1.462%22%20y=%2222.674%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%20fill=%22green%22%3E0%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M6.45%2020.917l5.496-17.753%22%20fill=%22green%22%20stroke=%22green%22%20stroke-width=%222.813%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3C/svg%3E"
   },
@@ -5166,8 +5140,8 @@
           "type": "basic.output",
           "data": {
             "name": "K"
-            ,"range": "[31:0]"
-,"size": 32
+            ,"range": "[7:0]"
+,"size": 8
           },
           "position": {
             "x": 960,
@@ -5179,7 +5153,7 @@
           "type": "basic.constant",
           "data": {
             "name": "V",
-            "value": "32'b0",
+            "value": "8'b0",
             "local": true
           },
           "position": {
@@ -5202,8 +5176,8 @@
               "out": [
                 {
                   "name": "k"
-                  ,"range": "[31:0]"
-                  ,"size": 32
+                  ,"range": "[7:0]"
+                  ,"size": 8
                 }
               ]
             }
@@ -5228,7 +5202,7 @@
             "block": "output-K",
             "port": "in"
           }
-          ,"size": 32
+          ,"size": 8
         },
         {
           "source": {
@@ -5369,111 +5343,6 @@
             "block": "output-1",
             "port": "in"
           }
-        }
-      ]
-    },
-    "state": {
-      "pan": {
-        "x": 0,
-        "y": 0
-      },
-      "zoom": 1
-    }
-  }
-    },
-    "2d713fe9c4ad421a8e40a994491f70a6d15c3b95": {
-  "package": {
-    "name": "Reducir 32 -> 8",
-    "version": "0.0.1",
-    "description": "Reduce un bus de 32 bits a 8 bits (toma los LSBs)",
-    "author": "Salvador E. Tropea",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%2256.371%22%20width=%2256.982%22%20viewBox=%220%200%2053.42068%2052.847556%22%3E%3Ctext%20font-size=%2212.858%22%20y=%2210.707%22%20x=%22-.243%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctspan%20font-weight=%22bold%22%20y=%2210.707%22%20x=%22-.243%22%3EReduce%3C/tspan%3E%3C/text%3E%3Cpath%20d=%22M3.305%2015.014l27.82-.133V38.25h17.737v13.192H3.384z%22%20stroke=%22#000%22%20stroke-width=%22.938%22%20fill=%22#0000f7%22/%3E%3Ctext%20font-size=%229.594%22%20y=%2250.401%22%20x=%2254.123%22%20font-family=%22sans-serif%22%20fill=%22red%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-15.84%20-2.144)%22%3E%3Ctspan%20y=%2250.401%22%20x=%2254.123%22%3EL%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-  },
-  "design": {
-    "graph": {
-      "blocks": [
-        {
-          "id": "input-i",
-          "type": "basic.input",
-          "data": {
-            "name": "i"
-            ,"range": "[31:0]",
-            "clock": false
-,"size": 32
-          },
-          "position": {
-            "x": 152,
-            "y": 232
-          }
-        },
-        {
-          "id": "output-o",
-          "type": "basic.output",
-          "data": {
-            "name": "o"
-            ,"range": "[7:0]"
-,"size": 8
-          },
-          "position": {
-            "x": 648,
-            "y": 232
-          }
-        },
-        {
-          "id": "3a73f618-74ef-49c2-a366-093ae2c74f36",
-          "type": "basic.code",
-          "data": {
-            "code": "assign o=i[7:0];",
-            "params": [],
-            "ports": {
-              "in": [
-                {
-                  "name": "i"
-                  ,"range": "[31:0]"
-                  ,"size": 32
-                }
-              ],
-              "out": [
-                {
-                  "name": "o"
-                  ,"range": "[7:0]"
-                  ,"size": 8
-                }
-              ]
-            }
-          },
-          "position": {
-            "x": 304,
-            "y": 208
-          },
-          "size": {
-            "width": 288,
-            "height": 112
-          }
-        }
-      ],
-      "wires": [
-        {
-          "source": {
-            "block": "input-i",
-            "port": "out"
-          },
-          "target": {
-            "block": "3a73f618-74ef-49c2-a366-093ae2c74f36",
-            "port": "i"
-          }
-          ,"size": 32
-        },
-        {
-          "source": {
-            "block": "3a73f618-74ef-49c2-a366-093ae2c74f36",
-            "port": "o"
-          },
-          "target": {
-            "block": "output-o",
-            "port": "in"
-          }
-          ,"size": 8
         }
       ]
     },

@@ -26,7 +26,7 @@
             "virtual": false
           },
           "position": {
-            "x": 944,
+            "x": 848,
             "y": 168
           }
         },
@@ -39,21 +39,8 @@
             "local": true
           },
           "position": {
-            "x": 200,
+            "x": 312,
             "y": 96
-          }
-        },
-        {
-          "id": "constant-TO",
-          "type": "basic.constant",
-          "data": {
-            "name": "TO",
-            "value": "255",
-            "local": false
-          },
-          "position": {
-            "x": 416,
-            "y": 40
           }
         },
         {
@@ -65,39 +52,15 @@
             "local": true
           },
           "position": {
-            "x": 800,
+            "x": 704,
             "y": 40
-          }
-        },
-        {
-          "id": "905ba70f-5b81-42e1-b732-ac6d956d5087",
-          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
-          "position": {
-            "x": 392,
-            "y": 160
-          },
-          "size": {
-            "width": 96,
-            "height": 96
-          }
-        },
-        {
-          "id": "3ea46ebe-af85-4ef6-ad85-674b56a13d16",
-          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_8.ice>",
-          "position": {
-            "x": 592,
-            "y": 200
-          },
-          "size": {
-            "width": 96,
-            "height": 64
           }
         },
         {
           "id": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
           "type": "@sha1<./blocks/Varios/PWM/PWM_8.ice>",
           "position": {
-            "x": 800,
+            "x": 704,
             "y": 152
           },
           "size": {
@@ -125,48 +88,28 @@
           "id": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
           "type": "@sha1<./blocks/Varios/Pulso/Corazon_Xms_P.ice>",
           "position": {
-            "x": 200,
+            "x": 312,
             "y": 208
           },
           "size": {
             "width": 96,
             "height": 64
           }
+        },
+        {
+          "id": "3e7844c0-8a4d-46cd-badb-901d0d4d4152",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/8 bits/Contador_Simple_Enable_8.ice>",
+          "position": {
+            "x": 488,
+            "y": 160
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
         }
       ],
       "wires": [
-        {
-          "source": {
-            "block": "constant-TO",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
-            "port": "constant-TO"
-          }
-        },
-        {
-          "source": {
-            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "3ea46ebe-af85-4ef6-ad85-674b56a13d16",
-            "port": "input-i"
-          },
-          "size": 32
-        },
-        {
-          "source": {
-            "block": "3ea46ebe-af85-4ef6-ad85-674b56a13d16",
-            "port": "output-o"
-          },
-          "target": {
-            "block": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
-            "port": "input-Dutty"
-          },
-          "size": 8
-        },
         {
           "source": {
             "block": "constant-Periodo",
@@ -189,16 +132,6 @@
         },
         {
           "source": {
-            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
-            "port": "output-Pulso"
-          },
-          "target": {
-            "block": "905ba70f-5b81-42e1-b732-ac6d956d5087",
-            "port": "input-ena"
-          }
-        },
-        {
-          "source": {
             "block": "constant-ms",
             "port": "constant-out"
           },
@@ -206,13 +139,34 @@
             "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
             "port": "constant-ms"
           }
+        },
+        {
+          "source": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "3e7844c0-8a4d-46cd-badb-901d0d4d4152",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "3e7844c0-8a4d-46cd-badb-901d0d4d4152",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
+            "port": "input-Dutty"
+          },
+          "size": 8
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 81.5,
-        "y": 264
+        "x": 364,
+        "y": 369.5
       },
       "zoom": 1
     }

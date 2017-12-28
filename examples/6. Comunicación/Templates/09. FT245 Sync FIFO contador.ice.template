@@ -288,42 +288,6 @@
           }
         },
         {
-          "id": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
-          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/32 bits/Contador_Simple_Enable_32.ice>",
-          "position": {
-            "x": 224,
-            "y": 544
-          },
-          "size": {
-            "width": 96,
-            "height": 96
-          }
-        },
-        {
-          "id": "8aa5e6c6-8f59-4f7a-923f-c73edced4221",
-          "type": "@sha1<./blocks/Varios/Buses/Reducir/Reducir_32_8.ice>",
-          "position": {
-            "x": 384,
-            "y": 584
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "5ea536be-70db-4e2a-abc0-325109cec7b4",
-          "type": "@sha1<./blocks/Const/Bit/0.ice>",
-          "position": {
-            "x": 408,
-            "y": 408
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
           "id": "4ef84eb2-8dad-43be-97a0-e482596044c1",
           "type": "@sha1<./blocks/Varios/Registros/Completo/Reg_8_Completo.ice>",
           "position": {
@@ -341,6 +305,46 @@
           "position": {
             "x": 1248,
             "y": 432
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/8 bits/Contador_Simple_Enable_8.ice>",
+          "position": {
+            "x": 224,
+            "y": 544
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "43836345-45bd-4b94-a9f9-4eccc2cb00fc",
+          "type": "basic.info",
+          "data": {
+            "info": "  Transmite a-z en forma continua.\n  Lo que recibe se muestra en los LEDs (nibble inferior)\n  Usar <tt>ft2tcp</tt> de Marc Pignat en una terminal y\n<tt>nc 127.0.0.1 9999</tt> en otra.\n  Para medir la velocidad de transferencia usar:\n<tt>nc 127.0.0.1 9999 | dd of=/dev/null</tt>\n",
+            "readonly": true
+          },
+          "position": {
+            "x": 0,
+            "y": -168
+          },
+          "size": {
+            "width": 448,
+            "height": 176
+          }
+        },
+        {
+          "id": "ed3984ff-e34a-46dd-b3ad-72f240dcaaaa",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 448,
+            "y": 448
           },
           "size": {
             "width": 96,
@@ -478,123 +482,17 @@
         },
         {
           "source": {
-            "block": "constant-Desde",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
-            "port": "constant-FROM"
-          }
-        },
-        {
-          "source": {
-            "block": "constant-Hasta",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
-            "port": "constant-TO"
-          }
-        },
-        {
-          "source": {
-            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
-            "port": "output-cnt"
-          },
-          "target": {
-            "block": "8aa5e6c6-8f59-4f7a-923f-c73edced4221",
-            "port": "input-i"
-          },
-          "size": 32
-        },
-        {
-          "source": {
-            "block": "8aa5e6c6-8f59-4f7a-923f-c73edced4221",
-            "port": "output-o"
-          },
-          "target": {
-            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
-            "port": "input-TxData"
-          },
-          "vertices": [
-            {
-              "x": 528,
-              "y": 464
-            }
-          ],
-          "size": 8
-        },
-        {
-          "source": {
             "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
             "port": "output-TxRead"
           },
           "target": {
-            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
+            "block": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
             "port": "input-ena"
           },
           "vertices": [
             {
-              "x": 816,
-              "y": 728
-            }
-          ]
-        },
-        {
-          "source": {
-            "block": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
-            "port": "output-rst"
-          },
-          "target": {
-            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
-            "port": "input-rst"
-          },
-          "vertices": [
-            {
-              "x": 112,
-              "y": 576
-            }
-          ]
-        },
-        {
-          "source": {
-            "block": "input-FT_CLKOUT",
-            "port": "out"
-          },
-          "target": {
-            "block": "d9df5a29-4a02-45e8-9cc9-6d83fdd0a631",
-            "port": "input-clk"
-          },
-          "vertices": [
-            {
-              "x": 136,
-              "y": 408
-            }
-          ]
-        },
-        {
-          "source": {
-            "block": "5ea536be-70db-4e2a-abc0-325109cec7b4",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
-            "port": "input-TxEmpty"
-          }
-        },
-        {
-          "source": {
-            "block": "5ea536be-70db-4e2a-abc0-325109cec7b4",
-            "port": "output-1"
-          },
-          "target": {
-            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
-            "port": "input-RxFull"
-          },
-          "vertices": [
-            {
-              "x": 560,
-              "y": 472
+              "x": 808,
+              "y": 664
             }
           ]
         },
@@ -653,11 +551,11 @@
           "vertices": [
             {
               "x": 112,
-              "y": -168
+              "y": 688
             },
             {
               "x": 1056,
-              "y": -32
+              "y": 656
             }
           ]
         },
@@ -698,13 +596,108 @@
               "y": 296
             }
           ]
+        },
+        {
+          "source": {
+            "block": "input-FT_CLKOUT",
+            "port": "out"
+          },
+          "target": {
+            "block": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
+            "port": "input-clk"
+          },
+          "vertices": [
+            {
+              "x": 144,
+              "y": 424
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "aabe0755-56ed-4de4-abfe-7ea9c3af8897",
+            "port": "output-rst"
+          },
+          "target": {
+            "block": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 112,
+              "y": 496
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "constant-Desde",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
+            "port": "constant-FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-Hasta",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "2cb4a31c-a46e-46a4-b2ce-6a037fe443ec",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-TxData"
+          },
+          "vertices": [
+            {
+              "x": 424,
+              "y": 512
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "ed3984ff-e34a-46dd-b3ad-72f240dcaaaa",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-TxEmpty"
+          },
+          "vertices": [
+            {
+              "x": 568,
+              "y": 456
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "ed3984ff-e34a-46dd-b3ad-72f240dcaaaa",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "2c67983d-5bdc-48e7-a445-ed32405cd069",
+            "port": "input-RxFull"
+          }
         }
       ]
     },
     "state": {
       "pan": {
         "x": 348.6832,
-        "y": 201.2891
+        "y": 238.3386
       },
       "zoom": 0.9262
     }
