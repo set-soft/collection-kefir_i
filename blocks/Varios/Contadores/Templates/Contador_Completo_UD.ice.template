@@ -1,0 +1,366 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Contador Completo @sz_i",
+    "version": "1.0.0",
+    "description": "Contador de hasta @sz_i bits des/ascendente, con inicio, fin, reset y carga paralela",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<contador-up-dn-ini-0.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-ena",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -32,
+            "y": 80
+          }
+        },
+        {
+          "id": "output-tc",
+          "type": "basic.output",
+          "data": {
+            "name": "tc",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 792,
+            "y": 152
+          }
+        },
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": -32,
+            "y": 152
+          }
+        },
+        {
+          "id": "input-load",
+          "type": "basic.input",
+          "data": {
+            "name": "load",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -32,
+            "y": 224
+          }
+        },
+        {
+          "id": "input-d",
+          "type": "basic.input",
+          "data": {
+            "name": "d",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -32,
+            "y": 296
+          }
+        },
+        {
+          "id": "output-cnt",
+          "type": "basic.output",
+          "data": {
+            "name": "cnt",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 800,
+            "y": 368
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -32,
+            "y": 368
+          }
+        },
+        {
+          "id": "input-up",
+          "type": "basic.input",
+          "data": {
+            "name": "up",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": -32,
+            "y": 440
+          }
+        },
+        {
+          "id": "constant-FROM",
+          "type": "basic.constant",
+          "data": {
+            "name": "FROM",
+            "value": "0",
+            "local": false
+          },
+          "position": {
+            "x": 264,
+            "y": -48
+          }
+        },
+        {
+          "id": "constant-TO",
+          "type": "basic.constant",
+          "data": {
+            "name": "TO",
+            "value": "@sz_2pm1_i",
+            "local": false
+          },
+          "position": {
+            "x": 536,
+            "y": -48
+          }
+        },
+        {
+          "id": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+          "type": "basic.code",
+          "data": {
+            "code": "reg @range_s_i r=FROM;\n\nalways @(posedge clk)\nbegin : contar\n  if (rst)\n     r <= FROM;\n  else\n     begin\n     if (ena)\n        begin\n        if (load)\n           r <= d;\n        else\n           begin\n           if (up)\n              begin\n              r <= r+1;\n              if (r==TO)\n                 r <= FROM;\n              end\n           else\n              begin\n              r <= r-1;\n              if (r==FROM)\n                 r <= TO;\n              end\n           end\n        end\n     end\nend // contar\n\nassign tc=ena && ((up && r==TO) || (!up && r==FROM));\nassign cnt=r;",
+            "params": [
+              {
+                "name": "FROM"
+              },
+              {
+                "name": "TO"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "ena"
+                },
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "load"
+                },
+                {
+                  "name": "d",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                },
+                {
+                  "name": "rst"
+                },
+                {
+                  "name": "up"
+                }
+              ],
+              "out": [
+                {
+                  "name": "tc"
+                },
+                {
+                  "name": "cnt",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 176,
+            "y": 72
+          },
+          "size": {
+            "width": 544,
+            "height": 432
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "ena"
+          }
+        },
+        {
+          "source": {
+            "block": "input-load",
+            "port": "out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "load"
+          }
+        },
+        {
+          "source": {
+            "block": "input-d",
+            "port": "out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "d"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "rst"
+          }
+        },
+        {
+          "source": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "tc"
+          },
+          "target": {
+            "block": "output-tc",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "cnt"
+          },
+          "target": {
+            "block": "output-cnt",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "constant-FROM",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-TO",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "TO"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-up",
+            "port": "out"
+          },
+          "target": {
+            "block": "963792a4-a3be-42bc-8cc8-c026c44e84c8",
+            "port": "up"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 157.2661,
+        "y": 192.2549
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

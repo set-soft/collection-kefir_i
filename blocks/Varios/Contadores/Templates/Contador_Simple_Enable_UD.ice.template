@@ -1,0 +1,303 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "Contador Simple Enable @sz_i Up/Down",
+    "version": "1.0.0",
+    "description": "Contador de hasta @sz_i bits des/ascedente con inicio, fin, reset y enable",
+    "author": "Salvador E. Tropea",
+    "image": "@svg<contador-up-dn-ini-0.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-ena",
+          "type": "basic.input",
+          "data": {
+            "name": "ena",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 184,
+            "y": 96
+          }
+        },
+        {
+          "id": "output-tc",
+          "type": "basic.output",
+          "data": {
+            "name": "tc",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 520,
+            "y": 168
+          }
+        },
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 184,
+            "y": 168
+          }
+        },
+        {
+          "id": "output-cnt",
+          "type": "basic.output",
+          "data": {
+            "name": "cnt",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 520,
+            "y": 264
+          }
+        },
+        {
+          "id": "input-rst",
+          "type": "basic.input",
+          "data": {
+            "name": "rst",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 184,
+            "y": 312
+          }
+        },
+        {
+          "id": "input-up",
+          "type": "basic.input",
+          "data": {
+            "name": "up",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": "0"
+              }
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 184,
+            "y": 384
+          }
+        },
+        {
+          "id": "constant-FROM",
+          "type": "basic.constant",
+          "data": {
+            "name": "FROM",
+            "value": "0",
+            "local": false
+          },
+          "position": {
+            "x": 304,
+            "y": 40
+          }
+        },
+        {
+          "id": "constant-TO",
+          "type": "basic.constant",
+          "data": {
+            "name": "TO",
+            "value": "@sz_2pm1_i",
+            "local": false
+          },
+          "position": {
+            "x": 416,
+            "y": 40
+          }
+        },
+        {
+          "id": "fb1aca28-414f-4be4-8fb9-5c379d0c5107",
+          "type": "@sha1<./blocks/Const/Bit/0.ice>",
+          "position": {
+            "x": 184,
+            "y": 240
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+          "type": "@sha1<./blocks/Varios/Contadores/Asc_Desc/@sz_i bits/Contador_Completo_@sz_i_UD.ice>",
+          "position": {
+            "x": 360,
+            "y": 152
+          },
+          "size": {
+            "width": 96,
+            "height": 192
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "input-clk"
+          }
+        },
+        {
+          "source": {
+            "block": "input-ena",
+            "port": "out"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 320,
+              "y": 160
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "constant-FROM",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "constant-FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-TO",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "output-tc"
+          },
+          "target": {
+            "block": "output-tc",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "output-cnt",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "fb1aca28-414f-4be4-8fb9-5c379d0c5107",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "input-load"
+          },
+          "vertices": [
+            {
+              "x": 304,
+              "y": 248
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-rst",
+            "port": "out"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 312,
+              "y": 336
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "input-up",
+            "port": "out"
+          },
+          "target": {
+            "block": "3386952c-a3de-4d2c-bf9a-154ec95a6395",
+            "port": "input-up"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 50,
+        "y": 19.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

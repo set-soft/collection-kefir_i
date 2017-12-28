@@ -144,7 +144,7 @@ Collection for the Kefir I board in Icestudio.
       * 1 and 2 flip-flops synchronizer
   * *Contadores*
     * *Asc_Desc* Up/Down counters
-      * *32 bits* (3 versions)
+      * *32/16/8/4 bits* (3 versions de c/u)
       * *Natural BCD* (3 versions)
     * *Ascendente* Up counters
       * *32/16/8/4 bits* (3 versions de c/u)
