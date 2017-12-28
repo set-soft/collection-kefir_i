@@ -257,6 +257,7 @@ More than 625 blocks
   * 01\. ADC y LEDs
   * 02\. PWM y LEDs
   * 03\. PWM y LEDs bidireccional
+  * 04\. ADC, PWM y LEDs
 
 More than 60 examples
 

@@ -1,0 +1,524 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LED1",
+          "type": "basic.output",
+          "data": {
+            "name": "LED1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 1576,
+            "y": 192
+          }
+        },
+        {
+          "id": "output-LED2",
+          "type": "basic.output",
+          "data": {
+            "name": "LED2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "135"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 1576,
+            "y": 280
+          }
+        },
+        {
+          "id": "output-AD_nCS",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_nCS",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_CS",
+                "value": "101"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 344
+          }
+        },
+        {
+          "id": "output-AD_CK",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_CK",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_CK",
+                "value": "105"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 416
+          }
+        },
+        {
+          "id": "input-AD_DO",
+          "type": "basic.input",
+          "data": {
+            "name": "AD_DO",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_DO",
+                "value": "104"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 416,
+            "y": 416
+          }
+        },
+        {
+          "id": "output-AD_DI",
+          "type": "basic.output",
+          "data": {
+            "name": "AD_DI",
+            "pins": [
+              {
+                "index": "0",
+                "name": "AD_DI",
+                "value": "102"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 776,
+            "y": 488
+          }
+        },
+        {
+          "id": "constant-DIV_1",
+          "type": "basic.constant",
+          "data": {
+            "name": "DIV_1",
+            "value": "11",
+            "local": true
+          },
+          "position": {
+            "x": 224,
+            "y": 264
+          }
+        },
+        {
+          "id": "constant-ms",
+          "type": "basic.constant",
+          "data": {
+            "name": "ms",
+            "value": "10",
+            "local": true
+          },
+          "position": {
+            "x": 352,
+            "y": 112
+          }
+        },
+        {
+          "id": "constant-LSB",
+          "type": "basic.constant",
+          "data": {
+            "name": "LSB",
+            "value": "2",
+            "local": true
+          },
+          "position": {
+            "x": 880,
+            "y": 184
+          }
+        },
+        {
+          "id": "constant-Periodo",
+          "type": "basic.constant",
+          "data": {
+            "name": "Periodo",
+            "value": "1",
+            "local": true
+          },
+          "position": {
+            "x": 1264,
+            "y": 152
+          }
+        },
+        {
+          "id": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+          "type": "@sha1<./blocks/Input/Convertidor_AD/MCP300x.ice>",
+          "position": {
+            "x": 576,
+            "y": 232
+          },
+          "size": {
+            "width": 96,
+            "height": 224
+          }
+        },
+        {
+          "id": "7b699cab-c2f3-40eb-95f2-5c0e8ebf7e98",
+          "type": "@sha1<./blocks/Varios/Pulso/Divisor_Frecuencia_Sin_Reset_y_Enable.ice>",
+          "position": {
+            "x": 224,
+            "y": 376
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "0bd4946d-5f2e-401c-be85-2d65d008c961",
+          "type": "@sha1<./blocks/Const/Bus/0/Valor_0_3_bits.ice>",
+          "position": {
+            "x": 352,
+            "y": 312
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "94d2dd57-f099-47a2-8fe3-e251c36035bc",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_Xms_P.ice>",
+          "position": {
+            "x": 352,
+            "y": 224
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "148b60e4-b3ce-45ae-8d9c-b1771207c47b",
+          "type": "@sha1<./blocks/Varios/Buses/Seleccionar/Bus/Seleccionar_16_8.ice>",
+          "position": {
+            "x": 880,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "6b614353-e1ca-47e8-9168-9397bd4d4366",
+          "type": "@sha1<./blocks/Varios/Registros/Completo/Reg_8_Completo.ice>",
+          "position": {
+            "x": 1064,
+            "y": 280
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "ebe60c92-132a-4aeb-8e65-8de9345a00d3",
+          "type": "@sha1<./blocks/Varios/PWM/PWM_8.ice>",
+          "position": {
+            "x": 1264,
+            "y": 264
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "6b70354f-8c01-424f-b5ac-18d0d44ee3cf",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": 1432,
+            "y": 192
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "bf4e421c-cca4-458d-b419-dc8144c1279a",
+          "type": "basic.info",
+          "data": {
+            "info": "En este ejemplo se realizan conversiones en el A/D cada 10 ms.\nLos 8 bits más pesados son almacenados en un registro.\nEse valor es usado para controlar un PWM con período de 1 ms.",
+            "readonly": true
+          },
+          "position": {
+            "x": 248,
+            "y": 8
+          },
+          "size": {
+            "width": 544,
+            "height": 96
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-DIV_1",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "7b699cab-c2f3-40eb-95f2-5c0e8ebf7e98",
+            "port": "constant-TO"
+          }
+        },
+        {
+          "source": {
+            "block": "0bd4946d-5f2e-401c-be85-2d65d008c961",
+            "port": "output-K"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-chn"
+          },
+          "size": 3
+        },
+        {
+          "source": {
+            "block": "input-AD_DO",
+            "port": "out"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-AD_DO"
+          }
+        },
+        {
+          "source": {
+            "block": "7b699cab-c2f3-40eb-95f2-5c0e8ebf7e98",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-ena"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-AD_nCS"
+          },
+          "target": {
+            "block": "output-AD_nCS",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-AD_CK"
+          },
+          "target": {
+            "block": "output-AD_CK",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-AD_DI"
+          },
+          "target": {
+            "block": "output-AD_DI",
+            "port": "in"
+          },
+          "vertices": [
+            {
+              "x": 736,
+              "y": 504
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "constant-ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "94d2dd57-f099-47a2-8fe3-e251c36035bc",
+            "port": "constant-ms"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "94d2dd57-f099-47a2-8fe3-e251c36035bc",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "input-start"
+          },
+          "vertices": [
+            {
+              "x": 504,
+              "y": 280
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-data"
+          },
+          "target": {
+            "block": "148b60e4-b3ce-45ae-8d9c-b1771207c47b",
+            "port": "input-i"
+          },
+          "size": 16
+        },
+        {
+          "source": {
+            "block": "constant-LSB",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "148b60e4-b3ce-45ae-8d9c-b1771207c47b",
+            "port": "constant-FROM"
+          }
+        },
+        {
+          "source": {
+            "block": "148b60e4-b3ce-45ae-8d9c-b1771207c47b",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "6b614353-e1ca-47e8-9168-9397bd4d4366",
+            "port": "input-d"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "54ee2630-e3c2-40ec-9315-d4187df6142c",
+            "port": "output-eoc"
+          },
+          "target": {
+            "block": "6b614353-e1ca-47e8-9168-9397bd4d4366",
+            "port": "input-ena"
+          },
+          "vertices": [
+            {
+              "x": 752,
+              "y": 136
+            },
+            {
+              "x": 1320,
+              "y": 128
+            },
+            {
+              "x": 1696,
+              "y": 536
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "ebe60c92-132a-4aeb-8e65-8de9345a00d3",
+            "port": "output-PWM"
+          },
+          "target": {
+            "block": "output-LED2",
+            "port": "in"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "constant-Periodo",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "ebe60c92-132a-4aeb-8e65-8de9345a00d3",
+            "port": "constant-T_ms"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "ebe60c92-132a-4aeb-8e65-8de9345a00d3",
+            "port": "output-PWM"
+          },
+          "target": {
+            "block": "6b70354f-8c01-424f-b5ac-18d0d44ee3cf",
+            "port": "input-1"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "6b70354f-8c01-424f-b5ac-18d0d44ee3cf",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "output-LED1",
+            "port": "in"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "6b614353-e1ca-47e8-9168-9397bd4d4366",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "ebe60c92-132a-4aeb-8e65-8de9345a00d3",
+            "port": "input-Dutty"
+          },
+          "size": 8
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": -123,
+        "y": 97.0668
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
