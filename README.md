@@ -147,7 +147,7 @@ Collection for the Kefir I board in Icestudio.
       * *32 bits* (3 versions)
       * *Natural BCD* (3 versions)
     * *Ascendente* Up counters
-      * *32 bits* (3 versions)
+      * *32/16/8/4 bits* (3 versions de c/u)
       * *Natural BCD* (3 versions)
     * *Prescaler* Frequency dividers (square wave)
       * 2 versions upto 32 bits

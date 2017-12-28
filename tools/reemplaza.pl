@@ -240,6 +240,8 @@ else
    $a=~s/\@sz_i/$i/g;
    $aux=2**$i;
    $a=~s/\@sz_2p_i/$aux/g;
+   $aux=(2**$i)-1;
+   $a=~s/\@sz_2pm1_i/$aux/g;
    $aux=$i+1;
    $a=~s/\@sz_p1_i/$aux/g;
    if ($i>1)

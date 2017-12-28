@@ -77,166 +77,199 @@
             "name": "cnt",
             "range": "[31:0]",
             "pins": [
-              {
-                "index": "31",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "30",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "29",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "28",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "27",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "26",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "25",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "24",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "23",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "22",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "21",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "20",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "19",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "18",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "17",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "16",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "15",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "14",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "13",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "12",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "11",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "10",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "9",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "8",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "7",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "6",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "5",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "4",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "3",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "2",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "1",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
+
+{
+ "index": "31",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "30",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "29",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "28",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "27",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "26",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "25",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "24",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "23",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "22",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "21",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "20",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "19",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "18",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "17",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "16",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "15",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "14",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "13",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "12",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "11",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "10",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "9",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "8",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "7",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "6",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "5",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "4",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "3",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "2",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "1",
+ "name": "",
+ "value": "0"
+},
+
+{
+ "index": "0",
+ "name": "",
+ "value": "0"
+}
+
             ],
             "virtual": true
           },
