@@ -1,0 +1,458 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LED",
+          "type": "basic.output",
+          "data": {
+            "name": "LED",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 824,
+            "y": 192
+          }
+        },
+        {
+          "id": "constant-ms",
+          "type": "basic.constant",
+          "data": {
+            "name": "ms",
+            "value": "10",
+            "local": true
+          },
+          "position": {
+            "x": 264,
+            "y": 32
+          }
+        },
+        {
+          "id": "constant-Periodo",
+          "type": "basic.constant",
+          "data": {
+            "name": "Periodo",
+            "value": "1",
+            "local": true
+          },
+          "position": {
+            "x": 680,
+            "y": 64
+          }
+        },
+        {
+          "id": "constant-FROM",
+          "type": "basic.constant",
+          "data": {
+            "name": "FROM",
+            "value": "1",
+            "local": true
+          },
+          "position": {
+            "x": 680,
+            "y": 288
+          }
+        },
+        {
+          "id": "constant-TO",
+          "type": "basic.constant",
+          "data": {
+            "name": "TO",
+            "value": "254",
+            "local": true
+          },
+          "position": {
+            "x": 680,
+            "y": 480
+          }
+        },
+        {
+          "id": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
+          "type": "@sha1<./blocks/Varios/PWM/PWM_8.ice>",
+          "position": {
+            "x": 680,
+            "y": 176
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "33e7c6ec-f8af-4e4e-aa00-73f2292739e3",
+          "type": "basic.info",
+          "data": {
+            "info": "Este circuito posee un contador que va de 0 a 255 con una habilitación de 10 ms.\nPor lo que pasa de 0 a 255 en 2,55 segundos.\nEste valor configura el ciclo útil de un PWM cuyo período es de 1 ms y su resolución de 8 bits.\nDe esta manera el LED va de apagado a completamente encendido cada 2,55 ms.\nNota: el LED no es lineal, sino que exponencial, por lo que su brillo no crece linealmente\nEsta variante usa un contador Up/Down para aumentar el brillo y luego de llegar al máximo comenzar a reducirlo.",
+            "readonly": true
+          },
+          "position": {
+            "x": -208,
+            "y": -120
+          },
+          "size": {
+            "width": 1072,
+            "height": 128
+          }
+        },
+        {
+          "id": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_Xms_P.ice>",
+          "position": {
+            "x": 264,
+            "y": 144
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "c8ffb89c-0a72-460d-a6e2-0a7c78c0d3bb",
+          "type": "@sha1<./blocks/Varios/Contadores/Asc_Desc/8 bits/Contador_Simple_Enable_8_UD.ice>",
+          "position": {
+            "x": 432,
+            "y": 160
+          },
+          "size": {
+            "width": 96,
+            "height": 128
+          }
+        },
+        {
+          "id": "713477cb-2c05-4f43-a454-7b770349984d",
+          "type": "@sha1<blocks/Varios/Biestables/Flip-flop T/Flip-flop T Simple 1.ice>",
+          "position": {
+            "x": 264,
+            "y": 240
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "e54a0160-e25a-4ec5-8d92-5d5c86c06772",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice>",
+          "position": {
+            "x": 680,
+            "y": 400
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "a8f5eefc-f319-48da-b729-c6480bcc2d4b",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice>",
+          "position": {
+            "x": 680,
+            "y": 592
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "11894d0d-475e-49e6-8e3f-09444e9d7daf",
+          "type": "@sha1<./blocks/Logic/AND/AND_2.ice>",
+          "position": {
+            "x": -64,
+            "y": 216
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "e76a279f-03e0-48eb-a1ca-b5f39f3ac9fd",
+          "type": "@sha1<./blocks/Logic/AND/AND_2.ice>",
+          "position": {
+            "x": -64,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "ea7f8a51-e11f-4ab4-bb91-108ee5462055",
+          "type": "@sha1<./blocks/Logic/OR/OR_2.ice>",
+          "position": {
+            "x": 104,
+            "y": 256
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "7141065e-6af9-4aff-b58e-d8b144f8f6c6",
+          "type": "@sha1<./blocks/Logic/NOT/NOT.ice>",
+          "position": {
+            "x": -208,
+            "y": 184
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-Periodo",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
+            "port": "constant-T_ms"
+          }
+        },
+        {
+          "source": {
+            "block": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
+            "port": "output-PWM"
+          },
+          "target": {
+            "block": "output-LED",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "constant-ms",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "constant-ms"
+          }
+        },
+        {
+          "source": {
+            "block": "ac9043e0-7b3e-4a2e-acb2-9636b3f3c093",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "c8ffb89c-0a72-460d-a6e2-0a7c78c0d3bb",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "713477cb-2c05-4f43-a454-7b770349984d",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "c8ffb89c-0a72-460d-a6e2-0a7c78c0d3bb",
+            "port": "input-up"
+          }
+        },
+        {
+          "source": {
+            "block": "c8ffb89c-0a72-460d-a6e2-0a7c78c0d3bb",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "66aa22b8-c211-4596-ace1-87bed9f6eb81",
+            "port": "input-Dutty"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "constant-FROM",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "e54a0160-e25a-4ec5-8d92-5d5c86c06772",
+            "port": "constant-K"
+          }
+        },
+        {
+          "source": {
+            "block": "c8ffb89c-0a72-460d-a6e2-0a7c78c0d3bb",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "e54a0160-e25a-4ec5-8d92-5d5c86c06772",
+            "port": "input-A"
+          },
+          "vertices": [
+            {
+              "x": 576,
+              "y": 392
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "constant-TO",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "a8f5eefc-f319-48da-b729-c6480bcc2d4b",
+            "port": "constant-K"
+          },
+          "vertices": []
+        },
+        {
+          "source": {
+            "block": "c8ffb89c-0a72-460d-a6e2-0a7c78c0d3bb",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "a8f5eefc-f319-48da-b729-c6480bcc2d4b",
+            "port": "input-A"
+          },
+          "vertices": [
+            {
+              "x": 576,
+              "y": 552
+            }
+          ],
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "ea7f8a51-e11f-4ab4-bb91-108ee5462055",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "713477cb-2c05-4f43-a454-7b770349984d",
+            "port": "input-t"
+          }
+        },
+        {
+          "source": {
+            "block": "11894d0d-475e-49e6-8e3f-09444e9d7daf",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "ea7f8a51-e11f-4ab4-bb91-108ee5462055",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "e76a279f-03e0-48eb-a1ca-b5f39f3ac9fd",
+            "port": "output-o"
+          },
+          "target": {
+            "block": "ea7f8a51-e11f-4ab4-bb91-108ee5462055",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "a8f5eefc-f319-48da-b729-c6480bcc2d4b",
+            "port": "output-Igual"
+          },
+          "target": {
+            "block": "e76a279f-03e0-48eb-a1ca-b5f39f3ac9fd",
+            "port": "input-i1"
+          },
+          "vertices": [
+            {
+              "x": 784,
+              "y": 680
+            },
+            {
+              "x": -104,
+              "y": 648
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "713477cb-2c05-4f43-a454-7b770349984d",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "e76a279f-03e0-48eb-a1ca-b5f39f3ac9fd",
+            "port": "input-i0"
+          }
+        },
+        {
+          "source": {
+            "block": "e54a0160-e25a-4ec5-8d92-5d5c86c06772",
+            "port": "output-Igual"
+          },
+          "target": {
+            "block": "11894d0d-475e-49e6-8e3f-09444e9d7daf",
+            "port": "input-i0"
+          },
+          "vertices": [
+            {
+              "x": 816,
+              "y": 704
+            },
+            {
+              "x": -120,
+              "y": 704
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "7141065e-6af9-4aff-b58e-d8b144f8f6c6",
+            "port": "output-1"
+          },
+          "target": {
+            "block": "11894d0d-475e-49e6-8e3f-09444e9d7daf",
+            "port": "input-i1"
+          }
+        },
+        {
+          "source": {
+            "block": "713477cb-2c05-4f43-a454-7b770349984d",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "7141065e-6af9-4aff-b58e-d8b144f8f6c6",
+            "port": "input-1"
+          },
+          "vertices": [
+            {
+              "x": 368,
+              "y": 368
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 340,
+        "y": 177.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

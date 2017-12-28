@@ -185,6 +185,8 @@ Collection for the Kefir I board in Icestudio.
     * *Power on Reset*
     * *Power on Reset long*
 
+More than 625 blocks
+
 ## Examples
 * *1\. Basic*
   * 01\. One LED
@@ -254,6 +256,9 @@ Collection for the Kefir I board in Icestudio.
 * *9\. Analógico*
   * 01\. ADC y LEDs
   * 02\. PWM y LEDs
+  * 03\. PWM y LEDs bidireccional
+
+More than 60 examples
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
