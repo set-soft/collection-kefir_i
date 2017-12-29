@@ -481,6 +481,21 @@ all:  \
 	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_512x8.ice \
 	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_64x8.ice \
 	./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_1024x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_128x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_16x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_256x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_32x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_512x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_64x4_file.ice \
+	./blocks/Varios/Memoria/ROM/4_bits/ROM_8x4_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_128x8_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_16x8_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_256x8_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_32x8_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_512x8_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_64x8_file.ice \
+	./blocks/Varios/Memoria/ROM/8_bits/ROM_8x8_file.ice \
 	./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice \
 	./blocks/Varios/Multiplexores/2\ canales/Mux2_16.ice \
 	./blocks/Varios/Multiplexores/2\ canales/Mux2_2.ice \
@@ -628,6 +643,7 @@ all:  \
 	./examples/6.\ Comunicación/10.\ SPI\ Flash\ a\ Serie.ice \
 	./examples/7.\ Memoria/01.\ FIFO\ 16x8\ contador.ice \
 	./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice \
+	./examples/7.\ Memoria/03.\ Memoria\ 16x4.ice \
 	./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice \
 	./examples/8.\ Debug/02.\ Analizador\ 16\ canales\ contador\ FT245\ Sync.ice \
 	./examples/8.\ Debug/03.\ Analizador\ 32\ canales\ contador\ FT245\ Sync.ice \
@@ -2581,6 +2597,66 @@ all:  \
 	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/FIFO_Async.ice.template 8 3 ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice
 	perl tools/update_db.pl ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_8x8.ice
 
+./blocks/Varios/Memoria/ROM/4_bits/ROM_1024x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 10 ./blocks/Varios/Memoria/ROM/4_bits/ROM_1024x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_1024x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_128x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 7 ./blocks/Varios/Memoria/ROM/4_bits/ROM_128x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_128x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_16x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 4 ./blocks/Varios/Memoria/ROM/4_bits/ROM_16x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_16x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_256x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 8 ./blocks/Varios/Memoria/ROM/4_bits/ROM_256x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_256x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_32x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 5 ./blocks/Varios/Memoria/ROM/4_bits/ROM_32x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_32x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_512x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 9 ./blocks/Varios/Memoria/ROM/4_bits/ROM_512x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_512x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_64x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 6 ./blocks/Varios/Memoria/ROM/4_bits/ROM_64x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_64x4_file.ice
+
+./blocks/Varios/Memoria/ROM/4_bits/ROM_8x4_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 4 3 ./blocks/Varios/Memoria/ROM/4_bits/ROM_8x4_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/4_bits/ROM_8x4_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_128x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 7 ./blocks/Varios/Memoria/ROM/8_bits/ROM_128x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_128x8_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_16x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 4 ./blocks/Varios/Memoria/ROM/8_bits/ROM_16x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_16x8_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_256x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 8 ./blocks/Varios/Memoria/ROM/8_bits/ROM_256x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_256x8_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_32x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 5 ./blocks/Varios/Memoria/ROM/8_bits/ROM_32x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_32x8_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_512x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 9 ./blocks/Varios/Memoria/ROM/8_bits/ROM_512x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_512x8_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_64x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 6 ./blocks/Varios/Memoria/ROM/8_bits/ROM_64x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_64x8_file.ice
+
+./blocks/Varios/Memoria/ROM/8_bits/ROM_8x8_file.ice: ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Memoria/Templates/ROM_IxO_file.svg
+	perl tools/reemplaza.pl ./blocks/Varios/Memoria/Templates/ROM_IxO_file.ice.template 8 3 ./blocks/Varios/Memoria/ROM/8_bits/ROM_8x8_file.ice
+	perl tools/update_db.pl ./blocks/Varios/Memoria/ROM/8_bits/ROM_8x8_file.ice
+
 ./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice: ./blocks/Varios/Multiplexores/Templates/Mux2.ice.template tools/reemplaza.pl ././tools/board.cfg 
 	perl tools/reemplaza.pl ./blocks/Varios/Multiplexores/Templates/Mux2.ice.template 1,1,1 1 ./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice
 	perl tools/update_db.pl ./blocks/Varios/Multiplexores/2\ canales/Mux2_1.ice
@@ -3168,6 +3244,10 @@ all:  \
 ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice: ./examples/7.\ Memoria/Templates/02.\ FIFO\ Async\ 16x8\ contador.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Input/CapSense/CapSense\ 2.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Setup/Tri-state.ice ./blocks/Varios/Buses/Separar/Split_wires/Split_2.ice ./blocks/Varios/Buses/Unir/Join_wires/Join_2.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Simple_Enable.ice ./blocks/Varios/Contadores/Ascendente/BCD\ Natural/Contador_BCD_Completo.ice ./blocks/Varios/Contadores/Ascendente/4\ bits/Contador_Completo_4.ice ./blocks/Varios/Registros/Completo/Reg_4_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_4.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_4.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_4.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_4.ice ./blocks/Const/Bus/0/Valor_0_4_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Buses/Unir/Join_2/Join_4,4_8.ice ./blocks/Varios/Buses/Reducir/Reducir_8_4.ice blocks/Varios/Biestables/Flip-flop\ D/Flip-flop\ D\ Ena\ Rst.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bus/1s/Valor_1s_4_bits.ice ./blocks/Varios/Reset/Power\ On\ Reset\ long.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Memoria/FIFO_Async/FIFO_Async_16x8.ice ./blocks/Varios/Bombeo/Corazon_x1.ice ./blocks/Varios/Biestables/Chincheta-T-ena-0.ice ./blocks/Varios/Pulso/Corazon_2Hz_P.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/7.\ Memoria/Templates/02.\ FIFO\ Async\ 16x8\ contador.ice.template 0 0 ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice
 	perl tools/update_db.pl ./examples/7.\ Memoria/02.\ FIFO\ Async\ 16x8\ contador.ice
+
+./examples/7.\ Memoria/03.\ Memoria\ 16x4.ice: ./examples/7.\ Memoria/Templates/03.\ Memoria\ 16x4.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Contadores/Ascendente/4\ bits/Contador_Simple_Enable_4.ice ./blocks/Varios/Contadores/Ascendente/4\ bits/Contador_Completo_4.ice ./blocks/Varios/Registros/Completo/Reg_4_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_4.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_4.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_4.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_4.ice ./blocks/Const/Bus/0/Valor_0_4_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Pulso/Corazon_2Hz_P.ice ./blocks/Const/Bit/0.ice ./blocks/Const/Bit/1.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Simple_Enable_32.ice ./blocks/Varios/Contadores/Ascendente/32\ bits/Contador_Completo_32.ice ./blocks/Varios/Registros/Completo/Reg_32_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_32.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_32.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_32.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_32.ice ./blocks/Const/Bus/0/Valor_0_32_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Memoria/ROM/4_bits/ROM_16x4_file.ice
+	perl tools/reemplaza.pl ./examples/7.\ Memoria/Templates/03.\ Memoria\ 16x4.ice.template 0 0 ./examples/7.\ Memoria/03.\ Memoria\ 16x4.ice
+	perl tools/update_db.pl ./examples/7.\ Memoria/03.\ Memoria\ 16x4.ice
 
 ./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice: ./examples/8.\ Debug/Templates/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice.template tools/reemplaza.pl ././tools/board.cfg  ./blocks/Varios/Debug/LA_1/LA_1_8_Sync_FT245.ice ./blocks/Varios/Comunicación/FT245/FT245_Sync_If.ice ./blocks/Varios/Memoria/FIFO/FIFO_512x8.ice ./blocks/Varios/Debug/LA_1/LA_1_Base_8.ice ./blocks/Const/Bit/0.ice ./blocks/Varios/Reset/Power\ On\ Reset.ice ./blocks/Varios/Contadores/Ascendente/8\ bits/Contador_Simple_Enable_8.ice ./blocks/Varios/Contadores/Ascendente/8\ bits/Contador_Completo_8.ice ./blocks/Varios/Registros/Completo/Reg_8_Completo.ice ./blocks/Varios/Multiplexores/2\ canales/Mux2_8.ice ./blocks/Logic/AND/AND_2.ice ./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_K_8.ice ./blocks/Logic/OR/OR_2.ice ./blocks/Varios/Aritmetica/Incrementador/Incrementador_Simple_8.ice ./blocks/Varios/Aritmetica/Sumadores/Completo/Sumador_Completo_8.ice ./blocks/Const/Bus/0/Valor_0_8_bits.ice ./blocks/Const/Bit/1.ice ./blocks/Const/Bit/0.ice
 	perl tools/reemplaza.pl ./examples/8.\ Debug/Templates/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice.template 0 0 ./examples/8.\ Debug/01.\ Analizador\ 8\ canales\ contador\ FT245\ Sync.ice

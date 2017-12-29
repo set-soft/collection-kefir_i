@@ -161,6 +161,8 @@ Collection for the Kefir I board in Icestudio.
   * *Memoria*
     * FIFO 8 bits (8/16/32/64/128/256/512 bytes)
     * Asynchronous FIFO 8 bits (8/16/32/64/128/256/512 bytes)
+    * ROM 8 bits (8/16/32/64/128/256/512 bytes)
+    * ROM 4 bits (8/16/32/64/128/256/512/1024 words)
   * *Multiplexores* Multiplexers
     * *2 channels* (1/2/4/8/16/32)
     * *4 channels* (1/2/4/8/16/32)

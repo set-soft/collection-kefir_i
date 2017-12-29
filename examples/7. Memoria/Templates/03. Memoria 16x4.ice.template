@@ -1,0 +1,171 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-LEDs",
+          "type": "basic.output",
+          "data": {
+            "name": "LEDs",
+            "range": "[3:0]",
+            "pins": [
+              {
+                "index": "3",
+                "name": "LED4",
+                "value": "121"
+              },
+              {
+                "index": "2",
+                "name": "LED3",
+                "value": "129"
+              },
+              {
+                "index": "1",
+                "name": "LED2",
+                "value": "135"
+              },
+              {
+                "index": "0",
+                "name": "LED1",
+                "value": "137"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 928,
+            "y": 352
+          }
+        },
+        {
+          "id": "constant-ROMFILE",
+          "type": "basic.constant",
+          "data": {
+            "name": "ROMFILE",
+            "value": "\"03_sec.list\"",
+            "local": true
+          },
+          "position": {
+            "x": 752,
+            "y": 280
+          }
+        },
+        {
+          "id": "610d8465-509d-4703-9e24-075cb049a45f",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/4 bits/Contador_Simple_Enable_4.ice>",
+          "position": {
+            "x": 536,
+            "y": 376
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "6dd421c7-87f0-4bf0-9b24-f9fcd2d87dee",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_2Hz_P.ice>",
+          "position": {
+            "x": 360,
+            "y": 424
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "3f70d74b-b975-438c-89bc-9410d9362e6d",
+          "type": "basic.info",
+          "data": {
+            "info": "Este ejemplo muestra como generar una secuencia arbitraria en los LEDs usando una memoria ROM.\nLa secuencia posee 16 pasos y se encuentra almacenada en <tt>03_sec.list</tt>",
+            "readonly": true
+          },
+          "position": {
+            "x": 280,
+            "y": 200
+          },
+          "size": {
+            "width": 800,
+            "height": 64
+          }
+        },
+        {
+          "id": "3861c26b-988d-404f-af96-4e1463913e8d",
+          "type": "@sha1<./blocks/Varios/Memoria/ROM/4_bits/ROM_16x4_file.ice>",
+          "position": {
+            "x": 752,
+            "y": 400
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "6dd421c7-87f0-4bf0-9b24-f9fcd2d87dee",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "610d8465-509d-4703-9e24-075cb049a45f",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "610d8465-509d-4703-9e24-075cb049a45f",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "3861c26b-988d-404f-af96-4e1463913e8d",
+            "port": "input-addr"
+          },
+          "size": 4
+        },
+        {
+          "source": {
+            "block": "constant-ROMFILE",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "3861c26b-988d-404f-af96-4e1463913e8d",
+            "port": "constant-ROMFILE"
+          }
+        },
+        {
+          "source": {
+            "block": "3861c26b-988d-404f-af96-4e1463913e8d",
+            "port": "output-data"
+          },
+          "target": {
+            "block": "output-LEDs",
+            "port": "in"
+          },
+          "size": 4
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 204,
+        "y": 105.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

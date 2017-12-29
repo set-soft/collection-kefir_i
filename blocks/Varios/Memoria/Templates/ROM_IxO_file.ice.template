@@ -1,0 +1,192 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "ROM @sz_2p_o words of @sz_i bits (from file)",
+    "version": "1.0.0",
+    "description": "Memoria ROM de @sz_2p_ox@sz_i, cargada de fichero genérico",
+    "author": "Juan Gonzalez-Gomez, Salvador E. Tropea",
+    "image": "@svg<ROM_IxO_file.svg>"
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "input-clk",
+          "type": "basic.input",
+          "data": {
+            "name": "clk",
+            "pins": [
+              {
+                "index": "0",
+                "name": "",
+                "value": 0
+              }
+            ],
+            "virtual": true,
+            "clock": true
+          },
+          "position": {
+            "x": 80,
+            "y": 104
+          }
+        },
+        {
+          "id": "output-data",
+          "type": "basic.output",
+          "data": {
+            "name": "data",
+            "range": "@range_s_i",
+            "pins": [
+@pins_i
+            ],
+            "virtual": true
+          },
+          "position": {
+            "x": 680,
+            "y": 168
+          }
+        },
+        {
+          "id": "input-addr",
+          "type": "basic.input",
+          "data": {
+            "name": "addr",
+            "range": "@range_s_o",
+            "pins": [
+@pins_o
+            ],
+            "virtual": true,
+            "clock": false
+          },
+          "position": {
+            "x": 80,
+            "y": 240
+          }
+        },
+        {
+          "id": "constant-ROMFILE",
+          "type": "basic.constant",
+          "data": {
+            "name": "ROMFILE",
+            "value": "\"sec.list\"",
+            "local": false
+          },
+          "position": {
+            "x": 384,
+            "y": -56
+          }
+        },
+        {
+          "id": "7afea303-f8c1-40fe-a538-09493ca7a0fe",
+          "type": "basic.code",
+          "data": {
+            "code": "// Memoria\nreg @range_s_i rom[0:@sz_2p_o-1];\nreg @range_s_i data;\n\nalways @(posedge clk) \n  data <= rom[addr];\n\n// Inicializacion de la memoria. \ninitial\n  if (ROMFILE) \n     $readmemh(ROMFILE,rom);",
+            "params": [
+              {
+                "name": "ROMFILE"
+              }
+            ],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "addr",
+                  "range": "@range_s_o",
+                  "size": @sz_o
+                }
+              ],
+              "out": [
+                {
+                  "name": "data",
+                  "range": "@range_s_i",
+                  "size": @sz_i
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 256,
+            "y": 64
+          },
+          "size": {
+            "width": 352,
+            "height": 272
+          }
+        },
+        {
+          "id": "451bfb25-149d-4c92-982b-bd37a3a6c283",
+          "type": "basic.info",
+          "data": {
+            "info": "ROMFILE es el nombre del archivo que contiene los datos de nuestra ROM.\nEl mismo debe ser texto plano.\nCada renglón contiene el dato almacenado en una celda de memoria.\nEl primer renglón corresponde a la dirección 0 de memoria.\nLos datos deben estar expresados en hexadecimal.",
+            "readonly": true
+          },
+          "position": {
+            "x": 504,
+            "y": -80
+          },
+          "size": {
+            "width": 592,
+            "height": 128
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-ROMFILE",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "7afea303-f8c1-40fe-a538-09493ca7a0fe",
+            "port": "ROMFILE"
+          }
+        },
+        {
+          "source": {
+            "block": "input-clk",
+            "port": "out"
+          },
+          "target": {
+            "block": "7afea303-f8c1-40fe-a538-09493ca7a0fe",
+            "port": "clk"
+          }
+        },
+        {
+          "source": {
+            "block": "7afea303-f8c1-40fe-a538-09493ca7a0fe",
+            "port": "data"
+          },
+          "target": {
+            "block": "output-data",
+            "port": "in"
+          },
+          "size": @sz_i
+        },
+        {
+          "source": {
+            "block": "input-addr",
+            "port": "out"
+          },
+          "target": {
+            "block": "7afea303-f8c1-40fe-a538-09493ca7a0fe",
+            "port": "addr"
+          },
+          "size": @sz_o
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 298.5,
+        "y": 250
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}
