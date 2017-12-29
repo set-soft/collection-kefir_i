@@ -1,0 +1,347 @@
+{
+  "version": "1.1",
+  "package": {
+    "name": "",
+    "version": "",
+    "description": "",
+    "author": "",
+    "image": ""
+  },
+  "design": {
+    "board": "kefir",
+    "graph": {
+      "blocks": [
+        {
+          "id": "output-SONIDO",
+          "type": "basic.output",
+          "data": {
+            "name": "SONIDO",
+            "pins": [
+              {
+                "index": "0",
+                "name": "IO0",
+                "value": "138"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 1176,
+            "y": 368
+          }
+        },
+        {
+          "id": "constant-DUR",
+          "type": "basic.constant",
+          "data": {
+            "name": "DUR",
+            "value": "150",
+            "local": true
+          },
+          "position": {
+            "x": 256,
+            "y": 232
+          }
+        },
+        {
+          "id": "constant-NOTAS",
+          "type": "basic.constant",
+          "data": {
+            "name": "NOTAS",
+            "value": "\"04_imperial.list\"",
+            "local": true
+          },
+          "position": {
+            "x": 648,
+            "y": 208
+          }
+        },
+        {
+          "id": "5572747b-75ed-471a-a9cd-dbcb1122ad67",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/8 bits/Contador_Simple_Enable_8.ice>",
+          "position": {
+            "x": 432,
+            "y": 296
+          },
+          "size": {
+            "width": 96,
+            "height": 96
+          }
+        },
+        {
+          "id": "e6a45a4e-6bcd-43e6-a1f5-3c7670280f80",
+          "type": "@sha1<./blocks/Varios/Pulso/Corazon_Xms_P.ice>",
+          "position": {
+            "x": 256,
+            "y": 344
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "7199dd8d-d6f3-467e-90d8-c4dcd6e2d232",
+          "type": "@sha1<./blocks/Varios/Memoria/ROM/16_bits/ROM_256x16_file.ice>",
+          "position": {
+            "x": 648,
+            "y": 320
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "357f3e80-91ef-47f8-ac14-927ead6b91d4",
+          "type": "@sha1<./blocks/Varios/Contadores/Ascendente/16 bits/Contador_Simple_16.ice>",
+          "position": {
+            "x": 648,
+            "y": 448
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "dd5f1149-a058-4f1a-8c4b-84279f18390a",
+          "type": "@sha1<./blocks/Varios/Aritmetica/Comparadores/Comparador_igual_16.ice>",
+          "position": {
+            "x": 840,
+            "y": 384
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "41a12e6d-0b7b-48d5-9bb1-efaa19977e07",
+          "type": "@sha1<blocks/Varios/Biestables/Flip-flop T/Flip-flop T Simple 0.ice>",
+          "position": {
+            "x": 1024,
+            "y": 368
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "079a9457-e7ca-4891-b087-08da598ea6de",
+          "type": "basic.info",
+          "data": {
+            "info": "Duración de las notas",
+            "readonly": true
+          },
+          "position": {
+            "x": 208,
+            "y": 416
+          },
+          "size": {
+            "width": 192,
+            "height": 32
+          }
+        },
+        {
+          "id": "3780f510-d9bb-4b8c-9579-8c76e2d42e58",
+          "type": "basic.info",
+          "data": {
+            "info": "Contador que barre las\n256 posiciones de la\nmemoria donde está \nalmacenada la melodía",
+            "readonly": true
+          },
+          "position": {
+            "x": 384,
+            "y": 184
+          },
+          "size": {
+            "width": 208,
+            "height": 96
+          }
+        },
+        {
+          "id": "345bfa30-4939-4b05-b99d-885ffe37ffff",
+          "type": "basic.info",
+          "data": {
+            "info": "Memoria con la melodía.\nLa misma se inicializa \ncon los valores \nprovenientes de \n<tt>04_imperial.list</tt>",
+            "readonly": true
+          },
+          "position": {
+            "x": 608,
+            "y": 104
+          },
+          "size": {
+            "width": 224,
+            "height": 112
+          }
+        },
+        {
+          "id": "e7cc32fe-1320-434f-98af-12a97880f555",
+          "type": "basic.info",
+          "data": {
+            "info": "Este contador es el divisor de frecuencia\nque genera los tonos de cada nota musical.\nGenera 2 pulsos de reloj en el período de\ncada nota musical.",
+            "readonly": true
+          },
+          "position": {
+            "x": 632,
+            "y": 552
+          },
+          "size": {
+            "width": 368,
+            "height": 96
+          }
+        },
+        {
+          "id": "7f975382-cdbf-481f-9d1e-f6595fb9a7ca",
+          "type": "basic.info",
+          "data": {
+            "info": "Este flip-flop conviente los pulsos\ndel divisor de frecuencia en una\nonda cuadrada.",
+            "readonly": true
+          },
+          "position": {
+            "x": 968,
+            "y": 288
+          },
+          "size": {
+            "width": 320,
+            "height": 80
+          }
+        },
+        {
+          "id": "38b29469-805f-445b-b0e0-8682a3e39a69",
+          "type": "basic.info",
+          "data": {
+            "info": "Circuito que toca la melodía de la <b>Marcha Imperial</b>\nPara otra melodía bastaría con cambiar el parámetro NOTAS, usando un archivo que contenga los valores adecuados.\nPara oir la melodía es necesario conectar un <i>buzzer</i> en IO0.",
+            "readonly": true
+          },
+          "position": {
+            "x": 224,
+            "y": 16
+          },
+          "size": {
+            "width": 976,
+            "height": 80
+          }
+        }
+      ],
+      "wires": [
+        {
+          "source": {
+            "block": "constant-DUR",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "e6a45a4e-6bcd-43e6-a1f5-3c7670280f80",
+            "port": "constant-ms"
+          }
+        },
+        {
+          "source": {
+            "block": "e6a45a4e-6bcd-43e6-a1f5-3c7670280f80",
+            "port": "output-Pulso"
+          },
+          "target": {
+            "block": "5572747b-75ed-471a-a9cd-dbcb1122ad67",
+            "port": "input-ena"
+          }
+        },
+        {
+          "source": {
+            "block": "5572747b-75ed-471a-a9cd-dbcb1122ad67",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "7199dd8d-d6f3-467e-90d8-c4dcd6e2d232",
+            "port": "input-addr"
+          },
+          "size": 8
+        },
+        {
+          "source": {
+            "block": "constant-NOTAS",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "7199dd8d-d6f3-467e-90d8-c4dcd6e2d232",
+            "port": "constant-ROMFILE"
+          }
+        },
+        {
+          "source": {
+            "block": "7199dd8d-d6f3-467e-90d8-c4dcd6e2d232",
+            "port": "output-data"
+          },
+          "target": {
+            "block": "dd5f1149-a058-4f1a-8c4b-84279f18390a",
+            "port": "input-A"
+          },
+          "vertices": [
+            {
+              "x": 776,
+              "y": 368
+            }
+          ],
+          "size": 16
+        },
+        {
+          "source": {
+            "block": "357f3e80-91ef-47f8-ac14-927ead6b91d4",
+            "port": "output-cnt"
+          },
+          "target": {
+            "block": "dd5f1149-a058-4f1a-8c4b-84279f18390a",
+            "port": "input-B"
+          },
+          "size": 16
+        },
+        {
+          "source": {
+            "block": "dd5f1149-a058-4f1a-8c4b-84279f18390a",
+            "port": "output-Igual"
+          },
+          "target": {
+            "block": "357f3e80-91ef-47f8-ac14-927ead6b91d4",
+            "port": "input-rst"
+          },
+          "vertices": [
+            {
+              "x": 984,
+              "y": 544
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "dd5f1149-a058-4f1a-8c4b-84279f18390a",
+            "port": "output-Igual"
+          },
+          "target": {
+            "block": "41a12e6d-0b7b-48d5-9bb1-efaa19977e07",
+            "port": "input-t"
+          }
+        },
+        {
+          "source": {
+            "block": "41a12e6d-0b7b-48d5-9bb1-efaa19977e07",
+            "port": "output-q"
+          },
+          "target": {
+            "block": "output-SONIDO",
+            "port": "in"
+          }
+        }
+      ]
+    },
+    "state": {
+      "pan": {
+        "x": 220,
+        "y": 81.5
+      },
+      "zoom": 1
+    }
+  },
+  "dependencies": {
+@dependencies
+  }
+}

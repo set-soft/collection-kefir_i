@@ -163,6 +163,7 @@ Collection for the Kefir I board in Icestudio.
     * Asynchronous FIFO 8 bits (8/16/32/64/128/256/512 bytes)
     * ROM 8 bits (8/16/32/64/128/256/512 bytes)
     * ROM 4 bits (8/16/32/64/128/256/512/1024 words)
+    * ROM 16 bits (8/16/32/64/128/256 words)
   * *Multiplexores* Multiplexers
     * *2 channels* (1/2/4/8/16/32)
     * *4 channels* (1/2/4/8/16/32)
@@ -187,7 +188,7 @@ Collection for the Kefir I board in Icestudio.
     * *Power on Reset*
     * *Power on Reset long*
 
-More than 625 blocks
+More than 650 blocks
 
 ## Examples
 * *1\. Basic*
@@ -248,6 +249,9 @@ More than 625 blocks
   * 09\. FT245 Sync FIFO contador
 * *7\. Memoria*
   * 01\. FIFO 16x8 contador
+  * 02\. FIFO Async 16x8 contador
+  * 03\. Memoria 16x4
+  * 04\. Marcha Imperial
 * *8\. Debug*
   * 01\. Analizador 8 canales contador FT245 Sync
   * 02\. Analizador 16 canales contador FT245 Sync
@@ -261,7 +265,7 @@ More than 625 blocks
   * 03\. PWM y LEDs bidireccional
   * 04\. ADC, PWM y LEDs
 
-More than 60 examples
+More than 65 examples
 
 ## Authors
 * [Salvador Eduardo Tropea](https://github.com/set-soft)
