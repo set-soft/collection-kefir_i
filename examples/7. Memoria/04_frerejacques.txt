@@ -1,0 +1,48 @@
+// Frere Jacques
+DO_4*2
+RE_4*2
+MI_4*2
+DO_4*2
+Blank*2
+// Frere Jacques
+DO_4*2
+RE_4*2
+MI_4*2
+DO_4*2
+Blank*2
+// Dormez-vous?
+MI_4*2
+FA_4*2
+SOL_4*2
+Blank*2
+// Dormez-vous?
+MI_4*2
+FA_4*2
+SOL_4*2
+Blank*2
+// Sonnez les matines
+SOL_4*2
+LA_4*2
+SOL_4*2
+FA_4*2
+MI_4*2
+DO_4*2
+Blank*2
+// Sonnez les matines
+SOL_4*2
+LA_4*2
+SOL_4*2
+FA_4*2
+MI_4*2
+DO_4*2
+Blank*2
+// Din dan don
+DO_4*2
+SOL_4*2
+DO_4*2
+Blank*2
+// Din dan don
+DO_4*2
+SOL_4*2
+DO_4*2
+Blank*2

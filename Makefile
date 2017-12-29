@@ -3,8 +3,15 @@ INST_DIR:=/usr/share/icestudio/collections
 
 all: actualizar
 
-actualizar: makefile
+actualizar: makefile examples/7.\ Memoria/04_imperial.list examples/7.\ Memoria/04_frerejacques.list
 	make -f blocks.mk
+
+
+examples/7.\ Memoria/04_imperial.list: examples/7.\ Memoria/04_imperial.txt tools/notas2div.pl tools/board.cfg
+	perl tools/notas2div.pl "$<" > "$@"
+
+examples/7.\ Memoria/04_frerejacques.list: examples/7.\ Memoria/04_frerejacques.txt tools/notas2div.pl tools/board.cfg
+	perl tools/notas2div.pl "$<" > "$@"
 
 regenerar:
 	perl tools/recursivo.pl
